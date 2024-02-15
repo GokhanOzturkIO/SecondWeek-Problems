@@ -98,3 +98,18 @@
      yansıtmamak için de derleme sırasında verir. Program hiç çalışmadan hata vermiş olur.
 
 =================================================================================
+
+7- Bir değişkeni nullable yapmak için ne yapmalıyız?
+
+    Bir değişkeni nullable yapabilmek için ilk önce değişkenin tipini belirtmemiz gerekir. Değişkenin
+     tipini belirttikten sonra yanına soru işareti (?) ekleyerek o değişkeni nullable yapabiliriz.
+
+     Örn. val number: Int? = 5
+
+    Bir değişkeni, değerini sonradan atamak için de nullable yapabiliriz. Bu işlemi sadece fonksiyonlarda
+     yapabiliriz, class'larda yapamayız. Çeşitli sebeplerden dolayı bir değişkeni primitive tip olarak değil de
+     class olarak tutmak isteyebiliriz. Böyle bir durumda da değişkenimizi nullable yapabiliriz. Değişkenimizi 'var'
+     olarak tanımlayıp, ilk değerini null verebiliz ama daha sonrasında mutlaka bu değişkene bir değer atamamız gerekir
+     yoksa hata alırız.
+
+=================================================================================
