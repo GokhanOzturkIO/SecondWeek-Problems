@@ -26,3 +26,39 @@
      bu age değişkenini okumak/kullanıcıya göstermek isteyebiliriz.
 
 =================================================================================
+
+3- "Değişmez" (Immutable) ve "Salt Okunur" (ReadOnly) kavramlarını açıklayın.
+ `val` değişkenler neden aslında "değişmez" değil de "salt okunur" olarak açıklanmalıdır?
+
+    Immutable (Değişmez) ve read-only (salt okunur) kavramları birbirlerine çok benzerdir, fakat aralarında küçük
+     bir fark vardır. Immutable'da, değişkenin değeri ilk tanımlamadan sonra hiçbir zaman, hiçbir şekilde
+     değiştirilemez. Read-only'de ise, değişkenin değeri bazı durumlarda değiştirilebilir.
+     'val' değişkenlerin immutable değil de read-only olmasının sebebi getter'ının olmasıdır. Değişkenin değerini
+     getter kısmında verirsek, başka bir fonksiyondan da bu değişkeni değiştirebiliriz.
+
+     Örn.
+        fun main() {
+
+            val math = Math()
+
+            println(math.result)
+
+            math.number2 = 50
+
+            println(math.result)
+        }
+
+        class Math() {
+
+            var number1 = 10
+            var number2 = 20
+
+            val result get() = number1 + number2
+        }
+    
+    Bu kodda, main fonksiyonunda ilk başta sonucu bastırıyoruz ve val olarak tanımlanan 'result' değişkeninin
+     değerinin 30 olduğunu görüyoruz. 'number2' değişkeninin değerini 50 ile değiştirip tekrardan sonucu
+     bastırıyoruz ve bu sefer 'result' değişkeninin değerinin 60 olduğunu görüyoruz. Bu yüzden 'val' değişkenler
+     immutable değil read-only'dir.
+
+=================================================================================
