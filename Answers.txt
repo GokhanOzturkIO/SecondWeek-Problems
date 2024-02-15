@@ -61,3 +61,9 @@ val name: String? = null
 9. Bir değişkene null değer atanır ve tip belirtilmezse Kotlin bu değişkeni nasıl yorumlar?
 
 - Eğer bir değişkene tip verilmez ve direkt full değer ataması yapılırsa, IDE tip çıkarımı yaparken bu değişkenin değerini Nothing? Olarak işaretler. Çünkü hangi tipe karşılık geldiğini bilemez.
+
+................
+
+10. İlkel bir değişkenin nullable olması ile null değer alamaması arasında bellek yönetimi açısından nasıl farklar vardır?
+
+- Bir değişken nullable olduğunda bellekte iki farklı durum için yer ayrılır: gerçek değer için ve null değer için. Dolayısıyla, bellek kullanımı artar. Ancak, null değer alamayan bir değişken sadece gerçek değeri tutar. Bu nedenle daha az bellek kullanır. Nullable değişkenlerde, kodunuzda null değer kontrolü yapmak gerek. Null değer alamayan bir değişken ise bir değere sahiptir, dolayısıyla kod daha basit ve daha hızlı çalışabilir. 
