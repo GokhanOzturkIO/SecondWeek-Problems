@@ -179,3 +179,14 @@ Temel Türler & Null Güvenliği
      zamanlarda kullanırız.
 
 =================================================================================
+=================================================================================
+
+Sayılar
+
+1- Kaç farklı tipte "number" sınıfı miras alan "alt sınıf" (child class) vardır? Bunların değer aralıkları neden önemlidir?
+
+    'Number' class'ını miras alan 6 tane child class vardır. Bunlar; Byte, Short, Int, Long, Float ve Double'dır.
+     Bu child class'ların değer aralıkları, bellekte tuttukları yer açısından önemlidir. Değer aralıkları arttıkça
+     bellek kullanımı da artacaktır. Bu yüzden ihtiyacımız olan doğru veri tipini kullanmalıyız.
+
+=================================================================================
