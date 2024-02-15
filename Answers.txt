@@ -73,3 +73,12 @@ val name: String? = null
 11. Nullable bir değişkenin bir değere sahip olması ile null olması arasında bellek yönetimi açısından nasıl bir fark vardır? Null değer almış bir değişken bellekte yer kaplamaz diyebilir miyiz?
 
 - Nullable bir değişkenin bir değere sahip olması veya null olması bellekte bir miktar yer kaplar. Yani, null değer almış bir değişkenin bellekte yer kaplamadığını söyleyemeyiz.
+
+................
+
+12. Nullable bir değişkenle çalışırken hangi operatörleri kullanırız? Bu operatörlerin kullanım farkları nelerdir? Hangisini ne zaman kullanmak daha anlamlıdır?
+
+- Kotlin'de null olan bir veriyle işlem yapıldığında kullanılacak iki operatör vardır:
+
+!!. -> "Değer null olsa da olmasa da bana bırak. Gerekirse uygulama patlasın ama değer değişmesin", anlamına gelir.
+?. -> "Bu değer çok önemli değil. Null gelirse uygulamayı patlatma", anlamına gelir.
