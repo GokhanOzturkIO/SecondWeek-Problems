@@ -227,3 +227,16 @@ Sayılar
      olarak gelebilir. Bunları dikkatli bir şekilde noktaya çevirmemiz gerekir.
 
 =================================================================================
+
+6- Double ve Float değişkenler ondalık kısımda kaç basamağa kadar işlem yaparlar?
+ Bu sınırın üzerinde gelen ondalık bilgileri için nasıl davranırlar? 
+ Hangi durumlar için Float ve hangi durumlar için Double kullanılmalıdır?
+
+    Float değişkenler 32 bitlik olup, 6-7 basamağa kadar doğru sonuçlar verir.
+     Double değişkenler ise 64 bitlik olup 15-16 basamağa kadar doğru sonuçlar verir.
+     Bu sınırın üzerine çıkıldığında ise ya değerler yuvarlanır ya da kesilir. Örneğin
+     bir işlemin sonucu olarak Double "0.3333333333333333" sonucunu verirken Float,
+     "0.33333334" verir. Sonucun hassasiyeti çok önemli değilse Float, sonucun
+     hassasiyeti çok önemliyse de Double kullanılır.
+
+=================================================================================
