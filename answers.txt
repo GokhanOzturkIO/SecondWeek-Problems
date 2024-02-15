@@ -190,3 +190,12 @@ Sayılar
      bellek kullanımı da artacaktır. Bu yüzden ihtiyacımız olan doğru veri tipini kullanmalıyız.
 
 =================================================================================
+
+2- Eğer bir değişkene tip belirtimi yapılmaz ve bir değer atanırsa, Kotlin tip çıkarımını nasıl yapar?
+
+    Bir değişkene tip belirtimi yapılmadan bir değer atanırsa, değerin tipine ve aralığına göre otomatik
+     olarak tip ataması yapılır. Otomatik değer atamalarında 'Byte' ve 'Short' kullanılmaz. Int'in değer
+     aralığında olan tüm sayılar için 'Int', daha yüksek sayılar için 'Long', kesirli sayılar içinse
+     'Double' tipi atanır.
+
+=================================================================================
