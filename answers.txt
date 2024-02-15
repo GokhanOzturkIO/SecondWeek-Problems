@@ -206,3 +206,14 @@ Sayılar
      alınmıştır.
 
 =================================================================================
+
+4- Tek duyarlıklı (Single precision) ve Çift duyarlıklı (Double precision) kavramlarını açıklayın.
+
+    Single precision sayılar, bellekte 32 bit olarak saklanır. Bu sayılar, 2^32 - 1 (yaklaşık 4.3 milyar)
+     kadar kesirli sayı değerini temsil edebilir. Programlama dillerinde genelde 'Float' keyword'ü ile
+     kullanılır. Double precision'a göre daha az hassastır ve daha az yerler kaplar. Double precision ise,
+     bellekte 64 bit olarak saklanır. Bu sayılar, 2^64 - 1 (yaklaşık 18.4 trilyon) kadar kesirli sayı değerini
+     temsil edebilir. Programlama dillerinde genelde 'Double' keyword'ü ile kullanılır. Single precision'a göre
+     daha hasasstır ve daha fazla yer kaplar.
+
+=================================================================================
