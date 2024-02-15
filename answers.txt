@@ -137,3 +137,11 @@
      için de bir işe yaramaz.
 
 =================================================================================
+
+10- İlkel bir değişkenin nullable olması ile null değer alamaması arasında bellek yönetimi açısından nasıl farklar vardır?
+
+    Nullable değişkenler bellekte daha fazla yer kaplar çünkü arka tarafta bu veri tipleri class olarak tutulur.
+     Nullable olmayan değişkenler ise daha az yer kaplar çünkü arka tarafta bu veri tipleri primitive tipe
+     dönüştürülür.
+
+=================================================================================
