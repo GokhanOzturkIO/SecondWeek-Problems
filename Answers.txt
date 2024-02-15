@@ -67,3 +67,9 @@ val name: String? = null
 10. İlkel bir değişkenin nullable olması ile null değer alamaması arasında bellek yönetimi açısından nasıl farklar vardır?
 
 - Bir değişken nullable olduğunda bellekte iki farklı durum için yer ayrılır: gerçek değer için ve null değer için. Dolayısıyla, bellek kullanımı artar. Ancak, null değer alamayan bir değişken sadece gerçek değeri tutar. Bu nedenle daha az bellek kullanır. Nullable değişkenlerde, kodunuzda null değer kontrolü yapmak gerek. Null değer alamayan bir değişken ise bir değere sahiptir, dolayısıyla kod daha basit ve daha hızlı çalışabilir. 
+
+................
+
+11. Nullable bir değişkenin bir değere sahip olması ile null olması arasında bellek yönetimi açısından nasıl bir fark vardır? Null değer almış bir değişken bellekte yer kaplamaz diyebilir miyiz?
+
+- Nullable bir değişkenin bir değere sahip olması veya null olması bellekte bir miktar yer kaplar. Yani, null değer almış bir değişkenin bellekte yer kaplamadığını söyleyemeyiz.
