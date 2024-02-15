@@ -6,3 +6,23 @@
      tanımlamamıza olanak tanır. Aralarındaki temel fark budur.
 
 =================================================================================
+
+2- Bir `var` değişkeni `val` gibi davranmasını nasıl sağlayabiliriz `val` kelimesini kullanmadan?
+ Bunu neden yapmak isteriz? Örnek bir senaryo verin.
+
+    Bir 'var' değişkenin set'ini private yaparak 'val' gibi davranmasını sağlayabiliriz ama bunu sadece
+     class'larda yapabiliriz çünkü fonksiyon içerisindeki değişkenlere sadece o fonksiyon içerisinden
+     erişebiliriz. Bu yüzden de private set yapmanın bir mantığı kalmaz.
+
+     Örn.
+        var name = "Doğaç"
+            private set  
+     
+    Peki oluşturduğumuz değişkenin set'ini neden private yapmak isteriz? Çünkü aynı class içerisinde 
+     değiştirebiliriz fakat farklı class'larda sadece okuyabiliriz. Örnek senaryo olarak bir Person
+     class'ımızın olduğunu düşünelim. Bu class'ın içerisinde de age isimli bir değişken var ve biz
+     bu age değişkeninin sadece Person class'ında değiştirilebilmesini istiyoruz. Bu durumda private set
+     kullanabiliriz. Peki neden değişkeni ilk başta private olarak tanımlamıyoruz? Çünkü farklı fonksiyonlarda
+     bu age değişkenini okumak/kullanıcıya göstermek isteyebiliriz.
+
+=================================================================================
