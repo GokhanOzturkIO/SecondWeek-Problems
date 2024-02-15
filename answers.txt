@@ -1,3 +1,5 @@
+Temel Türler & Null Güvenliği
+
 1- `val` ile `var` arasındaki fark nedir?
 
     'val' ile 'var' keyword'leri değişken tanımlamak için kullanılır.
