@@ -1,0 +1,46 @@
+Temel Türler & Null Güvenliği
+
+q1-val ile var arasındaki fark nedir?
+*Kısaca val immutable (değeri atandıktan sonra değiştirilemez) var ise mutable (değer atansa da değiştirilebilir) olarak bilinir.
+
+q2-Bir var değişkeni val gibi davranmasını nasıl sağlayabiliriz val kelimesini kullanmadan? 
+*Bunu neden yapmak isteriz? Örnek bir senaryo verin.
+
+q3-"Değişmez" (Immutable) ve "Salt Okunur" (ReadOnly) kavramlarını açıklayın.
+val değişkenler neden aslında "değişmez" değil de "salt okunur" olarak açıklanmalıdır?
+*Immutable: Hiçbir koşulda atanan değerin/koşulun değiştirilemeyeceği anlamına gelir.
+ReadOnly: İlk değer atamasından sonra tekrar değer atanamaz(set edilemez) yalnızca okunabilir.
+val değişkenler immutable değildir çünkü belli koşullarda val bir değişkenin değerini başka değişkenler belirliyor ise, o değişkenlerin değerlerinin değiştiği durumda val değeri de değişmiş olacaktır ve bu da immutable olmadığı anlamına gelir
+
+q4-"Tip Çıkarımı" (Type inference) kavramını açıklayın. Hangi durumlarda tip belirtmek kesin olarak gereklidir?
+*Type inferance bir değişken atanırken değişken tipinin verilemdiği durumda, o değişkene atanan değerden programın değişkenin türünü çıkarmasına denir.
+Eğer atanan sayı Int aralığındaysa tipi Int olarak atanır, ancak bu aralığın dışında ise tipi Long olarak atanır.
+Örneğin bir sayı içeren değişkenimiz var diyelim, bu değişken yapılan işlemler sonucu periyodik olarak artacaksa otomaik olarak atanan Int değerinin aralığı dışına çıkabilir. Ve bu olduğunda da değer yanlış hesaplanacaktır, bu yüzden bu değişkenin tipinin önceden atanması gereklidir.
+
+q5-Kotlin'de tüm değişkenlerin(veri tiplerinin) sınıf olarak bulunması, "ilkel tip" (primitive type) olmadıkları anlamına gelir mi? Arka planda neler oluyor?
+Tüm veri tipleri class olarak bulunsa da bu onların primitive olarak kullanılmadıkları anlamına gelmez. Bunlar kullanılırken primitive hallerine optimitize edilirler.
+
+q6-"Tip Güvenliği" (Type Safety) kavramını açıklayın.
+Belirli türdeki değişkenlerin kendilerine uygun işlemler yapılmasını ve değişken tipinin istenmeden değiştirilmesini önleyen bir özelliktir.
+Örneğin Int tipli bir değişken ile String tipli bir değişkeni toplamaya çalışıyoruz. Bu toplamı yazdırmaya kalktığımızda program hata verecektir.
+
+q7- Bir değişkeni nullable yapmak için ne yapmalıyız?
+Nullable bir değişken tanımlarken değişken tipinin soluna ? konulur.
+Örneğin; val number: Int? = null
+
+q8- "Null Güvenliği" (Null Safety) kavramını açıklayın.
+Değeri null olan ya da henüz atanmamış değişkenlerin kullanımını engelleyerek programın hata vermesi veya çökmesini engelleme işidir.
+
+q9-Bir değişkene null değer atanır ve tip belirtilmezse Kotlin bu değişkeni nasıl yorumlar?
+val name = null , Bu örnek ifadede null atanan değişkenin tipi belirtilmemiştir ve Kotlin de bu değişkeni Any olarak yorumlar.
+Nullable olduğu göstermek için Any? olarak kullanılır.
+
+q10-İlkel bir değişkenin nullable olması ile null değer alamaması arasında bellek yönetimi açısından nasıl farklar vardır?
+
+q11-Nullable bir değişkenin bir değere sahip olması ile null olması arasında bellek yönetimi açısından nasıl bir fark vardır? Null değer almış bir değişken bellekte yer kaplamaz diyebilir miyiz?
+
+q12-Nullable bir değişkenle çalışırken hangi operatörleri kullanırız? Bu operatörlerin kullanım farkları nelerdir? Hangisini ne zaman kullanmak daha anlamlıdır?
+!! ve ? operatörleri kullanılır. !! ifadesi kullanılan değişkenin null olmadığını garanti ederek yapılan işlemi devam ettirir ancak eğer değişken null olursa program hata verecektir.
+? ifadesi ise değğişken null değilse işlemi devam ettirir yani null safety sağlamış olur.
+!! operatörünü nullable olan değişkenin null çıkması durumunda hata alınmasının programın doğru şekilde çalışması için göze alınır olduğu durumlarda kullanılabilir.
+? operatörü programdaki hataları en aza düşürülmek istendiği durumlarda kullanılabilir.
