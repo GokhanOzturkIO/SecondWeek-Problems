@@ -10,4 +10,6 @@ TEMEL TÜRLER & NULL GÜVENLİĞİ
   ReadOnly (Salt Okunur) -> İlk değer atamasından sonra tekrar değer atanmaz demektir.
 Val değişkenlerin salt okunur (readonly) olmasının sebebi bir kez değer atandıktan sonra tekrar değer atanamaz.
 
- 
+4."Tip Çıkarımı" (Type inference) kavramını açıklayın. Hangi durumlarda tip belirtmek kesin olarak gereklidir?
+- Type inference (Tip Çıkarımı), bir programlama dilinde bir değişkenin tipini yazmadan otomatik olarak belirlenmesidir. Kodun daha temiz ve okunabilir olmasını sağlar. Belirsizlik durumunda ve performans optimizasyonun önemli olduğu projelerde tip belirtmek gereklidir.
+
