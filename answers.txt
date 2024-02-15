@@ -199,3 +199,10 @@ Sayılar
      'Double' tipi atanır.
 
 =================================================================================
+
+3- Float değişken oluştururken `F` ve `f` harfleri varken, Long değişken oluştururken neden küçük `l` harfi yoktur?
+
+    Çünkü küçük 'l' harfi bazı fontlarda '1' rakamına benzediği için, karıştırma durumuna karşın böyle bir önlem
+     alınmıştır.
+
+=================================================================================
