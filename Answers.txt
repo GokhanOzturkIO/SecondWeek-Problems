@@ -3,3 +3,9 @@ Temel Türler & Null Güvenliği
 1. val ile var arasındaki fark nedir?
 
 - Val değeri değiştirilemeyen, sabit değişkendir. Var ise mutable, değerini istediğimiz kadar değiştirebildiğimiz bir değişkendir. Val read-only yani değeri okunabilir ama set edilemez.
+
+................
+
+2. Bir var değişkeni val gibi davranmasını nasıl sağlayabiliriz val kelimesini kullanmadan? Bunu neden yapmak isteriz? Örnek bir senaryo verin.
+
+- var değişkenin set fonksiyonunu private yaparak class'ın içinde birden fazla değerini değiştirmek isteriz ancak dışarıdan değiştirilmemesini sağlarız. Örneğin Car adında bir class'ımız olsun ve bunun da içinde model adında bir var değişkeni olsun. Bu model değişkenini private set yapmış olalım. Biz model değişkenini class'ın içerisinde de değerini değiştirebiliriz, bir fonksiyon oluşturup da değerini değiştirebiliriz. Ancak class dışında herhangi bir yer bu değişkene yeni değer atayamayız çünkü izin vermez. 
