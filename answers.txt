@@ -156,3 +156,24 @@
      yer kaplar diyebiliriz.
 
 =================================================================================
+
+12- Nullable bir değişkenle çalışırken hangi operatörleri kullanırız? Bu operatörlerin kullanım farkları nelerdir?
+ Hangisini ne zaman kullanmak daha anlamlıdır?
+
+    Bu sorunun cevabını 8. soruda verdiğim için cevaplar aynı ama sonu farklı olacak.
+     Nullable olarak tanımlanan bir değişkenle işlem yaparken Kotlin'e,"bu değişken null ise bu kodu çalıştırma,
+     null değil ise çalıştır" kontrolünü yaparak hata alma riskini en aza indirmektir. Bu kontrolü, verinin geleceğinden eminsek
+     "!!" operatörü ile, emin değilsek de "?." operatörü ile sağlayabiliriz. "!!" operatörü programa, "bu veri kesin gelecek"
+     bilgisini verir ve program ona göre çalışır. "!!" operatörünü kullanırsak ama veri gelmezse programımız çöker. "!!" kullanmak
+     yerine "?." kullanırsak da ilk başta bahsettiğim "bu değişken null ise bu kodu çalıştırma, null değil ise çalıştır" kontrolünü
+     yaparak programı çalıştırır. Eğer veri yoksa o kod bloğu hiç çalışmaz, sadece veri varsa çalışır. Bu ikisinin dışında bir de
+     elvis operatörü (?:) vardır. Elvis operatörü de "eğer veri varsa solumdaki işlemi yap, veri yoksa da sağımdaki işlemi yap"
+     kontrolünü gerçekleştirir.
+
+     Örn. println(name ?: "İsim boş") -> Eğer isim değişkeninde bir değer varsa o değeri yazdırır, değer yoksa da "İsim boş" yazdırır.
+
+     "!!" operatörünü, "programımın/uygulamamın çökmesi, yanlış değer göstermektense daha iyi" dediğimiz zamanlarda kullanırız.
+     "?." veya elvis operatörünü de (?:), "Yanlış değer göstermek çok sıkıntı olmaz, yeterki programım/uygulamam çökmesin" dediğimiz
+     zamanlarda kullanırız.
+
+=================================================================================
