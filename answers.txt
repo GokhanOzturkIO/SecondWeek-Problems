@@ -13,3 +13,5 @@ Val değişkenlerin salt okunur (readonly) olmasının sebebi bir kez değer ata
 4."Tip Çıkarımı" (Type inference) kavramını açıklayın. Hangi durumlarda tip belirtmek kesin olarak gereklidir?
 - Type inference (Tip Çıkarımı), bir programlama dilinde bir değişkenin tipini yazmadan otomatik olarak belirlenmesidir. Kodun daha temiz ve okunabilir olmasını sağlar. Belirsizlik durumunda ve performans optimizasyonun önemli olduğu projelerde tip belirtmek gereklidir.
 
+5.Kotlin'de tüm değişkenlerin sınıf olarak bulunması, "ilkel tip" (primitive type) olmadıkları anlamına gelir mi? Arka planda neler oluyor?
+-Hayır. Kotlin'de tüm değişkenlerin sınıf olarak bulunması, primitive type olmadıkları anlamına gelmez. Derleme sırasında sınıf olarak bulunan değişkenler primitive type haline optimizasyonu sağlanır.
