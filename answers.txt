@@ -1,3 +1,6 @@
 TEMEL TÜRLER & NULL GÜVENLİĞİ
 1. Val ile var arasındaki fark nedir?
 - val ve var Kotlin dilinde değişken oluştururken kullandığımız keywordlerdir. Val keywordu readOnly'dir. O yüzden bir kez oluşturduktan sonra değerini değiştiremeyiz. Var keywordu ile tanımladığımız değişkeni sonradan isteğimize ve duruma göre değiştirebiliriz. Akılda kalması açısında val (value) var (variable) olarak düşünülebilir.
+
+2. Bir var değişkeni val gibi davranmasını nasıl sağlayabiliriz val kelimesini kullanmadan? Bunu neden yapmak isteriz? Örnek bir senaryo verin.
+- Bir var değişkeninin val keywordunu kullanmadan val gibi davranmasını onun setini private yaparak sağlayabiliriz. Bunu yapmak istememizdeki ana sebep değişkenin değerinin bir kez atanmasını ve ondan sonra değiştirilmemesini istediğimiz zaman yaparız. Örnek olarak bir banka uygulamasında kullanıcı hesap oluşturulduğunda hesap numarasını saklamamız gerektiğinde kullanabiliriz.
