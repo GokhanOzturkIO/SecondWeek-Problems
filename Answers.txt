@@ -35,3 +35,9 @@ skinTone = "White"   -> IDE kızar çünkü tipi hiçbir yerde belirtilmemiş. B
 5. Kotlin'de tüm değişkenlerin sınıf olarak bulunması, "ilkel tip" (primitive type) olmadıkları anlamına gelir mi? Arka planda neler oluyor?
 
 - Kotlin'de class gibi gözüken değişken tipleri özel optimizasyonlarla byte code'a çevrilirken yine primitive olacak şekilde tanımlanırlar.
+
+................
+
+6. "Tip Güvenliği" (Type Safety) kavramını açıklayın.
+
+- Tipe Safety, değişkenlere doğru değer atanması ile ilgili bir kavramdır. Değişkenlerin tipleri ile atanan değerlerin tipleri arasında farklılık olmaması gerekir. Örneğin int bir değişkene String değer vermek hata almamıza neden olur. 
