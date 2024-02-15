@@ -4,3 +4,10 @@ TEMEL TÜRLER & NULL GÜVENLİĞİ
 
 2. Bir var değişkeni val gibi davranmasını nasıl sağlayabiliriz val kelimesini kullanmadan? Bunu neden yapmak isteriz? Örnek bir senaryo verin.
 - Bir var değişkeninin val keywordunu kullanmadan val gibi davranmasını onun setini private yaparak sağlayabiliriz. Bunu yapmak istememizdeki ana sebep değişkenin değerinin bir kez atanmasını ve ondan sonra değiştirilmemesini istediğimiz zaman yaparız. Örnek olarak bir banka uygulamasında kullanıcı hesap oluşturulduğunda hesap numarasını saklamamız gerektiğinde kullanabiliriz.
+
+3."Değişmez" (Immutable) ve "Salt Okunur" (ReadOnly) kavramlarını açıklayın. val değişkenler neden aslında "değişmez" değil de "salt okunur" olarak açıklanmalıdır?
+- Immutable (Değişmez) -> Bir değişkenin veya nesnenin durumu asla ilk değerden farklı olamaz.
+  ReadOnly (Salt Okunur) -> İlk değer atamasından sonra tekrar değer atanmaz demektir.
+Val değişkenlerin salt okunur (readonly) olmasının sebebi bir kez değer atandıktan sonra tekrar değer atanamaz.
+
+ 
