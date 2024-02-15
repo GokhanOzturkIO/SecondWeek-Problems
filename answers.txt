@@ -62,3 +62,11 @@
      immutable değil read-only'dir.
 
 =================================================================================
+
+4- "Tip Çıkarımı" (Type inference) kavramını açıklayın. Hangi durumlarda tip belirtmek kesin olarak gereklidir?
+
+    Type inference (Tip çıkarımı) kavramı, bir değişken tanımlarken dilin, değişken tipini otomatik olarak tahmin
+     etmesidir. Bu bizi gereksiz koddan kurtarır ve kodumuzu okunur kılar. Eğer değişkenler nullable olacaksa veya
+     değişkenin değeri sonradan atanacaksa kesin olarak tip belirtmemiz gerekir.
+
+=================================================================================
