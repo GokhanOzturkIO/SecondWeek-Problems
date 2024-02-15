@@ -8,7 +8,7 @@
 - Yaptığınız tüm işlemleri olabildiğince atomik taahhütler (commits) halinde kaydedin ve mantıklı "İngilizce" taahhüt(commits) mesajları ekleyin.
 - Tüm sorular ve algoritma projesi tamamlandığında taahhütleriniz(commits) arasındaki farkları incelemeye çalışın.
 - Tüm işleminiz bittiğinde eklediğiniz tüm taahhütleri(commits) Forkladığınız GitHub'daki repository'e yükleyin (pushlayın).
-- Kendi Forkladığınız GitHub'daki repository'de çözümleri gördükten sonra "https://github.com/GokhanOzturkIO/2.-Hafta-devi-Kotlin" adresindeki orijinal repository'e "Pull Request" açın.
+- Kendi Forkladığınız GitHub'daki repository'de çözümleri gördükten sonra "[https://github.com/GokhanOzturkIO/2.-Hafta-devi-Kotlin](https://github.com/GokhanOzturkIO/SecondWeek-Problems)" adresindeki orijinal repository'e "Pull Request" açın.
 - Pull Request açtığınızı WhatsApp üzerindeki kanallardan duyurun.
 
 - Diğer kullanıcılardan gelen dalları (branches) yerel makinenize indirmek için önce yereldeki projenizi güncelleyin (fetch) sonra ilgili dalları(branches) çekin (pull).
