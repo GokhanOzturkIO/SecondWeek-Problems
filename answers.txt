@@ -129,3 +129,11 @@
      Örn. println(name ?: "İsim boş") -> Eğer isim değişkeninde bir değer varsa o değeri yazdırır, değer yoksa da "İsim boş" yazdırır.
 
 =================================================================================
+
+9- Bir değişkene null değer atanır ve tip belirtilmezse Kotlin bu değişkeni nasıl yorumlar?
+
+    Böyle bir durumda değişkenin tipi Nothing? olarak belirlenir ve daha sonra değiştirilemez. Nothing olarak belirlenen
+     değişkenler de hiçbir işe yaramazlar çünkü Nothing boş bir class'tır. Bu değişkenin değerini sonradan değiştiremediğimiz
+     için de bir işe yaramaz.
+
+=================================================================================
