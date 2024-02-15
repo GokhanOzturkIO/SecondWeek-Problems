@@ -80,7 +80,9 @@
 - "`val x = 5 / 2.toDouble()` `println(x == 2.5)`" gibi bir işlemin sonucu ve tipi nedir? Neden böyle olduğunu açıklayın.
 - Kotlin'de tür dönüşümü yapılırken, dönüşümün başarısız olması durumunda TypeCastException nasıl ele alınır ve bu tür hataların önüne geçmek için hangi önlemler alınabilir?
 
-ALGORİTMA SORUSU
+---
+
+### ALGORİTMA SORUSU
 Basit bir terminal (konsol) ekranı uygulaması yapacağız. Kullanıcıdan iki sayı alacak ve bu sayılar üzerinde işlem yapacak. Bu uygulamayı yazarken aşağıdaki kurallara dikkat ediniz:
 - Kullanıcıyı bir selamlama ekranı ile karşılayın.
 - Kullanıcıdan ilk sayıyı girmesini isteyin.
