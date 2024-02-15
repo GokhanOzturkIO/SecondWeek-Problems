@@ -15,3 +15,7 @@ Val değişkenlerin salt okunur (readonly) olmasının sebebi bir kez değer ata
 
 5.Kotlin'de tüm değişkenlerin sınıf olarak bulunması, "ilkel tip" (primitive type) olmadıkları anlamına gelir mi? Arka planda neler oluyor?
 -Hayır. Kotlin'de tüm değişkenlerin sınıf olarak bulunması, primitive type olmadıkları anlamına gelmez. Derleme sırasında sınıf olarak bulunan değişkenler primitive type haline optimizasyonu sağlanır.
+
+6-"Tip Güvenliği" (Type Safety) kavramını açıklayın.
+-Type safety, bir programın derleme sırasında değişken tiplerinin uygun şekilde kullanılmasını ve varsa uyumsuzlukların önlenmesini sağlar.
+
