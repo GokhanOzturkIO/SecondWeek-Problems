@@ -49,3 +49,9 @@ skinTone = "White"   -> IDE kızar çünkü tipi hiçbir yerde belirtilmemiş. B
 - Bir değişkeni nullable yapmak için, değişken tipinin sonuna ? İşareti konulur. 
 
 val name: String? = null
+
+................
+
+8. "Null Güvenliği" (Null Safety) kavramını açıklayın.
+
+- Bir değerin null olabileceği durumları ele alır ve bu null değerlerin beklenmedik hatalara yol açmasını önler.
