@@ -55,3 +55,9 @@ val name: String? = null
 8. "Null Güvenliği" (Null Safety) kavramını açıklayın.
 
 - Bir değerin null olabileceği durumları ele alır ve bu null değerlerin beklenmedik hatalara yol açmasını önler.
+
+................
+
+9. Bir değişkene null değer atanır ve tip belirtilmezse Kotlin bu değişkeni nasıl yorumlar?
+
+- Eğer bir değişkene tip verilmez ve direkt full değer ataması yapılırsa, IDE tip çıkarımı yaparken bu değişkenin değerini Nothing? Olarak işaretler. Çünkü hangi tipe karşılık geldiğini bilemez.
