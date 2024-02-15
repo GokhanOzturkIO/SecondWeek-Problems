@@ -1,0 +1,8 @@
+1- `val` ile `var` arasındaki fark nedir?
+
+    'val' ile 'var' keyword'leri değişken tanımlamak için kullanılır.
+     'val' keyword'ü, read-only (sadece okunabilir) değişkenler tanımlamamıza
+     olanak tanırken, 'var' keyword'ü ise mutable (değeri değişebilen) değişkenler
+     tanımlamamıza olanak tanır. Aralarındaki temel fark budur.
+
+=================================================================================
