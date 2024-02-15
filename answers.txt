@@ -84,3 +84,17 @@
      Int tipine bir dönüşüm yapılıyorsa (Örn. val number = "5".toInt()) bunlar runtime'da (çalışma zamanı) gerçekleşir.
 
 =================================================================================
+
+6- "Tip Güvenliği" (Type Safety) kavramını açıklayın.
+
+    Type safety (tip güvenliği), program çalışırken alınabilecek tip hatalarına karşı koruma sağlayan bir özelliktir.
+     Derleme sırasında her değişkenin ve ifadenin tipi kontrol edilir ve yalnızca uyumlu tipler arasındaki işlemlere
+     izin verilir. Bu işlemin derleme sırasında yapılmasının sebebi ise program çalışırken, tip hatası yüzünden
+     programın çökmemesini engellemek içindir. Type safety konusuna örnek olarak şu verilebilir; bir topla fonksiyonumuz
+     var ve parametre olarak 'a: Int' ve 'b: Int' parametrelerini alıyor ve fonksiyon geriye 'Int' döndürüyor.
+     Bu fonksiyonu, main fonksiyonunda çağırıp, değer olarak birine int birine double değer atarsak, program 
+     derleme sırasında hata verecektir çünkü 'Double' ile 'Int'in toplamı sonuç olarak 'Double' döndürecektir.
+     Topla fonksiyonu bizden 'Int' bir değer döndürmemizi beklediği için de hata verecektir. Bu hatayı kullanıcıya
+     yansıtmamak için de derleme sırasında verir. Program hiç çalışmadan hata vermiş olur.
+
+=================================================================================
