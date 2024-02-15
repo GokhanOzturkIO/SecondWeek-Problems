@@ -217,3 +217,13 @@ Sayılar
      daha hasasstır ve daha fazla yer kaplar.
 
 =================================================================================
+
+5- Double ve Float değişkenlerle çalışırken ondalık ayıracı olarak hangi işaretler kullanılır?
+ Bu ayıraçların kullanımında nelere dikkat etmek gerekir?
+
+    'Double' ve 'Float' değişkenleriyle çalışırken ondalık ayracı olarak nokta (.) kullanılır.
+     Bu ayraç kullanılırken karıştırılıp nokta yerine virgül (,) kullanılabilir. Buna dikkat
+     etmek gerekir. İnternetten veya başka bir yerden veri çekerken de ondalık ayracı virgül
+     olarak gelebilir. Bunları dikkatli bir şekilde noktaya çevirmemiz gerekir.
+
+=================================================================================
