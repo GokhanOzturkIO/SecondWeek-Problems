@@ -41,3 +41,11 @@ skinTone = "White"   -> IDE kızar çünkü tipi hiçbir yerde belirtilmemiş. B
 6. "Tip Güvenliği" (Type Safety) kavramını açıklayın.
 
 - Tipe Safety, değişkenlere doğru değer atanması ile ilgili bir kavramdır. Değişkenlerin tipleri ile atanan değerlerin tipleri arasında farklılık olmaması gerekir. Örneğin int bir değişkene String değer vermek hata almamıza neden olur. 
+
+................
+
+7. Bir değişkeni nullable yapmak için ne yapmalıyız?
+
+- Bir değişkeni nullable yapmak için, değişken tipinin sonuna ? İşareti konulur. 
+
+val name: String? = null
