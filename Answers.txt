@@ -1,0 +1,5 @@
+Temel Türler & Null Güvenliği
+------------------------------
+1. val ile var arasındaki fark nedir?
+
+- Val değeri değiştirilemeyen, sabit değişkendir. Var ise mutable, değerini istediğimiz kadar değiştirebildiğimiz bir değişkendir. Val read-only yani değeri okunabilir ama set edilemez.
