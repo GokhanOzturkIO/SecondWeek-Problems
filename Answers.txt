@@ -188,8 +188,7 @@ Küçük veya Eşit '<=' -> Sol taraftaki değer sağ taraftakinden küçük vey
 Ve Operatörü '&&' -> Her iki ifade de doğruysa True döndürür.
 Veya Operatörü '||' -> İfadelerden biri doğruysa True döndürür.
 
-................
-
+C
 15. Bit düzeyinde operatörler (Bitwise operators) nelerdir? Ne amaçla kullanılır? Kotlin'de bunları nasıl kullanabilirsiniz?
 
 - Kotlin, tam sayılar üzerinde bir dizi bitsel işlem sağlar. Yalnızca Int ve Long'a uygulanabilirler:
@@ -207,3 +206,9 @@ or(bits) –> Bit bitiyle OR işlemi yapar. İki değerin her bir bitini karşı
 xor(bits) –> Bit bitiyle XOR işlemi yapar. İki değerin her bir bitini karşılaştırır ve yalnızca biri 1 ise sonuç 1 olur.
 
 inv() –> Tüm bitleri tersine çevirir. Yani, 0'lar 1'e, 1'ler ise 0'a dönüşür.
+
+................
+
+16. Kotlin'de büyük sayılarla çalışırken hangi ek türlerden yararlanılır ve bu türlerin sınırları nelerdir?
+
+- Kotlin'de büyük sayılarla çalışırken, BigInteger ve BigDecimal gibi ek türler kullanılır. BigInteger, büyük tamsayılar için kullanılır. BigDecimal, belirli bir hassasiyette ve sınırsız büyüklükte ondalık sayıları temsil etmek için kullanılır.
