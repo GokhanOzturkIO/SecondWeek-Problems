@@ -99,7 +99,14 @@ Sayılar
 
 -Float: Bellek kullanımı ve performans konusunda daha verimli olabilir. Eğer bellek sınırlı ise veya performans çok kritik bir konu ise Float tercih edilebilir.
 -Double: Daha büyük bir aralıkta ve daha yüksek hassasiyetle çalışma ihtiyacı varsa Double kullanılabilir. Çoğu durumda, genel amaçlı sayısal hesaplamalarda veya standart kullanımlarda Double tercih edilir.
- 
+
+
+7.Ondalık(Decimal), Onaltılık (Hexadecimal) ve İkilik (Binary) değişkenleri Kotlin'de nasıl tanımlayabilirsiniz?
+
+-Decimal = val decimalNumber: Int = 42
+-Hexadecimal = val hexadecimalNumber: Int = 0xAB
+-Binary = val binaryNumber: Int = 0b101010
+
 
 
  
