@@ -20,3 +20,7 @@
   1.4   Programcı veri türünün belirtmeden IDE'nin veri türünü anlamasıdır.Tür Bildirimi yapmamız gereken yerler ise
   null bir tip bildirdiğimizde,fonksiyon geri dönüş değerinde ve parametlerinde bildiririz.
 ----------------------------------------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------------------
+  1.5 Kotlin'de, temel veri tipleri referans olarak temsil edilir; ancak derleyici, temel veri
+  tiplerini optimize ederek ilkel türlere dönüştürür.(Bycode da  java koduna bakarsak primitive olarak tanımlanmıştır)
+----------------------------------------------------------------------------------------------------------------------*/
