@@ -101,6 +101,9 @@ Değer aralıkları bellekte kaplanan alanı temsil eder ve büyük projelerde v
 
 # +,-,x,/,= gibi basit operatörler kullanılır
 
+26-Sayısal değişkenlerde hangi karşılaştırma operatörleri kullanılabilir?
+
+# ==,!=,<,>,<= gibi operatörler kullanılır.
 
 
 
