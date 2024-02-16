@@ -299,3 +299,10 @@ Sayılar
       karşılaştırıldığında genellikle aynı bellek konumunu işaret ederler.
 
 =================================================================================
+
+13- Sayısal değişkenlerde hangi matematiksel operatörler kullanılabilir?
+
+     Sayısal değişkenlerde; toplama (+), çıkarma (-), çarpma (*), bölme (/) ve mod alma (%) operatörleri
+      kullanılabilir. Bunlar dışında üs alma gibi işlemler için özel fonksiyonlar da vardır.
+
+=================================================================================
