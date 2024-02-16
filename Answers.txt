@@ -356,3 +356,9 @@ as? işleminin sağ tarafı bir null olmayan String türü olmasına rağmen, d�
 4. Sayısal değişkenlerde örtük tip genişletme (implicit widening conversions) ne demektir? Kotlin'de bu neden yapılamaz?
 
 - Sayısal değişkenlerde örtük tip genişletme (implicit widening conversions), bir türün daha küçük boyutlu bir türden daha büyük bir boyuta dönüştürülmesini ifade eder. Bu dönüşüm, derleyici tarafından otomatik olarak gerçekleştirilir ve genellikle bilgi kaybı olmadan yapılır.Kotlin, implicit (otomatik) tür dönüşümünü desteklemez çünkü bu tür dönüşümler genellikle beklenmeyen sonuçlara veya hatalara neden olabilir. Bunun yerine, Kotlin güvenli ve açık (explicit type conversion) tür dönüşümleri sağlar. Bu, programcının tür dönüşümlerini açık bir şekilde belirtmesini ve herhangi bir potansiyel uyumsuzluğu veya hata durumunu önceden fark etmesini sağlar. Bu sayede, programın daha güvenli ve hatasız olması sağlanır ve kodun okunabilirliği artar. Bu nedenle, Kotlin implicit type conversion'u tercih etmez ve daha güvenli ve kontrol edilebilir bir yaklaşımı benimser. 
+
+................
+
+5. "val b: Byte = 1 ile val i: Int = b ve son olarak print(b == i) gibi bir kod yazıldığında çıktı ne olur? Neden böyle bir çıktı aldığınızı açıklayın.
+
+- Bu kodda "Operator '==' cannot be applied to 'Byte' and 'Int'" hatası alırız çünkü kotlin narrowing conversions desteklemez. Bundan dolayı Byte'ı Int'e dönüştüremez. 
