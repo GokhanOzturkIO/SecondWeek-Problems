@@ -74,3 +74,8 @@ Soru 10 - İlkel bir değişkenin nullable olması ile null değer alamaması ar
 Soru 11 - Nullable bir değişkenin bir değere sahip olması ile null olması arasında bellek yönetimi açısından nasıl bir fark vardır? Null değer almış bir değişken bellekte yer kaplamaz diyebilir miyiz?
 	-> Referans tipli değişkenler ve onların değerleri bellekte iki farklı yapı olarak tutulurlar. Bu yapılardan birisi olan Stack'de referanslar yani değişkenler tutulur. Bir diğer yapı olan Heap'da ise
 	bu değişkenlerin verileri tutulur. Dolayısıyla null değer almış bir değişken Heap üzerinde yer kaplamasa bile Stack üzerinde bir miktar yer kaplamış olur.
+Soru 12 - Nullable bir değişkenle çalışırken hangi operatörleri kullanırız? Bu operatörlerin kullanım farkları nelerdir? Hangisini ne zaman kullanmak daha anlamlıdır?
+	-> Nullable bir değişkenle çalışırken ?. ve !!. operatörlerini kullanırız. ?. operatörünü kullanırken derleyici programımıza operatörü kullandığımız değişken null gelirse bu işlemi atla ve devam et demiş oluruz.
+	Ancak !!. operatörünü kullanırsak operatörü kullandığımız değişkenin null gelmesi durumunda NullPointerException hatasıyla karşılaşırız ve uygulamamız çöker. Eğer çok kritik bir işlem yapmıyorsak yani
+	değişkenin null gelmesi durumunda uygulama üzerinde göz ardı edilebilecek bir hata olacaksa ?. kullanabiliriz. Ancak kritik bir işlem yapılıyorsa ve uygulama üzerinde önemli bir etki yaratacaksa !!. operatörünü
+	kullanıp uygulamanın çökmesini sağlamamız gerekir.
