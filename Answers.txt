@@ -15,4 +15,8 @@ Temel Türler & Null Güvenliği
     }
 -Var = Atama yaptıktan sonra değeri değiştirebiliriz.
 
+2.Bir var değişkeni val gibi davranmasını nasıl sağlayabiliriz val kelimesini kullanmadan? Bunu neden yapmak isteriz? Örnek bir senaryo verin.
+
+-var değişkenin set ini private yaparak val gibi davranmasını sağlayabiliriz. Örnek bir senaryo düşünelim: Bir sınıf içinde bir özellik (property) bulunmakta ve bu özelliğin değeri sadece başlangıçta belirlenebilsin, sonrasında değiştirilemesin istiyoruz. Ancak, bu özelliği val ile tanımlamamız mümkün değil, çünkü başlangıç değeri sonradan değiştirilemez.
+
 
