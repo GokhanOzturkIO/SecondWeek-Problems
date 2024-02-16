@@ -10,3 +10,9 @@
 3-"Değişmez" (Immutable) ve "Salt Okunur" (ReadOnly) kavramlarını açıklayın. val değişkenler neden aslında "değişmez" değil de "salt okunur" olarak açıklanmalıdır?
 
 # Immutable dediğimiz yapıda değeri hiçbir şekilde değiştiremeyiz.ReadOnlyde ise değeri okuyabiliriz fakat set edemeyiz.Val değişkenlerde ise değişkenin get fonksiyonunda return ettiğimiz değer başka değiştirilebilir değerlerden oluşuyorsa bu değerleri farklı girdiğimiz her fonksiyon için bu val değerinden farklı cevap alırız bu yüzden de immutable olamaz.
+
+4-"Tip Çıkarımı" (Type inference) kavramını açıklayın. Hangi durumlarda tip belirtmek kesin olarak gereklidir?
+
+# Type inference(tip çıkarımı) kotlinde bir değişken oluştururken hangi türde olacağını belirtmediğimizde de IDE’nin otomatik olarak değişken türünü belirlemesidir.
+Değerini daha sonradan vereceğimiz değişkenlere makinenin bellekte ne kadar yer ayırması gerektiğini bildirmemeiz için : ile değişken türünü bildirmeliyiz.
+
