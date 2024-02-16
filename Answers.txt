@@ -188,7 +188,8 @@ Küçük veya Eşit '<=' -> Sol taraftaki değer sağ taraftakinden küçük vey
 Ve Operatörü '&&' -> Her iki ifade de doğruysa True döndürür.
 Veya Operatörü '||' -> İfadelerden biri doğruysa True döndürür.
 
-C
+................
+
 15. Bit düzeyinde operatörler (Bitwise operators) nelerdir? Ne amaçla kullanılır? Kotlin'de bunları nasıl kullanabilirsiniz?
 
 - Kotlin, tam sayılar üzerinde bir dizi bitsel işlem sağlar. Yalnızca Int ve Long'a uygulanabilirler:
@@ -218,3 +219,12 @@ inv() –> Tüm bitleri tersine çevirir. Yani, 0'lar 1'e, 1'ler ise 0'a dönü�
 17. Double ve Float değişkenler kullanılırken "yuvarlama" davranışı nasıldır? Bu nasıl değiştirilebilir?
 
 - Varsayılan olarak, Kotlin'de Double ve Float sayıları IEEE 754 standardına göre yuvarlanır. Bu standart, genellikle en yakın ondalık sayıya yuvarlama yapar, yani en yakın tam sayıya veya belirli bir ondalık basamağa yuvarlama yapabilir. Ancak, bazı durumlarda bu yuvarlama hatası gözlenebilir. Kotlin'de bu yuvarlama davranışını değiştirmek pek mümkün değildir, çünkü bu standartla ilgilidir ve dilin kendisiyle ilgili değildir. Ancak, özel yuvarlama stratejileri uygulanabilir. Örneğin, belirli bir hassasiyetle yuvarlama yapmak için özel bir yuvarlama fonksiyonu oluşturabilirsiniz. Bu fonksiyonlar, belirli bir hassasiyetteki yuvarlama için kullanılabilir ve kullanıcı ihtiyaçlarına uyacak şekilde özelleştirilebilir.
+
+................
+
+İşaretsiz Sayılar
+------------------------------
+
+1. "İşaretsiz" (Unsigned) değişkenler ne demektir? İşaretli olanlarla aralarındaki fark nedir?
+
+- İşaretsiz (Unsigned) değişkenler, sıfırdan büyük pozitif tamsayıları temsil etmek için kullanılan bir veri türüdür. Bu nedenle aralarındaki temel fark, işaretli tamsayılar negatif değerleri temsil edebilirken; işaretsiz tamsayılar sadece pozitif veya sıfır değerlerini temsil edebilirler.
