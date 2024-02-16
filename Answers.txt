@@ -311,3 +311,25 @@ if (y !is String) {
 
 Çıktı = y is not a String
 
+................
+
+2. "Akıllı Dönüşüm" (Smart Cast) ne demektir? Farklı kod örnekleri ile açıklayın. Bu özelliğin sınırlamaları nelerdir?
+
+- "Akıllı Dönüşüm" (Smart Cast), Kotlin'in tür güvenliği için sunduğu bir özelliktir. Bu özellik, bir nesnenin türünün daha sonra kontrol edilmesi durumunda, Kotlin derleyicisinin o nesneyi otomatik olarak doğru türe dönüştürmesini sağlar. akıllı dönüşümler, derleyicinin değişkenin kontrol edildiği noktadan kullanıldığı noktaya kadar değişmeyeceğini garanti edebildiği durumlarda çalışır.
+
+val x = "Rabia"
+
+if (x is String) {
+    println(x.length) // Burada x String türüne dönüştürülür ve length özelliği kullanılabilir.
+}
+
+val x = 24
+
+when (x) {
+    is String -> println(x.length) 
+    is Int -> println(x * 2)
+    else -> println("Unknown type") 
+}
+
+Çıktı = 48
+
