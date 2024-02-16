@@ -159,3 +159,10 @@ Binary sayılar val binaryNumberLong: Long = 0b11001100L
 
 
 10) val number = 1_000_000  Kotlin bu alt çizgileri yok sayarak sayıyı yorumlar. 
+
+
+<--------------------------------------------------------------------------------------------------------------------------------------------------->
+
+
+11) '==' operatörü, iki değerin eşit olup olmadığını kontrol eder. Eşitlik kontrolünde, referansları değil, değerlerin kendisini karşılaştırır. Yani, eğer iki değer aynı değere sahipse (içeriği aynıysa), true döner. 
+'===' operatörü, referansların aynı olup olmadığını kontrol eder. Yani, iki değişken aynı nesneyi mi işaret ediyor yoksa farklı nesneleri mi işaret ediyor kontrol eder. 
