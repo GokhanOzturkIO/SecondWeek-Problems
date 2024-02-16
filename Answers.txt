@@ -110,3 +110,6 @@ Soru 10 - Sayısal değişkenlerde alt çizgi (underscore) nasıl kullanılır? 
 	-> Örnek olarak 1000000000 değerini 1_000_000_000 şeklinde de tanımlayabiliriz. Bu şekilde tanımlanma sebebi okunabilirliği artırmak. Kotlin bu değeri 1000000000 olarak yani alt çizgi olmayan haliyle işleme alır.
 Soru 11 - == ile neyi karşılaştırırız? === ile neyi karşılaştırırız?
 	-> == ile değişkenleri değerini, === ile ise değişkenlerin memeory'deki referansını karşılaştırırız.
+Soru 12 - === operatörü ile karşılaştırma yaparken Byte değer aralığı neden önemlidir? Kotlin bu aralığa göre neden özel bir davranış sergiler?
+	-> Eğer referanslarını karşılaştırdığımız sayıların değer aralığı Byte değer aralığı içerisinde ise referans karşılaştırması sonucu true olarak döner yani memory'de aynı adresi işaret ederler. Ancak referanslarını karşılaştırdığımız
+	sayıların değer aralığı Byte değer aralığının dışındaysa referans karşılaştırması sonucu false olarak döner yani memory'de farklı adresi işaret ederler. Bu özellik bellek kullanımı azaltmak ve performansı artırmak için tasarlanmıştır.
