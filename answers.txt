@@ -93,6 +93,11 @@ Değer aralıkları bellekte kaplanan alanı temsil eder ve büyük projelerde v
 
 # == ile değişken değerlerini, === ile bellekteki referansları karşılaştırırız.
 
+24- === operatörü ile karşılaştırma yaparken Byte değer aralığı neden önemlidir? Kotlin bu aralığa göre neden özel bir davranış sergiler?
+
+# Byte değerleri aralığındaysa IDE bunu primitive olarak sayıyor ve memory'de aynı bölümde saklıyor bu yüzden === ile kontrol ettiğimizde aynı iki değişkenin cevabı true döner.Kotlinin bu aralığa sergilediği davranışın sebebi bu aralıktaki sayılar sık kullanıldığından tekrar tekrar bellek oluşturmasını önlemek.
+
+
 
 
 
