@@ -337,3 +337,16 @@ Bu uyumluluk sorunlarını çözmek için şu adımları izleyebilirsiniz:
 İşaretsiz değişkenlerin tanımlı aralığı dışındaki değerlerle çalışırken, veri kaybı riskini dikkate alarak gerekirse uygun hata işleme mekanizmalarını kullanın veya veri doğrulaması yapın.
 Java API'lerini kullanırken, işaretsiz değişkenlerle uyumlu bir arayüz oluşturmak için gerekirse özel sınıflar veya ara katmanlar kullanın.
 Bu yaklaşımlar, işaretsiz değişkenlerin Java API'leriyle uyumlu bir şekilde kullanılmasını sağlayabilir ve uyumluluk sorunlarını minimize edebilir. 
+
+
+<--------------------------------------------------------------------------------------------------------------------------------------------------->
+
+
+TYPE CONVERSION
+
+1) 'is' ve '!is' operatörleri Kotlin'de tip denetimi (type checking) için kullanılır. 
+'is' operatörü, bir nesnenin belirli bir tipe ait olup olmadığını kontrol etmek için kullanılır.
+Eğer bir nesne belirtilen tipe aitse, true döner; aksi halde, false döner.
+'!is2 operatörü, bir nesnenin belirli bir tipe ait olmadığını kontrol etmek için kullanılır.
+Eğer bir nesne belirtilen tipe ait değilse, true döner; aksi halde, false döner.
+! operatörü, koşulu tersine çevirir. Yani, !is operatörü aslında is operatörünün tersi olduğunu ifade eder.
