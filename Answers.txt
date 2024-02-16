@@ -194,6 +194,8 @@ Soru 5 - "val b: Byte = 1 ile val i: Int = b ve son olarak print(b == i) gibi bi
 	Print kısmında ise Byte ile Int arasında değer karşılaştırması yapamadığının hatasını verir.
 Soru 6 - "val b: Byte = 1 ile val i: Int = b.toInt() ve son olarak print(b == i) gibi bir kod yazıldığında çıktı ne olur? Neden böyle bir çıktı aldığınızı açıklayın.
 	-> Yukarıdaki cevapta belirtildiği gibi (== operator cannot be applied to Byte and Int) değer karşılaştırması yapılamadığının hatasını verir.
+Soru 7 - Sayısal değişkenlerde açık dönüşüm (Explicit Type Conversion) yaparken hangi fonksiyonları kullanabilirsiniz?
+	-> toByte(), toShort(), toInt(), toLong(), toFloat(), toDouble()
 
 
 
