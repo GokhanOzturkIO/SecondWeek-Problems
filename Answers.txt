@@ -262,3 +262,9 @@ UNSIGNED NUMBERS
 
 
 1) İşaretsiz değişkenler, yalnızca pozitif sayıları temsil etmek için kullanılır. Yani, işaretsiz değişkenlerin değerleri her zaman 0 veya daha büyük olacaktır. İşaretli değişkenler negatif sayılarda alabilir. 
+
+
+<--------------------------------------------------------------------------------------------------------------------------------------------------->
+
+
+2) İşaretsiz (Unsigned) değişkenler, sayıları temsil etmek için kullanılan bir veri türüdür ve genellikle pozitif tamsayıları temsil etmek için kullanılır. Bunlar, işaret biti (sign bit) olmadan, yani yalnızca pozitif değerler için ayrılan bellek alanlarında saklanırlar.İşaretsiz değişkenlerin kullanımı, bazı durumlarda daha doğru ve uygun sonuçlar almanızı sağlar. Özellikle, işaretsiz değerlerle çalışırken negatif sayılarla ilgili herhangi bir sorunla uğraşmazsınız. Ayrıca, işaretsiz değişkenler, bazı işlemler için daha optimize edilmiş olabilirler.
