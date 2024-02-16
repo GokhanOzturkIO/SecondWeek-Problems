@@ -1,3 +1,5 @@
+	BASİC TYPES AND NULL SAFETY
+
 Soru 1 - val ile var arasındaki fark nedir?
 	-> var kelimesi 'Variable' kelimesinin kısaltmasıdır ve değeri sonradan değiştirilebilir olan değişkenler üzerinde kullanılır.
 	   val ise 'Value' kelimesinin kısaltmasıdır ve değeri sonradan değiştirilemez olan değişkenler üzerinde kullanılır(read-only).
@@ -44,3 +46,8 @@ Soru 3 - "Değişmez" (Immutable) ve "Salt Okunur" (ReadOnly) kavramlarını aç
 		a.d = 4
 		println(a.e) // Konsola yazdırılacak değer 10 -> Bu şekilde val olarak atadığımız değişkenin değeri değişmiş oldu. Bu sebeple val değişkenlere read-only denilmesi daha doğrudur.
 }
+
+Soru 4 - "Tip Çıkarımı" (Type inference) kavramını açıklayın. Hangi durumlarda tip belirtmek kesin olarak gereklidir?
+	-> Tip çıkarımı bir programlama dilinde değişken türlerinin derleyici program tarafından otomatik olarak belirlenmesidir. Tip çıkarımı kullanılan bir derleyici içerisinde tanımladığımız değişkenin
+	tipini belirttiğimizde derleyici tarafından bu tipi belirtmene gerek yok uyarısı da alırız(kodun çalışmasına engel olmaz). Ancak yeni bir değişken oluşturduk ve bunun değer atamasını yapmadık diyelim, 
+	o zaman oluşturduğumuz değişkenin tipini belirtmek zorunda kalırız. 
