@@ -393,3 +393,9 @@ as? işleminin sağ tarafı bir null olmayan String türü olmasına rağmen, d�
 9. "val result = Int.MAX_VALUE + Int.MAX_VALUE" gibi bir işlemin sonucunda "result" değişkeninin tipi ve değeri ne olur? Neden böyle olduğunu açıklayın.
 
 - "This operation has led to an overflow" hatası alırız. Int'in maksimum değerini aşmış olsa da result değer yine de Int olur.
+
+................
+
+10. "val x = 5 / 2 println(x == 2)" gibi bir işlemin sonucu ve tipi nedir? Neden böyle olduğunu açıklayın.
+
+- İki sayı da Int olduğu için bunun çıktısı da int olur. Dolayısıyla çıktı 2 olacağı için 2 == 2 sonucu da true dönecektir.
