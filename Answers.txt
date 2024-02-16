@@ -136,3 +136,11 @@ Sayılar
 8. Sekizlik (Octal) değişkenler Java'da nasıl tanımlanır? Kotlin'de Sekizlik değişken tanımlanabilir mi?
 
 - Java'da sekizlik değişlenleri tanımlarken sayının başına 0 (sıfır) eklenir. Ancak Kotlin'de sekizlik değişken tanımlanırken herhangi bir özellik yoktur. Kotlin'de sekizlik değişken tanımlanırken Integer'a ait parseInt yardımcı fonksiyonu kullanılır.
+
+................
+
+9. "Geleneksel Notasyon" (Conventional Notation) gösterimi nasıl yapılır?
+
+- Kotlin'de ondalıklı değişkenler için geleneksel gösterim desteklenir. 
+Double -> 123.5, 123.5e10
+Float -> 123.5f ya da 123.5F
