@@ -46,3 +46,6 @@ değerlerin null (boş) olma durumlarına karşı güvenli bir şekilde işlemes
 3. Elvis operator: ?:
 4. Not null assertion : !! Operator
 *************************************************************
+9-Bir değişkene null değer atanır ve tip belirtilmezse Kotlin bu değişkeni nasıl yorumlar?
+"Nothing?" şeklinde yorumlar
+*************************************************************
