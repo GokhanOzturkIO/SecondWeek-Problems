@@ -240,3 +240,13 @@ Sayılar
      hassasiyeti çok önemliyse de Double kullanılır.
 
 =================================================================================
+
+7- Ondalık(Decimal), Onaltılık (Hexadecimal) ve İkilik (Binary) değişkenleri Kotlin'de nasıl tanımlayabilirsiniz?
+
+     Ondalık değişkeni, "val decimalNumber: Int = 123" şeklinde tanımlayabiliriz.
+      Onaltılık değişkeni, "val hexadecimalNumber: Int = 01x1F" şeklinde tanımlayabiliriz. 0x önekini kullanarak
+      bir hexadecimal sayı tanımlayabiliriz (1F = 31)
+      İkilik değişkeni, "val binaryNumber: Int = 0b1010" şeklinde tanımlayabiliriz. 0b önekini kullanarak bir binary
+      sayı tanımlayabiliriz (1010 = 10)
+
+=================================================================================
