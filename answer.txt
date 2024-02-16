@@ -55,3 +55,13 @@ Primitive değişkenler stack üzerinde tutulurken Referance type li değişkenl
 11-Nullable bir değişkenin bir değere sahip olması ile null olması arasında bellek yönetimi açısından nasıl bir fark vardır? Null değer almış bir değişken bellekte yer kaplamaz diyebilir miyiz?
 Null değeri alan değişken bellekte yer kaplar. Çünkü null değeri alabilen bir nullable değişken stack üzerinde küçük bir alan kaplamıştır.
 *************************************************************
+12-Nullable bir değişkenle çalışırken hangi operatörleri kullanırız? Bu operatörlerin kullanım farkları nelerdir? Hangisini ne zaman kullanmak daha anlamlıdır?
+1. if ile null kontrolü 
+keko kod yazarken :)
+2. Safe call operator: ?.
+Eğer değişken null değilse, operatörün sağ tarafındaki işlem gerçekleştirilir; ancak değişken null ise, null değeri döner
+3. Elvis operator: ?:
+Bu operatör, nullable değişkenin null olması durumunda varsayılan bir değeri atamak için kullanılır.
+4. Not null assertion : !! Operator
+İşlemin null olmadığına emin olduğumuzda veya null gelen değerin bize gata fırlamasını istediğimiz kritik durumlarda.
+*************************************************************
