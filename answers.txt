@@ -271,3 +271,11 @@ Sayılar
       de geleneksel notasyona bir örnektir. Bu notasyonlar Java'dan gelir.
 
 =================================================================================
+
+10- Sayısal değişkenlerde alt çizgi (underscore) nasıl kullanılır? Kotlin bunu nasıl yorumlar?
+
+     Sayısal değişkenlerin daha kolay okunabilmesi için alt çizgiler kullanılabilir. (Örn. 1_000_000)
+      Bu alt çizgiler program çalışırken okunmaz. bizim '1_000_000' şeklinde tanımladığımız bir değişkeni
+      Kotlin, '1000000' şeklinde okur.
+
+=================================================================================
