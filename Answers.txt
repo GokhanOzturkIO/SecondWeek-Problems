@@ -276,3 +276,38 @@ ULong  -> 64-bit işaretsiz bir tamsayı, 0 ile 18,446,744,073,709,551,615 aras�
 8. "İşaretsiz" değişken türleri (UInt, ULong vs.) kullanırken, Java API'leri ile uyumluluk konusunda ne gibi sorunlar olabilir? Bunları çözmek için neler yapabilirsiniz?
 
 - Uyumsuzlukları gidermek için, işaretsiz tamsayıları işaretli tamsayılara dönüştürme, uygun saklama yöntemleri kullanma veya Java API'lerini kullanırken işaretsiz tamsayıları kaçınma gibi yöntemler kullanılabilir.
+
+................
+
+Tür Dönüşümü
+------------------------------
+
+1. is ve !is operatörlerinin kullanımını açıklayın.
+
+- Kotlin'de is ve !is operatörleri, tip denetimi (type checking) yani belirli bir türe uygun olup olmadıklarını belirleyen işlemlerinde kullanılır. Özellikle if-else yapılarında veya when ifadelerinde farklı durumları ele alırken türlerin doğrulanmasında kullanılır.
+
+is  -> Bu operatör, bir nesnenin belirli bir tipe ait olup olmadığını kontrol etmek için kullanılır. 
+!is -> Bu operatör, bir nesnenin belirli bir tipe ait olmadığını kontrol etmek için kullanılır. 
+
+Örnek kod:
+
+val x = "Rabia"
+
+if (x is String) {
+    println("x is a String")
+} else {
+    println("x is not a String")
+}
+
+Çıktı = x is a String
+
+val y = 24
+
+if (y !is String) {
+    println("y is not a String")
+} else {
+    println("y is a String")
+}
+
+Çıktı = y is not a String
+
