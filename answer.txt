@@ -39,3 +39,10 @@ Bir değişkenin bir tipi olması gerektiğidir. String bir değişken int değe
 7-Bir değişkeni nullable yapmak için ne yapmalıyız?
 Tipinin yanına ? işareti koyarız ve null değeri atarız.
 *************************************************************
+8-"Null Güvenliği" (Null Safety) kavramını açıklayın.
+değerlerin null (boş) olma durumlarına karşı güvenli bir şekilde işlemesini ifade eder. 
+1. if ile null kontrolü
+2. Safe call operator: ?.
+3. Elvis operator: ?:
+4. Not null assertion : !! Operator
+*************************************************************
