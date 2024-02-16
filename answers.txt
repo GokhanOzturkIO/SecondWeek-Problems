@@ -44,6 +44,12 @@ Değerini daha sonradan vereceğimiz değişkenlere makinenin bellekte ne kadar 
 
 # Nullable bir değişken bir değere sahip olduğunda bellekte onun için yer tutulur fakat null olduğunda yer tutulmaz.Evet null değer almış değişken yer kaplamaz.
 
+12-Nullable bir değişkenle çalışırken hangi operatörleri kullanırız? Bu operatörlerin kullanım farkları nelerdir? Hangisini ne zaman kullanmak daha anlamlıdır?
+
+# Nullable değişkenlerle çalışırken ?. Veya !!. Kullanırız ?. Basitçe bir if sorgusudur değer full değilse yap gibi,!! ise değer her ne olursa olsun işlemi yap bunun sonucu crash oluşabilir. Bir uygulamada hayati değere sahip bir olayda !! Kullanmak eğer değer yoksa hayati sonuçlar çıkmasını engeller ve crash verir.Önemsiz denebilecek yerlerde ise .? Kullanarak değer dönmezse bile uygulama çökmez ve önemli bir sonuç oluşmaz.
+
+
+
 
 
 
