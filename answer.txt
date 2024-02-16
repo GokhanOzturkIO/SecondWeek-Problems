@@ -84,7 +84,7 @@ Kotlin de type inference özelliği vardır. Belirtilen değerin default değerl
 Küçük l harfi, 1 rakamına benzeyebilir. Bu da kod okunabilirliğini ve anlaşılırlığını azaltabilir.
 ************************************************************
 16-Tek duyarlıklı (Single precision) ve Çift duyarlıklı (Double precision) kavramlarını açıklayın.
-Single Precision(Float)
+Single Precision
 32 bit (4 bayt) bellek kullanır.
 Yaklaşık 7 basamak ondalık basamak hassasiyeti sağlar.
 Double Precision
@@ -95,3 +95,13 @@ Tek duyarlıklı daha az bellek kullanır ve daha hızlı işlem yapılmasını 
 17-Double ve Float değişkenlerle çalışırken ondalık ayıracı olarak hangi işaretler kullanılır? Bu ayıraçların kullanımında nelere dikkat etmek gerekir?
 Double ve float değişkenlerde ondalık ayracı olarak virgül (,) veya nokta (.) kullanılabilir. Kullanılan programlama diline ve bölgesel ayara göre bu iki işaretten biri tercih edilir.
 ************************************************************
+18-Double ve Float değişkenler ondalık kısımda kaç basamağa kadar işlem yaparlar? Bu sınırın üzerinde gelen ondalık bilgileri için nasıl davranırlar? Hangi durumlar için Float ve hangi durumlar için Double kullanılmalıdır?
+Double: 15-17 basamak ondalık basamak işleyebilir.
+Float: 7 basamak ondalık basamak işleyebilir.
+Ondalık basamak sınırı aşıldığında, ondalık sayılar yuvarlanır veya kesilir.
+Yuvarlama, sayıyı en yakın tam sayıya yaklaştırır.
+Kesme, ondalık basamak sınırından sonraki basamakları atar.
+Double, float'tan daha fazla ondalık basamak işleyebilir. Hangi veri tipini kullanacağınız, uygulamanızın ihtiyaç duyduğu hassasiyete ve bellek kullanımına bağlıdır.
+************************************************************
+
+
