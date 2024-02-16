@@ -36,4 +36,6 @@ bu değişken tipleri
 6-"Tip Güvenliği" (Type Safety) kavramını açıklayın.
 Bir değişkenin bir tipi olması gerektiğidir. String bir değişken int değer atanamamasıdır.
 *************************************************************
-
+7-Bir değişkeni nullable yapmak için ne yapmalıyız?
+Tipinin yanına ? işareti koyarız ve null değeri atarız.
+*************************************************************
