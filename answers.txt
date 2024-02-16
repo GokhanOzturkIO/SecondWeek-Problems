@@ -314,3 +314,24 @@ Sayılar
       karşılaştırma operatörleri kullanılabilir.
 
 =================================================================================
+
+15- Bit düzeyinde operatörler (Bitwise operators) nelerdir? Ne amaçla kullanılır? Kotlin'de bunları nasıl kullanabilirsiniz?
+
+     Kotlin'de, bit düzeyinde operatörler şunlardır; and (&), or (|), xor (^), inv (inv()), shl (<<), shr (>>), ushr (>>>>)
+      Bit düzeyinde operatörler, genellikle donanım ile ilgili programlama, veri sıkıştırma, kriptografi gibi alanlarda kullanılır.
+      Ayrıca, bazen performans veya özel bit işlemleri gerektiren durumlarda da kullanılabilirler. Örneğin, iki sayının belirli bitlerini
+      karşılaştırmak, belirli bitleri ayıklamak veya belirli bitlere değer atamak gibi durumlarda bu operatörler kullanılabilir.
+
+      Kullanım Örneği.
+                    val x = 0b1010
+                    val y = 0b1100
+
+                    println(x and y)   // Çıktı: 8 (0b1000)
+                    println(x or y)    // Çıktı: 14 (0b1110)
+                    println(x xor y)   // Çıktı: 6 (0b0110)
+                    println(x.inv())   // Çıktı: -11
+                    println(x shl 1)   // Çıktı: 20 (0b10100)
+                    println(y shr 1)   // Çıktı: 6 (0b110)
+                    println(y ushr 1)  // Çıktı: 6 (0b110)
+
+=================================================================================
