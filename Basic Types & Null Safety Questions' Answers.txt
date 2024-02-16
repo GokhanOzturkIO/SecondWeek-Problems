@@ -42,3 +42,34 @@ class BankAccount {
 }
 
 ---------------------------------------------------------------------------------------
+
+Soru 3: "Değişmez" (Immutable) ve "Salt Okunur" (ReadOnly) kavramlarını açıklayın. val değişkenler neden aslında "değişmez" değil de "salt okunur" olarak açıklanmalıdır?
+
+ - val değişkenlerin Immutable olarak açıklanır. Ama aslında tam olarak Immutable değildir. ReadOnyl bir değişkendir. Kotlin official dokümantasyonunda da Immutable bir ifade geçer ama oradaki anlam olarak `değişmezlik` olarak kullanılıyor.
+
+ - Immutable: ifadesi değer atandıktan sonra değişkenin/nesnenin durumu hiçbir şekilde ilk değerden farklı olamaz anlamına gelmektedir.
+ - ReadOnly: ifadesi ise ilk değer atamasından sonra tekrar değer atanamaz demektir. Ama farklı zamanlarda farklı sonuçlar üretebilir. Yani değeri okunulabilen ama set edilemeyen değişkenlerdir.
+
+Peki ben ilk değer atamasından sonra tekrar değer ataması yapamıyorum val ifadelere, bu durumda nasıl her seferinde farklı sonuçlar üretebilir ki dediğinizi duyar gibiyim? Bunu bir örnek üzerinden açıklayayım.
+
+class StockPortfolio {
+    var stockCount: Int = 10
+    var stockPrice: Double = 25.0
+
+    val totalValue: Double
+        get() = stockCount * stockPrice
+}
+
+Bu örnekte sahip olduğumuz bir hisse senedinden ne kadar olduğunu ve o hisse senedinin kaç Tl olduğu bilgisi tutuluyor. Aynı zamanda bu bilgilere göre benim toplamda ne kadar Tl param olduğu bilgisini totalValue değişkeni ile tutuyoruz.
+
+totalValue değişkeninin val olduğunu ve bu değişkenin değerini get() ile stockCount ve stackPrice değeri çarpımı olduğuna dikkat edelim. Eğer ben yeni hisse eklediğimde ve totalValue değerimi kontrol ettiğimde güncel değerler ile çarpıp bana sonucu döndürmüş olacak. 
+
+Burada ben totalValue değişkenine yeni bir değer ataması yapmadık. Ama readOnly olabildiğinden dolayı get() fonksiyonu yazarak farklı sonuçlar üretebildik.
+
+- const val ile tanımlanan değişkenlerin IMMUTAVBLE olmasının nedeni const val ile yazılmış bir değişkenin hiçbir şekilde get() fonksiyonu eklemesi yapamıyoruz. Yani değerini ilk atamadan sonra hiçbir şekilde farklı olmuyor.
+
+---------------------------------------------------------------------------------------
+
+
+
+
