@@ -88,6 +88,11 @@ Sayılar
 - Tek Duyarlılık (Single Precision): Tek duyarlılık, 32 bitlik bir formattır ve Float veri türü ile temsil edilir. Bu türdeki sayılar, ondalık sayıları ve kesirli sayıları temsil etmek için kullanılır.Tek duyarlılık, daha düşük bellek kullanımına sahiptir ancak daha az kesin sayılarla temsil edilebilir.
 -Çift Duyarlılık (Double Precision): Çift duyarlılık, 64 bitlik bir formattır ve Double veri türü ile temsil edilir. Bu türdeki sayılar, daha büyük bir aralıkta ve daha yüksek hassasiyetle ondalık ve kesirli sayıları temsil etmek için kullanılır.Çift duyarlılık, daha fazla bellek kullanır ancak daha yüksek hassasiyet sunar. Kotlin'de varsayılan olarak ondalık sayılar, çift duyarlılık (Double) olarak kabul edilir.
 
+5.Double ve Float değişkenlerle çalışırken ondalık ayıracı olarak hangi işaretler kullanılır? Bu ayıraçların kullanımında nelere dikkat etmek gerekir?
+
+- (.) kullanılır. Ama apiden gelen ondalıklı sayılarda dikkat etmeliyiz.
+ 
+
 
  
 
