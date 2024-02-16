@@ -19,4 +19,10 @@ Temel Türler & Null Güvenliği
 
 -var değişkenin set ini private yaparak val gibi davranmasını sağlayabiliriz. Örnek bir senaryo düşünelim: Bir sınıf içinde bir özellik (property) bulunmakta ve bu özelliğin değeri sadece başlangıçta belirlenebilsin, sonrasında değiştirilemesin istiyoruz. Ancak, bu özelliği val ile tanımlamamız mümkün değil, çünkü başlangıç değeri sonradan değiştirilemez.
 
+3."Değişmez" (Immutable) ve "Salt Okunur" (ReadOnly) kavramlarını açıklayın. val değişkenler neden aslında "değişmez" değil de "salt okunur" olarak açıklanmalıdır?
+
+-Değişmez (Immutable): Değişmez, bir nesnenin oluşturulduktan sonra, içindeki durumunun değiştirilemez olduğu durumu ifade eder. Yani, bir kez oluşturulan bir değişmez nesnenin değerleri daha sonra değiştirilemez. 
+-Salt Okunur (ReadOnly): Salt okunur, bir nesnenin sadece okunabilir olduğu, yani değerlerinin okunabildiği ancak değiştirilemediği durumu ifade eder. Bu durum, bir nesnenin durumunun başlangıçta belirlendikten sonra daha sonra değiştirilemeyeceği, ancak bu nesnenin diğer nesnelerle etkileşimde bulunabileceği anlamına gelir.
+-çünkü val değişkenleri fonksiyonlar üzerinden değerini değiştirebiliriz.
+
 
