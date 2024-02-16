@@ -69,4 +69,9 @@
 10)  İlkel bir değişkenin nullable olması, o değişkenin null değer alabilmesi anlamına gelir. Bu durumda, bellekte bir ilave alan ayrılması gerekir çünkü null değer alabilen bir değişken, bir değere (örneğin, bir referansa) işaret etmeyebilir. Dolayısıyla, nullable bir değişken için bellekte bir miktar ek alan ayrılması gerekir. Ancak, nullable olmayan bir ilkel değişkenin bellekte ayrılacak herhangi bir ek alanı yoktur çünkü 
 
 
+<--------------------------------------------------------------------------------------------------------------------------------------------------->
+
+
+11) Null değer almış bir değişken bellekte yer kaplamaz. Nullable bir değişkenin bir değere sahip olması durumunda, o değişken için bellekte bir alan ayrılması gerekir. Değişkenin tutacağı değer, bellekte bir yer kaplar ve bu bellek alanı kullanılır. Ancak, nullable bir değişken null değer almışsa, bellekte hiçbir alan ayrılmaz. Null değer, değişkenin bir değere işaret etmediği anlamına gelir ve dolayısıyla bellekte yer kaplamaz.
+
 
