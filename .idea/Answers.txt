@@ -41,10 +41,10 @@ Answer 4:
     verilen sayı int değer aralığındaysa normalde byte/short aralığında da olsa olabilecek hataları
     önleme amacı ile en uygun tipe int e eşleyecektir, int aralığından da büyük bir sayı ise bu sefer
     long olarak görüntülenecektir.
-  **Nullable değişkenler kullanırken yani var a = null dediğimizde tipini belirtmeliyiz çünkü
-    belirtmediğimizde IDE bunun Nothing tipine eşler. Unit den farklıdır. unit bir şey döner ama
-    boştur, Nothing bir şey de dönmez. Daha sonradan bir değer atamak istediğimizde şöyle bir hata
-    verecek : Bunun tipi Nothing ama sen int atıyorsun (gibi).
+  **bir değişkene örneğin var a = null dediğimizde tipini belirtmeliyiz çünkü belirtmediğimizde IDE
+    bunun Nothing tipine eşler. Unit den farklıdır. unit bir şey döner ama boştur, Nothing bir şey
+    de dönmez. Daha sonradan bir değer atamak istediğimizde şöyle bir hata verecek : Bunun tipi
+    Nothing ama sen int atıyorsun (gibi).
 
 Answer 5:
     Kotlinde class gibi görünen değişken tipleri özel optimizasyon ile proje derlenirken otomatik
@@ -56,4 +56,9 @@ Answer 5:
 
     üstteki örnekte kotlinde Int olarak belirttiğimiz tip javaya çevrildiğinde primitive tipe
     dönüşüyor. Her derlendiği zaman IDE bunu arkaplanda çeviriyor.
+
+Answer 6:
+    Type Safety: Kod yazarken iki uyumsuz tipi birbirine atama yapmaya çalışırsak IDE bize kızıyor.
+    Örneğin int bir değişkene String atamaya çalışırsak bu hata ile karşılaşırız. IDE kodu düzeltene
+    kadar derlemeye izin vermez, derlemez.
 
