@@ -41,4 +41,13 @@ Temel Türler & Null Güvenliği
 
 -Değişken tipinin yanına ? koyarız.
 
+8."Null Güvenliği" (Null Safety) kavramını açıklayın.
+
+- ?. Bu operatör, bir değişkenin null olup olmadığını kontrol eder. Eğer null ise, ifade null olarak değerlendirilir ve null hata almazsınız.
+- !!. Bu operatör ile ideye değişkenin null olmayacağının garantisini veriyoruz. Eğer değişken null gelirse program hata verir. Dikkatli kullanılmalıdır. Kritik işlerde kullanılır genellikle.
+
+
+
+
+
 
