@@ -426,3 +426,14 @@ Sayılar
       taşma kontrol mekanizmalarından yararlanır.
 
 =================================================================================
+
+8- "İşaretsiz" değişkenlerin sınırlamaları nelerdir?
+
+     - UByte = 0..255
+     - UShort = 0..65535
+     - UInt = 0..4294967295
+     - ULong = 0..18446744073709551615
+
+     Bunları, örneğin "UInt.MAX_VALUE" diyerek görebiliriz.
+
+=================================================================================
