@@ -75,3 +75,7 @@
 11) Null değer almış bir değişken bellekte yer kaplamaz. Nullable bir değişkenin bir değere sahip olması durumunda, o değişken için bellekte bir alan ayrılması gerekir. Değişkenin tutacağı değer, bellekte bir yer kaplar ve bu bellek alanı kullanılır. Ancak, nullable bir değişken null değer almışsa, bellekte hiçbir alan ayrılmaz. Null değer, değişkenin bir değere işaret etmediği anlamına gelir ve dolayısıyla bellekte yer kaplamaz.
 
 
+<--------------------------------------------------------------------------------------------------------------------------------------------------->
+
+
+12) Nullable bir değişkenle çalışırken kullandığımız iki tane operatör vardır. Bunlar ? ve !! operatörleridir. ? opeartörü değişkenin null olabileceği anlamında gelir. !! operatörü ise değerin kesinlikle null olmayacağını bildiğimiz durumlarda kullanılır, ide ye değer kesinlikle null değil demiş oluruz.
