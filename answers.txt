@@ -77,7 +77,9 @@ Değer aralıkları bellekte kaplanan alanı temsil eder ve büyük projelerde v
 
 # Ondalık sayı düz bir şekilde tanımlanırken onaltılık değişken başında 0x şeklinde ikilik değişken ise 0b şeklinde başlayarak tanımlanır.
 
+20-Sekizlik (Octal) değişkenler Java'da nasıl tanımlanır? Kotlin'de Sekizlik değişken tanımlanabilir mi?
 
+# Başında 0 olarak yazılır.Kotlinde sekizlik değişken tanımlanamaz çünkü 0 ile başlayamıyor sayılar.
 
 
 
