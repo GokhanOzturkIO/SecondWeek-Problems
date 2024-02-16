@@ -1,5 +1,6 @@
 Temel Türler & Null Güvenliği
 ------------------------------
+
 1. val ile var arasındaki fark nedir?
 
 - Val değeri değiştirilemeyen, sabit değişkendir. Var ise mutable, değerini istediğimiz kadar değiştirebildiğimiz bir değişkendir. Val read-only yani değeri okunabilir ama set edilemez.
@@ -82,3 +83,12 @@ val name: String? = null
 
 !!. -> "Değer null olsa da olmasa da bana bırak. Gerekirse uygulama patlasın ama değer değişmesin", anlamına gelir.
 ?. -> "Bu değer çok önemli değil. Null gelirse uygulamayı patlatma", anlamına gelir.
+
+................
+
+Sayılar
+------------------------------
+
+1. Kaç farklı tipte "number" sınıfı miras alan "alt sınıf" (child class) vardır? Bunların değer aralıkları neden önemlidir?
+
+- Number sınıfı miras alan 6 alt sınıf vardır. Bunlar: Byte, Short, Int, Long, Float ve Double'dır. Bu alt sınıflardan ilk dördü tam sayıları ifade ederken son iki tanesi ondalıklı sayılar için kullanılır. Hepsinin değer aralıkları birbirinden farklıdır. Tam sayılar için en küçük değer aralığı Byte iken en büyük değer aralığı ise Long'dur. Değer aralıklarının farklı olması uygun veri tipini seçerek bellek kullanımının ve işlem hızının daha iyi kontrol edilebilmesine olanak tanır. Ayrıca vereceğimiz değerin de hangi aralıklarda olacağını biliriz. 
