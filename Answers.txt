@@ -51,5 +51,11 @@ Temel Türler & Null Güvenliği
 
 -nothing? tipinde yorumlar.
 
+10.İlkel bir değişkenin nullable olması ile null değer alamaması arasında bellek yönetimi açısından nasıl farklar vardır?
+
+-Bir değişken nullable ise değişken class halidir.
+
+ 
+
 
 
