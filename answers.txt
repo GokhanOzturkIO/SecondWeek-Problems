@@ -42,7 +42,7 @@ Değerini daha sonradan vereceğimiz değişkenlere makinenin bellekte ne kadar 
 
 11-Nullable bir değişkenin bir değere sahip olması ile null olması arasında bellek yönetimi açısından nasıl bir fark vardır? Null değer almış bir değişken bellekte yer kaplamaz diyebilir miyiz?
 
-# Nullable bir değişken bir değere sahip olduğunda bellekte onun için yer tutulur fakat null olduğunda yer tutulmaz.Evet null değer almış değişken yer kaplamaz.
+# Referans tipli değişkenler ve değerleri, bellekte stack ve heap yapıları olarak tutulur. Stack, referansları (değişkenleri) tutarken, heap ise bu referanslara ait verileri saklar. Nullable değişkenler (örneğin Int?), referans tipli olduğundan dolayı heap'te null olabilirler, ancak stack üzerinde hala bir miktar yer kaplarlar.Bu yüzden az da olsa yer kaplar
 
 12-Nullable bir değişkenle çalışırken hangi operatörleri kullanırız? Bu operatörlerin kullanım farkları nelerdir? Hangisini ne zaman kullanmak daha anlamlıdır?
 
@@ -104,6 +104,8 @@ Değer aralıkları bellekte kaplanan alanı temsil eder ve büyük projelerde v
 26-Sayısal değişkenlerde hangi karşılaştırma operatörleri kullanılabilir?
 
 # ==,!=,<,>,<= gibi operatörler kullanılır.
+
+27-
 
 
 
