@@ -124,5 +124,10 @@ Soru 7: Bir değişkeni nullable yapmak için ne yapmalıyız?
 
 --------------------------------------------------------------------------------------
 
+Soru 8: "Null Güvenliği" (Null Safety) kavramını açıklayın?
 
+  Yazdığımız programlarda bir değişkenin null olduğunda ve bu değişken üzerinde işlem yaptığımızda NullPointerException hatasını fırlattığını ve bunun uygulamamızı çökerttiğini biliyoruz. Null safety destekleyen dillerde değişkenlerin null olup olamayacağı açıkça belirtilir ve null değerlere karşı önlemler alınır. Bizde bir değişkenin null olup olmayacağını bu değişken türlerine göre anlarız ve ona göre önlem alarak NullPointerException(NPE) hatasını neredeyse sıfıra indirebiliriz.
+
+
+--------------------------------------------------------------------------------------
 
