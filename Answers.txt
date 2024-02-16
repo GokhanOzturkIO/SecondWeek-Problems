@@ -35,3 +35,11 @@
 
 
 6) "Tip Güvenliği" (Type Safety), bir programlama dilinde belirli türlerin birbirleriyle uyumlu şekilde kullanılmasını ve hatalı tür dönüşümlerinin engellenmesini sağlayan bir özelliktir. 
+
+
+
+<--------------------------------------------------------------------------------------------------------------------------------------------------->
+
+
+
+7) Bir değişkenin nullable yapmak için ? kullanırız. Örneğin "val name: String? = null" şeklinde.
