@@ -335,3 +335,16 @@ Sayılar
                     println(y ushr 1)  // Çıktı: 6 (0b110)
 
 =================================================================================
+
+16- Kotlin'de büyük sayılarla çalışırken hangi ek türlerden yararlanılır ve bu türlerin sınırları nelerdir?
+
+     Kotlin'de büyük sayılarla çalışırken, BigInteger ve BigDecimal tipleri kullanılır. Bu tipler aslında
+      bir sınıftır. Bu sınıflar, Java'daki (BigInteger ve BigDecimal) sınıfların karşılığıdır.
+      BigInteger, çok büyük tam sayıları temsil etmek için kullanılır. Bellek ve işlemci gücü dışında herhangi
+      bir sınırı yoktur. BigDecimal ise, çok büyük ondalıklı sayıları temsil etmek için kullanılır. BigInteger'da
+      da olduğu gibi, bellek ve işlemci gücü dışında herhangi bir sınırı yoktur. Kotlin'de şu şekilde tanımlanırlar:
+
+          val bigIntegerNumber = BigInteger("1234567890123456789012345678901234567890")
+          val bigDecimalNumber = BigDecimal("123456.789012345678901234567890")
+
+=================================================================================
