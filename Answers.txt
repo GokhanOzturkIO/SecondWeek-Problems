@@ -27,3 +27,11 @@
 
 
 5) Kotlin de class gibi gözüken değişken tipleri özel optimizasyonlarla byte koda çevrilirken primitive olacak şekilde çevriliyorlar.
+
+
+
+<--------------------------------------------------------------------------------------------------------------------------------------------------->
+
+
+
+6) "Tip Güvenliği" (Type Safety), bir programlama dilinde belirli türlerin birbirleriyle uyumlu şekilde kullanılmasını ve hatalı tür dönüşümlerinin engellenmesini sağlayan bir özelliktir. 
