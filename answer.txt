@@ -12,3 +12,8 @@ Bunu neden yapmak isteriz? Örnek bir senaryo verin.
 	   private set
 değişkenimizi farklı bir class içinde kullanacaksak ve değişmesini istemiyorsak yaparız ama tanımlandığı class değerinde değişiklik yapılabilir.
 *************************************************************
+3-"Değişmez" (Immutable) ve "Salt Okunur" (ReadOnly) kavramlarını açıklayın. val değişkenler neden aslında "değişmez" değil de "salt okunur" olarak açıklanmalıdır?
+read-only → ilk değer atamsından sonra tekrar değer atanamaz ama değerin içeriği değişitirilebilir.→val
+immutable → değişken yada nesnenin durumu asla ilk değerden farklı olamaz, değişmezdir.→const val
+Val değişkenlerin get fonksiyonu vardır bundan dolayı read-onlydir.
+*************************************************************
