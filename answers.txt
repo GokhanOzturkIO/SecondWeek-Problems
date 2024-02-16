@@ -364,3 +364,16 @@ Sayılar
           val roundedValue = roundToDecimal(3.456789, 2) // Çıktı: 3.46
 
 =================================================================================
+=================================================================================
+
+İşaretsiz Sayılar
+
+1- "İşaretsiz" (Unsigned) değişkenler ne demektir? İşaretli olanlarla aralarındaki fark nedir?
+
+     İşaretsiz değişkenler, genelde eksi (-) işaret almayan veri tipleri için kullanılır.
+      eksi işaret almadıkları için, işaretli veri tiplerine göre daha büyük pozitif sayılar
+      tutulabilir. Byte üzerinden örnek verecek olursak, Byte'ın değer aralığı -128 ile 127'dir.
+      UByte'ın (Unsigned Byte'ın) değer aralığı ise 0 ile 255'dir. Yani negatif sayılar, pozitif
+      sayılara eklenmiştir.
+
+=================================================================================
