@@ -430,4 +430,8 @@ Hata alırız çünkü == operatörü integer bir değer ile byte bir değeri ka
 
 
 
-10) Kotlin'de, bölme işlemi iki tamsayı arasında gerçekleştirildiğinde sonuç her zaman bir tamsayı olacaktır. Yani, 5'in 2'ye bölümü 2 sonucunu verir. Ancak, burada önemli olan nokta, bölme işleminin gerçekleştirildiği veri türleri ve bölme operatörünün sonucu.
+10) Kotlin'de, bölme işlemi iki tamsayı arasında gerçekleştirildiğinde sonuç her zaman bir tamsayı olacaktır. Yani, 5'in 2'ye bölümü 2 sonucunu verir. Ancak, burada önemli olan nokta, bölme işleminin gerçekleştirildiği veri türleri ve bölme operatörünün sonucu.5 ve 2 sayıları Int türündedir. Dolayısıyla, bölme işlemi gerçekleştirilirken bölme operatörü sonucu Int türünde bir değer üretecektir. Sonuç olarak, x değişkeninin değeri 2 olacaktır ve tipi de Int olacaktır.Kodun çıktısı ise true olacaktır çünkü x değişkeni 2'ye eşittir. Sonuç olarak, println(x == 2) ifadesi true değerini verecektir.
+
+
+
+<--------------------------------------------------------------------------------------------------------------------------------------------------->
