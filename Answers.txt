@@ -407,3 +407,11 @@ Hata alırız çünkü == operatörü integer bir değer ile byte bir değeri ka
 
 
 7) toInt(), toByte(), toShort(), toLong(), toDouble(), tofloat()
+
+
+
+<--------------------------------------------------------------------------------------------------------------------------------------------------->
+
+
+
+8) Değişkenin değeri Long olur çünkü Kotlin iki farklı sayısal türde değişkenler ile toplama işlemi yaparken yeni değişkeni büyük olan değişken türünde oluşturur.
