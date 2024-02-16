@@ -16,3 +16,7 @@
        -Readonlynin nesnesi veya referansının durumu  değişebilir ama immutable  nesnesinin ve referansın değiştirmeninin
        hicbir yolu yoktur. val ise nesnesi veya referansının durumu değiştiği için readonlydir.
 ----------------------------------------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------------------
+  1.4   Programcı veri türünün belirtmeden IDE'nin veri türünü anlamasıdır.Tür Bildirimi yapmamız gereken yerler ise
+  null bir tip bildirdiğimizde,fonksiyon geri dönüş değerinde ve parametlerinde bildiririz.
+----------------------------------------------------------------------------------------------------------------------*/
