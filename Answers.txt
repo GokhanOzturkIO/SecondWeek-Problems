@@ -98,3 +98,9 @@ Sayılar
 2. Eğer bir değişkene tip belirtimi yapılmaz ve bir değer atanırsa, Kotlin tip çıkarımını nasıl yapar?
 
 - Kotlin, değişkenin değerini belirtmesek de değişkenin değerine ve atanan değerin türüne göre tip çıkarımı yapabilir. Eğer atanan değer sayı içeriyorsa değer aralığı ne olursa olsun default olarak Kotlin onu int olarak algılar veya metin içeren bir değerse bunu String olarak belirtmesek de hata vermez. 
+
+................
+
+3. Float değişken oluştururken F ve f harfleri varken, Long değişken oluştururken neden küçük l harfi yoktur?
+
+- Bunun nedeni, bazı fontlarda 1'e benzemesinden dolayı küçük l harfi yoktur.
