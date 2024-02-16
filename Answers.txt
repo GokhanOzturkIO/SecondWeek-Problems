@@ -155,5 +155,10 @@ Sayılar
 -Sola Kaydırma (Left Shift) Operatörü (<<): Belirtilen sayıda biti sola doğru kaydırır.  val result = a shl 1
 
 
+16.Kotlin'de büyük sayılarla çalışırken hangi ek türlerden yararlanılır ve bu türlerin sınırları nelerdir?
+
+-BigInteger:BigInteger, büyük tamsayıları temsil etmek için kullanılır.
+-BigDecimal, büyük ondalık sayıları temsil etmek için kullanılır.
+
 
 
