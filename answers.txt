@@ -416,3 +416,13 @@ Sayılar
       yer tutarız hem de 0'dan 255'e kadarki olan sayıları age değişkenimize atayabiliriz.
 
 =================================================================================
+
+7- "İşaretsiz" değişkenlerle yapılan matematiksel işlemlerde, özellikle büyük sayılarla çalışırken
+ karşılaşılabilecek taşma (overflow) ve taşma olmaması (underflow) durumları için Kotlin nasıl bir yönetim sağlar?
+  
+     Kotlin, işaretsiz değişkenlerle matematiksel işlemlerde taşma (overflow) ve
+      taşma olmaması (underflow) durumları için özel bir yönetim sağlamaz. Kotlin,
+      JVM (Java Virtual Machine) üzerinde çalıştığı için, JVM'in sağladığı işlem mantığı ve
+      taşma kontrol mekanizmalarından yararlanır.
+
+=================================================================================
