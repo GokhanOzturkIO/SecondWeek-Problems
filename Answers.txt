@@ -130,3 +130,9 @@ Sayılar
 - Decimal tanımı [0-9] -> val decimalNumber = 1905
 - Hexadecimal tanımı   -> val hexadecimalNumber = 0x759
 - Binary tanıma        -> val binaryNumber = 0b010000011
+
+................
+
+8. Sekizlik (Octal) değişkenler Java'da nasıl tanımlanır? Kotlin'de Sekizlik değişken tanımlanabilir mi?
+
+- Java'da sekizlik değişlenleri tanımlarken sayının başına 0 (sıfır) eklenir. Ancak Kotlin'de sekizlik değişken tanımlanırken herhangi bir özellik yoktur. Kotlin'de sekizlik değişken tanımlanırken Integer'a ait parseInt yardımcı fonksiyonu kullanılır.
