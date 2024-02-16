@@ -163,3 +163,14 @@ Float -> 123.5f ya da 123.5F
 12. === operatörü ile karşılaştırma yaparken Byte değer aralığı neden önemlidir? Kotlin bu aralığa göre neden özel bir davranış sergiler?
 
 - Eğer kontrol ettirdiğimiz değer -128 ile 127 yani Byte değer aralığı içerisinde ise  bu r bir class'ın objesi bile olsa referans kontrollerinde özel optimizasyonlar sebebiyle aynı alana işaret edilir. Integer'lar için sayısal değerin nullable olması durumunda eğer ki Byte aralığının içerisindeyseniz Bu durumda özel optimizasyonlar aynı referans alanına işaret ettiğinizi gösterir. Yani farklı değişkenler gibi gözükseler de aslında aynı değişkenler oluyor. 
+
+................
+
+13. Sayısal değişkenlerde hangi matematiksel operatörler kullanılabilir?
+
+- Sayısal değişkenlerde kullanılan operatörler şunlardır:
+Plus  = +
+Minus = -
+Times = x
+Div   = /
+Rem   = %
