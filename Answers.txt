@@ -187,3 +187,23 @@ Büyük veya Eşit '>=' -> Sol taraftaki değer sağ taraftakinden büyük veya 
 Küçük veya Eşit '<=' -> Sol taraftaki değer sağ taraftakinden küçük veya eşitse true döndürür.
 Ve Operatörü '&&' -> Her iki ifade de doğruysa True döndürür.
 Veya Operatörü '||' -> İfadelerden biri doğruysa True döndürür.
+
+................
+
+15. Bit düzeyinde operatörler (Bitwise operators) nelerdir? Ne amaçla kullanılır? Kotlin'de bunları nasıl kullanabilirsiniz?
+
+- Kotlin, tam sayılar üzerinde bir dizi bitsel işlem sağlar. Yalnızca Int ve Long'a uygulanabilirler:
+
+shl(bits) –> İşaretsiz sola kaydırma işlemidir. Bir değeri belirtilen miktarda bit sola kaydırır. Örneğin, 1010 sayısını 2 bit sola kaydırmak, 101000 olmasına neden olur.
+
+shr(bits) –> İşaretle sağa kaydırma işlemidir. Bir değeri belirtilen miktarda bit sağa kaydırır. Kaydırılan bitler, işaret bitinin değeriyle doldurulur. Örneğin, -8 sayısını 2 bit sağa kaydırmak, -2 olmasına neden olur.
+
+ushr(bits) –> İşaretsiz sağa kaydırma işlemidir. Bir değeri belirtilen miktarda bit sağa kaydırır. Kaydırılan bitler, her zaman sıfır ile doldurulur.
+
+and(bits) –> Bit bitiyle AND işlemi yapar. İki değerin her bir bitini karşılaştırır ve her iki bit de 1 ise sonuç 1 olur, aksi halde sonuç 0 olur.
+
+or(bits) –> Bit bitiyle OR işlemi yapar. İki değerin her bir bitini karşılaştırır ve herhangi biri 1 ise sonuç 1 olur.
+
+xor(bits) –> Bit bitiyle XOR işlemi yapar. İki değerin her bir bitini karşılaştırır ve yalnızca biri 1 ise sonuç 1 olur.
+
+inv() –> Tüm bitleri tersine çevirir. Yani, 0'lar 1'e, 1'ler ise 0'a dönüşür.
