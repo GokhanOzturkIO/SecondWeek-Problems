@@ -47,7 +47,9 @@ Temel Türler & Null Güvenliği
 - !!. Bu operatör ile ideye değişkenin null olmayacağının garantisini veriyoruz. Eğer değişken null gelirse program hata verir. Dikkatli kullanılmalıdır. Kritik işlerde kullanılır genellikle.
 
 
+9.Bir değişkene null değer atanır ve tip belirtilmezse Kotlin bu değişkeni nasıl yorumlar?
 
+-nothing? tipinde yorumlar.
 
 
 
