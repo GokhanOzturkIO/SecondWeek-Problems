@@ -306,3 +306,14 @@ Doğruluk Garantisi: İşaretsiz değişkenler, pozitif sayıları temsil etmek 
 Taşma Durumu: Eğer bir matematiksel işlem sonucunda işaretsiz bir değişkenin maksimum değerini aşacak bir sonuç elde edilirse, Kotlin bu durumu taşma olarak tanımlar. Taşma durumunda, Kotlin varsayılan olarak işlem sonucunu elde edilebilecek en küçük değere sıfırlar (wrap-around). Örneğin, UInt.MAX_VALUE + 1 işleminin sonucu 0 olur.
 
 Taşma Olmaması Durumu: Taşma olmaması durumu ise, işaretsiz değişkenin minimum değerini aşacak bir sonuç elde edilmesi durumunda gerçekleşir. Bu durumda, Kotlin işlem sonucunu elde edilebilecek en büyük değere sıfırlar. Örneğin, UInt.MIN_VALUE - 1 işleminin sonucu UInt.MAX_VALUE olur.
+
+
+<--------------------------------------------------------------------------------------------------------------------------------------------------->
+
+
+
+8)
+UByte -> 0-255
+UShort -> 65,535
+UInt -> 6,294,967,295 (232-1)
+ULong -> 18,446,744,073,709,551,615 (264 - 1)
