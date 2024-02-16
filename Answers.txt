@@ -201,7 +201,8 @@ Soru 8 - "val result = 1L + 3" // "Long + Int" gibi bir işlemin sonucunda "resu
 Soru 9 - "val result = Int.MAX_VALUE + Int.MAX_VALUE" gibi bir işlemin sonucunda "result" değişkeninin tipi ve değeri ne olur? Neden böyle olduğunu açıklayın.
 	-> result değişkenin tipi Int, değeri ise -2 olur. Tipinin Int çıkmasının sebebi herhangi iki veri tipi işleme sokulduğunda sonucun tipi büyük olan değişkenin veri tipine eşitlenir. -2 olmasının sebebi ise veri tipi Int ancak 
 	işlemin sonucu Int değer aralığının dışına çıktığı için anlamsız bir sayı üretilir. Anlamsız sayının üretilmesini engellemek için result değişkenin sonucunu Long tipine çevirmemiz gerekir.
-
+Soru 10 - "val x = 5 / 2 println(x == 2)" gibi bir işlemin sonucu ve tipi nedir? Neden böyle olduğunu açıklayın.
+	-> İşlemin sonucu true döner ve tipi Int olarak belirlenir. Bunun sebebi herhangi bir iki tamsayının bölümünde kesirli kısımlar atılır ve tam sayı döndürür.
 
 
 
