@@ -134,4 +134,11 @@ Soru 16 - Kotlin'de büyük sayılarla çalışırken hangi ek türlerden yararl
 	bu nedenle sonsuzluğa kadar büyük veya küçük sayıları temsil edebilir.
 	Bu türlerin sınırları bellek kullanımıyla ilişkilidir ve doğal veri türlerinden (Int, Long, Double, vs.) daha fazla bellek tüketirler. Ancak, bu türlerin avantajı, çok büyük veya hassas sayıları doğru bir şekilde temsil edebilmeleridir.Yani, kullanılan 
 	bellek miktarı ve işlemci hızı ne kadar yüksekse, bu türlerle temsil edilebilecek sayıların büyüklüğü de o kadar artar.
+Soru 17 - Double ve Float değişkenler kullanılırken "yuvarlama" davranışı nasıldır? Bu nasıl değiştirilebilir?
+	-> Double ve Float değişkenlerde, yuvarlama davranışı, sayının ondalık kısmını belirli bir hassasiyet derecesine göre yuvarlama işlemidir. Bu yuvarlama genellikle IEEE 754 standardına uygun olarak gerçekleştirilir ve "round half to even" olarak
+	 bilinen bir yuvarlama kuralı kullanılır. Bu kurala göre, bir sayı tam olarak ortada ise (yani, 0.5 gibi), yuvarlama işlemi yapıldığında sonuç çift sayıya yuvarlanır. Ancak, bu kural, işlemciden işlemciye değişebilir.Kotlin'de, yuvarlama davranışını
+	 değiştirmek için özel bir dil düzeyi desteği bulunmamaktadır. Ancak, program içinde istenilen yuvarlama davranışını elde etmek için çeşitli yöntemler vardır. 
+	Kotlin standart kütüphanesi içindeki Math sınıfı, çeşitli yuvarlama fonksiyonları sağlar. Örneğin, Math.round(), Math.ceil(), Math.floor() gibi. Bu fonksiyonlarla belirli bir yuvarlama davranışı elde edilebilir. Başka bir yöntem olarak da kendimiz bir 
+	yuvarlama fonksiyonu yazabiliriz. Java standart kütüphanesinde bulunan DecimalFormat sınıfı, belirli bir format için özelleştirilmiş yuvarlama işlemleri yapmanıza olanak sağlar. Bu sınıfı kullanarak, istediğiniz yuvarlama davranışını elde edebilirsiniz.
+	Özetle, Kotlin dilinde yuvarlama davranışını doğrudan değiştirmek için bir dil özelliği yoktur. Ancak, çeşitli yöntemlerle istenilen yuvarlama davranışını elde etmek mümkündür.
 
