@@ -117,3 +117,13 @@ Soru 13 - Sayısal değişkenlerde hangi matematiksel operatörler kullanılabil
 	-> Toplama(+), Çıkarma(-), Bölme (/), Çarpma(*), Mod(%), Artırma ve Azaltma (++ --) operatörleri kullanılır.
 Soru 14 - Sayısal değişkenlerde hangi karşılaştırma operatörleri kullanılabilir?
 	-> Değer karşılaştırması(==), Referans karşılaştırması(===), Büyüklük ve Küçüklük(< >), Büyük eşit ve Küçük eşit (>= <=)
+Soru 15 - Bit düzeyinde operatörler (Bitwise operators) nelerdir? Ne amaçla kullanılır? Kotlin'de bunları nasıl kullanabilirsiniz?
+	-> Bit düzeyinde operatörler (Bitwise operators), işlemleri bit seviyesinde gerçekleştiren operatörlerdir. Bu operatörler, sayıların içindeki her bir bitin (0 veya 1) üzerinde çalışır ve buna göre işlem yapar. Bit düzeyinde operatörler, genellikle
+ 	düşük seviyeli programlama, veri sıkıştırma, kriptografi, donanım kontrolü ve diğer benzer alanlarda kullanılır.
+	Bitwise AND (&): İki sayının her bir bitini karşılaştırır ve her iki sayıda da aynı bit 1 ise sonuçta o bit 1 olur. Aksi halde, sonuçtaki bit 0 olur.
+	Bitwise OR (|): İki sayının her bir bitini karşılaştırır ve her iki sayıda da en az bir bit 1 ise sonuçta o bit 1 olur.
+	Bitwise XOR (^): İki sayının her bir bitini karşılaştırır ve her iki sayıda da farklı bitler varsa sonuçta o bit 1 olur. Aynı bitler varsa sonuç 0 olur.
+	Bitwise NOT (~): Bir sayının her bir bitini tersine çevirir. Yani, 0'ları 1 yapar ve 1'leri 0 yapar.
+	Sol Shift (<<): Bir sayının bütün bitlerini belirli bir miktar sola kaydırır. Sağ taraftaki boşluklar sıfır ile doldurulur.
+	Sağ Shift (>>): Bir sayının bütün bitlerini belirli bir miktar sağa kaydırır. Sol taraftaki boşluklar, kaydırma işlemiyle kaybolur. Pozitif sayılar için boşluklar sıfır ile doldurulurken, negatif sayılar için imza (sign) biti ile doldurulur.
+	Bu operatörler, Kotlin'de de diğer programlama dillerinde olduğu gibi aynı şekilde kullanılabilir.
