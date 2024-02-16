@@ -165,3 +165,16 @@ Sayılar
 -Kotlin'de Double ve Float türlerinde, sayıların ondalık kısmını temsil etmek üzere bir kayan nokta (floating-point) formülü kullanılır.
 -Sayı tam olarak bir ondalık değilse, en yakın ondalık değere yuvarlanır.
 -Eğer iki değer arasında eşit uzaklıkta iki en yakın ondalık değer varsa, çift sayı olan en yakın ondalık değere yuvarlanır (yani, çift yuvarlama).
+
+
+
+
+İşaretsiz Sayılar
+
+
+1."İşaretsiz" (Unsigned) değişkenler ne demektir? İşaretli olanlarla aralarındaki fark nedir?
+
+-Kotlin'de "işaretsiz" (unsigned) değişkenler, negatif değerleri temsil etme yeteneğine sahip olmayan sayıları ifade eden veri türleridir. Bu türler, yalnızca pozitif veya sıfır değerlerini alabilir.
+- İşaretli tamsayılar, negatif ve pozitif değerleri temsil edebilir, bu nedenle değer aralığı genellikle iki katıdır.
+İşaretsiz tamsayılar ise sıfırdan başlayarak pozitif değerleri temsil eder.
+
