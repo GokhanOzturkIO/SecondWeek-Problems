@@ -207,3 +207,8 @@ Sayılar
 -Veri Bütünlüğü Kontrolü
 -Sayma ve İndeksleme
 -Algoritma Optimizasyonları
+
+
+7."İşaretsiz" değişkenlerle yapılan matematiksel işlemlerde, özellikle büyük sayılarla çalışırken karşılaşılabilecek taşma (overflow) ve taşma olmaması (underflow) durumları için Kotlin nasıl bir yönetim sağlar?
+
+-Kotlin, işaretsiz tamsayılarla yapılan matematiksel işlemlerde taşma (overflow) ve taşma olmaması (underflow) durumlarına karşı bir koruma mekanizması sağlamaz. İşaretsiz tamsayılar, belirli bir büyüklük sınırına sahiptir ve bu sınırları aşan işlemlerde taşma durumları ortaya çıkabilir.
