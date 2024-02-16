@@ -141,4 +141,9 @@ Soru 17 - Double ve Float değişkenler kullanılırken "yuvarlama" davranışı
 	Kotlin standart kütüphanesi içindeki Math sınıfı, çeşitli yuvarlama fonksiyonları sağlar. Örneğin, Math.round(), Math.ceil(), Math.floor() gibi. Bu fonksiyonlarla belirli bir yuvarlama davranışı elde edilebilir. Başka bir yöntem olarak da kendimiz bir 
 	yuvarlama fonksiyonu yazabiliriz. Java standart kütüphanesinde bulunan DecimalFormat sınıfı, belirli bir format için özelleştirilmiş yuvarlama işlemleri yapmanıza olanak sağlar. Bu sınıfı kullanarak, istediğiniz yuvarlama davranışını elde edebilirsiniz.
 	Özetle, Kotlin dilinde yuvarlama davranışını doğrudan değiştirmek için bir dil özelliği yoktur. Ancak, çeşitli yöntemlerle istenilen yuvarlama davranışını elde etmek mümkündür.
+	
+	UNSIGNED NUMBERS
+
+Soru 1 - "İşaretsiz" (Unsigned) değişkenler ne demektir? İşaretli olanlarla aralarındaki fark nedir?
+	-> Unsigned değişkenler signed değişkenlerden farklı olarak negatif değer almazlar. Yani 0'dan başlarlar. Örnek olarak bir Byte değişkeninin aldığı değer -128 ile 127 arasındayken Unsigned Byte değişkeninin değer aralığı 0 ile 255 arasındadır.
 
