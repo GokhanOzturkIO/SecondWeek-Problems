@@ -235,3 +235,10 @@ inv() –> Tüm bitleri tersine çevirir. Yani, 0'lar 1'e, 1'ler ise 0'a dönü�
 "İşaretsiz" değişkenlerin harf gösterimi nasıldır?
 
 - Kotlin'de, işaretsiz tamsayılar (unsigned integers) işaretli tamsayılarla (signed integers) aynı sınıf yapısında tutulur. İşaretsiz tamsayılar, veri kısıtlamalarını belirliyor ve beklenmeyen negatif değerlerin kullanılmasını engelliyor. Ayrıca, işaretsiz tamsayılar bellek kullanımını optimize edebilir, veri uyumluluğunu sağlayabilir ve matematiksel operasyonları basitleştirebilir. Bu nedenle, işaretsiz tamsayıların belirli durumlarda tercih edilmesi, programın doğruluğunu artırabilir ve performansını optimize edebilir. İşaretsiz değişkenlerin harf gösterimi 'u' harfi ile gösterilir.
+
+................
+
+3. "val a1 = 42u ve val a2 = 0xFFFF_FFFF_FFFFu" değişkenlerin tipleri ne olur? Neden?
+
+- a1 değişkeninin tipi UInt olur çünkü sonundaki 'u' harfi bunun bir işaretsiz tam sayı olduğunu belirtir. 42 değeri de pozitif bir tam sayı olduğu için tipi UInt olur.
+- a2 değişkeninin tipi ise ULong olur çünkü bu değer büyük bir sayıyı temsil eder. (281474976710655)
