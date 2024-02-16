@@ -145,4 +145,15 @@ Sayılar
 -Eşittir (==),Eşit Değildir (!=),büyük (>), Küçük (<),büyük Eşit (>=),Küçük Eşit (<=)
 
 
+15. Bit düzeyinde operatörler (Bitwise operators) nelerdir? Ne amaçla kullanılır? Kotlin'de bunları nasıl kullanabilirsiniz?
+
+-Ve (AND) Operatörü (&): İki bitin her ikisi de 1 ise sonuç 1'dir. val result = a and b
+-Veya (OR) Operatörü (|): İki bitin herhangi biri 1 ise sonuç 1'dir. val result = a or b
+-XOR (Exclusive OR) Operatörü (^): İki bit birbirinden farklı ise sonuç 1'dir. val result = a xor b
+-Tersleme (NOT) Operatörü (~): Bitleri ters çevirir; 1'leri 0 yapar, 0'ları 1 yapar.  val result = a.inv()
+-Sağa Kaydırma (Right Shift) Operatörü (>>): Belirtilen sayıda biti sağa doğru kaydırır.  val result = a shr 1
+-Sola Kaydırma (Left Shift) Operatörü (<<): Belirtilen sayıda biti sola doğru kaydırır.  val result = a shl 1
+
+
+
 
