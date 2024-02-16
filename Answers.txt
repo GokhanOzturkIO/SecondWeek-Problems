@@ -98,3 +98,9 @@ Değer aralıkları bellekte kapladıkları alan açısından önemlidir. Değer
 
 
 2) Eğer değişken integer değer aralığında ise integer olarak atanır. İnteger değer aralığından büyük ise Long olarak atanır. Virgüllü değerlerde ise double olarak atanır. 
+
+
+<--------------------------------------------------------------------------------------------------------------------------------------------------->
+
+
+3) l harfinin kullanılamamasının sebebi 1 sayısına benziyor olması.
