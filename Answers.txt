@@ -252,3 +252,13 @@ Aşağı Yuvarlama (Floor): Bu yöntem, bir sayıyı bir alt tam sayıya yuvarla
 Yukarı Yuvarlama (Ceil): Bu yöntem, bir sayıyı bir üst tam sayıya yuvarlar. ceil() fonksiyonu ile gerçekleştirilebilir.
 
 Yönünü Belirleyen Yuvarlama (Rounding Mode): Bazı durumlarda, yuvarlama davranışını daha ayrıntılı olarak kontrol etmek gerekebilir. Bu durumda, yönünü belirleyen yuvarlama modunu kullanabilirsiniz. Bu mod, belirli bir yönde yuvarlama yapılmasını sağlar (yukarı, aşağı, sıfıra yakın, vb.). Bu genellikle RoundingMode sınıfı veya benzer bir mekanizma kullanılarak gerçekleştirilir.
+
+
+<--------------------------------------------------------------------------------------------------------------------------------------------------->
+
+
+
+UNSIGNED NUMBERS 
+
+
+1) İşaretsiz değişkenler, yalnızca pozitif sayıları temsil etmek için kullanılır. Yani, işaretsiz değişkenlerin değerleri her zaman 0 veya daha büyük olacaktır. İşaretli değişkenler negatif sayılarda alabilir. 
