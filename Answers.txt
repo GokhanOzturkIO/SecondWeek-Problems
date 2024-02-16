@@ -21,3 +21,26 @@ Soru 2 - Bir var değişkeni val gibi davranmasını nasıl sağlayabiliriz val 
 		
 		user.name = "Salih Akbas" // değişmemize izin vermez
 }
+
+Soru 3 - "Değişmez" (Immutable) ve "Salt Okunur" (ReadOnly) kavramlarını açıklayın. val değişkenler neden aslında "değişmez" değil de "salt okunur" olarak açıklanmalıdır?
+	-> Immutable - bir değişkenin ya da nesnenin durumunun asla atandığı ilk değerden farklı olamayacağı anlamına gelir.
+	   Read-only - ilk değer atamasından sonra tekrar değer atanamayacağı anlamına gelir.
+	Bu şekilde ifadelere baktığımızda ikisi de aynı anlama geliyor gibi gözükebilir. Val değişkenlerin neden read-only olduğunu öğrendiğimizde aralarındaki farkı
+	daha iyi anlayabiliriz. Val değişkenlerin get metoduna farklı var değişkenlerin etkileyeceği bir matematiksel işlem yazarak val değişkeninin değerini değiştirebiliriz.
+	Class A() {
+	var b = 1
+	var c = 2
+	var d = 3
+	
+	val e : Int
+		get() {
+			return(b * c + d) // e'nin değeri 5
+}
+}
+	fun changeVal() {
+		val a = A()
+		a.b = 2
+		a.c = 3
+		a.d = 4
+		println(a.e) // Konsola yazdırılacak değer 10 -> Bu şekilde val olarak atadığımız değişkenin değeri değişmiş oldu. Bu sebeple val değişkenlere read-only denilmesi daha doğrudur.
+}
