@@ -144,3 +144,10 @@ Sayılar
 - Kotlin'de ondalıklı değişkenler için geleneksel gösterim desteklenir. 
 Double -> 123.5, 123.5e10
 Float -> 123.5f ya da 123.5F
+
+................
+
+10. Sayısal değişkenlerde alt çizgi (underscore) nasıl kullanılır? Kotlin bunu nasıl yorumlar?
+
+- Sayı sabitlerini daha okunabilir hale getirmek için alt çizgi kullanabilir. Yani, alt çizgi kullanarak sayılar daha okunabilir hale getirilebilir, ancak derleyici bu alt çizgileri dikkate almaz. Örneğin: val oneMillion = 1_000_000
+
