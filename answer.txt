@@ -65,3 +65,16 @@ Bu operatör, nullable değişkenin null olması durumunda varsayılan bir değe
 4. Not null assertion : !! Operator
 İşlemin null olmadığına emin olduğumuzda veya null gelen değerin bize gata fırlamasını istediğimiz kritik durumlarda.
 *************************************************************
+*************************************************************
+#Sayılar#
+*************************************************************
+13-Kaç farklı tipte "number" sınıfı miras alan "alt sınıf" (child class) vardır? Bunların değer aralıkları neden önemlidir?
+Byte
+Short
+Int
+Long
+Float
+Double
+Değer aralıkları bize bellek kullanımında önemlidir.
+************************************************************
+
