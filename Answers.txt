@@ -55,3 +55,6 @@ Soru 4 - "Tip Çıkarımı" (Type inference) kavramını açıklayın. Hangi dur
 Soru 5 - Kotlin'de tüm değişkenlerin sınıf olarak bulunması, "ilkel tip" (primitive type) olmadıkları anlamına gelir mi? Arka planda neler oluyor?
  	-> Kotlin'de tüm değişkenlerin sınıf olarak bulunması ilkel tip olmadıkları anlamına gelmez. Biz kotlinde bir değişken oluşturduğumuzda o değişken class olarak 
 	görünür ancak 'Show Kotlin Bytecode' kullanarak arka planda bunların aslında Java dilindeki ilkel tiplere denk geldiğini görebiliriz. 
+
+Soru 6 - "Tip Güvenliği" (Type Safety) kavramını açıklayın.
+	-> Type Safety bir programlama dilinde oluşturduğumuz değişkenlerin tipinin yanlış belirtilmesini engelleyen bir özelliktir.
