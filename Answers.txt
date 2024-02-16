@@ -122,3 +122,11 @@ Sayılar
 6. Double ve Float değişkenler ondalık kısımda kaç basamağa kadar işlem yaparlar? Bu sınırın üzerinde gelen ondalık bilgileri için nasıl davranırlar? Hangi durumlar için Float ve hangi durumlar için Double kullanılmalıdır?
 
 - Float, 6-7 basamağa kadar işlem yaparken; Double 15-16 basamağa kadar işlem yapabilir. Bu sınırın üzerine gelen ondalık sayılarda overflow (taşma) olur ve beklenmedik sonuçlar oluşabilir çökme gibi. Kesme veya yuvarlama olabilir bu da sayıyı double'a yuvarlaya çalışarak hassasiyet kaybına yol açar. Sınırları aşmak, sınırlar dışında yapılan işlemlerde doğruluğu azaltır ya da çökmesine sebep olabilir. Bellek ve performans odaklı uygulamalarda Float tercih edilirken, hassasiyet gerektiren uygulamalarda Double kullanılması daha uygun olabilir.
+
+................
+
+7. Ondalık(Decimal), Onaltılık (Hexadecimal) ve İkilik (Binary) değişkenleri Kotlin'de nasıl tanımlayabilirsiniz?
+
+- Decimal tanımı [0-9] -> val decimalNumber = 1905
+- Hexadecimal tanımı   -> val hexadecimalNumber = 0x759
+- Binary tanıma        -> val binaryNumber = 0b010000011
