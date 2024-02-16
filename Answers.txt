@@ -51,3 +51,7 @@ Soru 4 - "Tip Çıkarımı" (Type inference) kavramını açıklayın. Hangi dur
 	-> Tip çıkarımı bir programlama dilinde değişken türlerinin derleyici program tarafından otomatik olarak belirlenmesidir. Tip çıkarımı kullanılan bir derleyici içerisinde tanımladığımız değişkenin
 	tipini belirttiğimizde derleyici tarafından bu tipi belirtmene gerek yok uyarısı da alırız(kodun çalışmasına engel olmaz). Ancak yeni bir değişken oluşturduk ve bunun değer atamasını yapmadık diyelim, 
 	o zaman oluşturduğumuz değişkenin tipini belirtmek zorunda kalırız. 
+
+Soru 5 - Kotlin'de tüm değişkenlerin sınıf olarak bulunması, "ilkel tip" (primitive type) olmadıkları anlamına gelir mi? Arka planda neler oluyor?
+ 	-> Kotlin'de tüm değişkenlerin sınıf olarak bulunması ilkel tip olmadıkları anlamına gelmez. Biz kotlinde bir değişken oluşturduğumuzda o değişken class olarak 
+	görünür ancak 'Show Kotlin Bytecode' kullanarak arka planda bunların aslında Java dilindeki ilkel tiplere denk geldiğini görebiliriz. 
