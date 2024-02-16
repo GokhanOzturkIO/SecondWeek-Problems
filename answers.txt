@@ -24,6 +24,10 @@ Değerini daha sonradan vereceğimiz değişkenlere makinenin bellekte ne kadar 
 
 # Tip güvenliği, değişken oluştururken değişkene hangi tür değişken olduğunu ":" ile yazmaya denir.
 
+7-Bir değişkeni nullable yapmak için ne yapmalıyız?
+
+# Değişkenin tanımlarken tip değerinin yanına "?" Koyarsak ve null'a eşitlersek değişken nulable olur.
+
 
 
 
