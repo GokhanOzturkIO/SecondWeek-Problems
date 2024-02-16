@@ -384,3 +384,10 @@ Akıllı dönüşümün etkin olabilmesi için kodun iyi tasarlanmış olması g
 4) Örtük tip genişletme (implicit widening conversions), bir veri türünün daha geniş bir veri türüne otomatik olarak dönüştürülmesini ifade eder. Bu genişleme işlemi, kayıplı olmayan bir şekilde gerçekleşir, yani daha geniş türdeki değer, daha küçük türdeki değeri kapsar.
 
 Kotlin'de örtük tip genişletme (implicit widening conversions) yapılamaz çünkü Kotlin statik tür denetimi (static type checking) ile güçlü bir şekilde tip güvenliğine odaklanır. Bu nedenle, veri türlerinin otomatik olarak dönüştürülmesi gibi potansiyel olarak tehlikeli durumları önlemek için, Kotlin dil tasarımında örtük tip genişletmeye izin verilmez.
+
+
+<--------------------------------------------------------------------------------------------------------------------------------------------------->
+
+
+
+5) Hata alırız çünkü Kotlin otomatik olarak küçük bir türden büyük bir türe otomatik dönüşüm yapmaz. 
