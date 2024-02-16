@@ -36,7 +36,9 @@ Değerini daha sonradan vereceğimiz değişkenlere makinenin bellekte ne kadar 
 
 # Kotlin bu değerin herhangi bir değişkene sahip olabileceğini düşünür bu yüzden de Nothing? Olarak yorumlar.
 
+10-İlkel bir değişkenin nullable olması ile null değer alamaması arasında bellek yönetimi açısından nasıl farklar vardır?
 
+# İlkel değişken null değer alamazsa, o değişkenin bellekte bir değer için ayrılmış bir alanı vardır ve bu alan değer alabilir. Ancak nullable bir ilkel değişken null değer alabilir ve bu durumda bellekte ekstra bir alan ayırmaz. Bunun yerine, null değer olması durumunda sadece bir referans, yani bellekta bir adres, saklanır. Dolayısıyla, nullable bir değişkenin bellek kullanımı, null değer olmayan bir ilkel değişkene kıyasla daha verimlidir.
 
 
 
