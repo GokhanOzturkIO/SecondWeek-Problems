@@ -1,0 +1,4 @@
+1-val ile var arasındaki fark nedir?
+
+# Val ile var arasındaki fark kısaca değişken oluştururken değişkenin sadece okunabilir mi yoksa hem okunabilir hem değiştirilebilir mi olduğunu belirler.
+
