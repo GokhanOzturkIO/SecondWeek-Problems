@@ -85,3 +85,5 @@ Soru 12 - Nullable bir değişkenle çalışırken hangi operatörleri kullanır
 
 Soru 1 - Kaç farklı tipte "number" sınıfı miras alan "alt sınıf" (child class) vardır? Bunların değer aralıkları neden önemlidir?
 	-> Byte,Short,Int,Long,Double,Float olmak üzere 6 adet alt sınıf bulunmaktadır. Bellekte kapladıklar yer bakımından mümkün olduğunca aralıklarına göre kullanmak önemlidir.
+Soru 2- Eğer bir değişkene tip belirtimi yapılmaz ve bir değer atanırsa, Kotlin tip çıkarımını nasıl yapar?
+	-> Tip çıkarımı sırasında eğer atadığımız değer Int ifadeden daha büyük değilse default olarak Int tipinde belirtilir. Eğer Int ifadeden daha büyük bir değerse default olarak Long tipinde belirtilir.
