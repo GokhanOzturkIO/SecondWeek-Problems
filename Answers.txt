@@ -151,3 +151,9 @@ Float -> 123.5f ya da 123.5F
 
 - Sayı sabitlerini daha okunabilir hale getirmek için alt çizgi kullanabilir. Yani, alt çizgi kullanarak sayılar daha okunabilir hale getirilebilir, ancak derleyici bu alt çizgileri dikkate almaz. Örneğin: val oneMillion = 1_000_000
 
+................
+
+11. == ile neyi karşılaştırırız? === ile neyi karşılaştırırız?
+
+== -> Değişkenlerin değerini karşılaştırırken kullanılır.
+=== -> Değişkenlerin referansını karşılaştırırken kullanılır.
