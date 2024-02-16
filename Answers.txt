@@ -149,4 +149,6 @@ Soru 1 - "İşaretsiz" (Unsigned) değişkenler ne demektir? İşaretli olanlarl
 Soru 2 - "İşaretsiz" değişkenler nasıl bir sınıf yapısında tutulurlar? Bu neden önemlidir?
 	-> İşaretsiz değişkenler bir sınıf yapısı yerine bellek içerisinde direkt olarak temsil edilirler. Bunun nedeni, işaretsiz değişkenlerin doğrudan bellekte saklanan temel veri türleri olması ve sadece pozitif değerleri temsil etmeleridir.
 	İşaretsiz değişkenlerin bir sınıf yapısı içerisinde tutulması gereksiz bellek kullanımına ve işlem yüküne neden olabilir. Özetle bellek kullanımının ve performansın kritik olduğu durumlarda işaretsiz değişken kullanımı tercih edilir.
+Soru 3 - "İşaretsiz" değişkenlerin harf gösterimi nasıldır?
+	-> İşaretsiz değişken gösterimi için atanılan değerin sonuna 'u' harfi koyulur. val b : UByte = 1u
 
