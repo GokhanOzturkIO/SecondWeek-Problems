@@ -154,3 +154,8 @@ Binary sayılar val binaryNumberLong: Long = 0b11001100L
 
 9) Geleneksel notasyon sayıların alt çizgi('_') ile ayrılmasıdır.  Örneğin val number = 10_000_000 
 
+
+<--------------------------------------------------------------------------------------------------------------------------------------------------->
+
+
+10) val number = 1_000_000  Kotlin bu alt çizgileri yok sayarak sayıyı yorumlar. 
