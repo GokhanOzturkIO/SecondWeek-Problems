@@ -78,6 +78,10 @@ Sayılar
 
 -Eğer değer int aralığında ise lotlin int olarak verir. Aralıktan büyük ise long verir.
 
+3.Float değişken oluştururken F ve f harfleri varken, Long değişken oluştururken neden küçük l harfi yoktur?
+
+-Çünkü bazı fontlarda küçük l harfi 1 e benziyor.
+
 
 
 
