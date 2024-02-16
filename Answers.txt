@@ -450,3 +450,13 @@ println(x == 2L) ifadesi x değişkeninin değerinin 2L ile aynı olup olmadığ
 
 12) Bu kod parçasında x değişkeni, 5 sayısının 2.toDouble() ile bölünmesiyle tanımlanır. Bu işlem sonucunda x değişkeninin değeri 2.5 olur.İlk olarak, 2.toDouble() ifadesi, 2 sayısının Double türüne dönüştürülmesini sağlar. Böylece, bölme işlemi gerçekleştirilirken bir tamsayı (5) bir ondalık sayıya (2.0) bölünmüş olur. Bu durumda, sonuç da bir ondalık sayı olacaktır.Sonuç olarak, x değişkeninin değeri 2.5 olacak ve tipi Double olacaktır. 
 println(x == 2.5) ifadesi x değişkeninin değerinin 2.5 ile aynı olup olmadığını kontrol eder. Çünkü her ikisi de Double türündedir, bu ifade true sonucunu verecektir. Sonuç olarak, kodun çıktısı true olacaktır.
+
+
+
+<--------------------------------------------------------------------------------------------------------------------------------------------------->
+
+
+
+13) As Güvenli Dönüşüm Operatörü (as?): Kotlin'de "as" operatörü kullanılarak tür dönüşümü yapılırken, eğer dönüşüm başarısız olursa ClassCastException yerine null değeri döndürülür. Böylece, as? operatörü kullanılarak dönüşüm işlemi güvenli bir şekilde yapılabilir ve olası hata durumlarından kaçınılabilir.
+is Operatörü ile Tür Kontrolü: is operatörü kullanılarak nesnenin hedef türle uyumlu olup olmadığı kontrol edilebilir. Bu şekilde, dönüşüm yapmadan önce nesnenin türü güvenli bir şekilde kontrol edilir ve olası dönüşüm hataları önlenir.
+Try-Catch Bloğu ile Hata Yönetimi: try-catch bloğu kullanılarak dönüşüm işlemi dönüşüm hatası durumunda ele alınabilir. Bu yöntem, hata durumunu kontrol etmek ve uygun bir şekilde işlemek için kullanılabilir.
