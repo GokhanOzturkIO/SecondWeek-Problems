@@ -28,3 +28,8 @@
  birbiriyle çarptığımızda çıkan sonucun tipini biz belirlemezsek hata alırız. Burada "Type Inference" kavramı hatalı bir tip çıkarımı yapmış olur. Ornek olarak 
  2 max Integer sayının çarpımı Long bir ifadeye denk gelmelidir. Fakat tip çıkarımı ise sonucu atadığımız değişkeni Integer olarak gorecektir. Bu tarz durumlarda
  tip belirtmek kesin olarak gereklidir.
+
+## 5) Kotlin'de tüm değişkenlerin sınıf olarak bulunması, "ilkel tip" (primitive type) olmadıkları anlamına gelir mi? Arka planda neler oluyor?
+ Bu durum Kotlinde primitive type olmadığı anlamına gelmiyor. Kotlinde her şey bir nesnedir. Her değişkende üye fonksiyonlar ve özellikleri kullanılmaktadır. 
+ Fakat Kotlin'de yazdığımız kodlar özel optimizasyonlar sayesinde byte code' a dönüşürken primitive değişkenlere dönüşmektedirler.
+
