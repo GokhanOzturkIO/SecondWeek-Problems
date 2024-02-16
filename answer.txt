@@ -113,4 +113,9 @@ Java'da sekizlik (octal) değişkenleri 0 ön eki ile tanımlanır.
 Kotlin'de sekizlik değişkenleri doğrudan tanımlanmaz. Ancak, sekizlik sayıları ondalık sayılara dönüştürülerek kullanılabilir.toDecimal() fonksiyonu kullanılabilir.
 Integer.parseInt(s, 8) yöntemi kullanılabilir.
 ************************************************************
+21-"Geleneksel Notasyon" (Conventional Notation) gösterimi nasıl yapılır?
+Float F f ile yapılır
+Long L ile yapılır
+***********************************************************
+
 
