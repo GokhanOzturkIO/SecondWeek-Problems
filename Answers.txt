@@ -400,3 +400,10 @@ Kotlin'de örtük tip genişletme (implicit widening conversions) yapılamaz ç�
 
 6) "val b: Byte = 1 ile val i: Int = b.toInt() ve son olarak print(b == i) gibi bir kod yazıldığında çıktı ne olur? Neden böyle bir çıktı aldığınızı açıklayın.
 Hata alırız çünkü == operatörü integer bir değer ile byte bir değeri karşılaştırmak için kullanılamaz.
+
+
+<--------------------------------------------------------------------------------------------------------------------------------------------------->
+
+
+
+7) toInt(), toByte(), toShort(), toLong(), toDouble(), tofloat()
