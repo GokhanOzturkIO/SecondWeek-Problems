@@ -173,3 +173,9 @@ ushr (UNSIGNED SHIFT RIGHT):
 28-Kotlin'de büyük sayılarla çalışırken hangi ek türlerden yararlanılır ve bu türlerin sınırları nelerdir?
 Kotlin'de büyük sayılarla çalışırken BigInteger, BigDecimal, Double ve Float gibi ek türlerden yararlanabilirsiniz.
 ***********************************************************
+29-Double ve Float değişkenler kullanılırken "yuvarlama" davranışı nasıldır? Bu nasıl değiştirilebilir?
+Math.round(): Yakına yuvarlama için kullanılır.Ama Long veya Int döner.
+Math.rint(): Yakına yuvarlama için kullanılır.
+Math.floor(): Aşağı yuvarlama için kullanılır.
+Math.ceil(): Yukarı yuvarlama için kullanılır.
+***********************************************************
