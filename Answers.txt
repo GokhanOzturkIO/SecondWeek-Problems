@@ -132,6 +132,13 @@ Tek duyarlıklı, kayan nokta sayılarını daha az bellek kullanarak depolayan 
 Double veri tipi, daha yüksek bir hassasiyete sahiptir ve yaklaşık 15-16 basamaklık bir hassasiyet sunar. Float veri tipi, daha az bellek kullanır ve bazı uygulamalarda yeterli hassasiyeti sağlayabilir. Ancak, yüksek hassasiyet gerektiren işlemlerde veya büyük sayı aralıklarında çalışırken Float veri tipi kullanılmamalıdır. Genel olarak, hassasiyet ve bellek kullanımı arasında bir denge sağlamak önemlidir. Hassas işlemler için Double, daha düşük bellek kullanımı gereken durumlar için ise Float tercih edilir.
 
 
+<--------------------------------------------------------------------------------------------------------------------------------------------------->
+
+
+7) Ondalık sayılarda alt çizgi ('_') ile tanımlayabiliriz. val number = 10_000_000
+Hexadecimal sayılar val hexadecimalNumberLong: Long = 0xABCDL
+Binary sayılar val binaryNumberLong: Long = 0b11001100L 
+şekillerinde tanımlanır. 
 
 
 
