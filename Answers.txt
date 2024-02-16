@@ -60,6 +60,11 @@ Temel Türler & Null Güvenliği
 
 -Daha sonra cevaplanacak
 
+12.Nullable bir değişkenle çalışırken hangi operatörleri kullanırız? Bu operatörlerin kullanım farkları nelerdir? Hangisini ne zaman kullanmak daha anlamlıdır?
+
+- ?. Bu operatör, bir değişkenin null olup olmadığını kontrol eder. Eğer null ise, ifade null olarak değerlendirilir ve null hata almazsınız.
+- !!. Bu operatör ile ideye değişkenin null olmayacağının garantisini veriyoruz. Eğer değişken null gelirse program hata verir. Dikkatli kullanılmalıdır. Kritik işlerde kullanılır genellikle.
+
  
 
 
