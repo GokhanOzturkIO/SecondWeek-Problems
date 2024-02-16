@@ -193,3 +193,8 @@ Sayılar
 
 -a1 değişkeninde u yazdığı için unsigned integerdir.
 -a2 değişkeninde u yazdığı için unsigned longtur.
+
+
+5.İşaretsiz" "Long" harf gösterimi nasıl yapılır?
+
+-ulong
