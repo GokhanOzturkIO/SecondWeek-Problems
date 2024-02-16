@@ -423,3 +423,11 @@ Hata alırız çünkü == operatörü integer bir değer ile byte bir değeri ka
 
 
 9) result değişkeninin türü integer olur ancak değeri negatif bir sayı olur. Bu durum, taşma nedeniyle ortaya çıkar ve Int türünün tanımladığı maksimum değer aşıldığı için negatif bir değer elde edilir.
+
+
+
+<--------------------------------------------------------------------------------------------------------------------------------------------------->
+
+
+
+10) Kotlin'de, bölme işlemi iki tamsayı arasında gerçekleştirildiğinde sonuç her zaman bir tamsayı olacaktır. Yani, 5'in 2'ye bölümü 2 sonucunu verir. Ancak, burada önemli olan nokta, bölme işleminin gerçekleştirildiği veri türleri ve bölme operatörünün sonucu.
