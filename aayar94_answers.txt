@@ -1,0 +1,35 @@
+-val ile var arasındaki fark nedir?
+    Val ile var arasındaki fark var değeri herhangi bir anda değiştirile bilirken,
+    val 'ın değeri atama anında yapılır.val read-only değişkendir.
+-Bir var değişkeni val gibi davranmasını nasıl sağlayabiliriz val kelimesini kullanmadan? Bunu neden yapmak isteriz? Örnek bir senaryo verin.
+    Değişkenin setter fonksiyonunu private yaparak val gibi davranmasını sağlaya biliriz.
+      "var number :Int
+        private set"
+-"Değişmez" (Immutable) ve "Salt Okunur" (ReadOnly) kavramlarını açıklayın. val değişkenler neden aslında "değişmez" değil de "salt okunur" olarak açıklanmalıdır?
+    Immutable hiçbir şekilde değiştirelemezken, ReadOnly class içinde farklı parametrelerden üretilen bir değişken ise aslında val değeri dışardan gözlemlerken değiştirğini görürüz.
+-"Tip Çıkarımı" (Type inference) kavramını açıklayın. Hangi durumlarda tip belirtmek kesin olarak gereklidir?
+    Tip çıkarımı, değişkenin valuesuna bakarak tip belirlemesi yapar,Null gelebilecek durumlarda Idenin gelecek değer tipini de bilmesi için tip belirlemesi yaparız.
+-Kotlin'de tüm değişkenlerin sınıf olarak bulunması, "ilkel tip" (primitive type) olmadıkları anlamına gelir mi? Arka planda neler oluyor?
+    Kotlinde primitive tipler class olarak gözüksede compile time da primitive tiplere dönüştürülürler.
+-"Tip Güvenliği" (Type Safety) kavramını açıklayın.
+    /**     Pas Geçtim      *//
+-Bir değişkeni nullable yapmak için ne yapmalıyız?
+    Değişkenin tipini belirlerken sonuna bir "?" koymalıyız. Örneğin String?,Int?
+-"Null Güvenliği" (Null Safety) kavramını açıklayın.
+    Null olabilecek parametreleri kullanırken null olması durumunda kodun crash olmaması için bir null önlemidir, nesne sonuna ? koyularak kullanılır.
+-Bir değişkene null değer atanır ve tip belirtilmezse Kotlin bu değişkeni nasıl yorumlar?
+    Kotlin bunu Nothing classından türemiş bir nesne gibi yorumlar.
+-İlkel bir değişkenin nullable olması ile null değer alamaması arasında bellek yönetimi açısından nasıl farklar vardır?
+    Null değişkenler, null olamayacak değişkenlere göre daha çok yer kaplar, Null kontrolü yapılacağı için daha yavaş çalışır, güvenirlikleri daha düşüktür.
+-Nullable bir değişkenin bir değere sahip olması ile null olması arasında bellek yönetimi açısından nasıl bir fark vardır? Null değer almış bir değişken bellekte yer kaplamaz diyebilir miyiz?
+    Null değişken bellekte null değilken değişken tipinin bayt karşılığı kadar, null iken null referansı gösterecek kadar yer kaplar, yani null olan değerlerde bellekte bir yer kaplar.
+-Nullable bir değişkenle çalışırken hangi operatörleri kullanırız? Bu operatörlerin kullanım farkları nelerdir? Hangisini ne zaman kullanmak daha anlamlıdır?
+    Null olabilecek bir değişken ile çalışırken "?", "!", "?:" operatörlerini kullanırız; bu operatörler sırasıyle değişkenin null olup olmadığını null olmadığı durumlarda çalışmaya devam etmeyi, değişkenin o anda null olmayacağını null gelirse kodu crashlemeyi sağlar,
+    "?" operatörünü null gelebilecek ama çok önemli olmayan tölere edibileceğimiz kısımlarda kullanırız.
+    "!" operatörünü null gelebilecek ama çok önemli olan devam edilmesi durumda daha büyük sorunlara yol acabilecek durumlarda kullanırız.
+    3. operatör ise Elvis isimli operatördür. Değişkenin null olması durumunda değişken yerine bir değer koymaya yarar.
+    Örneğin:
+            val nullableString: String? = null
+            val nonNullString = nullableString ?: "Varsayılan Değer"
+            println("Değişkenin Değeri: $nonNullString")
+    Burada elvis ile string null ise yerine "Varsayılan Değer" yazdırıyoruz, null değilse değerini ne ise onu kullanıyoruz.
