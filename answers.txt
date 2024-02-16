@@ -20,6 +20,11 @@ Değerini daha sonradan vereceğimiz değişkenlere makinenin bellekte ne kadar 
 
 # Kotlinde primitive tipler aslında yoktur fakat sınıf şeklinde erişebiliyoruz.Arka planda sınıfların kullanımı da byte code'a çevrildikten sonra javadaki primitive tiplerle aynı oluyor ve performans kaybı da neredeyse olmuyor.
 
+6-"Tip Güvenliği" (Type Safety) kavramını açıklayın.
+
+# Tip güvenliği, değişken oluştururken değişkene hangi tür değişken olduğunu ":" ile yazmaya denir.
+
+
 
 
 
