@@ -108,3 +108,5 @@ Soru 9 - "Geleneksel Notasyon" (Conventional Notation) gösterimi nasıl yapıl�
 	-> Geleneksel notasyon gösterimi -> 3.14e10
 Soru 10 - Sayısal değişkenlerde alt çizgi (underscore) nasıl kullanılır? Kotlin bunu nasıl yorumlar?
 	-> Örnek olarak 1000000000 değerini 1_000_000_000 şeklinde de tanımlayabiliriz. Bu şekilde tanımlanma sebebi okunabilirliği artırmak. Kotlin bu değeri 1000000000 olarak yani alt çizgi olmayan haliyle işleme alır.
+Soru 11 - == ile neyi karşılaştırırız? === ile neyi karşılaştırırız?
+	-> == ile değişkenleri değerini, === ile ise değişkenlerin memeory'deki referansını karşılaştırırız.
