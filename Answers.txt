@@ -14,3 +14,10 @@
 3) Read only değeri okunabilen ama set edilemeyen anlamına gelir. Immutable ise değeri hiçbir şekilde değiştirilemeyen anlamına gelir. Kotlin'de val anahtar kelimesi ile tanımlanan değişkenlerin "değişmez" değil de "salt okunur" olarak açıklanması, değişkenin değerinin atanmasından sonra değiştirilemez olduğunu, ancak içinde saklanan nesnenin değiştirilebilir olabileceğini vurgular. Yani, val ile tanımlanan bir değişkenin referansı değiştirilemez, ancak referansın işaret ettiği nesne değiştirilebilir. Bu nedenle, değişkenin kendisi değişmez olmayabilir, ancak değeri bir kez atandıktan sonra değiştirilemez. Bu durumda, değişkenin "salt okunur" olduğu söylenir.
 
 
+<--------------------------------------------------------------------------------------------------------------------------------------------------->
+
+
+
+4) Tip çıkarımı (type inference), bir programlama dilinde değişkenin veya ifadenin veri türünün otomatik olarak belirlenmesidir. Bu, programcının belirli bir değişkenin veya ifadenin veri türünü açıkça belirtmesine gerek olmadığı anlamına gelir. İlk değeri olmayan değişken oluşturduğumuz zaman tipini belirtmeliyiz. Kotlinde sayısal değerler virgüllü değil ve integer değer aralığında ise default olarak integer tanımlanır. Byte veya short kullanmaz istersek tipleri belirtmemiz gerekir
+
+
