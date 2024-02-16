@@ -146,4 +146,7 @@ Soru 17 - Double ve Float değişkenler kullanılırken "yuvarlama" davranışı
 
 Soru 1 - "İşaretsiz" (Unsigned) değişkenler ne demektir? İşaretli olanlarla aralarındaki fark nedir?
 	-> Unsigned değişkenler signed değişkenlerden farklı olarak negatif değer almazlar. Yani 0'dan başlarlar. Örnek olarak bir Byte değişkeninin aldığı değer -128 ile 127 arasındayken Unsigned Byte değişkeninin değer aralığı 0 ile 255 arasındadır.
+Soru 2 - "İşaretsiz" değişkenler nasıl bir sınıf yapısında tutulurlar? Bu neden önemlidir?
+	-> İşaretsiz değişkenler bir sınıf yapısı yerine bellek içerisinde direkt olarak temsil edilirler. Bunun nedeni, işaretsiz değişkenlerin doğrudan bellekte saklanan temel veri türleri olması ve sadece pozitif değerleri temsil etmeleridir.
+	İşaretsiz değişkenlerin bir sınıf yapısı içerisinde tutulması gereksiz bellek kullanımına ve işlem yüküne neden olabilir. Özetle bellek kullanımının ve performansın kritik olduğu durumlarda işaretsiz değişken kullanımı tercih edilir.
 
