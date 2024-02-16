@@ -254,3 +254,9 @@ inv() –> Tüm bitleri tersine çevirir. Yani, 0'lar 1'e, 1'ler ise 0'a dönü�
 5. "İşaretsiz" değişkenlerin kullanım amaçları nelerdir?
 
 - İşaretsiz değişkenler, genellikle bellek sınırlarını aşma, veri uyumluluğunu sağlama, bit operasyonları yapma ve matematiksel hesaplamaları gerçekleştirme gibi amaçlarla kullanılır. Bu tür değişkenler, özellikle büyük sayılarla çalışılan ve verinin pozitif tamsayılarla doğrudan ilişkilendirildiği durumlarda önemlidir. Ayrıca, matematiksel hesaplamaları daha doğru ve güvenilir bir şekilde gerçekleştirmek için işaretsiz değişkenler kullanılabilir.
+
+................
+
+6. "İşaretsiz" değişkenlerle yapılan matematiksel işlemlerde, özellikle büyük sayılarla çalışırken karşılaşılabilecek taşma (overflow) ve taşma olmaması (underflow) durumları için Kotlin nasıl bir yönetim sağlar?
+
+- Kotlin'de, işaretsiz değişkenlerle yapılan matematiksel işlemlerde taşma (overflow) ve taşma olmaması (underflow) durumları için otomatik bir yönetim mekanizması bulunmamaktadır. Bu durumlar genellikle beklenmeyen sonuçlarla veya hatalarla sonuçlanabilir. Ancak, bazı işlevlerin güvenli versiyonları bulunabilir ve programcılar bu işlevleri kullanarak taşma durumlarını kontrol edebilirler. Genel olarak, taşma durumlarının yönetimi ve kontrolü, kod yazanın sorumluluğundadır ve dikkatli matematiksel işlemler yapmak önemlidir.
