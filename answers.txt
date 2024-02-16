@@ -109,6 +109,9 @@ Değer aralıkları bellekte kaplanan alanı temsil eder ve büyük projelerde v
 
 # Bitwise operatörler bit tipindeki değişkenlerin 0 ve 1 lerini and,or,xor,inv,shl,shr gibi operatörlerle karşılaştırmaya yarar.Bu operatörler, genellikle işlemci düzeyinde performansı artırmak veya bazı özel durumlarda verimli kod yazmak için kullanılır.Kotlinde kullanmak için iki farklı binary değişkeni oluşturur ve bunları (x1 and x2) şeklinde kullanabiliriz.
 
+28-Kotlin'de büyük sayılarla çalışırken hangi ek türlerden yararlanılır ve bu türlerin sınırları nelerdir?
+
+# Kotlin'de büyük sayılarla çalışırken BigInteger ve BigDecimal sınıflarından yararlanılır. BigInteger sınıfı büyük tamsayıları temsil ederken, BigDecimal sınıfı büyük ondalıklı sayıları temsil eder. Bu sınıfların sınırları bellek boyutu ile ilgilidir yani ne kadar bellek varsa o kadar büyüyebilir.
 
 
 
