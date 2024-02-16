@@ -411,3 +411,13 @@ as? işleminin sağ tarafı bir null olmayan String türü olmasına rağmen, d�
 12. "val x = 5 / 2.toDouble() println(x == 2.5)" gibi bir işlemin sonucu ve tipi nedir? Neden böyle olduğunu açıklayın.
 
 - Burada 5 ve 2'yi Int olarak böler ve sonucu Double'a dönüştürür. Sonuç 2.5 olduğu için tipi Double olur. 2.5 == 2.5 ifadesi de true döner.
+
+................
+
+13. Kotlin'de tür dönüşümü yapılırken, dönüşümün başarısız olması durumunda TypeCastException nasıl ele alınır ve bu tür hataların önüne geçmek için hangi önlemler alınabilir?
+
+- Bu tür hataların önüne geçmek için aşağıdaki önlemler alınabilir:
+
+-> Dönüşümden önce hedef türünü doğrulayarak, dönüşümün güvenli olup olmadığını kontrol etmek. Bu, is veya as? gibi operatörlerle yapılabilir.
+-> as? operatörünü kullanarak dönüşüm yaparken, dönüşüm başarısız olursa null döndürülmesini sağlamak.
+-> Dönüşümü bir try-catch bloğu içine alarak, dönüşüm hatasını ele almak.
