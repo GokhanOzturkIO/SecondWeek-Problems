@@ -12,8 +12,13 @@
 	Örnek Bir Senaryo (umarım :))
  Bionluk gibi bir uygulama tasarladığımızı düşünelim. Bir kullanıcı sınıfımız var ve biz bu kullanıcının kişisel bilgilerinin yanısıra birde yaptığı ilk iş sonucunda
  kazandığı ücretin miktarını tutmak istiyoruz. (Amacımız belli bir süre sonra kullanıcıya ilk işinde bu kadar kazanmıştın diyerek nostaljik bir an yaşatmak :D) Bu değişkenin
- adının "firstPay" olduğunu düşünelim. Eğer bu değişkeni "val" keyvord'ü ile tanımlarsak kullanıcı kayıt olduğunda "firstPay" değişkeni ilk değerini alacak ve bir daha 
- değiştirilemeyecektir. Fakat "var" keyword'ü ile oluşturup ilk değerini "null" verip daha "set" metodunu "private" a çekerek, user classının içerisinde bu değişkene
- değer atamak için bir fonksiyon oluşturursak bu işlemi gerçekleştirebiliriz.
+ adının "firstPay" olduğunu düşünelim. Eğer bu değişkeni "val" keyvord'ü ile tanımlarsak kullanıcı kayıt olduğunda "firstPay" değişkeni ilk olarak null değerini alacak ve bir daha 
+ değiştirilemeyecektir. Fakat "var" keyword'ü ile oluşturup ilk değerini "null" verip daha sonra "set" metodunu "private" a çekerek, user classının içerisinde bu değişkene
+ değer atamak için bir fonksiyon oluşturursak bu işlemi gerçekleştirebiliriz. Kullanıcı ilk ödemesini almadığı sürece bu değişken null da tutulup. Daha sonrasında gerekli
+ fonksiyon ile değer atama işlemi yapılacaktır.
 
- 
+## 3)"Değişmez" (Immutable) ve "Salt Okunur" (ReadOnly) kavramlarını açıklayın. val değişkenler neden aslında "değişmez" değil de "salt okunur" olarak açıklanmalıdır?
+ Immutable: Bir değişkenin değerinin bir kez atanmasından sonra o değerin değiştirilemeyeceği anlamına gelir. Yani bir kez oluşturulduktan sonra değeri değiştirilemez.
+ ReadOnly:  Bir değişkenin değerinin okunabilir olduğunu ancak değiştirilemez olduğunu belirtir. Yani değeri sadece okunabilir ve üzerinde değişiklik yapılamaz.
+ "val" keyword'ünün temsil ettiği değişken bir kez başlatıldıktan sonra, bu değişken bir referansın değerini tutar ve bu referans değişmez.Bu yüzden "val" keyword'ü 
+ "readOnly" olarak ifade edilir.
