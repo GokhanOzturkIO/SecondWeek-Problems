@@ -33,4 +33,8 @@ Temel Türler & Null Güvenliği
 
 -Hayır. Özel optimazyonlar ile bytecode çevrilirken primiteve olacak şekilde çevriliyorlar.
 
+6. "Tip Güvenliği" (Type Safety) kavramını açıklayın.
+
+-Değişkenlerin hatalarını derleme zamanında gösterir.
+
 
