@@ -70,6 +70,22 @@ Burada ben totalValue değişkenine yeni bir değer ataması yapmadık. Ama read
 
 ---------------------------------------------------------------------------------------
 
+Soru 4: "Tip Çıkarımı" (Type inference) kavramını açıklayın. Hangi durumlarda tip belirtmek kesin olarak gereklidir?
+
+- Type Inference kavramı değişken tanımlarken, değişen türünü açık bir şekilde (Explicitly) belirtmediğimiz zaman eşitliğin karşı tarafındaki değere göre değişkenin türünün IDE tarafından tespit edilmesi.
+
+Number değişkenler için önemli bir nokta var. Orası da
+ - Eğer değer Int değer aralığı içerisinde ise tür Int olarak tanımlanır.
+ - Ama eğer değer Int değer aralığını geçiyorsa değişken türü Long olarak tanımlanır.
+
+ Hangi Durumlarda Türü Belirtmek Kesin Olarak Gereklidir?
+
+ - Değişkeni tanımladık ama değer atamasını ilk başta yapmadıysak, daha sonra yapacaksak belirtmek zorundayız.
+ - Memory kullanımını önemseyen bir program yazmak istediğimizde kullanırız. Örneğin yaş değeri için bir değişkenin Int olarak tutulmasına gerek yoktur normalde. Bu yaş değerini UByte(0-255) değişkeni tuttuğumuzda hafızayı daha verimli bir şekilde kullanmış oluruz. Int değişkeni hafızada 4 byte'lık bir yer tutarken UByte değişkenleri 1 Byte'lık bir yer tutar.
+
+---------------------------------------------------------------------------------------
+
+
 
 
 
