@@ -242,3 +242,9 @@ inv() –> Tüm bitleri tersine çevirir. Yani, 0'lar 1'e, 1'ler ise 0'a dönü�
 
 - a1 değişkeninin tipi UInt olur çünkü sonundaki 'u' harfi bunun bir işaretsiz tam sayı olduğunu belirtir. 42 değeri de pozitif bir tam sayı olduğu için tipi UInt olur.
 - a2 değişkeninin tipi ise ULong olur çünkü bu değer büyük bir sayıyı temsil eder. (281474976710655)
+
+................
+
+4. "İşaretsiz" "Long" harf gösterimi nasıl yapılır?
+
+- İşaretsiz Long harf gösterimi ULong şeklinde yapılır.
