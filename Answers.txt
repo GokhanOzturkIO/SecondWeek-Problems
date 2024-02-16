@@ -160,5 +160,8 @@ Sayılar
 -BigInteger:BigInteger, büyük tamsayıları temsil etmek için kullanılır.
 -BigDecimal, büyük ondalık sayıları temsil etmek için kullanılır.
 
+17.Double ve Float değişkenler kullanılırken "yuvarlama" davranışı nasıldır? Bu nasıl değiştirilebilir?
 
-
+-Kotlin'de Double ve Float türlerinde, sayıların ondalık kısmını temsil etmek üzere bir kayan nokta (floating-point) formülü kullanılır.
+-Sayı tam olarak bir ondalık değilse, en yakın ondalık değere yuvarlanır.
+-Eğer iki değer arasında eşit uzaklıkta iki en yakın ondalık değer varsa, çift sayı olan en yakın ondalık değere yuvarlanır (yani, çift yuvarlama).
