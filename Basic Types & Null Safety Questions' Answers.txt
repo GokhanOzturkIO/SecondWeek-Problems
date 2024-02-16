@@ -10,3 +10,35 @@ Aralarında performans olarak göz ardı edilebilecek bir performans farkı vard
 Ama günlük hayat problemlerimizde val kullanmak daha avantajlı olacaktır. Çünkü sektördeki geliştirilen uygulamalarda Multi-Thread işlemlerin yoğunlukla kullanılmasıdır. "val" kullanımı daha güvenlidir çünkü bir değişkenin değeri bir kere belirlendikten sonra başka bir thread tarafından değiştirilemez, bu da potansiyel hata kaynaklarını azaltabilir.
 
 ---------------------------------------------------------------------------------------
+
+Soru 2: Bir var değişkeni val gibi davranmasını nasıl sağlayabiliriz val kelimesini kullanmadan? Bunu neden yapmak isteriz? Örnek bir senaryo verin?
+
+Biz Kotlin'de bir değişken tanımladığımızda bu değişkenin arka planda get() ve set() fonksiyonlarını(veya property) otomatik bir şekilde oluşturur. 
+
+val bir değişken oluşturduğumuzda Kotlin arka planda bizim için sadece bu değişken için get() fonksiyonunu,
+var bir değişken için ise hem get() hemde set() fonksiyonlarını oluşturur. 
+
+Biz bu oluşturulan fonksiyonlara(property) visibility modifier'lar (public,private,protected,internal) ekleyebiliriz. Eğer biz var bir değişkenin set() fonksiyonuna private visibility modifier eklersek bu değişkenimiz artık set edilemez yani val gibi davranan bir değişken elde etmiş oluruz.
+
+Peki Bunu Neden Yapmak İsteyelim?
+
+Örneğin bir BankAccount isimli bir class'ımız var ve bu sınıf içerisinde banka hesabımız içerisinde toplam bakiyemizi gösteren bir balance isimli değişken var. Aynı zamanda withDraw() adında bir de fonksiyonumuz bukunuyor. withDraw() fonksiyonu hesaptan para çekme işlemi yapıyor. Para çekme işlemini yaptıktan sonra balance değerini güncellememiz gerekiyor. 
+
+Burada balance değişkenini var olarak tanımladık ve get() fonksiyonunu private olarak belirttik. Bu değişkeni ben sadece BankAccount içerisinde değiştirebilirim anlamına geliyor. Dışarıdan hiçbir kişi bu değişkeni değiştiremez. Dışarıdan sadece okunabilir bir değişken haline gelmiş olur. Bunu yaparak dışarıdan istenmeyen bir değişiklik gerçekleşmesini önlemiş oluruz.
+
+class BankAccount {
+
+    var balance: Double = 1000.0
+        private set
+
+    fun withdraw(amount: Double) {
+        if (amount > 0 && amount <= balance) {
+            balance -= amount
+            println("Çekilen Tutar: $amount TL, Yeni Bakiye: $balance TL")
+        } else {
+            println("Geçersiz işlem! Bakiye yetersiz veya geçersiz tutar.")
+        }
+    }
+}
+
+---------------------------------------------------------------------------------------
