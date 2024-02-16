@@ -71,3 +71,6 @@ Soru 9 - Bir değişkene null değer atanır ve tip belirtilmezse Kotlin bu değ
 Soru 10 - İlkel bir değişkenin nullable olması ile null değer alamaması arasında bellek yönetimi açısından nasıl farklar vardır?
 	-> Nullable değişkenlerin taşıdıkları değerlerin bellek adreslerine ek olarak bir de null değerini temsil etmek için ayrı bir bellek adresi oluşturulur. Bu durum her nullable değişken için ayrı bellek kullanımına
 	yol açar. Null değer alamayan değişkenlerde ise bu ekstra bellek alanına gerek duyulmaz.
+Soru 11 - Nullable bir değişkenin bir değere sahip olması ile null olması arasında bellek yönetimi açısından nasıl bir fark vardır? Null değer almış bir değişken bellekte yer kaplamaz diyebilir miyiz?
+	-> Referans tipli değişkenler ve onların değerleri bellekte iki farklı yapı olarak tutulurlar. Bu yapılardan birisi olan Stack'de referanslar yani değişkenler tutulur. Bir diğer yapı olan Heap'da ise
+	bu değişkenlerin verileri tutulur. Dolayısıyla null değer almış bir değişken Heap üzerinde yer kaplamasa bile Stack üzerinde bir miktar yer kaplamış olur.
