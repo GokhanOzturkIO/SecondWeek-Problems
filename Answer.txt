@@ -5,3 +5,8 @@
   1.1  val değeri get edilebilir ama set edilemez.readOnly durumdadır.Readonly durumdadır değeri okunabilir.
        var değeri hem set ve hemde get edilebilir.
 ----------------------------------------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------------------
+  1.2  var keywordunu(değişkeni) val gibi kullanmak istersek setini private yapıp readonly durumuna getiririz.Peron sınıfımda
+ name değişkenim olsun dışardan erişen o değeri almasını isteyebilirim ama class içinde o değeri değiştirmek isteyebilirim.
+ Bunun için bu yöntemi kullanırım.
+----------------------------------------------------------------------------------------------------------------------*/
