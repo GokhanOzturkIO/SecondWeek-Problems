@@ -79,3 +79,9 @@ Soru 12 - Nullable bir değişkenle çalışırken hangi operatörleri kullanır
 	Ancak !!. operatörünü kullanırsak operatörü kullandığımız değişkenin null gelmesi durumunda NullPointerException hatasıyla karşılaşırız ve uygulamamız çöker. Eğer çok kritik bir işlem yapmıyorsak yani
 	değişkenin null gelmesi durumunda uygulama üzerinde göz ardı edilebilecek bir hata olacaksa ?. kullanabiliriz. Ancak kritik bir işlem yapılıyorsa ve uygulama üzerinde önemli bir etki yaratacaksa !!. operatörünü
 	kullanıp uygulamanın çökmesini sağlamamız gerekir.
+
+
+	NUMBERS
+
+Soru 1 - Kaç farklı tipte "number" sınıfı miras alan "alt sınıf" (child class) vardır? Bunların değer aralıkları neden önemlidir?
+	-> Byte,Short,Int,Long,Double,Float olmak üzere 6 adet alt sınıf bulunmaktadır. Bellekte kapladıklar yer bakımından mümkün olduğunca aralıklarına göre kullanmak önemlidir.
