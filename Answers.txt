@@ -1,1 +1,7 @@
 1) var , değişkenin değerini herhangi bir zamanda değiştirebiliriz. val değeri bir kez atanabilen bir değişkeni tanımlar. Yani bir kez tanımlandıktan sonra değiştiremeyiz. 
+
+
+<--------------------------------------------------------------------------------------------------------------------------------------------------->
+
+
+2) Bir var değerinin değişkenin val gibi davranması için setini private yaparız. Değişkenin değerinin sadece o sınıf içerisinde değiştirilebilmesi dışarıdan ise sadece okunabilir olması için private yapabiliriz. 
