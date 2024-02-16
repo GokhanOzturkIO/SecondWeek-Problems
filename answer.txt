@@ -83,3 +83,12 @@ Kotlin de type inference özelliği vardır. Belirtilen değerin default değerl
 15-Float değişken oluştururken F ve f harfleri varken, Long değişken oluştururken neden küçük l harfi yoktur?
 Küçük l harfi, 1 rakamına benzeyebilir. Bu da kod okunabilirliğini ve anlaşılırlığını azaltabilir.
 ************************************************************
+16-Tek duyarlıklı (Single precision) ve Çift duyarlıklı (Double precision) kavramlarını açıklayın.
+Single Precision(Float)
+32 bit (4 bayt) bellek kullanır.
+Yaklaşık 7 basamak ondalık basamak hassasiyeti sağlar.
+Double Precision
+64 bit (8 bayt) bellek kullanır.
+Yaklaşık 16 basamak ondalık basamak hassasiyeti sağlar.
+Tek duyarlıklı daha az bellek kullanır ve daha hızlı işlem yapılmasını sağlar, ancak daha az hassastır. Çift duyarlıklı daha fazla bellek kullanır ve daha yavaş işlem yapılmasını sağlar, ancak daha hassastır.
+************************************************************
