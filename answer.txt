@@ -143,6 +143,16 @@ Mod Alma (%)
 Kök alma (sqrt())
 Yuvarlama (round(), ceil(), floor())
 ***********************************************************
+26-Sayısal değişkenlerde hangi karşılaştırma operatörleri kullanılabilir?
+Karşılaştırma Operatörleri:
+
+Eşittir (==)
+Eşit değildir (!=)
+Küçüktür (<)
+Büyükçedir (>)
+Küçük veya eşittir (<=)
+Büyük veya eşittir (>=)
+***********************************************************
 
 
 
