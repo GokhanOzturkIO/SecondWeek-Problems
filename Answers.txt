@@ -116,3 +116,10 @@ Tek duyarlıklı, kayan nokta sayılarını daha az bellek kullanarak depolayan 
 
 Çift Duyarlıklı (Double Precision):
 Çift duyarlıklı, daha yüksek hassasiyete sahip kayan nokta sayılarını depolamak için kullanılan bir veri tipidir. Genellikle "double" olarak adlandırılır ve 64 bit (8 byte) bellek alanı kullanır. Bu tip, daha geniş bir sayı aralığında ve daha yüksek hassasiyette hesaplamalar gerektiren uygulamalarda kullanılır. Bilimsel hesaplamalar, finansal uygulamalar ve hassas veri analizi gibi alanlarda çift duyarlıklı veri tipi tercih edilir.
+
+
+
+<--------------------------------------------------------------------------------------------------------------------------------------------------->
+
+
+5) Kotlin'de, Double ve Float veri tipleri ile ondalık ayıracı olarak nokta('.') kullanılır. Nokta yerine virgül kullanılması durumunda hata ile karşılaşabiliriz. Uzak sunucudan sayısal bir değer çekiyor isek bu değerin virgül ile mi nokta ile mi geldiğini kontrol etmemiz gerekir. 
