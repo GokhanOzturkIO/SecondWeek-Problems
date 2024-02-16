@@ -73,6 +73,11 @@ Değer aralıkları bellekte kaplanan alanı temsil eder ve büyük projelerde v
 
 # Float veri tipinde 6-7 basamağa kadar işlem yaparken Double 15-16 basamağa kadar işlem yapabilir.Bu sınırlardan daha büyük olursa yuvarlayarak belirli basamak sayısında yaklaşık bir değer üretir.
 
+19-Ondalık(Decimal), Onaltılık (Hexadecimal) ve İkilik (Binary) değişkenleri Kotlin'de nasıl tanımlayabilirsiniz?
+
+# Ondalık sayı düz bir şekilde tanımlanırken onaltılık değişken başında 0x şeklinde ikilik değişken ise 0b şeklinde başlayarak tanımlanır.
+
+
 
 
 
