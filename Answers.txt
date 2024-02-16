@@ -174,3 +174,16 @@ Minus = -
 Times = x
 Div   = /
 Rem   = %
+
+................
+
+14. Sayısal değişkenlerde hangi karşılaştırma operatörleri kullanılabilir?
+
+== -> İki değer birbirine eşitse true döndürür.
+!= -> İki değer birbirine eşit değilse true döndürür.
+Büyük '>' -> Sol taraftaki değer sağ taraftakinden büyükse true döndürür.
+Küçük '<' -> Sol taraftaki değer sağ taraftakinden küçükse true döndürür.
+Büyük veya Eşit '>=' -> Sol taraftaki değer sağ taraftakinden büyük veya eşitse true döndürür.
+Küçük veya Eşit '<=' -> Sol taraftaki değer sağ taraftakinden küçük veya eşitse true döndürür.
+Ve Operatörü '&&' -> Her iki ifade de doğruysa True döndürür.
+Veya Operatörü '||' -> İfadelerden biri doğruysa True döndürür.
