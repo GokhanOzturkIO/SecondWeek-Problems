@@ -435,3 +435,9 @@ Hata alırız çünkü == operatörü integer bir değer ile byte bir değeri ka
 
 
 <--------------------------------------------------------------------------------------------------------------------------------------------------->
+
+
+
+11) Bu kod parçasında x değişkeni 5'in Long türündeki sayıya (5L) 2 ile bölünmesiyle tanımlanır. Bu işlem sonucunda x değişkeninin değeri 2L olur.
+İşlemde 5L ifadesi Long türünde bir sayıdır çünkü L eklenerek uzun tamsayı (long) literali olarak belirtilmiştir. Bölme işlemi gerçekleştirilirken Long türündeki değerlerle işlem yapılır. Sonuç olarak, x değişkeninin değeri 2L olur ve tipi de Long olur.
+println(x == 2L) ifadesi x değişkeninin değerinin 2L ile aynı olup olmadığını kontrol eder. Çünkü her ikisi de Long türündedir, bu ifade true sonucunu verecektir. Sonuç olarak, kodun çıktısı true olacaktır.
