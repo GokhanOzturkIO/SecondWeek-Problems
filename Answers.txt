@@ -102,3 +102,5 @@ Soru 7 - Ondalık(Decimal), Onaltılık (Hexadecimal) ve İkilik (Binary) deği�
 	-> Ondalık sayılar genellikle varsayılan olarak tanımlanır ve herhangi bir ek işleme gerek duymazlar. Onaltılık sayılar '0x' ön eki ile başlar ve ardından onaltılık olarak ifade edilen sayı gelir. İkilik sayılar ise
 	'0b' ön eki ile başlar ve ardından ikilik olarak ifade edilen sayı gelir. 
 	Ek olarak Binary değer aralığı [0 - 1]
+Soru 8 - Sekizlik (Octal) değişkenler Java'da nasıl tanımlanır? Kotlin'de Sekizlik değişken tanımlanabilir mi?
+	-> Java'da octal değişken tanımlamak için değerin başına 0 eklenir ve değer devam edilir. Kotlin octal değişken tanımına izin vermez.
