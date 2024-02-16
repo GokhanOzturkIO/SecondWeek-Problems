@@ -333,3 +333,20 @@ when (x) {
 
 Çıktı = 48
 
+................
+
+3. "Güvenli & Güvensiz" operatörler nelerdir?
+
+- Güvensiz (Unsafe Cast Operator) -> Güvensiz dönüşüm operatörü, Kotlin'de dönüşüm işleminin gerçekleştirilmesi sırasında hata oluşması durumunda bir istisna (exception) fırlatır. Bu nedenle "güvensiz" olarak adlandırılır. Güvensiz dönüşüm, infix operatörü olan as ile gerçekleştirilir.
+
+val x: String = y as String
+
+Kodda, y değişkeni String türüne dönüştürülmeye çalışıyor. Ancak, eğer y null ise veya y değişkeni String türüne dönüştürülemezse (örneğin, başka bir türde bir nesne referansı içeriyorsa), bir exception oluşur. Bu tür durumlar için kodu doğru hale getirmek için, dönüşümün sağ tarafında nullable tür kullanılmalı:
+
+val x: String? = y as String?
+
+- Güvenli (Safe Cast Operator) -> Güvenli dönüşüm operatörü, dönüşüm işlemi başarısız olduğunda null döndürür. Bu nedenle "güvenli" olarak adlandırılır. Güvenli dönüşüm operatörü as? şeklinde yazılır. 
+
+val x: String? = y as? String
+
+as? işleminin sağ tarafı bir null olmayan String türü olmasına rağmen, dönüşümün sonucu nullable'dır. Bunun nedeni, sağ taraftaki ifadenin dönüşümünün her zaman başarılı olmayabileceğidir.
