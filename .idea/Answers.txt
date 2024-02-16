@@ -1,0 +1,5 @@
+##Temel Türler & Null Güvenliği
+
+Answer 1:
+    val: yalnızca okunabilir. Bir kere atama yaptıktan sonra tekrar bir atama gerçekleştiremeyiz.
+    var: İstenen yerde atama yaptıktan sonra tekrar atamalar yapılabilir.
