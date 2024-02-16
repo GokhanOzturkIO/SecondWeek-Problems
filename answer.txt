@@ -22,3 +22,9 @@
  ReadOnly:  Bir değişkenin değerinin okunabilir olduğunu ancak değiştirilemez olduğunu belirtir. Yani değeri sadece okunabilir ve üzerinde değişiklik yapılamaz.
  "val" keyword'ünün temsil ettiği değişken bir kez başlatıldıktan sonra, bu değişken bir referansın değerini tutar ve bu referans değişmez.Bu yüzden "val" keyword'ü 
  "readOnly" olarak ifade edilir.
+
+## 4) "Tip Çıkarımı" (Type inference) kavramını açıklayın. Hangi durumlarda tip belirtmek kesin olarak gereklidir?
+ Bir değişkenin tipinin IDE tarafından bilinmesi durumudur. Tip çıkarımı bazı karmaşık durumlarda yanılabilmektedir. Örneğin 2 tane aynı tipte max sayısal değeri
+ birbiriyle çarptığımızda çıkan sonucun tipini biz belirlemezsek hata alırız. Burada "Type Inference" kavramı hatalı bir tip çıkarımı yapmış olur. Ornek olarak 
+ 2 max Integer sayının çarpımı Long bir ifadeye denk gelmelidir. Fakat tip çıkarımı ise sonucu atadığımız değişkeni Integer olarak gorecektir. Bu tarz durumlarda
+ tip belirtmek kesin olarak gereklidir.
