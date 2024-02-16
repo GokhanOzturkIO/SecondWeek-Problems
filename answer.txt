@@ -23,5 +23,14 @@ Değişken tiplerini belirtmediğimizde değişkenin tipini otomatik algılamas�
 	2-fonksiyon ve class parametreleri tanımlarken
 	3-bir fonksiyonun geri dönüş tipi belirtmemiz gerektiğinde.
 *************************************************************
-
+5-Kotlin'de tüm değişkenlerin sınıf olarak bulunması, "ilkel tip" (primitive type) olmadıkları anlamına gelir mi? Arka planda neler oluyor?
+hayır gelmez,Kotlinde herşey bir nesnedir.
+Buna rağmen runtime da class olmayan primitive type hallerine optimize edilir.
+bu değişken tipleri
+-Numbers and Unsigned counter parts
+-Booleans
+-Characters
+-Strings
+-Arrays
+*************************************************************
 
