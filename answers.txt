@@ -400,3 +400,9 @@ Sayılar
       değer, 'Long' değer aralığındadır. Bunu, 'a2' değişkenini print ettirerek de görebiliriz.
 
 =================================================================================
+
+5- "İşaretsiz" "Long" harf gösterimi nasıl yapılır?
+
+     'İşaretsiz' 'Long' harf gösterimi 'uL' veya 'UL' olarak yapılabilir.
+
+=================================================================================
