@@ -184,5 +184,6 @@ Sayılar
 -daha sonra cevapla
 
 
-3.
+3."İşaretsiz" değişkenlerin harf gösterimi nasıldır?
 
+- İşaretsiz değişkenler genellikle u veya U harfi ile ifade edilir.
