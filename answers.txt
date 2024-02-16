@@ -53,7 +53,9 @@ Değerini daha sonradan vereceğimiz değişkenlere makinenin bellekte ne kadar 
 # Byte,Short,Int,Long,Double,Float olmak üzere 6 tipte alt sınıf vardır.
 Değer aralıkları bellekte kaplanan alanı temsil eder ve büyük projelerde verimsizlik yaratabilir.
 
+14-Eğer bir değişkene tip belirtimi yapılmaz ve bir değer atanırsa, Kotlin tip çıkarımını nasıl yapar?
 
+# Int değer aralığı veya daha alt gruplardaysa int büyüklerinde ise Long olarak işaretler.
 
 
 
