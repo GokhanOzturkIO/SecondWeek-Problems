@@ -122,4 +122,10 @@ Sayısal değişkenlerde alt çizgi (_), okunabilirliği ve anlaşılırlığı 
 val ondalikSayi = 3_141_592
 Alt çizgi, sadece bir ayraç olarak kullanılır ve sayının değerini etkilemez.
 ***********************************************************
+23-== ile neyi karşılaştırırız? === ile neyi karşılaştırırız?
+== operatörü, iki nesnenin içeriğini (value) karşılaştırır.
+=== operatörü, iki nesnenin referanslarını karşılaştırır.
+***********************************************************
+
+
 
