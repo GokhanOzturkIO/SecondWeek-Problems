@@ -248,3 +248,9 @@ inv() –> Tüm bitleri tersine çevirir. Yani, 0'lar 1'e, 1'ler ise 0'a dönü�
 4. "İşaretsiz" "Long" harf gösterimi nasıl yapılır?
 
 - İşaretsiz Long harf gösterimi ULong şeklinde yapılır.
+
+................
+
+5. "İşaretsiz" değişkenlerin kullanım amaçları nelerdir?
+
+- İşaretsiz değişkenler, genellikle bellek sınırlarını aşma, veri uyumluluğunu sağlama, bit operasyonları yapma ve matematiksel hesaplamaları gerçekleştirme gibi amaçlarla kullanılır. Bu tür değişkenler, özellikle büyük sayılarla çalışılan ve verinin pozitif tamsayılarla doğrudan ilişkilendirildiği durumlarda önemlidir. Ayrıca, matematiksel hesaplamaları daha doğru ve güvenilir bir şekilde gerçekleştirmek için işaretsiz değişkenler kullanılabilir.
