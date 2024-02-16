@@ -399,3 +399,9 @@ as? işleminin sağ tarafı bir null olmayan String türü olmasına rağmen, d�
 10. "val x = 5 / 2 println(x == 2)" gibi bir işlemin sonucu ve tipi nedir? Neden böyle olduğunu açıklayın.
 
 - İki sayı da Int olduğu için bunun çıktısı da int olur. Dolayısıyla çıktı 2 olacağı için 2 == 2 sonucu da true dönecektir.
+
+................
+
+11. "val x = 5L / 2 println(x == 2L)" gibi bir işlemin sonucu ve tipi nedir? Neden böyle olduğunu açıklayın.
+
+- Long ile Int arasında bir bölme olduğu için Kotlin bunu daha geniş olan türe yani otomatik olarak Int'i Long'a çevirir. Sonuç da 2L olur dolayısıyla 2L == 2L true döner.
