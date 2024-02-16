@@ -220,3 +220,14 @@ Tersi Alma (NOT) (~): Bir sayının her bir bitini tersine çevirir, yani 0'lar�
 Kaydırma Sola (Shift Left) (<<): Belirtilen sayıda biti sola doğru kaydırır, sağdaki boşlukları 0 yapar.
 
 Kaydırma Sağa (Shift Right) (>>): Belirtilen sayıda biti sağa doğru kaydırır, soldaki boşlukları işaret biti ile doldurur.
+
+
+<--------------------------------------------------------------------------------------------------------------------------------------------------->
+
+
+16) 
+Kotlin'de büyük sayılarla çalışırken, BigInteger ve BigDecimal gibi büyük sayıları temsil etmek için özel veri tiplerinden yararlanılır.
+
+BigInteger: Bu sınıf, işaretli tam sayıları (integer) temsil etmek için kullanılır. Bu sınıf, herhangi bir boyutta tam sayıları temsil edebilir, yani pratikte sınırlı değildir. BigInteger sınıfı, büyük sayılarla çalışırken hassas hesaplamalar yapmak için kullanılır.
+
+BigDecimal: Bu sınıf, ondalık sayıları (decimal) temsil etmek için kullanılır. BigDecimal sınıfı, ondalık noktadan sonra daha yüksek hassasiyet sağlar ve büyük ve hassas ondalık sayılarla çalışırken kullanılır.
