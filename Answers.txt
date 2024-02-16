@@ -138,7 +138,11 @@ Sayılar
 13.Sayısal değişkenlerde hangi matematiksel operatörler kullanılabilir?
 
 -Toplama (+),Çıkarma (-),Çarpma (*),Bölme (/),Modül (%),Artırma (++) ,Azaltma (--)
- 
+
+
+14. Sayısal değişkenlerde hangi karşılaştırma operatörleri kullanılabilir?
+
+-Eşittir (==),Eşit Değildir (!=),büyük (>), Küçük (<),büyük Eşit (>=),Küçük Eşit (<=)
 
 
 
