@@ -42,6 +42,18 @@ Answer 4:
     önleme amacı ile en uygun tipe int e eşleyecektir, int aralığından da büyük bir sayı ise bu sefer
     long olarak görüntülenecektir.
   **Nullable değişkenler kullanırken yani var a = null dediğimizde tipini belirtmeliyiz çünkü
-  belirtmediğimizde IDE bunun Nothing tipine eşler. Unit den farklıdır. unit bir şey döner ama
-  boştur, Nothing bir şey de dönmez. Daha sonradan bir değer atamak istediğimizde şöyle bir hata
-  verecek : Bunun tipi Nothing ama sen int atıyorsun (gibi).
+    belirtmediğimizde IDE bunun Nothing tipine eşler. Unit den farklıdır. unit bir şey döner ama
+    boştur, Nothing bir şey de dönmez. Daha sonradan bir değer atamak istediğimizde şöyle bir hata
+    verecek : Bunun tipi Nothing ama sen int atıyorsun (gibi).
+
+Answer 5:
+    Kotlinde class gibi görünen değişken tipleri özel optimizasyon ile proje derlenirken otomatik
+    olarak bytecode'a dçnüştürürken yine primitive tip olarak çeviriliyor.
+
+    örnekleyelim:
+         //KOTLIN İÇİN//                    //JAVA İÇİN//
+        val a:Int=10                    int a =10;
+
+    üstteki örnekte kotlinde Int olarak belirttiğimiz tip javaya çevrildiğinde primitive tipe
+    dönüşüyor. Her derlendiği zaman IDE bunu arkaplanda çeviriyor.
+
