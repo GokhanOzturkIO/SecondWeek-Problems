@@ -362,3 +362,9 @@ as? işleminin sağ tarafı bir null olmayan String türü olmasına rağmen, d�
 5. "val b: Byte = 1 ile val i: Int = b ve son olarak print(b == i) gibi bir kod yazıldığında çıktı ne olur? Neden böyle bir çıktı aldığınızı açıklayın.
 
 - Bu kodda "Operator '==' cannot be applied to 'Byte' and 'Int'" hatası alırız çünkü kotlin narrowing conversions desteklemez. Bundan dolayı Byte'ı Int'e dönüştüremez. 
+
+................
+
+6. "val b: Byte = 1 ile val i: Int = b.toInt() ve son olarak print(b == i) gibi bir kod yazıldığında çıktı ne olur? Neden böyle bir çıktı aldığınızı açıklayın.
+
+- print(b == i) ifadesi "Operator '==' cannot be applied to 'Byte' and 'Int'" hatası verir. Çünkü b bir Byte türünden ve i bir Int türünden gelmektedir ve bu iki tür doğrudan karşılaştırılamaz. Kodun çalışması için, b değişkeninin Int türüne dönüştürülmesi gerekmektedir. Bu durumda, b.toInt() == i şeklinde bir karşılaştırma yapılabilir.
