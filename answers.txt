@@ -32,6 +32,12 @@ Değerini daha sonradan vereceğimiz değişkenlere makinenin bellekte ne kadar 
 
 # Null güvenliği kullandığımız değişkenlerin null olup olmadığını daha rahat anlayabilmemiz ve buna göre işlem yapabilmemize denir.
 
+9-Bir değişkene null değer atanır ve tip belirtilmezse Kotlin bu değişkeni nasıl yorumlar?
+
+# Kotlin bu değerin herhangi bir değişkene sahip olabileceğini düşünür bu yüzden de Nothing? Olarak yorumlar.
+
+
+
 
 
 
