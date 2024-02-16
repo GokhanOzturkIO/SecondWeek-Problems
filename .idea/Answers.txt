@@ -3,3 +3,15 @@
 Answer 1:
     val: yalnızca okunabilir. Bir kere atama yaptıktan sonra tekrar bir atama gerçekleştiremeyiz.
     var: İstenen yerde atama yaptıktan sonra tekrar atamalar yapılabilir.
+
+Answer 2:
+    var değişkeninin val gibi davranabilmesi için var ın set metoduna erişim belirleyici
+    ekleyebiliriz.
+    örnekleyelim:
+        var deneme=10           /// burada deneme normalde tekrar atama yapılabilir oluyor fakat
+            private set         /// private set dediğimiz için set etme işlemi yapılamaz hale geldi.
+
+    *Bunu neden yapmak isteriz ?
+        Projelerde class içerisindeki bir değişkenin sadece kendi class metodları içerisinde set
+        edilip dışarıya karşı val gibi davranarak değiştirilmesini ve kötü amaçla kullanılmasını
+        önleme amacıyla, Encapsulation yapmak için kullanmak isteyebiliriz.
