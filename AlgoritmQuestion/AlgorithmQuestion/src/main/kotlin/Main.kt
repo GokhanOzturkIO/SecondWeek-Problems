@@ -1,77 +1,68 @@
 fun main() {
+
+    var result: Double
+    var userChoice: String
+
     do {
         println("Hello !!!")
 
         print("Lütfen bir sayı girin: ")
         val number1 = readlnOrNull()
 
-        print("Lütfen matematiksel işlemin karakterini giriniz: ")
+        print("Lütfen matematiksel işlemin karakterini giriniz('+' ,'-', '*', '/', '%'): ")
         val operator = readlnOrNull()
 
         print("Lütfen ikinci sayiyi giriniz: ")
         val number2 = readlnOrNull()
 
-        var result: Double = 0.0
-
-        when(operator) {
-            "+" -> {
-                if (number1 != null && number2 != null) {
-                    result = number1.toDouble() + number2.toDouble()
-                    println("Sonuç = $result")
-                }else {
-                    println("Lütfen sayilari eksiksiz giriniz !!!")
-                }
+        if(!number1.isNullOrBlank() && !number2.isNullOrBlank() && !operator.isNullOrBlank()) {
+            result = operations(number1.toDouble(), number2.toDouble(), operator)
+            if(result != -1.0) {
+                println("Result -> $result")
             }
-            "-" -> {
-                if (number1 != null && number2 != null) {
-                    result = number1.toDouble() - number2.toDouble()
-                    println("Sonuç = $result")
-                }else {
-                    println("Lütfen sayilari eksiksiz giriniz !!!")
-                }
-            }
-            "/" -> {
-                if (number1 != null && number2 != null) {
-                    result = number1.toDouble() / number2.toDouble()
-                    println("Sonuç = $result")
-                }else {
-                    println("Lütfen sayilari eksiksiz giriniz !!!")
-                }
-            }
-            "*" -> {
-                if (number1 != null && number2 != null) {
-                    result = number1.toDouble() * number2.toDouble()
-                    println("Sonuç = $result")
-                }else {
-                    println("Lütfen sayilari eksiksiz giriniz !!!")
-                }
-            }
-            "%" -> {
-                if (number1 != null && number2 != null) {
-                    result = number1.toDouble() % number2.toDouble()
-                    println("Sonuç = $result")
-                }else {
-                    println("Lütfen sayilari eksiksiz giriniz !!!")
-                }
-            }
-            else -> {
-                println("Hatalı operatör girdiniz !!!")
-            }
+        }else {
+            println("Hatalı giriş yaptınız !!!")
         }
 
-        print("Devam etmek istiyor musunuz? (Evet(1) / Hayır(0)): ")
-        val continueInput: String? = readlnOrNull()
-
-        if(continueInput != null) {
-            if (continueInput == "0") {
-                println("Program sonlandırılıyor...")
-                break // Döngüden çık
-            }else if(continueInput != "0" || continueInput != "1") {
-                println("Lütfen doğru bir değer giriniz !!!")
-                continue
-            }
+        userChoice = getUserChoice()
+        if (userChoice == "0") {
+            break
         }
-
 
     } while (true)
+}
+
+
+fun operations(number1: Double, number2: Double, operation: String): Double {
+
+    var result = 0.0
+
+    result = when(operation) {
+        "+" -> {
+            number1 + number2
+        }
+        "-" -> {
+            number1 - number2
+        }
+        "/" -> {
+            number1 / number2
+        }
+        "*" -> {
+            number1 * number2
+        }
+        "%" -> {
+            number1 % number2
+        }
+        else -> {
+            println("Hatalı giriş yaptınız !!!")
+            -1.0
+        }
+    }
+
+    return result
+}
+
+fun getUserChoice(): String {
+    println("Devam etmek istiyor musunuz? İstemiyorsanız lütfen 0'a basınız ?")
+    return readlnOrNull().toString()
 }
