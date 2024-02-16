@@ -49,3 +49,6 @@ değerlerin null (boş) olma durumlarına karşı güvenli bir şekilde işlemes
 9-Bir değişkene null değer atanır ve tip belirtilmezse Kotlin bu değişkeni nasıl yorumlar?
 "Nothing?" şeklinde yorumlar
 *************************************************************
+10-İlkel bir değişkenin nullable olması ile null değer alamaması arasında bellek yönetimi açısından nasıl farklar vardır?
+Primitive değişkenler stack üzerinde tutulurken Referance type li değişkenler heap üzerindedir.
+*************************************************************
