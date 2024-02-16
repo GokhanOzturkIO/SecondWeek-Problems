@@ -51,3 +51,11 @@
 
 
 8) Null Safety bir nesne null olduğunda ve ona erişmeye çalıştığımızda hata almamızı engellemek için oluşturulmuştur. Null durumunu kontrol eder. Kotlin gibi dillerde, null güvenliği sağlamak için değişkenlerin null olabileceğini açıkça belirtmek gerekir. Bu şekilde, bir değişkenin null olup olmadığını kontrol edebiliriz ve hata olasılığını azaltabiliriz.Ayrıca, Kotlin gibi dillerde null kontrol operatörleri gibi araçlar sağlanır. Bu operatörler, bir nesnenin null olup olmadığını kontrol eder ve null olduğunda hata almayız. Bu sayede, programlarımız daha güvenli hale gelir ve daha az hata içerir.
+
+
+
+<--------------------------------------------------------------------------------------------------------------------------------------------------->
+
+
+
+9) Bir değişkene null değer atanır ve tip belitrilmezse Kotlin bu değişkeni Nothing olarak yorumlar. 
