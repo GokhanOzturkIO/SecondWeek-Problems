@@ -260,3 +260,13 @@ inv() –> Tüm bitleri tersine çevirir. Yani, 0'lar 1'e, 1'ler ise 0'a dönü�
 6. "İşaretsiz" değişkenlerle yapılan matematiksel işlemlerde, özellikle büyük sayılarla çalışırken karşılaşılabilecek taşma (overflow) ve taşma olmaması (underflow) durumları için Kotlin nasıl bir yönetim sağlar?
 
 - Kotlin'de, işaretsiz değişkenlerle yapılan matematiksel işlemlerde taşma (overflow) ve taşma olmaması (underflow) durumları için otomatik bir yönetim mekanizması bulunmamaktadır. Bu durumlar genellikle beklenmeyen sonuçlarla veya hatalarla sonuçlanabilir. Ancak, bazı işlevlerin güvenli versiyonları bulunabilir ve programcılar bu işlevleri kullanarak taşma durumlarını kontrol edebilirler. Genel olarak, taşma durumlarının yönetimi ve kontrolü, kod yazanın sorumluluğundadır ve dikkatli matematiksel işlemler yapmak önemlidir.
+
+................
+
+7. "İşaretsiz" değişkenlerin sınırlamaları nelerdir?
+
+- İşaretsiz değişkenlerin sınırlamaları, kullandıkları bellek boyutuna bağlı olarak değişir. Bu sınırlamalar:
+UByte  -> 8-bit işaretsiz bir tamsayı, 0 ile 255 arasındaki değerleri temsil edebilir.
+UShort -> 16-bit işaretsiz bir tamsayı, 0 ile 65,535 arasındaki değerleri temsil edebilir.
+UInt   -> 32-bit işaretsiz bir tamsayı, 0 ile 4,294,967,295 arasındaki değerleri temsil edebilir.
+ULong  -> 64-bit işaretsiz bir tamsayı, 0 ile 18,446,744,073,709,551,615 arasındaki değerleri temsil edebilir.
