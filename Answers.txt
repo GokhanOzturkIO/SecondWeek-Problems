@@ -106,3 +106,5 @@ Soru 8 - Sekizlik (Octal) değişkenler Java'da nasıl tanımlanır? Kotlin'de S
 	-> Java'da octal değişken tanımlamak için değerin başına 0 eklenir ve değer devam edilir. Kotlin octal değişken tanımına izin vermez.
 Soru 9 - "Geleneksel Notasyon" (Conventional Notation) gösterimi nasıl yapılır?
 	-> Geleneksel notasyon gösterimi -> 3.14e10
+Soru 10 - Sayısal değişkenlerde alt çizgi (underscore) nasıl kullanılır? Kotlin bunu nasıl yorumlar?
+	-> Örnek olarak 1000000000 değerini 1_000_000_000 şeklinde de tanımlayabiliriz. Bu şekilde tanımlanma sebebi okunabilirliği artırmak. Kotlin bu değeri 1000000000 olarak yani alt çizgi olmayan haliyle işleme alır.
