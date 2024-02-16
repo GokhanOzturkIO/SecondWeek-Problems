@@ -69,6 +69,10 @@ Değer aralıkları bellekte kaplanan alanı temsil eder ve büyük projelerde v
 
 # Ayıraç olarak (.) veya (,) kullanılır ve kullanırken gelen verinin ayırma şekline bakarak hatalı sonuçlar oluşmasını engellemeliyiz.
 
+18-Double ve Float değişkenler ondalık kısımda kaç basamağa kadar işlem yaparlar? Bu sınırın üzerinde gelen ondalık bilgileri için nasıl davranırlar? Hangi durumlar için Float ve hangi durumlar için Double kullanılmalıdır?
+
+# Float veri tipinde 6-7 basamağa kadar işlem yaparken Double 15-16 basamağa kadar işlem yapabilir.Bu sınırlardan daha büyük olursa yuvarlayarak belirli basamak sayısında yaklaşık bir değer üretir.
+
 
 
 
