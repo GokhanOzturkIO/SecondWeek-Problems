@@ -1,3 +1,5 @@
+BASIC TYPES & NULL SAFETY
+
 1) var , değişkenin değerini herhangi bir zamanda değiştirebiliriz. val değeri bir kez atanabilen bir değişkeni tanımlar. Yani bir kez tanımlandıktan sonra değiştiremeyiz. 
 
 
@@ -79,3 +81,12 @@
 
 
 12) Nullable bir değişkenle çalışırken kullandığımız iki tane operatör vardır. Bunlar ? ve !! operatörleridir. ? opeartörü değişkenin null olabileceği anlamında gelir. !! operatörü ise değerin kesinlikle null olmayacağını bildiğimiz durumlarda kullanılır, ide ye değer kesinlikle null değil demiş oluruz.
+
+
+
+NUMBERS 
+
+
+1) 10 farklı tipte number sınıfını miras alan alt sınıf vardır. Bunlar:
+	Byte, Short, Int, Long, UByte, .UShort, UInt, ULong, Float, Double
+Değer aralıkları bellekte kapladıkları alan açısından önemlidir. Değerimiz hangi tip aralığında ise o tipte değişken tanımlamam bellek kullanımı açısından önemlidir.
