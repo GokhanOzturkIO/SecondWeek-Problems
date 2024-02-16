@@ -212,3 +212,9 @@ inv() –> Tüm bitleri tersine çevirir. Yani, 0'lar 1'e, 1'ler ise 0'a dönü�
 16. Kotlin'de büyük sayılarla çalışırken hangi ek türlerden yararlanılır ve bu türlerin sınırları nelerdir?
 
 - Kotlin'de büyük sayılarla çalışırken, BigInteger ve BigDecimal gibi ek türler kullanılır. BigInteger, büyük tamsayılar için kullanılır. BigDecimal, belirli bir hassasiyette ve sınırsız büyüklükte ondalık sayıları temsil etmek için kullanılır.
+
+................
+
+17. Double ve Float değişkenler kullanılırken "yuvarlama" davranışı nasıldır? Bu nasıl değiştirilebilir?
+
+- Varsayılan olarak, Kotlin'de Double ve Float sayıları IEEE 754 standardına göre yuvarlanır. Bu standart, genellikle en yakın ondalık sayıya yuvarlama yapar, yani en yakın tam sayıya veya belirli bir ondalık basamağa yuvarlama yapabilir. Ancak, bazı durumlarda bu yuvarlama hatası gözlenebilir. Kotlin'de bu yuvarlama davranışını değiştirmek pek mümkün değildir, çünkü bu standartla ilgilidir ve dilin kendisiyle ilgili değildir. Ancak, özel yuvarlama stratejileri uygulanabilir. Örneğin, belirli bir hassasiyetle yuvarlama yapmak için özel bir yuvarlama fonksiyonu oluşturabilirsiniz. Bu fonksiyonlar, belirli bir hassasiyetteki yuvarlama için kullanılabilir ve kullanıcı ihtiyaçlarına uyacak şekilde özelleştirilebilir.
