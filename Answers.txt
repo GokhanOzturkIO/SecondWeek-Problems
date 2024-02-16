@@ -164,4 +164,9 @@ Soru 7 - "İşaretsiz" değişkenlerle yapılan matematiksel işlemlerde, özell
 Soru 8 - "İşaretsiz" değişkenlerin sınırlamaları nelerdir?
 	-> İşaretsiz değişkenlerin sınırları kullanılan veri tipinin işaretli olan halinin negatif değerinin pozitife çevrilerek en üst pozitif değeriyle toplanmış halidir. Örneğin işaretli bir Byte tipinin değer aralığı -128 ile 127 arasındayken
 	işaretsiz bir Byte değişkeninin değer aralığı 0 ile 255 arasındadır.
+	
+	TYPE CONVERSION
+
+Soru 1 - is ve !is operatörlerinin kullanımını açıklayın.
+ 	-> is operatörü bir değişkenin/nesnenin belirli bir veri tipine ait olduğunu kontrol eder. !is operatörü ise tam tersi yani belirli bir tipe ait olmadığını kontrol eder.
 
