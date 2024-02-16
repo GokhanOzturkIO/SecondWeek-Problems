@@ -105,7 +105,10 @@ Değer aralıkları bellekte kaplanan alanı temsil eder ve büyük projelerde v
 
 # ==,!=,<,>,<= gibi operatörler kullanılır.
 
-27-
+27-Bit düzeyinde operatörler (Bitwise operators) nelerdir? Ne amaçla kullanılır? Kotlin'de bunları nasıl kullanabilirsiniz?
+
+# Bitwise operatörler bit tipindeki değişkenlerin 0 ve 1 lerini and,or,xor,inv,shl,shr gibi operatörlerle karşılaştırmaya yarar.Bu operatörler, genellikle işlemci düzeyinde performansı artırmak veya bazı özel durumlarda verimli kod yazmak için kullanılır.Kotlinde kullanmak için iki farklı binary değişkeni oluşturur ve bunları (x1 and x2) şeklinde kullanabiliriz.
+
 
 
 
