@@ -289,3 +289,13 @@ Sayılar
       (Örn. println(a === b)) Çıktılar true veya false olarak verilir.
 
 =================================================================================
+
+12- `===` operatörü ile karşılaştırma yaparken Byte değer aralığı neden önemlidir?
+ Kotlin bu aralığa göre neden özel bir davranış sergiler?
+
+     Kotlin'de -128 ile 127 arasındaki sayılar için özel bir davranış vardır. Kotlin'de bu aralıktaki değerler,
+      bir önbellek (cache) içinde önceden oluşturulur ve bu değerlerin aynı bellek konumunu paylaşması sağlanır.
+      Bununla birlikte bellek kullanımını azaltmayı amaçlar. Bu nedenle, bu aralıktaki değerler === operatörüyle
+      karşılaştırıldığında genellikle aynı bellek konumunu işaret ederler.
+
+=================================================================================
