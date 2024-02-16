@@ -350,3 +350,18 @@ Eğer bir nesne belirtilen tipe aitse, true döner; aksi halde, false döner.
 '!is2 operatörü, bir nesnenin belirli bir tipe ait olmadığını kontrol etmek için kullanılır.
 Eğer bir nesne belirtilen tipe ait değilse, true döner; aksi halde, false döner.
 ! operatörü, koşulu tersine çevirir. Yani, !is operatörü aslında is operatörünün tersi olduğunu ifade eder.
+
+
+2) Smart Cast, Kotlin'de tip güvenliğini artıran ve genellikle tip dönüşümlerini otomatikleştiren bir özelliktir. Bu özellik sayesinde, derleyici belirli durumlarda değişkenlerin tipini otomatik olarak tanır ve gerektiğinde uygun dönüşümleri yapar. Akıllı dönüşüm, kodun daha okunabilir ve daha az hata eğilimli olmasını sağlar.
+
+fun demo(x: Any) {
+    if (x is String) {
+        print(x.length) // x is automatically cast to String
+    }
+}
+
+Akıllı dönüşümün bazı sınırlamaları vardır:
+
+Akıllı dönüşüm, değişkenin türünü belirlemek için sadece belirli durumları dikkate alır. Karmaşık veya dinamik durumlarda, derleyici akıllı dönüşüm yapamayabilir.
+Akıllı dönüşüm, is ve !is operatörleriyle yapılan doğrudan kontrol durumlarında çalışır. Karmaşık kontrol akışlarında veya özel durumlarda bu özellik kullanılamayabilir.
+Akıllı dönüşümün etkin olabilmesi için kodun iyi tasarlanmış olması gerekir. Aksi takdirde, beklenmeyen sonuçlar veya hatalar ortaya çıkabilir.
