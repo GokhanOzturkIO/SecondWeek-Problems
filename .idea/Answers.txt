@@ -34,3 +34,14 @@ Answer 3:
         değerine de iki sayının çarpımı veriliyor. Dışarıdan gelen değer her değiştiğinde carpim
         değeri de değişeceği için val immutable'dir diyemiyoruz. val read-only dir.
 
+Answer 4:
+  **Tip çıkarımı(Type inference): Bir değişkene değer ataması yaparken hangi türde olduğunu
+    belirtmediğimizde, atama yaptığımız değere göre IDE'nin bu değeri otomatik olarak kendisinin
+    algılayıp değişkeni en uygun veri tipine eşlemesi. En uygun için örnek olarak sayısal değerlerde
+    verilen sayı int değer aralığındaysa normalde byte/short aralığında da olsa olabilecek hataları
+    önleme amacı ile en uygun tipe int e eşleyecektir, int aralığından da büyük bir sayı ise bu sefer
+    long olarak görüntülenecektir.
+  **Nullable değişkenler kullanırken yani var a = null dediğimizde tipini belirtmeliyiz çünkü
+  belirtmediğimizde IDE bunun Nothing tipine eşler. Unit den farklıdır. unit bir şey döner ama
+  boştur, Nothing bir şey de dönmez. Daha sonradan bir değer atamak istediğimizde şöyle bir hata
+  verecek : Bunun tipi Nothing ama sen int atıyorsun (gibi).
