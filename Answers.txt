@@ -92,3 +92,9 @@ Sayılar
 1. Kaç farklı tipte "number" sınıfı miras alan "alt sınıf" (child class) vardır? Bunların değer aralıkları neden önemlidir?
 
 - Number sınıfı miras alan 6 alt sınıf vardır. Bunlar: Byte, Short, Int, Long, Float ve Double'dır. Bu alt sınıflardan ilk dördü tam sayıları ifade ederken son iki tanesi ondalıklı sayılar için kullanılır. Hepsinin değer aralıkları birbirinden farklıdır. Tam sayılar için en küçük değer aralığı Byte iken en büyük değer aralığı ise Long'dur. Değer aralıklarının farklı olması uygun veri tipini seçerek bellek kullanımının ve işlem hızının daha iyi kontrol edilebilmesine olanak tanır. Ayrıca vereceğimiz değerin de hangi aralıklarda olacağını biliriz. 
+
+................
+
+2. Eğer bir değişkene tip belirtimi yapılmaz ve bir değer atanırsa, Kotlin tip çıkarımını nasıl yapar?
+
+- Kotlin, değişkenin değerini belirtmesek de değişkenin değerine ve atanan değerin türüne göre tip çıkarımı yapabilir. Eğer atanan değer sayı içeriyorsa değer aralığı ne olursa olsun default olarak Kotlin onu int olarak algılar veya metin içeren bir değerse bunu String olarak belirtmesek de hata vermez. 
