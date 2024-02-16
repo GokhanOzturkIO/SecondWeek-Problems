@@ -129,6 +129,20 @@ Alt çizgi, sadece bir ayraç olarak kullanılır ve sayının değerini etkilem
 24-=== operatörü ile karşılaştırma yaparken Byte değer aralığı neden önemlidir? Kotlin bu aralığa göre neden özel bir davranış sergiler?
  Kotlin, -128 ile 127 arasındaki değerler için aynı bellek konumunu paylaşmasına olanak tanır (küçük bir bellek optimizasyonu olarak).
 ***********************************************************
+25-Sayısal değişkenlerde hangi matematiksel operatörler kullanılabilir?
+Temel Operatörler:
+
+Toplama (+)
+Çıkarma (-)
+Çarpma (*)
+Bölme (/)
+
+Diğer Operatörler:
+Mod Alma (%)
+Üs alma (^)
+Kök alma (sqrt())
+Yuvarlama (round(), ceil(), floor())
+***********************************************************
 
 
 
