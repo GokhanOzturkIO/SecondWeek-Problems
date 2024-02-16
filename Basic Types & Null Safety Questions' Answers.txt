@@ -85,6 +85,17 @@ Number değişkenler için önemli bir nokta var. Orası da
 
 ---------------------------------------------------------------------------------------
 
+Soru 5: Kotlin'de tüm değişkenlerin sınıf olarak bulunması, "ilkel tip" (primitive type) olmadıkları anlamına gelir mi? Arka planda neler oluyor?
+
+Tabiki de hayır. Kotlinde'de primitive tip tipler vardır. Kotlin bunu runtime'de özel optimizayonlarla primitive haline çevirir ve bu şekilde kullanılır. 
+
+Primitive tiplerin, reference tipli değişkenlere göre farkı, hafızada daha az yer kaplaması ve primitive tiplere erişmek istediğimde daha hızlı bir şekilde erişebilmemiz.
+
+ - Primitive tipler referansları ve değerleri RAM üzerinde STACK denilen bölümde saklanırlar.
+ - Reference değerli tiplerin ise değeri RAM üzerinde HEAP bölümünde tutulur ve Stack'de ise bu değerin RAM üzerinde saklandığı alanın referansı saklanır.
+
+
+
 
 
 
