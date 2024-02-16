@@ -1,6 +1,19 @@
-Temel Türler ve Null Güvenliği
+# Temel Türler ve Null Güvenliği
 ## 1) val ile var arasındaki fark nedir?
  "val" keyword'ü  oluşturulduktan ve ilk değeri verildikten sonra yeni değer ataması yapılamayacak olan değişkenler için kullanılır. "var" keyword'ü ise daha sonra
  değiştirilebilir.
 
 
+## 2) Bir var değişkeni val gibi davranmasını nasıl sağlayabiliriz val kelimesini kullanmadan? Bunu neden yapmak isteriz? Örnek bir senaryo verin.
+ "var" keyword'ü ile oluşturulan bir değişkenin "set" metodunu private tanımlar isek "val" keyword'ü gibi davranacaktır. Bunu neden yapmak isteriz?
+ örnek olarak initialize değeri olan bir değer tanımladık ve bunu daha sonra kullanıcıdan almak istiyoruz. Eğer bu değişkeni "val" keyword'ü ile oluşturursak
+ initial değerinden sonra buna bir değer atayamayız. Fakat bu değişkeni "var" keywordu ile tanımlarsak initial değerinden sonra kullanıcıdan almamız gereken değeri
+ aldıktan sonra "set" metodunu "private" a çekerek "val" keyword'ü gibi davranmasını sağlayabiliriz.
+	Örnek Bir Senaryo (umarım :))
+ Bionluk gibi bir uygulama tasarladığımızı düşünelim. Bir kullanıcı sınıfımız var ve biz bu kullanıcının kişisel bilgilerinin yanısıra birde yaptığı ilk iş sonucunda
+ kazandığı ücretin miktarını tutmak istiyoruz. (Amacımız belli bir süre sonra kullanıcıya ilk işinde bu kadar kazanmıştın diyerek nostaljik bir an yaşatmak :D) Bu değişkenin
+ adının "firstPay" olduğunu düşünelim. Eğer bu değişkeni "val" keyvord'ü ile tanımlarsak kullanıcı kayıt olduğunda "firstPay" değişkeni ilk değerini alacak ve bir daha 
+ değiştirilemeyecektir. Fakat "var" keyword'ü ile oluşturup ilk değerini "null" verip daha "set" metodunu "private" a çekerek, user classının içerisinde bu değişkene
+ değer atamak için bir fonksiyon oluşturursak bu işlemi gerçekleştirebiliriz.
+
+ 
