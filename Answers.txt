@@ -90,3 +90,11 @@ NUMBERS
 1) 10 farklı tipte number sınıfını miras alan alt sınıf vardır. Bunlar:
 	Byte, Short, Int, Long, UByte, .UShort, UInt, ULong, Float, Double
 Değer aralıkları bellekte kapladıkları alan açısından önemlidir. Değerimiz hangi tip aralığında ise o tipte değişken tanımlamam bellek kullanımı açısından önemlidir.
+
+
+
+<--------------------------------------------------------------------------------------------------------------------------------------------------->
+
+
+
+2) Eğer değişken integer değer aralığında ise integer olarak atanır. İnteger değer aralığından büyük ise Long olarak atanır. Virgüllü değerlerde ise double olarak atanır. 
