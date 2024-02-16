@@ -67,3 +67,7 @@ Soru 8 - "Null Güvenliği" (Null Safety) kavramını açıklayın.
 	null kontrolü yaparız ve NullPointerException hatasından kaçınmış oluruz.
 Soru 9 - Bir değişkene null değer atanır ve tip belirtilmezse Kotlin bu değişkeni nasıl yorumlar?
 	-> Eğer bir değişkene tip belirtmez ve null değer ataması yaparsak Kotlin bu değişkeni Nothing? türünde belirler.
+
+Soru 10 - İlkel bir değişkenin nullable olması ile null değer alamaması arasında bellek yönetimi açısından nasıl farklar vardır?
+	-> Nullable değişkenlerin taşıdıkları değerlerin bellek adreslerine ek olarak bir de null değerini temsil etmek için ayrı bir bellek adresi oluşturulur. Bu durum her nullable değişken için ayrı bellek kullanımına
+	yol açar. Null değer alamayan değişkenlerde ise bu ekstra bellek alanına gerek duyulmaz.
