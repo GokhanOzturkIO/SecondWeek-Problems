@@ -270,3 +270,9 @@ UByte  -> 8-bit işaretsiz bir tamsayı, 0 ile 255 arasındaki değerleri temsil
 UShort -> 16-bit işaretsiz bir tamsayı, 0 ile 65,535 arasındaki değerleri temsil edebilir.
 UInt   -> 32-bit işaretsiz bir tamsayı, 0 ile 4,294,967,295 arasındaki değerleri temsil edebilir.
 ULong  -> 64-bit işaretsiz bir tamsayı, 0 ile 18,446,744,073,709,551,615 arasındaki değerleri temsil edebilir.
+
+................
+
+8. "İşaretsiz" değişken türleri (UInt, ULong vs.) kullanırken, Java API'leri ile uyumluluk konusunda ne gibi sorunlar olabilir? Bunları çözmek için neler yapabilirsiniz?
+
+- Uyumsuzlukları gidermek için, işaretsiz tamsayıları işaretli tamsayılara dönüştürme, uygun saklama yöntemleri kullanma veya Java API'lerini kullanırken işaretsiz tamsayıları kaçınma gibi yöntemler kullanılabilir.
