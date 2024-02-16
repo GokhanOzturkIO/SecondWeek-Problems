@@ -114,7 +114,15 @@ kod yazarken böyle bir işlem yapamayacağımız hakkında uyarı verir. Bu, pr
 
 --------------------------------------------------------------------------------------
 
+Soru 7: Bir değişkeni nullable yapmak için ne yapmalıyız?
 
+ Bir değişkeni nullable yapmak için Null yapmak istediğimiz değişkenin sonunu '?' işareti eklenir.
+
+	val number: Int? = null
+	val name: String? = "Tolga"
+	val number2 = null // Burada da Type Inference'dan faydalanarak yaptık detayına 9.soru içerisinde vereceğim.
+
+--------------------------------------------------------------------------------------
 
 
 
