@@ -62,3 +62,8 @@ Answer 6:
     Örneğin int bir değişkene String atamaya çalışırsak bu hata ile karşılaşırız. IDE kodu düzeltene
     kadar derlemeye izin vermez, derlemez.
 
+Answer 7:
+    Bir değişkeni nullable yapmak için değişkenin tipini belirtirken sonuna ? eklememiz yeterlidir.
+    Örnekleyeyim:
+        var a:Int? = 11  //Burada a değişkeni artık nullable oluyor.
+
