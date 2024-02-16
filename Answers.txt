@@ -178,3 +178,11 @@ Sayılar
 - İşaretli tamsayılar, negatif ve pozitif değerleri temsil edebilir, bu nedenle değer aralığı genellikle iki katıdır.
 İşaretsiz tamsayılar ise sıfırdan başlayarak pozitif değerleri temsil eder.
 
+
+2."İşaretsiz" değişkenler nasıl bir sınıf yapısında tutulurlar? Bu neden önemlidir?
+
+-daha sonra cevapla
+
+
+3.
+
