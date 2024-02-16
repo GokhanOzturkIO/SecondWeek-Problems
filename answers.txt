@@ -81,6 +81,10 @@ Değer aralıkları bellekte kaplanan alanı temsil eder ve büyük projelerde v
 
 # Başında 0 olarak yazılır.Kotlinde sekizlik değişken tanımlanamaz çünkü 0 ile başlayamıyor sayılar.
 
+21-"Geleneksel Notasyon" (Conventional Notation) gösterimi nasıl yapılır?
+
+# + - gibi işaretlerin sağına ve soluna yazılarak yapılır.
+
 
 
 
