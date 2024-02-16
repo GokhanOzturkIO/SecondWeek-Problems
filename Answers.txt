@@ -29,4 +29,8 @@ Temel Türler & Null Güvenliği
 
 -type inference = değişken tipini idenin kendi anlaması. Eğer değişkenin değerini null yapıyorsak yani değişkeni nullable yapıyorsak değişkenin tipini belirtmemiz gerekiyor.
 
+5.Kotlin'de tüm değişkenlerin sınıf olarak bulunması, "ilkel tip" (primitive type) olmadıkları anlamına gelir mi? Arka planda neler oluyor?
+
+-Hayır. Özel optimazyonlar ile bytecode çevrilirken primiteve olacak şekilde çevriliyorlar.
+
 
