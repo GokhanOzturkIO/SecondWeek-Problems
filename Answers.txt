@@ -4,7 +4,45 @@
 'val' (value) anahtar kelimesi,bir değişkenin sadece bir kez atanmasını ve sonrasında değiştirilmemesini ifade eder.Değişken türünü belirtmek zorunda kalmayız,derleyici,değerden türü çıkarabilir.(type inference).Bir kere değer atadıktan sonra değişiklik yapamayız.Kodun okunabilirliğini arttırır,değişkenin değerinin sabit olduğunu değiştirmediğimizi açıkça belirtmiş oluruz.Daha güvenli kod yazımına olanak sağlar.Bu yüzden bir projeye başlarken değişkenleri ilk olarak val olarak atamalıyız ileride ihtiyacımız olursa dönüp değiştirmemiz daha uygun olur.
 'var' (variable) anahtar kelimesi değişkenin birden çok kez atanabileceğini ve değerlerin değiştirilebileceğini ifade eder.Daha esnek bir kod yazımı sağlar çünkü programın akışına göre türü ve değeri değişebilir.
 Performans farkı ikisinin arasında yok denecek kadar azdır. 'val' değişkenler 'var' değişkenlere göre çok az farkla daha maliyetlidir.'val' değişkeninde program daha çalişmaya başlarken kendisinden if şartı olduğu için bu da 'var' değişkenine göre çok az maliyet farkı çıkarıyor. Akademik levelde 'var' kullanmak daha performanslı ama göz ardı edilebilecek kadar düşük.Günlük hayat problemlerinde ise 'val' kullanmak daha performanslı sebebi multithread işlemler yaptığımız için.
+***********************************************************************
 - Bir var değişkeni val gibi davranmasını nasıl sağlayabiliriz val kelimesini kullanmadan? Bunu neden yapmak isteriz? Örnek bir senaryo verin.
 set metodunu private yaparak,dışarıdan değer atanmasını engelleyebiliriz.Böylece değişkenin ilk değeri ne ise o alınmış olur.class'ın içerisine bu değişkene değer ataması sonradan yapmak isteyebiliriz bu yüzden var olması zorunludur ama bu değişkene class'ın dışında bir yerde değerinin değiştirilmesi istenmeyebilir bu yüzden private set'i kullanabiliriz.
 Günlük kayıt sistemi gibi durumlarda, verilerin tutarlılığını sağlamak için her öğenin bir kimliğe (ID) sahip olması önemlidir. private set özelliği, bu kimliklerin sadece bir kere atanmasını ve sonra değiştirilememesini sağlar. Bu da veri tutarlılığını korur.
+***********************************************************************
 - "Değişmez" (Immutable) ve "Salt Okunur" (ReadOnly) kavramlarını açıklayın. val değişkenler neden aslında "değişmez" değil de "salt okunur" olarak açıklanmalıdır?
+'val' değişkenleri,bir kez değer atandıktan sonra tekrar değiştirilemezler.Ancak bu değişkenlerin referansları(bellek adresleri) değişebilir.Yani, 'val' değişkenleri aslında değişmez değildir "salt okunur (readonly)" olarak açıklanmalıdır.
+***********************************************************************
+- "Tip Çıkarımı" (Type inference) kavramını açıklayın. Hangi durumlarda tip belirtmek kesin olarak gereklidir?
+Bir programlama dilinde değişkenin türünün doğrudan belirtilmediği durumlarda,derleyicinin değişkenin türünü otomatik olarak belirlemesi işlemidir.
+Örneğin;  val x = 10  burada 'x' değişkeninin türü açıkça belirtilmemeiştir.Derleyici kendisi x in bir tam sayı olduğunu çıkarır ve bu nedenle x bir Int türüne sahiptir.
+Ek olarak; sayısal değerler için, verilen değer aralığı Int değer aralığı içinde ise Byte veya Short olarak tanımlama yapsak bile int set edilir ve derleyici otomatik olarak Int türüne çevirir.
+Nullable türlerle çalışırken,tip belirtmek bazen gereklidir çünkü tip belirterek nullability kontrolü yapılabilir ve NullPointerException hatalarının önüne geçilebilir. Kotlin projelerinde Java ile etkileşimde olduğunuzda da bazen Java'nın tip sistemiyle uyumluluk sağlamak için tür belirtmek gerekir.
+************************************************************************
+- Kotlin'de tüm değişkenlerin sınıf olarak bulunması, "ilkel tip" (primitive type) olmadıkları anlamına gelir mi? Arka planda neler oluyor?
+Kotlin'de tüm veri tipleri nesne tabanlıdır ve primitive type yoktur. Örneğin, 'Int' , 'Boolean' , 'Double' gibi tüm veri tipleri aslında arka planda Java'nın sınıflarına dönüştürülür.Bu sayede Kotlin hem OOP prensiplerini korur hem de Java'nın performans avantajından yararlanır.
+************************************************************************
+- "Tip Güvenliği" (Type Safety) kavramını açıklayın.
+Type Safety,programın çalışma zamanında hata almamasını ve beklenmedik sonuçlar üretmemesini sağlar.Programların hata ayıklamasının daha hızlı olmasını sağlar. Örneğin,Kotlin'de bir int değeri string olarak kullanmaya çalışırsanız veya null olabilecek bir değeri null olmayan bir türe atamaya çalışırsanız,derleme zamanında hata alırsınız.
+************************************************************************
+- Bir değişkeni nullable yapmak için ne yapmalıyız?
+'?' işaretini kullanırız.Belirttiğimiz türün yanına ? eklersek nullable olabileceğini söylemiş oluruz. var nullableString: String? = null gibi.Ancak Non-nullable değişkenler null değerini kabul etmeyen ve tanımlandıkları ilk anda başlangıç değeriyle başlatılması gereken değişkenlerdir.Bu tür değişkenler,null değerini alamazlar ve null kontrolü gerektirmezler.Başlangıç değeri ilk başta atamak istemezsek 'latenit' keyword'ünü kullanabiliriz.lateinit anahtar kelimesi kullanılarak değişkenin daha sonra başlatılacağı belirtilir.
+************************************************************************
+- "Null Güvenliği" (Null Safety) kavramını açıklayın.
+Bir programın çalışması sırasında olası null referans hatalarını önlemek ve bu gibi hataların önüne geçmek için kullanılır. Kotlin'de null güvenliği önemlidir.
+************************************************************************
+- Bir değişkene null değer atanır ve tip belirtilmezse Kotlin bu değişkeni nasıl yorumlar?
+Örneğin val number = null Kotlin bu değişkeni Nothing olarak işaretler.
+************************************************************************
+- İlkel bir değişkenin nullable olması ile null değer alamaması arasında bellek yönetimi açısından nasıl farklar vardır?
+nullable olması, o değişkenin null değer alabilme özelliğine sahip olduğu anlamına gelir.Bellek yönetimi açısından nullable değişkenler için ekstra bir kontrol mekanizması gereklidir.Bu da bize ek maliyetler ve ek kod karmaşası çıkarabilir.Nullable olmaması yani non-nullable olması durumunda bu değişken her zaman bir değer almak zorunda olduğu için bellek yönetimi açısından daha verimlidir çünkü derleyici, bu değişkenin her zaman değer alacağını bilir ve bu değer için bellekte alan ayırabilir. Bu da gereksiz bellek kullanımını azaltabilir.
+************************************************************************
+- Nullable bir değişkenin bir değere sahip olması ile null olması arasında bellek yönetimi açısından nasıl bir fark vardır? Null değer almış bir değişken bellekte yer kaplamaz diyebilir miyiz?
+nullable bir değişkenin bir değere sahip olması demek,bellekte bu değeri tutacak bir alan ayrılır ve bu alan değişkenin türüne ve değerinin boyutuna bağlı olarak değişebilir.Null değeri almış nullable değişken ise aslında bellekte bir değer tutmaz.Null,bellekte özel işarettir ve değişkenin referansı null ayarlanır.
+************************************************************************
+- Nullable bir değişkenle çalışırken hangi operatörleri kullanırız? Bu operatörlerin kullanım farkları nelerdir? Hangisini ne zaman kullanmak daha anlamlıdır?
+?         => Bu operatör, değişkenin null olup olmadığı kontrol eder ve null değilse devam eder. 'variable?.method()' şeklinde kullanılır ve variable null değilse method çağrılır.
+?:(elvis) => Bu operatör, null kontrolü yapar.Null ise alternatif bir değer döndürür. 'variable ?: defaultValue' şeklinde kullanılır. variable null ise defaultValue döndürür.
+!!        => Bu operatör,değişkenin null olmadığını varsayar ve null-check yapmaz.Değişken null ise NullPointerException hatası fırlatır.Değişkenin null olmadığına emin olduğumuzda kullanmalıyız sadece yoksa program çökebilir.
+
+### Sayılar
+-
