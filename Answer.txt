@@ -28,4 +28,8 @@
   1.6  Tip Güvenliği, derleme sırasında değişkenlerin türlerinin ve atanacak değerlerin türlerinin doğrulanmasıyla
   sağlanan bir programlama kavramıdır, böylelikle tür uyumsuzlukları önlenir.
 ----------------------------------------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------------------
+  1.7  var age : Int? = null  bu sekilde null bildirilir.Tür Bildirimi yapmak ve tür bildirimin sonuna "?" koymak
+  zorundayız.
+----------------------------------------------------------------------------------------------------------------------*/
 
