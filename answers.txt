@@ -406,3 +406,13 @@ Sayılar
      'İşaretsiz' 'Long' harf gösterimi 'uL' veya 'UL' olarak yapılabilir.
 
 =================================================================================
+
+6- "İşaretsiz" değişkenlerin kullanım amaçları nelerdir?
+
+     İşaretsiz değişkenler, hafızada daha az yer kaplayarak, daha fazla pozitif
+      sayıya erişmek için kullanılır. Örneğin kullanıcının yaşını almak için 'Byte'
+      tipini kullanabiliriz fakat kullanıcının yaşı 127'den büyük olabilir. Bu durumda
+      'Short' kullanmak yerine 'UByte' kullanabiliriz. Bu sayede hem hafızada 8 bitlik
+      yer tutarız hem de 0'dan 255'e kadarki olan sayıları age değişkenimize atayabiliriz.
+
+=================================================================================
