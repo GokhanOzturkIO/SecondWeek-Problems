@@ -94,4 +94,7 @@ Soru 4 - Tek duyarlıklı (Single precision) ve Çift duyarlıklı (Double preci
 	ifade eder. Çift duyarlılıklı format da ise daha fazla bellek kullanımı ve daha yavaş işleme gerçekleşir.
 Soru 5 - Double ve Float değişkenlerle çalışırken ondalık ayıracı olarak hangi işaretler kullanılır? Bu ayıraçların kullanımında nelere dikkat etmek gerekir?
 	-> Double ve Float değişkenlerle çalışırken ondalık ayıracı olarak genellikle . ve , işaretleri kullanılır. Bize gelen verinin hangi işaret ile kullanıldığını önceden kontrol etmemiz gerekir. Eğer bu kontrolü 
-	yapmazsak kod çalıştığı sırada kendi kodumuzda kullandığımız işaret dışında bir işaret gelirse uygulamamızın çökmesi gibi sorunlarla karşılaşırız. 
+	yapmazsak kod çalıştığı sırada kendi kodumuzda kullandığımız işaret dışında bir işaret gelirse uygulamamızın çökmesi gibi sorunlarla karşılaşırız.
+Soru 6 - Double ve Float değişkenler ondalık kısımda kaç basamağa kadar işlem yaparlar? Bu sınırın üzerinde gelen ondalık bilgileri için nasıl davranırlar? Hangi durumlar için Float ve hangi durumlar için Double kullanılmalıdır?
+	-> Float değişkenler yaklaşık olarak 7 basamağa, Double değişkenler ise yaklaşık olarak 16 basamağa kadar işlem yapabilirler. Eğer bu sınırların üzerinde bir ondalık verisi gelirse kesme(rounding) işlemi gerçekleşir.
+	Yani sayı otomatik olarak en yakın değere yuvarlanır. Bellek kullanımı ve işlemci performansının önemli olduğu durumlarda Float kullanmalıyız, ancak bu maddeler bizim için önemli değilse Double kullanabiliriz.  
