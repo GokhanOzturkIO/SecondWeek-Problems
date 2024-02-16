@@ -114,6 +114,15 @@ Sayılar
 -Kotlinde direkt tanımlama yapamıyoruz. Ama onluk veya ikilik sistemden dönüşüm yapabiliriz. val octalNumber: Int = Integer.parseInt("75", 8) // 75 sekizlik (octal) sayıdır
 
 
+9."Geleneksel Notasyon" (Conventional Notation) gösterimi nasıl yapılır?
+
+-Daha sonra cevaplanacak
+
+
+10.Sayısal değişkenlerde alt çizgi (underscore) nasıl kullanılır? Kotlin bunu nasıl yorumlar?
+
+-Alt çizgi büyük sayılarda bizim daha rahat okuyabilmemiş için kullanılır. Kotlin alt çizgiyi görmezden gelir.
+
 
  
 
