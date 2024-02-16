@@ -108,4 +108,9 @@ Double, float'tan daha fazla ondalık basamak işleyebilir. Hangi veri tipini ku
 -Onaltılık sayıları tanımlamak için sayıların önüne 0x veya 0X ekleyebilirsiniz.
 -İkilik sayıları tanımlamak için sayıların önüne 0b veya 0B ekleyebilirsiniz.
 ************************************************************
+20-Sekizlik (Octal) değişkenler Java'da nasıl tanımlanır? Kotlin'de Sekizlik değişken tanımlanabilir mi?
+Java'da sekizlik (octal) değişkenleri 0 ön eki ile tanımlanır.
+Kotlin'de sekizlik değişkenleri doğrudan tanımlanmaz. Ancak, sekizlik sayıları ondalık sayılara dönüştürülerek kullanılabilir.toDecimal() fonksiyonu kullanılabilir.
+Integer.parseInt(s, 8) yöntemi kullanılabilir.
+************************************************************
 
