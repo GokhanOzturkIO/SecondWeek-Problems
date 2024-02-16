@@ -198,3 +198,12 @@ Sayılar
 5.İşaretsiz" "Long" harf gösterimi nasıl yapılır?
 
 -ulong
+
+
+6.İşaretsiz" değişkenlerin kullanım amaçları nelerdir?
+
+-Veri Sınırlarının İyi Tanımlanması
+-Bit Düzeyinde İşlemler
+-Veri Bütünlüğü Kontrolü
+-Sayma ve İndeksleme
+-Algoritma Optimizasyonları
