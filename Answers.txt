@@ -127,3 +127,11 @@ Soru 15 - Bit düzeyinde operatörler (Bitwise operators) nelerdir? Ne amaçla k
 	Sol Shift (<<): Bir sayının bütün bitlerini belirli bir miktar sola kaydırır. Sağ taraftaki boşluklar sıfır ile doldurulur.
 	Sağ Shift (>>): Bir sayının bütün bitlerini belirli bir miktar sağa kaydırır. Sol taraftaki boşluklar, kaydırma işlemiyle kaybolur. Pozitif sayılar için boşluklar sıfır ile doldurulurken, negatif sayılar için imza (sign) biti ile doldurulur.
 	Bu operatörler, Kotlin'de de diğer programlama dillerinde olduğu gibi aynı şekilde kullanılabilir.
+Soru 16 - Kotlin'de büyük sayılarla çalışırken hangi ek türlerden yararlanılır ve bu türlerin sınırları nelerdir?
+	-> Kotlin'de büyük sayılarla çalışırken, büyük sayıları temsil etmek ve işlem yapmak için BigInteger ve BigDecimal gibi ek türler kullanılır.
+	BigInteger -> Bu sınıf, tam sayıları (integer) temsil etmek için kullanılır ve sınırsız büyüklükte tamsayıları destekler. Yani, bellekte yeterli yer olduğu sürece, sonsuz derecede büyük sayıları temsil edebilirler.
+	BigDecimal -> Bu sınıf, ondalık sayıları (decimal) temsil etmek için kullanılır ve yüksek hassasiyetli hesaplamalar yapmak için idealdir. BigDecimal, ondalık noktanın sağında ve solunda belirli bir hassasiyet derecesine kadar rakamları saklar ve 
+	bu nedenle sonsuzluğa kadar büyük veya küçük sayıları temsil edebilir.
+	Bu türlerin sınırları bellek kullanımıyla ilişkilidir ve doğal veri türlerinden (Int, Long, Double, vs.) daha fazla bellek tüketirler. Ancak, bu türlerin avantajı, çok büyük veya hassas sayıları doğru bir şekilde temsil edebilmeleridir.Yani, kullanılan 
+	bellek miktarı ve işlemci hızı ne kadar yüksekse, bu türlerle temsil edilebilecek sayıların büyüklüğü de o kadar artar.
+
