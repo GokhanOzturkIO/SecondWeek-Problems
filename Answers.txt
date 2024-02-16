@@ -180,5 +180,12 @@ fun demo(x: Any) {
 }
 Yukarıdaki kod örneğinde demo fonksiyonu Any tipinde bir değişken alır. Ancak is String koşulu altında eğer x değişkeni String tipine aitse smart cast işlemi gerçekleşir ve x değişkeni String tipine cast edilir.
 --------- Soruya tekrar bakılacak.
+Soru 3 - "Güvenli & Güvensiz" operatörler nelerdir?
+	-> Tür dönüşümü mümkün değilse bir hata ile karşılaşırız. Bu nedenle güvensiz olarak adlandırılır. Kotlin'de güvensiz operatör için kullanılan keyword as yapısıdır.
+	val x: String = y as String
+	Eğer yukarıdaki kodda y değişkeni null gelirse bir hata ile karşılaşırız. Bu kodu daha doğru hale getirmek için nullable değişkenler kullanırız.
+	val x: String? = y as String?
+	Hataları önlemek için ise güvenli operatör olan as? operatörü kullanılır.
+	val x: String? = y as? String
 
 
