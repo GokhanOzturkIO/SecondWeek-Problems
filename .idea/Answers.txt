@@ -67,3 +67,14 @@ Answer 7:
     Örnekleyeyim:
         var a:Int? = 11  //Burada a değişkeni artık nullable oluyor.
 
+Answer 8:
+    NullSafety: Eskiden bu kavram yokken projelerde içi dolu gelmesini beklediğimiz bir veri null
+    olarak geldiği zaman gerekli kontroller de yapılmadıysa nullpointerexception hatası almamız
+    kaçınılmazdı. Bu soruna çözüm olması için nullSafety çıktı. Kotlinde bir verinin null gelme
+    ihtimali varsa bunu daha iyi kontrol edebilmek için ? veya !! kullanırız.
+    ? nin anlamı: null olabilir nullsa yap değilse yapma. (burda null gelirse en fazla o işlemi yapmayı
+    atlayacaktır. crash olmaz.)
+    !! in anlamı: ben gelecek veriden eminim null gelmeyecek sen işlemi kesinlikle devam et. (bunu
+    kullanmanın kötü yanı: eminim işleme devam et dedik ama null geldi. Bu sefer hata alırız. uygulama
+    crash olur.)
+
