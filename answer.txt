@@ -5,3 +5,10 @@ Get edilebilir fakat set edilemez
 ---var (variable)→ mutable'dir
 Get ve set işlemi yapılabilmektedir.
 *******************************************************************
+2-Bir var değişkeni val gibi davranmasını nasıl sağlayabiliriz val kelimesini kullanmadan? 
+Bunu neden yapmak isteriz? Örnek bir senaryo verin.
+---Var değişkenin getter ve setter fonksiyonları vardır.Set özelliğini private yaparsak val gini davranmasını sağlarız.
+	var name="oğuz"
+	   private set
+değişkenimizi farklı bir class içinde kullanacaksak ve değişmesini istemiyorsak yaparız ama tanımlandığı class değerinde değişiklik yapılabilir.
+*************************************************************
