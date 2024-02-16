@@ -7,6 +7,7 @@ Answer 1:
 Answer 2:
     var değişkeninin val gibi davranabilmesi için var ın set metoduna erişim belirleyici
     ekleyebiliriz.
+
     örnekleyelim:
         var deneme=10           /// burada deneme normalde tekrar atama yapılabilir oluyor fakat
             private set         /// private set dediğimiz için set etme işlemi yapılamaz hale geldi.
@@ -15,3 +16,21 @@ Answer 2:
         Projelerde class içerisindeki bir değişkenin sadece kendi class metodları içerisinde set
         edilip dışarıya karşı val gibi davranarak değiştirilmesini ve kötü amaçla kullanılmasını
         önleme amacıyla, Encapsulation yapmak için kullanmak isteyebiliriz.
+
+Answer 3:
+   **Değişmez(Immutable): Ne yaparsak yapalım hiçbir şekilde değiştirilemeyen anlamına gelir.
+   **Salt Okunur(Read Only): İçeriği değiştirip set edemezsin fakat içeriğini okuyabilirsin. set
+    etmeden belli yöntemlerle içeriği değişebilen anlamına gelir.
+   **val değişkenler immutable değildir çünkü set edemesek bile val değişkenine atadığımız kısım
+    sabit değil de değeri dışarıdan alıyorsa her seferinde farklı değere sahip olabilir. Bu nedenle
+    val immutable değil read-only dir.
+
+    örnekleyelim:
+        fun deneme(s1:Int,s2:Int){
+            val carpim = s1*s2
+            println(carpim)
+        }
+        üstteki fonksiyonda dışarıdan iki tane int değer alıyor. val olarak tanımlanan carpim
+        değerine de iki sayının çarpımı veriliyor. Dışarıdan gelen değer her değiştiğinde carpim
+        değeri de değişeceği için val immutable'dir diyemiyoruz. val read-only dir.
+
