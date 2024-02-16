@@ -212,3 +212,28 @@ Sayılar
 7."İşaretsiz" değişkenlerle yapılan matematiksel işlemlerde, özellikle büyük sayılarla çalışırken karşılaşılabilecek taşma (overflow) ve taşma olmaması (underflow) durumları için Kotlin nasıl bir yönetim sağlar?
 
 -Kotlin, işaretsiz tamsayılarla yapılan matematiksel işlemlerde taşma (overflow) ve taşma olmaması (underflow) durumlarına karşı bir koruma mekanizması sağlamaz. İşaretsiz tamsayılar, belirli bir büyüklük sınırına sahiptir ve bu sınırları aşan işlemlerde taşma durumları ortaya çıkabilir.
+
+
+8."İşaretsiz" değişkenlerin sınırlamaları nelerdir?
+
+-UInt (İşaretsiz Int):
+0 ile 2^32 - 1 arasındaki pozitif tamsayıları temsil eder.
+UInt.MAX_VALUE: 4294967295
+UInt.MIN_VALUE: 0 (minimum değeri yok, her zaman sıfırdan büyük olmalıdır)
+
+-ULong (İşaretsiz Long):
+0 ile 2^64 - 1 arasındaki pozitif tamsayıları temsil eder.
+ULong.MAX_VALUE: 18446744073709551615
+ULong.MIN_VALUE: 0 (minimum değeri yok, her zaman sıfırdan büyük olmalıdır)
+
+-UShort (İşaretsiz Short):
+0 ile 2^16 - 1 arasındaki pozitif tamsayıları temsil eder.
+UShort.MAX_VALUE: 65535
+UShort.MIN_VALUE: 0 (minimum değeri yok, her zaman sıfırdan büyük olmalıdır)
+
+-UByte (İşaretsiz Byte):
+0 ile 2^8 - 1 arasındaki pozitif tamsayıları temsil eder.
+UByte.MAX_VALUE: 255
+UByte.MIN_VALUE: 0 (minimum değeri yok, her zaman sıfırdan büyük olmalıdır)
+
+
