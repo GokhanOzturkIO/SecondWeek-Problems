@@ -52,3 +52,6 @@ değerlerin null (boş) olma durumlarına karşı güvenli bir şekilde işlemes
 10-İlkel bir değişkenin nullable olması ile null değer alamaması arasında bellek yönetimi açısından nasıl farklar vardır?
 Primitive değişkenler stack üzerinde tutulurken Referance type li değişkenler heap üzerindedir.
 *************************************************************
+11-Nullable bir değişkenin bir değere sahip olması ile null olması arasında bellek yönetimi açısından nasıl bir fark vardır? Null değer almış bir değişken bellekte yer kaplamaz diyebilir miyiz?
+Null değeri alan değişken bellekte yer kaplar. Çünkü null değeri alabilen bir nullable değişken stack üzerinde küçük bir alan kaplamıştır.
+*************************************************************
