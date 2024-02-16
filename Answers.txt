@@ -59,3 +59,14 @@
 
 
 9) Bir değişkene null değer atanır ve tip belitrilmezse Kotlin bu değişkeni Nothing olarak yorumlar. 
+
+
+
+<--------------------------------------------------------------------------------------------------------------------------------------------------->
+
+
+
+10)  İlkel bir değişkenin nullable olması, o değişkenin null değer alabilmesi anlamına gelir. Bu durumda, bellekte bir ilave alan ayrılması gerekir çünkü null değer alabilen bir değişken, bir değere (örneğin, bir referansa) işaret etmeyebilir. Dolayısıyla, nullable bir değişken için bellekte bir miktar ek alan ayrılması gerekir. Ancak, nullable olmayan bir ilkel değişkenin bellekte ayrılacak herhangi bir ek alanı yoktur çünkü 
+
+
+
