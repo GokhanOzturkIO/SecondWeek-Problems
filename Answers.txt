@@ -196,6 +196,8 @@ Soru 6 - "val b: Byte = 1 ile val i: Int = b.toInt() ve son olarak print(b == i)
 	-> Yukarıdaki cevapta belirtildiği gibi (== operator cannot be applied to Byte and Int) değer karşılaştırması yapılamadığının hatasını verir.
 Soru 7 - Sayısal değişkenlerde açık dönüşüm (Explicit Type Conversion) yaparken hangi fonksiyonları kullanabilirsiniz?
 	-> toByte(), toShort(), toInt(), toLong(), toFloat(), toDouble()
+Soru 8 - "val result = 1L + 3" // "Long + Int" gibi bir işlemin sonucunda "result" değişkeninin tipi ve değeri ne olur? Neden böyle olduğunu açıklayın.
+	-> Result değişkenin değeri 4 tipi Long olur. Long olmasının sebebi Long bir değer ile herhangi bir değerin toplanması sonucunun yine bir Long değer vermesidir.
 
 
 
