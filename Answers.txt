@@ -207,6 +207,11 @@ Soru 11 - "val x = 5L / 2 println(x == 2L)" gibi bir işlemin sonucu ve tipi ned
 	-> İşlemin sonucu true döner ve tipi Long olarak belirlenir. Bunun sebebi ise yapılan matematiksel işlemlerde sonuç tipinin büyük olan değerin veri tipi tarafından belirlenmesidir.
 Soru 12 - "val x = 5 / 2.toDouble() println(x == 2.5)" gibi bir işlemin sonucu ve tipi nedir? Neden böyle olduğunu açıklayın.
 	-> İşlemin sonucu true döner ve tipi Double olarak belirlenir. 
+Soru 13 - Kotlin'de tür dönüşümü yapılırken, dönüşümün başarısız olması durumunda TypeCastException nasıl ele alınır ve bu tür hataların önüne geçmek için hangi önlemler alınabilir?
+	-> Bu hata bir tipin başka bir tipe dönüşümünün gerçekleşemeyeceği zamanlarda ortaya çıkar. Bu hatanın önüne geçmek için ;
+	1- tip dönüşümü yapmadan önce is operatörü kullanarak dönüşümün güvenli olup olmadığını kontrol edebiliriz.
+	2 - as? operatörü kullanarak eğer dönüşüm sağlanırsa işlemimiz devam eder, sağlanmazsa null olarak döner. Böylece hatanın önüne geçeriz.
+	3- try-catch bloklarını kullanarak bu hatayı yakalayabiliriz.
 
 
 
