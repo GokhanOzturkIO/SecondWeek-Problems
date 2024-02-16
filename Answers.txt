@@ -104,3 +104,5 @@ Soru 7 - Ondalık(Decimal), Onaltılık (Hexadecimal) ve İkilik (Binary) deği�
 	Ek olarak Binary değer aralığı [0 - 1]
 Soru 8 - Sekizlik (Octal) değişkenler Java'da nasıl tanımlanır? Kotlin'de Sekizlik değişken tanımlanabilir mi?
 	-> Java'da octal değişken tanımlamak için değerin başına 0 eklenir ve değer devam edilir. Kotlin octal değişken tanımına izin vermez.
+Soru 9 - "Geleneksel Notasyon" (Conventional Notation) gösterimi nasıl yapılır?
+	-> Geleneksel notasyon gösterimi -> 3.14e10
