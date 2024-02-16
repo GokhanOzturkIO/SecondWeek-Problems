@@ -279,3 +279,13 @@ Sayılar
       Kotlin, '1000000' şeklinde okur.
 
 =================================================================================
+
+11- `==` ile neyi karşılaştırırız? `===` ile neyi karşılaştırırız?
+
+     '==' ile değerleri, '===' ile de referansları karşılaştırırız. '==' operatörü ile, "soldaki değişkenin değeri,
+      sağdaki değişkenin değerine eşit mi?" kontrolü yapabiliriz. İllaki değişken olmasına da gerek yok. Direkt sayılarda da
+      bu kontrolü yapabiliriz. (Örn. println(10 == 10) veya println(a = 15)) Çıktılar true ya da false olarak verilir.
+      '===' operatörü ile de, "soldaki değişkenle sağdaki değişkenin hafızada tutulduğu yer aynı mı?" kontrolü yapabiliriz.
+      (Örn. println(a === b)) Çıktılar true veya false olarak verilir.
+
+=================================================================================
