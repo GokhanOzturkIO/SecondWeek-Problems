@@ -97,6 +97,10 @@ Değer aralıkları bellekte kaplanan alanı temsil eder ve büyük projelerde v
 
 # Byte değerleri aralığındaysa IDE bunu primitive olarak sayıyor ve memory'de aynı bölümde saklıyor bu yüzden === ile kontrol ettiğimizde aynı iki değişkenin cevabı true döner.Kotlinin bu aralığa sergilediği davranışın sebebi bu aralıktaki sayılar sık kullanıldığından tekrar tekrar bellek oluşturmasını önlemek.
 
+25-Sayısal değişkenlerde hangi matematiksel operatörler kullanılabilir?
+
+# +,-,x,/,= gibi basit operatörler kullanılır
+
 
 
 
