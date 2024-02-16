@@ -1,0 +1,6 @@
+Temel Türler ve Null Güvenliği
+## 1) val ile var arasındaki fark nedir?
+ "val" keyword'ü  oluşturulduktan ve ilk değeri verildikten sonra yeni değer ataması yapılamayacak olan değişkenler için kullanılır. "var" keyword'ü ise daha sonra
+ değiştirilebilir.
+
+
