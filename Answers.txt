@@ -74,6 +74,12 @@ Sayılar
 -Byte,Double,float,int,long,short miras alan alt sınıflar.
 -Değer aralıklarına dikkat ederek değişkenler kullanmalıyız.
 
+2.Eğer bir değişkene tip belirtimi yapılmaz ve bir değer atanırsa, Kotlin tip çıkarımını nasıl yapar?
+
+-Eğer değer int aralığında ise lotlin int olarak verir. Aralıktan büyük ise long verir.
+
+
+
 
  
 
