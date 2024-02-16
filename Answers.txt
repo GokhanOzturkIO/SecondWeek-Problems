@@ -187,5 +187,8 @@ Soru 3 - "Güvenli & Güvensiz" operatörler nelerdir?
 	val x: String? = y as String?
 	Hataları önlemek için ise güvenli operatör olan as? operatörü kullanılır.
 	val x: String? = y as? String
+Soru 4 - Sayısal değişkenlerde örtük tip genişletme (implicit widening conversions) ne demektir? Kotlin'de bu neden yapılamaz?
+	-> örtük tip genişletme verilen sayının tipinin kapalı bir şekilde otomatik olarak gerekli olan tipe dönüşümüdür. Kotlin kapalı bir şekilde tip dönüşümüne izin vermez ve açık bir şekilde tip dönüşümü yapabileceğimiz fonksiyonları bize sağlar.
+
 
 
