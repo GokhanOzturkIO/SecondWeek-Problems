@@ -117,6 +117,11 @@ Değer aralıkları bellekte kaplanan alanı temsil eder ve büyük projelerde v
 
 # Bu değişkenler Matt.round() ile yuvarlandıklarında IEEE 754 standartlarına uygun gerçekleşir.Bunu değiştirmek için DecimalFormat nesnesini kullanabiliriz.
 
+30-"İşaretsiz" (Unsigned) değişkenler ne demektir? İşaretli olanlarla aralarındaki fark nedir?
+
+# İşaretsiz değişkenler sadece pozitif değerlere sahip olan sayısal değişken türüdür diyebiliriz.Aralarındaki fark negatif sayıların işaretsizde olmamasıdır.
+
+
 
 
 
