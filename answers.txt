@@ -385,3 +385,10 @@ Sayılar
       tutulur, UByte'da.
 
 =================================================================================
+
+3- "İşaretsiz" değişkenlerin harf gösterimi nasıldır?
+
+     İşaretsiz değişkenler, 'u' veya 'U' harfiyle gösterilirler. Örn. val uIntNumber = 2u.
+      Tip belirtilmeden tanımlanırlarsa ve Int değer aralığı içindelerse default olarak Int değerini alırlar.
+
+=================================================================================
