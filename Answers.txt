@@ -65,6 +65,16 @@ Temel Türler & Null Güvenliği
 - ?. Bu operatör, bir değişkenin null olup olmadığını kontrol eder. Eğer null ise, ifade null olarak değerlendirilir ve null hata almazsınız.
 - !!. Bu operatör ile ideye değişkenin null olmayacağının garantisini veriyoruz. Eğer değişken null gelirse program hata verir. Dikkatli kullanılmalıdır. Kritik işlerde kullanılır genellikle.
 
+
+
+Sayılar
+
+1.Kaç farklı tipte "number" sınıfı miras alan "alt sınıf" (child class) vardır? Bunların değer aralıkları neden önemlidir?
+
+-Byte,Double,float,int,long,short miras alan alt sınıflar.
+-Değer aralıklarına dikkat ederek değişkenler kullanmalıyız.
+
+
  
 
 
