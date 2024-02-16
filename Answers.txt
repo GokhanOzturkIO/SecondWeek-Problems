@@ -114,4 +114,6 @@ Soru 12 - === operatörü ile karşılaştırma yaparken Byte değer aralığı 
 	-> Eğer referanslarını karşılaştırdığımız sayıların değer aralığı Byte değer aralığı içerisinde ise referans karşılaştırması sonucu true olarak döner yani memory'de aynı adresi işaret ederler. Ancak referanslarını karşılaştırdığımız
 	sayıların değer aralığı Byte değer aralığının dışındaysa referans karşılaştırması sonucu false olarak döner yani memory'de farklı adresi işaret ederler. Bu özellik bellek kullanımı azaltmak ve performansı artırmak için tasarlanmıştır.
 Soru 13 - Sayısal değişkenlerde hangi matematiksel operatörler kullanılabilir?
-	-> Toplama(+), Çıkarma(-), Bölme (/), Çarpma(*) ve Mod(%) operatörleri kullanılır.
+	-> Toplama(+), Çıkarma(-), Bölme (/), Çarpma(*), Mod(%), Artırma ve Azaltma (++ --) operatörleri kullanılır.
+Soru 14 - Sayısal değişkenlerde hangi karşılaştırma operatörleri kullanılabilir?
+	-> Değer karşılaştırması(==), Referans karşılaştırması(===), Büyüklük ve Küçüklük(< >), Büyük eşit ve Küçük eşit (>= <=)
