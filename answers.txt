@@ -113,6 +113,11 @@ Değer aralıkları bellekte kaplanan alanı temsil eder ve büyük projelerde v
 
 # Kotlin'de büyük sayılarla çalışırken BigInteger ve BigDecimal sınıflarından yararlanılır. BigInteger sınıfı büyük tamsayıları temsil ederken, BigDecimal sınıfı büyük ondalıklı sayıları temsil eder. Bu sınıfların sınırları bellek boyutu ile ilgilidir yani ne kadar bellek varsa o kadar büyüyebilir.
 
+29-Double ve Float değişkenler kullanılırken "yuvarlama" davranışı nasıldır? Bu nasıl değiştirilebilir?
+
+# Bu değişkenler Matt.round() ile yuvarlandıklarında IEEE 754 standartlarına uygun gerçekleşir.Bunu değiştirmek için DecimalFormat nesnesini kullanabiliriz.
+
+
 
 
 
