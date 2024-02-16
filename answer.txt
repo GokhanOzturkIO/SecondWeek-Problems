@@ -170,3 +170,6 @@ Sayının belirli bir sayıda bit sağa kaydırılmasını sağlar.
 ushr (UNSIGNED SHIFT RIGHT):
 İkili işaretsiz sağa kaydırma. Sayının sol tarafına ek bitler 0 ile doldurulur.
 ***********************************************************
+28-Kotlin'de büyük sayılarla çalışırken hangi ek türlerden yararlanılır ve bu türlerin sınırları nelerdir?
+Kotlin'de büyük sayılarla çalışırken BigInteger, BigDecimal, Double ve Float gibi ek türlerden yararlanabilirsiniz.
+***********************************************************
