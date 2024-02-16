@@ -123,3 +123,15 @@ Tek duyarlıklı, kayan nokta sayılarını daha az bellek kullanarak depolayan 
 
 
 5) Kotlin'de, Double ve Float veri tipleri ile ondalık ayıracı olarak nokta('.') kullanılır. Nokta yerine virgül kullanılması durumunda hata ile karşılaşabiliriz. Uzak sunucudan sayısal bir değer çekiyor isek bu değerin virgül ile mi nokta ile mi geldiğini kontrol etmemiz gerekir. 
+
+
+<--------------------------------------------------------------------------------------------------------------------------------------------------->
+
+
+6) Float veri tipi, yaklaşık 7 basamak hassasiyete sahiptir. Bu, ondalık kısımda en fazla 7 rakamı doğru bir şekilde temsil edebileceği anlamına gelir. 
+Double veri tipi, daha yüksek bir hassasiyete sahiptir ve yaklaşık 15-16 basamaklık bir hassasiyet sunar. Float veri tipi, daha az bellek kullanır ve bazı uygulamalarda yeterli hassasiyeti sağlayabilir. Ancak, yüksek hassasiyet gerektiren işlemlerde veya büyük sayı aralıklarında çalışırken Float veri tipi kullanılmamalıdır. Genel olarak, hassasiyet ve bellek kullanımı arasında bir denge sağlamak önemlidir. Hassas işlemler için Double, daha düşük bellek kullanımı gereken durumlar için ise Float tercih edilir.
+
+
+
+
+
