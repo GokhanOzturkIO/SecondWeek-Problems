@@ -157,4 +157,8 @@ Soru 5 - "İşaretsiz" "Long" harf gösterimi nasıl yapılır?
 	-> val a = 1UL şeklinde işaretsiz long gösterimi yapılabilir.
 Soru 6 - "İşaretsiz" değişkenlerin kullanım amaçları nelerdir?
  	-> Temel kullanım amacı pozitif değerleri temsil etmek için bir tam sayının tam bit aralığını kullanmaktır.
+Soru 7 - "İşaretsiz" değişkenlerle yapılan matematiksel işlemlerde, özellikle büyük sayılarla çalışırken karşılaşılabilecek taşma (overflow) ve taşma olmaması (underflow) durumları için Kotlin nasıl bir yönetim sağlar?
+	-> Bir işaretsiz değişkenin taşma durumunu ele almak genellikle programcının sorumluluğundadır. Büyük sayılarla çalışırken taşma durumunu kontrol etmek ve uygun önlemleri almak önemlidir. Taşma durumunu 
+	önlemek için genellikle BigInteger veya BigDecimal gibi sınıflar kullanılır. Bu sınıflar, büyük sayıları temsil etmek için özel olarak tasarlanmıştır ve taşma durumlarına karşı daha güvenli bir yönetim sağlarlar.
+	 Dolayısıyla, Kotlin'de büyük sayılarla çalışırken taşma durumunu ele almak için BigInteger veya BigDecimal gibi sınıfları tercih etmek önemlidir.
 
