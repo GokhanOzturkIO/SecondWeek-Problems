@@ -104,3 +104,15 @@ Değer aralıkları bellekte kapladıkları alan açısından önemlidir. Değer
 
 
 3) l harfinin kullanılamamasının sebebi 1 sayısına benziyor olması.
+
+
+<--------------------------------------------------------------------------------------------------------------------------------------------------->
+
+
+
+4) 
+Tek Duyarlıklı (Single Precision):
+Tek duyarlıklı, kayan nokta sayılarını daha az bellek kullanarak depolayan bir veri tipidir. Genellikle "float" olarak adlandırılır ve 32 bit (4 byte) bellek alanı kullanır. Bu tip, genellikle daha sınırlı hassasiyet gerektiren hesaplamalarda kullanılır. Örneğin, grafik işleme veya sensor verileri gibi uygulamalarda kullanılabilir.
+
+Çift Duyarlıklı (Double Precision):
+Çift duyarlıklı, daha yüksek hassasiyete sahip kayan nokta sayılarını depolamak için kullanılan bir veri tipidir. Genellikle "double" olarak adlandırılır ve 64 bit (8 byte) bellek alanı kullanır. Bu tip, daha geniş bir sayı aralığında ve daha yüksek hassasiyette hesaplamalar gerektiren uygulamalarda kullanılır. Bilimsel hesaplamalar, finansal uygulamalar ve hassas veri analizi gibi alanlarda çift duyarlıklı veri tipi tercih edilir.
