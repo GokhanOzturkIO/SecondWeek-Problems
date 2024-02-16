@@ -197,3 +197,26 @@ Bu nedenle, Byte veri tipi için === operatörünün -128 ile 127 aralığındak
 	5) ">="
 	6) "<="
 	7) "==="
+
+
+
+<--------------------------------------------------------------------------------------------------------------------------------------------------->
+
+
+
+15) 
+Bit düzeyinde operatörler (Bitwise operators), sayıları binary (ikilik) düzeyde manipüle etmek için kullanılan operatörlerdir. Bu operatörler, bit seviyesinde mantıksal ve aritmetik operasyonlar gerçekleştirirler.
+
+Kullanılan bit düzeyinde operatörler şunlardır:
+
+VE (AND) (&): İki sayının her iki biti de 1 ise sonuç 1 olur, diğer durumlarda sonuç 0 olur.
+
+VEYA (OR) (|): İki sayının herhangi biri 1 ise sonuç 1 olur, her iki bit de 0 ise sonuç 0 olur.
+
+XOR (XOR) (^): İki sayının bitleri farklıysa sonuç 1 olur, aynıysa sonuç 0 olur.
+
+Tersi Alma (NOT) (~): Bir sayının her bir bitini tersine çevirir, yani 0'ları 1 yapar, 1'leri 0 yapar.
+
+Kaydırma Sola (Shift Left) (<<): Belirtilen sayıda biti sola doğru kaydırır, sağdaki boşlukları 0 yapar.
+
+Kaydırma Sağa (Shift Right) (>>): Belirtilen sayıda biti sağa doğru kaydırır, soldaki boşlukları işaret biti ile doldurur.
