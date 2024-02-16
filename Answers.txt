@@ -135,6 +135,9 @@ Sayılar
 -Değişkenin değeri -128 ile 127 arasında ise true değerini verir çünkü byte olarak alıyor. Değer aralığından büyükse false sonucunu verir.Bu davranış, Kotlin'in bellek verimliliğini artırmak amacıyla küçük Byte değer aralıklarında aynı referansı paylaşmasından kaynaklanır.
 
 
+13.Sayısal değişkenlerde hangi matematiksel operatörler kullanılabilir?
+
+-Toplama (+),Çıkarma (-),Çarpma (*),Bölme (/),Modül (%),Artırma (++) ,Azaltma (--)
  
 
 
