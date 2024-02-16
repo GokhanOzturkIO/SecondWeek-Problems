@@ -117,5 +117,9 @@ Integer.parseInt(s, 8) yöntemi kullanılabilir.
 Float F f ile yapılır
 Long L ile yapılır
 ***********************************************************
-
+22-Sayısal değişkenlerde alt çizgi (underscore) nasıl kullanılır? Kotlin bunu nasıl yorumlar?
+Sayısal değişkenlerde alt çizgi (_), okunabilirliği ve anlaşılırlığı artırmak için kullanılır. Büyük sayıları gruplara ayırmak ve sayının hangi sayı sisteminde olduğunu belirtmek için kullanılabilir.
+val ondalikSayi = 3_141_592
+Alt çizgi, sadece bir ayraç olarak kullanılır ve sayının değerini etkilemez.
+***********************************************************
 
