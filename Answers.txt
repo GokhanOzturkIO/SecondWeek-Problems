@@ -91,6 +91,14 @@ Sayılar
 5.Double ve Float değişkenlerle çalışırken ondalık ayıracı olarak hangi işaretler kullanılır? Bu ayıraçların kullanımında nelere dikkat etmek gerekir?
 
 - (.) kullanılır. Ama apiden gelen ondalıklı sayılarda dikkat etmeliyiz.
+
+6.Double ve Float değişkenler ondalık kısımda kaç basamağa kadar işlem yaparlar? Bu sınırın üzerinde gelen ondalık bilgileri için nasıl davranırlar? Hangi durumlar için Float ve hangi durumlar için Double kullanılmalıdır?
+
+-Double: Double veri tipi, 64-bitlik bir formattır ve ondalık kısmı yaklaşık olarak 15-17 basamağa kadar doğru bir şekilde temsil edebilir.
+-Float: Float veri tipi, 32-bitlik bir formattır ve ondalık kısmı yaklaşık olarak 6-9 basamağa kadar doğru bir şekilde temsil edebilir.
+
+-Float: Bellek kullanımı ve performans konusunda daha verimli olabilir. Eğer bellek sınırlı ise veya performans çok kritik bir konu ise Float tercih edilebilir.
+-Double: Daha büyük bir aralıkta ve daha yüksek hassasiyetle çalışma ihtiyacı varsa Double kullanılabilir. Çoğu durumda, genel amaçlı sayısal hesaplamalarda veya standart kullanımlarda Double tercih edilir.
  
 
 
