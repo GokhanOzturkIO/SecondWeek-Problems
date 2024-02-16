@@ -80,3 +80,6 @@ Değer aralıkları bize bellek kullanımında önemlidir.
 14-Eğer bir değişkene tip belirtimi yapılmaz ve bir değer atanırsa, Kotlin tip çıkarımını nasıl yapar?
 Kotlin de type inference özelliği vardır. Belirtilen değerin default değerler arasında ise varsayılan tipler tipini belirler.
 ************************************************************
+15-Float değişken oluştururken F ve f harfleri varken, Long değişken oluştururken neden küçük l harfi yoktur?
+Küçük l harfi, 1 rakamına benzeyebilir. Bu da kod okunabilirliğini ve anlaşılırlığını azaltabilir.
+************************************************************
