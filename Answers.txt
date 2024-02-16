@@ -166,3 +166,15 @@ Binary sayılar val binaryNumberLong: Long = 0b11001100L
 
 11) '==' operatörü, iki değerin eşit olup olmadığını kontrol eder. Eşitlik kontrolünde, referansları değil, değerlerin kendisini karşılaştırır. Yani, eğer iki değer aynı değere sahipse (içeriği aynıysa), true döner. 
 '===' operatörü, referansların aynı olup olmadığını kontrol eder. Yani, iki değişken aynı nesneyi mi işaret ediyor yoksa farklı nesneleri mi işaret ediyor kontrol eder. 
+
+
+<--------------------------------------------------------------------------------------------------------------------------------------------------->
+
+
+12)  Kotlin'de === operatörü referans karşılaştırması yapar ve bu operatörün kullanımı, veri türlerine göre farklı davranışlar sergileyebilir. Özellikle Byte veri tipi için bu önemlidir çünkü Kotlin'de -128 ile 127 arasındaki Byte değerleri için bir önbellek mekanizması vardır.
+
+Java'da olduğu gibi, Kotlin'de de -128 ile 127 arasındaki Byte değerleri için bellekte tek bir kopya tutulur ve her değişken bu bellek bloğunu işaret eder. Bu, === operatörünün bu aralıktaki Byte değerleri için referansların aynı olup olmadığını doğru bir şekilde kontrol etmesini sağlar.
+
+Ancak, bu önbellek mekanizması yalnızca -128 ile 127 aralığındaki değerler için geçerlidir. Bu aralık dışındaki Byte değerleri için her değişken ayrı bir bellek bloğunu işaret eder ve bu durumda === operatörü referansların aynı olup olmadığını doğru bir şekilde kontrol edemez.
+
+Bu nedenle, Byte veri tipi için === operatörünün -128 ile 127 aralığındaki değerler için özel bir davranış sergilediğini söyleyebiliriz. Diğer Byte değerleri için bu operatör referansların aynı olup olmadığını kontrol eder. Bu önemli bir detaydır ve Byte veri tipiyle çalışırken referans karşılaştırması yaparken dikkate alınması gereken bir husustur.
