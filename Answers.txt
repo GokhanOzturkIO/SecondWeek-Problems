@@ -296,3 +296,13 @@ UNSIGNED NUMBERS
 Bellek Optimizasyonu: Negatif değerlerle uğraşmayı gerektirmeyen durumlarda, işaretsiz değişkenler kullanılarak bellek tasarrufu sağlanabilir. İşaretsiz değişkenler, işaret biti için ayrılan bellek alanını kullanmadığından işaretli değişkenlere göre daha az bellek tüketirler.
 
 Doğruluk Garantisi: İşaretsiz değişkenler, pozitif sayıları temsil etmek için kullanıldıklarından, kodunuzun sadece pozitif sayılarla çalışacağını garanti ederler. Bu durum, kodunuzun daha belirgin ve anlaşılır olmasını sağlar.
+
+
+<--------------------------------------------------------------------------------------------------------------------------------------------------->
+
+
+7) Kotlin, işaretsiz değişkenlerle yapılan matematiksel işlemlerde taşma (overflow) ve taşma olmaması (underflow) durumlarını yönetmek için bazı önlemler sağlar.
+
+Taşma Durumu: Eğer bir matematiksel işlem sonucunda işaretsiz bir değişkenin maksimum değerini aşacak bir sonuç elde edilirse, Kotlin bu durumu taşma olarak tanımlar. Taşma durumunda, Kotlin varsayılan olarak işlem sonucunu elde edilebilecek en küçük değere sıfırlar (wrap-around). Örneğin, UInt.MAX_VALUE + 1 işleminin sonucu 0 olur.
+
+Taşma Olmaması Durumu: Taşma olmaması durumu ise, işaretsiz değişkenin minimum değerini aşacak bir sonuç elde edilmesi durumunda gerçekleşir. Bu durumda, Kotlin işlem sonucunu elde edilebilecek en büyük değere sıfırlar. Örneğin, UInt.MIN_VALUE - 1 işleminin sonucu UInt.MAX_VALUE olur.
