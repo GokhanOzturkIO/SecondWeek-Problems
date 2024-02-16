@@ -17,3 +17,11 @@ read-only → ilk değer atamsından sonra tekrar değer atanamaz ama değerin i
 immutable → değişken yada nesnenin durumu asla ilk değerden farklı olamaz, değişmezdir.→const val
 Val değişkenlerin get fonksiyonu vardır bundan dolayı read-onlydir.
 *************************************************************
+4-"Tip Çıkarımı" (Type inference) kavramını açıklayın. Hangi durumlarda tip belirtmek kesin olarak gereklidir?
+Değişken tiplerini belirtmediğimizde değişkenin tipini otomatik algılamasıdır.
+	1-Nullable değişkenleri tanımlarken
+	2-fonksiyon ve class parametreleri tanımlarken
+	3-bir fonksiyonun geri dönüş tipi belirtmemiz gerektiğinde.
+*************************************************************
+
+
