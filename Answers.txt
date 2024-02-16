@@ -352,6 +352,9 @@ Eğer bir nesne belirtilen tipe ait değilse, true döner; aksi halde, false dö
 ! operatörü, koşulu tersine çevirir. Yani, !is operatörü aslında is operatörünün tersi olduğunu ifade eder.
 
 
+<--------------------------------------------------------------------------------------------------------------------------------------------------->
+
+
 2) Smart Cast, Kotlin'de tip güvenliğini artıran ve genellikle tip dönüşümlerini otomatikleştiren bir özelliktir. Bu özellik sayesinde, derleyici belirli durumlarda değişkenlerin tipini otomatik olarak tanır ve gerektiğinde uygun dönüşümleri yapar. Akıllı dönüşüm, kodun daha okunabilir ve daha az hata eğilimli olmasını sağlar.
 
 fun demo(x: Any) {
@@ -365,3 +368,19 @@ Akıllı dönüşümün bazı sınırlamaları vardır:
 Akıllı dönüşüm, değişkenin türünü belirlemek için sadece belirli durumları dikkate alır. Karmaşık veya dinamik durumlarda, derleyici akıllı dönüşüm yapamayabilir.
 Akıllı dönüşüm, is ve !is operatörleriyle yapılan doğrudan kontrol durumlarında çalışır. Karmaşık kontrol akışlarında veya özel durumlarda bu özellik kullanılamayabilir.
 Akıllı dönüşümün etkin olabilmesi için kodun iyi tasarlanmış olması gerekir. Aksi takdirde, beklenmeyen sonuçlar veya hatalar ortaya çıkabilir.
+
+
+<--------------------------------------------------------------------------------------------------------------------------------------------------->
+
+
+3) Güvenli operatör -> val x: String? = y as? String
+   Güvensiz operatör -> val x: String = y as String or val x: String? = y as String?
+
+
+<--------------------------------------------------------------------------------------------------------------------------------------------------->
+
+
+
+4) Örtük tip genişletme (implicit widening conversions), bir veri türünün daha geniş bir veri türüne otomatik olarak dönüştürülmesini ifade eder. Bu genişleme işlemi, kayıplı olmayan bir şekilde gerçekleşir, yani daha geniş türdeki değer, daha küçük türdeki değeri kapsar.
+
+Kotlin'de örtük tip genişletme (implicit widening conversions) yapılamaz çünkü Kotlin statik tür denetimi (static type checking) ile güçlü bir şekilde tip güvenliğine odaklanır. Bu nedenle, veri türlerinin otomatik olarak dönüştürülmesi gibi potansiyel olarak tehlikeli durumları önlemek için, Kotlin dil tasarımında örtük tip genişletmeye izin verilmez.
