@@ -2,3 +2,7 @@
 
 # Val ile var arasındaki fark kısaca değişken oluştururken değişkenin sadece okunabilir mi yoksa hem okunabilir hem değiştirilebilir mi olduğunu belirler.
 
+2-Bir var değişkeni val gibi davranmasını nasıl sağlayabiliriz val kelimesini kullanmadan? Bunu neden yapmak isteriz? Örnek bir senaryo verin.
+
+# Bir var değişkeni val gibi çalıştırmak için değişkeni private set yapmalıyız.Bunu yapma nedenimiz değişkeni başka sınıflarda değiştirilmesini önlemek.
+Örnek senaryo olarak diyelim ki bir oyun geliştiriyorsunuz ve oyun karakterlerinin sağlık puanlarını yöneten bir sınıfınız var. Karakterlerin sağlık puanlarını saklamak için SaglikDurumu adında bir sınıf oluşturuyorsunuz. Ancak, bu sağlık puanlarının oyun içinde sadece bu sınıfta atanıp burda değişmesi lazım bu durumda kullanabiliriz.
