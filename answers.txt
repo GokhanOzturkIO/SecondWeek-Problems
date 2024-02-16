@@ -85,6 +85,10 @@ Değer aralıkları bellekte kaplanan alanı temsil eder ve büyük projelerde v
 
 # + - gibi işaretlerin sağına ve soluna yazılarak yapılır.
 
+22-Sayısal değişkenlerde alt çizgi (underscore) nasıl kullanılır? Kotlin bunu nasıl yorumlar?
+
+# Alt çizgi (underscore), sayısal değerlerin okunabilirliğini artırmak için sayısal ifadelerde kullanılabilir. Sayısal bir değerin içindeki alt çizgiler, kodun okunmasını kolaylaştırır ve büyük sayıları gruplara ayırarak rakamlar arasındaki ilişkiyi daha açık hale getirir.
+
 
 
 
