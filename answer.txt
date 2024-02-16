@@ -1,0 +1,7 @@
+#Temel Türler & Null Güvenliği#
+1-val ile var arasındaki fark nedir?
+---val (value)→ read-only'dir
+Get edilebilir fakat set edilemez
+---var (variable)→ mutable'dir
+Get ve set işlemi yapılabilmektedir.
+*******************************************************************
