@@ -61,6 +61,10 @@ Değer aralıkları bellekte kaplanan alanı temsil eder ve büyük projelerde v
 
 # Küçük l harfi bazı fontlarda "ı" veya "1" e benzediğinden sadece büyük L ile işlem yapılır.
 
+16-Tek duyarlıklı (Single precision) ve Çift duyarlıklı (Double precision) kavramlarını açıklayın.
+
+# Tek duyarlıklı sayılar, daha az bellek kullanır ve daha hızlı işlem yaparlar, ancak daha az doğruluk sağlarlar. Öte yandan, çift duyarlıklı sayılar daha fazla bellek alanı gerektirir ve daha yavaş işlem yaparlar, ancak daha yüksek doğruluk sağlarlar.
+
 
 
 
