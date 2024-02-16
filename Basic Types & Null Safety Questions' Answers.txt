@@ -103,7 +103,16 @@ Primitive tiplerin, reference tipli değişkenlere göre farkı, hafızada daha 
  - Primitive tipler referansları ve değerleri RAM üzerinde STACK denilen bölümde saklanırlar.
  - Reference değerli tiplerin ise değeri RAM üzerinde HEAP bölümünde tutulur ve Stack'de ise bu değerin RAM üzerinde saklandığı alanın referansı saklanır.
 
+--------------------------------------------------------------------------------------
 
+Soru 6: "Tip Güvenliği" (Type Safety) kavramını açıklayın.
+
+Type safety, derleyicilerin kodu derlerken değişkenlerimizin tipleri ile atanan değerlerin tipleri arasında farklılık olması durumunda hata vermesi ve kodu derlememesidir. 
+Örneğin ben int bir değer tanımladım ve daha sonra programın herhangi bir yerinde bu int değişkenine ""(string) olan bir değer eşitlemeye çalıştım. Bu durumda eğer kullandığımız programlama dili Type Safety içeriyorsa o compile edilirken yada IDE bunu destekliyorsa
+kod yazarken böyle bir işlem yapamayacağımız hakkında uyarı verir. Bu, programlamada hataları önlemek ve kodun daha güvenli olmasını sağlamak için önemlidir.
+
+
+--------------------------------------------------------------------------------------
 
 
 
