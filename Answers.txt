@@ -274,3 +274,10 @@ UNSIGNED NUMBERS
 
 
 3) İşaretsin değişkenler UInt, UByte, UShort, ULong şeklinde gösterilir.
+
+
+<--------------------------------------------------------------------------------------------------------------------------------------------------->
+
+
+4) "val a1 = 42u" değişkeni UInt tipinde olur. 42 sayısının sonuna u harfinin eklenmesi sayının işaretsiz bir tam sayı olduğunu belirtir.
+   "val a2 = 0xFFFF_FFFF_FFFFu" değişkeni uLong tipinde olur.
