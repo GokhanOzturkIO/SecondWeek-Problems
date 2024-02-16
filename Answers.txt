@@ -228,3 +228,10 @@ inv() –> Tüm bitleri tersine çevirir. Yani, 0'lar 1'e, 1'ler ise 0'a dönü�
 1. "İşaretsiz" (Unsigned) değişkenler ne demektir? İşaretli olanlarla aralarındaki fark nedir?
 
 - İşaretsiz (Unsigned) değişkenler, sıfırdan büyük pozitif tamsayıları temsil etmek için kullanılan bir veri türüdür. Bu nedenle aralarındaki temel fark, işaretli tamsayılar negatif değerleri temsil edebilirken; işaretsiz tamsayılar sadece pozitif veya sıfır değerlerini temsil edebilirler.
+
+................
+
+2. "İşaretsiz" değişkenler nasıl bir sınıf yapısında tutulurlar? Bu neden önemlidir?
+"İşaretsiz" değişkenlerin harf gösterimi nasıldır?
+
+- Kotlin'de, işaretsiz tamsayılar (unsigned integers) işaretli tamsayılarla (signed integers) aynı sınıf yapısında tutulur. İşaretsiz tamsayılar, veri kısıtlamalarını belirliyor ve beklenmeyen negatif değerlerin kullanılmasını engelliyor. Ayrıca, işaretsiz tamsayılar bellek kullanımını optimize edebilir, veri uyumluluğunu sağlayabilir ve matematiksel operasyonları basitleştirebilir. Bu nedenle, işaretsiz tamsayıların belirli durumlarda tercih edilmesi, programın doğruluğunu artırabilir ve performansını optimize edebilir. İşaretsiz değişkenlerin harf gösterimi 'u' harfi ile gösterilir.
