@@ -231,3 +231,24 @@ Kotlin'de büyük sayılarla çalışırken, BigInteger ve BigDecimal gibi büy�
 BigInteger: Bu sınıf, işaretli tam sayıları (integer) temsil etmek için kullanılır. Bu sınıf, herhangi bir boyutta tam sayıları temsil edebilir, yani pratikte sınırlı değildir. BigInteger sınıfı, büyük sayılarla çalışırken hassas hesaplamalar yapmak için kullanılır.
 
 BigDecimal: Bu sınıf, ondalık sayıları (decimal) temsil etmek için kullanılır. BigDecimal sınıfı, ondalık noktadan sonra daha yüksek hassasiyet sağlar ve büyük ve hassas ondalık sayılarla çalışırken kullanılır.
+
+
+<--------------------------------------------------------------------------------------------------------------------------------------------------->
+
+
+17) 
+Double ve Float gibi kayan noktalı sayı veri tipleri, hassas ondalık sayılarla çalışırken bazı yuvarlama davranışları gösterirler. Bu yuvarlama davranışı, veri türünün iç yapısından kaynaklanır ve genellikle IEEE 754 standartlarına uygun olarak gerçekleşir.
+
+Kotlin'de, Double ve Float değerleri varsayılan olarak yakınsak yuvarlama yöntemini kullanır. Bu, bir sayıyı en yakın tam sayıya yuvarlarken, tam sayıya en yakın olan çift sayıya yuvarlamayı tercih eder. Örneğin:
+
+0.5 değeri yukarı yuvarlanırken 0.4 değeri aşağı yuvarlanır.
+1.5 değeri 2 olarak yuvarlanırken, 2.5 değeri de 2 olarak yuvarlanır.
+Bu varsayılan davranış, çoğu durumda uygundur, ancak bazı durumlarda farklı yuvarlama davranışlarına ihtiyaç duyabilirsiniz. Bu durumlarda, yuvarlama davranışını değiştirmek için farklı yöntemler kullanılabilir:
+
+Yakınsak Yuvarlama (Round): Bu, Double ve Float veri türlerinin varsayılan yuvarlama davranışıdır. En yakın tam sayıya yuvarlar ve tam sayıya en yakın olan çift sayıya yuvarlamayı tercih eder.
+
+Aşağı Yuvarlama (Floor): Bu yöntem, bir sayıyı bir alt tam sayıya yuvarlar. floor() fonksiyonu ile gerçekleştirilebilir.
+
+Yukarı Yuvarlama (Ceil): Bu yöntem, bir sayıyı bir üst tam sayıya yuvarlar. ceil() fonksiyonu ile gerçekleştirilebilir.
+
+Yönünü Belirleyen Yuvarlama (Rounding Mode): Bazı durumlarda, yuvarlama davranışını daha ayrıntılı olarak kontrol etmek gerekebilir. Bu durumda, yönünü belirleyen yuvarlama modunu kullanabilirsiniz. Bu mod, belirli bir yönde yuvarlama yapılmasını sağlar (yukarı, aşağı, sıfıra yakın, vb.). Bu genellikle RoundingMode sınıfı veya benzer bir mekanizma kullanılarak gerçekleştirilir.
