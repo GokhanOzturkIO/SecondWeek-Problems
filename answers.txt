@@ -302,7 +302,15 @@ Sayılar
 
 13- Sayısal değişkenlerde hangi matematiksel operatörler kullanılabilir?
 
-     Sayısal değişkenlerde; toplama (+), çıkarma (-), çarpma (*), bölme (/) ve mod alma (%) operatörleri
+     Sayısal değişkenlerde; toplama (+), çıkarma (-), çarpma (*), bölme (/) ve mod alma (%) matematik operatörleri
       kullanılabilir. Bunlar dışında üs alma gibi işlemler için özel fonksiyonlar da vardır.
+
+=================================================================================
+
+14- Sayısal değişkenlerde hangi karşılaştırma operatörleri kullanılabilir?
+
+     Sayısal değişkenlerde; eşit mi (==), eşit değil mi (!=), küçük mü (<), büyük mü (>), küçük eşit mi (<=),
+      büyük eşit mi (>=), arasında mı (a..b), x bunların arasında mı (x in a..b) ve x bunların arasında değil mi (x !in a..b)
+      karşılaştırma operatörleri kullanılabilir.
 
 =================================================================================
