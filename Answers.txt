@@ -25,4 +25,8 @@ Temel Türler & Null Güvenliği
 -Salt Okunur (ReadOnly): Salt okunur, bir nesnenin sadece okunabilir olduğu, yani değerlerinin okunabildiği ancak değiştirilemediği durumu ifade eder. Bu durum, bir nesnenin durumunun başlangıçta belirlendikten sonra daha sonra değiştirilemeyeceği, ancak bu nesnenin diğer nesnelerle etkileşimde bulunabileceği anlamına gelir.
 -çünkü val değişkenleri fonksiyonlar üzerinden değerini değiştirebiliriz.
 
+4."Tip Çıkarımı" (Type inference) kavramını açıklayın. Hangi durumlarda tip belirtmek kesin olarak gereklidir?
+
+-type inference = değişken tipini idenin kendi anlaması. Eğer değişkenin değerini null yapıyorsak yani değişkeni nullable yapıyorsak değişkenin tipini belirtmemiz gerekiyor.
+
 
