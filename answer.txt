@@ -77,4 +77,6 @@ Float
 Double
 Değer aralıkları bize bellek kullanımında önemlidir.
 ************************************************************
-
+14-Eğer bir değişkene tip belirtimi yapılmaz ve bir değer atanırsa, Kotlin tip çıkarımını nasıl yapar?
+Kotlin de type inference özelliği vardır. Belirtilen değerin default değerler arasında ise varsayılan tipler tipini belirler.
+************************************************************
