@@ -92,3 +92,6 @@ Double Precision
 Yaklaşık 16 basamak ondalık basamak hassasiyeti sağlar.
 Tek duyarlıklı daha az bellek kullanır ve daha hızlı işlem yapılmasını sağlar, ancak daha az hassastır. Çift duyarlıklı daha fazla bellek kullanır ve daha yavaş işlem yapılmasını sağlar, ancak daha hassastır.
 ************************************************************
+17-Double ve Float değişkenlerle çalışırken ondalık ayıracı olarak hangi işaretler kullanılır? Bu ayıraçların kullanımında nelere dikkat etmek gerekir?
+Double ve float değişkenlerde ondalık ayracı olarak virgül (,) veya nokta (.) kullanılabilir. Kullanılan programlama diline ve bölgesel ayara göre bu iki işaretten biri tercih edilir.
+************************************************************
