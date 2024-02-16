@@ -10,3 +10,9 @@
  name değişkenim olsun dışardan erişen o değeri almasını isteyebilirim ama class içinde o değeri değiştirmek isteyebilirim.
  Bunun için bu yöntemi kullanırım.
 ----------------------------------------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------------------
+  1.3  -Immutable değeri hiçbir sekilde değişemez.
+       -Readonly ise değeri okunabilir ama set edilemez.
+       -Readonlynin nesnesi veya referansının durumu  değişebilir ama immutable  nesnesinin ve referansın değiştirmeninin
+       hicbir yolu yoktur. val ise nesnesi veya referansının durumu değiştiği için readonlydir.
+----------------------------------------------------------------------------------------------------------------------*/
