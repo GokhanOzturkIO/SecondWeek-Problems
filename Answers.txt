@@ -61,3 +61,8 @@ Soru 6 - "Tip Güvenliği" (Type Safety) kavramını açıklayın.
 
 Soru 7 - Bir değişkeni nullable yapmak için ne yapmalıyız?
 	Bir değişikeni nullable yapmak için değişken tipinin sonuna ? işareti koymamız gerekir. 
+
+Soru 8 - "Null Güvenliği" (Null Safety) kavramını açıklayın.
+	-> Null Safety null hatalarını en aza indirmek veya tamamen yok etmek amaçlı kullanılan bir özelliktir. Kotlin dilinde bir değişkeinin null olabileceğini belirtebiliriz ve daha sonrasında bu değişken kullanılırken
+	null kontrolü yaparız ve NullPointerException hatasından kaçınmış oluruz.
+Soru 9 - 
