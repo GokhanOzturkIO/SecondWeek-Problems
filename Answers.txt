@@ -92,3 +92,6 @@ Soru 3 - Float değişken oluştururken F ve f harfleri varken, Long değişken 
 Soru 4 - Tek duyarlıklı (Single precision) ve Çift duyarlıklı (Double precision) kavramlarını açıklayın.
 	-> Tek duyarlılıklı genellikle 32 bitlik bir veri türünü ifade eder. Tek duyarlılıklı format, daha düşük bellek kullanımı ve daha hızlı işleme sağlar. Çift duyarlılıklı ise genellikle 64 bitlik bir veri türünü
 	ifade eder. Çift duyarlılıklı format da ise daha fazla bellek kullanımı ve daha yavaş işleme gerçekleşir.
+Soru 5 - Double ve Float değişkenlerle çalışırken ondalık ayıracı olarak hangi işaretler kullanılır? Bu ayıraçların kullanımında nelere dikkat etmek gerekir?
+	-> Double ve Float değişkenlerle çalışırken ondalık ayıracı olarak genellikle . ve , işaretleri kullanılır. Bize gelen verinin hangi işaret ile kullanıldığını önceden kontrol etmemiz gerekir. Eğer bu kontrolü 
+	yapmazsak kod çalıştığı sırada kendi kodumuzda kullandığımız işaret dışında bir işaret gelirse uygulamamızın çökmesi gibi sorunlarla karşılaşırız. 
