@@ -377,3 +377,11 @@ Sayılar
       sayılara eklenmiştir.
 
 =================================================================================
+
+2- "İşaretsiz" değişkenler nasıl bir sınıf yapısında tutulurlar? Bu neden önemlidir?
+
+     İşaretsiz değişkenler, 'UInt', 'UByte', 'UShort' gibi kendilerine özel sınıflarda tutulurlar.
+      Hafızada ayrılan yer, işaretli değişkenlerle aynıdır. Örneğin Byte'da hafızada 8 bitlik bir alanda
+      tutulur, UByte'da.
+
+=================================================================================
