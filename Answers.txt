@@ -161,4 +161,7 @@ Soru 7 - "İşaretsiz" değişkenlerle yapılan matematiksel işlemlerde, özell
 	-> Bir işaretsiz değişkenin taşma durumunu ele almak genellikle programcının sorumluluğundadır. Büyük sayılarla çalışırken taşma durumunu kontrol etmek ve uygun önlemleri almak önemlidir. Taşma durumunu 
 	önlemek için genellikle BigInteger veya BigDecimal gibi sınıflar kullanılır. Bu sınıflar, büyük sayıları temsil etmek için özel olarak tasarlanmıştır ve taşma durumlarına karşı daha güvenli bir yönetim sağlarlar.
 	 Dolayısıyla, Kotlin'de büyük sayılarla çalışırken taşma durumunu ele almak için BigInteger veya BigDecimal gibi sınıfları tercih etmek önemlidir.
+Soru 8 - "İşaretsiz" değişkenlerin sınırlamaları nelerdir?
+	-> İşaretsiz değişkenlerin sınırları kullanılan veri tipinin işaretli olan halinin negatif değerinin pozitife çevrilerek en üst pozitif değeriyle toplanmış halidir. Örneğin işaretli bir Byte tipinin değer aralığı -128 ile 127 arasındayken
+	işaretsiz bir Byte değişkeninin değer aralığı 0 ile 255 arasındadır.
 
