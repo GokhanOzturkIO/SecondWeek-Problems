@@ -1,0 +1,9 @@
+KONU: Temel Türler & Null Güvenliği
+
+#1 val ile var arasındaki fark nedir?
+
+val tipindeki bir değişkene yalnızca 1 defa değer atanabilir edilebilir ancak daha sonra yeni adeğerler atanamaz.
+var tipinde ise istediğimiz kadar değişiklik yapabiliriz.
+val -> value, var -> variable kelimelerinden gelir.
+
+------------------------------------------------------------
