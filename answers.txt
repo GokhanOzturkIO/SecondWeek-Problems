@@ -48,6 +48,12 @@ Değerini daha sonradan vereceğimiz değişkenlere makinenin bellekte ne kadar 
 
 # Nullable değişkenlerle çalışırken ?. Veya !!. Kullanırız ?. Basitçe bir if sorgusudur değer full değilse yap gibi,!! ise değer her ne olursa olsun işlemi yap bunun sonucu crash oluşabilir. Bir uygulamada hayati değere sahip bir olayda !! Kullanmak eğer değer yoksa hayati sonuçlar çıkmasını engeller ve crash verir.Önemsiz denebilecek yerlerde ise .? Kullanarak değer dönmezse bile uygulama çökmez ve önemli bir sonuç oluşmaz.
 
+13-Kaç farklı tipte "number" sınıfı miras alan "alt sınıf" (child class) vardır? Bunların değer aralıkları neden önemlidir?
+
+# Byte,Short,Int,Long,Double,Float olmak üzere 6 tipte alt sınıf vardır.
+Değer aralıkları bellekte kaplanan alanı temsil eder ve büyük projelerde verimsizlik yaratabilir.
+
+
 
 
 
