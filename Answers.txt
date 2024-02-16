@@ -21,3 +21,9 @@
 4) Tip çıkarımı (type inference), bir programlama dilinde değişkenin veya ifadenin veri türünün otomatik olarak belirlenmesidir. Bu, programcının belirli bir değişkenin veya ifadenin veri türünü açıkça belirtmesine gerek olmadığı anlamına gelir. İlk değeri olmayan değişken oluşturduğumuz zaman tipini belirtmeliyiz. Kotlinde sayısal değerler virgüllü değil ve integer değer aralığında ise default olarak integer tanımlanır. Byte veya short kullanmaz istersek tipleri belirtmemiz gerekir
 
 
+
+<--------------------------------------------------------------------------------------------------------------------------------------------------->
+
+
+
+5) Kotlin de class gibi gözüken değişken tipleri özel optimizasyonlarla byte koda çevrilirken primitive olacak şekilde çevriliyorlar.
