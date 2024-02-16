@@ -57,6 +57,10 @@ Değer aralıkları bellekte kaplanan alanı temsil eder ve büyük projelerde v
 
 # Int değer aralığı veya daha alt gruplardaysa int büyüklerinde ise Long olarak işaretler.
 
+15-Float değişken oluştururken F ve f harfleri varken, Long değişken oluştururken neden küçük l harfi yoktur?
+
+# Küçük l harfi bazı fontlarda "ı" veya "1" e benzediğinden sadece büyük L ile işlem yapılır.
+
 
 
 
