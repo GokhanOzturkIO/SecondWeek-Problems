@@ -153,6 +153,20 @@ Büyükçedir (>)
 Küçük veya eşittir (<=)
 Büyük veya eşittir (>=)
 ***********************************************************
-
-
-
+27-Bit düzeyinde operatörler (Bitwise operators) nelerdir? Ne amaçla kullanılır? Kotlin'de bunları nasıl kullanabilirsiniz?
+Bu operatörler, genellikle düşük seviyeli programlamada ve donanım kontrolü gerektiren uygulamalarda kullanılır. Ancak, genel olarak, günlük Kotlin programlamasında pek sık kullanılmazlar.
+and (AND)&&
+İki sayının her iki biti de 1 ise, sonucun o biti 1 olur.
+or (OR):||
+İki sayının en az bir biti 1 ise, sonucun o biti 1 olur.
+xor (XOR):
+İki sayının bitleri birbirinden farklıysa, sonucun o biti 1 olur.
+inv (INVERT):
+Bir sayının bitlerini tersine çevirir (0'ları 1 yapar, 1'leri 0 yapar).
+shl (SHIFT LEFT):
+Sayının belirli bir sayıda bit sola kaydırılmasını sağlar.
+shr (SHIFT RIGHT):
+Sayının belirli bir sayıda bit sağa kaydırılmasını sağlar.
+ushr (UNSIGNED SHIFT RIGHT):
+İkili işaretsiz sağa kaydırma. Sayının sol tarafına ek bitler 0 ile doldurulur.
+***********************************************************
