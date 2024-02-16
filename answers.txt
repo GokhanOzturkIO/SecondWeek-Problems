@@ -65,6 +65,9 @@ Değer aralıkları bellekte kaplanan alanı temsil eder ve büyük projelerde v
 
 # Tek duyarlıklı sayılar, daha az bellek kullanır ve daha hızlı işlem yaparlar, ancak daha az doğruluk sağlarlar. Öte yandan, çift duyarlıklı sayılar daha fazla bellek alanı gerektirir ve daha yavaş işlem yaparlar, ancak daha yüksek doğruluk sağlarlar.
 
+17-Double ve Float değişkenlerle çalışırken ondalık ayıracı olarak hangi işaretler kullanılır? Bu ayıraçların kullanımında nelere dikkat etmek gerekir?
+
+# Ayıraç olarak (.) veya (,) kullanılır ve kullanırken gelen verinin ayırma şekline bakarak hatalı sonuçlar oluşmasını engellemeliyiz.
 
 
 
