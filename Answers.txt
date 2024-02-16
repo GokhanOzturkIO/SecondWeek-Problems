@@ -1,0 +1,18 @@
+Temel Türler & Null Güvenliği
+
+1.val ile var arasındaki fark nedir?
+-Val = Değişken ataması yapıldıktan sonra değeri bir daha değişmez.Value kelimesinin kısaltımından gelir. Immutable değildir read only dir. Çünkü return ile dönen değerler değişsebilir. Değiştiğine dair bir örnek:
+   fun calculate(){
+        val a = A()
+        a.age2 = 10
+        a.age3 = 5
+        println(a.age4)
+
+        a.age2 = 12
+        a.age3 = 4
+        println(a.age4)
+
+    }
+-Var = Atama yaptıktan sonra değeri değiştirebiliriz.
+
+
