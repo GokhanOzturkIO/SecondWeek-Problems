@@ -142,3 +142,11 @@ Binary sayılar val binaryNumberLong: Long = 0b11001100L
 
 
 
+<--------------------------------------------------------------------------------------------------------------------------------------------------->
+
+
+
+8) Java'da sekizlik (Octal) sayılar, ön ek olarak 0 kullanılarak tanımlanır. Ancak, Kotlin'de doğrudan sekizlik bir sayı tanımlama söz konusu değildir. Kotlin'de, ondalık (Decimal), onaltılık (Hexadecimal) ve ikilik (Binary) sayılar doğrudan desteklenirken, sekizlik sayılar için özel bir tanımlama yoktur.
+
+
+
