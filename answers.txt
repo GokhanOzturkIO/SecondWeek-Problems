@@ -28,6 +28,10 @@ Değerini daha sonradan vereceğimiz değişkenlere makinenin bellekte ne kadar 
 
 # Değişkenin tanımlarken tip değerinin yanına "?" Koyarsak ve null'a eşitlersek değişken nulable olur.
 
+8-"Null Güvenliği" (Null Safety) kavramını açıklayın.
+
+# Null güvenliği kullandığımız değişkenlerin null olup olmadığını daha rahat anlayabilmemiz ve buna göre işlem yapabilmemize denir.
+
 
 
 
