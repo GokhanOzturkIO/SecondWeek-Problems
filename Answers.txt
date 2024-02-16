@@ -108,6 +108,12 @@ Sayılar
 -Binary = val binaryNumber: Int = 0b101010
 
 
+8. Sekizlik (Octal) değişkenler Java'da nasıl tanımlanır? Kotlin'de Sekizlik değişken tanımlanabilir mi?
+
+-javada octal = int octalNumber = 075;
+-Kotlinde direkt tanımlama yapamıyoruz. Ama onluk veya ikilik sistemden dönüşüm yapabiliriz. val octalNumber: Int = Integer.parseInt("75", 8) // 75 sekizlik (octal) sayıdır
+
+
 
  
 
