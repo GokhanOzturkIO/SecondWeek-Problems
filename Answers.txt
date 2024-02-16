@@ -1,3 +1,23 @@
 Soru 1 - val ile var arasındaki fark nedir?
 	-> var kelimesi 'Variable' kelimesinin kısaltmasıdır ve değeri sonradan değiştirilebilir olan değişkenler üzerinde kullanılır.
 	   val ise 'Value' kelimesinin kısaltmasıdır ve değeri sonradan değiştirilemez olan değişkenler üzerinde kullanılır(read-only).
+
+Soru 2 - Bir var değişkeni val gibi davranmasını nasıl sağlayabiliriz val kelimesini kullanmadan? Bunu neden yapmak isteriz? Örnek bir senaryo verin.
+	-> Bir var değişkeninin set fonksiyonunu private yaparak val gibi davranmasını sağlayabiliriz. Bu yöntemle val kelimesini kullanmamıza gerek kalmaz.
+	   Bunu neden yapmak istediğimize gelirsek de tanımladığımız var değişkenini sadece tanımlanan class içerisinde değiştirmek isteyebiliriz. Yani set 
+	   fonksiyonunu private yaptığımız bir değişkeni değişkenin tanımlandığı class içerisinde var olarak kullanabiliriz ancak class dışına çıktığımızda
+      	   ise bu değişken val(read-only) gibi davranır.
+	
+	class User() {
+		var name = "Salih"
+			private set
+
+	fun functionUser(){
+		name = "Salihhhh" // hata vermez, değer fonksiyon içerisinde değiştirilir.
+}		
+}
+	class anotherUser(){
+		val user = User()
+		
+		user.name = "Salih Akbas" // değişmemize izin vermez
+}
