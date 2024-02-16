@@ -1,0 +1,12 @@
+---------------------------------------------------------------------------------------
+Soru 1: val ile var arasındaki fark nedir?
+
+val değişkenlere bir değer atandıktan sonra, bu değişkenlerin değerini daha sonradan değiştiremeyiz (Yeni değer atayamayız). 
+
+var değişkenlere ise bir değer atadıktan sonra herhangi bir zamanda bu değişkene yeni bir değer ataması gerçekleştirebiliriz. 
+
+Aralarında performans olarak göz ardı edilebilecek bir performans farkı vardır. Biraz akademik bir yaklaşım gerçekleştirdiğimizde var ile tanımlanmış değişkenler val ile tanımlanmış değişkenlere göre biraz daha performanslı çalışır. Bunun böyle olmasının sebebi val değişkenlere atama gerçekleştirdikten sonra bir daha değeri değiştirilemeyeceği koşulunu içerdiği için ek bir maliyet getirir.
+
+Ama günlük hayat problemlerimizde val kullanmak daha avantajlı olacaktır. Çünkü sektördeki geliştirilen uygulamalarda Multi-Thread işlemlerin yoğunlukla kullanılmasıdır. "val" kullanımı daha güvenlidir çünkü bir değişkenin değeri bir kere belirlendikten sonra başka bir thread tarafından değiştirilemez, bu da potansiyel hata kaynaklarını azaltabilir.
+
+---------------------------------------------------------------------------------------
