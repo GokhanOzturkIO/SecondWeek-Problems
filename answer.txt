@@ -103,5 +103,9 @@ Yuvarlama, sayıyı en yakın tam sayıya yaklaştırır.
 Kesme, ondalık basamak sınırından sonraki basamakları atar.
 Double, float'tan daha fazla ondalık basamak işleyebilir. Hangi veri tipini kullanacağınız, uygulamanızın ihtiyaç duyduğu hassasiyete ve bellek kullanımına bağlıdır.
 ************************************************************
-
+19-Ondalık(Decimal), Onaltılık (Hexadecimal) ve İkilik (Binary) değişkenleri Kotlin'de nasıl tanımlayabilirsiniz?
+-Ondalık sayıları doğrudan tanımlayabilirsiniz.
+-Onaltılık sayıları tanımlamak için sayıların önüne 0x veya 0X ekleyebilirsiniz.
+-İkilik sayıları tanımlamak için sayıların önüne 0b veya 0B ekleyebilirsiniz.
+************************************************************
 
