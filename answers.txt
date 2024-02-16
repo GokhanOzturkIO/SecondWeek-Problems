@@ -250,3 +250,16 @@ Sayılar
       sayı tanımlayabiliriz (1010 = 10)
 
 =================================================================================
+
+8- Sekizlik (Octal) değişkenler Java'da nasıl tanımlanır? Kotlin'de Sekizlik değişken tanımlanabilir mi?
+
+     Java'da octal sayılar tanımlamak için sayının başına '0' eklenir. Ancak bu özellik Kotlin'de yoktur.
+      Kotlin'de, bir String olarak alınan octal sayıları, "toInt(radix: Int)" fonksiyonuyla dönüştürerek
+      octal çıktısı olarak alabiliriz.
+
+      Örn.
+          val octalString = "025"
+          val decimalNumber = octalString.toInt(radix = 8) // 8'lik tabana sahip bir stringi ondalık sayıya dönüştürür
+          println(decimalNumber) // Çıktı: 21
+
+=================================================================================
