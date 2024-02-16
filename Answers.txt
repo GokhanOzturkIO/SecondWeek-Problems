@@ -104,3 +104,9 @@ Sayılar
 3. Float değişken oluştururken F ve f harfleri varken, Long değişken oluştururken neden küçük l harfi yoktur?
 
 - Bunun nedeni, bazı fontlarda 1'e benzemesinden dolayı küçük l harfi yoktur.
+
+................
+
+4. Tek duyarlıklı (Single precision) ve Çift duyarlıklı (Double precision) kavramlarını açıklayın.
+
+- Tek duyarlıklı (Single Precision) ve çift duyarlıklı (Double Precision), bilgisayar sistemlerinde ondalıklı sayıların temsil edilme şekillerini ifade eder. Tek duyarlıklı sayılar, 32 bitlik bir kayan nokta formatını kullanırken, çift duyarlıklı sayılar 64 bitlik bir format kullanır. Tek duyarlıklı sayılar daha az bellek kullanır ve daha düşük hassasiyetlidir, çift duyarlıklı sayılar ise daha fazla bellek kullanır ve daha yüksek hassasiyete sahiptir.
