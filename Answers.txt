@@ -381,3 +381,9 @@ as? işleminin sağ tarafı bir null olmayan String türü olmasına rağmen, d�
 -> toLong()
 -> toFloat()
 -> toDouble()
+
+................
+
+8. "val result = 1L + 3" // "Long + Int" gibi bir işlemin sonucunda "result" değişkeninin tipi ve değeri ne olur? Neden böyle olduğunu açıklayın.
+
+- Result değişkenin tipi Long olur ve değeri 4L'dir. Çünkü Kotlin, operatörlerin değerlerini en geniş türe dönüştürür.
