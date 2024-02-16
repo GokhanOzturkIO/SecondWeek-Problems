@@ -46,7 +46,8 @@
 /*----------------------------------------------------------------------------------------------------------------------
   1.11 primitive tipler kotlinde null değer alamazlar.Null olarak bildirilen değişkenler referans tipdir.
 ----------------------------------------------------------------------------------------------------------------------*/
-  1.12 İlkel veri tipleri referansı ve değeri stackde tutulur.null değerler ise referans tipi olduğu için heapde tutulur.
+  1.12 İlkel veri tipleri referansı ve değeri stackde tutulur.null değerler ise referans tipi olduğu için degeri heapde 
+	referansı stackde tutulur.	
 /*----------------------------------------------------------------------------------------------------------------------
   1.13  !! -> Null olmasa karışma ben ona değer vericem anlamına gelir.Değer verilmesse NP fırlatır.
         ?. ->  Null gelebilir null gelirse de NP fırlatmaz.
