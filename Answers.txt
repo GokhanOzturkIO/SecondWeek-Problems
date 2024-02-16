@@ -287,3 +287,12 @@ UNSIGNED NUMBERS
 
 
 5) val number: ULong = 124561231u
+
+
+<--------------------------------------------------------------------------------------------------------------------------------------------------->
+
+
+6) İşaretsiz değişkenler genellikle pozitif tamsayı değerlerini temsil etmek için kullanılır. 
+Bellek Optimizasyonu: Negatif değerlerle uğraşmayı gerektirmeyen durumlarda, işaretsiz değişkenler kullanılarak bellek tasarrufu sağlanabilir. İşaretsiz değişkenler, işaret biti için ayrılan bellek alanını kullanmadığından işaretli değişkenlere göre daha az bellek tüketirler.
+
+Doğruluk Garantisi: İşaretsiz değişkenler, pozitif sayıları temsil etmek için kullanıldıklarından, kodunuzun sadece pozitif sayılarla çalışacağını garanti ederler. Bu durum, kodunuzun daha belirgin ve anlaşılır olmasını sağlar.
