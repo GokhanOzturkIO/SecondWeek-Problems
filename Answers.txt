@@ -281,3 +281,9 @@ UNSIGNED NUMBERS
 
 4) "val a1 = 42u" değişkeni UInt tipinde olur. 42 sayısının sonuna u harfinin eklenmesi sayının işaretsiz bir tam sayı olduğunu belirtir.
    "val a2 = 0xFFFF_FFFF_FFFFu" değişkeni uLong tipinde olur.
+
+
+<--------------------------------------------------------------------------------------------------------------------------------------------------->
+
+
+5) val number: ULong = 124561231u
