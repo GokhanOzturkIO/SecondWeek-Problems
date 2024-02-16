@@ -169,4 +169,16 @@ Soru 8 - "İşaretsiz" değişkenlerin sınırlamaları nelerdir?
 
 Soru 1 - is ve !is operatörlerinin kullanımını açıklayın.
  	-> is operatörü bir değişkenin/nesnenin belirli bir veri tipine ait olduğunu kontrol eder. !is operatörü ise tam tersi yani belirli bir tipe ait olmadığını kontrol eder.
+Soru 2 - "Akıllı Dönüşüm" (Smart Cast) ne demektir? Farklı kod örnekleri ile açıklayın. Bu özelliğin sınırlamaları nelerdir?
+	-> Kotlin'de "Akıllı Dönüşüm" (Smart Cast), tip kontrol operatörleri (is ve !is) kullanıldığında, koşulun içinde ilgili nesnenin tipine göre otomatik olarak dönüşüm yapılmasını sağlayan bir özelliktir. Bu özellik, kodun daha temiz ve daha okunabilir 
+	olmasını sağlar, çünkü ayrıca bir dönüşüm yapmaya gerek kalmadan doğrudan nesnenin belirli bir tipinde işlemler yapılabilir.
+	
+fun demo(x: Any) {
+    if (x is String) {
+        print(x.length) // x is automatically cast to String
+    }
+}
+Yukarıdaki kod örneğinde demo fonksiyonu Any tipinde bir değişken alır. Ancak is String koşulu altında eğer x değişkeni String tipine aitse smart cast işlemi gerçekleşir ve x değişkeni String tipine cast edilir.
+--------- Soruya tekrar bakılacak.
+
 
