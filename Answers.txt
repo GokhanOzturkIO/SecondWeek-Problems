@@ -124,6 +124,12 @@ Sayılar
 -Alt çizgi büyük sayılarda bizim daha rahat okuyabilmemiş için kullanılır. Kotlin alt çizgiyi görmezden gelir.
 
 
+11.== ile neyi karşılaştırırız? === ile neyi karşılaştırırız?
+
+- == iki tanesiyle değişkenlerin değerlerini kontrol ederiz.
+- === üç tanesiyle değişkenlerin memory referanslarını kontrol ederiz.
+
+
  
 
 
