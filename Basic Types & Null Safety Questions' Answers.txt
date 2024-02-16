@@ -78,6 +78,15 @@ Number değişkenler için önemli bir nokta var. Orası da
  - Eğer değer Int değer aralığı içerisinde ise tür Int olarak tanımlanır.
  - Ama eğer değer Int değer aralığını geçiyorsa değişken türü Long olarak tanımlanır.
 
+Peki ben Type Inference'ı kullanmak istiyorum ama tipinin Long olmasını istiyorum çünkü o değişkenim ileride Int değer aralığını geçebilir diyorsanız.
+
+ val balance = 4000L // Bu durumda da 'L' ifadesini kullanarak bu değişkenin Long olduğunu belirtebiliriz. Küçük 'l' ifadesi bazı fontlarda 1'e(bir) benzediği için kullanılamıyor.
+
+Ondalıklı sayılar da varsayılan olarak değerler Double olarak belirlenir. Bu değişkeni float olarak belirtmek için 'f' veya 'F' kullanarak yapabiliriz. Yada tipi açık bir şekilde belirtiriz.
+
+ val PI = 3.14 // Double olur
+ val PIFLoat = 3.14f // Float olur.  
+
  Hangi Durumlarda Türü Belirtmek Kesin Olarak Gereklidir?
 
  - Değişkeni tanımladık ama değer atamasını ilk başta yapmadıysak, daha sonra yapacaksak belirtmek zorundayız.
