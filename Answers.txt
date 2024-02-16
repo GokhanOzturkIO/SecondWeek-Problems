@@ -189,6 +189,9 @@ Soru 3 - "Güvenli & Güvensiz" operatörler nelerdir?
 	val x: String? = y as? String
 Soru 4 - Sayısal değişkenlerde örtük tip genişletme (implicit widening conversions) ne demektir? Kotlin'de bu neden yapılamaz?
 	-> örtük tip genişletme verilen sayının tipinin kapalı bir şekilde otomatik olarak gerekli olan tipe dönüşümüdür. Kotlin kapalı bir şekilde tip dönüşümüne izin vermez ve açık bir şekilde tip dönüşümü yapabileceğimiz fonksiyonları bize sağlar.
+Soru 5 - "val b: Byte = 1 ile val i: Int = b ve son olarak print(b == i) gibi bir kod yazıldığında çıktı ne olur? Neden böyle bir çıktı aldığınızı açıklayın.
+	-> Böyle bir kod yazıldığında i değişkeni hata verir(required Int but found Byte). Bunun sebebi Kotlin'in implicit type conversion desteklememesidir. Yani i değişkeni otomatik olarak Byte'a dönüştürülmez.
+	Print kısmında ise Byte ile Int arasında değer karşılaştırması yapamadığının hatasını verir.
 
 
 
