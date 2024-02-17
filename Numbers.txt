@@ -41,6 +41,11 @@ Sayısal değişkenlerde alt çizgi (underscore) nasıl kullanılır? Kotlin bun
 * == değerin kendisini karşılaştırırız. === ile değerin memorydeki referansını kontrol ederiz. True veya false değerleri döndürür.
 
 
+=== operatörü ile karşılaştırma yaparken Byte değer aralığı neden önemlidir? Kotlin bu aralığa göre neden özel bir davranış sergiler?
+* Byte değer aralığında iki variable ı === ile karşılaştırma yaptığımızda bize aynı memory referansını verir. Kotlin kullanım sıklığı yüzünden özel bir davranış sergiler. Değer Byte ın üzerine çıktığında artık farklı bir memory adresine referans eder.
+
+
+
 
 
 
