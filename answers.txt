@@ -161,6 +161,24 @@ ULong  -> 64-bit işaretsiz bir tamsayı, 0 ile 18,446,744,073,709,551,615 aras�
 
 # is operatörü, bir nesnenin belirli bir tipe ait olup olmadığını kontrol etmek için kullanılır.!is operatörü, bir nesnenin belirli bir tipe ait olmadığını kontrol etmek için kullanılırken, aynı zamanda akıllı dönüşüm (smart cast) özelliğiyle birlikte çalışır ve belirli bir tipe dönüşüm yapma gereği duyulduğunda otomatik olarak dönüşüm gerçekleşir.
 
+40-"Akıllı Dönüşüm" (Smart Cast) ne demektir? Farklı kod örnekleri ile açıklayın. Bu özelliğin sınırlamaları nelerdir?
+
+# Kotlin'de "Smart Cast" (Akıllı Dönüşüm), tip kontrolü yapılan bir değişkenin tipinin otomatik olarak dönüşmesine denir.
+Örneğin 
+
+fun deneme(x: Any) {
+    if (x is String) {
+        print(x.length) // x'in değeri otomatik olarak string olarak işaretlenir
+    }
+}
+
+Önemli bir not bu özellik yalnızca derleyicinin, değişkenin kontrol ile kullanımı arasında değişmeyeceğini garanti edebildiği durumlarda çalışır. 
+
+
+
+
+
+
 
 
 
