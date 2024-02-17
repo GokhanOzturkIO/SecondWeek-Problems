@@ -551,3 +551,12 @@ Tür Dönüşümü
       Bu sayede, işlemdeki en büyük sayı 'Long' tipinde olur ve 'result' değişkeninin tipi de 'Long' olur.
 
 =================================================================================
+
+10- "`val x = 5 / 2` `println(x == 2)`" gibi bir işlemin sonucu ve tipi nedir? Neden böyle olduğunu açıklayın.
+
+     İşlemin sonucunda ekrana 'true' yazdırılır çünkü 5'i 2'ye böldüğümüzde 2.5 sonucu çıkar fakat
+      bizim verdiğimiz değerler 'Int' olduğu için sadece küsürattan öncesi alınır. Eğer değerler
+      'Double' olsaydı ve "x == 2.0" kontrolü yapsaydık sonuç 'false' olacaktı. İlk verilen örnekte
+      çıktı 'true' olur ve 'x' değişkeninin tipi de 'Int' olur.
+
+=================================================================================
