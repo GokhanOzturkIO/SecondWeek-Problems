@@ -196,6 +196,10 @@ fun deneme(x: Any) {
 
 # Kotlin'de sayısal değişkenlerde açık dönüşüm yapılırken toByte(),toShort(),toInt(),toLong(),toFloat(),toDouble() fonksiyonları kullanılır.
 
+46-"val result = 1L + 3" // "Long + Int" gibi bir işlemin sonucunda "result" değişkeninin tipi ve değeri ne olur? Neden böyle olduğunu açıklayın.
+
+# Kotlinde matematiksel operatörler kullanılırken 2 farklı tipte sayı kullanıldığında sonuç en büyüğüne eşit olur bu yüzden result Long tipinde olur.
+
 
 
 
