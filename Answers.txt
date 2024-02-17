@@ -25,3 +25,12 @@ Bu yöntemi kullanmamızdaki amaç değişkene dışarıdan nesne yardımıyla d
 Aynı zamanda gerektiğinde nesne üzerinden gerekli metodlar ile değişkende değişiklik yapılmasına da izin verilmiş olur.
 
 ------------------------------------------------------------
+
+#3 "Değişmez" (Immutable) ve "Salt Okunur" (ReadOnly) kavramlarını açıklayın. val değişkenler neden aslında "değişmez" değil de "salt okunur" olarak açıklanmalıdır?
+
+Immutable durumunda bir nesne oluşturulurken (declaration aşamasında) atama yapılır ve sonra bir daha yeni atama yapılamaz. Bu durum değişmez olarak tanımlanabilir. örnek -> const val --> must be initialized
+Read-Only durumunda nesne herhangi bir değer almadan oluşturulup (declaration esnasında) daha sonraki aşamalarda yalnızca 1 defa değer ataması yapılabilir.
+val değişkenler declaration aşamasında iki durumla da kullanılabiliyor. Hem oluştururken değer atayabiliyoruz hem de oluşturduktan sonra değer atayabiliyoruz. Bu yüzden de val değişkenlerin read-only olarak açıklanması daha doğrudur.
+
+
+------------------------------------------------------------
