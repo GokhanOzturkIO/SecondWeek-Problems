@@ -484,3 +484,13 @@ Tür Dönüşümü
       Bu durumlar dışında, akıllı dönüşüm otomatik olarak gerçekleşmez.
 
 =================================================================================
+
+3- "Güvenli & Güvensiz" operatörler nelerdir?
+
+     Güvenli operatör (?.)'dır. Güvensiz operatör de (!!)'dır. Bir değişken nullable'sa ve
+      eğer bu değer null gelirse programımız çökmesin istiyorsak güvenli operatörü (?.) kullanmalıyız.
+      Güvensiz operatörü (!!) kullanırken, bu değişkenin değeri kesin olacak demiş oluyoruz ve
+      ona göre işlemler yapılıyor. Güvensiz operatörü (!!) kullanırsak ve o değişkene bir değer atanmazsa
+      program çöker ve 'NullPointerException' hatası alırız.
+
+=================================================================================
