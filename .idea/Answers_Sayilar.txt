@@ -14,3 +14,10 @@ Answer 2:
 Answer 3:
     Çünkü bazı fontlarda 'l' ile '1' çok benzer göründüğü için karışıklığı önleme amacı ile 'l'
     kullanılmamaktadır.
+
+Answer 4-10 arası soruların cevaplarını direkt araştırıp yazmak istemedim. Biraz daha kafamda
+oturttuğum zaman güncelleyeceğim.
+
+Answer 11:
+    == ile değişkenlerin içerisindeki değeri karşılaştırıyoruz.
+    === ile değişkenlerin referansını karşılaştırıyoruz.
