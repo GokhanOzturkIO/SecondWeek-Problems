@@ -6,3 +6,10 @@ var mutable bir değişkendir val ise read-only bir değişkendir. var değişke
 2-> Bir var değişkeni val gibi davranmasını nasıl sağlayabiliriz val kelimesini kullanmadan? Bunu neden yapmak isteriz? Örnek bir senaryo verin.
 Bunu var'ın setter'ına private eklediğimizde sağlarız. Aynı class içinde değiştirmek isteyip farklı classlarda sadece okumak isteyebiliriz.
 
+3-> "Değişmez" (Immutable) ve "Salt Okunur" (ReadOnly) kavramlarını açıklayın. val değişkenler neden aslında "değişmez" değil de "salt okunur" olarak açıklanmalıdır?
+Değişmez bir kere yazıldığında bir daha değeri değişmeyecek demektir.Read-only'de ise sadece okunur başka bir yerde değeri değişebilir. val değişkenlerde aslında çok bilinenin aksine read-onlydir. Çünkü val değişkenin değerini şu şekilde değiştiririz. 
+var a = 20 
+var b = 50
+val toplam = a+b 
+Yazdığımızda her a veya b yi değiştirdiğimizde val daki sonuç değişir.
+
