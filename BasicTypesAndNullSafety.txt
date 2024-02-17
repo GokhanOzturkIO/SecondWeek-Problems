@@ -4,3 +4,6 @@ val ile var arasındaki fark nedir?
 
 Bir var değişkeni val gibi davranmasını nasıl sağlayabiliriz val kelimesini kullanmadan? Bunu neden yapmak isteriz? Örnek bir senaryo verin.
 * Var kullanarak oluşturduğumuz değişkenin setter ını private yaptığımızda val değişkenleri gibi artık set edilemeyecektir.
+
+"Değişmez" (Immutable) ve "Salt Okunur" (ReadOnly) kavramlarını açıklayın. val değişkenler neden aslında "değişmez" değil de "salt okunur" olarak açıklanmalıdır?
+* Immutable kavramı bir değişkenin değerinin bir kere atandıktan sonra hiçbir şekilde değiştirilememesidir. ReadOnly ise bir değişken değerinin sadece okunabilir olduğunu, setter ı ile işlem yapılamayacağını belirtir. Val değişkeninin immutable değil de ReadOnly olmamasının sebebi getter kullanarak aldığı değerin değişmesini sağlayabildiğimizdendir. Örnek verirsek kullanıcıdan a ve b adında iki input değeri alıp result adını verdiğimiz val bir değişkenin değerini de get() { return(a+b) } yaptığımızda sonucun kullanıcının input değerlerine göre değiştiğini görürüz.
