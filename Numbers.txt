@@ -57,6 +57,9 @@ Bit düzeyinde operatörler (Bitwise operators) nelerdir? Ne amaçla kullanılı
 Kotlin'de büyük sayılarla çalışırken hangi ek türlerden yararlanılır ve bu türlerin sınırları nelerdir?
 * BigInteger ve BigDecimal dan yararlanılabilir. BigInteger büyüm tam sayıları temsil etmek için kullanılır, sınırı yoktur. BigDecimal hassas ondalık sayıları temsil etmek için kullanılır. Bilimsel hesaplamalarda kullaılır.  İki sınıf da JVM üzerinden çalışır , Java' da da kullanılabilir. Bellek ve işlemci kullanımı fazladır dikkatlice kullanılmalıdır.
 
+Double ve Float değişkenler kullanılırken "yuvarlama" davranışı nasıldır? Bu nasıl değiştirilebilir?
+* Yuvarlama kuralları IEEE 754 standartlarına uygun olarak gerçekleşir. 0.5'ten küçükse aşağı yuvarlar. 0.5'ten büyükse yukarı yuvarlar. 0.5 ise ondalık kısmın son rakamı çiftse aşağı yuvarlanır, tekse yukarı yuvarlanır. Kendi fonksiyonumuzu yazarak yuvarlama davranışını istediğimiz gibi değiştirebiliriz.
+
 
 
 
