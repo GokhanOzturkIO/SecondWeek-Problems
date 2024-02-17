@@ -15,3 +15,6 @@ Yazdığımızda her a veya b yi değiştirdiğimizde val daki sonuç değişir.
 
 4-> "Tip Çıkarımı" (Type inference) kavramını açıklayın. Hangi durumlarda tip belirtmek kesin olarak gereklidir?
 Type inference bizi fazla kod yazmaktan kurtarır Örneğin değişken yazdığımızda tipini belirtmezsek bunu bizim için hangi tipte olduğunu anlar ve arka planda oluşturur.Null değişken yazıldığında veya değer ataması sonra yapılıcaksa tip belirtmek gereklidir.
+
+5-> Kotlin'de tüm değişkenlerin sınıf olarak bulunması, "ilkel tip" (primitive type) olmadıkları anlamına gelir mi? Arka planda neler oluyor?
+Hayır aslında değişkenler sınıf olarak bulunur ama derleme esnasında primitve type olurlar. 
