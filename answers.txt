@@ -153,6 +153,9 @@ UShort -> 16-bit işaretsiz bir tamsayı, 0 ile 65,535 arasındaki değerleri,
 UInt   -> 32-bit işaretsiz bir tamsayı, 0 ile 4,294,967,295 arasındaki değerleri,
 ULong  -> 64-bit işaretsiz bir tamsayı, 0 ile 18,446,744,073,709,551,615 arasındaki değerleri temsil eder.
 
+38-"İşaretsiz" değişken türleri (UInt, ULong vs.) kullanırken, Java API'leri ile uyumluluk konusunda ne gibi sorunlar olabilir? Bunları çözmek için neler yapabilirsiniz?
+
+# TODO(Çözüm bulamadım sonra düzeltilecek)
 
 
 
