@@ -13,3 +13,34 @@ içerisinde matematiksel hesaplama işlemi yapıyoruz ve elimizde Pi sayısı be
 kısıtlayabiliriz.
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+3- "Değişmez" (Immutable) ve "Salt Okunur" (ReadOnly) kavramlarını açıklayın. val değişkenler neden aslında "değişmez" değil de "salt okunur" olarak açıklanmalıdır?
+
+Immutable ifadesi tıpkı kelime anlamınında da geçtiği gibi bir kez tanımlandıktan sonra değiştirilemeyen ifadeler için kullanılır const val ifadesi buna örnek verilebilir.
+Read-Only ifadesi ise sonradan müdahele edilemeyen okunabilir anlamına gelir ancak bu farklı tanımlamalar alamayacağı anlamına gelmez. Val ifadesi de çok bilinenin aksine
+immutable değil read-only sınıfına girer, çünkü biz val keyword'ü ile oluşturulmuş bir property'e farklı atamalar yapabiliriz. Aşağıdaki kod örneğini buna bir örnektir.
+
+class Box {
+    var width: Int = 20
+    var height: Int = 40
+    var length: Int = 50
+    var usedSpace: Int = 0
+
+    val availableSpace : Int
+        get() {
+            return(width * height * length) - usedSpace
+        }
+}
+
+fun main(){
+    val box = Box()
+    val comicBoxSize = 16*21*1
+    box.usedSpace = 3 * comicBoxSize
+
+    println(box.availableSpace)
+}
+
+Yukarıdaki kod içerisinde width, height, length ve used space değerleri istenildiği gibi değiştirilebilir. Bu değerler ile oynanması val ile oluşturulmuş availableSpace 
+isimli değişkenin değerenin sürekli değişmesini sağlar bu da val değişkenlerin immutable (değişmez) değil de read-only (salt okunur) olduğunun kanıtıdır.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
