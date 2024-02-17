@@ -577,3 +577,15 @@ Tür Dönüşümü
       etmemiz gerekir. Bu soruda da işlemin cevabı 2.5'dur, o yüzden de çıktı 'true' olur.
 
 =================================================================================
+
+13- Kotlin'de tür dönüşümü yapılırken, dönüşümün başarısız olması durumunda TypeCastException
+ nasıl ele alınır ve bu tür hataların önüne geçmek için hangi önlemler alınabilir?
+
+     TypeCastException; try-catch bloğu ile ele alınabilir,  is veya as operatörleri ile
+      kontrol edilebilir, as? operatörü ile güvenli tür dönüşümü yapılabilir, 'Elvis'
+      operatörü ile tür dönüşümü güvenli hale getirilebilir. Bu hataların önüne geçmek
+      içinse gereksiz tür dönüşümünden kaçınabiliriz veya değişkenlerimizi nullable
+      tanımlayabiliriz. (Değişkenlerimizi nullable tanımlamak önerilmez çünkü bellekte
+      bulunduğu alan artar)
+
+=================================================================================
