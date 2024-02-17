@@ -531,3 +531,12 @@ Tür Dönüşümü
       kullanılabilir. Örn. "3F", "3f", "3L".
 
 =================================================================================
+
+8- "`val result = 1L + 3`" // "Long + Int" gibi bir işlemin sonucunda "result" değişkeninin
+ tipi ve değeri ne olur? Neden böyle olduğunu açıklayın.
+
+     'result' değişkeninin değeri 'Long' olur çünkü işlemdeki en büyük sayı 'Long' tipiindedir.
+      Kotlin, değerlere bakmaksızın işlemdeki en büyük tipi alır. Bunun sebebi ise, 'result'
+      değişkeninin alabileceği değerden fazla bir değer almasını önlemek içindir.
+
+=================================================================================
