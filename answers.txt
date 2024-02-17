@@ -463,3 +463,24 @@ Tür Dönüşümü
       kontrol eder. Eğer bir nesne belirtilen türe ait değilse 'true', aitse 'false' döner.
 
 =================================================================================
+
+2- "Akıllı Dönüşüm" (Smart Cast) ne demektir? Farklı kod örnekleri ile açıklayın.
+ Bu özelliğin sınırlamaları nelerdir?
+
+     Smart cast, bir değişkenin tipinin otomatik olarak dönüştürülmesidir. Bunu, kod örneği ile
+      daha rahat anlayabiliriz.
+
+          fun process(input: Any) {
+            if (input is String) {
+              println(input.length) // Akıllı dönüşüm: input artık String türünde
+            }
+          }
+
+     'input' değişkeninin 'String' olup olmadığını kontrol ettikten sonra Kotlin 'input' değişkeninin
+      bir 'String' olduğunu anlar. Bir daha "input.toString()" fonksiyonunu çağırmamıza gerek kalmaz.
+      Smart cast, sadece local değişkenler için geçerlidir. Global değişkenler ve sınıf seviyesi özellikler
+      için kullanılamaz. Smart cast, nullable türler için geçerlidir. Non-nullable türlerde bu özellik kullanılamaz.
+      Son olarak smart cast, 'when' ifadesi kullanıldığında veya 'is' operatörüyle tür kontrolü yapıldığında geçerlidir.
+      Bu durumlar dışında, akıllı dönüşüm otomatik olarak gerçekleşmez.
+
+=================================================================================
