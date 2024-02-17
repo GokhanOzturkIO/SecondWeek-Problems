@@ -15,3 +15,27 @@ class User() {
         name = "Ahmet"
     }
 }
+
+3 - Immutable, değeri sonradan değiştirilemeyen veya atama yapılamayan kavramına denk gelir. Read-only ise değişkene bir atama yapıldıktan sonra tekrar atama yapılamadığı anlamına gelir. Peki val hangisidir? val için senaryolara göre farklı cevapları vardır. Bir class içinde val ile birlikte tanımlanan property, read onlydir. Immutable diyemeyiz çünkü getter fonksiyonu içinde değer ataması yapabiliriz. Eğer bu değer atamaları farklı propertyler olursa, val değerin değişkeni de doğrudan değişmiş oluyor. Fakat genel olarak val propertyler için read only'dir diyebiliriz. Hemen örnek verelim:
+
+fun main() {
+    val car = Car()
+    car.printCarName()
+}
+
+class Car() {
+    private var varCarName = "Audi"
+    private val valCarName: String
+        get() {
+            return varCarName
+        }
+
+    fun printCarName() {
+        varCarName = "BMW"
+        println(valCarName) // BMW
+        varCarName = "Mercedes"
+        println(valCarName) // Mercedes
+    }
+}
+
+Buradaki ilk çıktı BMW ikincisi ise Mercedes oluyor. Görüldüğü üzere sınıf içerisinde tanımlanan val property'nin değerini değiştirebiliyoruz. Immutable diyebilmemiz için getter fonksiyonunu değiştirememiz gerekiyor. Bunu yapmanın yolu da bu val değişkenleri bir fonksiyon scope'u içinde tanımlamaktır. Bu şekilde arka planda getter ve setter fonksiyonları oluşmayacak ve gerçekten immutable olacaktır.
