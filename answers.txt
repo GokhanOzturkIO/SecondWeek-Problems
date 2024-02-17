@@ -494,3 +494,14 @@ Tür Dönüşümü
       program çöker ve 'NullPointerException' hatası alırız.
 
 =================================================================================
+
+4- Sayısal değişkenlerde örtük tip genişletme (implicit widening conversions) ne demektir?
+ Kotlin'de bu neden yapılamaz?
+
+     Sayısal değişkenlerde örtük tip genişletme, örneğin bir fonksiyon var ve bizden parametre
+      olarak 'Long' bir değer istiyor. Bizim bu parametreye 'Int' bir değer verebilmemize
+      örtük tip genişletme denir. Kotlin'de bunun yapılamama sebebi, olası hataları önlemek
+      içindir. Örnekteki 'Long' değer isteyen fonksiyona, 'Int' bir değeri, tip dönüşümleriyle
+      verebiliriz. Örn. "toLong()" veya "3L" gibi.
+
+=================================================================================
