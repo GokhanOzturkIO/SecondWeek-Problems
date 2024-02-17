@@ -97,3 +97,10 @@ Soru 6: Double ve Float değişkenler ondalık kısımda kaç basamağa kadar i�
    İşlem hassasiyeti önemli olan işlemlerde Double, çok fazla işlem hassasiyeti gerektirmeyen işlemlerde ise Float
    kullanılır. (Alabilecekleri max - min değerler hesaba katıldıktan sonra)
 
+------------------------------------------------------------------------------------------------------------------------
+
+Soru 7: Ondalık(Decimal), Onaltılık (Hexadecimal) ve İkilik (Binary) değişkenleri Kotlin'de nasıl tanımlayabilirsiniz?
+
+ val decimal = 110
+ val hexadecimal = 0x0F
+ val binaries = 0b1111100
