@@ -129,6 +129,11 @@ Değer aralıkları bellekte kaplanan alanı temsil eder ve büyük projelerde v
 
 # İşaretsiz değişkenler var unsigned : UInt = 34u şeklinde atanır.
 
+33-val a1 = 42u ve val a2 = 0xFFFF_FFFF_FFFFu değişkenlerin tipleri ne olur? Neden?
+
+# a1 UInt a2 ise ULong tipindedir. Bir tip atanmadığından a1 UInt olarak atanıyor a2 ise UInt sınırına uymadığından ULong olarak atanmıştır.
+
+
 
 
 
