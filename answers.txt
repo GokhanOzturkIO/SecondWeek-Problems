@@ -212,6 +212,9 @@ fun deneme(x: Any) {
 
 # Kotlin'de iki farklı tipte değişken ile işlem yapıldığında sonuç en geniş değer aralığındaki tip'de oluşur bu yüzden cevap 2 ve türü Long olur print fonksiyonu da true döner.
 
+50-"val x = 5 / 2.toDouble() println(x == 2.5)" gibi bir işlemin sonucu ve tipi nedir? Neden böyle olduğunu açıklayın.
+
+# Burda bölüm yapılan değerlerden birisi double olduğundan cevap da double olur ve print fonksiyonunu cevabını da true döndürür.
 
 
 
