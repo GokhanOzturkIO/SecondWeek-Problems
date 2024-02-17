@@ -31,6 +31,12 @@ Bir değişkene null değer atanır ve tip belirtilmezse Kotlin bu değişkeni n
 *Null bir nesneye referans etmemektir. Fakat primitive type lar referans edilmez değeri memory de saklanır. Bu yüzden nullable olamaz. Primitive değişkenin referans edilmiş bir değişkenden farkı bellek optimizasyonunun daha iyi olmasıdır. Bellekte sabit bir boyutta tutulur. Java ve Kotlin dilinde Garbage Collecton olarak adlandırılan yapı zaman zaman bellekteki yükü boşaltıp optimize eder ve bu otomatik olarak yapılır. Primitive type lar bir referansa işaret etmediğinden bellek yönetimi daha verimli ve stabil olur.
 
 
+Nullable bir değişkenin bir değere sahip olması ile null olması arasında bellek yönetimi açısından nasıl bir fark vardır? Null değer almış bir değişken bellekte yer kaplamaz diyebilir miyiz?
+* Nullable değişkenin bir değeri varsa pointer adresinde az da olsa bir alan kaplar ama null olarak setlenmişse daha az yer kaplar. Göz ardı edilecek seviyededir.
+
+
+
+
 
 
 
