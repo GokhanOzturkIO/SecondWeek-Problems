@@ -184,7 +184,15 @@ fun deneme(x: Any) {
 
 43-"val b: Byte = 1 ile val i: Int = b ve son olarak print(b == i) gibi bir kod yazıldığında çıktı ne olur? Neden böyle bir çıktı aldığınızı açıklayın.
 
-# Kotlin'de, küçük bir veri türünden büyük bir veri türüne dönüşüm (implicit widening conversion) yapılmaz. Bu nedenle, bu durumda b değişkeni otomatik olarak Int türüne dönüştürülmez,bu yüzden yukardaki gibi açıkça belirtiriz bunu yaptığımızda iki değer de eşit olur sonrasında print(b == i) dediğimizde de true döndürür.
+# Bu kodda "Type mismatch: inferred type is Byte but Int was expected" hatası alırız en başta val i: Int = b gerçekleşmez. print(b == i) de gerçekleşmez ve Operator '==' cannot be applied to 'Byte' and 'Int'. Hatası verir.
+
+
+
+44-"val b: Byte = 1 ile val i: Int = b.toInt() ve son olarak print(b == i) gibi bir kod yazıldığında çıktı ne olur? Neden böyle bir çıktı aldığınızı açıklayın.
+
+# Bu kodda ise b.toInt demeden önceki hatayı almayız fakat print(b == i) yerinde "Operator '==' cannot be applied to 'Byte' and 'Int'"hatasını alurız.
+
+
 
 
 
