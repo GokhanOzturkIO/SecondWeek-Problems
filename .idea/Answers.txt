@@ -44,7 +44,8 @@ Answer 4:
   **bir değişkene örneğin var a = null dediğimizde tipini belirtmeliyiz çünkü belirtmediğimizde IDE
     bunun Nothing tipine eşler. Unit den farklıdır. unit bir şey döner ama boştur, Nothing bir şey
     de dönmez. Daha sonradan bir değer atamak istediğimizde şöyle bir hata verecek : Bunun tipi
-    Nothing ama sen int atıyorsun (gibi).
+    Nothing ama sen int atıyorsun (gibi).(BUNUN DIŞINDA BAŞKA NEDENLERİ DE VAR FAKAT BU KISIM İÇİN
+    TEKRAR ARAŞTIRMA YAPARAK TAMAMLAYACAĞIM)
 
 Answer 5:
     Kotlinde class gibi görünen değişken tipleri özel optimizasyon ile proje derlenirken otomatik
@@ -77,4 +78,10 @@ Answer 8:
     !! in anlamı: ben gelecek veriden eminim null gelmeyecek sen işlemi kesinlikle devam et. (bunu
     kullanmanın kötü yanı: eminim işleme devam et dedik ama null geldi. Bu sefer hata alırız. uygulama
     crash olur.)
+
+Answer 9:
+    Bir değişkene null değer atayıp tipini belirtmezsek IDE o değişkenin tipini Nothing olarak
+    algılayacaktır. Nothing hiçbir şey dönmez. Unit den farklıdır. unit yine boş da olsa bir şey döner.
+    Örneğin bu değişken var ise daha sonra ona bir int, string veya başka bir veri atamaya çalışırsak
+    hata verecektir. Bunun tipi Nothing ama sen başka bir tip atamaya çalışıyorsun gibi.
 
