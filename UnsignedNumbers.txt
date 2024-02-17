@@ -26,3 +26,7 @@
 * Veri boyutu (8 bit UByte veya 16 bit UShort), Değer aralığı(UByte için 0 - 255 arasındadır),Overflow ve Underflow(kendi değer aralığından aşağıda veya yukarıda olduğu taşma durumlarıdır),Bellek kısıtlamaları.(Büyük boyutlu unsigned değişkenler bellekte daha fazla yer kaplar bu yüzden dikkatlice kullanılmalıdır)
 
 
+"İşaretsiz" değişken türleri (UInt, ULong vs.) kullanırken, Java API'leri ile uyumluluk konusunda ne gibi sorunlar olabilir? Bunları çözmek için neler yapabilirsiniz?
+* Java API leri genellikle signed değişkenleri kullanır. Unsigned bir değişkeni kullanmaya çalıştığımızda veri kaybı gibi uyumsuzluklar yaratabilir. Bunu çözmek için unsigned değişkenlerin signed karşılıkları kullanılabilir. 
+
+
