@@ -37,4 +37,15 @@ Nullable değişkenler bellekte daha fazla yer kaplar çünkü class olarak tutu
 11-> Nullable bir değişkenin bir değere sahip olması ile null olması arasında bellek yönetimi açısından nasıl bir fark vardır? Null değer almış bir değişken bellekte yer kaplamaz diyebilir miyiz?
 Şöyle bir fark vardır.Nullable değişkenin bir değere sahip olması durumunda, bellekte o değeri tutacak kadar yer ayrılır.Ama eğer nullable değişken null değerine sahipse, bu durumda bellekte ayrılmış bir değer yoktur.
 
+12-> Nullable bir değişkenle çalışırken hangi operatörleri kullanırız? Bu operatörlerin kullanım farkları nelerdir? Hangisini ne zaman kullanmak daha anlamlıdır?
+Null Koalesans Operatörü (?:) = Bu operatör, bir nullable ifade null ise, başka bir değeri kullanmamızı sağlar.
+
+Güvenli Çağrı Operatörü (?.) = Bu operatör, nullable bir değişkene güvenli bir şekilde erişmemizi sağlar. Eğer değişken null ise, hemen hata fırlatmaz ve ifade null olarak değerlendirilir.
+
+Elvis Operatörü (?:) = Bu operatör, bir ifade null değilse onu kullanır, null ise başka bir değeri kullanır.
+
+!! Operatörü = Bu operatör, bir nullable ifadeyi zorlu bir şekilde (force) null olmayan türüne dönüştürür.
+Ancak bu operatörü kullanmak, dikkatlice ele alınmalıdır, çünkü eğer ifade null ise, NullPointerException hatası alınabilir.
+
+
  
