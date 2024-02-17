@@ -13,3 +13,5 @@ var b = 50
 val toplam = a+b 
 Yazdığımızda her a veya b yi değiştirdiğimizde val daki sonuç değişir.
 
+4-> "Tip Çıkarımı" (Type inference) kavramını açıklayın. Hangi durumlarda tip belirtmek kesin olarak gereklidir?
+Type inference bizi fazla kod yazmaktan kurtarır Örneğin değişken yazdığımızda tipini belirtmezsek bunu bizim için hangi tipte olduğunu anlar ve arka planda oluşturur.Null değişken yazıldığında veya değer ataması sonra yapılıcaksa tip belirtmek gereklidir.
