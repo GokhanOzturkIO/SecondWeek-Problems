@@ -24,3 +24,9 @@ Hayır aslında değişkenler sınıf olarak bulunur ama derleme esnasında prim
 
 7-> Bir değişkeni nullable yapmak için ne yapmalıyız?
 Bir değişkenin null olması için tip'inin yanına '?' koymamız gereklidir. örneğin = val calculate: Int? = null
+
+8-> "Null Güvenliği" (Null Safety) kavramını açıklayın.
+"Null Güvenliği" (Null Safety), bir programlama dilinde veya bir dilin bir kısmında, değerlerin null (boş, tanımsız) olabileceği durumları kontrol altına almak ve bu durumları daha güvenli hale getirmek için kullanılan bir özelliktir. Null güvenliği, programcıların null referanslarından kaynaklanan hataları önlemesine ve kodlarını daha güvenilir hale getirmesine yardımcı olur.
+
+
+ 
