@@ -18,6 +18,13 @@ Kotlin'de tüm değişkenlerin sınıf olarak bulunması, "ilkel tip" (primitive
 "Tip Güvenliği" (Type Safety) kavramını açıklayın.
 * IDE nin değişken değerleri ile o değişkenin type larını karşılaştırıp ters bir durumda kodu derlemeyip uyarı vermesidir. String olarak val a = "2" ve integer olarak val b = 2 değişkenlerimiz olsun bunları çarptığımızda anlamlı bir sonuç alamayız. TypeSafety kriterine uyması için a değişkenini 2 olarak değiştirebiliriz.
 
+Bir değişkeni nullable yapmak için ne yapmalıyız?
+* Kotlin dilinde bir değişkeni nullable yapmak için değişken tipine ? = null eklenir. var a:String? = null stringi null bir değer alabilir.
+
+
+
+
+
 
 
 
