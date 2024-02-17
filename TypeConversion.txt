@@ -1,6 +1,7 @@
 is ve !is operatörlerinin kullanımını açıklayın.
 * Type checking ve type casting işlemlerinde kullanılır. Nesnenin belirli bi türe ait olup olmadığını kontrol eder. Sonuç olumlu ise true veya olumsuz ise false değerini döndürür. 
 
+
 "Akıllı Dönüşüm" (Smart Cast) ne demektir? Farklı kod örnekleri ile açıklayın. Bu özelliğin sınırlamaları nelerdir?
 * Type conversion işlemini daha güvenli ve kolay hale getiren bir özelliktir. Bir objenin belli koşullar sağlandığında otomatik olarak type ını değiştirmeye yarar. Örnek olarak verilebilecek kodlar;
 fun example(str: String?) {
@@ -25,4 +26,9 @@ fun process(obj: Any) {
 }
 
 Smart cast belli kısıtlamalara sahiptir . Bir sınıfın private olmayan alanlarında çalışır ve değişkenin içeriğinin değiştirilemez olması. Örnek verecek olursak List<Any> yi  is MutableList şeklinde yazdığımızda hata verir. Onun yerine  List<String> şeklinde yazmalıyız.
+
+
+
+
+
 
