@@ -89,3 +89,10 @@ Answer 10:
     nullable olursa -> Bellekte iki durum (null olması, bir  değeri olması) için yer ayırması gerekiyor.
     nullable olmazsa (non-nullable) -> Bellekte değişkenin tipine göre sabit bir yer ayırır. Null olma
     durumu olmadığı için ekstra yer ayrılmaz.
+
+Answer 11:
+    null olursa -> Bellekte null referans saklanır. Küçük bir yer kaplar. Bellekte hiç bir gerçek veri
+    saklanmaz, yani ekstra veri boyutu yoktur.
+    bir değeri olursa -> Bellekte null referansı saklanır ve ayrıca gerçek veri de yer kaplar.
+    ÖZETLE:null olursa, sadece referansı bellekte saklanırken, bir değeri varsa hem referansı hem de
+    değer için yer ayırması gerekmektedir.
