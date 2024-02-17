@@ -133,6 +133,11 @@ Değer aralıkları bellekte kaplanan alanı temsil eder ve büyük projelerde v
 
 # a1 UInt a2 ise ULong tipindedir. Bir tip atanmadığından a1 UInt olarak atanıyor a2 ise UInt sınırına uymadığından ULong olarak atanmıştır.
 
+34-"İşaretsiz" "Long" harf gösterimi nasıl yapılır?
+
+# ULong şeklinde bir tip adı vardır ve değerlerin sonuna L veya l koyularak belirlenir.
+
+
 
 
 
