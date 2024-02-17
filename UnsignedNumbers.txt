@@ -21,3 +21,8 @@
 
 "İşaretsiz" değişkenlerle yapılan matematiksel işlemlerde, özellikle büyük sayılarla çalışırken karşılaşılabilecek taşma (overflow) ve taşma olmaması (underflow) durumları için Kotlin nasıl bir yönetim sağlar?
 * Kotlin' in Unsigned değişkenlerde overflow ve underflow olmaması için yürüttüğü bir mekanizma yoktur. Değişkenin sınırlarının içerisinde olup olmadığını kontrol etmek için require() veya assert() kullanabiliriz.
+
+"İşaretsiz" değişkenlerin sınırlamaları nelerdir?
+* Veri boyutu (8 bit UByte veya 16 bit UShort), Değer aralığı(UByte için 0 - 255 arasındadır),Overflow ve Underflow(kendi değer aralığından aşağıda veya yukarıda olduğu taşma durumlarıdır),Bellek kısıtlamaları.(Büyük boyutlu unsigned değişkenler bellekte daha fazla yer kaplar bu yüzden dikkatlice kullanılmalıdır)
+
+
