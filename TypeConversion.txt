@@ -64,6 +64,15 @@ Sayısal değişkenlerde açık dönüşüm (Explicit Type Conversion) yaparken 
 "val x = 5 / 2.toDouble() println(x == 2.5)" gibi bir işlemin sonucu ve tipi nedir? Neden böyle olduğunu açıklayın.
 * Sonucun tipi Integer' dan daha büyük olan Double olacaktır. Küsürata sahip olacağından sonuç 2.5 tur.
 
+Kotlin'de tür dönüşümü yapılırken, dönüşümün başarısız olması durumunda TypeCastException nasıl ele alınır ve bu tür hataların önüne geçmek için hangi önlemler alınabilir?
+* Try-catch bloklarından faydalanırız. Örnek olarak 
+try{
+val a:Int = "123".toInt()
+}catch (e: TypeCastException){
+println("Hata: $e.message")
+}
+Integer a dönüşmemesi durumunda Hata mesajı yazdırılackatır. Bir diğer çözüm  Integer a çevirmeye çalıştığımızda toIntOrNull() gibi fonksiyonlar kullanmaya yönelik olacaktır. Eğer null değilse  dönüşüm başarılıdır. Fakat null geldiyse dönüşüm başarısız olmuş demektir.
+
 
 
 
