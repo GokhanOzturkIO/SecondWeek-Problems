@@ -41,6 +41,9 @@ Sayısal değişkenlerde örtük tip genişletme (implicit widening conversions)
 "val b: Byte = 1 ile val i: Int = b.toInt() ve son olarak print(b == i) gibi bir kod yazıldığında çıktı ne olur? Neden böyle bir çıktı aldığınızı açıklayın.
 * Aynı type karşılaştırması yapmadığımız için "Kotlin: Operator '==' cannot be applied to 'Byte' and 'Int' " hatası alırız. Eğer b.toInt() == i demiş olsaydık bir hata almazdık ve çıktımız true olurdu.
 
+Sayısal değişkenlerde açık dönüşüm (Explicit Type Conversion) yaparken hangi fonksiyonları kullanabilirsiniz?
+* toByte(), toShort(), toInteger(), toFloat(), toDouble() ve toChar() fonksiyonlarını kullanabiliriz.
+
 
 
 
