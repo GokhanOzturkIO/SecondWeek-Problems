@@ -15,5 +15,7 @@
 "İşaretsiz" "Long" harf gösterimi nasıl yapılır?
 *uL veya UL tag ı ile yapılır. Örnek olarak val a = 1UL verilebilir.
 
+"İşaretsiz" değişkenlerin kullanım amaçları nelerdir?
+* Sadece pozitif bir değer geleceğinden emin olduğumuz değişkenler için kullanılabilir. İşaret biti kullanılmadığı için daha performanslıdır.
 
 
