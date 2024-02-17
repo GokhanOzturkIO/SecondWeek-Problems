@@ -21,3 +21,8 @@ oturttuğum zaman güncelleyeceğim.
 Answer 11:
     == ile değişkenlerin içerisindeki değeri karşılaştırıyoruz.
     === ile değişkenlerin referansını karşılaştırıyoruz.
+
+Answer 12:
+    Verdiğimiz değerler -128/+127 aralığında ise referans kontrolü yaparken aynı nesnelere denk gelecekler.
+    Fakat bu aralığın üzerinde ise referans kontrolü yaparken farklı nesnelere denk geleceklerdir. Bu yüzden
+    byte değer aralığı önemlidir.
