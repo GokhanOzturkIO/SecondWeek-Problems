@@ -216,7 +216,13 @@ fun deneme(x: Any) {
 
 # Burda bölüm yapılan değerlerden birisi double olduğundan cevap da double olur ve print fonksiyonunu cevabını da true döndürür.
 
+51-Kotlin'de tür dönüşümü yapılırken, dönüşümün başarısız olması durumunda TypeCastException nasıl ele alınır ve bu tür hataların önüne geçmek için hangi önlemler alınabilir?
 
+# Try-Catch Blokları: Kodunuzda yapılan tür dönüşümlerini try-catch blokları içinde sarmalayarak dönüşümün başarısız olması durumunda hata yönetimini sağlayabilirsiniz. 
+
+as? Operatörü: as? operatörünü kullanarak güvenli bir şekilde tür dönüşümü yapabilirsiniz. Bu operatör, dönüşüm başarısız olduğunda null değer döndürür. 
+
+is Operatörü ile Tip Kontrolü: Tür dönüşümü yapmadan önce, is operatörü ile tip kontrolü yaparak dönüşümün başarılı olup olmayacağını kontrol edebilirsiniz. 
 
 
 
