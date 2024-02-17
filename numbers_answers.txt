@@ -123,3 +123,12 @@ Soru 9: "Geleneksel Notasyon" (Conventional Notation) gösterimi nasıl yapılı
     kullanılan matematiksel sembollerin ve kuralların genel kabul görmüş standartlara uygun olmasını içerir.
 
     123.5e10 -- Bu, bilimsel gösterimde 123,5 sayısının 10'un kuvveti olan 10 ile çarpımını temsil eder.
+
+------------------------------------------------------------------------------------------------------------------------
+
+Soru 10: Sayısal değişkenlerde alt çizgi (underscore) nasıl kullanılır? Kotlin bunu nasıl yorumlar?
+
+    Sayı değişkenlerin daha okunabilir bir şekilde yazabilmek için kullanılır.
+
+    val oneMillion = 1_000_000 // Böyle yazılmış bir değişkeni print ettiğimizde 1000000 olarak yazdırır. _ olarak
+    belirttiğimiz alt çüzgileri yazdırmaz.
