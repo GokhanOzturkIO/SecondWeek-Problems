@@ -32,6 +32,9 @@ Smart cast belli kısıtlamalara sahiptir . Bir sınıfın private olmayan alanl
 "Güvenli & Güvensiz" operatörler nelerdir?
 * Güvenli çağrı "?" ile sağlanır. Null kontrolü yaptıktan sonra eğer null ise kodumuz hata vermeden devam edecektir. Güvensiz çağrı "!!" ile sağlanır. Null kontrolünden geçemezse kodumuz NullPointerException hatası verecektir.
 
+Sayısal değişkenlerde örtük tip genişletme (implicit widening conversions) ne demektir? Kotlin'de bu neden yapılamaz?
+* Bir veri tipini daha büyük bir veri tipine dönüştürmektir. Örnek olarak Byte ı Integer a dönüştürmek gibi. Küçükten büyüğe dönüştürüldüğü için veri kaybı olmaz. Kotlin dilinde bu yapılamaz çünkü güvenli bir dil olarak tasarlanmıştır. Bunun yerine implicit değil explicit şekilde (toInt() gibi )belirtmemiz gerekmektedir.
+
 
 
 
