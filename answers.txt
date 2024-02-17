@@ -141,6 +141,10 @@ Değer aralıkları bellekte kaplanan alanı temsil eder ve büyük projelerde v
 
 # İmzasız sayıların temel kullanım alanı, pozitif değerleri temsil etmek için bir tamsayının tam bit aralığını kullanmaktır.
 
+36-"İşaretsiz" değişkenlerle yapılan matematiksel işlemlerde, özellikle büyük sayılarla çalışırken karşılaşılabilecek taşma (overflow) ve taşma olmaması (underflow) durumları için Kotlin nasıl bir yönetim sağlar?
+
+# Büyük sayılarda karşılaştığımız taşma problemlerinde genelde saçma bir sonuç üretir. Bu gibi durumlarda kotlin bir yönetim sağlamaz.
+
 
 
 
