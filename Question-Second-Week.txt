@@ -28,8 +28,9 @@ Bir değişkenin null olması için tip'inin yanına '?' koymamız gereklidir. �
 8-> "Null Güvenliği" (Null Safety) kavramını açıklayın.
 "Null Güvenliği" (Null Safety), bir programlama dilinde veya bir dilin bir kısmında, değerlerin null (boş, tanımsız) olabileceği durumları kontrol altına almak ve bu durumları daha güvenli hale getirmek için kullanılan bir özelliktir. Null güvenliği, programcıların null referanslarından kaynaklanan hataları önlemesine ve kodlarını daha güvenilir hale getirmesine yardımcı olur.
 
-9->Bir değişkene null değer atanır ve tip belirtilmezse Kotlin bu değişkeni nasıl yorumlar?
+9-> Bir değişkene null değer atanır ve tip belirtilmezse Kotlin bu değişkeni nasıl yorumlar?
 Değeri nothing olarak belirlenir ve işe yaramayan bir değişken olurlar.
 
-
+10-> İlkel bir değişkenin nullable olması ile null değer alamaması arasında bellek yönetimi açısından nasıl farklar vardır?
+Nullable değişkenler bellekte daha fazla yer kaplar çünkü class olarak tutulurlar.Null olmayanlar daha az yer kaplar çünkü primitive tipte yer alırlar.
  
