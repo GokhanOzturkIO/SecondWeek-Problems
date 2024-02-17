@@ -1,0 +1,2 @@
+val ile var arasındaki fark nedir?
+* Val kullanarak oluşturduğumuz değişkenler ReadOnly 'dir, değeri tekrardan set etilemez fakat var değerlerini tekrardan set edebiliriz. Yaygın bilinenin aksine val immutable değildir. Get fonksiyonu ile değeri değiştirilebilir.
