@@ -16,6 +16,10 @@ Tek duyarlıklı (Single precision) ve Çift duyarlıklı (Double precision) kav
 Double ve Float değişkenlerle çalışırken ondalık ayıracı olarak hangi işaretler kullanılır? Bu ayıraçların kullanımında nelere dikkat etmek gerekir?
 * Nokta veya virgül kullanılır. Dikkat edilmesi gereken durum eğer ondalık ayracımız backend' den , dönüyorsa ve biz . kullanıyorsak hata alırız. Local ve canlıda hangi ayracın döndüğünü öğrenmek gerekir. Bununla beraber okunuş olarak kolaylık sağlaması bakımından bir değişken değerini 10_000 olarak yazsak bile IDE bunu 10000 olarak görecektir. Keyfi olarak değiştirilebilir.
 
+Double ve Float değişkenler ondalık kısımda kaç basamağa kadar işlem yaparlar? Bu sınırın üzerinde gelen ondalık bilgileri için nasıl davranırlar? Hangi durumlar için Float ve hangi durumlar için Double kullanılmalıdır?
+* Float 32 bitlik bir veri türüdür, 7 basamağa kadar işlem yapar ve single precision olarak adlandırılır. Double 64 bitlik bir veri türüdür, 15 basamağa kadar işlem yapar ve double precision olarak adlandırılır . Performans olarak fark olsa da yüksek doğruluk sağladığı için bilimsel hassas hesaplamalar yapmak gerektiğinde Double tercih edilmelidir.
+
+
 
 
 
