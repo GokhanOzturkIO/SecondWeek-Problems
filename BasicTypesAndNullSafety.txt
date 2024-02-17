@@ -15,3 +15,9 @@ Bir var değişkeni val gibi davranmasını nasıl sağlayabiliriz val kelimesin
 Kotlin'de tüm değişkenlerin sınıf olarak bulunması, "ilkel tip" (primitive type) olmadıkları anlamına gelir mi? Arka planda neler oluyor?
 * Hayır gelmez. val a:Integer = 1 değişkeni bir Integer sınıfını işaret etsede arka planda JVM Kotlin kodunu Java ByteCode una çevirdiğinde primitive type a karşılık geldiğini görürüz. Javada Integer a:Integer = 30; değerini primitive e dönüştürmek için Wrapper classlarını kullanmak zorundayız. Integer.ParseInt(a) sonucunu primitive verir. Bu işleme boxing denir. Eğer int variable ı Integer a dönüştürdüysek bu da unboxingtir.
 
+"Tip Güvenliği" (Type Safety) kavramını açıklayın.
+* IDE nin değişken değerleri ile o değişkenin type larını karşılaştırıp ters bir durumda kodu derlemeyip uyarı vermesidir. String olarak val a = "2" ve integer olarak val b = 2 değişkenlerimiz olsun bunları çarptığımızda anlamlı bir sonuç alamayız. TypeSafety kriterine uyması için a değişkenini 2 olarak değiştirebiliriz.
+
+
+
+
