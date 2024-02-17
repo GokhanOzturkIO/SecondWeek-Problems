@@ -6,3 +6,6 @@
 
 3. "Değişmez" (Immutable) ve "Salt Okunur" (ReadOnly) kavramlarını açıklayın. val değişkenler neden aslında "değişmez" değil de "salt okunur" olarak açıklanmalıdır?
 - Değismez kavrami ne olursa olsun degistiremedigimiz, degismemesi gereken degerdir. salt okunur kavramı, degerini gorebildigimiz ama degistiremedigimiz nesnelerdir. val degiskenler diger degiskenlere bagli olarak degeri degisebilir degiskendir, ama bu son degerin degerini sonradan degistiremeyiz. Bu sebeple read-only olarak tanımlanmalidir.
+
+4. "Tip Çıkarımı" (Type inference) kavramını açıklayın. Hangi durumlarda tip belirtmek kesin olarak gereklidir?
+- Type inference, bir degiskene deger atadigimizda o degiskene manuel olarak bir tip atamasak bile, IDE bu degiskenin tipine karar verebilir. Degiskenin ilk deger atamasi yoksa ve null deger alabilir oldugunda tip belirtmek zorundayiz.s
