@@ -145,8 +145,13 @@ Değer aralıkları bellekte kaplanan alanı temsil eder ve büyük projelerde v
 
 # Büyük sayılarda karşılaştığımız taşma problemlerinde genelde saçma bir sonuç üretir. Bu gibi durumlarda kotlin bir yönetim sağlamaz.
 
+37-"İşaretsiz" değişkenlerin sınırlamaları nelerdir?
 
-
+# Değişkenlerin değerlerinin küçükten büyüğe sıralamsı aşağıdaki gibidir;
+UByte  -> 8-bit işaretsiz bir tamsayı, 0 ile 255 arasındaki değerleri,
+UShort -> 16-bit işaretsiz bir tamsayı, 0 ile 65,535 arasındaki değerleri,
+UInt   -> 32-bit işaretsiz bir tamsayı, 0 ile 4,294,967,295 arasındaki değerleri,
+ULong  -> 64-bit işaretsiz bir tamsayı, 0 ile 18,446,744,073,709,551,615 arasındaki değerleri temsil eder.
 
 
 
