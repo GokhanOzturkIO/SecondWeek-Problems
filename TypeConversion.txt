@@ -61,4 +61,10 @@ Sayısal değişkenlerde açık dönüşüm (Explicit Type Conversion) yaparken 
 * Type ı en büyük Tip olan Long ve değeri de 2.5 değil küsüratı atıldığı için 2L olacaktır.
 
 
+"val x = 5 / 2.toDouble() println(x == 2.5)" gibi bir işlemin sonucu ve tipi nedir? Neden böyle olduğunu açıklayın.
+* Sonucun tipi Integer' dan daha büyük olan Double olacaktır. Küsürata sahip olacağından sonuç 2.5 tur.
+
+
+
+
 
