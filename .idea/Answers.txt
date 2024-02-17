@@ -85,3 +85,7 @@ Answer 9:
     Örneğin bu değişken var ise daha sonra ona bir int, string veya başka bir veri atamaya çalışırsak
     hata verecektir. Bunun tipi Nothing ama sen başka bir tip atamaya çalışıyorsun gibi.
 
+Answer 10:
+    nullable olursa -> Bellekte iki durum (null olması, bir  değeri olması) için yer ayırması gerekiyor.
+    nullable olmazsa (non-nullable) -> Bellekte değişkenin tipine göre sabit bir yer ayırır. Null olma
+    durumu olmadığı için ekstra yer ayrılmaz.
