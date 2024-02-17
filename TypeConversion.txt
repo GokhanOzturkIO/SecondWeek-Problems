@@ -57,4 +57,8 @@ Sayısal değişkenlerde açık dönüşüm (Explicit Type Conversion) yaparken 
 
 
 
+"val x = 5L / 2 println(x == 2L)" gibi bir işlemin sonucu ve tipi nedir? Neden böyle olduğunu açıklayın.
+* Type ı en büyük Tip olan Long ve değeri de 2.5 değil küsüratı atıldığı için 2L olacaktır.
+
+
 
