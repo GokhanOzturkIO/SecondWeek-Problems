@@ -6,3 +6,7 @@
 
 "İşaretsiz" değişkenlerin harf gösterimi nasıldır?
 * U harfi ile başlar sonra type ı alır. UByte, UShort, UInt ve ULong değişkenler örnek olarak verilebilir.
+
+
+"val a1 = 42u ve val a2 = 0xFFFF_FFFF_FFFFu" değişkenlerin tipleri ne olur? Neden?
+* a1 değişkeni değerinin sonuna u harfi aldığı için Unsigned, tip belirtilmediği için ve integer değer aralığında olduğu için de integer tipindedir. a2 değişkeni de integer değerini geçtiği için ve tip belirtilmediği için Unsigned Long tipindedir. 
