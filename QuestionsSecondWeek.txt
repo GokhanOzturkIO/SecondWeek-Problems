@@ -6,5 +6,5 @@ kullanımı uygundur ancak dikkat edilmesi gereken bazı hususlar vardır deği�
 only val ifadesi için daha uygundur. Read-only değeri okunabilen ancak set edilemeyen değişkenlerdir bu değeri değişmez anlamına gelmemektedir değişkenin
 get fonksiyonu ile değişim yapabildiğimiz için read only diyoruz. Performans konusuna değinecek olursak aralarında bir fark yoktur diyebiliriz ancak 
 mutli-thread işlemlerinde val kullanımı diğer işlemlerde de var kullanımı yapabiliriz. Akademik olarak var kullanımı val kullanımına göre daha performanslıdır
-ancak kullanıcı işlemlerinde etkisi hissedilecek bir fark değildir bu
+ancak kullanıcı işlemlerinde etkisi hissedilecek bir fark değildir bu.
 
