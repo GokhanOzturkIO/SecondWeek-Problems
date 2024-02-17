@@ -1,0 +1,33 @@
+== Temel Türler & Null Güvenliği ==
+
+1-) val ile var arasındaki fark nedir?
+
+Val değeri sonradan değiştirilemez değişkendir. Fakat sanılanın aksine immutable değil readonly olarak adlandırılmaktadır. Var ise değeri sonradan değiştirilebilen değişkendir.
+
+===========================
+
+2-) Bir var değişkeni val gibi davranmasını nasıl sağlayabiliriz val kelimesini kullanmadan? Bunu neden yapmak isteriz? Örnek bir senaryo verin.
+
+var değişkenin set fonksiyonunu private yaparsak tıpkı val gibi davranmasını sağlayabiliriz.  Var değişkenin val gibi davranmasını encapsulation işlemleri için isteyebiliriz. Örneğin bir ViewModel sınıfımız olsun. Bu ViewModel sınıfımızın içerisinde tanımladığımız değişkenin yalnızca ViewModel sınıfının içinde değiştirilmesini ve dışarıdan değerinin değiştirilmesini istemiyorsak değişkenin set fonksiyonunu private yapabiliriz.
+
+===========================
+
+3-) "Değişmez" (Immutable) ve "Salt Okunur" (ReadOnly) kavramlarını açıklayın. val değişkenler neden aslında "değişmez" değil de "salt okunur" olarak açıklanmalıdır?
+
+Immutable değeri  hiçbir şekilde değiştirilemez anlamına gelmektedir. ReadOnly ise yeniden set edilemez anlamına gelmektedir. Val değişkenlerin get fonksiyonlarına değeri sabit olmayan bir değişken verir isek değerini değiştirmemiz mümkündür. Fakat immutable aynı durum geçerli değildir. Bundan dolayı Val değişkenleri immutable yerine ReadOnly olarak adlandırmak daha doğrudur.
+
+===========================
+
+4-) "Tip Çıkarımı" (Type inference) kavramını açıklayın. Hangi durumlarda tip belirtmek kesin olarak gereklidir?
+
+Kotlin'de bir değişkene başlangıç değeri atanıyorsa tipini belirtmeye gerek yoktur. Zira atanan başlangıç değerine göre tip çıkarımı
+otomatik olarak yapılmaktadır. Fakat başlangıçta değer ataması daha sonra yapılacak ise başlangıçta tipini belirtme zorunluluğu ortaya çıkmaktadır.
+
+===========================
+
+5-) Kotlin'de tüm değişkenlerin sınıf olarak bulunması, "ilkel tip" (primitive type) olmadıkları anlamına gelir mi? Arka planda neler oluyor?
+
+Dökümantasyonda da açıkca belirtildiği üzere Kotlin'de her şey nesnedir. Bundan dolayı da tüm değişkenler sınıf olarak bulunur ve bundan dolayı da üye fonksiyonlarına erişim sağlanır. Fakat bu durum pritimitive tiplerin kotlinde olmadığı anlamına gelmemektedir. Zira Java ve Kotlin'in ürettiği bytecode'lara bakınca bu durumun böyle olmadığı açıkca görülür. Kotlin'de tüm değişkenler sınıf olarak bulunsa dahi arka planda yapılan özel optimizasyonlar ile primitive tiplere dönüşmektedirler.
+
+===========================
+
