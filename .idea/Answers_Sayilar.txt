@@ -10,3 +10,7 @@ Answer 2:
     Tipini belirtmeden bir değer atanırsa, o değer için en uygun aralığa IDE karar vererek
     eşleyecektir.(type inference) Örneğin, verilen değer byte'a da uyuyor olsa bile kotlin bu konuda
     olabilecek hataları ön görerek yine de onu int olarak atayacaktır.
+
+Answer 3:
+    Çünkü bazı fontlarda 'l' ile '1' çok benzer göründüğü için karışıklığı önleme amacı ile 'l'
+    kullanılmamaktadır.
