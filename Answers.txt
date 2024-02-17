@@ -49,6 +49,7 @@ nullable bir değişkenin bir değere sahip olması demek,bellekte bu değeri tu
 ?:(elvis) => Bu operatör, null kontrolü yapar.Null ise alternatif bir değer döndürür. 'variable ?: defaultValue' şeklinde kullanılır. variable null ise defaultValue döndürür.
 !!        => Bu operatör,değişkenin null olmadığını varsayar ve null-check yapmaz.Değişken null ise NullPointerException hatası fırlatır.Değişkenin null olmadığına emin olduğumuzda kullanmalıyız sadece yoksa program çökebilir.
 
+
 ### Sayılar
 
 - Kaç farklı tipte "number" sınıfı miras alan "alt sınıf" (child class) vardır? Bunların değer aralıkları neden önemlidir?
@@ -160,6 +161,7 @@ Math.round() fonksiyonu, bir double veya float değerini en yakın tam sayıya y
 BigDecimal sınıfı, belirli bir hassasiyetle ondalık sayıları temsil etmek için kullanılabilir ve yuvarlama davranışı bu sınıfın yapılandırma seçenekleriyle ayarlanabilir.
 Özel yuvarlama fonksiyonları yazılabilir, örneğin aşağı veya yukarı yuvarlama işlemleri için.
 
+
 ### İşaretsiz Sayılar
 
 - "İşaretsiz" (Unsigned) değişkenler ne demektir? İşaretli olanlarla aralarındaki fark nedir?
@@ -206,4 +208,99 @@ Tür dönüşümü yapmak: Kotlin'de işaretsiz değişkenlerin işaretli karş�
 Örneğin, UInt değerlerinin Java'da int türürne,ULong değerlerini long türüne dönüştürebilirz.
 Kütüphane:Jackson kütüphanesini kullanarak,kotlinde unsigned değişkenleri javadaki karşılıklarıyla uyumlu olarak JSON dönüşümleri yapar.
 
+
 ### Tür Dönüşümü
+
+- is ve !is operatörlerinin kullanımını açıklayın.
+Kotlin'de tip kontrolü yapmak için kullanılır.
+is: Eğer nesne belirtilen türe aitse, true döner.Aksi halde false döner
+!is: Nesne belirtilen türe ait değilse true döner. aksi halde false döner
+
+val x: Any = "Hello"
+
+if(x is String){
+println(x.length) // x string ise uzunluğu yazdır
+}
+
+if(x !is Int){
+println("x is not an Integer") //x ınteger değilse, metni yazdır.
+}
+*********************************************************************************
+- Akıllı Dönüşüm" (Smart Cast) ne demektir? Farklı kod örnekleri ile açıklayın. Bu özelliğin sınırlamaları nelerdir?
+Tip güvenliği özelliklerinden biridir.Bu özellik,belirli koşullar altında tür dönüşümünü otomatik gerçekleştirir.
+
+fun processString(input: Any){
+    if(input is String){
+    println(input.length)
+   }
+}
+Bu kodda input değişkeni String türüne dönüşmüş olarak algılanır ve bu nedenle length özelliğini kullanabiliriz.
+
+Bazı sınırlamalar vardır:
+1. is ile kontrol yapıldıktan sonra aynı blokta kullanılması gerekli.
+
+fun processString(input: Any) {
+    if (input is String) {
+        // Burada input değişkeni String olarak algılanır
+    }
+    println(input.length) // Hata! input değişkeni burada otomatik olarak String olarak algılanmaz
+}
+
+2.Smart cast sadece değişkenin o anki değerine bağlıdır. Değer sonradan değiştirilirse etkisiz hale gelir.
+
+fun processString(input: Any) {
+    if (input is String) {
+        println(input.length)
+    }
+    input = 42 // Değer değiştirildi
+    println(input.length) // Hata! input değişkeni artık String türüne dönüşmemiştir
+}
+
+**********************************************************************************
+- "Güvenli & Güvensiz" operatörler nelerdir?
+
+Güvenli operatörler(?.):
+Bu operatör, null kontrolü yaparak NullPointerException hatasını önler ve kodun daha güvenli olmasını sağlar.
+Güvensiz operatörler(!!.):
+Bir nesnenin null olup olmadığını kontrol etmeden doğrudan işlem yapar.Risklidir
+**********************************************************************************
+- Sayısal değişkenlerde örtük tip genişletme (implicit widening conversions) ne demektir? Kotlin'de bu neden yapılamaz?
+Bir veri türünden daha geniş bir veri türüne dönüşümün otomatik yapılmasıdır. Örneğin byte veya short u daha büyük bir tamsayı türüne int veya long gibi dönüştürürken,otomatik olarak genişletilir.
+Kotlin'de yapılamaz çünkü java gibi statik tür güvenli bir dildir ve genişletilmiş dönüşümler desteklenmez. Bir tür dönüşümü yapmak istediğimizde açıkça belirtmemeiz gerekir.
+
+val byteValue: Byte = 10
+val intValue: Int = byteValue.toInt()
+**********************************************************************************
+- "val b: Byte = 1 ile val i: Int = b ve son olarak print(b == i) gibi bir kod yazıldığında çıktı ne olur? Neden böyle bir çıktı aldığınızı açıklayın.
+Tür uyumsuzluğu sebebiyle derleme hatası alırız. Çünkü Byte türündeki b değişkenini Int türüne dönüştürmeye çalışıyoruz.Kotlin'de bu tür otomatik dönüşümler desteklenmez(örtük tip genişletme desteklenmez).Çalıştırılabilirse false çıktısı alırdık türleri farklıdır ve eşitlik karşılaştırması yaptığımız için.
+***********************************************************************************
+- "val b: Byte = 1 ile val i: Int = b.toInt() ve son olarak print(b == i) gibi bir kod yazıldığında çıktı ne olur? Neden böyle bir çıktı aldığınızı açıklayın.
+b bir byte türünde, i ise int türünde olduğu için türler uyumlu değildir.Tür uyumsuzluğu sebebiyle derleme hatası verir.
+***********************************************************************************
+- Sayısal değişkenlerde açık dönüşüm (Explicit Type Conversion) yaparken hangi fonksiyonları kullanabilirsiniz?
+val intNumber: Int = 42
+val byteNumber: Byte = intNumber.toByte()
+val longNumber: Long = intNumber.toLong()
+val floatNumber: Float = intNumber.toFloat()
+***********************************************************************************
+- "val result = 1L + 3" // "Long + Int" gibi bir işlemin sonucunda "result" değişkeninin tipi ve değeri ne olur? Neden böyle olduğunu açıklayın.
+Farklı sayısal tipler arasında işlem yapıldığında sonuç daha geniş bir tipte tutulur.
+1L long türünde, 3 int türündedir. int türü Long türüne genişletilir ve sonuç Long türünde olur.
+***********************************************************************************
+- "val result = Int.MAX_VALUE + Int.MAX_VALUE" gibi bir işlemin sonucunda "result" değişkeninin tipi ve değeri ne olur? Neden böyle olduğunu açıklayın.
+Ekstra bir tip dönüşümü yapmıyorsak iki tane aynı tipteki verinin max değerleriyle işlem yaptığımızda aynı tipte veri döndöndürür ve hatalı bir sonuç olur çünkü max değeri aştığından taşma(overflow)meydana gelir.
+**********************************************************************************
+- "val x = 5 / 2 println(x == 2)" gibi bir işlemin sonucu ve tipi nedir? Neden böyle olduğunu açıklayın.
+Tam sayılar arasında işlem yapıldığı için sonuç her zaman tam sayı olur. Sonuç 2 olur bu kodda. Çıktı olarak true döner çünkü 2==2 kontrolü true döner.
+************************************************************************************
+- val x = 5L / 2 println(x == 2L)" gibi bir işlemin sonucu ve tipi nedir? Neden böyle olduğunu açıklayın.
+Kotlin'de Long değeri başka bir Long değeriyle bölündüğünde Long deöener. 5L Long türünde,2 ise int türündedir.Ancak 5L long olduğu için Kotlin sonucu Long tutar.
+Sonuç olarak true döner.
+************************************************************************************
+- val x = 5 / 2.toDouble() println(x == 2.5)" gibi bir işlemin sonucu ve tipi nedir? Neden böyle olduğunu açıklayın.
+5 / 2 ifadesi int türünde olurdu ancak .toDouble metodu sayesinde Double türüne dönüştürme yapılmış. Sonuç 2.5 olur yani true döner.
+************************************************************************************
+- Kotlin'de tür dönüşümü yapılırken, dönüşümün başarısız olması durumunda TypeCastException nasıl ele alınır ve bu tür hataların önüne geçmek için hangi önlemler alınabilir?
+Dönüşüm yapmadan önce dönüştürülecek nesnenin türünü is veya !is operatörleriyle dönüşümün başarı durumunu kontrol edebiliriz.
+toIntOrNull(), toDoubleOrNull(), vb. gibi dönüşüm işlemlerini gerçekleştiren fonksiyonları kullanarak başarısız dönüşümleri işleyebilirsiniz. Bu fonksiyonlar, dönüşüm başarısız olduğunda null döndürürler.
+Try-Catch Blokları kullanarak hatayı yakalayabiliriz.
