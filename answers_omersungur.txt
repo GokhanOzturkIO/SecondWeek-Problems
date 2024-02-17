@@ -1,1 +1,17 @@
 1 - val değişkenler farklı senaryolara göre ya read-only ya da immutable olabilir. var değişkenler ise mutable'dır, yani değeri sonradan değiştirilebilir. Arasındaki fark temel olarak budur. Performans açısından kıyaslayacak olursak, yine farklı bakış açılarıyla farklı sonuçlar elde ederiz. Val bir property'nin setter fonksiyonu olmadığı için doğrudan atama yapılamıyor. Atama yaparken threadlerden yararlanacağımızı düşünecek olursak bu threadlerin maaliyeti "var" için yapılacak kullanım kadar fazla değildir. var bir property'e değer atarken hangi thread bu işlemi yapıyor ve diğer threadlerin bu değişikliği takip etmesi gibi durumları düşünmeliyiz. Bu açıdan val daha performanslıdır. Fakat başka bir bakış açısıyla şunu da söyleyebiliriz: val propertylerde tekrar değer ataması olmadığı için burada bir if case'i varmış gibi düşünebiliriz. Sürekli kontrol sağlanarak değer atanıp atanmadığını düşünecek olursak val burada daha az performanslı olur. var propertyler için böyle bir kontrol olmadığını düşünebiliriz.
+
+2 - var bir property'nin val gibi davranması için setter fonksiyonunu private yapabiliriz. Bu şekilde dışarıdan bu property'e değer atanamaz. Bunu neden yapmak isteyebiliriz? Tanımlanan bir property sadece o sınıf içinde değiştirilebilir olsun, dışarıdan değiştirilemez olsun istiyorsak kullanabiliriz. Örneğin mutableLiveData yapısını bu şekilde kullanabiliriz, sadece view model içinden değiştirip UI'da erişemeyiz. Örnek kod:
+
+fun main() {
+    val user = User()
+    user.name = "" // Error! (Cannot assign to 'name': the setter is private in 'User')
+}
+
+class User() {
+    var name: String = "Omer"
+        private set
+
+    fun printName() {
+        name = "Ahmet"
+    }
+}
