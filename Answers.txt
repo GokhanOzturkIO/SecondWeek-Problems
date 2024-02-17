@@ -4,3 +4,12 @@ Kotlin dilinde değişken tanımlamak için iki keyword bulunur: “val” ve �
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+2- Bir var değişkeni val gibi davranmasını nasıl sağlayabiliriz val kelimesini kullanmadan? Bunu neden yapmak isteriz? Örnek bir senaryo verin.
+
+Kotlinde her değişken bir property’dir bu nedenle değişkenin set fonksiyonunu private yaparak, bu değişkeni read-only hale getirebiliriz. Ancak bu özelliği kullanabilmek
+için class içerisinde olmamız gerekli. Peki bu özelliği neden kullanmak isteriz bu yapıyı kullanmanın tek avantajı oluşturduğumuz değişkenin yalnızca oluşturulduğu class
+içerisinde değiştirilebilmesini sağlamak, yani farklı class'lardan değişkenin değiştirilmesini engellemek. Örnek bir senaryoyu da şu şekilde verebiliriz, bir A class'ı
+içerisinde matematiksel hesaplama işlemi yapıyoruz ve elimizde Pi sayısı benzeri sabitler var bunların okunabilmesini ancak değiştirilmemesini istiyorsak bu şeilde erişimi
+kısıtlayabiliriz.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
