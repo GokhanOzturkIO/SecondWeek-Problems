@@ -514,3 +514,12 @@ Tür Dönüşümü
       "print(b == i)" kodu hata verecektir çünkü 'Byte' bir değerle 'Int' bir değer karşılaştırılamaz.
 
 =================================================================================
+
+6- "`val b: Byte = 1` ile `val i: Int = b.toInt()` ve son olarak `print(b == i)` gibi bir kod yazıldığında
+ çıktı ne olur? Neden böyle bir çıktı aldığınızı açıklayın.
+
+     Bir önceki soruda da bahsettiğim gibi "print(b == i)" kodu hata verecektir çünkü 'Byte' bir değerle
+      'Int' bir değer karşılaştırılamaz. Bunun sebebi ise, Kotlin'in güvenli tür dönüşümüne ve tür uyumluluğuna
+      verdiği önemdir. Implicit widening conversions Kotlin'de kullanılamaz.
+
+=================================================================================
