@@ -204,6 +204,11 @@ fun deneme(x: Any) {
 
 # Sonuç -2 çıkıyor ve Int türünde.Kotlin'de, Int.MAX_VALUE ile Int.MAX_VALUE ifadesi toplandığında, toplam değer integer taşması (integer overflow) oluşturur. Integer taşması durumunda, değer beklenenden daha büyük bir pozitif sayı yerine beklenenden daha küçük bir negatif sayıya döner.
 
+48-"val x = 5 / 2 println(x == 2)" gibi bir işlemin sonucu ve tipi nedir? Neden böyle olduğunu açıklayın.
+
+# Kotlin'de, iki tam sayı bölündüğünde, sonuç tam sayı olur ve herhangi bir ondalık kısmı kesilir. Dolayısıyla, 5 / 2 ifadesinin sonucu 2 olur ve tür de Int olur.
+
+
 
 
 
