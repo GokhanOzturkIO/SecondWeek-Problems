@@ -31,3 +31,35 @@ Soru 2: Eğer bir değişkene tip belirtimi yapılmaz ve bir değer atanırsa, K
 Soru 3: Float değişken oluştururken F ve f harfleri varken, Long değişken oluştururken neden küçük l harfi yoktur?
 
     Bunun sebebi bazı fontlarda küçük 'l' harfinin 1(bir)e benzediğinden dolayı kullanılmaz.
+
+------------------------------------------------------------------------------------------------------------------------
+
+Soru 4: Tek duyarlıklı (Single precision) ve Çift duyarlıklı (Double precision) kavramlarını açıklayın.
+
+    Ondalıklı sayıların gösterimi için IEEE tarafından önerilen formatlardır.
+
+    1 - Single Precision:
+
+    |----------------|-----------------|----------|
+    | 1 bit Sign Bit | 8 Bits Exponent | 23 bits  |
+    |----------------|-----------------|----------|
+
+     Bir ondalıklı sayıyı temsil etmek için 32 bit kullanır.
+     İşaret için 1 bit (pozitif veya negatif olma durumu), üssel terim için 8 bit ve önemli kısmın (mantissa olarak da bilinir)
+      yani virgülden sonraki kısım  23 bit olduğu bir yapıya sahiptir.
+      Virgülden sonra 6 - 7 basamak hassasiyeti sağlar.
+
+      Hassasiyetin az olduğu durumlarda kullanılır. Daha az yer kaplar ve hesaplama olarak daha ucuzdur.
+
+
+     2 - Double Precision:
+
+      |----------------|------------------|----------|
+      | 1 bit Sign Bit | 11 Bits Exponent | 52 bits  |
+      |----------------|------------------|----------|
+
+      Çift hassasiyetli de ondalıklı sayıları temsil etmek için 64 bit kullanır.
+      İşaret için 1 bit, üssel terim için 11 bit ve virgülden sonraki kısmın 52 bit olduğu bir yapıya sahiptir.
+      Virgülden sonra 15 - 16 basamak hassasiyeti sağlar.
+
+      Hassasiyetin daha önemli olduğu durumlarda kullanılır. Daha doğru sonuçlar verir ama daha fazla yer kaplar.
