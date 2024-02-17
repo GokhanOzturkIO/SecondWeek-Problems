@@ -40,3 +40,6 @@ Answer 15:
     işlemlerde kullanılıyorlar.
 
 Answer 16:
+    Büyük sayılarla çalışırken long un da yetemediği durumlarda BigInteger ve kassas hesaplamalar
+    için de BigDecimal kullanılır. Bunların sınırları yoktur ama kullanılabilir bellek alanı ile
+    sınırlıdır.
