@@ -19,6 +19,14 @@ Double ve Float değişkenlerle çalışırken ondalık ayıracı olarak hangi i
 Double ve Float değişkenler ondalık kısımda kaç basamağa kadar işlem yaparlar? Bu sınırın üzerinde gelen ondalık bilgileri için nasıl davranırlar? Hangi durumlar için Float ve hangi durumlar için Double kullanılmalıdır?
 * Float 32 bitlik bir veri türüdür, 7 basamağa kadar işlem yapar ve single precision olarak adlandırılır. Double 64 bitlik bir veri türüdür, 15 basamağa kadar işlem yapar ve double precision olarak adlandırılır . Performans olarak fark olsa da yüksek doğruluk sağladığı için bilimsel hassas hesaplamalar yapmak gerektiğinde Double tercih edilmelidir.
 
+Ondalık(Decimal), Onaltılık (Hexadecimal) ve İkilik (Binary) değişkenleri Kotlin'de nasıl tanımlayabilirsiniz?
+* Ondalık değişkenler doğrudan tanımlanabilir. Örnek val a: Double = 3.14
+Hexadecimal değişkenler başına 0x ön eki alarak tanımlanır. Örnek val a: Int = 0x10
+Binary değişkenler 0b ön eki konularak tanımlanır. Örnek val a: Long = 0b1010
+
+
+
+
 
 
 
