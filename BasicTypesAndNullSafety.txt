@@ -24,7 +24,8 @@ Bir değişkeni nullable yapmak için ne yapmalıyız?
 "Null Güvenliği" (Null Safety) kavramını açıklayın.
 * Null bir değişkenin hiçbir nesneye referans olmaması anlamına gelir. Kotlin null safety bir dildir. Javadaki gibi run edilmiş bir kodda NullPointerException hatasını daha almadan IDE tarafından uyarı verir.
 
-
+Bir değişkene null değer atanır ve tip belirtilmezse Kotlin bu değişkeni nasıl yorumlar?
+* Kotlin değişkenin tipini null olarak belirler. Değişken türü artık String? gibi nullable olur.
 
 
 
