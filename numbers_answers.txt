@@ -140,3 +140,22 @@ Soru 11 : == ile neyi karşılaştırırız? === ile neyi karşılaştırırız?
  == operatörü ile iki değişkenin değerlerinin aynı olup olmadığı kontrol edilir.
  === operatörü ile ise iki değişkenin aynı referans adresini gösterip göstermediği kontrol edilir.
 
+------------------------------------------------------------------------------------------------------------------------
+
+Soru 12: === operatörü ile karşılaştırma yaparken Byte değer aralığı neden önemlidir?
+Kotlin bu aralığa göre neden özel bir davranış sergiler?
+
+    val a: Int = 100
+    val boxedA: Int? = a
+    val anotherBoxedA: Int? = a
+    println(boxedA === anotherBoxedA)
+    // a 100 değerini aldığında true ama a 129 değerini aldığında false dönecek.
+
+    Bunu anlamak için iki adet nullable değişkenlerin karşılaştırması üzerinden gidelim. Biliyorsunuz ki bir değişken
+    nullable olduğunda onun değeri artık reference değer tipli oluyordu. Bir önceki sorudaki bilgimize göre bu iki değişken
+    karşılaştırması yapıldığında false dönmesini bekleriz. Çünkü bir değişken oluşturduğumda bunun bellekte bir nesnesi
+    oluşturulur ve benim değişkenim bu nesnenin refernsını tutar.
+
+   Kotlin'de -128 ile 127 arasındaki byte tam sayıları için aynı bellek konumunu paylaşan bir özel optimizasyon vardır
+   ve bu nedenle bu aralıktaki tamsayılar için değer karşılaştırması yapılır. Yani bu değerler arasında olan değişkenlerin
+   hepsi bellekte STACK kısmında tutulur.
