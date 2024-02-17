@@ -131,3 +131,13 @@ Soru 8: "Null Güvenliği" (Null Safety) kavramını açıklayın?
 
 --------------------------------------------------------------------------------------
 
+Soru 9: Bir değişkene null değer atanır ve tip belirtilmezse Kotlin bu değişkeni nasıl yorumlar?
+
+    Eğer bir değişkenin tipi açık bir şekilde (explicit) olarak belirtilmezse ve değişkene null ataması yapılırsa, IDE Tip Çıkarımı (Type Inference) sırasında bu değişkenin tipini Nothing? olarak belirler.
+
+    val number = null
+
+    Nothing değişkenler daha çok herhangi bir fonksiyonun bir değer döndürmek zorunda olmadığı durumlarda kullanılır. Genelde exception fırlatmalarda görürüz. 
+    Unit'den farklıdır ama Unit bir boş da olsa bir değer döndüğünü söyler Nothing hiçbir şeydir.
+
+	
