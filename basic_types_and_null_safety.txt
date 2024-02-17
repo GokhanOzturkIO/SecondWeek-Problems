@@ -1,2 +1,4 @@
 1. val ile var arasındaki fark nedir?
 - val degisken read only degiskendir. var degisken ise degeri degistirilebilir degiskendir.
+2. Bir var değişkeni val gibi davranmasını nasıl sağlayabiliriz val kelimesini kullanmadan? Bunu neden yapmak isteriz? Örnek bir senaryo verin.
+- Bir var degiskenin set ozelligini private yaparsak yeni deger set edilemez. val degisken gibi davranmasini saglayabiliriz. Bu durumu; kullanıcının degismesini istemedigimiz degerleri degistirmemesi icin kullanabiliriz.
