@@ -29,6 +29,9 @@ Binary değişkenler 0b ön eki konularak tanımlanır. Örnek val a: Long = 0b1
 Sekizlik (Octal) değişkenler Java'da nasıl tanımlanır? Kotlin'de Sekizlik değişken tanımlanabilir mi?
 * Octal değişkenler Java da "0" ön ekiyle tanımlanır. Kotlin' de octal tanım için bir syntax yoktur , onun yerine ondalık sayı gibi tanımlanır ve ön eki almaz.
 
+"Geleneksel Notasyon" (Conventional Notation) gösterimi nasıl yapılır?
+* Bir şeyin standart veya geleneksel bir şekilde yazılması anlamına gelir. Örnek olarak Kotlin topluluğunca kullanılan geleneksel bir gösterim olan  class MyClass{} buna bir örnektir.
+
 
 
 
