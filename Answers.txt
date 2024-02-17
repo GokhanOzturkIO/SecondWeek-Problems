@@ -44,3 +44,12 @@ Yukarıdaki kod içerisinde width, height, length ve used space değerleri isten
 isimli değişkenin değerenin sürekli değişmesini sağlar bu da val değişkenlerin immutable (değişmez) değil de read-only (salt okunur) olduğunun kanıtıdır.
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+4- "Tip Çıkarımı" (Type inference) kavramını açıklayın. Hangi durumlarda tip belirtmek kesin olarak gereklidir?
+
+Type Inference bir değişken tipinin geliştirici tarafından tanımlanmamış olsa dahi eşitliğin diğer tarafı incelenerek ide tarafından tanımlanması işlemine verilen isimdir.
+Tip belirtmenin kesin olarak yapılası gereken durum property'e değerin sonradan atandığı durumlardır, örneğin lateinit gibi ya da nullable yapılar için de değişken 
+tipinin kesin olarak belirtilmesi gerekir. Çünkü bu gibi yapılarda eşitliğin sağ tarafında herhangi bir değer olmadığı için ide tip çıkarımını yapamaz.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
