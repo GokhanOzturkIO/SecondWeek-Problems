@@ -26,6 +26,11 @@ Soru 2: Eğer bir değişkene tip belirtimi yapılmaz ve bir değer atanırsa, K
 
         val balance = 5000L // 5000 normalde Int değer aralığının içerisinde ama ben bu değişkenin Long olmasını istedim.
 
+
+    Ondalıklı sayılarda ise;
+    Eğer değişkenin float olması için `f` veya `F` olarak belirtilmezse değere, default olarak Double olarak belirlenir.
+
+
 ------------------------------------------------------------------------------------------------------------------------
 
 Soru 3: Float değişken oluştururken F ve f harfleri varken, Long değişken oluştururken neden küçük l harfi yoktur?
@@ -72,3 +77,23 @@ Soru 5: Double ve Float değişkenlerle çalışırken ondalık ayıracı olarak
     Programlama dillerinin (.) işareti kullanılır. Ama bazı durumlarda özeliklle bir veri tabanı kullandığımızda,
     kullandığımız veri tabanı dilinde defalut olarak nokta (.) değilde virgül (,) kullanımı olduğunda bazı hatalara
     sebep olabilir. Bunlara dikkat etmek gerekir.
+
+------------------------------------------------------------------------------------------------------------------------
+
+Soru 6: Double ve Float değişkenler ondalık kısımda kaç basamağa kadar işlem yaparlar?
+    Bu sınırın üzerinde gelen ondalık bilgileri için nasıl davranırlar?
+
+    Float değişkenler ondalık kısımda 6 - 7 basamağa kadar işlem yapabilirken
+    Double değişkenler 15 - 16 basamağa kadar işlem yapabilirler.
+
+    Eğer bir değişkeni açık olarak Float belirttik ve ondalık sayı kısmında 6-7 basamaktan fazla girdi eklediğimizde,
+    değer yuvarlanır.
+
+   val eFloat = 2.7182818284f // Float, actual value is 2.7182817
+
+
+   Hangi durumlar için Float ve hangi durumlar için Double kullanılmalıdır?
+
+   İşlem hassasiyeti önemli olan işlemlerde Double, çok fazla işlem hassasiyeti gerektirmeyen işlemlerde ise Float
+   kullanılır. (Alabilecekleri max - min değerler hesaba katıldıktan sonra)
+
