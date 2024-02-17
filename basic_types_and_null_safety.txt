@@ -1,0 +1,2 @@
+1. val ile var arasındaki fark nedir?
+- val degisken read only degiskendir. var degisken ise degeri degistirilebilir degiskendir.
