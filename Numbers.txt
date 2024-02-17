@@ -48,6 +48,12 @@ Sayısal değişkenlerde hangi matematiksel operatörler kullanılabilir?
 * Toplama + , Çıkarma - , Çarpma * , Bölme / , Mod alma % , artırma (a++) , azaltma (a--) , ve a += 3 (a = a + 3 ) gibi atama operatörleri kullanılabilir.
 
 
+Sayısal değişkenlerde hangi karşılaştırma operatörleri kullanılabilir?
+* a == b eşitliği, a! = b eşitsizliği, a>b büyüklük ifadesi, a<b küçüklük ifadesi, >= büyük eşittir ifadesi ve <= küçük eşittir ifadesi kullanılabilir.
+
+
+
+
 
 
 
