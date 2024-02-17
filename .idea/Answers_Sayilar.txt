@@ -5,3 +5,8 @@ Answer 1:
     Değer aralıkları, sayısal tiplerin tutabileceği maksimum ve minimum değerler belirli veri türüne
     bağlı olduğu için önemlidir. Programın hesaplama ihtiyaçları için uygun olanlarını kullanmak
     önemlidir.
+
+Answer 2:
+    Tipini belirtmeden bir değer atanırsa, o değer için en uygun aralığa IDE karar vererek
+    eşleyecektir.(type inference) Örneğin, verilen değer byte'a da uyuyor olsa bile kotlin bu konuda
+    olabilecek hataları ön görerek yine de onu int olarak atayacaktır.
