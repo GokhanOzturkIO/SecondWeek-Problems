@@ -222,7 +222,7 @@ fun deneme(x: Any) {
 
 as? Operatörü: as? operatörünü kullanarak güvenli bir şekilde tür dönüşümü yapabilirsiniz. Bu operatör, dönüşüm başarısız olduğunda null değer döndürür. 
 
-is Operatörü ile Tip Kontrolü: Tür dönüşümü yapmadan önce, is operatörü ile tip kontrolü yaparak dönüşümün başarılı olup olmayacağını kontrol edebilirsiniz. 
+is Operatörü ile Tip Kontrolü: Tür dönüşümü yapmadan önce, is operatörü ile tip kontrolü yaparak dönüşümün başarılı olup olmayacağını kontrol edebilirsiniz.
 
 
 
