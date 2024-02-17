@@ -33,4 +33,8 @@ Değeri nothing olarak belirlenir ve işe yaramayan bir değişken olurlar.
 
 10-> İlkel bir değişkenin nullable olması ile null değer alamaması arasında bellek yönetimi açısından nasıl farklar vardır?
 Nullable değişkenler bellekte daha fazla yer kaplar çünkü class olarak tutulurlar.Null olmayanlar daha az yer kaplar çünkü primitive tipte yer alırlar.
+
+11-> Nullable bir değişkenin bir değere sahip olması ile null olması arasında bellek yönetimi açısından nasıl bir fark vardır? Null değer almış bir değişken bellekte yer kaplamaz diyebilir miyiz?
+Şöyle bir fark vardır.Nullable değişkenin bir değere sahip olması durumunda, bellekte o değeri tutacak kadar yer ayrılır.Ama eğer nullable değişken null değerine sahipse, bu durumda bellekte ayrılmış bir değer yoktur.
+
  
