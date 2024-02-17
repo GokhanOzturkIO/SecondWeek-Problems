@@ -34,6 +34,11 @@ Sekizlik (Octal) değişkenler Java'da nasıl tanımlanır? Kotlin'de Sekizlik d
 
 
 
+Sayısal değişkenlerde alt çizgi (underscore) nasıl kullanılır? Kotlin bunu nasıl yorumlar?
+* Değerin okunaklı olmasını sağlar .val a = 1_000_000 değişkeninin 1 milyon olduğunu daha rahat okuyabiliriz. Derleyici tarafından göz ardı edilir sadece görsel iyileştirme sağlar.
+
+
+
 
 
 
