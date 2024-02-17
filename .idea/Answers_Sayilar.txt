@@ -1,0 +1,7 @@
+##Sayılar##
+
+Answer 1:
+    Integer,Long,Float,Double,Short,Byte.
+    Değer aralıkları, sayısal tiplerin tutabileceği maksimum ve minimum değerler belirli veri türüne
+    bağlı olduğu için önemlidir. Programın hesaplama ihtiyaçları için uygun olanlarını kullanmak
+    önemlidir.
