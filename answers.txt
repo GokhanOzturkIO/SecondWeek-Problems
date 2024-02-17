@@ -451,3 +451,15 @@ Sayılar
       performansın azalmasına neden olabilir. Yine tip dönüşümleriyle bu sorun çözülebilir.
 
 =================================================================================
+=================================================================================
+
+Tür Dönüşümü
+
+1- `is` ve `!is` operatörlerinin kullanımını açıklayın.
+
+     'is' operatörü, bir nesnenin belirli bir türe ait olup olmadığını kontrol etmek için kullanılır.
+      Eğer bir nesne belirtilen türe aitse 'true', ait değilse 'false' döner.
+      '!is' operatörü, 'is' operatörünün tam tersidir. Yani bir nesnenin belirli bir türe ait olmadığını 
+      kontrol eder. Eğer bir nesne belirtilen türe ait değilse 'true', aitse 'false' döner.
+
+=================================================================================
