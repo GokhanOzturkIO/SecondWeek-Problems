@@ -59,3 +59,13 @@ Kotlin’de class gibi görünen değişken tipleri (normalde primitive olduğun
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+6- "Tip Güvenliği" (Type Safety) kavramını açıklayın.
+
+Tip güvenliği yazılım geliştirme sırasında yapabileceğimiz olası küçük hataları önlemek için geliştirilmiş bir doğrulama sistemi olarak tanımlanabilir. Bir örnekle durumun
+daha iyi anlaşılmasını sağlayalım örneğin bir değişken tanımladınız ve buna sayısal bir değer ataması yaptınız, projenin ilerleyen kısımlarında dalgınlık ile bu sayısal değer
+içeren değişkene string bir değer atamaya çalıştınız. Bu senaryoda eğer tip güvenliği içermeyen bir dil ile çalışıyorsanız uygulamanız çökebilir ya da hatalı sonuçlar
+üretebilir, ama eğer tip güvenliği içeren bir dil ile çalışıyorsanız ide sizlere hata verir. Bu sayede birçok olası hatadan kurtulmuş oluruz. Kotlin tip güvenliğine sahip bir dildir.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
