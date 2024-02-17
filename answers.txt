@@ -568,3 +568,12 @@ Tür Dönüşümü
       sonucu olarak 'Long' bir değer alınması gerektiği için küsürat kısmı alınmaz ve sonuç 2 olur.
 
 =================================================================================
+
+12- "`val x = 5 / 2.toDouble()` `println(x == 2.5)`" gibi bir işlemin sonucu ve tipi nedir?
+ Neden böyle olduğunu açıklayın.
+
+     Bu işlemde çıktı 'true' olur, 'x' değişkeninin tipi ise 'Double' olur çünkü işlemdeki
+      en büyük değer 'Double'dır. 'x'in tipi 'Double' olduğu için artık tam cevabı kontrol
+      etmemiz gerekir. Bu soruda da işlemin cevabı 2.5'dur, o yüzden de çıktı 'true' olur.
+
+=================================================================================
