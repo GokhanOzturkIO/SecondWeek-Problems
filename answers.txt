@@ -125,6 +125,11 @@ Değer aralıkları bellekte kaplanan alanı temsil eder ve büyük projelerde v
 
 # İşaretsiz sayılar, aynı genişlikteki işaretli karşılık türünün tek bir depolama özelliğini içeren içe gömülü sınıflar olarak uygulanır. İşaretsiz ve işaretli tamsayı türleri arasında dönüşüm yapmak istiyorsanız, kodunuzu güncellediğinizden emin olun, böylece herhangi bir işlev çağrısı ve işlem yeni tipe destek verir.
 
+32-"İşaretsiz" değişkenlerin harf gösterimi nasıldır?
+
+# İşaretsiz değişkenler var unsigned : UInt = 34u şeklinde atanır.
+
+
 
 
 
