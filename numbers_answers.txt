@@ -132,3 +132,11 @@ Soru 10: Sayısal değişkenlerde alt çizgi (underscore) nasıl kullanılır? K
 
     val oneMillion = 1_000_000 // Böyle yazılmış bir değişkeni print ettiğimizde 1000000 olarak yazdırır. _ olarak
     belirttiğimiz alt çüzgileri yazdırmaz.
+
+------------------------------------------------------------------------------------------------------------------------
+
+Soru 11 : == ile neyi karşılaştırırız? === ile neyi karşılaştırırız?
+
+ == operatörü ile iki değişkenin değerlerinin aynı olup olmadığı kontrol edilir.
+ === operatörü ile ise iki değişkenin aynı referans adresini gösterip göstermediği kontrol edilir.
+
