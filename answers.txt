@@ -200,6 +200,10 @@ fun deneme(x: Any) {
 
 # Kotlinde matematiksel operatörler kullanılırken 2 farklı tipte sayı kullanıldığında sonuç en büyüğüne eşit olur bu yüzden result Long tipinde olur.
 
+47-"val result = Int.MAX_VALUE + Int.MAX_VALUE" gibi bir işlemin sonucunda "result" değişkeninin tipi ve değeri ne olur? Neden böyle olduğunu açıklayın.
+
+# Sonuç -2 çıkıyor ve Int türünde.Kotlin'de, Int.MAX_VALUE ile Int.MAX_VALUE ifadesi toplandığında, toplam değer integer taşması (integer overflow) oluşturur. Integer taşması durumunda, değer beklenenden daha büyük bir pozitif sayı yerine beklenenden daha küçük bir negatif sayıya döner.
+
 
 
 
