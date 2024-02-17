@@ -49,3 +49,5 @@ Answer 17:
     temsil edemediği için yuvarlama davranışı ortaya çıkar. Yani değer tam olarak temsil edilemediği
      için en yakın değerine yuvarlanacaktır. Kotlinde bunu BigDecimal kullanarak çözebiliriz. Ama
      onu da kullanmazsak bu yuvarlama davranışı dile veya paltorma bağlı olduğu için değiştirilemez.
+
+###İşaretsiz sayılar kısmındaki soruları araştırma yaptıktan sonra cevaplayacağım.
