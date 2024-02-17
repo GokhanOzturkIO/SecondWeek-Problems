@@ -104,3 +104,13 @@ Soru 7: Ondalık(Decimal), Onaltılık (Hexadecimal) ve İkilik (Binary) değiş
  val decimal = 110
  val hexadecimal = 0x0F
  val binaries = 0b1111100
+
+------------------------------------------------------------------------------------------------------------------------
+
+Soru 8: Sekizlik (Octal) değişkenler Java'da nasıl tanımlanır? Kotlin'de Sekizlik değişken tanımlanabilir mi?
+
+    Java'da, sekizlik (octal) sayılar genellikle bir "0" öne eklenerek ifade edilir. Örneğin:
+    int octalNumber = 0123;  // Bu, ondalık olarak 83'e karşılık gelir
+
+    Ancak, Kotlin dilinde octal değişkenler tanımlayamayız.
+    Kotlin, sayıları varsayılan olarak ondalık sistemde kabul eder.
