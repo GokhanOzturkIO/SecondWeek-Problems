@@ -29,6 +29,11 @@ Smart cast belli kısıtlamalara sahiptir . Bir sınıfın private olmayan alanl
 
 
 
+"Güvenli & Güvensiz" operatörler nelerdir?
+* Güvenli çağrı "?" ile sağlanır. Null kontrolü yaptıktan sonra eğer null ise kodumuz hata vermeden devam edecektir. Güvensiz çağrı "!!" ile sağlanır. Null kontrolünden geçemezse kodumuz NullPointerException hatası verecektir.
+
+
+
 
 
 
