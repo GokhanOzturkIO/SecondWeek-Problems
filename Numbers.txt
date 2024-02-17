@@ -51,6 +51,9 @@ Sayısal değişkenlerde hangi matematiksel operatörler kullanılabilir?
 Sayısal değişkenlerde hangi karşılaştırma operatörleri kullanılabilir?
 * a == b eşitliği, a! = b eşitsizliği, a>b büyüklük ifadesi, a<b küçüklük ifadesi, >= büyük eşittir ifadesi ve <= küçük eşittir ifadesi kullanılabilir.
 
+Bit düzeyinde operatörler (Bitwise operators) nelerdir? Ne amaçla kullanılır? Kotlin'de bunları nasıl kullanabilirsiniz?
+* AND & iki sayının bitleri 1 ise sonuç 1 olur, OR | iki sayının en az 1 tanesi 1 ise sonuç 1 olur, XOR ^ iki sayının bitleri farklı ise sonuç 1 olur, NOT ~ Bitleri ters çevirir 1 i 0 , 0 ı 1 yapar, Bit Shift << >> Sayıyı bir miktar sağa veya sola kaydırır. Sayıları manipüle etmek için kullanılan güçlü bir araçtır. Sayıları ikili tabanda gösterme, tamsayılar arasında dönüştürme, bit shift ve rotasyon gibi birçok işlemi yapmaya olanak sağlar.  Kotlin' de sinyal işlemede, yüksek performanslı hesaplamalarda ve sıkı paketlenmiş veri yapılarının oluşturulmasında kullanılabilir.
+
 
 
 
