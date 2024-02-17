@@ -523,3 +523,11 @@ Tür Dönüşümü
       verdiği önemdir. Implicit widening conversions Kotlin'de kullanılamaz.
 
 =================================================================================
+
+7- Sayısal değişkenlerde açık dönüşüm (Explicit Type Conversion) yaparken hangi fonksiyonları kullanabilirsiniz?
+
+     Sayısal değişkenlerde 'Explicit Type Conversion' yaparken genelde (to()) fonksiyonu kullanılır.
+      Örn. "intNumber.toLong()" Bunun dışında 'Long' ve 'Float' tipleri belirtmek için 'L', 'F' veya 'f'
+      kullanılabilir. Örn. "3F", "3f", "3L".
+
+=================================================================================
