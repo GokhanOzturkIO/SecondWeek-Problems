@@ -10,3 +10,5 @@ Eğer bir değişkene tip belirtimi yapılmaz ve bir değer atanırsa, Kotlin ti
 Float değişken oluştururken F ve f harfleri varken, Long değişken oluştururken neden küçük l harfi yoktur?
 * Küçük L ( l ) rakam olan 1 e benzediğinden dolayı büyük L ile kullanılır.
 
+Tek duyarlıklı (Single precision) ve Çift duyarlıklı (Double precision) kavramlarını açıklayın.
+* Single precision bellekte 32 bit harcar ve GPU alanlarında kullanılır. Double Precision bellekte 64 bit harcar ve matematiksel işlemlerin daha yoğun olması beklendiği CPU tarafından kullanılır. Daha az bellek kullanması istenildiğinde Half precision da kullanılabilir fakat 16 bit harcadığı için bellek hassasiyetini dikkatlice incelemek lazım. Bu performans kazanımı göz ardı edilecek seviyede olduğu için genellik Single precision tercih edilir.
