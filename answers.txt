@@ -121,6 +121,9 @@ Değer aralıkları bellekte kaplanan alanı temsil eder ve büyük projelerde v
 
 # İşaretsiz değişkenler sadece pozitif değerlere sahip olan sayısal değişken türüdür diyebiliriz.Aralarındaki fark negatif sayıların işaretsizde olmamasıdır.
 
+31-"İşaretsiz" değişkenler nasıl bir sınıf yapısında tutulurlar? Bu neden önemlidir?
+
+# İşaretsiz sayılar, aynı genişlikteki işaretli karşılık türünün tek bir depolama özelliğini içeren içe gömülü sınıflar olarak uygulanır. İşaretsiz ve işaretli tamsayı türleri arasında dönüşüm yapmak istiyorsanız, kodunuzu güncellediğinizden emin olun, böylece herhangi bir işlev çağrısı ve işlem yeni tipe destek verir.
 
 
 
