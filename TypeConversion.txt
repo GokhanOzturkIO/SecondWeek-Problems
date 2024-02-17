@@ -52,5 +52,9 @@ Sayısal değişkenlerde açık dönüşüm (Explicit Type Conversion) yaparken 
 * Overflow yaşanır. Tipi Integer olur ve değeri -2 olur. En büyük Type ı sonuç olarak kabul etsek de sonuç Integer değerinin dışına çıkmış olacağı için yanlış bir cevap verecektir. Bunu önlemek için explicit casting yapabiliriz. Herhangi bir değere Int.MAX_VALUE.toLong() dersek sonucu en büyük Tipte alacağı için Long değerine sahip olacaktır ve değeri 4294967294 şeklinde doğru verilecektir.
 
 
+"val x = 5 / 2 println(x == 2)" gibi bir işlemin sonucu ve tipi nedir? Neden böyle olduğunu açıklayın.
+* True dur ve Integer tipindedir. Çünkü 5 ve 2 tamsayıları otomatik olarak Integer tipine dönüştürülür. Dolayısıyla sonucun da Integer olması beklenir. Bu yüzden değer 2.5 değil 2 olacaktır.
+
+
 
 
