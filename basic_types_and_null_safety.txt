@@ -8,4 +8,7 @@
 - Değismez kavrami ne olursa olsun degistiremedigimiz, degismemesi gereken degerdir. salt okunur kavramı, degerini gorebildigimiz ama degistiremedigimiz nesnelerdir. val degiskenler diger degiskenlere bagli olarak degeri degisebilir degiskendir, ama bu son degerin degerini sonradan degistiremeyiz. Bu sebeple read-only olarak tanımlanmalidir.
 
 4. "Tip Çıkarımı" (Type inference) kavramını açıklayın. Hangi durumlarda tip belirtmek kesin olarak gereklidir?
-- Type inference, bir degiskene deger atadigimizda o degiskene manuel olarak bir tip atamasak bile, IDE bu degiskenin tipine karar verebilir. Degiskenin ilk deger atamasi yoksa ve null deger alabilir oldugunda tip belirtmek zorundayiz.s
+- Type inference, bir degiskene deger atadigimizda o degiskene manuel olarak bir tip atamasak bile, IDE bu degiskenin tipine karar verebilir. Degiskenin ilk deger atamasi yoksa ve null deger alabilir oldugunda tip belirtmek zorundayiz.
+
+5. Kotlin'de tüm değişkenlerin sınıf olarak bulunması, "ilkel tip" (primitive type) olmadıkları anlamına gelir mi? Arka planda neler oluyor?
+- Kotlin'de class gibi gozuken degisken tipleri ozel optimizasyonlarla Bytecode'a cevrilirken yine primitive olacak sekilde cevrilir. Arka planda degiskenler primitive tiplere cevrilir.
