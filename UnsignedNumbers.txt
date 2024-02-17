@@ -1,0 +1,3 @@
+"İşaretsiz" (Unsigned) değişkenler ne demektir? İşaretli olanlarla aralarındaki fark nedir?
+* Unsigned değişkenler sadece pozitif sayıları temsil eden veri tipleridir. İşaretli olanlarla arasındaki fark - ve + değerleri arasında değil sadece 0 ile pozitif değer aralığındadır. Örnek olarak Unsigned olan UByte' ın değer aralığı 0 255 arasındadır. Signed değişken olan Byte ' ın değer aralığı -128 ile 127 arasındadır.
+
