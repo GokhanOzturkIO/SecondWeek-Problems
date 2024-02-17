@@ -2,3 +2,7 @@
 Kaç farklı tipte "number" sınıfı miras alan "alt sınıf" (child class) vardır? Bunların değer aralıkları neden önemlidir?
 *Byte,Short,Integer,Long,Float ve Double olarak 6 adet adettir. Her birinin değer aralığı değişiklik gösterdiği için bellekte kapladığı yer miktarı da aynı değildir. 1 rakamını tüm alt sınıflar ile çağırabiliriz. Fakat 128 sayısını Byte ile çağıramayız çünkü Byte 127 den daha büyük bir değer alamaz. Explicit intent kullanarak toShort() yaptığımızda tip artık Short olacaktır. Bu düzeltmeyi yapmadan bir değişkene 1 atadığımızda IDE bunu integer olarak belirler çünkü integer yaygın olarak kullanımda esneklik ve kolaylık sağlar. Bellek kullanım farkı göz ardı edilir. Yine de Byte olarak atandığında çok küçük de olsa performans kazanımı olacaktır.
 
+
+
+Eğer bir değişkene tip belirtimi yapılmaz ve bir değer atanırsa, Kotlin tip çıkarımını nasıl yapar?
+* Atanan sayı değeri integer aralığında ise otomatik olarak integer, eğer daha fazlaysa Long gibi kendi aralığında bir tip çıkarımı yapar. Text ataması yaparsak otomatik olarak String tipinde çıkarım yapar.
