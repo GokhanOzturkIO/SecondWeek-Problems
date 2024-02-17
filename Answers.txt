@@ -15,7 +15,7 @@ Temel Türler & Null Güvenliği
 
 3. "Değişmez" (Immutable) ve "Salt Okunur" (ReadOnly) kavramlarını açıklayın. val değişkenler neden aslında "değişmez" değil de "salt okunur" olarak açıklanmalıdır?
 
-- Değişmez (Immutable), değerini istediğimiz kadar değiştirebildiğimiz anlamına gelir. ReadOnly ise, değeri okunabilen ama set edilemeyen anlamına gelir. ReadOnly ve Immutable arasında ince bir fark vardır. Bu, kendisinin değişmez olduğu anlamına gelmez; sadece atanan değerin tekrar değiştirilemeyeceği anlamına gelir. 
+- Değişmez (Immutable), değerini istediğimiz kadar değiştiremedğimiz anlamına gelir. ReadOnly ise, değeri okunabilen ama set edilemeyen anlamına gelir. ReadOnly ve Immutable arasında ince bir fark vardır. Bu, kendisinin değişmez olduğu anlamına gelmez; sadece atanan değerin tekrar değiştirilemeyeceği anlamına gelir. 
 
 ................
 
@@ -398,7 +398,7 @@ as? işleminin sağ tarafı bir null olmayan String türü olmasına rağmen, d�
 
 10. "val x = 5 / 2 println(x == 2)" gibi bir işlemin sonucu ve tipi nedir? Neden böyle olduğunu açıklayın.
 
-- İki sayı da Int olduğu için bunun çıktısı da int olur. Dolayısıyla çıktı 2 olacağı için 2 == 2 sonucu da true dönecektir.
+- İki sayı da Int olduğu için bunun çıktısı da Int olur. Dolayısıyla çıktı 2 olacağı için 2 == 2 sonucu da true dönecektir.
 
 ................
 
