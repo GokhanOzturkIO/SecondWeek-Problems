@@ -152,7 +152,7 @@ Binary sayılar val binaryNumberLong: Long = 0b11001100L
 <--------------------------------------------------------------------------------------------------------------------------------------------------->
 
 
-9) Geleneksel notasyon sayıların alt çizgi('_') ile ayrılmasıdır.  Örneğin val number = 10_000_000 
+9) Kotlin'de geleneksel matematiksel notasyonu kullanarak bir işlemi göstermek istiyorsanız, genellikle temel matematiksel operatörleri ve ifadeleri kullanarak bunu yapabilirsiniz. Örneğin, toplama, çıkarma, çarpma, bölme işlemleri için kullanılan operatörlerin yanı sıra üs alma ve kök alma gibi matematiksel işlemleri ifade edebilirsiniz.
 
 
 <--------------------------------------------------------------------------------------------------------------------------------------------------->
