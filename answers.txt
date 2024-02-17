@@ -560,3 +560,11 @@ Tür Dönüşümü
       çıktı 'true' olur ve 'x' değişkeninin tipi de 'Int' olur.
 
 =================================================================================
+
+11- "`val x = 5L / 2` `println(x == 2L)`" gibi bir işlemin sonucu ve tipi nedir? Neden böyle olduğunu açıklayın.
+
+     Bu işlemde sonuç yine 'true' olur. 'x' değişkeninin tipi bu sefer 'Long' olur çünkü işlemdeki
+      en büyük tip 'Long'dur. Sonucun 'true' olmasının sebebi ise bir önceki soruyla aynı. İşlem
+      sonucu olarak 'Long' bir değer alınması gerektiği için küsürat kısmı alınmaz ve sonuç 2 olur.
+
+=================================================================================
