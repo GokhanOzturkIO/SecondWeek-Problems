@@ -96,3 +96,24 @@ Answer 11:
     bir değeri olursa -> Bellekte null referansı saklanır ve ayrıca gerçek veri de yer kaplar.
     ÖZETLE:null olursa, sadece referansı bellekte saklanırken, bir değeri varsa hem referansı hem de
     değer için yer ayırması gerekmektedir.
+
+Answer 12:
+    İki farklı operatör ile çalışırız.(!! ve ?.)
+    (!!) in anlamı : Ben bu veriye gelecek veriden eminim. nullable yaptım ama null gelmeyecek problem
+    yok sen derlemeye devam et. Yani bu !! den sonra gelecek kodları çalıştırmasını söylüyoruz. Biz bu
+    işareti kullandık diyelim, ama bize yine de bir problem çıktı ve null değer geldi. Bu durumda kod
+    yine çalışacak fakat null geldiği için uygulama crash olacaktır.
+    (?.) nın anlamı : Bu veri null gelirse devamındaki işlemleri yapma. null gelmezse yap.
+ ---Örnek olarak bir kullanıcı giriş yaptı ve giriş ekranında hoşgeldiniz Büşra Macak şeklinde bir
+    yazı göstereceğiz. Fakat bu yazı null geldi biz burada ?. ile kontrol edersek null geldiği için
+    devamını yapmayacak ve hoşgeldiniz den sonraki kısımda ad soyad yazmayacak. ama biz !! kullanırsak
+    ve null gelirse uygulama crash olacaktır. Bu senaryoda isim gelmedi diye uygulamayı crash etmek
+    çok mantıklı değil ad soyad o an gelmemiştir boş kalabilir. Bu yüzden ?. kullanmak çok daha mantıklı.
+ ---Başka bir örnek verirsek, Sayılarla işlem yapıyoruz bu kredi bilgileri olabilir, borç bilgileri
+    olabilir bu gibi önemli verilerle işler yaparken bize gelecek veriye hesap yaptırıp sonuç
+    hesaplatacaksak kullanıcı da ona göre işlemi onaylayıp onaylamayacağına karar verecekse, biz
+    kontrolleri ?. kullanarak yaparsak veri null gelirse işlemler devam etmeyecek ve o kısımlar boş
+    kalacak ve kalan hesapları yaparken bu değeri de kullanacağı için hatalı hesaplamalar yaparak ,
+    yanlış sonuç verecektir. !! kullanırsak bu değer null gelirse uygulama hiçbir işleme devam
+    edemeyerek crash olacaktır. Bu senaryoda o kısım boş kalıp da yanlış hespqlamaya devam etmesindense,
+    crash alarak önemli hataları önlemek daha öncelikli olacağı için !! kullanmak daha mantıklı olacaktır.
