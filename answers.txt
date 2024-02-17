@@ -137,6 +137,9 @@ Değer aralıkları bellekte kaplanan alanı temsil eder ve büyük projelerde v
 
 # ULong şeklinde bir tip adı vardır ve değerlerin sonuna L veya l koyularak belirlenir.
 
+35-"İşaretsiz" değişkenlerin kullanım amaçları nelerdir?
+
+# İmzasız sayıların temel kullanım alanı, pozitif değerleri temsil etmek için bir tamsayının tam bit aralığını kullanmaktır.
 
 
 
