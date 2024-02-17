@@ -29,3 +29,6 @@ Answer 12:
 
 Answer 13:
     Sayısal değişkenlerde ( +, - , *, /, %) matematiksel operatörler kullanılabilir.
+
+Answer 14:
+    Sayısal değişkenlerde (==, !=, >, >=, <, <=) karşılaştırma operatörleri kullanılabilir.
