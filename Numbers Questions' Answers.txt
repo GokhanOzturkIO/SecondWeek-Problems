@@ -1,0 +1,8 @@
+---------------------------------------------------------------------------------------
+Soru 1: Kaç farklı tipte "number" sınıfı miras alan "alt sınıf" (child class) vardır? Bunların değer aralıkları neden önemlidir?
+
+  - Number sınıfını miras alan (Byte, Short, Int, Long, Float, Double) olmak üzere 5 adet child sınıfı vardır.
+ 
+  - Bu değişkenlerin bellekte kapladığı yer ve alabilecekleri max ve min değerler açısından farklılıkları vardır. Bu
+  değişkenlerin değer aralıkları bellek kullanımını daha iyi bir şekilde yönetmek için farkdında olmamız gerekiyor.
+
