@@ -43,3 +43,9 @@ Nullable durumlarda kesinlikle tip belirtmemiz lazım.
 Normal koşullarda bir tamsayı deklare ettiğimizde Kotlin Int sınırları içerisindeyse bunu otomatik olarak Int olarak tanımlar. Eğer biz bunu 'en baştan' Short ya da Long olarak tanımlamak istiyorsak tipini belirtmemiz lazım.
 
 ------------------------------------------------------------
+
+#5 Kotlin'de tüm değişkenlerin sınıf olarak bulunması, "ilkel tip" (primitive type) olmadıkları anlamına gelir mi? Arka planda neler oluyor?
+
+Bu konu hakkında Medium üzerinde yayınladığım yazıma göz atabilirsiniz. --> https://madenyasin.medium.com/kotlinde-pirimitive-de%C4%9Fi%C5%9Fkenler-abf1933c0941
+
+------------------------------------------------------------
