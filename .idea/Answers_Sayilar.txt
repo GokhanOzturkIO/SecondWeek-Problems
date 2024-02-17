@@ -32,3 +32,11 @@ Answer 13:
 
 Answer 14:
     Sayısal değişkenlerde (==, !=, >, >=, <, <=) karşılaştırma operatörleri kullanılabilir.
+
+Answer 15:
+    Bit düzeyinde operatörler ( &, |, ^, ~, <<, >>) bunlardır. sırası ile AND, OR, XOR, NOT,
+    Letf Shift, Right Shift olarak isimlendirilir. Ben bunları isim olarak biliyorum fakat kod
+    yazarken bazılarını kullanmadım. Genellikle veri maskeleme, bit temizlemei bitler arası
+    işlemlerde kullanılıyorlar.
+
+Answer 16:
