@@ -114,3 +114,12 @@ Soru 8: Sekizlik (Octal) değişkenler Java'da nasıl tanımlanır? Kotlin'de Se
 
     Ancak, Kotlin dilinde octal değişkenler tanımlayamayız.
     Kotlin, sayıları varsayılan olarak ondalık sistemde kabul eder.
+
+------------------------------------------------------------------------------------------------------------------------
+
+Soru 9: "Geleneksel Notasyon" (Conventional Notation) gösterimi nasıl yapılır?
+
+    Bir matematiksel ifadeyi geleneksel notasyon kullanarak göstermek,
+    kullanılan matematiksel sembollerin ve kuralların genel kabul görmüş standartlara uygun olmasını içerir.
+
+    123.5e10 -- Bu, bilimsel gösterimde 123,5 sayısının 10'un kuvveti olan 10 ile çarpımını temsil eder.
