@@ -437,3 +437,17 @@ Sayılar
      Bunları, örneğin "UInt.MAX_VALUE" diyerek görebiliriz.
 
 =================================================================================
+
+9- "İşaretsiz" değişken türleri (UInt, ULong vs.) kullanırken, Java API'leri ile uyumluluk konusunda
+ ne gibi sorunlar olabilir? Bunları çözmek için neler yapabilirsiniz?
+
+     Java, işaretsiz değişkenleri desteklemediği için sorunlar yaşanabiliyor. Java 'int' bir değer
+      beklerken, Kotlin'de 'UInt' vermek uyumsuzluk sağlayabiliyor. Buna çözüm olarak işaretsiz
+      değişkenleri işaretli değişkenlere dönüştürebiliriz. Bir diğer sorun ise Kotlin'de 'UInt'
+      olarak tanımladığımız bir değişken Java'da 'int' bir değişkene dönüştürülürken veri kayıpları
+      yaşanabilir. Bunu önlemek içinse 'Extension functions' veya tip dönüşümü kullanılabilir.
+      İşaretsiz tamsayı türlerinin Java'nın temel tamsayı türleriyle uyumsuzluğu, performans
+      etkilerine neden olabilir. Dönüşümler veya uyumsuz değerlerin yönetilmesi gereken durumlar,
+      performansın azalmasına neden olabilir. Yine tip dönüşümleriyle bu sorun çözülebilir.
+
+=================================================================================
