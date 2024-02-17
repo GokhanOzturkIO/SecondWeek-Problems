@@ -7,3 +7,21 @@ var tipinde ise istediğimiz kadar değişiklik yapabiliriz.
 val -> value, var -> variable kelimelerinden gelir.
 
 ------------------------------------------------------------
+
+#2 Bir var değişkeni val gibi davranmasını nasıl sağlayabiliriz val kelimesini kullanmadan? Bunu neden yapmak isteriz? Örnek bir senaryo verin.
+
+İlk değer atanma işlemine kadar val ve var değişkenler arasında pek bir fark yoktur. Önemli fark ilk değer atamadan sonra bir daha val değişkene değer atanamamasıdır.
+Bunu belirli bir seviyede var değişkene yapmak istiyorsak var değişken tanımlandıktan sonra değişkenin setter'ını private hale getirebiliriz.
+
+Bunu yaptığımızda nesne üzerinden değişkene erişip direkt olarak değer ataması yapılamaz.
+Ancak nesne ile sınıf içerisindeki metodlara erişim sağlanabiliyorsa ve bu metodlar içerisinde var değişkenin değerinde değişiklik yapılıyorsa bunu bu yöntemle engelleyemeyiz.
+
+class Visibility {
+    var myValue: String = "I act like 'val'"
+        private set
+}
+
+Bu yöntemi kullanmamızdaki amaç değişkene dışarıdan nesne yardımıyla direkt olarak erişilip değişiklik yapılmamasını istememiz olabilir. Daha kontrollü bir kod yazmış oluruz.
+Aynı zamanda gerektiğinde nesne üzerinden gerekli metodlar ile değişkende değişiklik yapılmasına da izin verilmiş olur.
+
+------------------------------------------------------------
