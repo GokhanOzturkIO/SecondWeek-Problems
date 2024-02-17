@@ -36,8 +36,8 @@ Nullable bir değişkenin bir değere sahip olması ile null olması arasında b
 
 
 
-
-
+Nullable bir değişkenle çalışırken hangi operatörleri kullanırız? Bu operatörlerin kullanım farkları nelerdir? Hangisini ne zaman kullanmak daha anlamlıdır?
+* Eğer bir değişkenin null olup olmadığını kontrol etmek istiyorsak ?. veya !! kullanırız. Örnek result!!.text ve result?.text  . Soru işaretinde amacımız IDE ye eğer result null ise kodun çalışmasına devam et mesajı vermektir. Eğer !! kullanırsak null gelen bir senaryoda uygulama crash verir ve çalışmaz. Örnek olarak bankacılık uygulamasında kullanıcının para değerinin null olarak döndüğü durumda para!! kullanmak daha mantıklı olacaktır. Çünkü uygulama kullanıcının para yönetimi üzerine yapılmıştır. Crash vermesi kullanıcının hem vakit kaybının önüne geçer hem de kodlayanın hatayı tespit edip kısa sürede çözmesine olanak sağlar.
 
 
 
