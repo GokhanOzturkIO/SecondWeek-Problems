@@ -190,8 +190,11 @@ fun deneme(x: Any) {
 
 44-"val b: Byte = 1 ile val i: Int = b.toInt() ve son olarak print(b == i) gibi bir kod yazıldığında çıktı ne olur? Neden böyle bir çıktı aldığınızı açıklayın.
 
-# Bu kodda ise b.toInt demeden önceki hatayı almayız fakat print(b == i) yerinde "Operator '==' cannot be applied to 'Byte' and 'Int'"hatasını alurız.
+# Bu kodda ise b.toInt demeden önceki hatayı almayız fakat print(b == i) yerinde "Operator '==' cannot be applied to 'Byte' and 'Int'"hatasını alırız.
 
+45-Sayısal değişkenlerde açık dönüşüm (Explicit Type Conversion) yaparken hangi fonksiyonları kullanabilirsiniz?
+
+# Kotlin'de sayısal değişkenlerde açık dönüşüm yapılırken toByte(),toShort(),toInt(),toLong(),toFloat(),toDouble() fonksiyonları kullanılır.
 
 
 
