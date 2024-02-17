@@ -1,0 +1,5 @@
+Temel Türler & Null Güvenliği
+
+1-> val ile var arasındaki fark nedir?
+var mutable bir değişkendir val ise read-only bir değişkendir. var değişkeni tanımlandığında otomatik olarak getter ve setter metodları oluşturulur ancak val'da sadece getter metodu oluşturulur.
+
