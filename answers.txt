@@ -157,6 +157,11 @@ ULong  -> 64-bit işaretsiz bir tamsayı, 0 ile 18,446,744,073,709,551,615 aras�
 
 # TODO(Çözüm bulamadım sonra düzeltilecek)
 
+39-is ve !is operatörlerinin kullanımını açıklayın.
+
+# is operatörü, bir nesnenin belirli bir tipe ait olup olmadığını kontrol etmek için kullanılır.!is operatörü, bir nesnenin belirli bir tipe ait olmadığını kontrol etmek için kullanılırken, aynı zamanda akıllı dönüşüm (smart cast) özelliğiyle birlikte çalışır ve belirli bir tipe dönüşüm yapma gereği duyulduğunda otomatik olarak dönüşüm gerçekleşir.
+
+
 
 
 
