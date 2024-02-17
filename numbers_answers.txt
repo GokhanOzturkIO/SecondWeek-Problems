@@ -63,3 +63,12 @@ Soru 4: Tek duyarlıklı (Single precision) ve Çift duyarlıklı (Double precis
       Virgülden sonra 15 - 16 basamak hassasiyeti sağlar.
 
       Hassasiyetin daha önemli olduğu durumlarda kullanılır. Daha doğru sonuçlar verir ama daha fazla yer kaplar.
+
+------------------------------------------------------------------------------------------------------------------------
+
+Soru 5: Double ve Float değişkenlerle çalışırken ondalık ayıracı olarak hangi işaretler kullanılır?
+    Bu ayıraçların kullanımında nelere dikkat etmek gerekir?
+
+    Programlama dillerinin (.) işareti kullanılır. Ama bazı durumlarda özeliklle bir veri tabanı kullandığımızda,
+    kullandığımız veri tabanı dilinde defalut olarak nokta (.) değilde virgül (,) kullanımı olduğunda bazı hatalara
+    sebep olabilir. Bunlara dikkat etmek gerekir.
