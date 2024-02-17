@@ -540,3 +540,14 @@ Tür Dönüşümü
       değişkeninin alabileceği değerden fazla bir değer almasını önlemek içindir.
 
 =================================================================================
+
+9- `val result = Int.MAX_VALUE + Int.MAX_VALUE`" gibi bir işlemin sonucunda "result" değişkeninin
+ tipi ve değeri ne olur? Neden böyle olduğunu açıklayın.
+
+     Bu işlemin sonucunda 'result' değişkeninin tipi 'Int' olur çünkü işlemdeki en büyük sayı
+      'Int' tipindedir. 'result' değişkeninin değeri ise anlamsız bir sayı olur çünkü işlemin sonucu
+      'Int' değer aralığını aşmış olur. Örnekte işlemde bu sorunun önüne geçmek için, işlem yapılan
+      sayılardan birinin sonuna "toLong()" yazılabilir. Örn. "val result = Int.MAX_VALUE + Int.MAX_VALUE.toLong()"
+      Bu sayede, işlemdeki en büyük sayı 'Long' tipinde olur ve 'result' değişkeninin tipi de 'Long' olur.
+
+=================================================================================
