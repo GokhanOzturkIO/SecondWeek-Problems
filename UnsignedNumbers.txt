@@ -3,3 +3,6 @@
 
 "İşaretsiz" değişkenler nasıl bir sınıf yapısında tutulurlar? Bu neden önemlidir?
 *Inline sınıf yapısında tutulurlar.
+
+"İşaretsiz" değişkenlerin harf gösterimi nasıldır?
+* U harfi ile başlar sonra type ı alır. UByte, UShort, UInt ve ULong değişkenler örnek olarak verilebilir.
