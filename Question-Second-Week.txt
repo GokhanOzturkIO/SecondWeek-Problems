@@ -18,3 +18,7 @@ Type inference bizi fazla kod yazmaktan kurtarır Örneğin değişken yazdığ�
 
 5-> Kotlin'de tüm değişkenlerin sınıf olarak bulunması, "ilkel tip" (primitive type) olmadıkları anlamına gelir mi? Arka planda neler oluyor?
 Hayır aslında değişkenler sınıf olarak bulunur ama derleme esnasında primitve type olurlar. 
+
+6-> "Tip Güvenliği" (Type Safety) kavramını açıklayın.
+"Tip Güvenliği" (Type Safety), bir programlama dilinde tip sistemine dayalı olarak, tip hatalarını önleyen veya en aza indiren bir özelliktir. Bu özellik, programcının belirli türler arasında uyumsuzluklardan kaynaklanan hataları hemen fark etmesine ve bu hataları önlemesine yardımcı olur.
+
