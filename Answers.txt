@@ -1,0 +1,6 @@
+1- val ile var arasındaki fark nedir?
+
+Kotlin dilinde değişken tanımlamak için iki keyword bulunur: “val” ve “var”. Değerlerini değiştirmek istemediğimiz değişkenleri tanımlamak için “val” kullanmalıyız. Ancak tanımlayacağımız değişken farklı değerler alabiliyorsa bu değişkeni “var” ile tanımlamalıyız. Bu konu özelinde birçok medium makalesi ve farklı kaynakta val = immutable (değişmez), var = mutable (değiştirilebilir) ifadesi kullanılmaktadır bu ifade teknik olarak doğru değildir. Developer Android sitesinde dahi “val” değişkenler için “whose value never changes” (değeri asla değişmeyen) ifadesi kullanılsa da “val” ile tanımlanmış bir değişken farklı sonuçlar tutabilir. Bu nedenle “val” keyword’ü için doğru tanımlama “immutable” (değişmez) değil, “read-only” (sadece okunur) olmalıdır.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
