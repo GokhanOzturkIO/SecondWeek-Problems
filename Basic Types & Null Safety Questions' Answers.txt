@@ -168,5 +168,14 @@ Soru 10: İlkel bir değişkenin nullable olması ile null değer alamaması ara
 | işaret eder-(4213132)       |                     |
 |-----------------------------|---------------------|  
 
+--------------------------------------------------------------------------------------
+
+Soru 11: Nullable bir değişkenin bir değere sahip olması ile null olması arasında bellek yönetimi açısından nasıl bir fark vardır? Null değer almış bir değişken bellekte yer kaplamaz diyebilir miyiz?
+
+ - Bu soru aslında yukarıdaki sorunun devamı niteliğinde yüzden yukarıda verdiğim bilgilerde yararlanarak cevaplamaya çalışacağım.
+ 
+ - Null alabilen değişkenlerin reference tipli olduğunu söylemiştik ve bunların nesnelerinin HEAP üzerinde ve bu değere işaret eden değişkenin ise STACK bölümünde tutulduğunu söylemiştik.
+ 
+ - Bu bilgilere göre HEAP tarafında bu ifade null olduğu için yer kaplamasa bile STACK üzerinde o değişken için halen bir miktar yer kaplanmış olur.
 
 	
