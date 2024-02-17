@@ -40,7 +40,7 @@ fun main(){
     println(box.availableSpace)
 }
 
-Yukarıdaki kod içerisinde width, height, length ve used space değerleri istenildiği gibi değiştirilebilir. Bu değerler ile oynanması val ile oluşturulmuş availableSpace 
+Yukarıdaki kod içerisinde width, height, length ve usedSpace değerleri istenildiği gibi değiştirilebilir. Bu değerler ile oynanması val ile oluşturulmuş availableSpace 
 isimli değişkenin değerenin sürekli değişmesini sağlar bu da val değişkenlerin immutable (değişmez) değil de read-only (salt okunur) olduğunun kanıtıdır.
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -65,6 +65,12 @@ Tip güvenliği yazılım geliştirme sırasında yapabileceğimiz olası küç�
 daha iyi anlaşılmasını sağlayalım örneğin bir değişken tanımladınız ve buna sayısal bir değer ataması yaptınız, projenin ilerleyen kısımlarında dalgınlık ile bu sayısal değer
 içeren değişkene string bir değer atamaya çalıştınız. Bu senaryoda eğer tip güvenliği içermeyen bir dil ile çalışıyorsanız uygulamanız çökebilir ya da hatalı sonuçlar
 üretebilir, ama eğer tip güvenliği içeren bir dil ile çalışıyorsanız ide sizlere hata verir. Bu sayede birçok olası hatadan kurtulmuş oluruz. Kotlin tip güvenliğine sahip bir dildir.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+7- Bir değişkeni nullable yapmak için ne yapmalıyız?
+
+Bir değişkeni nullable yapmak için ilk olarak bu değişkenin tipini belirtmeliyiz (val name : String) akabinde değişkenin türünün sonuna "?" koyarak (val name : String?) bu değişkenin nullable yani null (hiçbir değere sahip olmayan) değer alabileceği anlamına gelir.
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
