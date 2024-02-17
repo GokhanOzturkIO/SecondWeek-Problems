@@ -32,5 +32,14 @@ Immutable durumunda bir nesne oluşturulurken (declaration aşamasında) atama y
 Read-Only durumunda nesne herhangi bir değer almadan oluşturulup (declaration esnasında) daha sonraki aşamalarda yalnızca 1 defa değer ataması yapılabilir.
 val değişkenler declaration aşamasında iki durumla da kullanılabiliyor. Hem oluştururken değer atayabiliyoruz hem de oluşturduktan sonra değer atayabiliyoruz. Bu yüzden de val değişkenlerin read-only olarak açıklanması daha doğrudur.
 
+------------------------------------------------------------
+
+#4 "Tip Çıkarımı" (Type inference) kavramını açıklayın. Hangi durumlarda tip belirtmek kesin olarak gereklidir?
+
+Type inference kotlin dilinin bir özelliğidir. Bu özellik sayesinde değişkenleri deklare ederken veri türünü belirtmemize gerek olmaz.
+Kotlin bunu arka planda uygun bir veri türüyle eşleştirecektir.
+
+Nullable durumlarda kesinlikle tip belirtmemiz lazım.
+Normal koşullarda bir tamsayı deklare ettiğimizde Kotlin Int sınırları içerisindeyse bunu otomatik olarak Int olarak tanımlar. Eğer biz bunu 'en baştan' Short ya da Long olarak tanımlamak istiyorsak tipini belirtmemiz lazım.
 
 ------------------------------------------------------------
