@@ -89,6 +89,11 @@ tercih edebiliriz bu gibi sebeplerden ötürü !! operatörünü kullanabiliriz.
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+9- Bir değişkene null değer atanır ve tip belirtilmezse Kotlin bu değişkeni nasıl yorumlar?
 
+Bir değişkene null değer atayabilmek için değişken tipinden sonra "?" kullanmalıyız. Ancak bunu yapmadan null değer atamaya çalışırsak değişkenimizin türü Nothing? şeklinde
+tanımlanır ve daha sonra herhangi bir şekilde atama yapamayız.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
