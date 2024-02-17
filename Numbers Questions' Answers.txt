@@ -1,8 +1,28 @@
----------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------
 Soru 1: Kaç farklı tipte "number" sınıfı miras alan "alt sınıf" (child class) vardır? Bunların değer aralıkları neden önemlidir?
 
   - Number sınıfını miras alan (Byte, Short, Int, Long, Float, Double) olmak üzere 5 adet child sınıfı vardır.
  
   - Bu değişkenlerin bellekte kapladığı yer ve alabilecekleri max ve min değerler açısından farklılıkları vardır. Bu
   değişkenlerin değer aralıkları bellek kullanımını daha iyi bir şekilde yönetmek için farkdında olmamız gerekiyor.
+
+------------------------------------------------------------------------------------------------------------------------
+
+Soru 2: Eğer bir değişkene tip belirtimi yapılmaz ve bir değer atanırsa, Kotlin tip çıkarımını nasıl yapar?
+
+    Kotlin'de tip çıkarımında açk bir şekilde tip belirtmezsek, eşitliğin karşı tarafındaki değere göre compiler bunu
+    atomatik olarak tespit eder.
+
+    - Burada number değişkenlerde eğer eşitliğin karşı tarafındaki değer Int tipinin max değerini geçmiyorsa, değişkenin
+    tipi Int olarak belirlenir.
+
+    - Eğer eşitliğin karşı tarafındaki değer Int tipinin max değerini aşarsa, değişken Long olarak belirlenir.
+
+    - Bu kısımda, örneğin ben bir değişken tanımlamak istiyorum ve bu değişkenin ilk değeri Int değerleri arasında ama
+    ben bu değişkenin Long olarak kullanılmasını ve aynı zamanda Long ifadesini açık bir şekilde belirtmek istemediğimi
+    düşünelim. Bu durumda nasıl tanımlama yapabilirim?
+
+        Bu durumda değerin sonuna `L` harfini ekleyerek derleyiciye(compiler) bu değişkenin Long olacağını söylemiş oluruz.
+
+        val balance = 5000L // 5000 normalde Int değer aralığının içerisinde ama ben bu değişkenin Long olmasını istedim.
 
