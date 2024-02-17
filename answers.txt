@@ -505,3 +505,12 @@ Tür Dönüşümü
       verebiliriz. Örn. "toLong()" veya "3L" gibi.
 
 =================================================================================
+
+5- "`val b: Byte = 1` ile `val i: Int = b` ve son olarak `print(b == i)` gibi bir kod yazıldığında
+ çıktı ne olur? Neden böyle bir çıktı aldığınızı açıklayın.
+
+     Bu kodda, 'i' değişkeninin değerini 'b' yapamayız çünkü Kotlin'de örtük tip dönüşümü
+      yapılamaz. 'i' değişkenini şu şekilde güncellersek, "val i: Int = b.toInt()" bu sefer de
+      "print(b == i)" kodu hata verecektir çünkü 'Byte' bir değerle 'Int' bir değer karşılaştırılamaz.
+
+=================================================================================
