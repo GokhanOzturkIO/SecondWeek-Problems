@@ -38,6 +38,8 @@ Sayısal değişkenlerde örtük tip genişletme (implicit widening conversions)
 "val b: Byte = 1 ile val i: Int = b ve son olarak print(b == i) gibi bir kod yazıldığında çıktı ne olur? Neden böyle bir çıktı aldığınızı açıklayın.
 *  Hata verir çünkü bu tip conversionlar Kotlin' de yapılamaz ve açıkça belirtmemiz gerekir val b: Byte = 1  ve val i : Int = b.toInt() demek lazım. Fakat bu durumda da hata verecektir. Kotlin: Operator '==' cannot be applied to 'Byte' and 'Int' . Bu hatanın sebebi aynı type ların karşılaştırılması yapılabileceğindendir. Düzeltmek için print(b.toInt() == i) diyerek Byte ı explicit şekilde Integer ' a çevirmemiz gerekir.
 
+"val b: Byte = 1 ile val i: Int = b.toInt() ve son olarak print(b == i) gibi bir kod yazıldığında çıktı ne olur? Neden böyle bir çıktı aldığınızı açıklayın.
+* Aynı type karşılaştırması yapmadığımız için "Kotlin: Operator '==' cannot be applied to 'Byte' and 'Int' " hatası alırız. Eğer b.toInt() == i demiş olsaydık bir hata almazdık ve çıktımız true olurdu.
 
 
 
