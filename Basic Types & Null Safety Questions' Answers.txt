@@ -178,4 +178,35 @@ Soru 11: Nullable bir değişkenin bir değere sahip olması ile null olması ar
  
  - Bu bilgilere göre HEAP tarafında bu ifade null olduğu için yer kaplamasa bile STACK üzerinde o değişken için halen bir miktar yer kaplanmış olur.
 
+--------------------------------------------------------------------------------------
+
+Soru 12: Nullable bir değişkenle çalışırken hangi operatörleri kullanırız? Bu operatörlerin kullanım farkları nelerdir? Hangisini ne zaman kullanmak daha anlamlıdır?
+
+ - Nullable ifadeleri kullanırken '?.'() , '!!' ve '?:' operatörlerini kullanırız.
+	
+    - ?. (Safe Call Operator): Bu operatör, bir ifadenin null olup olmadığını kontrol eder ve null ise ifadeyi çağırmaz, null değilse normal şekilde devam eder.  
+
+	val b: String? = null 
+	println(b?.length)
+   
+    - !! (Not null Assert): Bu operatörü kullandığımızda IDE'ye bu değişken çağrıldığında null olmayacağını zorla garanti ettiğimi belirtiyoruz. Eğer değişkenin çağrıldığı anda null olur ise NullPointerException hatasını döner ve aynı zamanda
+	
+	programımızı çökertir. Ama null değil ise istediğimizi işlem başarılı bir şekilde gerçekleştirilir. Bu operatörü genellikle kullanılması çok önerilmez çünkü NPE hatasına neden olur. 
+
+   - ?: (Elvis Operatör): Nullable bir referansınız olduğunda, b, "eğer b null değilse, onu kullanın, aksi takdirde null olmayan bir değer kullanın" diyebilirsiniz. 
+		
+	val b:String? = null
+
+	println(b?.length ?: -1) // Burada eğer b null değil ise içerisinde bulundurduğu string ifadenin uzunluğunu çıktı olarak verecektir. Ama eğer ifade null ise -1 çıktısını verecektir.
+
+   - Hangisini ne zaman kullanmak.
+
+	Eğer nullable olan bir ifadeyi kullandığımız yerdeki bilginin doğru olarak gösterilmesi çok önemli ise bu kısımda !! Operatörünü kullanırız ve uygulamamızın çökmesini isteriz. Ama eğer orada gösterilecek bilgi çok önemli değil ise ?. Operatörünü 
+
+kullanabiliriz. Eğer null olduğunda başka bir değer gösterme ihtiyacımız var ise o zamanda ?: operatörünü kullanırız.
+
+
+
+
+
 	
