@@ -135,7 +135,7 @@ Double veri tipi, daha yüksek bir hassasiyete sahiptir ve yaklaşık 15-16 basa
 <--------------------------------------------------------------------------------------------------------------------------------------------------->
 
 
-7) Ondalık sayılarda alt çizgi ('_') ile tanımlayabiliriz. val number = 10_000_000
+7) Ondalık sayıları val decimalNumber = 123
 Hexadecimal sayılar val hexadecimalNumberLong: Long = 0xABCDL
 Binary sayılar val binaryNumberLong: Long = 0b11001100L 
 şekillerinde tanımlanır. 
