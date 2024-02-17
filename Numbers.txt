@@ -12,3 +12,10 @@ Float değişken oluştururken F ve f harfleri varken, Long değişken oluşturu
 
 Tek duyarlıklı (Single precision) ve Çift duyarlıklı (Double precision) kavramlarını açıklayın.
 * Single precision bellekte 32 bit harcar ve GPU alanlarında kullanılır. Double Precision bellekte 64 bit harcar ve matematiksel işlemlerin daha yoğun olması beklendiği CPU tarafından kullanılır. Daha az bellek kullanması istenildiğinde Half precision da kullanılabilir fakat 16 bit harcadığı için bellek hassasiyetini dikkatlice incelemek lazım. Bu performans kazanımı göz ardı edilecek seviyede olduğu için genellik Single precision tercih edilir.
+
+Double ve Float değişkenlerle çalışırken ondalık ayıracı olarak hangi işaretler kullanılır? Bu ayıraçların kullanımında nelere dikkat etmek gerekir?
+* Nokta veya virgül kullanılır. Dikkat edilmesi gereken durum eğer ondalık ayracımız backend' den , dönüyorsa ve biz . kullanıyorsak hata alırız. Local ve canlıda hangi ayracın döndüğünü öğrenmek gerekir. Bununla beraber okunuş olarak kolaylık sağlaması bakımından bir değişken değerini 10_000 olarak yazsak bile IDE bunu 10000 olarak görecektir. Keyfi olarak değiştirilebilir.
+
+
+
+
