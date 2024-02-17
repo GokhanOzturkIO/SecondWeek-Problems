@@ -178,6 +178,9 @@ fun deneme(x: Any) {
 
 # Güvenli operatör dönüşüm işlemi başarısız olduğunda null döndürür. Bu nedenle "güvenli" olarak adlandırılır.Güvensiz operatörlerler ise dönüşüm işleminde hata olduğunda bir exception oluşturur bu yüzden güvensiz operatör denir.
 
+42-Sayısal değişkenlerde örtük tip genişletme (implicit widening conversions) ne demektir? Kotlin'de bu neden yapılamaz?
+
+# Sayısal değişkenlerde örtük tip genişletme (implicit widening conversions), bir veri türünün daha küçük bir veri türünden daha büyük bir veri türüne dönüşmesidir. Örneğin, bir Int'i bir Long veya Double'a dönüştürmek gibi. Bu dönüşüm işlemi otomatik olarak gerçekleşir ve programcının açıkça dönüşüm yapmasına gerek kalmaz. Kotlin'de, bu tür örtük tip genişletme işlemleri yapılamaz. Bunun nedeni, Kotlin'in daha güvenli bir dil olması ve veri türlerinin açıkça belirtilmesini ve dönüştürülmesini tercih etmesidir.
 
 
 
