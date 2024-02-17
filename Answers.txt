@@ -1,0 +1,217 @@
+	BASİC TYPES AND NULL SAFETY
+
+Soru 1 - val ile var arasındaki fark nedir?
+	-> var kelimesi 'Variable' kelimesinin kısaltmasıdır ve değeri sonradan değiştirilebilir olan değişkenler üzerinde kullanılır.
+	   val ise 'Value' kelimesinin kısaltmasıdır ve değeri sonradan değiştirilemez olan değişkenler üzerinde kullanılır(read-only).
+
+Soru 2 - Bir var değişkeni val gibi davranmasını nasıl sağlayabiliriz val kelimesini kullanmadan? Bunu neden yapmak isteriz? Örnek bir senaryo verin.
+	-> Bir var değişkeninin set fonksiyonunu private yaparak val gibi davranmasını sağlayabiliriz. Bu yöntemle val kelimesini kullanmamıza gerek kalmaz.
+	   Bunu neden yapmak istediğimize gelirsek de tanımladığımız var değişkenini sadece tanımlanan class içerisinde değiştirmek isteyebiliriz. Yani set 
+	   fonksiyonunu private yaptığımız bir değişkeni değişkenin tanımlandığı class içerisinde var olarak kullanabiliriz ancak class dışına çıktığımızda
+      	   ise bu değişken val(read-only) gibi davranır.
+	
+	class User() {
+		var name = "Salih"
+			private set
+
+	fun functionUser(){
+		name = "Salihhhh" // hata vermez, değer fonksiyon içerisinde değiştirilir.
+}		
+}
+	class anotherUser(){
+		val user = User()
+		
+		user.name = "Salih Akbas" // değişmemize izin vermez
+}
+
+Soru 3 - "Değişmez" (Immutable) ve "Salt Okunur" (ReadOnly) kavramlarını açıklayın. val değişkenler neden aslında "değişmez" değil de "salt okunur" olarak açıklanmalıdır?
+	-> Immutable - bir değişkenin ya da nesnenin durumunun asla atandığı ilk değerden farklı olamayacağı anlamına gelir.
+	   Read-only - ilk değer atamasından sonra tekrar değer atanamayacağı anlamına gelir.
+	Bu şekilde ifadelere baktığımızda ikisi de aynı anlama geliyor gibi gözükebilir. Val değişkenlerin neden read-only olduğunu öğrendiğimizde aralarındaki farkı
+	daha iyi anlayabiliriz. Val değişkenlerin get metoduna farklı var değişkenlerin etkileyeceği bir matematiksel işlem yazarak val değişkeninin değerini değiştirebiliriz.
+	Class A() {
+	var b = 1
+	var c = 2
+	var d = 3
+	
+	val e : Int
+		get() {
+			return(b * c + d) // e'nin değeri 5
+}
+}
+	fun changeVal() {
+		val a = A()
+		a.b = 2
+		a.c = 3
+		a.d = 4
+		println(a.e) // Konsola yazdırılacak değer 10 -> Bu şekilde val olarak atadığımız değişkenin değeri değişmiş oldu. Bu sebeple val değişkenlere read-only denilmesi daha doğrudur.
+}
+
+Soru 4 - "Tip Çıkarımı" (Type inference) kavramını açıklayın. Hangi durumlarda tip belirtmek kesin olarak gereklidir?
+	-> Tip çıkarımı bir programlama dilinde değişken türlerinin derleyici program tarafından otomatik olarak belirlenmesidir. Tip çıkarımı kullanılan bir derleyici içerisinde tanımladığımız değişkenin
+	tipini belirttiğimizde derleyici tarafından bu tipi belirtmene gerek yok uyarısı da alırız(kodun çalışmasına engel olmaz). Ancak yeni bir değişken oluşturduk ve bunun değer atamasını yapmadık diyelim, 
+	o zaman oluşturduğumuz değişkenin tipini belirtmek zorunda kalırız. 
+
+Soru 5 - Kotlin'de tüm değişkenlerin sınıf olarak bulunması, "ilkel tip" (primitive type) olmadıkları anlamına gelir mi? Arka planda neler oluyor?
+ 	-> Kotlin'de tüm değişkenlerin sınıf olarak bulunması ilkel tip olmadıkları anlamına gelmez. Biz kotlinde bir değişken oluşturduğumuzda o değişken class olarak 
+	görünür ancak 'Show Kotlin Bytecode' kullanarak arka planda bunların aslında Java dilindeki ilkel tiplere denk geldiğini görebiliriz. 
+
+Soru 6 - "Tip Güvenliği" (Type Safety) kavramını açıklayın.
+	-> Type Safety bir programlama dilinde oluşturduğumuz değişkenlerin tipinin yanlış belirtilmesini engelleyen bir özelliktir.
+
+Soru 7 - Bir değişkeni nullable yapmak için ne yapmalıyız?
+	Bir değişikeni nullable yapmak için değişken tipinin sonuna ? işareti koymamız gerekir. 
+
+Soru 8 - "Null Güvenliği" (Null Safety) kavramını açıklayın.
+	-> Null Safety null hatalarını en aza indirmek veya tamamen yok etmek amaçlı kullanılan bir özelliktir. Kotlin dilinde bir değişkeinin null olabileceğini belirtebiliriz ve daha sonrasında bu değişken kullanılırken
+	null kontrolü yaparız ve NullPointerException hatasından kaçınmış oluruz.
+Soru 9 - Bir değişkene null değer atanır ve tip belirtilmezse Kotlin bu değişkeni nasıl yorumlar?
+	-> Eğer bir değişkene tip belirtmez ve null değer ataması yaparsak Kotlin bu değişkeni Nothing? türünde belirler.
+
+Soru 10 - İlkel bir değişkenin nullable olması ile null değer alamaması arasında bellek yönetimi açısından nasıl farklar vardır?
+	-> Nullable değişkenlerin taşıdıkları değerlerin bellek adreslerine ek olarak bir de null değerini temsil etmek için ayrı bir bellek adresi oluşturulur. Bu durum her nullable değişken için ayrı bellek kullanımına
+	yol açar. Null değer alamayan değişkenlerde ise bu ekstra bellek alanına gerek duyulmaz.
+Soru 11 - Nullable bir değişkenin bir değere sahip olması ile null olması arasında bellek yönetimi açısından nasıl bir fark vardır? Null değer almış bir değişken bellekte yer kaplamaz diyebilir miyiz?
+	-> Referans tipli değişkenler ve onların değerleri bellekte iki farklı yapı olarak tutulurlar. Bu yapılardan birisi olan Stack'de referanslar yani değişkenler tutulur. Bir diğer yapı olan Heap'da ise
+	bu değişkenlerin verileri tutulur. Dolayısıyla null değer almış bir değişken Heap üzerinde yer kaplamasa bile Stack üzerinde bir miktar yer kaplamış olur.
+Soru 12 - Nullable bir değişkenle çalışırken hangi operatörleri kullanırız? Bu operatörlerin kullanım farkları nelerdir? Hangisini ne zaman kullanmak daha anlamlıdır?
+	-> Nullable bir değişkenle çalışırken ?. ve !!. operatörlerini kullanırız. ?. operatörünü kullanırken derleyici programımıza operatörü kullandığımız değişken null gelirse bu işlemi atla ve devam et demiş oluruz.
+	Ancak !!. operatörünü kullanırsak operatörü kullandığımız değişkenin null gelmesi durumunda NullPointerException hatasıyla karşılaşırız ve uygulamamız çöker. Eğer çok kritik bir işlem yapmıyorsak yani
+	değişkenin null gelmesi durumunda uygulama üzerinde göz ardı edilebilecek bir hata olacaksa ?. kullanabiliriz. Ancak kritik bir işlem yapılıyorsa ve uygulama üzerinde önemli bir etki yaratacaksa !!. operatörünü
+	kullanıp uygulamanın çökmesini sağlamamız gerekir.
+
+
+	NUMBERS
+
+Soru 1 - Kaç farklı tipte "number" sınıfı miras alan "alt sınıf" (child class) vardır? Bunların değer aralıkları neden önemlidir?
+	-> Byte,Short,Int,Long,Double,Float olmak üzere 6 adet alt sınıf bulunmaktadır. Bellekte kapladıklar yer bakımından mümkün olduğunca aralıklarına göre kullanmak önemlidir.
+Soru 2- Eğer bir değişkene tip belirtimi yapılmaz ve bir değer atanırsa, Kotlin tip çıkarımını nasıl yapar?
+	-> Tip çıkarımı sırasında eğer atadığımız değer Int ifadeden daha büyük değilse default olarak Int tipinde belirtilir. Eğer Int ifadeden daha büyük bir değerse default olarak Long tipinde belirtilir.
+Soru 3 - Float değişken oluştururken F ve f harfleri varken, Long değişken oluştururken neden küçük l harfi yoktur?
+	-> küçük l harfi kullanılan derleyici programlarda 1 rakamına çok benzediği için kullanılmaz.
+Soru 4 - Tek duyarlıklı (Single precision) ve Çift duyarlıklı (Double precision) kavramlarını açıklayın.
+	-> Tek duyarlılıklı genellikle 32 bitlik bir veri türünü ifade eder. Tek duyarlılıklı format, daha düşük bellek kullanımı ve daha hızlı işleme sağlar. Çift duyarlılıklı ise genellikle 64 bitlik bir veri türünü
+	ifade eder. Çift duyarlılıklı format da ise daha fazla bellek kullanımı ve daha yavaş işleme gerçekleşir.
+Soru 5 - Double ve Float değişkenlerle çalışırken ondalık ayıracı olarak hangi işaretler kullanılır? Bu ayıraçların kullanımında nelere dikkat etmek gerekir?
+	-> Double ve Float değişkenlerle çalışırken ondalık ayıracı olarak genellikle . ve , işaretleri kullanılır. Bize gelen verinin hangi işaret ile kullanıldığını önceden kontrol etmemiz gerekir. Eğer bu kontrolü 
+	yapmazsak kod çalıştığı sırada kendi kodumuzda kullandığımız işaret dışında bir işaret gelirse uygulamamızın çökmesi gibi sorunlarla karşılaşırız.
+Soru 6 - Double ve Float değişkenler ondalık kısımda kaç basamağa kadar işlem yaparlar? Bu sınırın üzerinde gelen ondalık bilgileri için nasıl davranırlar? Hangi durumlar için Float ve hangi durumlar için Double kullanılmalıdır?
+	-> Float değişkenler yaklaşık olarak 7 basamağa, Double değişkenler ise yaklaşık olarak 16 basamağa kadar işlem yapabilirler. Eğer bu sınırların üzerinde bir ondalık verisi gelirse kesme(rounding) işlemi gerçekleşir.
+	Yani sayı otomatik olarak en yakın değere yuvarlanır. Bellek kullanımı ve işlemci performansının önemli olduğu durumlarda Float kullanmalıyız, ancak bu maddeler bizim için önemli değilse Double kullanabiliriz. 
+Soru 7 - Ondalık(Decimal), Onaltılık (Hexadecimal) ve İkilik (Binary) değişkenleri Kotlin'de nasıl tanımlayabilirsiniz?
+	-> Ondalık sayılar genellikle varsayılan olarak tanımlanır ve herhangi bir ek işleme gerek duymazlar. Onaltılık sayılar '0x' ön eki ile başlar ve ardından onaltılık olarak ifade edilen sayı gelir. İkilik sayılar ise
+	'0b' ön eki ile başlar ve ardından ikilik olarak ifade edilen sayı gelir. 
+	Ek olarak Binary değer aralığı [0 - 1]
+Soru 8 - Sekizlik (Octal) değişkenler Java'da nasıl tanımlanır? Kotlin'de Sekizlik değişken tanımlanabilir mi?
+	-> Java'da octal değişken tanımlamak için değerin başına 0 eklenir ve değer devam edilir. Kotlin octal değişken tanımına izin vermez.
+Soru 9 - "Geleneksel Notasyon" (Conventional Notation) gösterimi nasıl yapılır?
+	-> Geleneksel notasyon gösterimi -> 3.14e10
+Soru 10 - Sayısal değişkenlerde alt çizgi (underscore) nasıl kullanılır? Kotlin bunu nasıl yorumlar?
+	-> Örnek olarak 1000000000 değerini 1_000_000_000 şeklinde de tanımlayabiliriz. Bu şekilde tanımlanma sebebi okunabilirliği artırmak. Kotlin bu değeri 1000000000 olarak yani alt çizgi olmayan haliyle işleme alır.
+Soru 11 - == ile neyi karşılaştırırız? === ile neyi karşılaştırırız?
+	-> == ile değişkenleri değerini, === ile ise değişkenlerin memeory'deki referansını karşılaştırırız.
+Soru 12 - === operatörü ile karşılaştırma yaparken Byte değer aralığı neden önemlidir? Kotlin bu aralığa göre neden özel bir davranış sergiler?
+	-> Eğer referanslarını karşılaştırdığımız sayıların değer aralığı Byte değer aralığı içerisinde ise referans karşılaştırması sonucu true olarak döner yani memory'de aynı adresi işaret ederler. Ancak referanslarını karşılaştırdığımız
+	sayıların değer aralığı Byte değer aralığının dışındaysa referans karşılaştırması sonucu false olarak döner yani memory'de farklı adresi işaret ederler. Bu özellik bellek kullanımı azaltmak ve performansı artırmak için tasarlanmıştır.
+Soru 13 - Sayısal değişkenlerde hangi matematiksel operatörler kullanılabilir?
+	-> Toplama(+), Çıkarma(-), Bölme (/), Çarpma(*), Mod(%), Artırma ve Azaltma (++ --) operatörleri kullanılır.
+Soru 14 - Sayısal değişkenlerde hangi karşılaştırma operatörleri kullanılabilir?
+	-> Değer karşılaştırması(==), Referans karşılaştırması(===), Büyüklük ve Küçüklük(< >), Büyük eşit ve Küçük eşit (>= <=)
+Soru 15 - Bit düzeyinde operatörler (Bitwise operators) nelerdir? Ne amaçla kullanılır? Kotlin'de bunları nasıl kullanabilirsiniz?
+	-> Bit düzeyinde operatörler (Bitwise operators), işlemleri bit seviyesinde gerçekleştiren operatörlerdir. Bu operatörler, sayıların içindeki her bir bitin (0 veya 1) üzerinde çalışır ve buna göre işlem yapar. Bit düzeyinde operatörler, genellikle
+ 	düşük seviyeli programlama, veri sıkıştırma, kriptografi, donanım kontrolü ve diğer benzer alanlarda kullanılır.
+	Bitwise AND (&): İki sayının her bir bitini karşılaştırır ve her iki sayıda da aynı bit 1 ise sonuçta o bit 1 olur. Aksi halde, sonuçtaki bit 0 olur.
+	Bitwise OR (|): İki sayının her bir bitini karşılaştırır ve her iki sayıda da en az bir bit 1 ise sonuçta o bit 1 olur.
+	Bitwise XOR (^): İki sayının her bir bitini karşılaştırır ve her iki sayıda da farklı bitler varsa sonuçta o bit 1 olur. Aynı bitler varsa sonuç 0 olur.
+	Bitwise NOT (~): Bir sayının her bir bitini tersine çevirir. Yani, 0'ları 1 yapar ve 1'leri 0 yapar.
+	Sol Shift (<<): Bir sayının bütün bitlerini belirli bir miktar sola kaydırır. Sağ taraftaki boşluklar sıfır ile doldurulur.
+	Sağ Shift (>>): Bir sayının bütün bitlerini belirli bir miktar sağa kaydırır. Sol taraftaki boşluklar, kaydırma işlemiyle kaybolur. Pozitif sayılar için boşluklar sıfır ile doldurulurken, negatif sayılar için imza (sign) biti ile doldurulur.
+	Bu operatörler, Kotlin'de de diğer programlama dillerinde olduğu gibi aynı şekilde kullanılabilir.
+Soru 16 - Kotlin'de büyük sayılarla çalışırken hangi ek türlerden yararlanılır ve bu türlerin sınırları nelerdir?
+	-> Kotlin'de büyük sayılarla çalışırken, büyük sayıları temsil etmek ve işlem yapmak için BigInteger ve BigDecimal gibi ek türler kullanılır.
+	BigInteger -> Bu sınıf, tam sayıları (integer) temsil etmek için kullanılır ve sınırsız büyüklükte tamsayıları destekler. Yani, bellekte yeterli yer olduğu sürece, sonsuz derecede büyük sayıları temsil edebilirler.
+	BigDecimal -> Bu sınıf, ondalık sayıları (decimal) temsil etmek için kullanılır ve yüksek hassasiyetli hesaplamalar yapmak için idealdir. BigDecimal, ondalık noktanın sağında ve solunda belirli bir hassasiyet derecesine kadar rakamları saklar ve 
+	bu nedenle sonsuzluğa kadar büyük veya küçük sayıları temsil edebilir.
+	Bu türlerin sınırları bellek kullanımıyla ilişkilidir ve doğal veri türlerinden (Int, Long, Double, vs.) daha fazla bellek tüketirler. Ancak, bu türlerin avantajı, çok büyük veya hassas sayıları doğru bir şekilde temsil edebilmeleridir.Yani, kullanılan 
+	bellek miktarı ve işlemci hızı ne kadar yüksekse, bu türlerle temsil edilebilecek sayıların büyüklüğü de o kadar artar.
+Soru 17 - Double ve Float değişkenler kullanılırken "yuvarlama" davranışı nasıldır? Bu nasıl değiştirilebilir?
+	-> Double ve Float değişkenlerde, yuvarlama davranışı, sayının ondalık kısmını belirli bir hassasiyet derecesine göre yuvarlama işlemidir. Bu yuvarlama genellikle IEEE 754 standardına uygun olarak gerçekleştirilir ve "round half to even" olarak
+	 bilinen bir yuvarlama kuralı kullanılır. Bu kurala göre, bir sayı tam olarak ortada ise (yani, 0.5 gibi), yuvarlama işlemi yapıldığında sonuç çift sayıya yuvarlanır. Ancak, bu kural, işlemciden işlemciye değişebilir.Kotlin'de, yuvarlama davranışını
+	 değiştirmek için özel bir dil düzeyi desteği bulunmamaktadır. Ancak, program içinde istenilen yuvarlama davranışını elde etmek için çeşitli yöntemler vardır. 
+	Kotlin standart kütüphanesi içindeki Math sınıfı, çeşitli yuvarlama fonksiyonları sağlar. Örneğin, Math.round(), Math.ceil(), Math.floor() gibi. Bu fonksiyonlarla belirli bir yuvarlama davranışı elde edilebilir. Başka bir yöntem olarak da kendimiz bir 
+	yuvarlama fonksiyonu yazabiliriz. Java standart kütüphanesinde bulunan DecimalFormat sınıfı, belirli bir format için özelleştirilmiş yuvarlama işlemleri yapmanıza olanak sağlar. Bu sınıfı kullanarak, istediğiniz yuvarlama davranışını elde edebilirsiniz.
+	Özetle, Kotlin dilinde yuvarlama davranışını doğrudan değiştirmek için bir dil özelliği yoktur. Ancak, çeşitli yöntemlerle istenilen yuvarlama davranışını elde etmek mümkündür.
+	
+	UNSIGNED NUMBERS
+
+Soru 1 - "İşaretsiz" (Unsigned) değişkenler ne demektir? İşaretli olanlarla aralarındaki fark nedir?
+	-> Unsigned değişkenler signed değişkenlerden farklı olarak negatif değer almazlar. Yani 0'dan başlarlar. Örnek olarak bir Byte değişkeninin aldığı değer -128 ile 127 arasındayken Unsigned Byte değişkeninin değer aralığı 0 ile 255 arasındadır.
+Soru 2 - "İşaretsiz" değişkenler nasıl bir sınıf yapısında tutulurlar? Bu neden önemlidir?
+	-> İşaretsiz değişkenler bir sınıf yapısı yerine bellek içerisinde direkt olarak temsil edilirler. Bunun nedeni, işaretsiz değişkenlerin doğrudan bellekte saklanan temel veri türleri olması ve sadece pozitif değerleri temsil etmeleridir.
+	İşaretsiz değişkenlerin bir sınıf yapısı içerisinde tutulması gereksiz bellek kullanımına ve işlem yüküne neden olabilir. Özetle bellek kullanımının ve performansın kritik olduğu durumlarda işaretsiz değişken kullanımı tercih edilir.
+Soru 3 - "İşaretsiz" değişkenlerin harf gösterimi nasıldır?
+	-> İşaretsiz değişken gösterimi için atanılan değerin sonuna 'u' harfi koyulur. val b : UByte = 1u
+Soru 4 - "val a1 = 42u ve val a2 = 0xFFFF_FFFF_FFFFu" değişkenlerin tipleri ne olur? Neden?
+	-> a1 değişkeni Int değer aralığında yer aldığı için Int tipine atanır ancak a2 değişkeni Int değer aralığını aştığı için Long tipine atanır.
+Soru 5 - "İşaretsiz" "Long" harf gösterimi nasıl yapılır?
+	-> val a = 1UL şeklinde işaretsiz long gösterimi yapılabilir.
+Soru 6 - "İşaretsiz" değişkenlerin kullanım amaçları nelerdir?
+ 	-> Temel kullanım amacı pozitif değerleri temsil etmek için bir tam sayının tam bit aralığını kullanmaktır.
+Soru 7 - "İşaretsiz" değişkenlerle yapılan matematiksel işlemlerde, özellikle büyük sayılarla çalışırken karşılaşılabilecek taşma (overflow) ve taşma olmaması (underflow) durumları için Kotlin nasıl bir yönetim sağlar?
+	-> Bir işaretsiz değişkenin taşma durumunu ele almak genellikle programcının sorumluluğundadır. Büyük sayılarla çalışırken taşma durumunu kontrol etmek ve uygun önlemleri almak önemlidir. Taşma durumunu 
+	önlemek için genellikle BigInteger veya BigDecimal gibi sınıflar kullanılır. Bu sınıflar, büyük sayıları temsil etmek için özel olarak tasarlanmıştır ve taşma durumlarına karşı daha güvenli bir yönetim sağlarlar.
+	 Dolayısıyla, Kotlin'de büyük sayılarla çalışırken taşma durumunu ele almak için BigInteger veya BigDecimal gibi sınıfları tercih etmek önemlidir.
+Soru 8 - "İşaretsiz" değişkenlerin sınırlamaları nelerdir?
+	-> İşaretsiz değişkenlerin sınırları kullanılan veri tipinin işaretli olan halinin negatif değerinin pozitife çevrilerek en üst pozitif değeriyle toplanmış halidir. Örneğin işaretli bir Byte tipinin değer aralığı -128 ile 127 arasındayken
+	işaretsiz bir Byte değişkeninin değer aralığı 0 ile 255 arasındadır.
+	
+	TYPE CONVERSION
+
+Soru 1 - is ve !is operatörlerinin kullanımını açıklayın.
+ 	-> is operatörü bir değişkenin/nesnenin belirli bir veri tipine ait olduğunu kontrol eder. !is operatörü ise tam tersi yani belirli bir tipe ait olmadığını kontrol eder.
+Soru 2 - "Akıllı Dönüşüm" (Smart Cast) ne demektir? Farklı kod örnekleri ile açıklayın. Bu özelliğin sınırlamaları nelerdir?
+	-> Kotlin'de "Akıllı Dönüşüm" (Smart Cast), tip kontrol operatörleri (is ve !is) kullanıldığında, koşulun içinde ilgili nesnenin tipine göre otomatik olarak dönüşüm yapılmasını sağlayan bir özelliktir. Bu özellik, kodun daha temiz ve daha okunabilir 
+	olmasını sağlar, çünkü ayrıca bir dönüşüm yapmaya gerek kalmadan doğrudan nesnenin belirli bir tipinde işlemler yapılabilir.
+	
+fun demo(x: Any) {
+    if (x is String) {
+        print(x.length) // x is automatically cast to String
+    }
+}
+Yukarıdaki kod örneğinde demo fonksiyonu Any tipinde bir değişken alır. Ancak is String koşulu altında eğer x değişkeni String tipine aitse smart cast işlemi gerçekleşir ve x değişkeni String tipine cast edilir.
+--------- Soruya tekrar bakılacak.
+Soru 3 - "Güvenli & Güvensiz" operatörler nelerdir?
+	-> Tür dönüşümü mümkün değilse bir hata ile karşılaşırız. Bu nedenle güvensiz olarak adlandırılır. Kotlin'de güvensiz operatör için kullanılan keyword as yapısıdır.
+	val x: String = y as String
+	Eğer yukarıdaki kodda y değişkeni null gelirse bir hata ile karşılaşırız. Bu kodu daha doğru hale getirmek için nullable değişkenler kullanırız.
+	val x: String? = y as String?
+	Hataları önlemek için ise güvenli operatör olan as? operatörü kullanılır.
+	val x: String? = y as? String
+Soru 4 - Sayısal değişkenlerde örtük tip genişletme (implicit widening conversions) ne demektir? Kotlin'de bu neden yapılamaz?
+	-> örtük tip genişletme verilen sayının tipinin kapalı bir şekilde otomatik olarak gerekli olan tipe dönüşümüdür. Kotlin kapalı bir şekilde tip dönüşümüne izin vermez ve açık bir şekilde tip dönüşümü yapabileceğimiz fonksiyonları bize sağlar.
+Soru 5 - "val b: Byte = 1 ile val i: Int = b ve son olarak print(b == i) gibi bir kod yazıldığında çıktı ne olur? Neden böyle bir çıktı aldığınızı açıklayın.
+	-> Böyle bir kod yazıldığında i değişkeni hata verir(required Int but found Byte). Bunun sebebi Kotlin'in implicit type conversion desteklememesidir. Yani i değişkeni otomatik olarak Byte'a dönüştürülmez.
+	Print kısmında ise Byte ile Int arasında değer karşılaştırması yapamadığının hatasını verir.
+Soru 6 - "val b: Byte = 1 ile val i: Int = b.toInt() ve son olarak print(b == i) gibi bir kod yazıldığında çıktı ne olur? Neden böyle bir çıktı aldığınızı açıklayın.
+	-> Yukarıdaki cevapta belirtildiği gibi (== operator cannot be applied to Byte and Int) değer karşılaştırması yapılamadığının hatasını verir.
+Soru 7 - Sayısal değişkenlerde açık dönüşüm (Explicit Type Conversion) yaparken hangi fonksiyonları kullanabilirsiniz?
+	-> toByte(), toShort(), toInt(), toLong(), toFloat(), toDouble()
+Soru 8 - "val result = 1L + 3" // "Long + Int" gibi bir işlemin sonucunda "result" değişkeninin tipi ve değeri ne olur? Neden böyle olduğunu açıklayın.
+	-> Result değişkenin değeri 4 tipi Long olur. Long olmasının sebebi Long bir değer ile herhangi bir değerin toplanması sonucunun yine bir Long değer vermesidir.
+Soru 9 - "val result = Int.MAX_VALUE + Int.MAX_VALUE" gibi bir işlemin sonucunda "result" değişkeninin tipi ve değeri ne olur? Neden böyle olduğunu açıklayın.
+	-> result değişkenin tipi Int, değeri ise -2 olur. Tipinin Int çıkmasının sebebi herhangi iki veri tipi işleme sokulduğunda sonucun tipi büyük olan değişkenin veri tipine eşitlenir. -2 olmasının sebebi ise veri tipi Int ancak 
+	işlemin sonucu Int değer aralığının dışına çıktığı için anlamsız bir sayı üretilir. Anlamsız sayının üretilmesini engellemek için result değişkenin sonucunu Long tipine çevirmemiz gerekir.
+Soru 10 - "val x = 5 / 2 println(x == 2)" gibi bir işlemin sonucu ve tipi nedir? Neden böyle olduğunu açıklayın.
+	-> İşlemin sonucu true döner ve tipi Int olarak belirlenir. Bunun sebebi herhangi bir iki tamsayının bölümünde kesirli kısımlar atılır ve tam sayı döndürür.
+Soru 11 - "val x = 5L / 2 println(x == 2L)" gibi bir işlemin sonucu ve tipi nedir? Neden böyle olduğunu açıklayın.
+	-> İşlemin sonucu true döner ve tipi Long olarak belirlenir. Bunun sebebi ise yapılan matematiksel işlemlerde sonuç tipinin büyük olan değerin veri tipi tarafından belirlenmesidir.
+Soru 12 - "val x = 5 / 2.toDouble() println(x == 2.5)" gibi bir işlemin sonucu ve tipi nedir? Neden böyle olduğunu açıklayın.
+	-> İşlemin sonucu true döner ve tipi Double olarak belirlenir. 
+Soru 13 - Kotlin'de tür dönüşümü yapılırken, dönüşümün başarısız olması durumunda TypeCastException nasıl ele alınır ve bu tür hataların önüne geçmek için hangi önlemler alınabilir?
+	-> Bu hata bir tipin başka bir tipe dönüşümünün gerçekleşemeyeceği zamanlarda ortaya çıkar. Bu hatanın önüne geçmek için ;
+	1- tip dönüşümü yapmadan önce is operatörü kullanarak dönüşümün güvenli olup olmadığını kontrol edebiliriz.
+	2 - as? operatörü kullanarak eğer dönüşüm sağlanırsa işlemimiz devam eder, sağlanmazsa null olarak döner. Böylece hatanın önüne geçeriz.
+	3- try-catch bloklarını kullanarak bu hatayı yakalayabiliriz.
+
+
+
