@@ -6,3 +6,7 @@ Kaç farklı tipte "number" sınıfı miras alan "alt sınıf" (child class) var
 
 Eğer bir değişkene tip belirtimi yapılmaz ve bir değer atanırsa, Kotlin tip çıkarımını nasıl yapar?
 * Atanan sayı değeri integer aralığında ise otomatik olarak integer, eğer daha fazlaysa Long gibi kendi aralığında bir tip çıkarımı yapar. Text ataması yaparsak otomatik olarak String tipinde çıkarım yapar.
+
+Float değişken oluştururken F ve f harfleri varken, Long değişken oluştururken neden küçük l harfi yoktur?
+* Küçük L ( l ) rakam olan 1 e benzediğinden dolayı büyük L ile kullanılır.
+
