@@ -25,7 +25,9 @@ Kotlin'de tüm veri tipleri nesne tabanlıdır ve primitive type yoktur. Örneğ
 Type Safety,programın çalışma zamanında hata almamasını ve beklenmedik sonuçlar üretmemesini sağlar.Programların hata ayıklamasının daha hızlı olmasını sağlar. Örneğin,Kotlin'de bir int değeri string olarak kullanmaya çalışırsanız veya null olabilecek bir değeri null olmayan bir türe atamaya çalışırsanız,derleme zamanında hata alırsınız.
 ************************************************************************
 - Bir değişkeni nullable yapmak için ne yapmalıyız?
-'?' işaretini kullanırız.Belirttiğimiz türün yanına ? eklersek nullable olabileceğini söylemiş oluruz. var nullableString: String? = null gibi.Ancak Non-nullable değişkenler null değerini kabul etmeyen ve tanımlandıkları ilk anda başlangıç değeriyle başlatılması gereken değişkenlerdir.Bu tür değişkenler,null değerini alamazlar ve null kontrolü gerektirmezler.Başlangıç değeri ilk başta atamak istemezsek 'latenit' keyword'ünü kullanabiliriz.lateinit anahtar kelimesi kullanılarak değişkenin daha sonra başlatılacağı belirtilir.
+'?' işaretini kullanırız.Belirttiğimiz türün yanına ? eklersek nullable olabileceğini söylemiş oluruz.
+var nullableString: String? = null gibi.
+Ancak Non-nullable değişkenler null değerini kabul etmeyen ve tanımlandıkları ilk anda başlangıç değeriyle başlatılması gereken değişkenlerdir.Bu tür değişkenler,null değerini alamazlar ve null kontrolü gerektirmezler.Başlangıç değeri ilk başta atamak istemezsek 'latenit' keyword'ünü kullanabiliriz.lateinit anahtar kelimesi kullanılarak değişkenin daha sonra başlatılacağı belirtilir.
 ************************************************************************
 - "Null Güvenliği" (Null Safety) kavramını açıklayın.
 Bir programın çalışması sırasında olası null referans hatalarını önlemek ve bu gibi hataların önüne geçmek için kullanılır. Kotlin'de null güvenliği önemlidir.
@@ -34,12 +36,15 @@ Bir programın çalışması sırasında olası null referans hatalarını önle
 Örneğin val number = null Kotlin bu değişkeni Nothing olarak işaretler.
 ************************************************************************
 - İlkel bir değişkenin nullable olması ile null değer alamaması arasında bellek yönetimi açısından nasıl farklar vardır?
-nullable olması, o değişkenin null değer alabilme özelliğine sahip olduğu anlamına gelir.Bellek yönetimi açısından nullable değişkenler için ekstra bir kontrol mekanizması gereklidir.Bu da bize ek maliyetler ve ek kod karmaşası çıkarabilir.Nullable olmaması yani non-nullable olması durumunda bu değişken her zaman bir değer almak zorunda olduğu için bellek yönetimi açısından daha verimlidir çünkü derleyici, bu değişkenin her zaman değer alacağını bilir ve bu değer için bellekte alan ayırabilir. Bu da gereksiz bellek kullanımını azaltabilir.Primitive bir değişkene ? koyarsak nullable değerler alabilir dersek class hali boxed olmuş olur.boxed daha az performanslıdır ve bellekte daha çok yer kaplar. val boxedNumber:Int? = number gibi örnek verebiliriz.
+nullable olması, o değişkenin null değer alabilme özelliğine sahip olduğu anlamına gelir.Bellek yönetimi açısından nullable değişkenler için ekstra bir kontrol mekanizması gereklidir.Bu da bize ek maliyetler ve ek kod karmaşası çıkarabilir.
+Nullable olmaması yani non-nullable olması durumunda bu değişken her zaman bir değer almak zorunda olduğu için bellek yönetimi açısından daha verimlidir çünkü derleyici, bu değişkenin her zaman değer alacağını bilir ve bu değer için bellekte alan ayırabilir. Bu da gereksiz bellek kullanımını azaltabilir.
+Primitive bir değişkene ? koyarsak nullable değerler alabilir dersek class hali boxed olmuş olur.boxed daha az performanslıdır ve bellekte daha çok yer kaplar. val boxedNumber:Int? = number gibi örnek verebiliriz.
 ************************************************************************
 - Nullable bir değişkenin bir değere sahip olması ile null olması arasında bellek yönetimi açısından nasıl bir fark vardır? Null değer almış bir değişken bellekte yer kaplamaz diyebilir miyiz?
 nullable bir değişkenin bir değere sahip olması demek,bellekte bu değeri tutacak bir alan ayrılır ve bu alan değişkenin türüne ve değerinin boyutuna bağlı olarak değişebilir.Null değeri almış nullable değişken ise aslında bellekte bir değer tutmaz.Null,bellekte özel işarettir ve değişkenin referansı null ayarlanır.
 ************************************************************************
 - Nullable bir değişkenle çalışırken hangi operatörleri kullanırız? Bu operatörlerin kullanım farkları nelerdir? Hangisini ne zaman kullanmak daha anlamlıdır?
+
 ?         => Bu operatör, değişkenin null olup olmadığı kontrol eder ve null değilse devam eder. 'variable?.method()' şeklinde kullanılır ve variable null değilse method çağrılır.
 ?:(elvis) => Bu operatör, null kontrolü yapar.Null ise alternatif bir değer döndürür. 'variable ?: defaultValue' şeklinde kullanılır. variable null ise defaultValue döndürür.
 !!        => Bu operatör,değişkenin null olmadığını varsayar ve null-check yapmaz.Değişken null ise NullPointerException hatası fırlatır.Değişkenin null olmadığına emin olduğumuzda kullanmalıyız sadece yoksa program çökebilir.
@@ -146,7 +151,7 @@ Kotlin'de büyük sayılarla çalışırken, BigInteger ve BigDecimal gibi sın�
 BigInteger nesneleri, büyük tamsayılarla yapılan hesaplamalarda veya tam sayı sınırlarının ötesindeki değerleri temsil etmek için kullanılır.
 BigDecimal nesneleri, kayan nokta sayılarının hassas aritmetiği için kullanılır ve belirli bir ölçekte kesirli sayıları tutabilir.
 Bu sınıfların kullanımı, standart veri tiplerine göre daha fazla bellek ve işlemci kullanımına yol açabilir.
-***********************************************
+*********************************************************************************
 - Double ve Float değişkenler kullanılırken "yuvarlama" davranışı nasıldır? Bu nasıl değiştirilebilir?
 Yuvarlama, ondalık sayıları daha az hassas bir şekilde ifade etmek için kullanılır. Bu işlem, ondalık sayıların belirli bir hassasiyetle ifade edilmesini sağlar.
 Varsayılan olarak, Kotlin'de bu yuvarlama işlemi, matematiksel olarak en yakın sayıya yuvarlama (round-to-nearest-even) yöntemiyle gerçekleşir.
@@ -157,3 +162,48 @@ BigDecimal sınıfı, belirli bir hassasiyetle ondalık sayıları temsil etmek 
 
 ### İşaretsiz Sayılar
 
+- "İşaretsiz" (Unsigned) değişkenler ne demektir? İşaretli olanlarla aralarındaki fark nedir?
+Unsigned değişkenler sadece pozitif tam sayı değerlerini ve sınıfını temsil ederler.İşaretli olanlardan farkı negatif değerleri temsil etmezler.
+Örneğin; Toplam öğrenci sayısını temsil etmek için işaretsiz değişken kullanabiliriz.Negatif değer alamayacakları için işaretsiz bir tamsayı türü kullanmalıyız.
+Kotlin'de `UInt` (Unsigned Int)işaretsiz bir tamsayı türüdür.
+
+val totalStudents: UInt = 150u
+********************************************************************************
+- "İşaretsiz" değişkenler nasıl bir sınıf yapısında tutulurlar? Bu neden önemlidir?
+Unsigned değişkenler bir sınıf içinde tutulmazlar, özel veri tipleridir. Genelde bellekte aynı miktarda alan kaplarlar ancak tüm alanı pozitif tamsayılara verirler.
+Unsigned değişkenlerin özel veri tipleri olarak tanımlanması önemlidir çünkü belirli aralıktaki pozitif tamsayı değerlerini temsil etmek için kullanılırlar.
+Örneğin, bir Byte veri tipi işaretsiz bir 8-bit tamsayıyı temsil eder. İşaretli bir Byte değişkeni -128 ila 127 arasındaki değerleri temsil ederken, işaretsiz bir Byte değişkeni 0 ila 255 arasındaki değerleri temsil eder.
+**********************************************************************************
+- "İşaretsiz" değişkenlerin harf gösterimi nasıldır?
+Unsigned Byte: 0 ile 255 arasındaki değerleri temsil eder. İşaretsiz bir byte UByte olarak gösterilir.
+Unsigned Short: 0 ile 65,535 arasındaki değerleri temsil eder. İşaretsiz bir short UShort olarak gösterilir.
+Unsigned Int: 0 ile 4,294,967,295 arasıdır. UInt ile gösterilir.
+Unsigned Long: 0 ile 18,446,744,073,709,551,615 arasıdır. ULong olarak gösterilir.
+*********************************************************************************
+- "val a1 = 42u ve val a2 = 0xFFFF_FFFF_FFFFu" değişkenlerin tipleri ne olur? Neden?
+val a1 = 42u unsigned bir tamsayıdır ve 'u' ile işaretlendiği için UInt tipindedir. u ile işaretlendiği için unsigned
+a2 = 0xFFFF_FFFF_FFFFu unsigned bir tamsayıdır. u ile işaretlendiği için ULong tipindedir.
+*********************************************************************************
+- "İşaretsiz" "Long" harf gösterimi nasıl yapılır?
+U veya u önekini kullanırız.
+val unsignedLong: ULong = 123456789UL gibi
+*********************************************************************************
+- "İşaretsiz" değişkenlerin kullanım amaçları nelerdir?
+Unsigned değişkenler pozitif sayıları temsil ederler ve işareti dikkate almazlar.
+Örneğin; bir RGB (Kırmızı, Yeşil, Mavi) renk kodunu temsil ederken, her bir renk bileşeninin 0 ile 255 arasında olması gerekir. Bu durumda işaretsiz 8 bitlik (0-255 aralığında) bir tamsayı tipi kullanmak mantıklı olacaktır.
+********************************************************************************
+- "İşaretsiz" değişkenlerle yapılan matematiksel işlemlerde, özellikle büyük sayılarla çalışırken karşılaşılabilecek taşma (overflow) ve taşma olmaması (underflow) durumları için Kotlin nasıl bir yönetim sağlar?
+Unsigned değişkenler negatif değerler içermez ve bu nedenle daha büyük pozitif değerleri temsil edebilirler.Veri türünün bir sınırı vardır ve bu sınıra ulaşıldığında taşma meydana gelir.
+Kotlin, taşma durumlarını kontrol etmek için dahili bir mekanizma sağlamaz. Bu nedenle, programcıların bu tür durumları önceden dikkatlice kontrol etmesi ve gerekli önlemleri alması gerekir.
+**********************************************************************************
+- "İşaretsiz" değişkenlerin sınırlamaları nelerdir?
+UInt: Bu işaretsiz tam sayı tipi 0 ile 2^32 - 1 arasındaki değerleri alabilir.
+ULong: Bu işaretsiz tam sayı tipi 0 ile 2^64 - 1 arasındaki değerleri alabilir.
+*********************************************************************************
+- "İşaretsiz" değişken türleri (UInt, ULong vs.) kullanırken, Java API'leri ile uyumluluk konusunda ne gibi sorunlar olabilir? Bunları çözmek için neler yapabilirsiniz?
+Java API'leri genelde işaretli tamsayılar (int,long vb) ile çalışırlar.İşaretsiz tamsayıları kullandığımızda bazı uyumluluk sorunları yaşayabiliriz.
+Tür dönüşümü yapmak: Kotlin'de işaretsiz değişkenlerin işaretli karşılıklarıyla uyumlu olacak şekilde dönüşümler yapılabilir.
+Örneğin, UInt değerlerinin Java'da int türürne,ULong değerlerini long türüne dönüştürebilirz.
+Kütüphane:Jackson kütüphanesini kullanarak,kotlinde unsigned değişkenleri javadaki karşılıklarıyla uyumlu olarak JSON dönüşümleri yapar.
+
+### Tür Dönüşümü
