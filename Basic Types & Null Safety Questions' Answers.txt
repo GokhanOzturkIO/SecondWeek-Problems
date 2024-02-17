@@ -140,4 +140,33 @@ Soru 9: Bir değişkene null değer atanır ve tip belirtilmezse Kotlin bu deği
     Nothing değişkenler daha çok herhangi bir fonksiyonun bir değer döndürmek zorunda olmadığı durumlarda kullanılır. Genelde exception fırlatmalarda görürüz. 
     Unit'den farklıdır ama Unit bir boş da olsa bir değer döndüğünü söyler Nothing hiçbir şeydir.
 
+--------------------------------------------------------------------------------------
+
+Soru 10: İlkel bir değişkenin nullable olması ile null değer alamaması arasında bellek yönetimi açısından nasıl farklar vardır?
+
+ - Eğer bir değişken nullable olarak işaretlendi ise o değişken artık primitive olarak değil reference değerli bir nesne olarak temsil edilecektir.
+ 
+ - Burada biraz daha detaya inelim ve değişkenlerin bellek(RAM) üzerinde nasıl saklandığına bir göz atalım. RAM üzerinde STACK ve HEAP olarak adlandırılan iki bölüm bulunur.
+
+ - STACK bölümünde primitive ifadelerin değerleri bu bölümde tutulur. Primitive değişkenlerin hızlı olmasının sebeplerinden birisi bellekte bu bölümde tutulmalarıdır. Çünkü STACk, HEAP'den daha hızlı çalışır.
+ 
+ - HEAP bölümünde ise reference değerli olan tiplerin (class) değerleri ve nesneleri HEAP bölümünde, bu değerlerin adreslerini gösteren değişkenler ise STACK bölümünde tutulur.
+
+	diyelimki yukarıda bahsettiğim StockPortfolio sınıfından bir nesne oluşturalım
+
+	val myPortfolio = StockPortfolio()
+
+
+| STACK                       | HEAP                |
+|-----------------------------|---------------------|
+| Yerel Değişken              |                     |
+|                             | StockPortfolio  nesnesi var -- diyelimki adresi de 4213132    |
+|                             |      		    |
+| myPortfolio nesnesi de      |                     |
+| Heap bölümünde bulunan      |                     |                     
+| nesnenin referans adresine  |                     |
+| işaret eder-(4213132)       |                     |
+|-----------------------------|---------------------|  
+
+
 	
