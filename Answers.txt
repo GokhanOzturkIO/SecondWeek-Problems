@@ -70,8 +70,25 @@ içeren değişkene string bir değer atamaya çalıştınız. Bu senaryoda eğe
 
 7- Bir değişkeni nullable yapmak için ne yapmalıyız?
 
-Bir değişkeni nullable yapmak için ilk olarak bu değişkenin tipini belirtmeliyiz (val name : String) akabinde değişkenin türünün sonuna "?" koyarak (val name : String?) bu değişkenin nullable yani null (hiçbir değere sahip olmayan) değer alabileceği anlamına gelir.
+Bir değişkeni nullable yapmak için ilk olarak bu değişkenin tipini belirtmeliyiz (val name : String) akabinde değişkenin türünün sonuna "?" koyarak (val name : String?) bu değişkenin nullable olduğunu yani null değer alabileceği anlamına gelir.
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+8- "Null Güvenliği" (Null Safety) kavramını açıklayın.
+
+Öncelikle Null'ın ne olduğunu açıklamak ile başlayabiliriz. Null, bir değişkenin değerinin atanmadığı veya boş olduğunu ifade etmek için kullanılan bir terimdir.
+Null nedenli çökme durumlarında NullPointerException hatası alırız. Null safety ise yazılım geliştiricilerin, kodlarını daha güvenli hale getirmesini sağlayan bir
+özelliktir. Kotlinde bir değişkene null değer atayabilmek için ilk olarak bu değişkeni nullable yapmamız gerekir, bunun için değişkenin tipini belirttikten sonra
+tip isminin sonuna "?" koyarak bu değişkeni nullable yapabiliriz bu sayede değişkene null değer ataması yapabiliriz. Bazı durumlarde değişkenlerin değerinin null
+olması bizlere NullPointerException döndürür bu da uygulamamızın çökmesine sebebiyet verir, Kotlin Null Safety özelliğine sahip olan bir dil olduğu için bizi bu gibi durumlardan korur. Kotlinde null değer dönen değişkenleri kontrol etmenin farklı yöntemleri vardır. Birinci ve en sık kullanılan yöntem "Safe Call (?.)" bu yöntem ile
+yapılan çağrılarda eğer değişkenin değeri null ise ideye bu değeri atlamasını söyleriz, bu sayede uygulamamızın NullPointerException hatası yüzünden çökmesinin önüne
+geçmiş oluruz. İkinci yöntem ise "If kontrolü" yöntemidir bu yöntem sayesinde tıpkı javada olduğu şekilde if statemant ile değişkenin değerinin null olup olmadığını
+kontrol edebiliriz. üçüncü yöntem "Elvis Operatörü (?:)" Kotlinde Elvis operatörü If kontrolü yerine kullanılabilir. Elvis operatörü, bir ifadeyi null ise alternatif bir ifadeyle değiştirmek için kullanılır. Dördüncü ve son yöntem ise "!!" operatörü, bu operatör sayesinde değişkenin değeri ne olursa olsun programı çalıştırmaya devam et,
+komutunu veririz bu da doğal olarak zaman zaman NullPointerException'a sebebiyet verir. Ancak bazı durumlarda kritik durumlarda uygulama hatalı çalışıyorsa hiç çalışmamasını
+tercih edebiliriz bu gibi sebeplerden ötürü !! operatörünü kullanabiliriz.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
 
 
