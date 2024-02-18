@@ -271,4 +271,10 @@ Güvensiz operatörler şunlardır:
 . operatörü: Bir nesnenin null olup olmadığını kontrol etmeden bir üyesine erişir.
 [] operatörü: Bir dizinin null olup olmadığını kontrol etmeden bir elemanına erişir.
 ***********************************************************
+42-Sayısal değişkenlerde örtük tip genişletme (implicit widening conversions) ne demektir? Kotlin'de bu neden yapılamaz?
+Kotlin, null güvenliği ve veri kaybını önleme gibi prensiplere odaklanan bir dildir. Örtük tip genişletme, bu prensiplere aykırıdır ve veri kaybına neden olabilir.
+java:
+byte smaller = 42;
+int larger = smaller;
+***********************************************************
 
