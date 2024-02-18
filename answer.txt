@@ -186,5 +186,9 @@ Math.ceil(): Yukarı yuvarlama için kullanılır.
 İşaretsiz değişkenler, yalnızca pozitif değerler depolayabilen değişkenlerdir.
 -İşaretsiz değişkenler sadece pozitif ve sıfır değerleri saklayabilir, negatif değerleri temsil edemez. İşaretli değişkenler ise pozitif, negatif ve sıfır değerlerini saklayabilir.
 ***********************************************************
-
-
+31-"İşaretsiz" değişkenler nasıl bir sınıf yapısında tutulurlar? Bu neden önemlidir?
+UByte, UShort, UInt, ULong
+Bellek Tasarrufu.
+Taşma ve Alt Taşma: İşaretsiz değişkenler, taşma ve alt taşma gibi hatalara karşı daha az hassastır.
+Daha İyi Anlaşılabilirlik
+***********************************************************
