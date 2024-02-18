@@ -154,3 +154,7 @@ tek tırnaklar arasında tek karakter varsa -> Char
 sonunda f yazmadan ondalıklı sayı yazılırsa -> Double
 
 ------------------------------------------------------------
+#3 Float değişken oluştururken F ve f harfleri varken, Long değişken oluştururken neden küçük l harfi yoktur?
+
+Çünkü küçük 'l' harfi bazı fontlarda '1' gibi gözüktüğünden kod okunaklığını bozabilir. Bu yüzden Long tanımlarken büyük 'L' kullanılır.
+------------------------------------------------------------
