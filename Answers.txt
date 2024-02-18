@@ -88,3 +88,12 @@ var nullable: Int? = null -> nullable?!.plus(10)     // hata vermeden çalışı
 var nullable: Int? = null -> nullable!!.plus(10)     // NullPointerException
 
 ------------------------------------------------------------
+
+#9 Bir değişkene null değer atanır ve tip belirtilmezse Kotlin bu değişkeni nasıl yorumlar?
+
+var myVar = null --> değişkenin Nothing? tipindedir.
+
+
+
+
+------------------------------------------------------------
