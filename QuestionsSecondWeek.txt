@@ -134,6 +134,12 @@ Soru: Bir değişkene null değer atanır ve tip belirtilmezse Kotlin bu değiş
 Cevap: Kotlin, bir değişkene null değer atanır ve tip belirtilmezse, bu değişkenin tipini Nothing? olarak yorumlar çünkü tip çıkarımı yapamaz. Nullable ya da null olanlara any
 veriliyor.
 
+Soru: İlkel bir değişkenin nullable olması ile null değer alamaması arasında bellek yönetimi açısından nasıl farklar vardır?
+
+Cevap: Null değişkenler bellek yönetimi açısından daha performanslıdır çünkü class olarak tutulurlar ancak nullable olmayan değişkenler daha az yer kaplar çünkü optimizasyon
+ile primitive tiplere dönüştürülürler.
+
+
 
 
 
