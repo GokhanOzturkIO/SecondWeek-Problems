@@ -211,5 +211,11 @@ ide tarafından "1000000" şeklinde yorumlanır.
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+12- `===` operatörü ile karşılaştırma yaparken Byte değer aralığı neden önemlidir? Kotlin bu aralığa göre neden özel bir davranış sergiler?
+
+Eğer primitive tipteki bir değişken nullable olup üç eşittir operatörü ile refarans kontrolü yapılırsa ve Byte değer aralığının (-128, +127) dışında ise bu durumda false değer üretir farklı bellek alanlarını işaret ettiğinizi gösterir ama Byte aralığının içindeyse değerler farklı bile olsa true değerini üretir.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 
 
