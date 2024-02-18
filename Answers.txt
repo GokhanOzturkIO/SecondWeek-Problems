@@ -101,5 +101,18 @@ Kotlin'de primitive türdeki bir değişken Nullable olarak deklare edilirse o d
 Referans tipte olduğu için değişken 'Stack' alanında, değeri 'Heap' alanında bulunur.
 Primitive değişken null değer almıyorsa zaten nonNullable'dır ve primitive olmaya devam eder. Bu durumda da değişken de 'Stack' alanında tutulur. Değer de 'Stack' alanında tutulur. 
 
+------------------------------------------------------------
+
+#11 Nullable bir değişkenin bir değere sahip olması ile null olması arasında bellek yönetimi açısından nasıl bir fark vardır? Null değer almış bir değişken bellekte yer kaplamaz diyebilir miyiz?
+
+Nullable değişken null değilse bellekte normal şekilde Stack üzerinde değişken, Heap üzerinde değeri saklanır.
+Ancak Nullable değişken null değere sahipse işler biraz farklılaşır. Stack üzerinde değişkenin varlığı bildirilir ancak bu değişken heap üzerinde herhangi bir değeri göstermez.
+
+var number1: Int? = 15
+var number2: Int? = null
+
+Stack   --> number1,    number2
+                
+Heap    --> value1(15)
 
 ------------------------------------------------------------
