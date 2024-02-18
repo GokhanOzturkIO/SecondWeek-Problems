@@ -22,3 +22,22 @@ class rectangle{
             return shortEdge * longEdge
         }
 } kodunu incelediğimizde immutable olmamasının nedeni değerinin asla ilk değerden farklı olmasıdır.
+
+4-"Tip Çıkarımı" (Type inference) kavramını açıklayın. Hangi durumlarda tip belirtmek kesin olarak gereklidir?
+-tip çıkarımı, eşitliğin sağ tarafında değişkenin tipini biz vermesek bile IDE'nin kendisinin tip çıkarımı yaparak bulmasıdır. Bazı durumlarda, derleyici türü doğru şekilde çıkaramayabilir, özellikle karşılaştırılabilir türlerde. Örneğin, List sınıfında bulunan sort işlevi, elemanların karşılaştırılabilir olduğunu belirtmek için türü açıkça belirtmenizi gerektirir: listOf(3, 1, 2).sorted() yerine listOf(3, 1, 2).sorted() as List<Int> şeklinde yazılmalıdır.
+
+5-Kotlin'de tüm değişkenlerin sınıf olarak bulunması, "ilkel tip" (primitive type) olmadıkları anlamına gelir mi? Arka planda neler oluyor?
+
+-Evet, Kotlin'de tüm değişkenler nesne olarak kabul edilir ve "ilkel tipler" (primitive types) diye bir kavram yoktur. Bu, Kotlin'in Java'dan farklı olduğu bir noktadır. Kotlin'de, sayılar, karakterler ve boolean değerler gibi temel veri tipleri bile aslında sınıf gibi davranır.
+
+Arka planda, Kotlin derleyicisi, bu temel veri tiplerini otomatik olarak ilgili sınıflara dönüştürür. Örneğin, bir Int değişkeni tanımladığınızda, bu aslında java.lang.Integer sınıfının bir örneği olarak ele alınır. Benzer şekilde, Boolean türü java.lang.Boolean sınıfına dönüştürülür.
+
+Bu yaklaşım, Kotlin'in nesne yönelimli programlamayı desteklemesini sağlar ve tüm veri tiplerinin birbirine daha tutarlı bir şekilde davranmasını sağlar. Bununla birlikte, derleyici genellikle bu dönüşümleri otomatik olarak gerçekleştirir, bu nedenle genellikle kullanıcı tarafından fark edilmez. Bu da kodun daha temiz ve okunabilir olmasına katkıda bulunur.
+
+Fakat kotlin bytecode ile javaya çevirdiğimizde ilgili tip sınıflarının kodları Java kodunda primitive tip gibi davranır.
+
+6-"Tip Güvenliği" (Type Safety) kavramını açıklayın.
+
+-Kotlin, null referanslarıyla ilgili hataları önlemek için null güvenliği sağlar. Kotlin'de, bir değişkenin null olabileceğini belirtmek için Type? şeklinde bir tür kullanılır. Bu, derleyicinin null referans hatalarını önlemesine yardımcı olur.
+
+Kotlin, tür dönüşümlerini güvenli bir şekilde yapmanızı sağlar. Örneğin, sayısal bir değeri metin bir değere dönüştürürken, derleyicinin uygun bir şekilde işlem yapmasını sağlar.
