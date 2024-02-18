@@ -301,3 +301,43 @@ Kotlin Standart Kütüphanesi Kullanımı: Kotlin standart kütüphanesinde, Jav
 Java API'lerine Uyumlu Yöntemler: Java API'lerine işaretsiz değişkenleri doğrudan göndermek yerine, uyumlu veri tiplerini kullanabileceğiniz alternatif yöntemler arayabilirsiniz.
 
 Bu yöntemlerle, Kotlin'de işaretsiz değişken türlerini Java API'leriyle daha uyumlu bir şekilde kullanabilirsiniz.
+
+D)TÜR DÖNÜŞÜMÜ 
+
+1-is ve !is operatörlerinin kullanımını açıklayın.
+
+is ve !is operatörleri Kotlin'de tür denetimi (type checking) için kullanılır. Bu operatörler genellikle if veya when gibi kontrol yapılarında kullanılır. is eşittir gibi, !is ise eşit değildir gibi düşünülebilir.
+
+2-"Akıllı Dönüşüm" (Smart Cast) ne demektir? Farklı kod örnekleri ile açıklayın. Bu özelliğin sınırlamaları nelerdir?
+
+-"Akıllı Dönüşüm" (Smart Cast), Kotlin'in tür denetimi (type checking) özelliğiyle birlikte kullanılan ve belirli durumlarda otomatik tür dönüşümü sağlayan bir özelliktir. Bu özellik sayesinde, bir nesnenin belirli bir türe ait olduğunu kontrol ettikten sonra, Kotlin o nesneyi o tür olarak kabul eder ve dönüşüm yapmadan direkt olarak o türdeki özelliklere veya metotlara erişmenizi sağlar.
+
+Örneğin, aşağıdaki Kotlin kodunda is operatörüyle bir nesnenin String türüne ait olup olmadığını kontrol ettikten sonra, bu nesneyi String türü olarak kullanabiliyoruz:
+
+fun main() {
+    val x: Any = "hello"
+    
+    if (x is String) {
+        println(x.length) // x'in String türüne ait olduğunu bildiğimiz için length özelliğine erişebiliriz
+    }
+}
+
+Bu örnekte, x değişkeninin String türüne ait olduğunu kontrol ettikten sonra, Kotlin otomatik olarak x değişkenini String türü olarak kabul eder ve length özelliğine erişebiliriz.
+
+Akıllı Dönüşümün sınırlamaları şunlardır:
+
+Akıllı dönüşüm sadece belirli koşullar altında gerçekleşir. Örneğin, is operatörünün kullanıldığı bir if bloğu içinde gerçekleşir ve bu blok dışında akıllı dönüşüm geçerli olmaz.
+
+Akıllı dönüşüm, türler arasında otomatik dönüşüm sağlar ancak her tür dönüşümü desteklemez. Bazı durumlarda açıkça dönüşüm yapmanız gerekebilir.
+
+Akıllı dönüşüm sadece değişkenin türünü dönüştürür, değişkenin kendisini değil. Yani, değişkenin türü değişir ancak değişkenin değeri değişmez.
+
+3-"Güvenli & Güvensiz" operatörler nelerdir?
+
+-Kotlin'de "güvenli" ve "güvensiz" (safe and unsafe) operatörler kavramsal terimler olarak genellikle kullanılmaz. Ancak, Kotlin'de güvenli çağrılar ve güvenli dönüşümler gibi bazı özellikler vardır. Bu özellikler, NullPointerException (NPE) hatalarını azaltmaya veya önlemeye yardımcı olur.
+Güvenli Çağrılar (Safe Call Operator - ?.): Güvenli çağrılar, bir nesnenin null olup olmadığını kontrol eder ve null ise nesneye erişmeyi engeller. Bu sayede NullPointerException hatalarının önlenmesine yardımcı olur. Örneğin:
+val str: String? = null
+val length = str?.length // str null olduğu için length null olacaktır, NullPointerException oluşmaz
+Güvenli Dönüşümler (Safe Cast - as?): Güvenli dönüşümler, bir nesnenin belirli bir türe dönüştürülmesini sağlar. Eğer dönüşüm başarısız olursa null döner. Bu da dönüşüm işleminin güvenli olmasını sağlar. Örneğin:
+val x: Any = "hello"
+val y: Int? = x as? Int // x String türünde olduğu için dönüşüm başarısız olacak ve y null olacaktır
