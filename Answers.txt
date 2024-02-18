@@ -111,5 +111,10 @@ null değer alan değişkenler Ram'de değer kaplamaz ifadesi yanlıştır.
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+12- Nullable bir değişkenle çalışırken hangi operatörleri kullanırız? Bu operatörlerin kullanım farkları nelerdir? Hangisini ne zaman kullanmak daha anlamlıdır?
+
+Kotlin Null Safety özelliğine sahip olan bir dil olduğu için bizi bu gibi durumlardan korur. Kotlinde null değer dönen değişkenleri kontrol etmenin farklı yöntemleri vardır. Birinci ve en sık kullanılan yöntem "Safe Call (?.)" bu yöntem ile yapılan çağrılarda eğer değişkenin değeri null ise ideye bu değeri atlamasını söyleriz, bu sayede uygulamamızın NullPointerException hatası yüzünden çökmesinin önüne geçmiş oluruz. İkinci yöntem ise "If kontrolü" yöntemidir bu yöntem sayesinde tıpkı javada olduğu şekilde if statemant ile değişkenin değerinin null olup olmadığını kontrol edebiliriz. üçüncü yöntem "Elvis Operatörü (?:)" Kotlinde Elvis operatörü If kontrolü yerine kullanılabilir. Elvis operatörü, bir ifadeyi null ise alternatif bir ifadeyle değiştirmek için kullanılır. Dördüncü ve son yöntem ise "!!" operatörü, bu operatör sayesinde değişkenin değeri ne olursa olsun programı çalıştırmaya devam et, komutunu veririz bu da doğal olarak zaman zaman NullPointerException'a sebebiyet verir. Ancak bazı durumlarda kritik durumlarda uygulama hatalı çalışıyorsa hiç çalışmamasını tercih edebiliriz bu gibi sebeplerden ötürü !! operatörünü kullanabiliriz.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
