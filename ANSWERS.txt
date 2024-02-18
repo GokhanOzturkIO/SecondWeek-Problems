@@ -96,3 +96,28 @@ bunların değer aralıkları önemlidir çünkü bir değeri doğru aralıkta b
 3-Float değişken oluştururken F ve f harfleri varken, Long değişken oluştururken neden küçük l harfi yoktur
 
 -1 harfiyle karıştırılabileceğinden kullanımı yanlış kabul edilir.
+
+4-Tek duyarlıklı (Single precision) ve Çift duyarlıklı (Double precision) kavramlarını açıklayın.
+
+-tek duyarlıklı kavramı: 32 bit 4 byte olarak temsil edilirler, genelde float ile kullanılırlar. Az bellek kullanır, düşük hassasiyettedir.
+çift duyarlıklı kavramı: 64 bit 8 byte olarak temsil edilirler, genelde double ile kullanılırlar. Daha fazla bellek tüketir, yüksek hassasiyettedir.
+
+5-Double ve Float değişkenlerle çalışırken ondalık ayıracı olarak hangi işaretler kullanılır? Bu ayıraçların kullanımında nelere dikkat etmek gerekir?
+
+-val doubleNumber: Double = 3.14
+val floatNumber: Float = 2.718f gibi örneklerde de görüldüğü üzere nokta ile ayrılmaktadır. float olmasını istediğimiz değişkenin sonuna f koyarız.
+
+6-Double ve Float değişkenler ondalık kısımda kaç basamağa kadar işlem yaparlar? Bu sınırın üzerinde gelen ondalık bilgileri için nasıl davranırlar? Hangi durumlar için Float ve hangi durumlar için Double kullanılmalıdır?
+
+-Float: 32 bitlik bir veri türüdür ve tipik olarak yaklaşık 6-7 basamağa kadar kesinlik sağlar. Bu, 6-7 basamağın ötesindeki ondalık kısımları tam olarak temsil edemez ve hassasiyet kaybı yaşanabilir.
+
+Double: 64 bitlik bir veri türüdür ve genellikle yaklaşık 15-16 basamağa kadar kesinlik sağlar. Bu, daha yüksek bir hassasiyet sunar ve daha geniş bir değer aralığını kapsar.
+
+Eğer kesinlik ve hassasiyet önemliyse, genellikle Double tercih edilir. Örneğin, finansal hesaplamalar, bilimsel hesaplamalar veya büyük sayılarla yapılan hesaplamalar genellikle Double kullanılarak yapılır. Float ise daha az bellek kullanır ve daha kısıtlı bir değer aralığına sahiptir, bu nedenle özellikle bellek kullanımı önemli olan durumlarda veya daha düşük hassasiyet gerektiren hesaplamalarda tercih edilebilir.
+
+Ondalık bilgilerin sınırın üzerinde gelmesi durumunda, bu bilgiler genellikle kesilir veya yuvarlanır. Örneğin, Float tipinde 1.23456789f değeri saklanırken, ondalık kısmın sonraki basamakları kesilerek 1.2345679 şeklinde saklanabilir. Bu nedenle, yüksek hassasiyet gerektiren durumlarda ondalık sayıların doğru bir şekilde temsil edildiğinden emin olmak için Double kullanmak daha uygundur.
+
+
+
+
+
