@@ -25,7 +25,10 @@ crash olur.
 - Sayisal degiskenlerde ,daha kucuk deger aralikli turun (orn int), daha buyuk aralıkli ture (orn long) otomatik olarak donusturulmesidir. Bu kotlinde implicit sekilde yapilamaz. kotlinde acikca hangi tipe donusturecegimizi soylemek gerekir.  Kotlinde bu tip guvenligi ve turun acikca belirtilmesi kodun okunabilri olmasini sagladigindan dolayi yapilamaz.
 
 5. "val b: Byte = 1 ile val i: Int = b ve son olarak print(b == i) gibi bir kod yazıldığında çıktı ne olur? Neden böyle bir çıktı aldığınızı açıklayın.
-- Int ve Byte turleri arasinda bir karsilastirma yapilamaz. Ve Kotlin implicit conversion desteklemedigi icin Byte turundeki degisken otomatik olarak Int turune cevrilmez ve karsilastirma yapilamaz.
+- Bir Byte tipte degisken otomatik plarak Int turune cevrilemez. Ayrıca Int ve Byte turleri arasinda bir karsilastirma yapilamaz. Ve Kotlin implicit conversion desteklemedigi icin Byte turundeki degisken otomatik olarak Int turune cevrilmez ve karsilastirma yapilamaz.
+
+6. "val b: Byte = 1 ile val i: Int = b.toInt() ve son olarak print(b == i) gibi bir kod yazıldığında çıktı ne olur? Neden böyle bir çıktı aldığınızı açıklayın.
+- Burada Int turune bir explicit conversion yapilmis fakat yine print ile karsilastirma yapilamiyor cunku b value 'su hala Byte tipinde. 
 
 
 
