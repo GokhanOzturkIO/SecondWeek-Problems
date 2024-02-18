@@ -64,3 +64,21 @@ fun main() {
 -->Bu nedenle, "değişmez" kelimesi val değişkenlerini açıklamak için tam olarak doğru değildir, çünkü değişkenlerin içindeki veri değişebilir. "Salt okunur" terimi daha doğru bir açıklama sağlar, çünkü val değişkenleri sadece bir kez atanabilir ve değerleri okunabilir, ancak yeniden atanamazlar. Bu, değişkenin kendisinin değişmez olduğu anlamına gelmez, sadece içindeki verinin değişmez olduğu anlamına gelir.
 
 -->Özetle, val değişkenlerinin "salt okunur" olarak açıklanması, değişkenin kendisinin değişmez olduğu yanılgısını önler ve değişkenin sadece bir kez atanabileceği ve değerlerinin okunabileceği gerçeğini vurgular. Bu, Kotlin'in dil tasarımı ve kullanım paradigmasıyla daha uyumludur.
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+4-"Tip Çıkarımı" (Type inference) kavramını açıklayın. Hangi durumlarda tip belirtmek kesin olarak gereklidir? sorusunun cevabı nedir:
+
+-->"Tip Çıkarımı" (type inference), değişkenin veya ifadenin tipini derleyicinin otomatik olarak belirlemesini ifade eder. Bu, genellikle değişkenin tipini açıkça belirtmek zorunda kalmadan daha kısa ve daha okunabilir kod yazmanızı sağlar.
+
+--> val number = 42 Burada, number değişkeninin tipi belirtilmemiştir, ancak Kotlin derleyicisi bu değişkenin bir Int olduğunu anlar.
+
+Tip belirtmenin kesin olarak gerektiği durumlar şunlardır:
+-->Karşılaştırma Operatörleri: ==, !=, ===, !== gibi operatörlerde tip uyumluluğu kontrol edilirken tip belirtilmesi gerekebilir.
+-->Null Değerleri: Kotlin'de null değerleriyle çalışırken bazen tip belirtmek gerekebilir, özellikle null değerlerle ilgili hataların önlenmesi için.
+-->Genel Tipler: Bazı durumlarda, genel bir tip yerine belirli bir tip kullanmak isterseniz tip belirtmeniz gerekebilir.
+-->İşlem Sonuçları: Karmaşık ifadeler veya işlemler sonucunda elde edilen değerlerin tipini belirlemek için tip belirtmek gerekebilir.
+-->Fonksiyonlar ve Dönüş Tipleri: Fonksiyonların dönüş tiplerini belirlemek için tip belirtmek gerekebilir.
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
