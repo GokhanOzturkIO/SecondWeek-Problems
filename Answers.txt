@@ -60,4 +60,13 @@ Aşağıdaki örneklerde hatalı veri türünde atama işlemleri yapılmıştır
 1) var myInt: Int = "myString"      --> Type mismatch: inferred type is String but Int was expected
 2) var myChar: Char = "myCharArray" --> Type mismatch: inferred type is String but Char was expected
 3) var myString: String = 15        --> The integer literal does not conform to the expected type String
+
+------------------------------------------------------------
+
+#7 Bir değişkeni nullable yapmak için ne yapmalıyız?
+
+Kotlin'de değişkeni deklare ederken değişkenin veri türünü belirtip sonuna '?' karakteri eklenmelidir.
+
+sample code --> var myNullableVariable: String? = null
+
 ------------------------------------------------------------
