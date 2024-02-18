@@ -15,3 +15,29 @@
 
 6. "Tip Güvenliği" (Type Safety) kavramını açıklayın.
 - Tip güvenliği programin derleme asamasinda turle ilgili hatalarin tespitiniyapmasi ve calisma zamaninda bu hatalarin onune gecilmesidir.
+
+7. Bir değişkeni nullable yapmak için ne yapmalıyız?
+- Bir değişkeni nullable yapmak icin tur tanimindan sonra ? koymaliyiz. 
+	Ornegin: val name: String? = null  ...Bu sekilde name adinda null bir String degisken olusturduk.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
