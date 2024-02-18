@@ -12,3 +12,6 @@
 
 5. Kotlin'de tüm değişkenlerin sınıf olarak bulunması, "ilkel tip" (primitive type) olmadıkları anlamına gelir mi? Arka planda neler oluyor?
 - Kotlin'de class gibi gozuken degisken tipleri ozel optimizasyonlarla Bytecode'a cevrilirken yine primitive olacak sekilde cevrilir. Arka planda degiskenler primitive tiplere cevrilir.
+
+6. "Tip Güvenliği" (Type Safety) kavramını açıklayın.
+- Tip güvenliği programin derleme asamasinda turle ilgili hatalarin tespitiniyapmasi ve calisma zamaninda bu hatalarin onune gecilmesidir.
