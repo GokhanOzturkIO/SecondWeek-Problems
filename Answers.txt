@@ -158,3 +158,17 @@ sonunda f yazmadan ondalıklı sayı yazılırsa -> Double
 
 Çünkü küçük 'l' harfi bazı fontlarda '1' gibi gözüktüğünden kod okunaklığını bozabilir. Bu yüzden Long tanımlarken büyük 'L' kullanılır.
 ------------------------------------------------------------
+#4 Tek duyarlıklı (Single precision) ve Çift duyarlıklı (Double precision) kavramlarını açıklayın.
+
+Single Precision -> 32 Bits --> Sign(1 Bit) - Exponent(8 Bits) - Mantissa(23 Bits)
+Double Precision -> 64 Bits --> Sign(1 Bit) - Exponent(11 Bits) - Mantissa(52 Bits)
+
+Bilgisayarda gerçek sayıları temsil etmek için kullanılan yöntemlerdir. Temel farklılıkları depolama ve hassasiyettir.
+IEEE Standard 754 Floating Point Numbers // Bir IEEE standartıdır.
+
+Single Precision        Double Precision
+32 bit                  64 bit 
+~7 ondalık basamak      ~15 ondalık basamak
+daha hızlı              daha yavaş
+düşük hassasiyet        yüksek hassasiyet (bilimsel hesaplamalar)
+------------------------------------------------------------
