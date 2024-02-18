@@ -231,3 +231,30 @@ mı "x in a..b" ve x bu sayı aralığı içersinde değil mi? "x !in a..b" oper
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+15- Bit düzeyinde operatörler (Bitwise operators) nelerdir? Ne amaçla kullanılır? Kotlin'de bunları nasıl kullanabilirsiniz?
+
+
+Bit düzeyinde operatörler, verilerin içindeki tekil bitlere doğrudan erişim sağlayan operatörlerdir. Bu operatörler, özellikle düşük seviyeli programlama ve veri manipülasyonunda kullanılır. Bit düzeyinde operatörler şunlardır:
+
+  a.  AND (&): İki operanın her iki biti de 1 ise sonuç 1 olur, diğer durumlarda sonuç 0 olur.
+  b.  OR (|): İki operanın en az biri 1 ise sonuç 1 olur, diğer durumlarda sonuç 0 olur.
+  c.  XOR (^): İki operanın farklı ise sonuç 1 olur, aynı ise sonuç 0 olur.
+  d.  NOT (~): Operanın her bitini tersine çevirir (0'ları 1 yapar, 1'leri 0 yapar).
+  e.  Left Shift (<<): Operanın bitlerini belirli bir sayıda sola kaydırır.
+  f.  Right Shift (>>): Operanın bitlerini belirli bir sayıda sağa kaydırır.
+  g.  Unsigned Right Shift (>>>): Operanın bitlerini belirli bir sayıda sağa kaydırır, boş bırakılan yerlere sıfır ekler.
+
+kullanım örneği;
+
+val a = 0b1010 // 10
+val b = 0b1100 // 12
+    
+    println(a and b)  // Bitwise AND
+    println(a or b)   // Bitwise OR
+    println(a xor b)  // Bitwise XOR
+    println(a.inv()) // Bitwise NOT
+    println(a shl 1)  // Left shift
+    println(b shr 1)  // Right shift
+    println(b ushr 1) // Unsigned right shift
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
