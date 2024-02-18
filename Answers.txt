@@ -152,4 +152,9 @@ yeterli olduğu için bu veri tipi tercih edilir ancak çift duyarlıklı format
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+5- Double ve Float değişkenlerle çalışırken ondalık ayıracı olarak hangi işaretler kullanılır? Bu ayıraçların kullanımında nelere dikkat etmek gerekir?
 
+Bu değişkinlerde ayraç olarak "." kullanılır, ancak belirli diller (örneğin türkçede) virgül tercih edilir bu nedenle internetten veri alıyorsak bu ayırma işlemini nokta ile yapmaya
+özen göstermeliyiz.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
