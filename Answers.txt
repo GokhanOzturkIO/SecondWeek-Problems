@@ -93,7 +93,13 @@ var nullable: Int? = null -> nullable!!.plus(10)     // NullPointerException
 
 var myVar = null --> değişkenin Nothing? tipindedir.
 
+------------------------------------------------------------
 
+#10 İlkel bir değişkenin nullable olması ile null değer alamaması arasında bellek yönetimi açısından nasıl farklar vardır?
+
+Kotlin'de primitive türdeki bir değişken Nullable olarak deklare edilirse o değişken artık primitive değildir. Referans tipte bir değişkendir.
+Referans tipte olduğu için değişken 'Stack' alanında, değeri 'Heap' alanında bulunur.
+Primitive değişken null değer almıyorsa zaten nonNullable'dır ve primitive olmaya devam eder. Bu durumda da değişken de 'Stack' alanında tutulur. Değer de 'Stack' alanında tutulur. 
 
 
 ------------------------------------------------------------
