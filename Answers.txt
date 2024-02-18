@@ -212,3 +212,16 @@ Kotlin also supports a conventional notation for floating-point numbers.
 Doubles: 123.5, 123.5e10
 Floats are tagged by F or f: 123.5f, 154.5F
 ------------------------------------------------------------
+
+#10 Sayısal değişkenlerde alt çizgi (underscore) nasıl kullanılır? Kotlin bunu nasıl yorumlar?
+
+örnek kullanım: var salary = 99_999_999
+
+Kotlin'in underscore kullanımını desteklemesinin asıl amacı kod okunabilirliğini arttırmaktır.
+Çok haneli büyük sayılarla çlaışısırkan kaç hane olduğu rahat bir şekilde görebilmemiz için önemlidir.
+Hangisi daha okunaklı? 99999999 vs 99_999_999
+
+Kotlin bu underscore'ları yorumlarken sayının içerisinde hiç yokmuş gibi davranır.
+
+Java'dan miras alınmış olabilir. // https://docs.oracle.com/javase/7/docs/technotes/guides/language/underscores-literals.html
+------------------------------------------------------------
