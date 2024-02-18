@@ -265,3 +265,22 @@ Kotlin'de büyük sayılar ile çalışırken "BigInteger" ve "BigDecimal" ek t�
 aralık sunmasıdır. BigInteger ve BigDecimal'ın değeri, sınırlı değildir ve bellek kapasitesiyle ayrıca hesaplama gücüyle sınırlıdır.
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+17- Double ve Float değişkenler kullanılırken "yuvarlama" davranışı nasıldır? Bu nasıl değiştirilebilir?
+
+Kotlin'de Double ve Float değişkenler için varsayılan yuvarlama davranışı en yakın değere doğru yuvarla anlayışı ile çalışır.
+Bu yuvarlama işlemleri için "roundToInt()" veya "roundToLong()" fonksiyonları kullanılabilir. Ancak özel yuvarlama sistemine ihtiyaç duyuyorsak şu şekilde olşutrabiliriz;
+
+fun customRound(number: Double, decimalPlaces: Int): Double {
+    val factor = Math.pow(10.0, decimalPlaces.toDouble())
+    return (number * factor).toLong() / factor
+}
+
+fun main() {
+    val number = 3.14159
+    val roundedNumber = customRound(number, 2) // İki ondalık basamağa yuvarla
+    println(roundedNumber) // 3.14
+}
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
