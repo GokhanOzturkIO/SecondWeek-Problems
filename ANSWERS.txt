@@ -41,3 +41,17 @@ Fakat kotlin bytecode ile javaya çevirdiğimizde ilgili tip sınıflarının ko
 -Kotlin, null referanslarıyla ilgili hataları önlemek için null güvenliği sağlar. Kotlin'de, bir değişkenin null olabileceğini belirtmek için Type? şeklinde bir tür kullanılır. Bu, derleyicinin null referans hatalarını önlemesine yardımcı olur.
 
 Kotlin, tür dönüşümlerini güvenli bir şekilde yapmanızı sağlar. Örneğin, sayısal bir değeri metin bir değere dönüştürürken, derleyicinin uygun bir şekilde işlem yapmasını sağlar.
+
+7-Bir değişkeni nullable yapmak için ne yapmalıyız?
+
+-soru işareti ekleyerek yapabiliriz. örnek:
+var name? = null gibi.
+
+8-"Null Güvenliği" (Null Safety) kavramını açıklayın.
+
+-Kotlin null safety sağlayan bir dildir. Bu sayede nullable ve non-nullable olup olamayacağğını ve null referans hatalarını önler. Null Safety, ayrıca null check operatörü (?), Elvis operatörü (?:), ve safe cast operatörü (as?) iile kullanımı mümkündür.
+
+9-Bir değişkene null değer atanır ve tip belirtilmezse Kotlin bu değişkeni nasıl yorumlar?
+
+-Any? olarak değerlendirir.
+
