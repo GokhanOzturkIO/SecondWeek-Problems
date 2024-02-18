@@ -21,3 +21,6 @@ Val değişkenlerin salt okunur (readonly) olmasının sebebi bir kez değer ata
 
 7.Bir değişkeni nullable yapmak için ne yapmalıyız?
 -Bir değişkeni nullable yapmak için değişken tipinin sonuna ? ifadesi koyulmalıdır.
+
+8."Null Güvenliği" (Null Safety) kavramını açıklayın.
+-Bir kod parçacığında beklenmedik ve istenmeyen şekilde NullPointerException hatası fırlatacak durumları önceden tespit ederek bu tür hataları önlemesidir.
