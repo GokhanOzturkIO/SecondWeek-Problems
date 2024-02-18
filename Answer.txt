@@ -71,15 +71,3 @@ Bir değişkenin tipi belirtilmeden null değeri atanırsa Kotlin bu değişkeni
 10-) İlkel bir değişkenin nullable olması ile null değer alamaması arasında bellek yönetimi açısından nasıl farklar vardır?
 
 Primitive bir değişkenin nullable olması ona erişim hızı, bellekte kapladığı alan ve referans kontrolü açısından farklılıklar sağlar. Normalde primitive tiplerin hem kendileri hem de değerleri stack alanında tutulurlar. Fakat değişken nullable olursa, değişkenin kendisi stack alanında değeri ise heap alanında tutulur. Diğer bir deyişle Primitive değişkenler Boxed halde bulunurken nullable oldukları durumda Unboxed bulunurlar. Bu durum hız konusunda bir farklılık sağlar. Zira Heap , Stack’e göre daha yavaştır. 
-
-===========================
-
-11-) Nullable bir değişkenin bir değere sahip olması ile null olması arasında bellek yönetimi açısından nasıl bir fark vardır? Null değer almış bir değişken bellekte yer kaplamaz diyebilir miyiz?
-
-Primitive değişkenlerin hem kendileri hem de içerdikleri değer stack alanında tutulurlar. Buna karşılık referans tipte değişkenlerin kendileri stack alanında tutulurken içerdikleri değer heap alanında tutulurlar. 
-
-Nullable bir değişkenin de kendisi stack alanında tutulurken içerdiği değer heap alanında tutulmaktadır. Fakat nullable olan bu değişken null değer aldığında heap’teki kullanım alanı boş tutulur. Bu durumu aşağıda iki örnek üzerinden inceleyebiliriz.
-
-===========================
-
-
