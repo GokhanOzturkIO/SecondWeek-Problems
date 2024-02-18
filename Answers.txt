@@ -142,3 +142,15 @@ Eğer bu sınırların dışına çıkılırsa kod blokları hatalı sonuç veri
 Tabii ki yüksek veri aralığı daha fazla bellek kullanımı ister. Bunun için de ne kazanıp ne kaybettiğimize odaklanıp doğru seçimi yapabiliriz.
 
 ------------------------------------------------------------
+
+#2 Eğer bir değişkene tip belirtimi yapılmaz ve bir değer atanırsa, Kotlin tip çıkarımını nasıl yapar?
+
+Int değer aralığında herhangi bir tam sayı değişkene atanırsa o değişlen Int veri tipine sahip olur. (Short ya da Byte aralığında olsa bile yine de Int veri tipine sahip olur.)
+Int maksimum sınırından büyük değer atanırsa otomatik olarak Long olur. 
+
+çift tırnaklar arasında ise -> String
+tek tırnaklar arasında tek karakter varsa -> Char
+.f -> Float
+sonunda f yazmadan ondalıklı sayı yazılırsa -> Double
+
+------------------------------------------------------------
