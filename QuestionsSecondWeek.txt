@@ -78,6 +78,29 @@ zamanında (runtime) gerçekleşir. Örneğin:
 val number: String = "10" // String bir tip, primitive tipe dönüştürülmez
 val number2: Int = number.toInt() // String tipinden Int tipine cast işlemi, çalışma zamanında gerçekleşir
 
+Soru 6: "Tip Güvenliği" (Type Safety) kavramını açıklayın.
+
+Cevap: Tip güvenliği (Type Safety) kavramı, bir programlama dilinde her değişkenin belirli bir veri tipine sahip olması ve bu tipin çalışma zamanında değiştirilmemesi anlamına
+gelir bu program hatalarını önlemeye ve performansı arttırmaya yardımcı olur. Kotlin Type Safety bir dildir ve bunun için iki yol vardır: 
+
+-Statik tip belirleme
+Değişken tanımlarken veri tipini açıkça belirtirsiniz. Örneğin var name : String = Barış
+
+-Tip çıkarımı 
+Değişken tanımlarken veri tipini belirtmiyoruz ancak Kotlin derleyicisi atanan değere göre veri tipini otomatik olarak çıkarır. Örneğin var name = "Ali"
+
+Kotlin, tip güvenliğini sağlamak için bazı özellikler sunar. Bunlardan bazıları şunlardır:
+
+Nullability: Kotlin, null değeri alabilen ve alamayan veri tiplerini ayırır. Null değeri alabilen bir veri tipi, sonuna ? işareti eklenerek tanımlanır.
+Örneğin, var name: String? = null gibi. Null değeri alamayan bir veri tipi ise normal şekilde tanımlanır. Örneğin, var name: String = "Ali" gibi.
+Bu şekilde, null pointer exception (NPE) adı verilen çalışma zamanı hatası önlenir.
+
+Smart cast: Kotlin, bir değişkenin veri tipini kontrol ettikten sonra, o değişkenin tipine uygun işlemleri yapmanıza izin verir. Örneğin, var x: Any = 10 diyelim.
+x değişkeni Any tipinde tanımlandığı için, herhangi bir veri tipi alabilir. Ancak, x değişkeninin Int tipinde olduğunu kontrol etmek isterseniz, if (x is Int) yazabilirsiniz.
+Bu durumda, x değişkeni Int tipine otomatik olarak dönüştürülür ve Int tipine özgü işlemleri yapabilirsiniz. Örneğin, x + 5 gibi.
+
+
+ 
 
 
 
