@@ -31,6 +31,9 @@
 - Octal degiskenler 0 ile baslayan sayilardir. Bu javada desteklenir. int octalNumber = 0155; Bu sekilde tanımlanabilir. Ancak kotlinde sekizlik degiskenler dogrudan desteklenmez. Dolayli yoldan tanimlayabilriz. Onu da 
 val octNumber = "155".toInt(8)  => Stringte tanimlayip onu da toInt ile 8'ilk yapmak istedigimizi belirtebilriz.
 
+9. "Geleneksel Notasyon" (Conventional Notation) gösterimi nasıl yapılır?
+- Geleneksel notasyon, sayıların en basit ve en doğrudan ifade şeklidir ve özellikle günlük kullanım için uygundur. orn: tam ya da ondalik sayilar dogrudan degerleriyle gosterilebilir. tam sayilar: 167, -64 ondalik sayilar: 45.5 gibi..
+
 
 
 
