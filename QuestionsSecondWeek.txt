@@ -61,6 +61,24 @@ val age : Int // Değer vermek istemiyorsak bu şekilde tip belirmek durumunday�
 val age 
 age = 10 şeklinde hata alacağız çünkü tipini belirtmedik daha önce. bunun dışında listeler ile çalışırken de içinde neleri barındıracağını belirtmemiz gerekebilir string, int gibi
 
+Soru 5: Kotlin'de tüm değişkenlerin sınıf olarak bulunması, "ilkel tip" (primitive type) olmadıkları anlamına gelir mi? Arka planda neler oluyor?
+
+Cevap: Kotlin dilinde değişken tiplerimiz bir class'dan referans alır ve Java dilindeki gibi primitive tip değildir bu durumun avantaj ve dezavantajları vardır avantajları Class 
+özelliklerini kullanabiliyor olmamız iken (.length, .toUpperCase()) dezavantajı ise bellek ve performans kaybıdır. örnek vermek gerekirse java'da int tipindeki bir değişken 
+4 byte yer tutarken Kotlin dilinde 16 byte bellek kullanır. Kotlin dilinde primitive tip yoktur demek çok doğru değil çünkü Kotlin java ile uyumlu olabilmek için bazı durumlarda
+bizim için derleme zamanında özel bir optimizasyon ile değişkenlerimizi primitive hale getiriyor. Bu değişken performansını arttırmak için kullanılır. Eğer değişken primitive
+tipe atanabilen bir değişken ise derleme (compile) zamanında 
+
+val number: Int = 10 // null olamayan bir tip, primitive tipe dönüştürülür
+val number2: Int? = 10 // null olabilen bir tip, primitive tipe dönüştürülmez
+
+Değişkenin bir String veri tipinden primitive dönüştürülebilen bir veri yapısına (Int, Double, Boolean vb.) ‘as’ keywordü ile cast işlemi yapılıyorsa, bu dönüşüm çalışma
+zamanında (runtime) gerçekleşir. Örneğin:
+
+val number: String = "10" // String bir tip, primitive tipe dönüştürülmez
+val number2: Int = number.toInt() // String tipinden Int tipine cast işlemi, çalışma zamanında gerçekleşir
+
+
 
 
 
