@@ -258,3 +258,10 @@ val b = 0b1100 // 12
     println(b ushr 1) // Unsigned right shift
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+16- Kotlin'de büyük sayılarla çalışırken hangi ek türlerden yararlanılır ve bu türlerin sınırları nelerdir?
+
+Kotlin'de büyük sayılar ile çalışırken "BigInteger" ve "BigDecimal" ek türlerinde yararlanılabilir. Bu ek türlerin özellikleri Int ve Double veri tiplerinden daha büyük
+aralık sunmasıdır. BigInteger ve BigDecimal'ın değeri, sınırlı değildir ve bellek kapasitesiyle ayrıca hesaplama gücüyle sınırlıdır.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
