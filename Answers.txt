@@ -103,6 +103,13 @@ primitive tiplere oranla daha fazla yer kaplarlar.
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+11- Nullable bir değişkenin bir değere sahip olması ile null olması arasında bellek yönetimi açısından nasıl bir fark vardır? Null değer almış bir değişken bellekte yer kaplamaz diyebilir miyiz?
+
+Nullable özelliğe sahip değişkenler referans tipli değişken sınıfına dahil olmaktadır. Bu nedenle değişken isimleri Ram'in Stack bölümünde, tuttukları referanslar ise
+Ram'in Heap isimli bölgesinde yer alır. Eğer bir nullable değişken null değer alırsa bu değişkenin yalnızca Ram'deki stack bölümünde yer kapladığı anlamına gelir, bu nedenle
+null değer alan değişkenler Ram'de değer kaplamaz ifadesi yanlıştır.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 
