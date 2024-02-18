@@ -229,3 +229,9 @@ Veri İntegritesi ve Güvenlik:
 OverflowException: Taşma durumlarında OverflowException istisnası fırlatılır.
 UnderflowException: Taşma olmaması durumlarında UnderflowException istisnası fırlatılır.
 ***********************************************************
+37-"İşaretsiz" değişkenlerin sınırlamaları nelerdir?
+UByte	kotlin.UByte	0 - 255
+UShort	kotlin.UShort	0 - 65535
+UInt	kotlin.UInt	0 - 4294967295
+ULong	kotlin.ULong	0 - 18446744073709551615
+***********************************************************
