@@ -200,3 +200,15 @@ Integer sınıfının parseInt() metodunu kullanarak 8'lik sistemde ve string ol
 val myOctalNumber = "112"
 println(Integer.parseInt(myOctalNumber, 8)) // çıktı 74
 ------------------------------------------------------------
+
+#9 "Geleneksel Notasyon" (Conventional Notation) gösterimi nasıl yapılır?
+
+Temel matematik işlemlerinde yaygın olarak kullanılan gösterimdir.
+
+Geleneksel Notasyon -> 1200
+Bilimsel Notasyon   -> 1.2 x 10^3
+
+Kotlin also supports a conventional notation for floating-point numbers.
+Doubles: 123.5, 123.5e10
+Floats are tagged by F or f: 123.5f, 154.5F
+------------------------------------------------------------
