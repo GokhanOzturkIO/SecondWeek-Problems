@@ -235,3 +235,11 @@ UShort	kotlin.UShort	0 - 65535
 UInt	kotlin.UInt	0 - 4294967295
 ULong	kotlin.ULong	0 - 18446744073709551615
 ***********************************************************
+38-"İşaretsiz" değişken türleri (UInt, ULong vs.) kullanırken, Java API'leri ile uyumluluk konusunda ne gibi sorunlar olabilir? Bunları çözmek için neler yapabilirsiniz?
+1. Veri Tipi Uyumsuzluğu: Java'da int, long gibi işaretli veri tipleri kullanılır. İşaretsiz Kotlin veri tipleri bu Java veri tipleriyle doğrudan uyumlu değildir.
+2. Taşma ve Taşma Olmama: Java'da taşma ve taşma olmaması durumları Kotlin'den farklı şekilde işlenir. Bu durum, işaretsiz değişkenlerle yapılan işlemlerde hatalara yol açabilir.
+3. API Tasarımı: Bazı Java API'leri, işaretli veri tiplerini varsayar ve işaretsiz veri tipleriyle çalışacak şekilde tasarlanmamıştır.
+Bu sorunları çözmek için:
+1. Dönüştürme İşlemleri: İşaretsiz Kotlin veri tiplerini Java API'leri ile kullanmadan önce, toInt(), toLong() gibi fonksiyonlar kullanarak işaretli veri tiplerine dönüştürmeniz gerekir.
+2. Wrapper Sınıfları: java.lang.Integer, java.lang.Long gibi wrapper sınıfları kullanarak işaretsiz Kotlin veri tiplerini Java API'leri ile uyumlu hale getirebilirsiniz.
+***********************************************************
