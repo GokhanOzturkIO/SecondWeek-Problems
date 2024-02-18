@@ -70,3 +70,21 @@ Kotlin'de değişkeni deklare ederken değişkenin veri türünü belirtip sonun
 sample code --> var myNullableVariable: String? = null
 
 ------------------------------------------------------------
+
+#8 "Null Güvenliği" (Null Safety) kavramını açıklayın.
+
+Null olan bir nesneye erişip üzerinde işlem yapmaya çalışırsak 'NullPointerException' hatası alırız.
+Bu hata önemli bir hatadır çünkü uygulamanın çökmesine neden olur.
+Java dilinde Null safety özelliği tam olarak yoktur. Bu yüzden koda manuel olarak null kontrolleri eklememiz gerekir.
+Kotlin bunu bize çok kolay syntaxlar ile sağlayabiliyor ve önemli ölçüde 'NullPointerException' hatasını önleyebiliyor.
+
+Kotlin'de null safety için özel operatörler vardır. -> ['?.', '!!.', 'dataType?', '?:']
+
+var nonNullable: Int = null // hata verir
+var nullable: Int? = null   // çalışır 
+
+var nonNullable: Int = 15 -> nonNullable.plus(10)    // çalışır
+var nullable: Int? = null -> nullable?!.plus(10)     // hata vermeden çalışır > null çıktısı verir
+var nullable: Int? = null -> nullable!!.plus(10)     // NullPointerException
+
+------------------------------------------------------------
