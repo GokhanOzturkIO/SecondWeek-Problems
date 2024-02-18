@@ -64,6 +64,11 @@ fun main(){
 }
 ```
    Yukarıdaki örneği inceleyecek olursak `val` keyword'ü ile tanımlanan age değişkeni belirli bir hesaplamanın sonucuna göre içerdiği değer değiştirilebilir. Bu sebeple `val` read-only'dir diyebilmekteyiz.
-</br>
+        </details>
+        <details>
+            <summary>
+            "Tip Çıkarımı" (Type inference) kavramını açıklayın. Hangi durumlarda tip belirtmek kesin olarak gereklidir?
+            </summary>
+            Type inference kavramı, değişkene değer atanırken derleyici tarafından atanan değerin tipinin anlaşılmasıdır. Nullable bir değer ataması yapacağımız zaman bunu açıkça belirtmeliyiz.
         </details>
 </details>
