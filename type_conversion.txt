@@ -21,6 +21,9 @@ else -> "Unknown"}
 Güvenzi operator:  !!.   Bu operator null deger yoksa islemi yaoar, varsa nullpointerException firlatir. uygulama 
 crash olur.
 
+4. Sayısal değişkenlerde örtük tip genişletme (implicit widening conversions) ne demektir? Kotlin'de bu neden yapılamaz?
+- Sayisal degiskenlerde ,daha kucuk deger aralikli turun (orn int), daha buyuk aralıkli ture (orn long) otomatik olarak donusturulmesidir. Bu kotlinde implicit sekilde yapilamaz. kotlinde acikca hangi tipe donusturecegimizi soylemek gerekir.  Kotlinde bu tip guvenligi ve turun acikca belirtilmesi kodun okunabilri olmasini sagladigindan dolayi yapilamaz.
+
 
 
 
