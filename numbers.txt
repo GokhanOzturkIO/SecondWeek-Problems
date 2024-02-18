@@ -56,7 +56,8 @@ val octNumber = "155".toInt(8)  => Stringte tanimlayip onu da toInt ile 8'ilk ya
 - BigInteger ve BigDecimal kullanılabilir. BigInteger sınırları sistem belleği ve işlem kapasitesiyle belirlenir.
 BigDecimal da teorik olarak sınırsız bir değer aralığına ve hassasiyete sahiptir. 
 
-17. 
+17. Double ve Float değişkenler kullanılırken "yuvarlama" davranışı nasıldır? Bu nasıl değiştirilebilir?
+- Yuvarlama davranısı belli bir ondalık sayıdan sonra yuvarlanması gerekebilri. Bu durum orn 0.1 gibi basit bir ondaliık sayının iklik tabanda ifade edilemesi durumunda gorulur. Varsayılan yuvarlama, en yakına yuvarlama modudur. Bıgdecimal ya da math.round kullanarak bunu degistirebilriz.
 
 
 
