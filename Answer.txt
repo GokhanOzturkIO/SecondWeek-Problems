@@ -31,3 +31,7 @@ Dökümantasyonda da açıkca belirtildiği üzere Kotlin'de her şey nesnedir. 
 
 ===========================
 
+6-) "Tip Güvenliği" (Type Safety) kavramını açıklayın.
+
+Tip güvenliği, bir değişkenin tipinin yanlış kullanılmasının önüne geçmektedir. Örneğin String tipinde bir değişken atadık ve daha sonra bu değişkene Int değerinde bir sayı atamak istedik. Bu durumda Type Safety yani Tip Güvenliği özelliği ortaya çıkarak String tipinde bir değişkene Int değerinde bir sayı atanmasının önüne geçmektedir. Böylelikle oluşabilecek hatalar önlenmiş olmaktadır.
+
