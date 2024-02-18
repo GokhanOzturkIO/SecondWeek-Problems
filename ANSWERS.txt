@@ -1,4 +1,4 @@
-Temel Türler & Null Güvenliği
+A)Temel Türler & Null Güvenliği
 1-val ile var arasındaki fark nedir?
 -performans farkı yok denecek kadar azdır. val daha maliyetlidir. var daha performanslıdır. Fakat Thread kullanımında val kullanmak daha mantıklı ve performans konusunda avantajlıdır çünkü birden fazla thread açtıktan sonra var değişkenler kullanmak sürekli bir karşılaştırmaya girer ve hem maliyetten hem de süreden kazancımızı sınırlar, val bu konuda sabit bir değerde olduğundan daha avantajlıdır.
 
@@ -70,3 +70,29 @@ var name? = null gibi.
 elvis operator -> ?:, bu işaret sayesinde null değişkeni kontrol edip eğer null ise belirtilen değeri kullanır.
 
 not null assertion opeator -> !!, bu işaret sayesinde bir değişkenin null olmadığını varsayar ve derleyiciye bu konuda güvence verir.
+
+B)SAYILAR
+
+1- Kaç farklı tipte "number" sınıfı miras alan "alt sınıf" (child class) vardır? Bunların değer aralıkları neden önemlidir?
+
+- Byte: 8-bit işaretli tamsayı değerlerini temsil eder. Değer aralığı -128 ile 127 arasındadır.
+
+Short: 16-bit işaretli tamsayı değerlerini temsil eder. Değer aralığı -32768 ile 32767 arasındadır.
+
+Int: 32-bit işaretli tamsayı değerlerini temsil eder. Değer aralığı -2^31 ile (2^31)-1 arasındadır.
+
+Long: 64-bit işaretli tamsayı değerlerini temsil eder. Değer aralığı -2^63 ile (2^63)-1 arasındadır.
+
+Float: 32-bit kayan noktalı sayı değerlerini temsil eder. Değer aralığı ve hassasiyeti diğer sayı tiplerinden farklıdır.
+
+Double: 64-bit kayan noktalı sayı değerlerini temsil eder. Değer aralığı ve hassasiyeti diğer sayı tiplerinden farklıdır.
+
+bunların değer aralıkları önemlidir çünkü bir değeri doğru aralıkta bulunan değişkende kullanmak bellek optimizasyonu için oldukça önemlidir.
+
+2-Eğer bir değişkene tip belirtimi yapılmaz ve bir değer atanırsa, Kotlin tip çıkarımını nasıl yapar?
+
+-verilen değere göre Int veya Long olarak otomatik belirlenir.
+
+3-Float değişken oluştururken F ve f harfleri varken, Long değişken oluştururken neden küçük l harfi yoktur
+
+-1 harfiyle karıştırılabileceğinden kullanımı yanlış kabul edilir.
