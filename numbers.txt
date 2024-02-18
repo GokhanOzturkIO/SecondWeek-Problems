@@ -37,6 +37,11 @@ val octNumber = "155".toInt(8)  => Stringte tanimlayip onu da toInt ile 8'ilk ya
 10. Sayısal değişkenlerde alt çizgi (underscore) nasıl kullanılır? Kotlin bunu nasıl yorumlar?
 - Cok basamakli sayilarla islem yaparken sayiyi daha kolay okuyabilmek icin basamaklar arasina _ koyulur. Kotlin bunu okurken duz sayi gibi okur. _ isaretini gormez.
 
+11. == ile neyi karşılaştırırız? === ile neyi karşılaştırırız?
+- == ile degiskenlerin tuttugu degerleri karsilastirirz. degerler ayni ise true doner.  === ile degiskenin referans ettigi yeri, memory'deki alani karsilastiririz. deger ayni olsa bile Nullable degiskenlerde byte degiskeni haric bellekte tutulan alan farkli oldugu icin false doner.
+
+
+
 
 
 
