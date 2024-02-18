@@ -99,12 +99,12 @@ Smart cast: Kotlin, bir değişkenin veri tipini kontrol ettikten sonra, o deği
 x değişkeni Any tipinde tanımlandığı için, herhangi bir veri tipi alabilir. Ancak, x değişkeninin Int tipinde olduğunu kontrol etmek isterseniz, if (x is Int) yazabilirsiniz.
 Bu durumda, x değişkeni Int tipine otomatik olarak dönüştürülür ve Int tipine özgü işlemleri yapabilirsiniz. Örneğin, x + 5 gibi.
 
-Soru: Bir değişkeni nullable yapmak için ne yapmalıyız?
+Soru 7: Bir değişkeni nullable yapmak için ne yapmalıyız?
 
 Cevap: Bir değişkeni nullable yapmak için veri tipinin sonuna ? işareti eklemeliyiz. Örneğin var name: String? = null gibi. Bu şekilde değişkenin null değeri alabileceğini belirtiyoruz
 Null değeri alamayan bir değişken ise normal şekilde tanımlanır. var name = String = "Barış". Nullable NullPointerException çalışma hatasından bizi kurtarmak için etkili bir yoldur.
 
-Soru: "Null Güvenliği" (Null Safety) kavramını açıklayın.
+Soru 8: "Null Güvenliği" (Null Safety) kavramını açıklayın.
 
 Cevap: Null Güvenliği (Null Safety) bir programlama dilinde değişkenleri null(boş) değerlere sahip olma durumunu kontrol etmek ve başa çıkmak için kullanılır. Null bir değişken
 veya nesnenin bellekte bulunmaması veya hiçbir şeye işaret etmemesi anlamına gelir. Bu noktada bu nesne veya değişkenin üyelerine erişmeye çalışmak NPE hatasını oluşturur
@@ -129,15 +129,29 @@ Bir değişkenin null olup olmadığını kontrol ederiz if(name != null)
 değerini döndürür. 
 Kotlin, null güvenliği sayesinde, programlamada ortaya çıkabilecek birçok hata türünü azaltır ve kodunuzun güvenilirliğini, performansını ve okunabilirliğini artırır.
 
-Soru: Bir değişkene null değer atanır ve tip belirtilmezse Kotlin bu değişkeni nasıl yorumlar?
+Soru 9: Bir değişkene null değer atanır ve tip belirtilmezse Kotlin bu değişkeni nasıl yorumlar?
 
 Cevap: Kotlin, bir değişkene null değer atanır ve tip belirtilmezse, bu değişkenin tipini Nothing? olarak yorumlar çünkü tip çıkarımı yapamaz. Nullable ya da null olanlara any
 veriliyor.
 
-Soru: İlkel bir değişkenin nullable olması ile null değer alamaması arasında bellek yönetimi açısından nasıl farklar vardır?
+Soru 10: İlkel bir değişkenin nullable olması ile null değer alamaması arasında bellek yönetimi açısından nasıl farklar vardır?
 
 Cevap: Null değişkenler bellek yönetimi açısından daha performanslıdır çünkü class olarak tutulurlar ancak nullable olmayan değişkenler daha az yer kaplar çünkü optimizasyon
 ile primitive tiplere dönüştürülürler.
+
+Soru 11: Nullable bir değişkenin bir değere sahip olması ile null olması arasında bellek yönetimi açısından nasıl bir fark vardır? Null değer almış bir değişken bellekte yer
+kaplamaz diyebilir miyiz?
+
+Cevap: Bir değere sahip olan nullable bir değişken, bellekte hem veriyi hem de null olup olmadığını belirten bir bayrak tutar. Bu, nullable değişkenlerin bellek kullanımını artırır.
+Örneğin, var sayi: Int? = 5 
+Null olan nullable bir değişken, bellekte sadece null bayrağını tutar. Bu, nullable değişkenlerin bellek kullanımını azaltır. Örneğin, var sayi: Int? = null diyelim. 
+Null değer almış bir değişken bellekte yer kaplamaz diyemeyiz, çünkü bu değişkenin null olduğunu belirten bir bayrak bellekte yer kaplar. Ancak, null değer almış bir değişken,
+bir değere sahip olan nullable değişkene göre daha az bellek kullanır.
+
+
+
+
+
 
 
 
