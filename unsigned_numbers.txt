@@ -16,6 +16,10 @@
 6. "İşaretsiz" değişkenlerin kullanım amaçları nelerdir?
 - Eger sadece pozitif deger araliginda sayi kullanacaksak veya int , long gibi türlerin deger araligindan daha buyuk bir deger kullanacaksak o zaman unsigned variables kullanilir.
 
+7. "İşaretsiz" değişkenlerle yapılan matematiksel işlemlerde, özellikle büyük sayılarla çalışırken karşılaşılabilecek taşma (overflow) ve taşma olmaması (underflow) durumları için Kotlin nasıl bir yönetim sağlar?
+- overflow icin normal isaretli degiskenlerle calisirken sonuc -'li bir deger cikar ama unsigned degiskenlerde -'li cıkma imkani yoktur. Bu nedenle overflow meydana geldiginde sonuc 0 doner.
+Underflow icin de sonuc yine -'li cıkamayacagi icin sonuc turun maximum degerini alir.
+
 
 
 
