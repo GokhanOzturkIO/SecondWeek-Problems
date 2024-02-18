@@ -92,8 +92,17 @@ tercih edebiliriz bu gibi sebeplerden ötürü !! operatörünü kullanabiliriz.
 9- Bir değişkene null değer atanır ve tip belirtilmezse Kotlin bu değişkeni nasıl yorumlar?
 
 Bir değişkene null değer atayabilmek için değişken tipinden sonra "?" kullanmalıyız. Ancak bunu yapmadan null değer atamaya çalışırsak değişkenimizin türü Nothing? şeklinde
-tanımlanır ve daha sonra herhangi bir şekilde atama yapamayız.
+tanımlanır ve daha sonra herhangi bir şekilde atama yapmaya çalışırsak "The integer literal does not conform to the expected type Nothing?" hatasını alırız.
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+10- İlkel bir değişkenin nullable olması ile null değer alamaması arasında bellek yönetimi açısından nasıl farklar vardır?
+
+Nullable olan değişkenler referans tipli değişken statüsüne eriştiği için isimleri Ram'in stack bölümü üzerinde tutulsa da Heap bölümü üzerinde de yer kaplayabileceği için
+primitive tiplere oranla daha fazla yer kaplarlar.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
 
 
