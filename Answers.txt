@@ -224,3 +224,10 @@ mod alma (bölme işleminde kalanı bulma) işlemi için "%" operatörü kullan�
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+14- Sayısal değişkenlerde hangi karşılaştırma operatörleri kullanılabilir?
+
+Sayısal değişkenler için; eşit mi? "==", eşit değil mi? "!=", küçük mü? "<", büyük mü? ">", küçük eşit mi? "<=", büyük eşit mi ">=", aralık içerisinde mi "x..y", x bu sayı aralığnda
+mı "x in a..b" ve x bu sayı aralığı içersinde değil mi? "x !in a..b" operatörleri kullanılabilir.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
