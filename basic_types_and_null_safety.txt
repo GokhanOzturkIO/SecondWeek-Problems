@@ -32,6 +32,12 @@
 11. Nullable bir değişkenin bir değere sahip olması ile null olması arasında bellek yönetimi açısından nasıl bir fark vardır? Null değer almış bir değişken bellekte yer kaplamaz diyebilir miyiz?
 - Bir Nullable degiskene null ataması yapıldığında bellekte sadece o degisken icin yer ayrılır. Ama nullable degiskene null olmayan br deger atamasi yapildiginda hem degisken referansı icin hem de deger icin ayrı yer ayrılır. Yani null degerler almis bi degiskene bellekte yer kaplamaz diyemeyiz. Cunku degisken referansi bellekte yer kaplar ama bu degiskenin isaret ettigi degerin kapladigi alana gore cok azdir. Sonuc olarak null atamasi bellek tasarrufu saglar diyebilriz.
 
+12. Nullable bir değişkenle çalışırken hangi operatörleri kullanırız? Bu operatörlerin kullanım farkları nelerdir? Hangisini ne zaman kullanmak daha anlamlıdır?
+- Nullable bir degiskenle calisirken !!. ve ?. operatorleri kullaniriz. 
+  !!. operatoru, degerin null olup olmamasiyla ilgilenmez. null degilse islemi yapar ama null deger gelmisse uygulamayi durdurur. NullPointerException hatasi verir.
+  ?. operatoru ise, degerin null olup olmadigina bakar; null degilse islemi dogru yapar, ama null gelmisse uygulamayi durdurmaz islemi hatali yapmaya devam eder.  
+  İslemin hatali olmasinin cok onemsenmeyecegi durumlarda ?. operatoru ama islmein dogru olmasi uygulamanın hata vermesinden daha mantıklı oldugu durumlarda !!. operatoru kullanilmalidir.
+
 
 
 
