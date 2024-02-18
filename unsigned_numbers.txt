@@ -13,5 +13,21 @@
 5. "İşaretsiz" "Long" harf gösterimi nasıl yapılır?
 - ULong olarak yapilir.
 
+6. "İşaretsiz" değişkenlerin kullanım amaçları nelerdir?
+- Eger sadece pozitif deger araliginda sayi kullanacaksak veya int , long gibi türlerin deger araligindan daha buyuk bir deger kullanacaksak o zaman unsigned variables kullanilir.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
