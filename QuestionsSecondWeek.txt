@@ -16,3 +16,35 @@ bir değişken yaratmış oluyoruz
 var name = "Barış" 
     private set 	
 
+Soru 3 : "Değişmez" (Immutable) ve "Salt Okunur" (ReadOnly) kavramlarını açıklayın. val değişkenler neden aslında "değişmez" değil de "salt okunur" olarak açıklanmalıdır?
+
+Cevap: “Değişmez” (Immutable), bir nesnenin veya değişkenin değerinin oluşturulduktan sonra hiçbir şekilde değiştirilemediği anlamına gelir. Değişmez bir nesne veya
+değişken, yalnızca bir kez değer atanabilen ve sonradan değiştirilemeyen bir sabittir. Örneğin, Kotlin’de const val anahtar kelimeleri ile tanımlanan değişkenler değişmezdir.
+Bu değişkenlerin değerleri derleme zamanında belirlenir ve çalışma zamanında değiştirilemez. 
+
+Örneğin: 
+const val PI = 3.14 // değişmez değişken
+PI = 3.15 // hata! değişmez değişkenin değeri değiştirilemez
+
+Salt okunur” (ReadOnly), bir nesnenin veya değişkenin değerinin okunabileceği, ancak doğrudan değiştirilemeyeceği anlamına gelir. Salt okunur bir nesne veya değişken,
+değer ataması yapılabilen, ancak daha sonra yeniden atama yapılamayan bir değişkendir. Ancak, salt okunur bir nesne veya değişkenin değeri, dolaylı olarak başka bir nesne
+veya değişkene bağlı olarak değişebilir. Örneğin, Kotlin’de val anahtar kelimesi ile tanımlanan değişkenler salt okunurdur. Bu değişkenlerin değerleri çalışma zamanında
+belirlenir ve doğrudan değiştirilemez. Ancak, bu değişkenler get fonksiyonu ile değişim yapabilir. Örneğin:
+
+val name: String = "Barış" // salt okunur değişken  (Burayı değiştirdikçe değeri değişecektir)
+name = "Barışş" // hata! salt okunur değişkenin değeri değiştirilemez
+val nameLength: Int
+    get() = this.length // get fonksiyonu ile değişim yapılabilir
+
+Bu kavramları açıkladıktan sonra, val değişkenlerin neden aslında “değişmez” değil de “salt okunur” olarak açıklanması gerektiğini anlayabiliriz. Çünkü val değişkenlerin
+değerleri, doğrudan değiştirilemese de, dolaylı olarak değişebilir. Bu, val değişkenlerin değerinin sabit olmadığını, ancak değiştirilemez olduğunu gösterir. Bu nedenle, val
+değişkenler “değişmez” değil, “salt okunur” olarak tanımlanmalıdır.
+
+Burayı toparlayacak olursak, şunu yazabiliriz:
+
+Val değişkenler, değerleri doğrudan değiştirilemeyen, ancak get fonksiyonu ile değişebilen değişkenlerdir. Bu değişkenler, değişmez değil, salt okunur olarak adlandırılır.
+
+
+
+
+
