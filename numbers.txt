@@ -34,6 +34,9 @@ val octNumber = "155".toInt(8)  => Stringte tanimlayip onu da toInt ile 8'ilk ya
 9. "Geleneksel Notasyon" (Conventional Notation) gösterimi nasıl yapılır?
 - Geleneksel notasyon, sayıların en basit ve en doğrudan ifade şeklidir ve özellikle günlük kullanım için uygundur. orn: tam ya da ondalik sayilar dogrudan degerleriyle gosterilebilir. tam sayilar: 167, -64 ondalik sayilar: 45.5 gibi..
 
+10. Sayısal değişkenlerde alt çizgi (underscore) nasıl kullanılır? Kotlin bunu nasıl yorumlar?
+- Cok basamakli sayilarla islem yaparken sayiyi daha kolay okuyabilmek icin basamaklar arasina _ koyulur. Kotlin bunu okurken duz sayi gibi okur. _ isaretini gormez.
+
 
 
 
