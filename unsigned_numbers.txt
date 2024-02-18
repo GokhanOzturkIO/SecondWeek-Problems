@@ -23,6 +23,9 @@ Underflow icin de sonuc yine -'li cıkamayacagi icin sonuc turun maximum degerin
 8. "İşaretsiz" değişkenlerin sınırlamaları nelerdir?
 - Unsigned degisknelerin sinirlamasi karsilik geldikleri signed degiskenlerin - kismindaki deger araliginin pozitif kisma eklenmesiyle olur. Yani 0 ile karsilik geldikleri signed degiskenlerin pozitif deegrlerinin 2 katidir. 
 
+9. "İşaretsiz" değişken türleri (UInt, ULong vs.) kullanırken, Java API'leri ile uyumluluk konusunda ne gibi sorunlar olabilir? Bunları çözmek için neler yapabilirsiniz?
+- Java api'leri genellikle isaretli turlerle calisir. Bu nedenle uyumluluk konusunda hatalara neden olabilir. 
+Bunun cozumu java kisminda deegisken ornegin bir int tipe donusturulerek yapilir. Tabi bu durumda deger signed degisken olan int deger araliginda mi kontrol edilir.
 
 
 
