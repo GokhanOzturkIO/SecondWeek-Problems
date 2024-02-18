@@ -48,6 +48,11 @@ crash olur.
 12. "val x = 5 / 2.toDouble() println(x == 2.5)" gibi bir işlemin sonucu ve tipi nedir? Neden böyle olduğunu açıklayın.
 - Sonuc true doner ve tipi Double'dir. toDouble() fonksiyonu ile explicit olarak type conversion yapildive  Double degiskene cevrildi..
 
+13. Kotlin'de tür dönüşümü yapılırken, dönüşümün başarısız olması durumunda TypeCastException nasıl ele alınır ve bu tür hataların önüne geçmek için hangi önlemler alınabilir?
+- Donusumun basarisiz olmasi demek, açik tur donusumlerinde , donusturulmek istenen tur hedef turle uyumlu degilse TypeCastException hatasi meydana gelir. Bu tur hatalarin onune gecmek iciin as ile tur donusumu yapilirken as? kullanmak. donusum basarisiz oldugunda null dege rdondurur. 
+  Is opratoru ile tur kontrolu yapmak da guvenli bir yontemdir. val obj is String dedigimizde bu degisken artik String olarak kullanilabilir.
+
+
 
 
 
