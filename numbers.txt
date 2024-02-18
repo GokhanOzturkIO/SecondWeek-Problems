@@ -27,6 +27,10 @@
 - Ikilik degiskenler 0b veya 0B on eki ile tanimlanabilir. Orn:
   val binaryNumber: Int = 0b1010110
 
+8. Sekizlik (Octal) değişkenler Java'da nasıl tanımlanır? Kotlin'de Sekizlik değişken tanımlanabilir mi?
+- Octal degiskenler 0 ile baslayan sayilardir. Bu javada desteklenir. int octalNumber = 0155; Bu sekilde tanımlanabilir. Ancak kotlinde sekizlik degiskenler dogrudan desteklenmez. Dolayli yoldan tanimlayabilriz. Onu da 
+val octNumber = "155".toInt(8)  => Stringte tanimlayip onu da toInt ile 8'ilk yapmak istedigimizi belirtebilriz.
+
 
 
 
