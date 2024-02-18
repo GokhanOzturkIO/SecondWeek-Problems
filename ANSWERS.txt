@@ -361,3 +361,22 @@ Kodun çıktısı true olacaktır. Bunun nedeni, b değişkeninin türü Byte ik
 -Bu kodda önce bir Byte türünde b adında bir değişken oluşturulur ve değeri 1 olarak atanır. Daha sonra bir Int türünde i adında bir değişken oluşturulur ve bu değişkenin değeri b.toInt() ifadesi ile b değişkeninin toInt() metodu kullanılarak Int türüne dönüştürülerek atanır. Son olarak b ve i değişkenlerinin değerleri karşılaştırılır ve sonuç print fonksiyonu ile ekrana yazdırılır.
 
 Kodun çıktısı true olacaktır. Bunun nedeni, b değişkeninin değerinin toInt() metodu ile Int türüne dönüştürülerek i değişkenine atanmasıdır. Bu dönüşüm sonucunda b değişkeninin değeri artık Int türünde olduğundan, i değişkeni ile karşılaştırıldığında değerleri aynı olacaktır. Dolayısıyla, b ve i değişkenlerinin değerleri karşılaştırıldığında, her ikisi de aynı değeri (1) taşıdığı için karşılaştırma sonucu true olur.
+
+7-Sayısal değişkenlerde açık dönüşüm (Explicit Type Conversion) yaparken hangi fonksiyonları kullanabilirsiniz?
+
+-Sayısal değişkenlerde açık dönüşüm (explicit type conversion) yaparken aşağıdaki fonksiyonları kullanabilirsiniz:
+
+toByte(): Değeri Byte türüne dönüştürür.
+toShort(): Değeri Short türüne dönüştürür.
+toInt(): Değeri Int türüne dönüştürür.
+toLong(): Değeri Long türüne dönüştürür.
+toFloat(): Değeri Float türüne dönüştürür.
+toDouble(): Değeri Double türüne dönüştürür.
+
+8-"val result = 1L + 3" // "Long + Int" gibi bir işlemin sonucunda "result" değişkeninin tipi ve değeri ne olur? Neden böyle olduğunu açıklayın.
+
+-Long olacaktır. Kotlinde işlem farketmeksizin tüm işlemlerde en büyük tip sonucun tipi olur.
+
+9-"val result = Int.MAX_VALUE + Int.MAX_VALUE" gibi bir işlemin sonucunda "result" değişkeninin tipi ve değeri ne olur? Neden böyle olduğunu açıklayın.
+
+-Int olur fakat overflow gerçekleşir.
