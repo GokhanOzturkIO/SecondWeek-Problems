@@ -1,0 +1,43 @@
+1. "İşaretsiz" (Unsigned) değişkenler ne demektir? İşaretli olanlarla aralarındaki fark nedir?
+- İsaretsiz degiskenler 0 ve pozitif sayilari temsil eden sayilardir. Negatif sayilari temsil etmezler. Signed degiskenlerle aralarindaki farklar; temsil etikleri deger araligidir. Signed degsikenler neagtif ve pozitif aralikta degerleri temsil edebilriken unsigned sadece pozitif degerleri temsil edebilri.
+
+2. "İşaretsiz" değişkenler nasıl bir sınıf yapısında tutulurlar? Bu neden önemlidir?
+- İşaretsiz degiskenler UByte, UShort, UInt, ULong gibi sinif yapisinda tutulurlar. Bu sadece pozitif degerlerl calismak gerektiginde kullanilabilir.
+
+3. "İşaretsiz" değişkenlerin harf gösterimi nasıldır?
+- Byte, Int, Short, Long degiskenlerin onune U koyarak Unsigned degisken tanimalyabilriz. Deger atamasi yaparken de sayidan sonra u harfi koyulur.
+
+4. "val a1 = 42u ve val a2 = 0xFFFF_FFFF_FFFFu" değişkenlerin tipleri ne olur? Neden?
+- ilk degiskenin tipi UInt  ikincinin tipi ULong olur. Cunku Kotlin'de verilen deger int deger araligi icindeyse Int tip alir. Int deger araligi disindaysa Long tip set edilir.
+
+5. "İşaretsiz" "Long" harf gösterimi nasıl yapılır?
+- ULong olarak yapilir.
+
+6. "İşaretsiz" değişkenlerin kullanım amaçları nelerdir?
+- Eger sadece pozitif deger araliginda sayi kullanacaksak veya int , long gibi türlerin deger araligindan daha buyuk bir deger kullanacaksak o zaman unsigned variables kullanilir.
+
+7. "İşaretsiz" değişkenlerle yapılan matematiksel işlemlerde, özellikle büyük sayılarla çalışırken karşılaşılabilecek taşma (overflow) ve taşma olmaması (underflow) durumları için Kotlin nasıl bir yönetim sağlar?
+- overflow icin normal isaretli degiskenlerle calisirken sonuc -'li bir deger cikar ama unsigned degiskenlerde -'li cıkma imkani yoktur. Bu nedenle overflow meydana geldiginde sonuc 0 doner.
+Underflow icin de sonuc yine -'li cıkamayacagi icin sonuc turun maximum degerini alir.
+
+8. "İşaretsiz" değişkenlerin sınırlamaları nelerdir?
+- Unsigned degisknelerin sinirlamasi karsilik geldikleri signed degiskenlerin - kismindaki deger araliginin pozitif kisma eklenmesiyle olur. Yani 0 ile karsilik geldikleri signed degiskenlerin pozitif deegrlerinin 2 katidir. 
+
+9. "İşaretsiz" değişken türleri (UInt, ULong vs.) kullanırken, Java API'leri ile uyumluluk konusunda ne gibi sorunlar olabilir? Bunları çözmek için neler yapabilirsiniz?
+- Java api'leri genellikle isaretli turlerle calisir. Bu nedenle uyumluluk konusunda hatalara neden olabilir. 
+Bunun cozumu java kisminda deegisken ornegin bir int tipe donusturulerek yapilir. Tabi bu durumda deger signed degisken olan int deger araliginda mi kontrol edilir.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

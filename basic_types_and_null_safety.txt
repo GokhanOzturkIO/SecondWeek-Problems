@@ -1,0 +1,62 @@
+1. val ile var arasındaki fark nedir?
+- val degisken read only degiskendir. var degisken ise degeri degistirilebilir degiskendir.
+
+2. Bir var değişkeni val gibi davranmasını nasıl sağlayabiliriz val kelimesini kullanmadan? Bunu neden yapmak isteriz? Örnek bir senaryo verin.
+- Bir var degiskenin set ozelligini private yaparsak yeni deger set edilemez. val degisken gibi davranmasini saglayabiliriz. Bu durumu; kullanıcının degismesini istemedigimiz degerleri degistirmemesi icin kullanabiliriz.
+
+3. "Değişmez" (Immutable) ve "Salt Okunur" (ReadOnly) kavramlarını açıklayın. val değişkenler neden aslında "değişmez" değil de "salt okunur" olarak açıklanmalıdır?
+- Değismez kavrami ne olursa olsun degistiremedigimiz, degismemesi gereken degerdir. salt okunur kavramı, degerini gorebildigimiz ama degistiremedigimiz nesnelerdir. val degiskenler diger degiskenlere bagli olarak degeri degisebilir degiskendir, ama bu son degerin degerini sonradan degistiremeyiz. Bu sebeple read-only olarak tanımlanmalidir.
+
+4. "Tip Çıkarımı" (Type inference) kavramını açıklayın. Hangi durumlarda tip belirtmek kesin olarak gereklidir?
+- Type inference, bir degiskene deger atadigimizda o degiskene manuel olarak bir tip atamasak bile, IDE bu degiskenin tipine karar verebilir. Degiskenin ilk deger atamasi yoksa ve null deger alabilir oldugunda tip belirtmek zorundayiz.
+
+5. Kotlin'de tüm değişkenlerin sınıf olarak bulunması, "ilkel tip" (primitive type) olmadıkları anlamına gelir mi? Arka planda neler oluyor?
+- Kotlin'de class gibi gozuken degisken tipleri ozel optimizasyonlarla Bytecode'a cevrilirken yine primitive olacak sekilde cevrilir. Arka planda degiskenler primitive tiplere cevrilir.
+
+6. "Tip Güvenliği" (Type Safety) kavramını açıklayın.
+- Tip güvenliği programin derleme asamasinda turle ilgili hatalarin tespitiniyapmasi ve calisma zamaninda bu hatalarin onune gecilmesidir.
+
+7. Bir değişkeni nullable yapmak için ne yapmalıyız?
+- Bir değişkeni nullable yapmak icin tur tanimindan sonra ? koymaliyiz. 
+	Ornegin: val name: String? = null  ...Bu sekilde name adinda null bir String degisken olusturduk.
+
+8. "Null Güvenliği" (Null Safety) kavramını açıklayın.
+- Bir degerin null olabilme durumuna karsi programin onlem almasidir. NullPointerException gibi hatalarin onune gecilir. Null degerlerle de guvenli calisma durumudur.
+
+9. Bir değişkene null değer atanır ve tip belirtilmezse Kotlin bu değişkeni nasıl yorumlar?
+- Kotlin Nothing? denilen bir tip atamasi yapar.
+
+10. İlkel bir değişkenin nullable olması ile null değer alamaması arasında bellek yönetimi açısından nasıl farklar vardır?
+- primitive tipler dogrudan null deger alamazlar. primitive tip'i nullable yaptığımızda bu arkada Class'i isaret eder. Dolayısıyla bellekte daha fazla yer kaplar. primitive tipler. yani null deger alamayanlar daha az yer kaplar, daha performanslıdır ama nullable olan tiplere gore daha az is yapar.
+
+11. Nullable bir değişkenin bir değere sahip olması ile null olması arasında bellek yönetimi açısından nasıl bir fark vardır? Null değer almış bir değişken bellekte yer kaplamaz diyebilir miyiz?
+- Bir Nullable degiskene null ataması yapıldığında bellekte sadece o degisken icin yer ayrılır. Ama nullable degiskene null olmayan br deger atamasi yapildiginda hem degisken referansı icin hem de deger icin ayrı yer ayrılır. Yani null degerler almis bi degiskene bellekte yer kaplamaz diyemeyiz. Cunku degisken referansi bellekte yer kaplar ama bu degiskenin isaret ettigi degerin kapladigi alana gore cok azdir. Sonuc olarak null atamasi bellek tasarrufu saglar diyebilriz.
+
+12. Nullable bir değişkenle çalışırken hangi operatörleri kullanırız? Bu operatörlerin kullanım farkları nelerdir? Hangisini ne zaman kullanmak daha anlamlıdır?
+- Nullable bir degiskenle calisirken !!. ve ?. operatorleri kullaniriz. 
+  !!. operatoru, degerin null olup olmamasiyla ilgilenmez. null degilse islemi yapar ama null deger gelmisse uygulamayi durdurur. NullPointerException hatasi verir.
+  ?. operatoru ise, degerin null olup olmadigina bakar; null degilse islemi dogru yapar, ama null gelmisse uygulamayi durdurmaz islemi hatali yapmaya devam eder.  
+  İslemin hatali olmasinin cok onemsenmeyecegi durumlarda ?. operatoru ama islmein dogru olmasi uygulamanın hata vermesinden daha mantıklı oldugu durumlarda !!. operatoru kullanilmalidir.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
