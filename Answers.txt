@@ -192,7 +192,11 @@ val decimalNumber = Integer.parseInt(octalString, 8) // Sekizlik formattaki stri
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+9- "Geleneksel Notasyon" (Conventional Notation) gösterimi nasıl yapılır?
 
+Kotlin Geleneksel Notasyon gösterimini destekler. Double sayılar için "123.5, 123.5e10" şeklinde, Float sayılar için "F veya f: 123.5f, 154.5F" şeklinde yapılabilir.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 
