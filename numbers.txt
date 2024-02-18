@@ -12,3 +12,24 @@
 4. Tek duyarlıklı (Single precision) ve Çift duyarlıklı (Double precision) kavramlarını açıklayın.
 - Bu kavramlar kayan noktalı sayıların temsili ile ilgilidir. Tek duyarlıklı kavram Float olarak adlandırılır ve virgulden sonra  double'a gore daha az basamak vardir. Daha az hassas hesaplamalar icin kullanılabilir.
   Double Presicion kavrami ise Double tip olarak adlandiriilr. Virgulden sonra floata gore daha fazla basamaga sahiptir. Daha hassas olcumler icin bu kullanılmalıdır.
+
+5. Double ve Float değişkenlerle çalışırken ondalık ayıracı olarak hangi işaretler kullanılır? Bu ayıraçların kullanımında nelere dikkat etmek gerekir?
+- , ve . kullanilabilir. Normalde . kullanilir ama türkce duyarlikli uygulama yaziyorsak gelen datalarin , ile gelme ihtimaline gore ,'e duyarli olup olmadigini kontrol etmeliyiz.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
