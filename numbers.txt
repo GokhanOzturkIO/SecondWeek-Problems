@@ -53,7 +53,8 @@ val octNumber = "155".toInt(8)  => Stringte tanimlayip onu da toInt ile 8'ilk ya
 - and , or, xor gibi operatorlerdir. Bunlar veri sıkştırma, sifreleme, ag prokolleri islemleri icin kullanilabilir. kotlinde: var result = 12 and 5 seklinde kullanilabilir.
 
 16. Kotlin'de büyük sayılarla çalışırken hangi ek türlerden yararlanılır ve bu türlerin sınırları nelerdir?
-- BigInteger ve BigDecimal kullanılabilir. 
+- BigInteger ve BigDecimal kullanılabilir. BigInteger sınırları sistem belleği ve işlem kapasitesiyle belirlenir.
+BigDecimal da teorik olarak sınırsız bir değer aralığına ve hassasiyete sahiptir. 
 
 17. 
 
