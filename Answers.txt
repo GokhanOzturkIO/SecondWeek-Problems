@@ -217,5 +217,10 @@ Eğer primitive tipteki bir değişken nullable olup üç eşittir operatörü i
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+13- Sayısal değişkenlerde hangi matematiksel operatörler kullanılabilir?
 
+Sayısal değişkenler ile 5 farklı operatör kullanabiliriz. Toplama için "+" operatörü, çıkarma için "-" operatörü, çarpma için "*" operatörü, bölme için "/" operatörü ve son olarak
+mod alma (bölme işleminde kalanı bulma) işlemi için "%" operatörü kullanılabilir.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
