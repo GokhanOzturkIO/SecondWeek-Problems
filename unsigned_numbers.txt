@@ -1,0 +1,4 @@
+1. "İşaretsiz" (Unsigned) değişkenler ne demektir? İşaretli olanlarla aralarındaki fark nedir?
+- İsaretsiz degiskenler 0 ve pozitif sayilari temsil eden sayilardir. Negatif sayilari temsil etmezler. Signed degiskenlerle aralarindaki farklar; temsil etikleri deger araligidir. Signed degsikenler neagtif ve pozitif aralikta degerleri temsil edebilriken unsigned sadece pozitif degerleri temsil edebilri.
+
+
