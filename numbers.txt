@@ -19,6 +19,13 @@
 6. Double ve Float değişkenler ondalık kısımda kaç basamağa kadar işlem yaparlar? Bu sınırın üzerinde gelen ondalık bilgileri için nasıl davranırlar? Hangi durumlar için Float ve hangi durumlar için Double kullanılmalıdır?
 - Float degiskenler ondalik kisminda 6 basamaga kadar, double degiskenler ondalik kisminda 15 basamaga kadar islem yapabilirler. Bu sinirlarin uzerinde gelen degerler icin son basamaktan sonraki en buyuk sayiya yuvarlama yapar ve ondalik sinirlarina kadar yazar. Hassas olcumler icin double, daha az hassas olcumler icin float kullanilmalidir.
 
+7. Ondalık(Decimal), Onaltılık (Hexadecimal) ve İkilik (Binary) değişkenleri Kotlin'de nasıl tanımlayabilirsiniz?
+- Ondalık degiskenler icin hicbir on ek kullanmadan direkt tanimlayabiliriz. Orn:
+  val decimalNumber : Int = 255
+- Onaltilik degiskenler 0x veya 0X on eki ile tanimlanabilir. Orn:
+  val hexadecimalNumber : Int = 0x1A3F
+- Ikilik degiskenler 0b veya 0B on eki ile tanimlanabilir. Orn:
+  val binaryNumber: Int = 0b1010110
 
 
 
