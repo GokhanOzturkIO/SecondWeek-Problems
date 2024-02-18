@@ -148,6 +148,25 @@ Null olan nullable bir değişken, bellekte sadece null bayrağını tutar. Bu, 
 Null değer almış bir değişken bellekte yer kaplamaz diyemeyiz, çünkü bu değişkenin null olduğunu belirten bir bayrak bellekte yer kaplar. Ancak, null değer almış bir değişken,
 bir değere sahip olan nullable değişkene göre daha az bellek kullanır.
 
+Soru 12: Nullable bir değişkenle çalışırken hangi operatörleri kullanırız? Bu operatörlerin kullanım farkları nelerdir? Hangisini ne zaman kullanmak daha anlamlıdır?
+
+Cevap: 
+
+Safe call operatörü (?.): Bir değişkenin null olmadığından emin olmadan, onun üyelerine erişmek için kullanılan bir operatördür. Örneğin, name?.length gibi.
+Eğer değişken null ise, null döndürür. Aksi halde, üyenin değerini döndürür. Bu operatörü, değişkenin null olabileceği durumlarda kullanmak daha anlamlıdır.
+
+
+Elvis operatörü (?:): Bir değişkenin null olması durumunda, alternatif bir değer kullanmak için kullanılan bir operatördür. Örneğin, name?.length ?: 0 gibi. Eğer değişken null ise
+0 döndürür. Aksi halde, üyenin değerini döndürür.  Bu operatörü, değişkenin null olması durumunda, alternatif bir değer kullanmak istediğiniz durumlarda kullanmak daha
+anlamlıdır.
+
+Not-null assertion operatörü (!!): Bir değişkenin kesinlikle null olmadığını belirtmek için kullanılan bir operatördür. Örneğin, name!!.length gibi. Eğer değişken null ise,
+NullPointerException (NPE) fırlatır. Aksi halde, üyenin değerini döndürür. Bu operatörü, değişkenin null olmadığından kesinlikle emin olduğunuz ve NPE riskini göze aldığınız
+durumlarda kullanmak daha anlamlıdır.
+
+
+
+
 
 
 
