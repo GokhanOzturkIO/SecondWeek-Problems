@@ -20,6 +20,9 @@
 - overflow icin normal isaretli degiskenlerle calisirken sonuc -'li bir deger cikar ama unsigned degiskenlerde -'li cıkma imkani yoktur. Bu nedenle overflow meydana geldiginde sonuc 0 doner.
 Underflow icin de sonuc yine -'li cıkamayacagi icin sonuc turun maximum degerini alir.
 
+8. "İşaretsiz" değişkenlerin sınırlamaları nelerdir?
+- Unsigned degisknelerin sinirlamasi karsilik geldikleri signed degiskenlerin - kismindaki deger araliginin pozitif kisma eklenmesiyle olur. Yani 0 ile karsilik geldikleri signed degiskenlerin pozitif deegrlerinin 2 katidir. 
+
 
 
 
