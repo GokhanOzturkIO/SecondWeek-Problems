@@ -1,0 +1,2 @@
+1. Kaç farklı tipte "number" sınıfı miras alan "alt sınıf" (child class) vardır? Bunların değer aralıkları neden önemlidir?
+- Byte, Short, Int, Long, Float, Double olamk uzere 6 child class vardir. Deger araligi en kucuk olan byte(-128,127) en buyuk olan ise long'dur. deger araliklari bellek tuketimi aciisndan onemlidir. btyte degisken 8 bit kulanırken long 64 bitlik alan kullanır. Uygulamada eger cok buyuk degerli olan sayilari kullanmayacaksak byte gibi, short gibi daha kucuk yer kaplayan number class'lari tercih etmeliyiz.
