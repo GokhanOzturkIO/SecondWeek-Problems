@@ -392,3 +392,22 @@ toDouble(): Değeri Double türüne dönüştürür.
 12-"val x = 5 / 2.toDouble() println(x == 2.5)" gibi bir işlemin sonucu ve tipi nedir? Neden böyle olduğunu açıklayın.
 
 -true döner, bu sefer double sayesinde ondalıklı sayılar okunabilir.
+
+13-Kotlin'de tür dönüşümü yapılırken, dönüşümün başarısız olması durumunda TypeCastException nasıl ele alınır ve bu tür hataların önüne geçmek için hangi önlemler alınabilir?
+
+-Kotlin'de tür dönüşümü yapılırken, dönüşümün başarısız olması durumunda TypeCastException oluşur. Bu durum, dönüştürülmeye çalışılan nesnenin beklenen türe uygun olmadığı durumlarda meydana gelir. Örneğin, bir nesnenin String türünden Int türüne dönüştürülmeye çalışılması gibi durumlarda TypeCastException oluşabilir.
+
+Bu tür hataların önüne geçmek için aşağıdaki önlemler alınabilir:
+
+Güvenli Dönüşümler (Safe Cast - as?): Güvenli dönüşüm operatörü olan as? kullanılabilir. Bu operatör, dönüşüm başarısız olursa null döner ve null olmayan bir değer dönüşümün başarılı olduğunu gösterir.
+val x: Any = "5"
+val y: Int? = x as? Int
+
+Try-Catch Blokları: Dönüşüm işlemi bir try-catch bloğu içinde yapılabilir ve TypeCastException durumunda uygun şekilde ele alınabilir.
+try {
+    val x: Any = "5"
+    val y: Int = x as Int // Bu satırda TypeCastException oluşabilir
+    println(y)
+} catch (e: TypeCastException) {
+    println("Dönüşüm hatası: ${e.message}")
+}
