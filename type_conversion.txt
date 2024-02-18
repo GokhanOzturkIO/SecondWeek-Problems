@@ -45,6 +45,9 @@ crash olur.
 11. "val x = 5L / 2 println(x == 2L)" gibi bir işlemin sonucu ve tipi nedir? Neden böyle olduğunu açıklayın.
  - Burada da islemin sonucunun tipi, isleme giren en buyuk tipin degerinde olacagi icin Long'dur.  Ve Long tipi de tam sayı degeri aldigi icin sonucun virgulden sonraki kismi okunamz. Bu nedenle karsilastirma bunda da truee doner.
 
+12. "val x = 5 / 2.toDouble() println(x == 2.5)" gibi bir işlemin sonucu ve tipi nedir? Neden böyle olduğunu açıklayın.
+- Sonuc true doner ve tipi Double'dir. toDouble() fonksiyonu ile explicit olarak type conversion yapildive  Double degiskene cevrildi..
+
 
 
 
