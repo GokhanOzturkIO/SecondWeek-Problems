@@ -128,5 +128,17 @@ Heap    --> value1(15)
 ?. çalışmasa da olur dediğimiz durumlarda kullanılabilir.
 !!. ne olursa olsun çalışması gereken ancak çalışmazsa dahi NullPointerException hatasını alıp uygulamayı çökertme riskine değecek durumlarda kullanılabilir.
 
+------------------------------------------------------------
+
+Sayılar
+
+#1 Kaç farklı tipte "number" sınıfı miras alan "alt sınıf" (child class) vardır? Bunların değer aralıkları neden önemlidir?
+
+Double, Float --> ondalıklı işlemlerde kullanılır.
+Long, Int, Short, Byte --> tam sayılar için.
+
+Uygulamada kullanılacak sayıların maksimum ve minimum değerlerini içerecek bir veri tipini seçmemiz mantıklıdır.
+Eğer bu sınırların dışına çıkılırsa kod blokları hatalı sonuç verir.
+Tabii ki yüksek veri aralığı daha fazla bellek kullanımı ister. Bunun için de ne kazanıp ne kaybettiğimize odaklanıp doğru seçimi yapabiliriz.
 
 ------------------------------------------------------------
