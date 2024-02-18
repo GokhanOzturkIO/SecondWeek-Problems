@@ -247,3 +247,16 @@ Bu sorunları çözmek için:
 is ve !is operatörleri, bir nesnenin belirli bir sınıftan olup olmadığını kontrol etmek için kullanılır.
 Nesne belirtilen sınıftan ise true, değilse false döndürür.
 ***********************************************************
+40-"Akıllı Dönüşüm" (Smart Cast) ne demektir? Farklı kod örnekleri ile açıklayın. Bu özelliğin sınırlamaları nelerdir?
+Akıllı dönüşüm, Kotlin'in bir kod bloğunun içinde bir değişkenin türünü otomatik olarak çıkarmasına ve dönüştürmesine olanak tanıyan bir özelliktir.
+val a: Any = "Merhaba"
+
+when (a) {
+    is String -> println(a.length) // 'a' otomatik olarak String'e dönüştürülür
+    is Int -> println(a + 5)
+}
+Değişkenin türü kesin olarak belirlenemiyorsa akıllı dönüşüm gerçekleşmez.
+as operatörü ile yapılan dönüşümler null değer döndürebilir.
+Akıllı dönüşüm, kodun okunabilirliğini ve anlaşılırlığını etkileyebilir.
+***********************************************************
+
