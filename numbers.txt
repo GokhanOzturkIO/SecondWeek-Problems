@@ -43,6 +43,10 @@ val octNumber = "155".toInt(8)  => Stringte tanimlayip onu da toInt ile 8'ilk ya
 12. === operatörü ile karşılaştırma yaparken Byte değer aralığı neden önemlidir? Kotlin bu aralığa göre neden özel bir davranış sergiler?
 - Nullable bir number child class degiskeni eger Byte araliginde bir deger verilmisse, Kotlin bunun icin bir onbellekleme yapar. Bu deger araliginda ayni degere sahip iki sayinin bellekteki yeri ayni olur. 
 
+13. Sayısal değişkenlerde hangi matematiksel operatörler kullanılabilir?
+- +, -, *, /, % gibi matematiksel operatorler kullabilabilir. 
+
+
 
 
 
