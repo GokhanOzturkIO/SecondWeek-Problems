@@ -131,3 +131,42 @@
     ULong- > 0- 18_446_744_073_709_551_615
 -İşaretsiz" değişken türleri (UInt, ULong vs.) kullanırken, Java API'leri ile uyumluluk konusunda ne gibi sorunlar olabilir? Bunları çözmek için neler yapabilirsiniz?
     işaretli tam sayıya dönüştürme işlemi kullanılabilir.
+
+##Type Conversation
+
+-is ve !is operatörlerinin kullanımını açıklayın.
+ tip kontrolü için kullanılır, genelde şartlı olabiliecek kodlarda kullanılır.
+-Akıllı Dönüşüm" (Smart Cast) ne demektir? Farklı kod örnekleri ile açıklayın. Bu özelliğin sınırlamaları nelerdir?
+Örneğin, bir değişkenin null olup olmadığını kontrol edip null olmadığı durumda onu null olmadığı garantisiyle kullanmak istiyorsanız,
+ Kotlin'in akıllı dönüşüm özelliğinden faydalanabilirsiniz.Örneğin:
+ fun printLength(text: String?) {
+     if (text != null) {
+         println("Length of text: ${text.length}") // text artık String türüne dönüşmüştür.
+     } else {
+         println("Text is null")
+     }
+ }
+-Sayısal değişkenlerde örtük tip genişletme (implicit widening conversions) ne demektir? Kotlin'de bu neden yapılamaz?
+    Sayısal değişkenlerde örtük tip genişletme (implicit widening conversions), bir türün daha küçük boyutlu bir türden daha büyük bir boyuta dönüştürülmesini ifade eder.
+Bu dönüşüm, derleyici tarafından otomatik olarak gerçekleştirilir ve genellikle bilgi kaybı olmadan yapılır.Kotlin, implicit (otomatik) tür dönüşümünü desteklemez
+ çünkü bu tür dönüşümler genellikle beklenmeyen sonuçlara veya hatalara neden olabilir. Bunun yerine, Kotlin güvenli ve açık (explicit type conversion) tür dönüşümleri sağlar.
+"val b: Byte = 1 ile val i: Int = b ve son olarak print(b == i) gibi bir kod yazıldığında çıktı ne olur? Neden böyle bir çıktı aldığınızı açıklayın.
+    Bu kod malasef ide ' tarafından derlenmedi == operatörü aynı anda byte ve Int e uygulanmaz hatası verdi. Çünkü kotlin byte'ı Int'e çevirerek bu karşılaştırmayı yapamaz.
+"val b: Byte = 1 ile val i: Int = b.toInt() ve son olarak print(b == i) gibi bir kod yazıldığında çıktı ne olur? Neden böyle bir çıktı aldığınızı açıklayın.
+    Bu kod da çalışmaz ancak
+        print(b.toInt() == i)
+şeklinde yazsaydık çalışabilirdi.
+-Sayısal değişkenlerde açık dönüşüm (Explicit Type Conversion) yaparken hangi fonksiyonları kullanabilirsiniz?
+toByte(),toInt(),toDouble(),toLong(),toFloat() özetle hangi tipe dönüştürmek istiyorsak toTİPİSMİ() , kendimiz de oluşturduğumuz data classlara fonksiyon ekleyerek tip dönüşümü yaptırabiliriz.
+-val result = 1L + 3" // "Long + Int" gibi bir işlemin sonucunda "result" değişkeninin tipi ve değeri ne olur? Neden böyle olduğunu açıklayın.
+    Long tipinde olur, Ide 2 veri tipinden daha büyük olanın tipini sonucun veri tipi olarak kabul eder.
+-val result = Int.MAX_VALUE + Int.MAX_VALUE" gibi bir işlemin sonucunda "result" değişkeninin tipi ve değeri ne olur? Neden böyle olduğunu açıklayın.
+    Result değişkenin tipide Int olur fakat burada hata alırız çünkü sonuç Int veri tipinin aralığından büyüktür fakat sonucun veri tipi Int olacaktır dolayısıyla burada bir overflow hatası vardır.
+-val x = 5 / 2 println(x == 2)" gibi bir işlemin sonucu ve tipi nedir? Neden böyle olduğunu açıklayın.
+    Sonuç tipi boolean dır print fonksiyonu içinde bir şart sorgusu yapılmıştır ve return tipi booleandır. Sonuç true döner
+"val x = 5L / 2 println(x == 2L)" gibi bir işlemin sonucu ve tipi nedir? Neden böyle olduğunu açıklayın.
+    Sonuç tipi boolean dır print fonksiyonu içinde bir şart sorgusu yapılmıştır ve return tipi booleandır. Sonuç true döner
+"val x = 5 / 2.toDouble() println(x == 2.5)" gibi bir işlemin sonucu ve tipi nedir? Neden böyle olduğunu açıklayın.
+    5/2 . toDouble sonucu 2.5 gelir ve println içerisindeki sorgudan sonuç true döner tipi booleandır
+Kotlin'de tür dönüşümü yapılırken, dönüşümün başarısız olması durumunda TypeCastException nasıl ele alınır ve bu tür hataların önüne geçmek için hangi önlemler alınabilir?
+    Try catch blokları kullanımı, işlem sonrası is sorgusu ile işlem yapılması yada işlem anında as? ile null durumlardan kaçınma ile yapılabilir.
