@@ -59,3 +59,9 @@ var name : String? = "Kursat"
 name = null
 
 Yukarıdaki örnekte ise değişken nullable olabildiği için null değer ataması yapılabilmektedir.
+
+===========================
+
+9-) Bir değişkene null değer atanır ve tip belirtilmezse Kotlin bu değişkeni nasıl yorumlar?
+
+Bir değişkenin tipi belirtilmeden null değeri atanırsa Kotlin bu değişkenin tipinin hangi değişkene denk geldiğini anlayamaz ve değerini Nothing? olarak yorumlar.
