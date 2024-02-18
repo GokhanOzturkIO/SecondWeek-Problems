@@ -8,3 +8,7 @@
 
 3. Float değişken oluştururken F ve f harfleri varken, Long değişken oluştururken neden küçük l harfi yoktur?
 - Cunku bazi fontlarda 1 ve l birbirine cok benzer. IDE bunu ayirt edemez.
+
+4. Tek duyarlıklı (Single precision) ve Çift duyarlıklı (Double precision) kavramlarını açıklayın.
+- Bu kavramlar kayan noktalı sayıların temsili ile ilgilidir. Tek duyarlıklı kavram Float olarak adlandırılır ve virgulden sonra  double'a gore daha az basamak vardir. Daha az hassas hesaplamalar icin kullanılabilir.
+  Double Presicion kavrami ise Double tip olarak adlandiriilr. Virgulden sonra floata gore daha fazla basamaga sahiptir. Daha hassas olcumler icin bu kullanılmalıdır.
