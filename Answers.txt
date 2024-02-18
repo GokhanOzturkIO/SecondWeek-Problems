@@ -154,7 +154,15 @@ yeterli olduğu için bu veri tipi tercih edilir ancak çift duyarlıklı format
 
 5- Double ve Float değişkenlerle çalışırken ondalık ayıracı olarak hangi işaretler kullanılır? Bu ayıraçların kullanımında nelere dikkat etmek gerekir?
 
-Bu değişkinlerde ayraç olarak "." kullanılır, ancak belirli diller (örneğin türkçede) virgül tercih edilir bu nedenle internetten veri alıyorsak bu ayırma işlemini nokta ile yapmaya
-özen göstermeliyiz.
+Bu değişkinlerde ayraç olarak "." kullanılır, ancak belirli diller (örneğin türkçede) virgül tercih edilir bu nedenle internetten veri alıyorsak bu ayırma işlemini 
+nokta ile yapmaya özen göstermeliyiz.
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+6- Double ve Float değişkenler ondalık kısımda kaç basamağa kadar işlem yaparlar? Bu sınırın üzerinde gelen ondalık bilgileri için nasıl davranırlar?  Hangi durumlar için Float ve hangi durumlar için Double kullanılmalıdır?
+
+Float değerler için 6-7 basamağa kadar, Double için 15-16 basamağa kadar işlem yapılabilir. Bu sınırların üzerinde gelen ondalık bilgiler için, veri türü tarafından desteklenen hassasiyet sınırına kadar kesilir veya yuvarlanır. Genel bir kural olarak, eğer bellek kullanımı önemli değilse ve hesaplamalarda yüksek hassasiyet gerekiyorsa, Double tercih edilmelidir. Ancak, bellek tasarrufu yapmak ve daha düşük hassasiyetle işlem yapmak gerekiyorsa, Float kullanılabilir.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
