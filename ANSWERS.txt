@@ -55,3 +55,18 @@ var name? = null gibi.
 
 -Any? olarak değerlendirir.
 
+10-İlkel bir değişkenin nullable olması ile null değer alamaması arasında bellek yönetimi açısından nasıl farklar vardır?
+
+-null değer alamaması bellek açısından daha basit bir karmaşıklığa sahipken, nullable olması ise bellekte bu değişkenler için ayrılmış alanın her zaman bir değer içereceği anlamına gelmez. ve daha karmaşık bir durum oluşur. Null check işlemini nullable tipler için kullanlması gerekebilir.
+
+11-Nullable bir değişkenin bir değere sahip olması ile null olması arasında bellek yönetimi açısından nasıl bir fark vardır? Null değer almış bir değişken bellekte yer kaplamaz diyebilir miyiz?
+
+-Nullable bir değişkenin bir değere sahip olması ile null olması arasında bellek yönetimi açısından bir fark yoktur. Her iki durumda da bellekte aynı miktarda yer ayrılmış olur. Null değer almış bir değişken, bellekte yer kaplar çünkü null bir değerdir ve bellekte saklanması için alan gerektirir. Dolayısıyla, null değer almış bir değişkenin bellekte yer kaplamadığı şeklinde bir ifade yanıltıcı olur.
+
+12-Nullable bir değişkenle çalışırken hangi operatörleri kullanırız? Bu operatörlerin kullanım farkları nelerdir? Hangisini ne zaman kullanmak daha anlamlıdır?
+
+-safe call operator -> ?, bir nesnenin null olabileceğini belirtir.
+
+elvis operator -> ?:, bu işaret sayesinde null değişkeni kontrol edip eğer null ise belirtilen değeri kullanır.
+
+not null assertion opeator -> !!, bu işaret sayesinde bir değişkenin null olmadığını varsayar ve derleyiciye bu konuda güvence verir.
