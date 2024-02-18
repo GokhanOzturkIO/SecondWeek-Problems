@@ -49,6 +49,9 @@ val octNumber = "155".toInt(8)  => Stringte tanimlayip onu da toInt ile 8'ilk ya
 14. Sayısal değişkenlerde hangi karşılaştırma operatörleri kullanılabilir?
 - == , != , <, > , <=, >= gibi karsilastirma operatorşeri kullanilabilir.
 
+15. Bit düzeyinde operatörler (Bitwise operators) nelerdir? Ne amaçla kullanılır? Kotlin'de bunları nasıl kullanabilirsiniz?
+- and , or, xor gibi operatorlerdir. Bunlar veri sıkştırma, sifreleme, ag prokolleri islemleri icin kullanilabilir.
+
 
 
 
