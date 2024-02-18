@@ -7,5 +7,8 @@
 3. "İşaretsiz" değişkenlerin harf gösterimi nasıldır?
 - Byte, Int, Short, Long degiskenlerin onune U koyarak Unsigned degisken tanimalyabilriz. Deger atamasi yaparken de sayidan sonra u harfi koyulur.
 
+4. "val a1 = 42u ve val a2 = 0xFFFF_FFFF_FFFFu" değişkenlerin tipleri ne olur? Neden?
+- ilk degiskenin tipi UInt  ikincinin tipi ULong olur. Cunku Kotlin'de verilen deger int deger araligi icindeyse Int tip alir. Int deger araligi disindaysa Long tip set edilir.
+
 
 
