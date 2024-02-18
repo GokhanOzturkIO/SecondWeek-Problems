@@ -257,4 +257,47 @@ Veri Temsilleri: Bazı veri türleri, özellikle renk kodları gibi, doğal olar
 
 Veri Aralıkları: Belirli bir değer aralığı içindeki sayılar işaretsiz olarak temsil edilebilir. Örneğin, 0 ile 100 arasındaki sayıları temsil etmek için işaretsiz bir veri tipi kullanılabilir.
 
+7-"İşaretsiz" değişkenlerle yapılan matematiksel işlemlerde, özellikle büyük sayılarla çalışırken karşılaşılabilecek taşma (overflow) ve taşma olmaması (underflow) durumları için Kotlin nasıl bir yönetim sağlar?
 
+-Kotlin, işaretsiz değişkenlerle yapılan matematiksel işlemlerde taşma (overflow) ve taşma olmaması (underflow) durumlarını yönetmek için belirli bir strateji kullanmaz. Bu durumlar genellikle işlem yapılan veri tipinin sınırlarının dışına çıkıldığında ortaya çıkar.
+
+Örneğin, bir UInt değişkeni 0 ile 4,294,967,295 arasındaki değerleri temsil edebilir. Eğer bir UInt değişkenine 4,294,967,296 eklerseniz, taşma durumu oluşur ve sonuç 0 olur.
+
+Bu durumları kontrol etmek ve yönetmek genellikle programcının sorumluluğundadır. Kotlin'de taşma durumunu kontrol etmek için overflow modunu kullanabilirsiniz. Örneğin, bir işlemde taşma olması durumunda programın hata vermesini sağlayabilirsiniz:
+
+val a: UInt = UInt.MAX_VALUE // 4294967295
+val b: UInt = 2u
+
+val result = a + b // Bu noktada taşma olacaktır
+
+if (result < a || result < b) {
+    throw ArithmeticException("Taşma oluştu")
+}
+
+8-İşaretsiz" değişkenlerin sınırlamaları nelerdir?
+
+-UByte: 8 bitlik işaretsiz tamsayı. Değer aralığı: 0 ile 255 arası.
+UShort: 16 bitlik işaretsiz tamsayı. Değer aralığı: 0 ile 65,535 arası.
+UInt: 32 bitlik işaretsiz tamsayı. Değer aralığı: 0 ile 4,294,967,295 arası.
+ULong: 64 bitlik işaretsiz tamsayı. Değer aralığı: 0 ile 18,446,744,073,709,551,615 arası.
+Bu sınırlamalar, veri tipinin bellekte kapladığı alanın ve kullanılabilir bit sayısının sınırları ile doğrudan ilişkilidir. Bu nedenle, işaretsiz değişkenlerle çalışırken değer aralığını aşmamaya dikkat etmek önemlidir. Aksi takdirde, taşma (overflow) durumlarıyla karşılaşabilirsiniz.
+
+9-İşaretsiz" değişken türleri (UInt, ULong vs.) kullanırken, Java API'leri ile uyumluluk konusunda ne gibi sorunlar olabilir? Bunları çözmek için neler yapabilirsiniz?
+
+-İşaretsiz (unsigned) değişken türleri (UInt, ULong vb.) Kotlin'in özgün bir özelliğidir ve Java'da doğrudan karşılığı bulunmamaktadır. Bu nedenle, Kotlin'de işaretsiz değişken türlerini kullanırken Java API'leri ile uyumluluk konusunda bazı sorunlarla karşılaşabilirsiniz. Bazı olası sorunlar şunlar olabilir:
+
+Veri Türü Uyuşmazlığı: Java API'leri genellikle işaretli tamsayılarla (int, long vb.) çalışırken, Kotlin'de işaretsiz tamsayılar (UInt, ULong vb.) kullanıyor olabilirsiniz. Bu durumda, API'lerle etkileşimde uyumsuzluklar olabilir.
+
+Taşma Sorunları: Kotlin'de işaretsiz değişkenlerle yapılan işlemlerde taşma (overflow) durumları oluşabilir. Bu durum, Java tarafında beklenmeyen sonuçlar doğurabilir.
+
+Java API'lerine Parametre Gönderme: Kotlin'de işaretsiz değişkenlerle oluşturduğunuz değerleri doğrudan Java API'lerine parametre olarak göndermek sorunlara yol açabilir.
+
+Bu sorunları çözmek için şu yaklaşımları kullanabilirsiniz:
+
+Veri Türü Dönüşümü: Kotlin'de işaretsiz değişkenlerden işaretli değişkenlere dönüşüm yaparak Java API'leriyle uyumlu hale getirebilirsiniz. Örneğin, toLong() veya toInt() gibi dönüşüm yöntemleri kullanılabilir.
+
+Kotlin Standart Kütüphanesi Kullanımı: Kotlin standart kütüphanesinde, Java API'leriyle uyumlu işaretli tamsayı tipleri (Int, Long vb.) bulunmaktadır. Bu tipleri kullanarak uyumlu veri tipleriyle çalışabilirsiniz.
+
+Java API'lerine Uyumlu Yöntemler: Java API'lerine işaretsiz değişkenleri doğrudan göndermek yerine, uyumlu veri tiplerini kullanabileceğiniz alternatif yöntemler arayabilirsiniz.
+
+Bu yöntemlerle, Kotlin'de işaretsiz değişken türlerini Java API'leriyle daha uyumlu bir şekilde kullanabilirsiniz.
