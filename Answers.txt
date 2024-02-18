@@ -1,8 +1,8 @@
 1-val ile var arasındaki fark nedir? Sorusunun Cevabı:
 
---val(value),değeri sonradan değiştirilemez anlamındadır.Ek olarak get edilebilir fakat set edilemez.
---var(variable),değeri sonradan değiştirilebilir anlamındadır. Get ve set işlemi yapılabilmektedir.
---Bilinenin aksine val "immutable değil read-only'dir".Şimdi bunların ne olduğuna değinelim:
+-->val(value),değeri sonradan değiştirilemez anlamındadır.Ek olarak get edilebilir fakat set edilemez.
+-->var(variable),değeri sonradan değiştirilebilir anlamındadır. Get ve set işlemi yapılabilmektedir.
+-->Bilinenin aksine val "immutable değil read-only'dir".Şimdi bunların ne olduğuna değinelim:
 -->Read-only: Bir nesnenin durumunun değiştirilemez olduğu, yalnızca okunabilir olduğu anlamına gelir. Bu durumda, nesnenin içeriği değiştirilemez, ancak nesne referansı değiştirilebilir olabilir. Örneğin, bir liste "read-only" olabilir, yani listenin içeriği değiştirilemez, ancak listenin kendisi başka bir listeyle değiştirilebilir.
 -->Immutable: Bir nesnenin durumunun hem içeriği hem de referansı değiştirilemez olduğu anlamına gelir. Yalnızca okunabilir ve değiştirilemez bir nesne olduğu söylenebilir. Örneğin, bir "immutable" liste, hem listenin içeriği hem de referansı değiştirilemez.
 
@@ -51,3 +51,16 @@ fun main() {
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+3-"Değişmez" (Immutable) ve "Salt Okunur" (ReadOnly) kavramlarını açıklayın. val değişkenler neden aslında "değişmez" değil de "salt okunur" olarak açıklanmalıdır? Sorusunun Cevabı:
+
+-->1.Sorunun cevabında bu kavramları açıklamıştık,tekrardan gözden geçirelim:
+-->Read-only: Bir nesnenin durumunun değiştirilemez olduğu, yalnızca okunabilir olduğu anlamına gelir. Bu durumda, nesnenin içeriği değiştirilemez, ancak nesne referansı değiştirilebilir olabilir. Örneğin, bir liste "read-only" olabilir, yani listenin içeriği değiştirilemez, ancak listenin kendisi başka bir listeyle değiştirilebilir.
+-->Immutable: Bir nesnenin durumunun hem içeriği hem de referansı değiştirilemez olduğu anlamına gelir. Yalnızca okunabilir ve değiştirilemez bir nesne olduğu söylenebilir. Örneğin, bir "immutable" liste, hem listenin içeriği hem de referansı değiştirilemez.
+
+-->Val değişkenlerinin neden "değişmez" yerine "salt okunur" olarak açıklanması gerektiğini anlamak için, Kotlin'in dil tasarımı ve kullanım amacını anlamak önemlidir.
+
+-->Kotlin'de val değişkenleri bir kez değer atandıktan sonra yeniden atanamaz, yani değiştirilemezler. Ancak, bu değişkenin içindeki verinin kendisi değişebilir. Örneğin, bir val değişkeni olan bir liste, liste elemanlarını değiştirebilir, ancak liste başka bir liste ile değiştirilemez.
+
+-->Bu nedenle, "değişmez" kelimesi val değişkenlerini açıklamak için tam olarak doğru değildir, çünkü değişkenlerin içindeki veri değişebilir. "Salt okunur" terimi daha doğru bir açıklama sağlar, çünkü val değişkenleri sadece bir kez atanabilir ve değerleri okunabilir, ancak yeniden atanamazlar. Bu, değişkenin kendisinin değişmez olduğu anlamına gelmez, sadece içindeki verinin değişmez olduğu anlamına gelir.
+
+-->Özetle, val değişkenlerinin "salt okunur" olarak açıklanması, değişkenin kendisinin değişmez olduğu yanılgısını önler ve değişkenin sadece bir kez atanabileceği ve değerlerinin okunabileceği gerçeğini vurgular. Bu, Kotlin'in dil tasarımı ve kullanım paradigmasıyla daha uyumludur.
