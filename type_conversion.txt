@@ -14,3 +14,24 @@
 is String -> "String ${value2.lenght}"
 is Int -> "int"
 else -> "Unknown"}
+
+3. "Güvenli & Güvensiz" operatörler nelerdir?
+- Güvenli ve güvensiz operatorşer null check sirasinda kullanilan operatorlerdir. Güvenli operatorler: ?. ve ?: 
+ Bu operatorler deger null ise degeri null alip isleme devam eder. 
+Güvenzi operator:  !!.   Bu operator null deger yoksa islemi yaoar, varsa nullpointerException firlatir. uygulama 
+crash olur.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
