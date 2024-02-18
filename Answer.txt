@@ -43,3 +43,19 @@ Tipinin sonuna ? operatörü eklenir.
 
 val name : String? = "Kursat" 
 
+===========================
+
+8-) "Null Güvenliği" (Null Safety) kavramını açıklayın.
+
+Nullable olmayan değişkenlere Null değer atanamayacağını, Null alacak değişkenlerin de Nullable olarak tanımlanması gerektiğini ifade eden
+kavramdır.
+
+var name : String = "Kursat"
+name = null
+
+Yukarıdaki örnekteki değişken nullable olmadığı için null bir değer ataması yapılamamaktadır.
+
+var name : String? = "Kursat"
+name = null
+
+Yukarıdaki örnekte ise değişken nullable olabildiği için null değer ataması yapılabilmektedir.
