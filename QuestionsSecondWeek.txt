@@ -104,9 +104,31 @@ Soru: Bir değişkeni nullable yapmak için ne yapmalıyız?
 Cevap: Bir değişkeni nullable yapmak için veri tipinin sonuna ? işareti eklemeliyiz. Örneğin var name: String? = null gibi. Bu şekilde değişkenin null değeri alabileceğini belirtiyoruz
 Null değeri alamayan bir değişken ise normal şekilde tanımlanır. var name = String = "Barış". Nullable NullPointerException çalışma hatasından bizi kurtarmak için etkili bir yoldur.
 
+Soru: "Null Güvenliği" (Null Safety) kavramını açıklayın.
 
+Cevap: Null Güvenliği (Null Safety) bir programlama dilinde değişkenleri null(boş) değerlere sahip olma durumunu kontrol etmek ve başa çıkmak için kullanılır. Null bir değişken
+veya nesnenin bellekte bulunmaması veya hiçbir şeye işaret etmemesi anlamına gelir. Bu noktada bu nesne veya değişkenin üyelerine erişmeye çalışmak NPE hatasını oluşturur
+Kotlin dili null güvenliği konusunda oldukça güçlü bir dil olarak bilinmektedir. Kotlin değişkenlerin veya değerlerin null olup olmayacağını belirtmek için nullable ve non-nullable
+türler arasında ayrım yapar.
 
- 
+Nullable değişkenler: Bir değişkenin null olması durumudur. Nullable değişkenlerinin tipi hem null hem de belirtilen türde (String, Int) olabilir bir nullable değişkeni kullanırken
+null olup olmadığını kontrol etmemiz gerekmektedir. Örneğin var name : String? = null
+
+Non-Nullable Değişkenler: Bir değişkenin null olmaması durumudur Non-Nullable değişkenlerin tipi sadece belirtilen tüden olabilir (String,Int) var name :String = Ali
+
+Kotlin, nullable değişkenlerin değerlerini kontrol etmek ve null referans hatalarını önlemek için bazı özellikler sunar.
+
+-Null Check: 
+Bir değişkenin null olup olmadığını kontrol ederiz if(name != null)
+
+-Safe Call (?.) bir değişkenin null olup olmadığından emin olmadan onun üyelerine erişmek için kullanılır. name?.lenght gibi (name null ise null değilse değerini döndürür)
+
+-Elvis Operatörü(?:) Bir değişkenin null olması durumunda alternatif bir değer kullanmak için kullanılan bir operatördür. name?.lenght ?:0 gibi (null veya 0) olsun diyoruz.
+
+-Not null Assertion Operatörü (!!): Bir değişkenin kesinlikle null olmadığını belirtmek için kullanılan bir operatördür. name!!.lenght gibi. Eğer null ise NPE patlayacaktır değilse
+değerini döndürür. 
+Kotlin, null güvenliği sayesinde, programlamada ortaya çıkabilecek birçok hata türünü azaltır ve kodunuzun güvenilirliğini, performansını ve okunabilirliğini artırır.
+
 
 
 
