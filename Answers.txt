@@ -176,3 +176,10 @@ Single Precision        Double Precision
 daha hızlı              daha yavaş
 düşük hassasiyet        yüksek hassasiyet (bilimsel hesaplamalar)
 ------------------------------------------------------------
+
+#5 Double ve Float değişkenlerle çalışırken ondalık ayıracı olarak hangi işaretler kullanılır? Bu ayıraçların kullanımında nelere dikkat etmek gerekir?
+
+Programlama dillerinde  genel olarak '.' işareti kullanılır. Ancak farklı ülkelerde farklı ayraç kullanım işaretleri olabildiğinden dolayı diğer işaretleri de dikkate alarak sonuca işlemler uygulanmalıdır.
+------------------------------------------------------------
+
+
