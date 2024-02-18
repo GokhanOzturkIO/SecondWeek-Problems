@@ -24,3 +24,6 @@ Val değişkenlerin salt okunur (readonly) olmasının sebebi bir kez değer ata
 
 8."Null Güvenliği" (Null Safety) kavramını açıklayın.
 -Bir kod parçacığında beklenmedik ve istenmeyen şekilde NullPointerException hatası fırlatacak durumları önceden tespit ederek bu tür hataları önlemesidir.
+
+9.Bir değişkene null değer atanır ve tip belirtilmezse Kotlin bu değişkeni nasıl yorumlar?
+-Bir değişkene null değer atanır ve tip belirtmezse Kotlin bu değişkeni Nothing? olarak yorumlar.
