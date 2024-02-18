@@ -166,6 +166,10 @@ Double Precision -> 64 Bits --> Sign(1 Bit) - Exponent(11 Bits) - Mantissa(52 Bi
 Bilgisayarda gerçek sayıları temsil etmek için kullanılan yöntemlerdir. Temel farklılıkları depolama ve hassasiyettir.
 IEEE Standard 754 Floating Point Numbers // Bir IEEE standartıdır.
 
+// Kotlin'deki karşılıkları
+Float   -   Single Precision    
+Double  -   Double Precision
+
 Single Precision        Double Precision
 32 bit                  64 bit 
 ~7 ondalık basamak      ~15 ondalık basamak
