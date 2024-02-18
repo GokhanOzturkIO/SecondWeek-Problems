@@ -117,6 +117,33 @@ Eğer kesinlik ve hassasiyet önemliyse, genellikle Double tercih edilir. Örne�
 
 Ondalık bilgilerin sınırın üzerinde gelmesi durumunda, bu bilgiler genellikle kesilir veya yuvarlanır. Örneğin, Float tipinde 1.23456789f değeri saklanırken, ondalık kısmın sonraki basamakları kesilerek 1.2345679 şeklinde saklanabilir. Bu nedenle, yüksek hassasiyet gerektiren durumlarda ondalık sayıların doğru bir şekilde temsil edildiğinden emin olmak için Double kullanmak daha uygundur.
 
+7-Ondalık(Decimal), Onaltılık (Hexadecimal) ve İkilik (Binary) değişkenleri Kotlin'de nasıl tanımlayabilirsiniz?
+
+-val decimalNumber: Int = 123
+val hexadecimalNumber: Int = 0x1F
+val binaryNumber: Int = 0b1010
+şeklinde tanımlayabiliriz.
+
+8-Sekizlik (Octal) değişkenler Java'da nasıl tanımlanır? Kotlin'de Sekizlik değişken tanımlanabilir mi?
+
+-Java'da sekizlik (octal) sayıları tanımlamak için sayının başına sıfır eklemeniz yeterlidir. Örneğin:
+int octalNumber = 012;
+Bu örnekte, 012 sekizlik bir sayıdır çünkü başında sıfır var.
+
+Kotlin'de ise doğrudan sekizlik sayıları tanımlayamazsınız. Kotlin, Java ile uyumlu olmasına rağmen sekizlik sayı tanımlama özelliğini desteklemez. Eğer bir sekizlik sayıyı Kotlin'de kullanmanız gerekiyorsa, önce Java'da tanımlayıp Kotlin kodunuzda kullanabilirsiniz. Örneğin:
+
+val octalNumber = Integer.parseInt("12", 8)
+Bu şekilde, Java'da tanımlanmış bir sekizlik sayıyı Kotlin'de kullanabilirsiniz. Ancak, direkt olarak Kotlin syntax'ında sekizlik sayı tanımlaması yapamazsınız.
+
+9-Geleneksel Notasyon" (Conventional Notation) gösterimi nasıl yapılır?
+
+-Kotlin'de geleneksel notasyonu (conventional notation) kullanarak sayıları belirtmek için bir önek veya özel bir işaret kullanılmaz. Geleneksel notasyon, sayıların doğal olarak yazılma biçimidir. Örneğin:
+val number = 12345
+
+
+
+
+
 
 
 
