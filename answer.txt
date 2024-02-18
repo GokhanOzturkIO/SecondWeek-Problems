@@ -284,4 +284,9 @@ Type mistmatch olur çünkü kotlinde implicit conversion yoktur.
 toByte(), toShort(), toInt(), toLong(), toFloat(), toDouble()
 toUByte(), toUShort(), toUInt(), toULong()
 ***********************************************************
+45-"val result = 1L + 3" // "Long + Int" gibi bir işlemin sonucunda "result" değişkeninin tipi ve değeri ne olur? Neden böyle olduğunu açıklayın.
+Long olur.
+Bu tür genişletmeler, sayısal türler arasında uygun ve beklenen sonuçları sağlamak için tasarlanmıştır.
+***********************************************************
+
 
