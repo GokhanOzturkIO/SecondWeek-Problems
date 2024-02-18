@@ -168,4 +168,55 @@ kuralına göre gerçekleşir. Ancak, bu davranışı değiştirmek için özel 
 Math sınıfı altında yer alan round(), ceil() ve floor() gibi fonksiyonlarla yuvarlama işlemleri gerçekleştirilebilir.
 Bu yöntemlerle, sayılar belirli bir hassasiyete veya istenen yuvarlama davranışına göre düzenlenebilir.
 ----------------------------------------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------------------
+ 					                            3 - İşaretsiz Sayılar
+----------------------------------------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------------------
+  3.1 -> UByte boyutu 8 bit olup  değer aralığı 0 ile 255
+ 	    -> Ushort  boyutu 16 bit olup  aralığı 0 ile 65,535 arasındadır
+ 	    ->  UInt, 32 bit boyutunda olup değer aralığı 0 ile 4,294,967,295 (2^32 - 1) arasındadır.
+        -> ULong ise 64 bit boyutundadır ve değer aralığı 0 ile 18,446,744,073,709,551,615 (2^64 - 1) arasındadı.
+        -> Unsigned  veri tipleri sadece pozitif sayıları kapsamaktadır.
+
+----------------------------------------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------------------
+  3.2 -> İşaretsiz diziler, işaretsiz tamsayıları (UByte, UShort, UInt, ULong) temsil etmek için özel olarak tasarlanmış
+    sınıfları kullanır. Bu özellik deneysel olduğu için @ExperimentalUnsignedTypes API ile desteklenir.
+----------------------------------------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------------------
+  3.3 -> İşaretsiz değişkenler, genellikle "u" veya "U" harfi ile gösterilir
+----------------------------------------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------------------
+  3.4 ->  val a1 = 42u // Sabit 42, UInt türündedir çünkü beklenen bir tür belirtilmedi ve 42 UInt aralığına sığar.
+      -> val a2 = 0xFFFF_FFFF_FFFFu // Sabit 0xFFFF_FFFF_FFFF, UInt aralığını aştığı için derleyici onu ULong olarak yorumlar.
+----------------------------------------------------------------------------------------------------------------------*
+/*----------------------------------------------------------------------------------------------------------------------
+  3.5 ->   val a1 : ULong = 42u 
+    	   val a = 1UL
+	 Bu şekilde Long tipi bildirilir.
+----------------------------------------------------------------------------------------------------------------------*
+/*----------------------------------------------------------------------------------------------------------------------
+  3.6 ->  İşaretsiz değişkenler, genellikle sadece pozitif tamsayıları veya sıfırı temsil etmek için kullanılır. Ayrıca, 
+belirli bir veri aralığında sınırlı olan değerlerde ve bellek kullanımını azaltmak veya verimliliği artırmak için de 
+tercih edilirler. Bunun yanı sıra, harici sistemlerle veya donanımlarla uyumluluk sağlamak amacıyla da kullanılabilirler.
+----------------------------------------------------------------------------------------------------------------------*
+/*----------------------------------------------------------------------------------------------------------------------
+  3.7 -> İşaretsiz tamsayılar, negatif değerler gerektiğinde kullanılmaz. İşaretli tamsayılar taşmaları algılayabilir ve hata 
+koşullarını belirtir. İşaretsiz tamsayılar, işaretli tamsayıların alt türü değildir, bu nedenle negatif tamsayıları 
+temsil edemezler
+----------------------------------------------------------------------------------------------------------------------*
+/*----------------------------------------------------------------------------------------------------------------------
+  3.9 -> Type   	bits     Min Value     Max Value 
+	 UByte	         8	   0		  255	
+	 UShort		 16	   0		65,535
+	 UInt		 32        0	        4,294,967,295 (232 - 1)
+	 ULong		 64	   0 		18,446,744,073,709,551,615 (264 - 1)
+----------------------------------------------------------------------------------------------------------------------*
+/*----------------------------------------------------------------------------------------------------------------------
+  3.10 -> İşaretsiz tamsayı dizileri, kutulama gerektirmeyen Array sınıfına benzer bir API sağlar. Ancak, bu özellik henüz kararlı 
+değildir ve kullanırken @ExperimentalUnsignedTypes açıklamasını kullanarak onay vermeniz gerekir. Aralıklar ve ilerlemeler 
+UIntRange, UIntProgression, ULongRange ve ULongProgression sınıfları tarafından UInt ve ULong için desteklenir. İşaretsiz 
+tamsayı türleriyle birlikte, bu sınıflar kararlıdır.
+----------------------------------------------------------------------------------------------------------------------*
+
 
