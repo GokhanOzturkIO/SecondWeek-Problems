@@ -1,2 +1,16 @@
 1. is ve !is operatörlerinin kullanımını açıklayın.
 - is operatoru degerin isteddigimiz tipte oldugunu , !is ise olmadıgını kontrol ederr.
+
+2. "Akıllı Dönüşüm" (Smart Cast) ne demektir? Farklı kod örnekleri ile açıklayın. Bu özelliğin sınırlamaları nelerdir?
+- Derleyicinin otomatik olarak bir degiskenin turunu belirli bir kontrol veya islem snrasinda daha spesifik bir ture donusturmesi anlamina gelir. Orn: 
+  val value : Any
+   if(any is String){
+  // value otomatik olarak String kabul edilir.
+   printl(value.length)
+}
+
+  val value2: String
+  when(value2){
+is String -> "String ${value2.lenght}"
+is Int -> "int"
+else -> "Unknown"}
