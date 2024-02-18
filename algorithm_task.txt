@@ -1,0 +1,42 @@
+package org.example
+
+//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
+// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+fun main() {
+    println("WELCOME")
+   do {
+       println("Please enter the first number: ")
+       val firstNum = readln().toDoubleOrNull()
+       println("Please select a action you want to calculate..  (+ - * /)")
+       val operation = readln()
+       println("Please select the second number: ")
+       val secondNum = readln().toDoubleOrNull()
+
+       if (firstNum != null && secondNum != null){
+           val result = when(operation){
+               "+" -> firstNum + secondNum
+               "-" -> firstNum - secondNum
+               "*" -> firstNum * secondNum
+               "/" -> {
+                   if (secondNum == 0.0){
+                       "Second number cannot be 0."
+                   }else{
+                       firstNum / secondNum
+                   }
+               }
+
+               else -> {"Invalid operation"}
+           }
+           println("Result : $result")
+       }
+       else{
+           println("Please type valid number")
+       }
+
+       println("Dou you want to continue (Y/N)")
+       val answer = readln()
+
+   }
+       while (answer.equals("Y",ignoreCase = true))
+
+}
