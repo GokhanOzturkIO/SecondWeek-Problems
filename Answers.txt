@@ -6,4 +6,48 @@
 -->Read-only: Bir nesnenin durumunun değiştirilemez olduğu, yalnızca okunabilir olduğu anlamına gelir. Bu durumda, nesnenin içeriği değiştirilemez, ancak nesne referansı değiştirilebilir olabilir. Örneğin, bir liste "read-only" olabilir, yani listenin içeriği değiştirilemez, ancak listenin kendisi başka bir listeyle değiştirilebilir.
 -->Immutable: Bir nesnenin durumunun hem içeriği hem de referansı değiştirilemez olduğu anlamına gelir. Yalnızca okunabilir ve değiştirilemez bir nesne olduğu söylenebilir. Örneğin, bir "immutable" liste, hem listenin içeriği hem de referansı değiştirilemez.
 
-2-
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+2-Bir var değişkeni val gibi davranmasını nasıl sağlayabiliriz val kelimesini kullanmadan? Bunu neden yapmak isteriz? Örnek bir senaryo verin. Sorusunun Cevabı:
+
+-->Bir var değişkenini val gibi davranmasını sağlamak için, değişkenin erişim düzeyini private yapabilir ve ayrıca set erişim belirleyicisini private olarak tanımlayabiliriz. 
+-->Bu şekilde, değişkenin değeri sadece sınıf içinde atanabilir ve dışarıdan değiştirilemez hale gelir.
+-->Bu yöntemi kullanmak, değişkenin sadece başlangıçta atanıp daha sonra değiştirilmemesi gerektiği durumlarda faydalı olabilir. Örneğin, bir sınıf içindeki bir değişkenin değerinin sadece sınıfın içinde kontrol edilerek değiştirilmesini istiyorsak, bu yöntemi kullanabiliriz.
+
+Örnek Senaryo:
+class User {
+    private var _name: String = ""
+
+    var name: String
+        get() = _name
+        private set(value) {
+            _name = value
+        }
+
+    init {
+        // Başlangıçta sadece atanabilir
+        name = "John"
+        println("User name set to: $name")
+        
+        // Dışarıdan değiştirilemez
+        // name = "Doe" // Hata!
+    }
+
+    fun changeName(newName: String) {
+        // Dışarıdan değiştirilemez
+        // _name = newName // Hata!
+        
+        name = newName
+        println("User name changed to: $name")
+    }
+}
+
+fun main() {
+    val user = User()
+    user.changeName("Alice")
+}
+
+-->Bu örnekte, name değişkeni başlangıçta sadece sınıf içinde atanabilir ve dışarıdan değiştirilemez. changeName fonksiyonu ile name değişkeninin değeri sınıf içinde değiştirilebilir, ancak dışarıdan doğrudan _name değişkenine erişim mümkün değildir. Bu sayede, name değişkeni val gibi davranmış olur.
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
