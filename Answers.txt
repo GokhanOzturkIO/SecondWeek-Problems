@@ -182,4 +182,14 @@ düşük hassasiyet        yüksek hassasiyet (bilimsel hesaplamalar)
 Programlama dillerinde  genel olarak '.' işareti kullanılır. Ancak farklı ülkelerde farklı ayraç kullanım işaretleri olabildiğinden dolayı diğer işaretleri de dikkate alarak sonuca işlemler uygulanmalıdır.
 ------------------------------------------------------------
 
+#6 Double ve Float değişkenler ondalık kısımda kaç basamağa kadar işlem yaparlar? Bu sınırın üzerinde gelen ondalık bilgileri için nasıl davranırlar? Hangi durumlar için Float ve hangi durumlar için Double kullanılmalıdır?
 
+Float   --> 6,7 basamak 
+Double  --> 15, 16 basamak
+
+Float için Kotlin virgülden sonra 6. basamaktan sonraki basamak yani 7. basamak 1 ya da 2 ise alta, diğer rakamlarsa yukarı yuvarlar ve sınırdan fazlasını kırpar. Eğer sondaki rakam 9 ise herhangi bir yuvarlama yapmadan sayının sonraki ondalık kısmını kırpar.
+Double için Kotlin virglden sonra 15. basamaktan sonrasını direkt olarak kırpar.
+
+Çok hassas veriler ile uğraşıyorsak Double kullanmamız gerekir. Float'a göre daha fazla alan kaplar ancak doğru işlem yapabilmek için gerekirse bu maliyeti göze almalıyız. Örn: Kripto doviz işlemlerinde, bilimsel hesaplamalarda
+Virgülden sonrası için 6 basamaktan fazlası bizim için önemsizse Float kullanmak mantıklıdır.
+------------------------------------------------------------
