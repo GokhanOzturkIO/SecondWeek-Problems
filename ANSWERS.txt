@@ -140,8 +140,27 @@ Bu şekilde, Java'da tanımlanmış bir sekizlik sayıyı Kotlin'de kullanabilir
 -Kotlin'de geleneksel notasyonu (conventional notation) kullanarak sayıları belirtmek için bir önek veya özel bir işaret kullanılmaz. Geleneksel notasyon, sayıların doğal olarak yazılma biçimidir. Örneğin:
 val number = 12345
 
+10-Sayısal değişkenlerde alt çizgi (underscore) nasıl kullanılır? Kotlin bunu nasıl yorumlar?
 
+-val million = 1_000_000
+val creditCardNumber = 1234_5678_9012_3456L
+val hexBytes = 0xFF_EC_DE_5E
+val bytes = 0b11010010_01101001_10010100_10010010
+şeklinde okunabilirliği artırmak için kullanılabilir.
+Kotlin, alt çizgileri sayısal değerlerde görmezden gelir. Yani, alt çizgiler sadece sayıyı daha okunabilir hale getirmek için kullanılır ve sayısal değerin kendisini etkilemezler.
 
+11-== ile neyi karşılaştırırız? === ile neyi karşılaştırırız?
+
+- == değişkenlerin değerini karşılaştırmak için
+=== değişkenlerin referansını karşılaştırmak için (RAM) kullanılır.
+
+12-=== operatörü ile karşılaştırma yaparken Byte değer aralığı neden önemlidir? Kotlin bu aralığa göre neden özel bir davranış sergiler?
+
+-Kotlin'de === operatörü referansları karşılaştırmak için kullanılır. === operatörü, referansların aynı olup olmadığını kontrol eder, yani iki referans aynı nesneyi gösteriyor mu diye bakar. Ancak, Byte veri türünde bir özel durum vardır.
+
+Kotlin'de Byte veri türü, -128 ile 127 arasındaki değerleri temsil etmek için özel olarak optimize edilmiştir. Bu, -128..127 aralığındaki Byte değerlerinin bellekte sadece bir kopyasının tutulduğu anlamına gelir. Yani, -128 ile 127 arasındaki herhangi iki Byte değeri için === operatörü true dönecektir, çünkü bellekte aynı referansa işaret ederler.
+
+Ancak, bu aralık dışındaki Byte değerleri için farklı referanslar oluşturulur ve === operatörü false döner. Bu davranış, -128..127 aralığındaki sık kullanılan küçük byte değerlerinde bellek kullanımını ve performansı optimize etmeye yardımcı olur. Bu nedenle, Byte değerlerini === operatörü ile karşılaştırırken bu aralığın önemi vardır, çünkü bu aralık içindeki değerler için beklenmedik sonuçlar alabilirsiniz.
 
 
 
