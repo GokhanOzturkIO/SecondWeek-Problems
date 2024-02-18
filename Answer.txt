@@ -218,5 +218,102 @@ değildir ve kullanırken @ExperimentalUnsignedTypes açıklamasını kullanarak
 UIntRange, UIntProgression, ULongRange ve ULongProgression sınıfları tarafından UInt ve ULong için desteklenir. İşaretsiz 
 tamsayı türleriyle birlikte, bu sınıflar kararlıdır.
 ----------------------------------------------------------------------------------------------------------------------*
+/*----------------------------------------------------------------------------------------------------------------------
+ 							4. Tür Dönüşümü
+----------------------------------------------------------------------------------------------------------------------*
+/*----------------------------------------------------------------------------------------------------------------------
+ 4.1  -> İs operatörünü  nesnenin belirli bir tipe uygun olup olmadıgı kontrol etmek için kullanılır.!is operatorü ise is tam
+tersidir.
+----------------------------------------------------------------------------------------------------------------------*
+/*----------------------------------------------------------------------------------------------------------------------
+ 4.2 -> "Akıllı Dönüşüm" (Smart Cast), Kotlin programlama dilinde tür güvenliğini sağlamak için kullanılan bir özelliktir.
+    val a: Any = "Yunus Emre"
+    if (a !is String)
+        return
+    println(a.length) // String otamatik olarak dönüşmüs ise a propertysinin uzunluğu yazdırır.Dönüsmemiş ise boş döner
+ 
+ var x: Any = 10
+    when (x) {
+        is Int -> print(x + 1)
+        is String -> print(x.length + 1)
+        is IntArray -> print(x.sum())
+    }
+    // x burda 11 olarak yazdırır.
 
+----------------------------------------------------------------------------------------------------------------------*
+/*----------------------------------------------------------------------------------------------------------------------
+ 4.3 -> Kotlin'de güvensiz dönüşüm, infix operatörü olan as ile gerçekleştirilir.Özel istisnaları önlemek için güvenli (nullable) 
+dönüşüm operatörü olan as? kullanılır. Bu operatör, başarısız olduğunda null değeri döndürür.	
+----------------------------------------------------------------------------------------------------------------------*
+/*----------------------------------------------------------------------------------------------------------------------
+ 4.4 -> Örtük tip genişletme, bir veri türünün daha büyük bir veri türüne otomatik olarak dönüştürülmesini ifade eder. Ancak, 
+Kotlin'de bu tür otomatik genişletmeler yapılamaz. Bunun yerine, genişletme işlemleri açık dönüşüm operatörleri kullanılarak 
+yapılmalıdır. Bu, veri türlerinin genişletilmesini açıkça belirtmek ve potansiyel veri kaybı riskini azaltmak için tercih 
+edilen bir yaklaşımdır.
+----------------------------------------------------------------------------------------------------------------------*
+/*----------------------------------------------------------------------------------------------------------------------
+ 4.5 ->    val b: Byte = 1
+    	   val i: Int = b
+    	   print(b == i)
+ -> (implicit widening conversions) izin verilmediği anlamına gelir. Bu hata, bir veri türünün otomatik olarak diğer bir 
+türe dönüştürülmesine izin verilmemesi durumunda oluşur.
+
+Kotlin'de, eğer bir veri türünü başka bir türe dönüştürmek istiyorsanız, bunu açıkça belirtmeniz gerekir. Bu, "explicit type 
+conversion" olarak adlandırılır. Yani, veri türlerini birbirine dönüştürürken, Kotlin dilinde açık dönüşüm operatörlerini 
+kullanmanız gerekir. Bu yaklaşım, potansiyel hata riskini azaltır ve kodun daha güvenli olmasını sağlar.
+----------------------------------------------------------------------------------------------------------------------*
+/*----------------------------------------------------------------------------------------------------------------------
+ 4.6 ->    val b: Byte = 1
+   	 val i: Int = b.toInt()
+   	 print(b == i)
+
+ -> Bu kodda hatanın sebebi, Byte ve Int türlerinin doğrudan karşılaştırılamamasıdır. Bu nedenle, b propertysini bir Int'e dönüştürseniz 
+bile, hala b propertysinin orijinal veri türü Byte olarak kalır. Bu nedenle, b == i ifadesinde hala bir hata alırsınız. Bu hatayı 
+çözmek için, b'yi açıkça bir Int türüne dönüştürmeniz gerekmektedir.
+----------------------------------------------------------------------------------------------------------------------*
+/*----------------------------------------------------------------------------------------------------------------------
+ 4.7 ->  toByte(): Bir değeri Byte türüne dönüştürmek için kullanılır.
+	 toShort(): Bir değeri Short türüne dönüştürmek için kullanılır.
+	 toInt(): Bir değeri Int türüne dönüştürmek için kullanılır.
+	 toLong(): Bir değeri Long türüne dönüştürmek için kullanılır.
+	 toFloat(): Bir değeri Float türüne dönüştürmek için kullanılır.
+	 toDouble(): Bir değeri Double türüne dönüştürmek için kullanılır.
+----------------------------------------------------------------------------------------------------------------------*
+/*----------------------------------------------------------------------------------------------------------------------
+ 4.8 ->  toByte(): Bir değeri Byte türüne dönüştürmek için kullanılır.
+	 toShort(): Bir değeri Short türüne dönüştürmek için kullanılır.
+	 toInt(): Bir değeri Int türüne dönüştürmek için kullanılır.
+	 toLong(): Bir değeri Long türüne dönüştürmek için kullanılır.
+	 toFloat(): Bir değeri Float türüne dönüştürmek için kullanılır.
+	 toDouble(): Bir değeri Double türüne dönüştürmek için kullanılır.
+----------------------------------------------------------------------------------------------------------------------*
+/*----------------------------------------------------------------------------------------------------------------------
+ 4.10 -> val result = Int.MAX_VALUE + Int.MAX_VALUE bu deyiminin tipi int olur.iki değerde int olduğu için yine int döner.
+intin değerini aştıktan sonra en küçük int değer aralıgından başlar.B		
+----------------------------------------------------------------------------------------------------------------------*
+/*----------------------------------------------------------------------------------------------------------------------
+ 4.11 ->    val x = 5 / 2
+   	   println(x == 2)
+-> Kotlin, tür çıkarımı (type inference) özelliğine sahip olduğundan, 5 / 2 işlemi sonucunu varsayılan olarak Int olarak algılar. 
+Bu durumda, işlemin sonucu olan 2 değeri, Int türüne sahip olur.Dolayısıyla, println(x == 2) ifadesi true olarak değerlendirilir, 
+çünkü x değişkeninin değeri 2'dir.Ancak, bu işlemin tam bölme sonucunun 2.5 olduğunu dikkate almak önemlidir. Eğer kesirli sonuç elde 
+etmek isteniyorsa, işlemin sonucunu Double veya başka bir ondalık tür olarak belirtmek gerekir.
+----------------------------------------------------------------------------------------------------------------------*
+/*----------------------------------------------------------------------------------------------------------------------
+ 4.12 ->  val x = 5L / 2 ;println(x == 2L) true olarak print eder.Cünkü büyük sayının tipini aldğı için ve long veri tipi
+tam sayı olduğu kesirli işlem yapamaz.
+----------------------------------------------------------------------------------------------------------------------*
+/*----------------------------------------------------------------------------------------------------------------------
+ 4.13 -> val x = 5 / 2.toDouble() ;  println(x == 2.5) işlemin sonuuc true döner.Explicit Type Conversion yaptıgı için deyimin
+tipi double olur.
+----------------------------------------------------------------------------------------------------------------------*
+/*----------------------------------------------------------------------------------------------------------------------
+ 4.14 -> TypeCastException, Kotlin'de tür dönüşümü sırasında oluşabilecek bir istisnadır. Bu istisnayı ele almak için üç ana yöntem vardır:
+
+1.Try-Catch Blokları: try-catch blokları kullanarak, dönüşüm işlemi sırasında oluşabilecek istisnayı yakalayabiliriz. 
+Bu şekilde, dönüşüm başarısız olduğunda programın çökmesini önleyebiliriz.
+2.As ve Is Anahtar Kelimeleri: as ve is anahtar kelimeleriyle tür kontrolü yaparak, dönüşüm işleminden önce değerin beklenen türde olup olmadığını kontrol edebiliriz. 
+Bu sayede, dönüşüm başarısız olmadan önce kontrol yapabiliriz.
+
+----------------------------------------------------------------------------------------------------------------------*
 
