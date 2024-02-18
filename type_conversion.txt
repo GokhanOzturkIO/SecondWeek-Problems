@@ -1,0 +1,2 @@
+1. is ve !is operatörlerinin kullanımını açıklayın.
+- is operatoru degerin isteddigimiz tipte oldugunu , !is ise olmadıgını kontrol ederr.
