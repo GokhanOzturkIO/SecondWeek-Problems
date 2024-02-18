@@ -165,4 +165,16 @@ Float değerler için 6-7 basamağa kadar, Double için 15-16 basamağa kadar i�
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+7- Ondalık(Decimal), Onaltılık (Hexadecimal) ve İkilik (Binary) değişkenleri Kotlin'de nasıl tanımlayabilirsiniz?
+
+val decimalNumber: Double = 3.14
+
+val hexadecimalNumber: Int = 0xFF // 255'e karşılık gelir
+
+val binaryNumber: Int = 0b1010 // 10'a karşılık gelir
+
+şeklinde tanımlamalar yapabiliriz.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 
