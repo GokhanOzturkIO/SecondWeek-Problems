@@ -201,3 +201,7 @@ Bu sayısal sabit, u son eki ile tanımlandığı için unsigned (işaretsiz) bi
 a2: ULong
 UInt veri tipinden daha büyük bir veri tipine ihtiyaç duyar. Kotlin'de, 64 bitlik işaretsiz tam sayıları temsil etmek için ULong veri tipi kullanılır.
 ***********************************************************
+34-"İşaretsiz" "Long" harf gösterimi nasıl yapılır?
+Kotlin'da işaretsiz bir Long tamsayı tipini temsil etmek için, değerin sonuna 'u' veya 'U' harfi eklemeniz gerekir. Bu, değerin işaretsiz olduğunu belirtir. İşte bir örnek:
+val unsignedLong: ULong = 123u
+***********************************************************
