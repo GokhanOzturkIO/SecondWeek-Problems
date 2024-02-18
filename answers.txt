@@ -29,5 +29,8 @@ Val değişkenlerin salt okunur (readonly) olmasının sebebi bir kez değer ata
 -Bir değişkene null değer atanır ve tip belirtmezse Kotlin bu değişkeni Nothing? olarak yorumlar.
 
 10.İlkel bir değişkenin nullable olması ile null değer alamaması arasında bellek yönetimi açısından nasıl farklar vardır?
-İlkel bir değişkenin nullable olması ile null değer alamaması arasında bellek yönetimi açısından önemli farklar vardır.
+-İlkel bir değişkenin nullable olması ile null değer alamaması arasında bellek yönetimi açısından önemli farklar vardır.
 Nullable bir değişken, bellekte ilave bir boşluk ayırır. Null değer alamayan ilkel bir değişken ise bellekte sadece değeri için alanı ayırır. Yani nullable değişkenlerin bellek kullanımı null değer alamayan ilkel değişkenlere göre daha fazladır.
+
+11.Nullable bir değişkenin bir değere sahip olması ile null olması arasında bellek yönetimi açısından nasıl bir fark vardır? Null değer almış bir değişken bellekte yer kaplamaz diyebilir miyiz?
+-Null değer alan bir değişkenin hala bellekte bir alanı kaplar. Ancak, bu alanın içeriği null olduğu için bir değeri göstermez. Null değer alan bir değişken, değer atanmış bir değişkene göre daha az yer kaplar. Null değer almış bir bellekte yer kaplamaz diyemeyiz dolayısıyla.
