@@ -42,6 +42,9 @@ crash olur.
 10. "val x = 5 / 2 println(x == 2)" gibi bir işlemin sonucu ve tipi nedir? Neden böyle olduğunu açıklayın.
 - islemin sonucu true ve tipi de Int'dir. Burada bir tip verilmedigi icin ev sayisal bir deger girildigi icin otomatik olarak Int degiskeni atandi. Sonuc ondalikli ciksa bile. Ve degisken tipi Int olsugu icin sayinin ondalikli kismi yazılmadi.(Islemin sonucu aslinde 2.5  ama tip Int old icin virgulden sonrasi alinmaz ve 2 varsayilir.) Bu nedenle karsilastirma true doner.
 
+11. "val x = 5L / 2 println(x == 2L)" gibi bir işlemin sonucu ve tipi nedir? Neden böyle olduğunu açıklayın.
+ - Burada da islemin sonucunun tipi, isleme giren en buyuk tipin degerinde olacagi icin Long'dur.  Ve Long tipi de tam sayı degeri aldigi icin sonucun virgulden sonraki kismi okunamz. Bu nedenle karsilastirma bunda da truee doner.
+
 
 
 
