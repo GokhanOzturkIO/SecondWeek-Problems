@@ -1,3 +1,5 @@
+## BASE TYPES AND NULL SAFETY
+
 -val ile var arasındaki fark nedir?
     Val ile var arasındaki fark var değeri herhangi bir anda değiştirile bilirken,
     val 'ın değeri atama anında yapılır.val read-only değişkendir.
@@ -33,3 +35,69 @@
             val nonNullString = nullableString ?: "Varsayılan Değer"
             println("Değişkenin Değeri: $nonNullString")
     Burada elvis ile string null ise yerine "Varsayılan Değer" yazdırıyoruz, null değilse değerini ne ise onu kullanıyoruz.
+
+## NUMBERS
+-Kaç farklı tipte "number" sınıfı miras alan "alt sınıf" (child class) vardır? Bunların değer aralıkları neden önemlidir?
+    Number sınıfının alt sınıfları: Int, Double, Long ,Float, Byte, Short şeklinde sıralanabilir.
+    Değer aralıklarının farklı olması gereksiz yere bellekte alan kaplanmamaısını sağlar böylelikle işlem hızının iyi yönde bir olanak tanır.
+-Eğer bir değişkene tip belirtimi yapılmaz ve bir değer atanırsa, Kotlin tip çıkarımını nasıl yapar?
+    Kotlin, değişkenin değerini belirtmesek de değişkenin değerine ve atanan değerin türüne göre tip çıkarımı yapabilir.
+-Float değişken oluştururken F ve f harfleri varken, Long değişken oluştururken neden küçük l harfi yoktur?
+    Bazı fontlarda 1(bir)'in yazımı ile küçük L harfinin yazımı birbirine çok benzediği için küçük l harfi karışıklık çıkartmaması için kullanılmaz.
+-Tek duyarlıklı (Single precision) ve Çift duyarlıklı (Double precision) kavramlarını açıklayın.
+     Bilgisayar sistemlerinde ondalıklı sayıların temsil edilme şekillerini ifade eder.
+     Tek duyarlıklı sayılar, 32 bitlik bir kayan nokta formatını kullanırken, çift duyarlıklı sayılar 64 bitlik bir format kullanır.
+     Tek duyarlıklı sayılar daha az bellek kullanır ve daha düşük hassasiyetlidir, çift duyarlıklı sayılar ise daha fazla bellek kullanır ve daha yüksek hassasiyete sahiptir.
+-Double ve Float değişkenlerle çalışırken ondalık ayıracı olarak hangi işaretler kullanılır? Bu ayıraçların kullanımında nelere dikkat etmek gerekir?
+    Double ve Float değişkenlerle valuenun ondalık aracı olarak .(noktadan_sonraki_küsürat_miktarif) şeklinde kullanılır. örneğin .3f -> noktadan sonra 3 rakam.
+    Fakat bunu bir string olarak formatlayıp göstereceksek, Locale 'e göre nokta yada virgüle göre formatlama yapmalıyız.
+-Double ve Float değişkenler ondalık kısımda kaç basamağa kadar işlem yaparlar? Bu sınırın üzerinde gelen ondalık bilgileri için nasıl davranırlar? Hangi durumlar için Float ve hangi durumlar için Double kullanılmalıdır?
+    Float, 6-7 basamağa kadar, Double 15-16 basamağa kadar işlem yapar.Daha fazla basamak sınırın üzerine gelen ondalık sayılarda overflow olur ve program crash verebilir.
+-Ondalık(Decimal), Onaltılık (Hexadecimal) ve İkilik (Binary) değişkenleri Kotlin'de nasıl tanımlayabilirsiniz?
+    val decimalNumber = 1905
+    val hexadecimalNumber = 0x759
+    val binaryNumber = 0b010000011
+-Sekizlik (Octal) değişkenler Java'da nasıl tanımlanır? Kotlin'de Sekizlik değişken tanımlanabilir mi?
+    Java'da sekizlik değişlenleri tanımlarken sayının başına 0 (sıfır) eklenir bunun aksine Kotlin'de sekizlik değişken tanımlanırken herhangi bir özellik yoktur.
+     Kotlin'de sekizlik değişken tanımlanırken Integer'a ait parseInt yardımcı fonksiyonu kullanılır.
+-"Geleneksel Notasyon" (Conventional Notation) gösterimi nasıl yapılır?
+    Kotlin'de ondalıklı değişkenler için geleneksel gösterim desteklenir.
+    Double için -> 123.4, 123.4e10, Float içn -> 123.4f ya da 123.4F
+-Sayısal değişkenlerde alt çizgi (underscore) nasıl kullanılır? Kotlin bunu nasıl yorumlar?
+    Sayı sabitlerini daha kolay okunur hale getirmek için alt çizgi kullanabilir ve ide bu alt çizgileri dikkate almaz. Örneğin: val number = 1_000_000 ve val number=1000000 eşittir.
+- == ile neyi karşılaştırırız? === ile neyi karşılaştırırız?
+    == ile değişkenlerin value larını karşılaştırırken kullanılır.
+    === ile değişkenlerin bellek referansını karşılaştırırken kullanılır.
+- === operatörü ile karşılaştırma yaparken Byte değer aralığı neden önemlidir? Kotlin bu aralığa göre neden özel bir davranış sergiler?
+    Referans kontrollerine yapılan özel bir optimizasyon nedeni ile bu değer bayt aralığında ise value ları aynı olan farklı iki değişken olsalar bile memory de aynı alanı işaret ederler.
+- Sayısal değişkenlerde hangi matematiksel operatörler kullanılabilir?
+    toplama: Plus  = +
+    çıkarma: Minus = -
+    çarpma:  Times = x
+    bölme:  Div   = /
+- Sayısal değişkenlerde hangi karşılaştırma operatörleri kullanılabilir?
+    == -> İki değer birbirine eşitse true döndürür.
+    != -> İki değer birbirine eşit değilse true döndürür.
+    Küçük '<' -> Sol taraftaki değer sağ taraftakinden küçükse true döndürür.
+    Büyük '>' -> Sol taraftaki değer sağ taraftakinden büyükse true döndürür.
+    Büyük veya Eşit '>=' -> Sol taraftaki değer sağ taraftakinden büyük veya eşitse true döndürür.
+    Küçük veya Eşit '<=' -> Sol taraftaki değer sağ taraftakinden küçük veya eşitse true döndürür.
+    Ve Operatörü '&&' -> Her iki ifade de doğruysa True döndürür.
+    Veya Operatörü '||' -> İfadelerden biri doğruysa True döndürür.
+- Bit düzeyinde operatörler (Bitwise operators) nelerdir? Ne amaçla kullanılır? Kotlin'de bunları nasıl kullanabilirsiniz?
+    Kotlin, tam sayılar üzerinde bir dizi bitsel işlem sağlar. Yalnızca Int ve Long'a uygulanabilirler:
+    shl(bits) –> İşaretsiz sola kaydırma işlemidir. Bir değeri belirtilen miktarda bit sola kaydırır.
+    shr(bits) –> İşaretle sağa kaydırma işlemidir. Bir değeri belirtilen miktarda bit sağa kaydırır. Kaydırılan bitler, işaret bitinin değeriyle doldurulur.
+    ushr(bits) –> İşaretsiz sağa kaydırma işlemidir. Bir değeri belirtilen miktarda bit sağa kaydırır. Kaydırılan bitler, her zaman sıfır ile doldurulur.
+    and(bits) –> Bit bitiyle AND işlemi yapar. İki değerin her bir bitini karşılaştırır ve her iki bit de 1 ise sonuç 1 olur, aksi halde sonuç 0 olur.
+    or(bits) –> Bit bitiyle OR işlemi yapar. İki değerin her bir bitini karşılaştırır ve herhangi biri 1 ise sonuç 1 olur.
+    xor(bits) –> Bit bitiyle XOR işlemi yapar. İki değerin her bir bitini karşılaştırır ve yalnızca biri 1 ise sonuç 1 olur.
+    inv() –> Tüm bitleri tersine çevirir. Yani, 0'lar 1'e, 1'ler ise 0'a dönüşür.
+- Kotlin'de büyük sayılarla çalışırken hangi ek türlerden yararlanılır ve bu türlerin sınırları nelerdir?
+    BigInteger, BigDecimal gibi ek türler kullanılır.
+- Double ve Float değişkenler kullanılırken "yuvarlama" davranışı nasıldır? Bu nasıl değiştirilebilir?
+    Varsayılan olarak, Kotlin'de Double ve Float sayıları IEEE 754 standardına göre yuvarlanır.
+    Bu standart, genellikle en yakın ondalık sayıya yuvarlama yapar, yani en yakın tam sayıya veya belirli bir ondalık basamağa yuvarlama yapabilir.
+     Ancak, bazı durumlarda bu yuvarlama hatası gözlenebilir. Kotlin'de bu yuvarlama davranışını değiştirmek pek mümkün değildir, çünkü bu standartla ilgilidir ve dilin kendisiyle ilgili değildir.
+      Ancak, özel yuvarlama stratejileri uygulanabilir. Örneğin, belirli bir hassasiyetle yuvarlama yapmak için özel bir yuvarlama fonksiyonu oluşturabilirsiniz.
+      Bu fonksiyonlar, belirli bir hassasiyetteki yuvarlama için kullanılabilir ve kullanıcı ihtiyaçlarına uyacak şekilde özelleştirilebilir.
