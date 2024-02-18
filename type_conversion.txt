@@ -33,6 +33,9 @@ crash olur.
 7. Sayısal değişkenlerde açık dönüşüm (Explicit Type Conversion) yaparken hangi fonksiyonları kullanabilirsiniz?
 - toByte(), toShourt , toInt(), toDouble(), toLong(), toFloat gibi fonksiyonlari kullanabiliriz.
 
+8. "val result = 1L + 3" // "Long + Int" gibi bir işlemin sonucunda "result" değişkeninin tipi ve değeri ne olur? Neden böyle olduğunu açıklayın.
+- resul degiskeninn tipi Long olur. cunku sayisal islemlerde sonucun tipi; isleme giren degerlerden tipi en buyuk  olanin degerini alir. Bu bir kuraldir. 
+
 
 
 
