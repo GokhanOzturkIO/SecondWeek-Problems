@@ -225,3 +225,7 @@ Belirli bir aralıktaki pozitif sayılar üzerinde matematiksel hesaplamalar yap
 Veri İntegritesi ve Güvenlik:
 İşaretsiz değişkenler, belirli bir aralıkta sınırlı kalması nedeniyle veri bütünlüğünü ve güvenliği artırabilir. Negatif değerlerin olmaması, belirli senaryolarda hatalı durumları önleyebilir.
 ***********************************************************
+36-"İşaretsiz" değişkenlerle yapılan matematiksel işlemlerde, özellikle büyük sayılarla çalışırken karşılaşılabilecek taşma (overflow) ve taşma olmaması (underflow) durumları için Kotlin nasıl bir yönetim sağlar?
+OverflowException: Taşma durumlarında OverflowException istisnası fırlatılır.
+UnderflowException: Taşma olmaması durumlarında UnderflowException istisnası fırlatılır.
+***********************************************************
