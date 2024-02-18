@@ -198,5 +198,10 @@ Kotlin Geleneksel Notasyon gösterimini destekler. Double sayılar için "123.5,
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+10- Sayısal değişkenlerde alt çizgi (underscore) nasıl kullanılır? Kotlin bunu nasıl yorumlar?
 
+Underscore büyük sayıların okunabilirliğini arttırmak için kullanılır. İde tarafından okunmazlar, kullanımları şu şekilde olur; "1_000_000" bu şekilde tanımlanan sayı
+ide tarafından "1000000" şeklinde yorumlanır.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
