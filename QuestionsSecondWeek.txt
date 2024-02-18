@@ -34,7 +34,7 @@ belirlenir ve doğrudan değiştirilemez. Ancak, bu değişkenler get fonksiyonu
 val name: String = "Barış" // salt okunur değişken  (Burayı değiştirdikçe değeri değişecektir)
 name = "Barışş" // hata! salt okunur değişkenin değeri değiştirilemez
 val nameLength: Int
-    get() = this.length // get fonksiyonu ile değişim yapılabilir
+    get() = this.name.length // get fonksiyonu ile değişim yapılabilir
 
 Bu kavramları açıkladıktan sonra, val değişkenlerin neden aslında “değişmez” değil de “salt okunur” olarak açıklanması gerektiğini anlayabiliriz. Çünkü val değişkenlerin
 değerleri, doğrudan değiştirilemese de, dolaylı olarak değişebilir. Bu, val değişkenlerin değerinin sabit olmadığını, ancak değiştirilemez olduğunu gösterir. Bu nedenle, val
@@ -43,6 +43,24 @@ değişkenler “değişmez” değil, “salt okunur” olarak tanımlanmalıd�
 Burayı toparlayacak olursak, şunu yazabiliriz:
 
 Val değişkenler, değerleri doğrudan değiştirilemeyen, ancak get fonksiyonu ile değişebilen değişkenlerdir. Bu değişkenler, değişmez değil, salt okunur olarak adlandırılır.
+
+Soru 4 :"Tip Çıkarımı" (Type inference) kavramını açıklayın. Hangi durumlarda tip belirtmek kesin olarak gereklidir?
+
+Cevap: Tip çıkarımı (Type inference), Kotlin’de bir değişkenin tipinin, değerine göre otomatik olarak belirlenmesi anlamına gelir. Bu, değişken tanımlarken tip belirtmenin
+zorunlu olmadığı, ancak isteğe bağlı olduğu anlamına gelir. Kodun daha kısa ve okunabilir olması konusunda bize fayda sağlar.
+
+val name = "Barış" // Tip çıkarımı ile String tipi belirlendi
+val age = 23 // Tip çıkarımı ile Int tipi belirlendi
+
+
+Ancak bazı durumlarda tip belirtmek durumundayız örneğin değer ataması yapmak istemiyorsak değişkenin türünü bildirmek zorundayız:
+
+val age = 10 // sorun yok
+val age : Int // Değer vermek istemiyorsak bu şekilde tip belirmek durumundayız
+
+val age 
+age = 10 şeklinde hata alacağız çünkü tipini belirtmedik daha önce. bunun dışında listeler ile çalışırken de içinde neleri barındıracağını belirtmemiz gerekebilir string, int gibi
+
 
 
 
