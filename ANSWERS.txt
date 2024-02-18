@@ -1,0 +1,24 @@
+Temel Türler & Null Güvenliği
+1-val ile var arasındaki fark nedir?
+-performans farkı yok denecek kadar azdır. val daha maliyetlidir. var daha performanslıdır. Fakat Thread kullanımında val kullanmak daha mantıklı ve performans konusunda avantajlıdır çünkü birden fazla thread açtıktan sonra var değişkenler kullanmak sürekli bir karşılaştırmaya girer ve hem maliyetten hem de süreden kazancımızı sınırlar, val bu konuda sabit bir değerde olduğundan daha avantajlıdır.
+
+2-Bir var değişkeni val gibi davranmasını nasıl sağlayabiliriz val kelimesini kullanmadan? Bunu neden yapmak isteriz? Örnek bir senaryo verin.
+-örnek olarak: 
+  class A{
+    var isMale: Boolean = true
+        private set
+} şeklinde tanımlanabilir.
+
+3-"Değişmez" (Immutable) ve "Salt Okunur" (ReadOnly) kavramlarını açıklayın. val değişkenler neden aslında "değişmez" değil de "salt okunur" olarak açıklanmalıdır?
+-read-only -> değeri okunabilen, değişemez anlamına gelmeyen 
+immutable -> bir nesnenin değerinin asla ilk değerden farklı olmaması durumu.
+val read-only'dir 
+class rectangle{
+    var shortEdge: Int = 15
+    var longEdge: Int = 25
+
+    val calculate: Int
+        get(){
+            return shortEdge * longEdge
+        }
+} kodunu incelediğimizde immutable olmamasının nedeni değerinin asla ilk değerden farklı olmasıdır.
