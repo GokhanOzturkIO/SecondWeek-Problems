@@ -341,3 +341,23 @@ val length = str?.length // str null olduğu için length null olacaktır, NullP
 Güvenli Dönüşümler (Safe Cast - as?): Güvenli dönüşümler, bir nesnenin belirli bir türe dönüştürülmesini sağlar. Eğer dönüşüm başarısız olursa null döner. Bu da dönüşüm işleminin güvenli olmasını sağlar. Örneğin:
 val x: Any = "hello"
 val y: Int? = x as? Int // x String türünde olduğu için dönüşüm başarısız olacak ve y null olacaktır
+
+4-Sayısal değişkenlerde örtük tip genişletme (implicit widening conversions) ne demektir? Kotlin'de bu neden yapılamaz?
+
+-Örtük tip genişletme (implicit widening conversions), bir veri tipinin daha geniş bir veri tipine dönüştürülmesi işlemidir ve bu dönüşümü yapmak için ekstra bir dönüşüm operatörü kullanmaya gerek yoktur. Örneğin, bir Int değerini Long değere dönüştürmek örtük bir genişletme örneğidir, çünkü Long türü Int türünden daha geniştir ve Int değeri Long değerine kolayca dönüştürülebilir.
+
+Kotlin'de örtük tip genişletme kavramı bulunmaz. Bu nedenle, bir veri tipini başka bir veri tipine otomatik olarak genişletmek mümkün değildir. Kotlin, tür güvenliği ve netliği açısından bu tür otomatik dönüşümleri engeller. Bu durum, programcının açıkça belirtmediği veri türü dönüşümlerini önler ve potansiyel hataları azaltır. Örneğin, bir Int değerini Long türüne dönüştürmek için açıkça dönüşüm yapılması gerekir:
+val intValue: Int = 42
+val longValue: Long = intValue.toLong() // Açıkça dönüşüm yapılıyor
+
+5-"val b: Byte = 1 ile val i: Int = b ve son olarak print(b == i) gibi bir kod yazıldığında çıktı ne olur? Neden böyle bir çıktı aldığınızı açıklayın.
+
+-Bu kodda önce bir Byte türünde b adında bir değişken oluşturulur ve değeri 1 olarak atanır. Daha sonra bir Int türünde i adında bir değişken oluşturulur ve bu değişkenin değeri b değişkenine atanır. Son olarak b ve i değişkenlerinin değerleri karşılaştırılır ve sonuç print fonksiyonu ile ekrana yazdırılır.
+
+Kodun çıktısı true olacaktır. Bunun nedeni, b değişkeninin türü Byte iken, i değişkeninin türü Int olduğundan, i değişkeni b değişkenine atanırken otomatik olarak bir tür dönüşümü (implicit widening conversion) gerçekleşir. Bu dönüşüm sonucunda i değişkeni, b değişkeninin değerini Int türüne genişletir. Dolayısıyla, b ve i değişkenlerinin değerleri karşılaştırıldığında, her ikisi de aynı değeri (1) taşıdığı için karşılaştırma sonucu true olur.
+
+6-"val b: Byte = 1 ile val i: Int = b.toInt() ve son olarak print(b == i) gibi bir kod yazıldığında çıktı ne olur? Neden böyle bir çıktı aldığınızı açıklayın.
+
+-Bu kodda önce bir Byte türünde b adında bir değişken oluşturulur ve değeri 1 olarak atanır. Daha sonra bir Int türünde i adında bir değişken oluşturulur ve bu değişkenin değeri b.toInt() ifadesi ile b değişkeninin toInt() metodu kullanılarak Int türüne dönüştürülerek atanır. Son olarak b ve i değişkenlerinin değerleri karşılaştırılır ve sonuç print fonksiyonu ile ekrana yazdırılır.
+
+Kodun çıktısı true olacaktır. Bunun nedeni, b değişkeninin değerinin toInt() metodu ile Int türüne dönüştürülerek i değişkenine atanmasıdır. Bu dönüşüm sonucunda b değişkeninin değeri artık Int türünde olduğundan, i değişkeni ile karşılaştırıldığında değerleri aynı olacaktır. Dolayısıyla, b ve i değişkenlerinin değerleri karşılaştırıldığında, her ikisi de aynı değeri (1) taşıdığı için karşılaştırma sonucu true olur.
