@@ -129,6 +129,13 @@ Bir değişkenin null olup olmadığını kontrol ederiz if(name != null)
 değerini döndürür. 
 Kotlin, null güvenliği sayesinde, programlamada ortaya çıkabilecek birçok hata türünü azaltır ve kodunuzun güvenilirliğini, performansını ve okunabilirliğini artırır.
 
+Soru: Bir değişkene null değer atanır ve tip belirtilmezse Kotlin bu değişkeni nasıl yorumlar?
+
+Cevap: Kotlin, bir değişkene null değer atanır ve tip belirtilmezse, bu değişkenin tipini Nothing? olarak yorumlar çünkü tip çıkarımı yapamaz. Nullable ya da null olanlara any
+veriliyor.
+
+
+
 
 
 
