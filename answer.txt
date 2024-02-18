@@ -243,3 +243,7 @@ Bu sorunları çözmek için:
 1. Dönüştürme İşlemleri: İşaretsiz Kotlin veri tiplerini Java API'leri ile kullanmadan önce, toInt(), toLong() gibi fonksiyonlar kullanarak işaretli veri tiplerine dönüştürmeniz gerekir.
 2. Wrapper Sınıfları: java.lang.Integer, java.lang.Long gibi wrapper sınıfları kullanarak işaretsiz Kotlin veri tiplerini Java API'leri ile uyumlu hale getirebilirsiniz.
 ***********************************************************
+39-is ve !is operatörlerinin kullanımını açıklayın.
+is ve !is operatörleri, bir nesnenin belirli bir sınıftan olup olmadığını kontrol etmek için kullanılır.
+Nesne belirtilen sınıftan ise true, değilse false döndürür.
+***********************************************************
