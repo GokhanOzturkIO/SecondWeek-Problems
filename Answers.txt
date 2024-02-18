@@ -49,3 +49,15 @@ Normal koşullarda bir tamsayı deklare ettiğimizde Kotlin Int sınırları iç
 Bu konu hakkında Medium üzerinde yayınladığım yazıma göz atabilirsiniz. --> https://madenyasin.medium.com/kotlinde-pirimitive-de%C4%9Fi%C5%9Fkenler-abf1933c0941
 
 ------------------------------------------------------------
+
+#6 "Tip Güvenliği" (Type Safety) kavramını açıklayın.
+
+Type Safety kavramı; değişkene sahip olduğu veri türünün dışında veri ataması yapılmasını önleyerek runtime esnasında crash almamızı önler.
+Kodu yazarken ya da compile time esnasında bizi uyararak hatayı erkenden fark etmemizi sağlar.
+
+Aşağıdaki örneklerde hatalı veri türünde atama işlemleri yapılmıştır. Type Safety özelliği aşağıdaki hataları önler.
+
+1) var myInt: Int = "myString"      --> Type mismatch: inferred type is String but Int was expected
+2) var myChar: Char = "myCharArray" --> Type mismatch: inferred type is String but Char was expected
+3) var myString: String = 15        --> The integer literal does not conform to the expected type String
+------------------------------------------------------------
