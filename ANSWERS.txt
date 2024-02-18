@@ -214,5 +214,22 @@ val y = x.toInt() // y değeri 4 olur
 Yuvarlama davranışını değiştirmek için, genellikle sayının tam kısmını alarak yapabilirsiniz. Örneğin, aşağı yuvarlamak için floor() fonksiyonunu kullanabilirsiniz:val x = 3.5
 val y = Math.floor(x) // y değeri 3 olur
 
+C)İŞARETSİZ SAYILAR
 
+1-"İşaretsiz" (Unsigned) değişkenler ne demektir? İşaretli olanlarla aralarındaki fark nedir?
+
+-"İşaretsiz" (unsigned) değişkenler, negatif değerler içermeyen ve yalnızca pozitif veya sıfır değerlerini temsil eden sayıları tutan değişkenlerdir. İşaretli değişkenler ise pozitif, negatif ve sıfır değerlerini temsil edebilirler.
+
+2-"İşaretsiz" değişkenler nasıl bir sınıf yapısında tutulurlar? Bu neden önemlidir?
+
+-Örneğin, işaretsiz 8-bit tamsayıları temsil etmek için UByte veri tipi kullanılır. Bu veri tipi, 0 ile 255 arasındaki değerleri temsil eder ve negatif değerler kabul etmez. Benzer şekilde, UShort, UInt ve ULong gibi veri tipleri, sırasıyla 16-bit, 32-bit ve 64-bit işaretsiz tamsayıları temsil etmek için kullanılır.
+
+İşaretsiz değişkenlerin kullanılması önemli olabilir çünkü bazı durumlarda negatif değerlerin kullanımının istenmediği veya uygun olmadığı durumlar olabilir. Örneğin, renk kodlarının veya bellek adreslerinin temsil edilmesinde negatif değerlerin kullanılması anlamsız olabilir. İşaretsiz değişkenler bu tür durumlarda daha uygun bir seçenek olabilir. Ayrıca, işaretsiz değişkenlerin kullanılması, değer aralığının genişletilmesine de olanak tanır, bu da daha büyük sayıları temsil etmek için gereklidir.
+
+3-"İşaretsiz" değişkenlerin harf gösterimi nasıldır?
+
+-UByte: İşaretsiz 8-bit tamsayı. Değer aralığı: 0 ile 255 arası.
+UShort: İşaretsiz 16-bit tamsayı. Değer aralığı: 0 ile 65,535 arası.
+UInt: İşaretsiz 32-bit tamsayı. Değer aralığı: 0 ile 4,294,967,295 arası.
+ULong: İşaretsiz 64-bit tamsayı. Değer aralığı: 0 ile 18,446,744,073,709,551,615 arası.
 
