@@ -20,6 +20,9 @@
 - Bir değişkeni nullable yapmak icin tur tanimindan sonra ? koymaliyiz. 
 	Ornegin: val name: String? = null  ...Bu sekilde name adinda null bir String degisken olusturduk.
 
+8. "Null Güvenliği" (Null Safety) kavramını açıklayın.
+- Bir degerin null olabilme durumuna karsi programin onlem almasidir. NullPointerException gibi hatalarin onune gecilir. Null degerlerle de guvenli calisma durumudur.
+
 
 
 
