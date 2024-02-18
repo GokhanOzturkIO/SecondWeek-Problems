@@ -205,3 +205,11 @@ ide tarafından "1000000" şeklinde yorumlanır.
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+11- `==` ile neyi karşılaştırırız? `===` ile neyi karşılaştırırız?
+
+İki eşittir “Structural Equality Operator” (Yapısal Eşitlik Operatörü) olarak tanımlanmaktadır. Tanımdan da anlaşılacağı üzere bu operatör ile iki değişkenin veya nesnenin değerlerinin (içeriklerinin) eşit olup olmadığını kontrol ederiz ve değerler eşitse bize true değeri döner. Üç eşittir operatöründe ise durum değişiyor bu operatör ile iki değişkenin veya nesnenin aynı bellek konumuna atıfta bulunup bulunmadığını kontrol ediyoruz yani üç eşittir operatöründe bizim için önemli kıstas bellek adresleri.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
