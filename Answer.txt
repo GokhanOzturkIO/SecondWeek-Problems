@@ -2,63 +2,170 @@
                                          1- Temel Türler & Null Güvenliği
 ----------------------------------------------------------------------------------------------------------------------*/
 /*----------------------------------------------------------------------------------------------------------------------
-  1.1  val değeri get edilebilir ama set edilemez.readOnly durumdadır.Readonly durumdadır değeri okunabilir.
+  1.1 ->  val değeri get edilebilir ama set edilemez.readOnly durumdadır.Readonly durumdadır değeri okunabilir.
        var değeri hem set ve hemde get edilebilir.
 ----------------------------------------------------------------------------------------------------------------------*/
 /*----------------------------------------------------------------------------------------------------------------------
-  1.2  var keywordunu(değişkeni) val gibi kullanmak istersek setini private yapıp readonly durumuna getiririz.Peron sınıfımda
+  1.2 -> var keywordunu(değişkeni) val gibi kullanmak istersek setini private yapıp readonly durumuna getiririz.Peron sınıfımda
  name değişkenim olsun dışardan erişen o değeri almasını isteyebilirim ama class içinde o değeri değiştirmek isteyebilirim.
  Bunun için bu yöntemi kullanırım.
 ----------------------------------------------------------------------------------------------------------------------*/
 /*----------------------------------------------------------------------------------------------------------------------
-  1.3  -Immutable değeri hiçbir sekilde değişemez.
+  1.3 -> -Immutable değeri hiçbir sekilde değişemez.
        -Readonly ise değeri okunabilir ama set edilemez.
        -Readonlynin nesnesi veya referansının durumu  değişebilir ama immutable  nesnesinin ve referansın değiştirmeninin
        hicbir yolu yoktur. val ise nesnesi veya referansının durumu değiştiği için readonlydir.
 ----------------------------------------------------------------------------------------------------------------------*/
 /*----------------------------------------------------------------------------------------------------------------------
-  1.4   Programcı veri türünün belirtmeden IDE'nin veri türünü anlamasıdır.Tür Bildirimi yapmamız gereken yerler ise
+  1.4 ->  Programcı veri türünün belirtmeden IDE'nin veri türünü anlamasıdır.Tür Bildirimi yapmamız gereken yerler ise
   null bir tip bildirdiğimizde,fonksiyon geri dönüş değerinde ve parametlerinde bildiririz.
 ----------------------------------------------------------------------------------------------------------------------*/
 /*----------------------------------------------------------------------------------------------------------------------
-  1.5 Kotlin'de, temel veri tipleri referans olarak temsil edilir; ancak derleyici, temel veri
+  1.5 -> Kotlin'de, temel veri tipleri referans olarak temsil edilir; ancak derleyici, temel veri
   tiplerini optimize ederek ilkel türlere dönüştürür.(Bycode da  java koduna bakarsak primitive olarak tanımlanmıştır)
 ----------------------------------------------------------------------------------------------------------------------*/
 /*----------------------------------------------------------------------------------------------------------------------
-  1.6  Tip Güvenliği, derleme sırasında değişkenlerin türlerinin ve atanacak değerlerin türlerinin doğrulanmasıyla
+  1.6 -> Tip Güvenliği, derleme sırasında değişkenlerin türlerinin ve atanacak değerlerin türlerinin doğrulanmasıyla
   sağlanan bir programlama kavramıdır, böylelikle tür uyumsuzlukları önlenir.
 ----------------------------------------------------------------------------------------------------------------------*/
 /*----------------------------------------------------------------------------------------------------------------------
-  1.7  var age : Int? = null  bu sekilde null bildirilir.Tür Bildirimi yapmak ve tür bildirimin sonuna "?" koymak
+  1.7 ->  var age : Int? = null  bu sekilde null bildirilir.Tür Bildirimi yapmak ve tür bildirimin sonuna "?" koymak
   zorundayız.
 ----------------------------------------------------------------------------------------------------------------------*/
 /*----------------------------------------------------------------------------------------------------------------------
-  1.8 Bir programlama dilinde, değişkenlerin veya referansların null olabileceği durumları kontrol altına alarak null
+  1.8 -> Bir programlama dilinde, değişkenlerin veya referansların null olabileceği durumları kontrol altına alarak null
   referanslarından kaynaklanan hataları önlemeyi amaçlayan bir kavramdır.
 ----------------------------------------------------------------------------------------------------------------------*/
 /*----------------------------------------------------------------------------------------------------------------------
-  1.9 Bir programlama dilinde, değişkenlerin veya referansların null olabileceği durumları kontrol altına alarak null
+  1.9 -> Bir programlama dilinde, değişkenlerin veya referansların null olabileceği durumları kontrol altına alarak null
   referanslarından kaynaklanan hataları önlemeyi amaçlayan bir kavramdır.
 ----------------------------------------------------------------------------------------------------------------------*/
 /*----------------------------------------------------------------------------------------------------------------------
-  1.10 Nothing tipinde tutar.Nothing sınıfı "Asla var olmayan bir değeri" temsil etmek için kulllanılır.
+  1.10 -> Nothing tipinde tutar.Nothing sınıfı "Asla var olmayan bir değeri" temsil etmek için kulllanılır.
 ----------------------------------------------------------------------------------------------------------------------*/
 /*----------------------------------------------------------------------------------------------------------------------
-1.11 Null olmayan değerler her zaman bir değer içerir, veri türünün boyutu kadar bellekte yer kaplar ve değerini ve 
+1.11 -> Null olmayan değerler her zaman bir değer içerir, veri türünün boyutu kadar bellekte yer kaplar ve değerini ve
 referansını stack bellekte saklar; ancak null değerler için bellekte, değerine karşılık gelen bir referans olması 
 durumunda heap bellekte bir yer ayrılır.	
 ----------------------------------------------------------------------------------------------------------------------*/
-1.12 İlkel veri tipleri, değerlerini ve referanslarını stack bellekte tutar, ancak null değerler referans tipleridir, 
+1.12 -> İlkel veri tipleri, değerlerini ve referanslarını stack bellekte tutar, ancak null değerler referans tipleridir,
 dolayısıyla değerleri heap bellekte saklanırken, referansları stack bellekte tutulur; stack bellekte null değerlerin 
 referansları için yer ayrılır.	
 /*----------------------------------------------------------------------------------------------------------------------
-  1.13  !! -> Null olmasa karışma ben ona değer vericem anlamına gelir.Değer verilmesse NP fırlatır.
+  1.13 -> !! -> Null olmasa karışma ben ona değer vericem anlamına gelir.Değer verilmesse NP fırlatır.
         ?. ->  Null gelebilir null gelirse de NP fırlatmaz.
         -> Bir bankacılık uygulamasında, kullanıcının bakiyesinin null olmamasını isteriz; aksi takdirde uygulamanın çökmesi,
  kullanıcının para miktarının hatalı şekilde görüntülenmesine ve hatta ciddi sorunlara yol açabilir. Bu tür kritik yerlerde,
  kullanıcı bakiyesinin null olmadığını doğrulamak için !! operatörünü kullanmak daha güvenli bir çözüm olabilir
 ----------------------------------------------------------------------------------------------------------------------*/
 /*----------------------------------------------------------------------------------------------------------------------
- 					2. Sayılar
+ 					                            2 - Sayılar
+----------------------------------------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------------------
+    2.1 -> Number sınıfının 6 alt sınıfı vardır: Float, Double, Byte, Short, Int ve Long. Bu alt sınıflar, farklı veri
+    aralıklarını temsil eder ve bellek kullanımı ile performans açısından önemlidir. Özellikle, doğru veri tipinin seçimi,
+    bellek kullanımını optimize etme ve programın performansını artırma açısından kritiktir.
+----------------------------------------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------------------
+    2.2 ->Integer veri tiplerinde, tip çıkarımı yapılmadığında, short ve byte aralığındaki değerler varsayılan olarak int
+    olarak kabul edilirken, long aralığındaki değerler long olarak kabul edilir. Kayan noktalı (floating point) veri
+    tiplerinde ise, tip belirtilmediği durumda double olarak kabul edilir. Toplama işlemlerinde, toplanan veri tiplerinin
+    en büyük sayının değer aralığını belirlemesi gerekmektedir. Örneğin, int ve int toplamı int değer aralığını aşsa bile
+    sonuç yine int olarak kabul edilir. Bu kural, veri tiplerinin dikkatlice seçilmesi ve uygun şekilde kullanılmasını
+    gerektirir.
+----------------------------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------------------------
+ 2.3 -> Long veri tipinin "L" harfiyle bildirilmesinin sebebi, küçük "l" harfinin rakam "1" ile kolayca karıştırılabilmesidir.
+ Bu nedenle, long bir değer bildirirken "L" harfi kullanılarak netlik sağlanır ve olası karışıklıkların önüne geçilir.
+----------------------------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------------------------
+ 2.4 -> Float veri türü, tek duyarlıklı (single precision) kayan noktalı sayıları temsil eder. Bu tür, genellikle daha kısa
+ bellek boyutuyla (32 bit) kullanılır ve genellikle yaklaşık 6-7 basamak doğrulukla sayıları temsil eder. Diğer bir deyişle,
+ float değerler, ondalık kısımların doğruluğunu yaklaşık olarak 6-7 basamağa kadar korur.
+
+ Double veri türü ise çift duyarlıklı (double precision) kayan noktalı sayıları temsil eder. Bu tür, daha uzun bir bellek
+ boyutuyla (64 bit) kullanılır ve genellikle yaklaşık 15-16 basamak doğrulukla sayıları temsil eder. Yani, double değerler,
+ ondalık kısımların doğruluğunu yaklaşık olarak 15-16 basamağa kadar korur.
+----------------------------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------------------------
+ 2.5 ->  Ondalık ayracı "." nokta ile temsil edilir.
+        val piDouble = 3.14 // Double
+        val piFloat  = 3.14f // Float
+----------------------------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------------------------
+ 2.6 -> Float veri türü yaklaşık olarak 6-7 basamağa kadar doğrulukla ondalık işlemler yaparken, Double veri türü yaklaşık
+ olarak 15-16 basamağa kadar doğrulukla ondalık işlemler yapabilir. Float, daha az bellek kullanır ve daha düşük hassasiyetli
+ işlemler için kullanılırken, Double daha fazla bellek kullanır ve daha yüksek hassasiyetli işlemler için kullanılır.
+----------------------------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------------------------
+ 2.7 -> val decimal = 123 //Decimal
+    	val hexadecimals = 0x00 // Hexadecimal
+    	val binaries = 0b00001011 // Binary
+	Bu şekilde tanımlanır.
+----------------------------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------------------------
+ 2.8 -> int octalNumber = 0123 javada tanımı bu şekildedir.Kotlinde sayının başına sıfır koyulmaz ve hata alırız.
+	(Unsupported [literal prefixes and suffixes]. bu hatayı alırız.)
+----------------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------------------/
+ 2.9 -> Kotlin'de, ondalık sayıların geleneksel gösterimi desteklenir. Bu gösterim şu şekildedir:
+        Double türü için, ondalık sayılar ve bilimsel gösterim (exponential notation) kullanılabilir. Örneğin, 123.5 veya 123.5e10.
+        Float türü için, sayılar 'f' veya 'F' etiketi ile işaretlenir. Örneğin, 123.5f veya 123.5F.
+----------------------------------------------------------------------------------------------------------------------*
+/*----------------------------------------------------------------------------------------------------------------------------*/
+ 2.10 -> Kotlin'de sayısal değerlerin daha kolay okunabilmesi için alt çizgi (underscore) kullanılabilir. Ancak, alt çizgiler
+sadece sayının daha okunabilir olmasını sağlar ve değerlerin kendisini etkilemez. Yani, alt çizgiler sadece okunabilirlik
+için kullanılır ve değeri belirlemez. Dolayısıyla, bir sayıyı print ettiğinizde alt çizgiler kaldırılır ve sadece sayının
+değeri görüntülenir.
+-------------------------------------------------------------------------------------------------------------------------------*/
+ 2.11 -> "==" operatörü, değerleri karşılaştırırken kullanılırken, "===" operatörü referansları karşılaştırmak için kullanılır.
+ Bu, değerlerin içeriğini kontrol etmek için "==", ancak bellek adreslerini doğrudan karşılaştırmak için "===", kullanırız.
+ Bu şekilde, bir nesnenin aynı bellek konumunu gösterip göstermediğini kontrol edebiliriz. Bu, veri işlemleri sırasında
+ doğru sonuçları elde etmek için önemlidir.
+---------------------------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------------------------*/
+ 2.12 -> JVM, -128 ile 127 arasındaki Integer değerlerini bellek optimizasyonu yaparak önbelleğe alır. Bu nedenle,
+ aynı aralıktaki byte değerler, bellekte aynı nesneyi işaret eder
+----------------------------------------------------------------------------------------------------------------------------
+/*-------------------------------------------------------------------------------------------------------------------------*/
+ 2.13 -> Kotlin'de kullanılan matematiksel operatörler arasında toplama, çıkarma, çarpma, bölme, mod alma, artırma, azaltma,
+ üs alma, karekök alma, mutlak değer alma, trigonometrik ve logaritmik fonksiyonlar bulunur.
+-------------------------------------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------------------------------*/
+ 2.14 -> Kotlin'de sayısal değerler için kullanılan karşılaştırma operatörleri şunlardır: == (eşitlik), != (eşit değil),
+  > (büyüktür), < (küçüktür), >= (büyük eşittir) ve <= (küçük eşittir).
+-------------------------------------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------------------------------*/
+ 2.15 -> Bit düzeyinde operatörler, verilerin ikili temsilini kullanarak bellek manipülasyonu, veri sıkıştırma, matematiksel
+ işlemler ve şifreleme gibi düşük seviyeli işlemleri gerçekleştirmek için kullanılır. Bu operatörler arasında AND (&), OR (|),
+ XOR (^), NOT (~), Left Shift (<<) ve Right Shift (>>) bulunur.
+
+ val a = 0b1010
+ val b = 0b1100
+
+ val andResult = a and b
+ val orResult = a or b
+ val xorResult = a xor b
+ val notResult = a.inv()
+ val leftShiftResult = a shl 2
+ val rightShiftResult = a shr 2
+
+ println(andResult) // Çıktı: 8 (0b1000)
+ println(orResult) // Çıktı: 14 (0b1110)
+ println(xorResult) // Çıktı: 6 (0b110)
+ println(notResult) // Çıktı: -11 (0b11111111111111111111111111110101)
+ println(leftShiftResult) // Çıktı: 40 (0b101000)
+ println(rightShiftResult) // Çıktı: 2 (0b10)
+
+-------------------------------------------------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------------------
+  1.16 -> Kotlin'de, tam sayılar için işlemlerinde BigInteger türü kullanılırken, ondalıklı sayılar için BigDecimal türü tercih edilir.
+Bu ek türler, sınırsız büyüklükte sayılarla çalışmayı sağlar ve yüksek hassasiyet gerektiren hesaplamalarda kullanılır.
+----------------------------------------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------------------
+  1.16 -> Double ve Float veri tiplerindeki yuvarlama davranışı, IEEE 754 standardına göre belirlenir ve varsayılan olarak yakınsama
+kuralına göre gerçekleşir. Ancak, bu davranışı değiştirmek için özel yuvarlama stratejileri kullanılabilir. Kotlin'de,
+Math sınıfı altında yer alan round(), ceil() ve floor() gibi fonksiyonlarla yuvarlama işlemleri gerçekleştirilebilir.
+Bu yöntemlerle, sayılar belirli bir hassasiyete veya istenen yuvarlama davranışına göre düzenlenebilir.
 ----------------------------------------------------------------------------------------------------------------------*/
 
