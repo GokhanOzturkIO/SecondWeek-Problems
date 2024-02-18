@@ -259,4 +259,16 @@ Değişkenin türü kesin olarak belirlenemiyorsa akıllı dönüşüm gerçekle
 as operatörü ile yapılan dönüşümler null değer döndürebilir.
 Akıllı dönüşüm, kodun okunabilirliğini ve anlaşılırlığını etkileyebilir.
 ***********************************************************
+41-"Güvenli & Güvensiz" operatörler nelerdir?
+Güvenli operatörler şunlardır:
+
+?. operatörü: Bir nesnenin null olup olmadığını kontrol eder ve null ise bir değer döndürür.
+?.let fonksiyonu: Bir nesnenin null olup olmadığını kontrol eder ve null değilse bir lambda fonksiyonunu çalıştırır.
+?: operatörü: Bir nesnenin null olup olmadığını kontrol eder ve null ise bir varsayılan değer döndürür.
+!! operatörü: Bir nesnenin null olmadığını varsayar ve null ise NullPointerException hatası fırlatır.
+Güvensiz operatörler şunlardır:
+
+. operatörü: Bir nesnenin null olup olmadığını kontrol etmeden bir üyesine erişir.
+[] operatörü: Bir dizinin null olup olmadığını kontrol etmeden bir elemanına erişir.
+***********************************************************
 
