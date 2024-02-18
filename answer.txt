@@ -294,5 +294,8 @@ Result Intdir.Sonuç -2 dir. OverFlow olmuştur hatalı sonuç döner.
 47-"val x = 5 / 2 println(x == 2)" gibi bir işlemin sonucu ve tipi nedir? Neden böyle olduğunu açıklayın.
 Sonuç 2 dir ve true döner.her iki taraf da Int türünde olduğu için sonuç da Int türünde olacaktır ve ondalık kısmı atılacaktır.
 ***********************************************************
+48-"val x = 5L / 2 println(x == 2L)" gibi bir işlemin sonucu ve tipi nedir? Neden böyle olduğunu açıklayın.
+Sonucu 2 dir. True döner . Kotlin otomatik olarak işlemi geniş türle gerçekleştirir. İki tarafın türleri arasında genişleme yapılır ve sonuç Long türünde olur.
+***********************************************************
 
 
