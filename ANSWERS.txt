@@ -233,3 +233,28 @@ UShort: İşaretsiz 16-bit tamsayı. Değer aralığı: 0 ile 65,535 arası.
 UInt: İşaretsiz 32-bit tamsayı. Değer aralığı: 0 ile 4,294,967,295 arası.
 ULong: İşaretsiz 64-bit tamsayı. Değer aralığı: 0 ile 18,446,744,073,709,551,615 arası.
 
+4-val a1 = 42u ve val a2 = 0xFFFF_FFFF_FFFFu" değişkenlerin tipleri ne olur? Neden?
+
+-val a1 = 42u ve val a2 = 0xFFFF_FFFF_FFFFu değişkenlerinin tipleri sırasıyla UInt ve ULong olacaktır.
+
+val a1 = 42u: Burada 42u ifadesi, UInt (işaretsiz 32-bit tamsayı) türünden bir değer oluşturur. UInt, u önekini kullanarak işaretsiz bir tamsayı tanımladığımızda kullanılır ve 32 bitlik bir değer aralığını temsil eder.
+
+val a2 = 0xFFFF_FFFF_FFFFu: Burada ise 0xFFFF_FFFF_FFFFu ifadesi, ULong (işaretsiz 64-bit tamsayı) türünden bir değer oluşturur. ULong, u önekini kullanarak işaretsiz 64-bit bir tamsayı tanımladığımızda kullanılır. Bu ifade 64 bitlik bir değer aralığını temsil eder.
+
+5-İşaretsiz" "Long" harf gösterimi nasıl yapılır?
+
+-ULong
+
+6-"İşaretsiz" değişkenlerin kullanım amaçları nelerdir?
+
+-Bellek Adresleri: Bellek adresleri genellikle işaretsiz olarak temsil edilir çünkü bellek adresleri her zaman pozitiftir ve işaretli değişkenler kullanılarak temsil edilmesi gereksizdir.
+
+Bit Düzeyinde İşlemler: Bazı bit düzeyinde işlemler, özellikle veri sıkıştırma ve şifreleme gibi alanlarda, işaretsiz değişkenler kullanılarak daha doğru bir şekilde gerçekleştirilebilir.
+
+Veri Sıraları ve İndeksler: Bir veri sırasının veya dizisinin indisleri genellikle işaretsiz olarak temsil edilir çünkü indisler negatif olamaz.
+
+Veri Temsilleri: Bazı veri türleri, özellikle renk kodları gibi, doğal olarak işaretsiz olabilir. Örneğin, RGB renk kodları 0 ile 255 arasında değerler kullanır ve işaretsiz 8-bit tamsayılarla temsil edilir.
+
+Veri Aralıkları: Belirli bir değer aralığı içindeki sayılar işaretsiz olarak temsil edilebilir. Örneğin, 0 ile 100 arasındaki sayıları temsil etmek için işaretsiz bir veri tipi kullanılabilir.
+
+
