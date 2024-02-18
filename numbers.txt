@@ -5,3 +5,6 @@
 - Eger deger "" icinde atanmissa Kotlin tip cikarimini String olarak yapar.
   '' icinde ise Char
   Eger sayi atamasi yapilmissa deger byte deger araligi icnde de olsa Int tip cikarimi yapar.  Ama verilen deger Long deger araligindaysa Long set edilir.
+
+3. Float değişken oluştururken F ve f harfleri varken, Long değişken oluştururken neden küçük l harfi yoktur?
+- Cunku bazi fontlarda 1 ve l birbirine cok benzer. IDE bunu ayirt edemez.
