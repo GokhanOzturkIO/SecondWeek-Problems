@@ -297,5 +297,9 @@ Sonuç 2 dir ve true döner.her iki taraf da Int türünde olduğu için sonuç 
 48-"val x = 5L / 2 println(x == 2L)" gibi bir işlemin sonucu ve tipi nedir? Neden böyle olduğunu açıklayın.
 Sonucu 2 dir. True döner . Kotlin otomatik olarak işlemi geniş türle gerçekleştirir. İki tarafın türleri arasında genişleme yapılır ve sonuç Long türünde olur.
 ***********************************************************
+49-"val x = 5 / 2.toDouble() println(x == 2.5)" gibi bir işlemin sonucu ve tipi nedir? Neden böyle olduğunu açıklayın.
+Sonuc 2.5 dir ve true dönecektir.toDouble() fonksiyonu çağrısı ile bu değer ondalık türe dönüştürülür.
+***********************************************************
+
 
 
