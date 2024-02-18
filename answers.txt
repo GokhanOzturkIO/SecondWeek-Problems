@@ -34,3 +34,6 @@ Nullable bir değişken, bellekte ilave bir boşluk ayırır. Null değer alamay
 
 11.Nullable bir değişkenin bir değere sahip olması ile null olması arasında bellek yönetimi açısından nasıl bir fark vardır? Null değer almış bir değişken bellekte yer kaplamaz diyebilir miyiz?
 -Null değer alan bir değişkenin hala bellekte bir alanı kaplar. Ancak, bu alanın içeriği null olduğu için bir değeri göstermez. Null değer alan bir değişken, değer atanmış bir değişkene göre daha az yer kaplar. Null değer almış bir bellekte yer kaplamaz diyemeyiz dolayısıyla.
+
+12.Nullable bir değişkenle çalışırken hangi operatörleri kullanırız? Bu operatörlerin kullanım farkları nelerdir? Hangisini ne zaman kullanmak daha anlamlıdır?
+-Nullable bir değişkenle çalışırken !!. ve ?. operatörlerini kullanırız. !!. operatörü değişkenin null olamayacağının garantisini vereceğimiz zaman kullanmalıyız. ?. operatörü de değişken null değilse çalışsın istediğimiz zaman kullanmalıyız. Kodun önemli bir yerinde yani eğer bir hata verdiğinde uygulama crash yicekse !! operatörünü, daha az önemli yerlerde ?. kullanmak daha faydalıdır.
