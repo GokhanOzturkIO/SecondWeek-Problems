@@ -5,7 +5,6 @@ KONU: Temel Türler & Null Güvenliği
 val tipindeki bir değişkene yalnızca 1 defa değer atanabilir edilebilir ancak daha sonra yeni adeğerler atanamaz.
 var tipinde ise istediğimiz kadar değişiklik yapabiliriz.
 val -> value, var -> variable kelimelerinden gelir.
-
 ------------------------------------------------------------
 
 #2 Bir var değişkeni val gibi davranmasını nasıl sağlayabiliriz val kelimesini kullanmadan? Bunu neden yapmak isteriz? Örnek bir senaryo verin.
@@ -23,7 +22,6 @@ class Visibility {
 
 Bu yöntemi kullanmamızdaki amaç değişkene dışarıdan nesne yardımıyla direkt olarak erişilip değişiklik yapılmamasını istememiz olabilir. Daha kontrollü bir kod yazmış oluruz.
 Aynı zamanda gerektiğinde nesne üzerinden gerekli metodlar ile değişkende değişiklik yapılmasına da izin verilmiş olur.
-
 ------------------------------------------------------------
 
 #3 "Değişmez" (Immutable) ve "Salt Okunur" (ReadOnly) kavramlarını açıklayın. val değişkenler neden aslında "değişmez" değil de "salt okunur" olarak açıklanmalıdır?
@@ -31,7 +29,6 @@ Aynı zamanda gerektiğinde nesne üzerinden gerekli metodlar ile değişkende d
 Immutable durumunda bir nesne oluşturulurken (declaration aşamasında) atama yapılır ve sonra bir daha yeni atama yapılamaz. Bu durum değişmez olarak tanımlanabilir. örnek -> const val --> must be initialized
 Read-Only durumunda nesne herhangi bir değer almadan oluşturulup (declaration esnasında) daha sonraki aşamalarda yalnızca 1 defa değer ataması yapılabilir.
 val değişkenler declaration aşamasında iki durumla da kullanılabiliyor. Hem oluştururken değer atayabiliyoruz hem de oluşturduktan sonra değer atayabiliyoruz. Bu yüzden de val değişkenlerin read-only olarak açıklanması daha doğrudur.
-
 ------------------------------------------------------------
 
 #4 "Tip Çıkarımı" (Type inference) kavramını açıklayın. Hangi durumlarda tip belirtmek kesin olarak gereklidir?
@@ -41,13 +38,11 @@ Kotlin bunu arka planda uygun bir veri türüyle eşleştirecektir.
 
 Nullable durumlarda kesinlikle tip belirtmemiz lazım.
 Normal koşullarda bir tamsayı deklare ettiğimizde Kotlin Int sınırları içerisindeyse bunu otomatik olarak Int olarak tanımlar. Eğer biz bunu 'en baştan' Short ya da Long olarak tanımlamak istiyorsak tipini belirtmemiz lazım.
-
 ------------------------------------------------------------
 
 #5 Kotlin'de tüm değişkenlerin sınıf olarak bulunması, "ilkel tip" (primitive type) olmadıkları anlamına gelir mi? Arka planda neler oluyor?
 
 Bu konu hakkında Medium üzerinde yayınladığım yazıma göz atabilirsiniz. --> https://madenyasin.medium.com/kotlinde-pirimitive-de%C4%9Fi%C5%9Fkenler-abf1933c0941
-
 ------------------------------------------------------------
 
 #6 "Tip Güvenliği" (Type Safety) kavramını açıklayın.
@@ -60,7 +55,6 @@ Aşağıdaki örneklerde hatalı veri türünde atama işlemleri yapılmıştır
 1) var myInt: Int = "myString"      --> Type mismatch: inferred type is String but Int was expected
 2) var myChar: Char = "myCharArray" --> Type mismatch: inferred type is String but Char was expected
 3) var myString: String = 15        --> The integer literal does not conform to the expected type String
-
 ------------------------------------------------------------
 
 #7 Bir değişkeni nullable yapmak için ne yapmalıyız?
@@ -68,7 +62,6 @@ Aşağıdaki örneklerde hatalı veri türünde atama işlemleri yapılmıştır
 Kotlin'de değişkeni deklare ederken değişkenin veri türünü belirtip sonuna '?' karakteri eklenmelidir.
 
 sample code --> var myNullableVariable: String? = null
-
 ------------------------------------------------------------
 
 #8 "Null Güvenliği" (Null Safety) kavramını açıklayın.
@@ -86,13 +79,10 @@ var nullable: Int? = null   // çalışır
 var nonNullable: Int = 15 -> nonNullable.plus(10)    // çalışır
 var nullable: Int? = null -> nullable?!.plus(10)     // hata vermeden çalışır > null çıktısı verir
 var nullable: Int? = null -> nullable!!.plus(10)     // NullPointerException
-
 ------------------------------------------------------------
 
 #9 Bir değişkene null değer atanır ve tip belirtilmezse Kotlin bu değişkeni nasıl yorumlar?
-
 var myVar = null --> değişkenin Nothing? tipindedir.
-
 ------------------------------------------------------------
 
 #10 İlkel bir değişkenin nullable olması ile null değer alamaması arasında bellek yönetimi açısından nasıl farklar vardır?
@@ -100,7 +90,6 @@ var myVar = null --> değişkenin Nothing? tipindedir.
 Kotlin'de primitive türdeki bir değişken Nullable olarak deklare edilirse o değişken artık primitive değildir. Referans tipte bir değişkendir.
 Referans tipte olduğu için değişken 'Stack' alanında, değeri 'Heap' alanında bulunur.
 Primitive değişken null değer almıyorsa zaten nonNullable'dır ve primitive olmaya devam eder. Bu durumda da değişken de 'Stack' alanında tutulur. Değer de 'Stack' alanında tutulur. 
-
 ------------------------------------------------------------
 
 #11 Nullable bir değişkenin bir değere sahip olması ile null olması arasında bellek yönetimi açısından nasıl bir fark vardır? Null değer almış bir değişken bellekte yer kaplamaz diyebilir miyiz?
@@ -114,7 +103,6 @@ var number2: Int? = null
 Stack   --> number1,    number2
                 
 Heap    --> value1(15)
-
 ------------------------------------------------------------
 
 #12 Nullable bir değişkenle çalışırken hangi operatörleri kullanırız? Bu operatörlerin kullanım farkları nelerdir? Hangisini ne zaman kullanmak daha anlamlıdır?
@@ -127,7 +115,6 @@ Heap    --> value1(15)
 
 ?. çalışmasa da olur dediğimiz durumlarda kullanılabilir.
 !!. ne olursa olsun çalışması gereken ancak çalışmazsa dahi NullPointerException hatasını alıp uygulamayı çökertme riskine değecek durumlarda kullanılabilir.
-
 ------------------------------------------------------------
 
 Sayılar
@@ -140,7 +127,6 @@ Long, Int, Short, Byte --> tam sayılar için.
 Uygulamada kullanılacak sayıların maksimum ve minimum değerlerini içerecek bir veri tipini seçmemiz mantıklıdır.
 Eğer bu sınırların dışına çıkılırsa kod blokları hatalı sonuç verir.
 Tabii ki yüksek veri aralığı daha fazla bellek kullanımı ister. Bunun için de ne kazanıp ne kaybettiğimize odaklanıp doğru seçimi yapabiliriz.
-
 ------------------------------------------------------------
 
 #2 Eğer bir değişkene tip belirtimi yapılmaz ve bir değer atanırsa, Kotlin tip çıkarımını nasıl yapar?
@@ -152,12 +138,13 @@ Int maksimum sınırından büyük değer atanırsa otomatik olarak Long olur.
 tek tırnaklar arasında tek karakter varsa -> Char
 .f -> Float
 sonunda f yazmadan ondalıklı sayı yazılırsa -> Double
-
 ------------------------------------------------------------
+
 #3 Float değişken oluştururken F ve f harfleri varken, Long değişken oluştururken neden küçük l harfi yoktur?
 
 Çünkü küçük 'l' harfi bazı fontlarda '1' gibi gözüktüğünden kod okunaklığını bozabilir. Bu yüzden Long tanımlarken büyük 'L' kullanılır.
 ------------------------------------------------------------
+
 #4 Tek duyarlıklı (Single precision) ve Çift duyarlıklı (Double precision) kavramlarını açıklayın.
 
 Single Precision -> 32 Bits --> Sign(1 Bit) - Exponent(8 Bits) - Mantissa(23 Bits)
@@ -181,7 +168,6 @@ düşük hassasiyet        yüksek hassasiyet (bilimsel hesaplamalar)
 
 Programlama dillerinde  genel olarak '.' işareti kullanılır. Ancak farklı ülkelerde farklı ayraç kullanım işaretleri olabildiğinden dolayı diğer işaretleri de dikkate alarak sonuca işlemler uygulanmalıdır.
 ------------------------------------------------------------
-
 #6 Double ve Float değişkenler ondalık kısımda kaç basamağa kadar işlem yaparlar? Bu sınırın üzerinde gelen ondalık bilgileri için nasıl davranırlar? Hangi durumlar için Float ve hangi durumlar için Double kullanılmalıdır?
 
 Float   --> 6,7 basamak 
@@ -201,4 +187,16 @@ Virgülden sonrası için 6 basamaktan fazlası bizim için önemsizse Float kul
 val binaryNum   = 0b${binaryValue}
 val hexaNum     = 0x${hexadecimalValue} 
 val decimalNum  = ${decimalValue}  
+------------------------------------------------------------
+
+#8 Sekizlik (Octal) değişkenler Java'da nasıl tanımlanır? Kotlin'de Sekizlik değişken tanımlanabilir mi?
+
+// Octal declaration starts with 0 and possible chars are [0-7] 
+int octal = 0757;
+
+Kotlin'de Octal değişkenler dpğrudan desteklenmemektedir. // Octal literals are not supported in Kotlin. (docs)
+Integer sınıfının parseInt() metodunu kullanarak 8'lik sistemde ve string olarak tanımlanmış değeri decimal değere çevirebiliriz.
+
+val myOctalNumber = "112"
+println(Integer.parseInt(myOctalNumber, 8)) // çıktı 74
 ------------------------------------------------------------
