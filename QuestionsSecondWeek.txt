@@ -1,10 +1,18 @@
 Soru 1: "val" ile "var" arasındaki fark nedir ? 
-Cevap: Kotlin dilinde değişken tiplerimiz bir class'dan referans alır ve Java dilindeki gibi primitive tip değildir bu durumun avantaj ve dezavantajları vardır
-avantajları Class özelliklerini kullanabiliyor olmamız iken dezavantajı ise daha fazla performans kaybıdır. "val" ve "var" ifadeleri değişken tanımlaması yaparken
-sonrasında durumunda değişim olup olmayacağını belirlemek için kullanıyoruz eğer değişebilir bir durumda ise var değişemez bir durumda ise val ifadesi
-kullanımı uygundur ancak dikkat edilmesi gereken bazı hususlar vardır değişemez demek immutable anlamında değildir yani sabit anlamına gelmez read 
-only val ifadesi için daha uygundur. Read-only değeri okunabilen ancak set edilemeyen değişkenlerdir bu değeri değişmez anlamına gelmemektedir değişkenin
-get fonksiyonu ile değişim yapabildiğimiz için read only diyoruz. Performans konusuna değinecek olursak aralarında bir fark yoktur diyebiliriz ancak 
+
+Cevap: "val" ve "var" ifadeleri değişken tanımlaması yaparken sonrasında durumunda değişim olup olmayacağını belirlemek için kullanıyoruz eğer değişebilir
+bir durumda ise var değişemez bir durumda ise val ifadesi kullanımı uygundur Performans konusuna değinecek olursak aralarında bir fark yoktur diyebiliriz ancak 
 mutli-thread işlemlerinde val kullanımı diğer işlemlerde de var kullanımı yapabiliriz. Akademik olarak var kullanımı val kullanımına göre daha performanslıdır
 ancak kullanıcı işlemlerinde etkisi hissedilecek bir fark değildir bu.
+
+Soru 2 : Bir var değişkenin val gibi davranmasını nasıl sağlayabiliriz val kelimesini kullanmadan? Bunu neden yapmak isteriz ? Örnek bir senaryo verin ? 
+
+Cevap: Bu işlemi değişkenin set fonksiyonunu private yaparak val gibi davranmasını sağlayabiliriz. Ek bir bilgi olarak bu işlemi class içerisinde yapmaya 
+dikkat etmeliyiz çünkü fonksiyon içerindeki değişkenlere sadece o fonksiyon içerisinde erişebiliriz. Bu özelliği değişkenimize class dışından erişim sağlanmasını
+istemediğimiz durumlarda kullanabiliriz. Direkt val olarak neden tanımlamıyoruz ? Çünkü farklı fonksiyonlarda name değişkenini kullanmak isteyebiliriz
+Kısaca set() fonksiyonuna private visibility modifier eklersek değiştirilemez bir değişken elde etmiş oluruz. Dışarıdan okunabilir sınıf içerisinden değiştirilebilir
+bir değişken yaratmış oluyoruz
+
+var name = "Barış" 
+    private set 	
 
