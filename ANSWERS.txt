@@ -162,8 +162,37 @@ Kotlin'de Byte veri türü, -128 ile 127 arasındaki değerleri temsil etmek iç
 
 Ancak, bu aralık dışındaki Byte değerleri için farklı referanslar oluşturulur ve === operatörü false döner. Bu davranış, -128..127 aralığındaki sık kullanılan küçük byte değerlerinde bellek kullanımını ve performansı optimize etmeye yardımcı olur. Bu nedenle, Byte değerlerini === operatörü ile karşılaştırırken bu aralığın önemi vardır, çünkü bu aralık içindeki değerler için beklenmedik sonuçlar alabilirsiniz.
 
+13- Sayısal değişkenlerde hangi matematiksel operatörler kullanılabilir?
 
+-Toplama (+): İki değeri toplar.
+Çıkarma (-): İki değeri çıkarır.
+Çarpma (*): İki değeri çarpar.
+Bölme (/): Bir değeri diğerine böler. Sonuç ondalık olabilir, bu nedenle bölme işlemi genellikle Double veya Float tipiyle sonuçlanır.
+Mod (%): Bir sayının diğerine bölümünden kalanı verir.
+Artırma (+=): Değişkenin değerini belirtilen miktar kadar artırır.
+Azaltma (-=): Değişkenin değerini belirtilen miktar kadar azaltır.
 
+14- Sayısal değişkenlerde hangi karşılaştırma operatörleri kullanılabilir?
 
+-Eşitlik (==): İki değerin birbirine eşit olup olmadığını kontrol eder.
+Eşit Değil (!=): İki değerin birbirine eşit olmadığını kontrol eder.
+Daha Büyük (>): Bir değerin diğerinden büyük olup olmadığını kontrol eder.
+Daha Küçük (<): Bir değerin diğerinden küçük olup olmadığını kontrol eder.
+Büyük Eşit (>=): Bir değerin diğerinden büyük veya eşit olup olmadığını kontrol eder.
+Küçük Eşit (<=): Bir değerin diğerinden küçük veya eşit olup olmadığını kontrol eder.
+
+15-Bit düzeyinde operatörler (Bitwise operators) nelerdir? Ne amaçla kullanılır? Kotlin'de bunları nasıl kullanabilirsiniz?
+
+-Bitwise AND (&): İki sayının her iki biti de 1 ise sonuç 1 olur, aksi halde sonuç 0 olur.
+
+Bitwise OR (|): İki sayının en az bir biti 1 ise sonuç 1 olur, aksi halde sonuç 0 olur.
+
+Bitwise XOR (^): İki sayının bitleri farklı ise sonuç 1 olur, aynı ise sonuç 0 olur.
+
+Bitwise NOT (inv()): Bir sayının bitlerini tersine çevirir, yani 0'ları 1 yapar, 1'leri 0 yapar.
+
+Left Shift (<<): Bir sayının bitlerini belirtilen miktarda sola kaydırır. Boş alanlar sıfır ile doldurulur.
+
+Right Shift (>>): Bir sayının bitlerini belirtilen miktarda sağa kaydırır. Boş alanlar işaret biti ile doldurulur.
 
 
