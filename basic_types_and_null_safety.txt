@@ -23,6 +23,9 @@
 8. "Null Güvenliği" (Null Safety) kavramını açıklayın.
 - Bir degerin null olabilme durumuna karsi programin onlem almasidir. NullPointerException gibi hatalarin onune gecilir. Null degerlerle de guvenli calisma durumudur.
 
+9. Bir değişkene null değer atanır ve tip belirtilmezse Kotlin bu değişkeni nasıl yorumlar?
+- Kotlin Nothing? denilen bir tip atamasi yapar.
+
 
 
 
