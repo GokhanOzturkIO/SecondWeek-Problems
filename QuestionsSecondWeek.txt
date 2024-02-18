@@ -99,6 +99,12 @@ Smart cast: Kotlin, bir değişkenin veri tipini kontrol ettikten sonra, o deği
 x değişkeni Any tipinde tanımlandığı için, herhangi bir veri tipi alabilir. Ancak, x değişkeninin Int tipinde olduğunu kontrol etmek isterseniz, if (x is Int) yazabilirsiniz.
 Bu durumda, x değişkeni Int tipine otomatik olarak dönüştürülür ve Int tipine özgü işlemleri yapabilirsiniz. Örneğin, x + 5 gibi.
 
+Soru: Bir değişkeni nullable yapmak için ne yapmalıyız?
+
+Cevap: Bir değişkeni nullable yapmak için veri tipinin sonuna ? işareti eklemeliyiz. Örneğin var name: String? = null gibi. Bu şekilde değişkenin null değeri alabileceğini belirtiyoruz
+Null değeri alamayan bir değişken ise normal şekilde tanımlanır. var name = String = "Barış". Nullable NullPointerException çalışma hatasından bizi kurtarmak için etkili bir yoldur.
+
+
 
  
 
