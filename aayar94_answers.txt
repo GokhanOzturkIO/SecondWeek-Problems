@@ -101,3 +101,33 @@
      Ancak, bazı durumlarda bu yuvarlama hatası gözlenebilir. Kotlin'de bu yuvarlama davranışını değiştirmek pek mümkün değildir, çünkü bu standartla ilgilidir ve dilin kendisiyle ilgili değildir.
       Ancak, özel yuvarlama stratejileri uygulanabilir. Örneğin, belirli bir hassasiyetle yuvarlama yapmak için özel bir yuvarlama fonksiyonu oluşturabilirsiniz.
       Bu fonksiyonlar, belirli bir hassasiyetteki yuvarlama için kullanılabilir ve kullanıcı ihtiyaçlarına uyacak şekilde özelleştirilebilir.
+
+##UnSigned Numbers
+-İşaretsiz" (Unsigned) değişkenler ne demektir? İşaretli olanlarla aralarındaki fark nedir?
+    İşaretsiz sayılar sadece pozitif sayıları kapsayan veri tipleridir.Işaretli sayılar pozitif ve negatif sayıları value alabilirken unsigned sayılar sadece pozitif sayıları alabilir.
+-İşaretsiz" değişkenler nasıl bir sınıf yapısında tutulurlar? Bu neden önemlidir?
+   İşaretli ile aynı sınıf tipinde tutulur. Performansa olumlu yönde etki yapar. Beklenmedik sonuçları engeler, Örneğin yaşın bir şekilde negatif çıkması.
+-İşaretsiz" değişkenlerin harf gösterimi nasıldır?
+    U harfi ile birlikte gösterilir; Örnegin
+        val unsignedInt: UInt = 42u
+        val unsignedByte: UByte = 10u
+        val unsignedShort: UShort = 500u
+        val unsignedLong: ULong = 12345678901234567890u
+-val a1 = 42u ve val a2 = 0xFFFF_FFFF_FFFFu" değişkenlerin tipleri ne olur? Neden?
+    a1 bir unsigned integer iken a2 bir unsigned long tipindedir. A1 in türü belirtilmediğinden ide Int kabul eder ve u harfi ile bunun bir unsigned tipli olduğu çıkarımını yapar.
+    a2 için de aynı şartlar geçerli iken verilen value ya göre Long tipi çıkarımını yapar.
+-İşaretsiz" "Long" harf gösterimi nasıl yapılır?
+        val unsignedLong: ULong = 12345678901234567890u
+-İşaretsiz" değişkenlerin kullanım amaçları nelerdir?
+    Negatif olamayacak durumlar için veri güvenliği sağlamak, örneğin yaş, boy uzunluğu, kilo
+    daha büyük bir Int aralığı sağlamak , negatif olamayacak değerler pozitif alanda aralığı genişletmek için kullanılır.
+-İşaretsiz" değişkenlerle yapılan matematiksel işlemlerde, özellikle büyük sayılarla çalışırken karşılaşılabilecek taşma (overflow) ve taşma olmaması (underflow) durumları için Kotlin nasıl bir yönetim sağlar?
+    Kotlin işaretsiz tamsayılarla yapılan işlemlerde taşma durumlarını kontrol eder ve bu durumlarda güvenlik önlemleri alır.
+     Ancak, uygulama tasarımında büyük sayılarla çalışılıyorsa, taşma riskini azaltmak için uygun dönüşümler ve veri türleri dikkate alınmalıdır.
+"İşaretsiz" değişkenlerin sınırlamaları nelerdir?
+    UByte -> 0-255
+    UShort ->  0-65_535
+    UInt -> 0-4_294_967_295
+    ULong- > 0- 18_446_744_073_709_551_615
+-İşaretsiz" değişken türleri (UInt, ULong vs.) kullanırken, Java API'leri ile uyumluluk konusunda ne gibi sorunlar olabilir? Bunları çözmek için neler yapabilirsiniz?
+    işaretli tam sayıya dönüştürme işlemi kullanılabilir.
