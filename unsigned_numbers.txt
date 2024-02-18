@@ -4,4 +4,8 @@
 2. "İşaretsiz" değişkenler nasıl bir sınıf yapısında tutulurlar? Bu neden önemlidir?
 - İşaretsiz degiskenler UByte, UShort, UInt, ULong gibi sinif yapisinda tutulurlar. Bu sadece pozitif degerlerl calismak gerektiginde kullanilabilir.
 
+3. "İşaretsiz" değişkenlerin harf gösterimi nasıldır?
+- Byte, Int, Short, Long degiskenlerin onune U koyarak Unsigned degisken tanimalyabilriz. Deger atamasi yaparken de sayidan sonra u harfi koyulur.
+
+
 
