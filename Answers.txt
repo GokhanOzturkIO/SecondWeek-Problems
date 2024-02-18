@@ -134,7 +134,7 @@ alabileceği maksimum ve minumum değer aralıklarını belirtmek için kullanı
 
 Kotlin Type Inference (Tip çıkarımı) destekleyen bir dil olduğu için tanımlanan değişken için eşitliğin sağına bakarak uygun tipte atama yapar. Ancak kotlinde sayısal
 değerler daha küçük aralıklarda olsalar dahi Int tipinde tanımlanır. Bunun sebebi her değişken tanımlamasında aralık kontrolü yapılmasındansa en sık tercih edilen 
-aralık tipinin verilmesinin daha az maliyet oluşturuyor olmasıdır.
+aralık tipinin verilmesinin daha az maliyet oluşturuyor olmasıdır. Int değer aralığının dışında bir değer için Long, virgüllü değerler içinse Double ataması yapılmaktadır.
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -143,4 +143,13 @@ aralık tipinin verilmesinin daha az maliyet oluşturuyor olmasıdır.
 Bunun temel sebebi okunabilirliktir, bazı fontlarda 1 ve l harfi birbirine fazla benzediği için developer kod okuması yaparken karışıklılığı önlemek adına bu kural konmuştur.
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+4- Tek duyarlıklı (Single precision) ve Çift duyarlıklı (Double precision) kavramlarını açıklayın.
+
+Tek duyarlıklı (Single precision) ve Çift duyarlıklı (Double precision), bilgisayarlarda kullanılan kayan nokta (floating point) sayıları için kullanılan veri tipleridir.
+Tek duyarlıklı sayılar 2^32 - 1 kadar sayı değerini temsil eder, Çift duyarlıklı  2^64 - 1 kadar sayı değerini temsil eder. Genellik Tek duyarlıklı sayıların aralığı 
+yeterli olduğu için bu veri tipi tercih edilir ancak çift duyarlıklı format, daha büyük bir sayı aralığına ve daha yüksek hassasiyete sahip olduğu için bilimsel hesaplamalar, mühendislik uygulamaları ve finansal hesaplamalar gibi alanlarda daha yaygın olarak tercih edilir.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 
