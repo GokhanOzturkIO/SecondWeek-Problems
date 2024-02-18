@@ -195,4 +195,24 @@ Left Shift (<<): Bir sayının bitlerini belirtilen miktarda sola kaydırır. Bo
 
 Right Shift (>>): Bir sayının bitlerini belirtilen miktarda sağa kaydırır. Boş alanlar işaret biti ile doldurulur.
 
+16-Kotlin'de büyük sayılarla çalışırken hangi ek türlerden yararlanılır ve bu türlerin sınırları nelerdir?
+
+-BigInteger: Bu sınıf, çok büyük tamsayıları temsil etmek için kullanılır. BigInteger sınıfı, Java'nın BigInteger sınıfına benzerdir ve işlemler yapmak için kullanılır. BigInteger sınıfı, Int, Long ve diğer tamsayı veri tiplerinden daha büyük sayıları temsil edebilir.
+
+BigDecimal: Bu sınıf, çok büyük ve hassas ondalık sayıları temsil etmek için kullanılır. Ondalık kısmın önemli olduğu finansal veya hesaplamada hassasiyet gerektiren diğer alanlarda kullanılır. BigDecimal sınıfı, Float ve Double gibi kayan noktalı sayılardan daha hassas sonuçlar sağlayabilir.
+
+17-Double ve Float değişkenler kullanılırken "yuvarlama" davranışı nasıldır? Bu nasıl değiştirilebilir?
+
+-Double ve Float veri tiplerinde sayılar ondalık olarak temsil edilirken, bazen tam olarak temsil edilemeyen sayılarla karşılaşılabilir. Bu durumda, sayılar bellekte daha az veya daha fazla hassasiyetle temsil edilirler. Yuvarlama davranışı, sayının daha az hassas bir şekilde temsil edilmesi durumunda hangi yönde yuvarlanacağını belirler.
+
+Varsayılan olarak, Kotlin'de yuvarlama davranışı şu şekildedir:
+
+Sayılar normal matematik kuralına göre yuvarlanır: 0.5 ve üstü ise yukarı, 0.5'ten küçükse aşağı yuvarlanır.
+Yuvarlama işlemi, sayıya en yakın tam sayıya yapılır.
+Örneğin:val x = 3.5
+val y = x.toInt() // y değeri 4 olur
+Yuvarlama davranışını değiştirmek için, genellikle sayının tam kısmını alarak yapabilirsiniz. Örneğin, aşağı yuvarlamak için floor() fonksiyonunu kullanabilirsiniz:val x = 3.5
+val y = Math.floor(x) // y değeri 3 olur
+
+
 
