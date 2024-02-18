@@ -30,6 +30,9 @@ crash olur.
 6. "val b: Byte = 1 ile val i: Int = b.toInt() ve son olarak print(b == i) gibi bir kod yazıldığında çıktı ne olur? Neden böyle bir çıktı aldığınızı açıklayın.
 - Burada Int turune bir explicit conversion yapilmis fakat yine print ile karsilastirma yapilamiyor cunku b value 'su hala Byte tipinde. 
 
+7. Sayısal değişkenlerde açık dönüşüm (Explicit Type Conversion) yaparken hangi fonksiyonları kullanabilirsiniz?
+- toByte(), toShourt , toInt(), toDouble(), toLong(), toFloat gibi fonksiyonlari kullanabiliriz.
+
 
 
 
