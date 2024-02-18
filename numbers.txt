@@ -47,10 +47,15 @@ val octNumber = "155".toInt(8)  => Stringte tanimlayip onu da toInt ile 8'ilk ya
 - +, -, *, /, % gibi matematiksel operatorler kullabilabilir. 
 
 14. Sayısal değişkenlerde hangi karşılaştırma operatörleri kullanılabilir?
-- == , != , <, > , <=, >= gibi karsilastirma operatorşeri kullanilabilir.
+- == , != , <, > , <=, >= gibi karsilastirma operatorleri kullanilabilir.
 
 15. Bit düzeyinde operatörler (Bitwise operators) nelerdir? Ne amaçla kullanılır? Kotlin'de bunları nasıl kullanabilirsiniz?
-- and , or, xor gibi operatorlerdir. Bunlar veri sıkştırma, sifreleme, ag prokolleri islemleri icin kullanilabilir.
+- and , or, xor gibi operatorlerdir. Bunlar veri sıkştırma, sifreleme, ag prokolleri islemleri icin kullanilabilir. kotlinde: var result = 12 and 5 seklinde kullanilabilir.
+
+16. Kotlin'de büyük sayılarla çalışırken hangi ek türlerden yararlanılır ve bu türlerin sınırları nelerdir?
+- BigInteger ve BigDecimal kullanılabilir. 
+
+17. 
 
 
 
