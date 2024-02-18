@@ -300,6 +300,10 @@ Sonucu 2 dir. True döner . Kotlin otomatik olarak işlemi geniş türle gerçek
 49-"val x = 5 / 2.toDouble() println(x == 2.5)" gibi bir işlemin sonucu ve tipi nedir? Neden böyle olduğunu açıklayın.
 Sonuc 2.5 dir ve true dönecektir.toDouble() fonksiyonu çağrısı ile bu değer ondalık türe dönüştürülür.
 ***********************************************************
-
-
+50-Kotlin'de tür dönüşümü yapılırken, dönüşümün başarısız olması durumunda TypeCastException nasıl ele alınır ve bu tür hataların önüne geçmek için hangi önlemler alınabilir?
+try-catch Bloğu
+as? Güvenli Dönüşüm (Safe Cast)
+Tür Kontrolü ve Smart Cast
+***********************************************************
+***********************************************************
 
