@@ -277,4 +277,6 @@ java:
 byte smaller = 42;
 int larger = smaller;
 ***********************************************************
-
+43-"val b: Byte = 1 ile val i: Int = b ve son olarak print(b == i) gibi bir kod yazıldığında çıktı ne olur? Neden böyle bir çıktı aldığınızı açıklayın.
+Type mistmatch olur çünkü kotlinde implicit conversion yoktur.
+***********************************************************
