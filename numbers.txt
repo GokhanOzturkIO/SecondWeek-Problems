@@ -16,8 +16,8 @@
 5. Double ve Float değişkenlerle çalışırken ondalık ayıracı olarak hangi işaretler kullanılır? Bu ayıraçların kullanımında nelere dikkat etmek gerekir?
 - , ve . kullanilabilir. Normalde . kullanilir ama türkce duyarlikli uygulama yaziyorsak gelen datalarin , ile gelme ihtimaline gore ,'e duyarli olup olmadigini kontrol etmeliyiz.
 
-
-
+6. Double ve Float değişkenler ondalık kısımda kaç basamağa kadar işlem yaparlar? Bu sınırın üzerinde gelen ondalık bilgileri için nasıl davranırlar? Hangi durumlar için Float ve hangi durumlar için Double kullanılmalıdır?
+- Float degiskenler ondalik kisminda 6 basamaga kadar, double degiskenler ondalik kisminda 15 basamaga kadar islem yapabilirler. Bu sinirlarin uzerinde gelen degerler icin son basamaktan sonraki en buyuk sayiya yuvarlama yapar ve ondalik sinirlarina kadar yazar. Hassas olcumler icin double, daha az hassas olcumler icin float kullanilmalidir.
 
 
 
