@@ -193,3 +193,12 @@ Double için Kotlin virglden sonra 15. basamaktan sonrasını direkt olarak kır
 Çok hassas veriler ile uğraşıyorsak Double kullanmamız gerekir. Float'a göre daha fazla alan kaplar ancak doğru işlem yapabilmek için gerekirse bu maliyeti göze almalıyız. Örn: Kripto doviz işlemlerinde, bilimsel hesaplamalarda
 Virgülden sonrası için 6 basamaktan fazlası bizim için önemsizse Float kullanmak mantıklıdır.
 ------------------------------------------------------------
+
+#7 Ondalık(Decimal), Onaltılık (Hexadecimal) ve İkilik (Binary) değişkenleri Kotlin'de nasıl tanımlayabilirsiniz?
+
+// placeholder -> ${variableName}
+
+val binaryNum   = 0b${binaryValue}
+val hexaNum     = 0x${hexadecimalValue} 
+val decimalNum  = ${decimalValue}  
+------------------------------------------------------------
