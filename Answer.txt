@@ -44,10 +44,13 @@
   1.10 Nothing tipinde tutar.Nothing sınıfı "Asla var olmayan bir değeri" temsil etmek için kulllanılır.
 ----------------------------------------------------------------------------------------------------------------------*/
 /*----------------------------------------------------------------------------------------------------------------------
-  1.11 primitive tipler kotlinde null değer alamazlar.Null olarak bildirilen değişkenler referans tipdir.
+1.11 Null olmayan değerler her zaman bir değer içerir, veri türünün boyutu kadar bellekte yer kaplar ve değerini ve 
+referansını stack bellekte saklar; ancak null değerler için bellekte, değerine karşılık gelen bir referans olması 
+durumunda heap bellekte bir yer ayrılır.	
 ----------------------------------------------------------------------------------------------------------------------*/
-  1.12 İlkel veri tipleri referansı ve değeri stackde tutulur.null değerler ise referans tipi olduğu için degeri heapde 
-	referansı stackde tutulur.	
+1.12 İlkel veri tipleri, değerlerini ve referanslarını stack bellekte tutar, ancak null değerler referans tipleridir, 
+dolayısıyla değerleri heap bellekte saklanırken, referansları stack bellekte tutulur; stack bellekte null değerlerin 
+referansları için yer ayrılır.	
 /*----------------------------------------------------------------------------------------------------------------------
   1.13  !! -> Null olmasa karışma ben ona değer vericem anlamına gelir.Değer verilmesse NP fırlatır.
         ?. ->  Null gelebilir null gelirse de NP fırlatmaz.
@@ -55,3 +58,7 @@
  kullanıcının para miktarının hatalı şekilde görüntülenmesine ve hatta ciddi sorunlara yol açabilir. Bu tür kritik yerlerde,
  kullanıcı bakiyesinin null olmadığını doğrulamak için !! operatörünü kullanmak daha güvenli bir çözüm olabilir
 ----------------------------------------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------------------
+ 					2. Sayılar
+----------------------------------------------------------------------------------------------------------------------*/
+
