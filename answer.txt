@@ -205,3 +205,23 @@ UInt veri tipinden daha büyük bir veri tipine ihtiyaç duyar. Kotlin'de, 64 bi
 Kotlin'da işaretsiz bir Long tamsayı tipini temsil etmek için, değerin sonuna 'u' veya 'U' harfi eklemeniz gerekir. Bu, değerin işaretsiz olduğunu belirtir. İşte bir örnek:
 val unsignedLong: ULong = 123u
 ***********************************************************
+35-"İşaretsiz" değişkenlerin kullanım amaçları nelerdir?
+Yüzey Alanı ve Bellek Tasarrufu:
+İşaretsiz değişkenler, aynı bit sayısındaki işaretli değişkenlere kıyasla daha geniş bir pozitif değer aralığına sahiptir. Bu, daha büyük sayıları temsil edebilir ve sınırlı bellek alanında daha fazla değer saklayabilir.
+
+Bit Düzeyinde Operasyonlar:
+İşaretsiz değişkenler, sayısal operasyonların bit düzeyinde daha doğrudan ve etkili bir şekilde gerçekleştirilebilmesini sağlar.
+Özellikle düşük seviyeli programlamada veya donanım kontrolü gerektiren uygulamalarda kullanışlıdır.
+
+Veri Türü Uyumlu İletişim:
+Bazı donanım veya iletişim protokollerinde belirli veri türleri kullanılması gerekebilir. İşaretsiz değişkenler, bu tür durumlar için uygun olabilir.
+
+Bit Manipülasyonu ve Maskeler:
+İşaretsiz değişkenler, bit manipülasyonu ve maskeleme işlemlerinde yaygın olarak kullanılır. Belirli bitlere erişim ve bu bitlerle yapılan operasyonlar genellikle işaretsiz tamsayılar üzerinde gerçekleştirilir.
+
+Matematiksel Hesaplamalar:
+Belirli bir aralıktaki pozitif sayılar üzerinde matematiksel hesaplamalar yapmak istendiğinde işaretsiz değişkenler kullanılabilir.
+
+Veri İntegritesi ve Güvenlik:
+İşaretsiz değişkenler, belirli bir aralıkta sınırlı kalması nedeniyle veri bütünlüğünü ve güvenliği artırabilir. Negatif değerlerin olmaması, belirli senaryolarda hatalı durumları önleyebilir.
+***********************************************************
