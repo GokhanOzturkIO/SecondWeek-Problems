@@ -380,3 +380,15 @@ toDouble(): Değeri Double türüne dönüştürür.
 9-"val result = Int.MAX_VALUE + Int.MAX_VALUE" gibi bir işlemin sonucunda "result" değişkeninin tipi ve değeri ne olur? Neden böyle olduğunu açıklayın.
 
 -Int olur fakat overflow gerçekleşir.
+
+10-"val x = 5 / 2 println(x == 2)" gibi bir işlemin sonucu ve tipi nedir? Neden böyle olduğunu açıklayın.
+
+-true döner çünkü 5/2 integer türünde 2 ye eşittir.
+
+11-"val x = 5L / 2 println(x == 2L)" gibi bir işlemin sonucu ve tipi nedir? Neden böyle olduğunu açıklayın
+
+-yine true döner 10. soruyla aynı şekilde
+
+12-"val x = 5 / 2.toDouble() println(x == 2.5)" gibi bir işlemin sonucu ve tipi nedir? Neden böyle olduğunu açıklayın.
+
+-true döner, bu sefer double sayesinde ondalıklı sayılar okunabilir.
