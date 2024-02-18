@@ -195,3 +195,9 @@ Daha İyi Anlaşılabilirlik
 32-"İşaretsiz" değişkenlerin harf gösterimi nasıldır?
 u U
 ***********************************************************
+33-"val a1 = 42u ve val a2 = 0xFFFF_FFFF_FFFFu" değişkenlerin tipleri ne olur? Neden?
+a1: UInt
+Bu sayısal sabit, u son eki ile tanımlandığı için unsigned (işaretsiz) bir tam sayı olarak kabul edilir. Kotlin'de, u son eki UInt veri tipini temsil eder.
+a2: ULong
+UInt veri tipinden daha büyük bir veri tipine ihtiyaç duyar. Kotlin'de, 64 bitlik işaretsiz tam sayıları temsil etmek için ULong veri tipi kullanılır.
+***********************************************************
