@@ -192,3 +192,6 @@ Bellek Tasarrufu.
 Taşma ve Alt Taşma: İşaretsiz değişkenler, taşma ve alt taşma gibi hatalara karşı daha az hassastır.
 Daha İyi Anlaşılabilirlik
 ***********************************************************
+32-"İşaretsiz" değişkenlerin harf gösterimi nasıldır?
+u U
+***********************************************************
