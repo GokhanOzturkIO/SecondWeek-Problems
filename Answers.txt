@@ -130,3 +130,17 @@ alabileceği maksimum ve minumum değer aralıklarını belirtmek için kullanı
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+2- Eğer bir değişkene tip belirtimi yapılmaz ve bir değer atanırsa, Kotlin tip çıkarımını nasıl yapar?
+
+Kotlin Type Inference (Tip çıkarımı) destekleyen bir dil olduğu için tanımlanan değişken için eşitliğin sağına bakarak uygun tipte atama yapar. Ancak kotlinde sayısal
+değerler daha küçük aralıklarda olsalar dahi Int tipinde tanımlanır. Bunun sebebi her değişken tanımlamasında aralık kontrolü yapılmasındansa en sık tercih edilen 
+aralık tipinin verilmesinin daha az maliyet oluşturuyor olmasıdır.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+3- Float değişken oluştururken `F` ve `f` harfleri varken, Long değişken oluştururken neden küçük `l` harfi yoktur?
+
+Bunun temel sebebi okunabilirliktir, bazı fontlarda 1 ve l harfi birbirine fazla benzediği için developer kod okuması yaparken karışıklılığı önlemek adına bu kural konmuştur.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
