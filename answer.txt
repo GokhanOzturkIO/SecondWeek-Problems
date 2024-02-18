@@ -179,3 +179,12 @@ Math.rint(): Yakına yuvarlama için kullanılır.
 Math.floor(): Aşağı yuvarlama için kullanılır.
 Math.ceil(): Yukarı yuvarlama için kullanılır.
 ***********************************************************
+#İşaretsiz Sayılar#
+***********************************************************
+***********************************************************
+30-"İşaretsiz" (Unsigned) değişkenler ne demektir? İşaretli olanlarla aralarındaki fark nedir?
+İşaretsiz değişkenler, yalnızca pozitif değerler depolayabilen değişkenlerdir.
+-İşaretsiz değişkenler sadece pozitif ve sıfır değerleri saklayabilir, negatif değerleri temsil edemez. İşaretli değişkenler ise pozitif, negatif ve sıfır değerlerini saklayabilir.
+***********************************************************
+
+
