@@ -341,3 +341,8 @@ Ancak, Kotlin'de örtük tip genişletme (implicit widening conversions) otomati
 10.val x = 5 / 2 println(x == 2)" gibi bir işlemin sonucu ve tipi nedir? Neden böyle olduğunu açıklayın.
 
 -true döner çünkü iki int sayı bölünüyor sonuçta in olur.
+
+
+11.val x = 5L / 2 println(x == 2L)" gibi bir işlemin sonucu ve tipi nedir? Neden böyle olduğunu açıklayın.
+
+-true döner çünkü büyük tür long dur sayı bölünüyor sonuçta long olur.
