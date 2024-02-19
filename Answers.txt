@@ -225,3 +225,30 @@ Kotlin bu underscore'ları yorumlarken sayının içerisinde hiç yokmuş gibi d
 
 Java'dan miras alınmış olabilir. // https://docs.oracle.com/javase/7/docs/technotes/guides/language/underscores-literals.html
 ------------------------------------------------------------
+
+#11 == ile neyi karşılaştırırız? === ile neyi karşılaştırırız?
+
+== ile iki değişkenin ya da iki nesnenin nesnenin değerinin/içeriğinin kontrolü yapılır.
+=== ile iki değişkenin ya da nesnenin bellekte aynı adrese işaret edip etmediğini karşılaştırır. Yani direkt olarak nesneler tamamen aynı mı değil mi kontrolü yapılır.
+
+=== bazı sayısal değerlerde farklı davranır. Byte değerleri arasında ve Byte değerleri dışında farklı davranır.
+Bunun sebebi JVM'in Byte değerler arasındaki sayılara uyguladığı bellek optimizasyonundan kaynaklanır.
+
+Aynı değere sahip Nullable değişkenler farklı nesneleri gösterebilir.
+Byte değerleri arasında aynı nesneyi işaret ederken Byte dışında farklı nesnelere işaret ederler.
+örnek kod bloğu: 
+
+    val a: Int = 100
+    val boxedA: Int? = a
+    val anotherBoxedA: Int? = a
+
+    println(boxedA == anotherBoxedA)    // true
+    println(boxedA === anotherBoxedA)   // true
+
+    val b: Int = 10000
+    val boxedB: Int? = b
+    val anotherBoxedB: Int? = b
+
+    println(boxedB == anotherBoxedB)    // true
+    println(boxedB === anotherBoxedB)   // false
+------------------------------------------------------------
