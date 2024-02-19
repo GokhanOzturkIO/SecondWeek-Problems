@@ -302,3 +302,10 @@ Shift Left	                        a << bits	    a shl bits
 Shift Right	                        a >> bits	    a shr bits
 Unsigned Shift Right	            a >>> bits	    a ushr bits
 ------------------------------------------------------------
+
+#16 Kotlin'de büyük sayılarla çalışırken hangi ek türlerden yararlanılır ve bu türlerin sınırları nelerdir?
+
+Unsigned Long veya Unsigned Int kullanılabilir. -> Belirli bir sınırı vardır.
+String olarak veri saklayabiliriz. -> Sistemin ve OS'un izin verdiği ölçüde sınırları belirlenir.
+BigInteger sınıfını kullanabiliriz. -> Sistemin ve OS'un izin verdiği ölçüde sınırları belirlenir.
+------------------------------------------------------------
