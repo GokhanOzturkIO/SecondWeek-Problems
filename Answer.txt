@@ -89,6 +89,10 @@ Yukarıdaki değişken ise null değerini almıştır. O zaman price stack alan�
 
 ===========================
 
+12-) Nullable bir değişkenle çalışırken hangi operatörleri kullanırız? Bu operatörlerin kullanım farkları nelerdir? Hangisini ne zaman kullanmak daha anlamlıdır?
 
+? ve !! operatörleri kullanılır. ? operatörü eğer null değilse çalıştır anlamına gelmektedir. !! operatörü ise değerin kesinlikle null olamayacağını ifade eder. Fakat bu operatörü kullandığımızda ve değer null şeklinde gelirse NullExceptionPointer hatası ile karşı karşıya kalabiliriz.
+Eğer ki değerin null gelmemesi önemliyse ve değerin null mı yoksa değil mi olması durumunu kontrol etmek istiyorsak ? operatörünü kullanmak daha anlamlıdır. 
+Eğer ki değerin null gelmeyeceğine emin isek !! operatörünü kullanmak daha anlamlı olacaktır.
 
-
+===========================
