@@ -299,6 +299,29 @@ temsil etmek için 1000000 yerine 1_000_000 ifadesini kullanabiliriz. Ancak baz�
 
 -Alt çizgi, sayısal değerlerin arasında birden fazla kullanılabilir. Örneğin, 1_000_000 veya 1_00_00_00 geçerlidir.
 
+Soru 23: == ile neyi karşılaştırırız? === ile neyi karşılaştırırız?
+
+Cevap: Kotlin'de bu iki ifade farklı amaçlar için kullanılmaktadır (==) operatörü iki değerin eşit olup olmadığını kontrol eder (===) operatörü ise iki değişkenin aynı nesneyi referans edip 
+etmediğini kontrol eder. Örneğin:
+
+val s1 = "Hello"
+val s2 = "Hello"
+
+Bu değişkenleri == operatörü ile karşılaştırdığımızda, true değerini alırız. Çünkü s1 ve s2 değişkenleri, aynı değere sahiptir.
+
+println(s1 == s2) // true
+
+Ancak, bu değişkenleri === operatörü ile karşılaştırdığımızda, false değerini alırız. Çünkü s1 ve s2 değişkenleri, farklı nesneleri referans eder. Kotlin’de String değişkenleri, her
+tanımlandığında yeni bir nesne olarak oluşturulur.
+
+println(s1 === s2) // false
+
+Nesne referansı ve değer eşitliği kontrollerinde kullanabiliriz bu iki operatörü.
+
+ 
+
+
+
 
 
 
