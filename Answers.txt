@@ -380,6 +380,20 @@ Overflow durumlarında doğru çıktıyı üretmez.
 #9 "İşaretsiz" değişken türleri (UInt, ULong vs.) kullanırken, Java API'leri ile uyumluluk konusunda ne gibi sorunlar olabilir? Bunları çözmek için neler yapabilirsiniz?
 
 Java'da pirimitive sayısal veri türlerinin unsigned hali yoktur. Unsigned desteğini Integer sınıfını kullanarak kullanabiliriz.
+Java'daki pirimitive değişenlerle kotlindeki unsigned değişkenler herhangi bir matematiksel işleme tabi tutulursa javanın unsigned olmama durumundan dolayı negatif bir sonuç çıkabilir. Bu da kotlin unsigned için overflow oluşturabilir.
+------------------------------------------------------------
 
-Java'daki pirimitive değişenlerle kotlindeki unsigned değişkenler herhangi bir matematiksel işleme tabii tutulursa javanın unsigned olmama durumundan dolayı negatif bir sonuç çıkabilir. Bu da kotlin unsigned için overflow oluşturabilir.
+Tür Dönüşümü
+
+#1 is ve !is operatörlerinin kullanımını açıklayın.
+
+Veri türünü kontrol etmek için kullanılır. Sonuçta boolean değer döner.
+
+if (number1 is Int) {
+    print(number1)
+}
+
+if (number1 !is Int) {
+    print("number1 is not Int")
+}
 ------------------------------------------------------------
