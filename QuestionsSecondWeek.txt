@@ -411,6 +411,44 @@ ve Float türlerine göre daha düşüktür. Örneğin, aşağıdaki kodda çok 
 
 val bigDec = BigDecimal("3.14159265358979323846264338327950288419716939937510")
 
+Soru 29: Double ve Float değişkenler kullanılırken "yuvarlama" davranışı nasıldır? Bu nasıl değiştirilebilir?
+
+Cevap: Double ve Float değişkenler, ondalık sayıları temsil etmek için kullanılır. Ancak, bu değişkenler, ondalık sayıları tam olarak depolayamazlar. Bunun nedeni, ondalık sayıların sonsuz
+olabilmesi, ancak Double ve Float değişkenlerin sınırlı bir bellek alanı kaplamasıdır. Bu yüzden, Double ve Float değişkenler, ondalık sayıları yaklaşık olarak depolarlar. Bu da, yuvarlama
+hatası olarak adlandırılan küçük bir sapmaya neden olur.
+
+Örneğin, aşağıdaki kodda 0.1 ve 0.2 değerlerini Double değişkenler olarak tanımladık:
+
+val x = 0.1 // Double
+val y = 0.2 // Double
+
+
+Bu değişkenleri topladığımızda, sonucun 0.3 olmasını bekleriz. Ancak, Double değişkenlerin yuvarlama hatası nedeniyle, sonuç 0.3’ten biraz farklı çıkar:
+
+println(x + y) // 0.30000000000000004
+
+Yuvarlama hatasını önlemek veya azaltmak için, Kotlin’de bazı yöntemler kullanılabilir. Örneğin:
+
+Ondalık sayıları Double veya Float yerine BigDecimal türünde tanımlayabilirsiniz. BigDecimal türü, ondalık sayıları daha kesin bir şekilde depolar ve yuvarlama hatasını ortadan kaldırır.
+Örneğin:
+
+val x = BigDecimal("0.1") // BigDecimal
+val y = BigDecimal("0.2") // BigDecimal
+println(x + y) // 0.3
+
+Ondalık sayıları Double veya Float olarak tanımladıysanız, toPrecision() fonksiyonunu kullanarak, sonucun istediğiniz hassasiyette olmasını sağlayabilirsiniz. Örneğin:
+
+
+val x = 0.1 // Double
+val y = 0.2 // Double
+println((x + y).toPrecision(1)) // 0.3
+
+**toPrecision, Kotlin dilinde Number sınıfının bir fonksiyonudur. Bu fonksiyon, bir sayıyı belirtilen hassasiyette bir String olarak döndürür. Örneğin, 5.123456.toPrecision(3) sonucu "5.12"
+olur. Bu fonksiyon, Double ve Float gibi ondalık sayıları temsil eden değişkenlerde yuvarlama hatasını önlemek veya azaltmak için kullanılabilir
+
+Bu yöntemler dışında kendi extension fonksiyonlarımızı da kullanabiliriz.
+
+
 
 
 
