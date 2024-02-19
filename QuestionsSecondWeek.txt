@@ -286,6 +286,22 @@ Soru 21:"Geleneksel Notasyon" (Conventional Notation) gösterimi nasıl yapılı
 
 Cevap: Değişkenlerin en basit ve bilinen hali ile tanımlama işlemidir. Int için a = 172, Double için a = 24.2 şeklinde.
 
+Soru 22 : Sayısal değişkenlerde alt çizgi (underscore) nasıl kullanılır? Kotlin bunu nasıl yorumlar?
+
+Cevap: Underscore yani alt çizgi (_) sayıları daha okunabilir hale getirmek için kullanılır ve sayısal değeri etkilemez. Sadece görsel gruplandırma işlemi için kullanılır. Örneğin bir milyonu 
+temsil etmek için 1000000 yerine 1_000_000 ifadesini kullanabiliriz. Ancak bazı hususlarda dikkatli olmalıyız:
+
+-Alt çizgi, sayının başında veya sonunda kullanılamaz. Örneğin, _100 veya 100_ geçersizdir.
+
+-Alt çizgi, sayısal değerler arasında kullanılmalıdır. Örneğin, 1_.000 veya 1._000 geçersizdir.
+
+-Alt çizgi, sayısal değerlerin yanında kullanılamaz. Örneğin, 1_.0f veya 1.0_f geçersizdir.
+
+-Alt çizgi, sayısal değerlerin arasında birden fazla kullanılabilir. Örneğin, 1_000_000 veya 1_00_00_00 geçerlidir.
+
+
+
+
 
 
 
