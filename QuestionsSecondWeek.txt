@@ -256,6 +256,26 @@ Soru 17: Double ve Float değişkenlerle çalışırken ondalık ayıracı olara
 Cevap: Ondalık ayıracı olarak nokta (.) işareti kullanılır. Örneğin, 3.14 veya 2.7182818284 gibi. Bu ayıraçların kullanımında dikkat edilmelidir (,) virgül ile karıştırılabilmesi olağandır ve 
 sorun yaşayabiliriz.
 
+Soru 18: Double ve Float değişkenler ondalık kısımda kaç basamağa kadar işlem yaparlar? Bu sınırın üzerinde gelen ondalık bilgileri için nasıl davranırlar? Hangi durumlar için Float ve
+hangi durumlar için Double kullanılmalıdır?
+
+Cevap: Double değişkenler 15 basamak, Float değişkenler ise 6-7 basamak işlem yaparlar. Kullanım için yapacağımız tercih bizim hassasiyet ve işlem aralığımıza bağlı olarak değişir. Örneğin
+
+
+   var number1 = 0.1F
+    var number2 = 0.2F
+    
+    println(number1 + number2)
+
+Bu işlemin sonucu 0.3000000001 olarak çıkarken (ide'de böyle görünmeyecek çünkü yuvarlama yapılıyor Float aralığına) Double ile işlem yapılırsa 0.3 çıkar. Yüksek duyarlılıklı matematiksel
+işlemlerde Double tipini kullanmak daha iyidir. Çünkü hassas işlemlerde Float tipinin yanılgı payı daha yüksektir.
+    
+    
+
+
+
+
+
 
 
 
