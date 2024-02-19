@@ -445,3 +445,16 @@ val l = 1L + 3 // Long + Int => Long --> 4
 Long daha büyük bir veri tipi olduğundan Kotlin Long'a herhangi bir ekleme yapıldığında hata oluşmaması için yeni değişkeni Long olarak belirler.
 Yani Sonuçta oluşacak olan veri türünü büyük veri türü belirler.
 ------------------------------------------------------------
+
+#9 "val result = Int.MAX_VALUE + Int.MAX_VALUE" gibi bir işlemin sonucunda "result" değişkeninin tipi ve değeri ne olur? Neden böyle olduğunu açıklayın.
+
+Aşağıdaki kod satırlarından da anlayacağınız üzere veri türlerinin maksimum ve minimum değerleri o veri türünde değer döndürür.
+
+println(Int.MAX_VALUE::class)   //int (Kotlin reflection is not available)
+println(Long.MAX_VALUE::class)  // long (Kotlin reflection is not available)
+
+bu yüzden kod satırımızı kotlin bu şekilde yorumlar.
+
+val result = Int.MAX_VALUE + Int.MAX_VALUE // Int + Int = ? --> Int
+İki aynı türdeki değişkenin maks değeri toplanıp yeni değişkene atanırsa yeni değişken yine aynı tipte olur. Sonuç da o veri türünün sınırının dışında olacağından dolayı hatalı sonuç oluşur.
+------------------------------------------------------------
