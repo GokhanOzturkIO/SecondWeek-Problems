@@ -258,3 +258,14 @@ Java API'leriyle etkileşimde işaretsiz tamsayıları kullanırken, dikkatli t�
 -Uyumsuz Metotları Özelleştirme:
 Eğer bir Java API'si işaretsiz tamsayıları kullanmıyorsa veya uyumsuzluklar varsa, uyumsuz metotları Kotlin tarafında özelleştirerek çözebilirsiniz. Bu, işaretsiz tamsayıları işaretli tamsayılara veya tam tersine dönüştüren yardımcı metotlar içerebilir.
 
+
+
+Tür Dönüşümü
+
+
+
+1.is ve !is operatörlerinin kullanımını açıklayın.
+
+-is ve !is operatörleri, Kotlin'de tip kontrolü sağlayan operatörlerdir. Bu operatörler, bir nesnenin belirli bir türle uyumlu olup olmadığını kontrol etmek için kullanılır.
+-is operatörü, bir nesnenin belirli bir türle uyumlu olup olmadığını kontrol eder.Eğer nesne, belirtilen türle uyumlu ise true döner; aksi halde false döner.
+-!is operatörü, bir nesnenin belirli bir türle uyumlu olmadığını kontrol eder.Eğer nesne, belirtilen türle uyumlu değilse true döner; aksi halde false döner.
