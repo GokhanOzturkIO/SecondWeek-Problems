@@ -364,3 +364,9 @@ ULong
 
 Signed olan türlerine göre aynı alanı kaplar. Yalnızca pozitif tamsayıları gösterdiğinden dolayı eğer pozitif sayılarla işlemler yaparsak daha yüksek sayılarla işlem yapabiliriz.
 ------------------------------------------------------------
+
+#7 "İşaretsiz" değişkenlerle yapılan matematiksel işlemlerde, özellikle büyük sayılarla çalışırken karşılaşılabilecek taşma (overflow) ve taşma olmaması (underflow) durumları için Kotlin nasıl bir yönetim sağlar?
+
+UBayt sınırlarını aşınca IDE type safety özelliğini kullanarak error veriyor.
+UInt sınırlarını aşınca herhamgi bir hata vermiyor ancak print fonksiyonu boş çıktı üretiyor.
+------------------------------------------------------------
