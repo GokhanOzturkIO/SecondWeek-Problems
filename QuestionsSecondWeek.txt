@@ -208,6 +208,24 @@ Rounding, bir değişkenin değerinin o değişkenin hassasiyetinden daha fazla 
 val f: Float = 0.34444f // rounding hatası
 println(f) // 0.34444001
 
+Soru 14: Eğer bir değişkene tip belirtimi yapılmaz ve bir değer atanırsa, Kotlin tip çıkarımını nasıl yapar?
+
+Cevap: Böyle bir durumunda değişkenin tipine ve değer aralığına bağlı olarak Int değer aralığından büyük olanlar için Long, Int ve daha küçük değer aralığında olanlar için ise Int kullanılır
+
+var x: Int = 10 // Int tipinde
+var y: Long = 1000000000000 // Long tipinde
+var z: Double = 3.14 // Double tipinde
+var w: Float = 3.14f // Float tipinde
+var n: Number = 1_000_000 // Number tipinde
+
+var x = 10 + 20 // Int olarak tanımlanır, çünkü sonuç Int aralığına sığar
+var y = 1000000000 * 2 // Long olarak tanımlanır, çünkü sonuç Int aralığından büyük
+
+
+
+
+
+
 
 
 
