@@ -116,7 +116,7 @@ Sayılar
 
 9."Geleneksel Notasyon" (Conventional Notation) gösterimi nasıl yapılır?
 
--Daha sonra cevaplanacak
+- Kotlin, floating-point sayılar için conventional notation'ı destekler. Örneğin Double'lar "123.5, 123.5e10" şeklinde tanımlanır. Float'lar da 'f' veya 'F' ile tag'lenir. Bir sayı değişkeni tanımlarken '_' kullanabilmek de geleneksel notasyona bir örnektir. Bu notasyonlar Java'dan gelir.
 
 
 10.Sayısal değişkenlerde alt çizgi (underscore) nasıl kullanılır? Kotlin bunu nasıl yorumlar?
