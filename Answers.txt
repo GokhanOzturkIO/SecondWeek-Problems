@@ -269,3 +269,20 @@ Tür Dönüşümü
 -is ve !is operatörleri, Kotlin'de tip kontrolü sağlayan operatörlerdir. Bu operatörler, bir nesnenin belirli bir türle uyumlu olup olmadığını kontrol etmek için kullanılır.
 -is operatörü, bir nesnenin belirli bir türle uyumlu olup olmadığını kontrol eder.Eğer nesne, belirtilen türle uyumlu ise true döner; aksi halde false döner.
 -!is operatörü, bir nesnenin belirli bir türle uyumlu olmadığını kontrol eder.Eğer nesne, belirtilen türle uyumlu değilse true döner; aksi halde false döner.
+
+
+
+2."Akıllı Dönüşüm" (Smart Cast) ne demektir? Farklı kod örnekleri ile açıklayın. Bu özelliğin sınırlamaları nelerdir?
+
+-"Akıllı Dönüşüm" (Smart Cast), Kotlin'de tip kontrol operatörleri (is ve !is) ile birlikte kullanıldığında, belirli koşullar altında değişkenin tipini otomatik olarak dönüştürme yeteneğidir. Bu özellik, kodu daha temiz hale getirmeye ve kullanımı daha kolay hale getirmeye yardımcı olur.
+
+fun printLength(value: Any) {
+    if (value is String) {
+        // Akıllı dönüşüm: Kotlin burada value'yi String olarak ele alır.
+        println("Uzunluk: ${value.length}")
+    } else {
+        println("Bu bir String değil.")
+    }
+}
+Yukarıdaki örnekte, value değişkeni bir Any türündedir, ancak is operatörü ile kontrol edildikten sonra Kotlin bu blok içinde value'yi String olarak akıllıca ele alır.
+
