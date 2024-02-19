@@ -79,4 +79,8 @@ Soru 9:Bir değişkene null değer atanır ve tip belirtilmezse Kotlin bu deği�
 
 Cevap: Eğer bir değişkenin tipini belirtmeden null değer atıyorsanız, kotlin bunun tipini bilmediği için nullable bir "Nothing" şeklinde yorumlar.Nothing genellikle bir işlevin hiçbir şey döndürmediğini belirtmek için kullanılır.
 -------------------------------------------------------------------------------------
+Soru 10: İlkel bir değişkenin nullable olması ile null değer alamaması arasında bellek yönetimi açısından nasıl farklar vardır?
+
+Cevap: Bellek yönetimi açısından, nullable değişkenlerin bellekte null durumunu temsil etmek için ek bir durum gerektirmesi ve null kontrolü yapma ihtiyacının olması, nullable olmayan değişkenlere göre ekstra bir maliyeti ifade edebilir. 
+---------------------------------------------------------------------------------------
 
