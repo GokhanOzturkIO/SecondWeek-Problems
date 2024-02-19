@@ -318,7 +318,23 @@ println(s1 === s2) // false
 
 Nesne referansı ve değer eşitliği kontrollerinde kullanabiliriz bu iki operatörü.
 
- 
+Soru: === operatörü ile karşılaştırma yaparken Byte değer aralığı neden önemlidir? Kotlin bu aralığa göre neden özel bir davranış sergiler?
+
+Cevap: === operatörü, Kotlin’de iki değişkenin aynı nesneyi referans edip etmediğini kontrol eder. Byte değer aralığı, -128 ile 127 arasındaki sayıları kapsar. Kotlin, bu aralıktaki Byte
+değerlerini, bellek tasarrufu sağlamak için aynı nesneye referans eden Int değerleri olarak tutar. Bu nedenle, === operatörü ile karşılaştırma yaparken, bu aralıktaki Byte değerleri her zaman
+true döndürür. Örneğin:
+
+val b1: Byte = 100
+val b2: Byte = 100
+println(b1 === b2) // true
+
+Ancak, bu aralığın dışındaki Byte değerleri, farklı nesneler olarak tutulur ve === operatörü ile karşılaştırma yaparken false döndürür. Örneğin:
+
+val b1: Byte = -129
+val b2: Byte = -129
+println(b1 === b2) // false
+
+
 
 
 
