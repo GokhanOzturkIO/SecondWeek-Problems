@@ -6,14 +6,14 @@ fun main() {
 
 fun calculate() {
     print("birinci sayıyı girin: ")
-    val firstNumber: String? = readlnOrNull()
+    val firstNumber = readlnOrNull()
 
 
     print("yapmak istediğiniz matematiksel işlemin karakterini girin: ")
     val operator = readlnOrNull()
 
     print("ikinci sayıyı girin: ")
-    val secondNumber:String? = readlnOrNull()
+    val secondNumber = readlnOrNull()
 
     firstNumber?.toDoubleOrNull()?.let { n1 ->
         secondNumber?.toDoubleOrNull()?.let { n2 ->
