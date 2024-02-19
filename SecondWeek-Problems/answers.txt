@@ -315,4 +315,24 @@ Soru 17:Double ve Float değişkenler kullanılırken "yuvarlama" davranışı n
 
 Cevap:Kotlin dilinde, Double ve Float türlerindeki varsayılan yuvarlama davranışı, Java'nın IEEE 754 standartlarını takip eder. Ancak, özel bir yuvarlama işlemi yapmak istiyorsanız, BigDecimal sınıfını kullanabilirsiniz.setScale fonksiyonu, yuvarlama modu ve ondalık basamak sayısını belirlemenizi sağlar.
 -------------------------------------------------------------------------------------
+İşaretsiz Sayılar
 
+Soru 1:"İşaretsiz" (Unsigned) değişkenler ne demektir? İşaretli olanlarla aralarındaki fark nedir?
+
+Cevap:"Işaretsiz" (unsigned) ve "işaretli" (signed) değişkenler, sayıları temsil etme ve işleme yöntemleri arasındaki temel bir farkı ifade eder.
+
+İşaretsiz Değişkenler:
+
+İşaretsiz değişkenler, sayıları temsil ederken işaret bitine sahip değillerdir. Yani, bu tür bir değişkenin en yüksek anlamlı biti (MSB - Most Significant Bit) işaret biti değil, değerin bir parçasıdır.
+
+Örneğin, 8 bitlik bir işaretsiz byte türünde, 0 ile 255 arasındaki sayıları temsil edebilirsiniz.
+İşaretsiz değişkenlerin, sadece pozitif sayıları temsil etme yeteneği vardır.
+
+İşaretli Değişkenler:
+
+İşaretli değişkenler, sayıları temsil ederken bir işaret bitine sahiptirler. İşaret biti, sayının pozitif veya negatif olduğunu belirtir.
+
+Örneğin, 8 bitlik bir işaretli byte türünde, -128 ile 127 arasındaki sayıları temsil edebilirsiniz. Burada, en yüksek anlamlı bit (MSB), işaret bitidir.
+İşaretli değişkenler, hem pozitif hem de negatif sayıları temsil edebilir.
+
+--------------------------------------------------------------------------------------
