@@ -116,4 +116,8 @@ Number sınıfı miras alan değişkenler;
 -Float 
 Bunların değer aralkları bellekte kapladıkları yer ve hızları bakımından önemlidir.
 ------------------------------------------------------------------------------------
+Soru 2:Eğer bir değişkene tip belirtimi yapılmaz ve bir değer atanırsa, Kotlin tip çıkarımını nasıl yapar?
+
+Cevap:Bir değişkene tip belirtimi yapılmaz ve bir değer atanırsa kotlin tip çıkarımını verilen değere göre yapar.
+-------------------------------------------------------------------------------------
 
