@@ -311,3 +311,8 @@ BigDecimal, ondalık sayıları (float veya double) temsil etmek için kullanıl
 
 Bu sınıflar, genellikle finansal hesaplamalarda veya büyük sayılarla yapılan matematiksel işlemlerde kullanılır. Ancak, bu sınıfların kullanımı, basit sayı türlerinden daha fazla bellek kullanımına ve performans maliyetine neden olabilir. Bu nedenle, ihtiyaca bağlı olarak doğru veri türünü seçmek önem arz eder.
 -----------------------------------------------------------------------------------
+Soru 17:Double ve Float değişkenler kullanılırken "yuvarlama" davranışı nasıldır? Bu nasıl değiştirilebilir?
+
+Cevap:Kotlin dilinde, Double ve Float türlerindeki varsayılan yuvarlama davranışı, Java'nın IEEE 754 standartlarını takip eder. Ancak, özel bir yuvarlama işlemi yapmak istiyorsanız, BigDecimal sınıfını kullanabilirsiniz.setScale fonksiyonu, yuvarlama modu ve ondalık basamak sayısını belirlemenizi sağlar.
+-------------------------------------------------------------------------------------
+
