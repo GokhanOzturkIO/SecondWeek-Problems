@@ -376,3 +376,10 @@ UInt sınırlarını aşınca herhangi bir hata vermiyor ancak print fonksiyonu 
 Yalnzıca pozitif sayılarla çalışılabilir.
 Overflow durumlarında doğru çıktıyı üretmez.
 ------------------------------------------------------------
+
+#9 "İşaretsiz" değişken türleri (UInt, ULong vs.) kullanırken, Java API'leri ile uyumluluk konusunda ne gibi sorunlar olabilir? Bunları çözmek için neler yapabilirsiniz?
+
+Java'da pirimitive sayısal veri türlerinin unsigned hali yoktur. Unsigned desteğini Integer sınıfını kullanarak kullanabiliriz.
+
+Java'daki pirimitive değişenlerle kotlindeki unsigned değişkenler herhangi bir matematiksel işleme tabii tutulursa javanın unsigned olmama durumundan dolayı negatif bir sonuç çıkabilir. Bu da kotlin unsigned için overflow oluşturabilir.
+------------------------------------------------------------
