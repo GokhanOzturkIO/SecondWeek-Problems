@@ -75,3 +75,8 @@ Null güvenliğinin temel özellikleri:
 -Elvis Operatörü (Elvis Operator)
 -!! Operatörü (Not-Null Assertion Operator)
 ---------------------------------------------------------------------------------------
+Soru 9:Bir değişkene null değer atanır ve tip belirtilmezse Kotlin bu değişkeni nasıl yorumlar?
+
+Cevap: Eğer bir değişkenin tipini belirtmeden null değer atıyorsanız, kotlin bunun tipini bilmediği için nullable bir "Nothing" şeklinde yorumlar.Nothing genellikle bir işlevin hiçbir şey döndürmediğini belirtmek için kullanılır.
+-------------------------------------------------------------------------------------
+
