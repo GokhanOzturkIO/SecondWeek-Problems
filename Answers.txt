@@ -359,3 +359,8 @@ hexadecimal to decimal
 #5 "İşaretsiz" "Long" harf gösterimi nasıl yapılır?
 ULong
 ------------------------------------------------------------
+
+#6 "İşaretsiz" değişkenlerin kullanım amaçları nelerdir?
+
+Signed olan türlerine göre aynı alanı kaplar. Yalnızca pozitif tamsayıları gösterdiğinden dolayı eğer pozitif sayılarla işlemler yaparsak daha yüksek sayılarla işlem yapabiliriz.
+------------------------------------------------------------
