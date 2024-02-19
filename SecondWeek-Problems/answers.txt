@@ -220,3 +220,18 @@ Soru 11:== ile neyi karşılaştırırız? === ile neyi karşılaştırırız?
 Cevap: "==" operatörü değişkenlerin değerini karşılaştırır.
        "===" operatörü değişkenlerin referansını karşılaştırır.
 --------------------------------------------------------------------------------------
+Soru 12:=== operatörü ile karşılaştırma yaparken Byte değer aralığı neden önemlidir? Kotlin bu aralığa göre neden özel bir davranış sergiler?
+
+Cevap: Kotlin'deki === operatörü, referans eşitliğini kontrol eder. Yani, iki değişken aynı bellek konumunu gösteriyorsa, === operatörü true döner. Ancak, Byte tipi için bu durumda istisna bir durum oluşabilir.
+
+Kotlin'de Byte tipi, -128 ile 127 arasındaki değerler için özel bir davranışa sahiptir. Bu değer aralığına giren Byte değerleri için, aynı değere sahip iki Byte değişkeni aynı bellek konumunu paylaşır. Bu, küçük Byte değerlerinde bellek tasarrufu sağlamak için yapılmış bir özel optimizasyondur.
+
+örn:
+val a: Byte = 5
+val b: Byte = 5
+
+println(a === b)  
+
+true döner çünkü a ve b aynı bellek konumunu paylaşırlar.
+
+--------------------------------------------------------------------------------------
