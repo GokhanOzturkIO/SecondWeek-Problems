@@ -397,3 +397,9 @@ if (number1 !is Int) {
     print("number1 is not Int")
 }
 ------------------------------------------------------------
+
+#5 "val b: Byte = 1 ile val i: Int = b ve son olarak print(b == i) gibi bir kod yazıldığında çıktı ne olur? Neden böyle bir çıktı aldığınızı açıklayın.
+
+Type mismatch: inferred type is Byte but Int was expected --> Int değişkene Byte değer atarken hata aldık.
+Operator '==' cannot be applied to 'Byte' and 'Int' --> Int ve Byte'ı value karşılatrması yapamam diyor IDE.
+------------------------------------------------------------
