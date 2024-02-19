@@ -297,3 +297,17 @@ val result = a ushr n
 Bu operatörler genellikle düşük seviyeli programlama, şifreleme ve veri sıkıştırma gibi alanlarda kullanılır. Bit düzeyinde operatörlerle sayıların bireylerini (bitlerini) manipüle etmek, özel algoritmaların tasarımında ve performans iyileştirmelerinde önemli olabilir. Ancak, genelde günlük uygulama geliştirmelerinde nadiren kullanılırlar.
 
 --------------------------------------------------------------------------------------
+Soru 16: Kotlin'de büyük sayılarla çalışırken hangi ek türlerden yararlanılır ve bu türlerin sınırları nelerdir?
+
+Cevap:Kotlin, büyük sayılarla çalışmak için BigInteger ve BigDecimal gibi özel sınıflar sağlar. Bu sınıflar, standart veri türlerinin sınırlarının ötesinde sayıları temsil etmek için kullanılır.
+
+-BigInteger:
+
+BigInteger, tam sayıları (int) temsil etmek için kullanılır ve sınırsız büyüklükte sayıları destekler.Sınırları yoktur ve hafıza kullanımı büyük sayılar için dinamik olarak artar.
+
+-BigDecimal:
+
+BigDecimal, ondalık sayıları (float veya double) temsil etmek için kullanılır ve sınırsız hassasiyete sahiptir.Ondalık sayıları tam olarak temsil etmek için kullanılır ve kesirli sayıların kayan noktalı aritmetiği sınırlamalarını aşar.
+
+Bu sınıflar, genellikle finansal hesaplamalarda veya büyük sayılarla yapılan matematiksel işlemlerde kullanılır. Ancak, bu sınıfların kullanımı, basit sayı türlerinden daha fazla bellek kullanımına ve performans maliyetine neden olabilir. Bu nedenle, ihtiyaca bağlı olarak doğru veri türünü seçmek önem arz eder.
+-----------------------------------------------------------------------------------
