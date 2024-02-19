@@ -251,6 +251,12 @@ Eğer Float tipinde olmasını istiyorsak bunu açıkca belirtmemiz gerekmektedi
 val e = 2.7182818284 // Double
 val eFloat = 2.7182818284f // Float, gerçek değer 2.7182817
 
+Soru 17: Double ve Float değişkenlerle çalışırken ondalık ayıracı olarak hangi işaretler kullanılır? Bu ayıraçların kullanımında nelere dikkat etmek gerekir?
+
+Cevap: Ondalık ayıracı olarak nokta (.) işareti kullanılır. Örneğin, 3.14 veya 2.7182818284 gibi. Bu ayıraçların kullanımında dikkat edilmelidir (,) virgül ile karıştırılabilmesi olağandır ve 
+sorun yaşayabiliriz.
+
+
 
 
 
