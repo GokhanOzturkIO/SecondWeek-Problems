@@ -164,6 +164,56 @@ Not-null assertion operatörü (!!): Bir değişkenin kesinlikle null olmadığ�
 NullPointerException (NPE) fırlatır. Aksi halde, üyenin değerini döndürür. Bu operatörü, değişkenin null olmadığından kesinlikle emin olduğunuz ve NPE riskini göze aldığınız
 durumlarda kullanmak daha anlamlıdır.
 
+- - - - - - - - -
+Sayılar
+- - - - - - - - -
+
+Soru 13: Kaç farklı tipte "number" sınıfı miras alan "alt sınıf" (child class) vardır? Bunların değer aralıkları neden önemlidir?
+
+Cevap: Kotlin'de number sınıfı sayısal değerleri temsil eden soyut bir sınıftır. Bu sınıfın farklı alt sınıfları vardır. Bunlar Byte, Short, Int, Long, Float ve Double'dır. Bu alt sınıfların her biri için 
+kullanılır. Örneğin Byte 8 bit, Short 16 bit, Int 32 Bit, Long 64 bit boyutundadır. Bu alt sınıfların değer aralıkları önemlidir, çünkü sayısal işlemler sırasında taşma (overflow) veya yuvarlama
+(rounding) hataları oluşabilir. Taşma hatası, bir değişkenin değerinin, o değişkenin saklayabileceğinden daha büyük veya daha küçük olması durumunda ortaya çıkar. Yuvarlama hatası ise,
+bir değişkenin değerinin, o değişkenin hassasiyetinden daha fazla ondalık basamağa sahip olması durumunda ortaya çıkar. Bu hatalar, programın beklenmedik şekilde davranmasına veya
+yanlış sonuçlar üretmesine neden olabilir.
+
+Bu nedenle, sayısal verileri saklamak için uygun alt sınıfı seçmek önemlidir. Bu, hem veri kaybını önlemek hem de bellek kullanımını optimize etmek için gereklidir. Kotlin, sayısal verileri
+otomatik olarak dönüştürmez, bu yüzden farklı alt sınıflar arasında dönüşüm yapmak için belirli fonksiyonları kullanmak gerekir. Örneğin, bir Int değerini Double’a dönüştürmek için toDouble()
+fonksiyonunu kullanabilirsiniz.
+
+Sınıf	Boyut (bit)	Min değer	                            Max değer
+Byte	8	                -128	                                            127
+Short	16	                -32768	                                          32767
+Int	32	                -2,147,483,648	                     2,147,483,647
+Long	64	  -9,223,372,036,854,775,808 	    9,223,372,036,854,775,807
+Float	32	    -3.4028235E38	                                     3.4028235E38
+Double	64	 -1.7976931348623157E308	               1.7976931348623157E308
+
+
+// Number sınıfından türetilmiş bir alt sınıf olan Int sınıfını kullanıyoruz
+val x: Int = 10
+println(x) // 10
+
+// Int sınıfının bir özelliği olan toDouble() fonksiyonunu çağırarak, Int değerini Double değerine dönüştürüyoruz
+val y: Double = x.toDouble()
+println(y) // 10.0
+
+Ek olarak rounding ve overflow hatalarına değinmek istiyorum.
+Overflow, bir değişkenin değerinin, o değişkenin saklayabileceğinden daha büyük veya daha küçük olması durumunda çıkar.
+
+val b: Byte = 128 // overflow hatası
+println(b) // -128
+
+Rounding, bir değişkenin değerinin o değişkenin hassasiyetinden daha fazla ondalık basamağa sahip olması durumunda ortaya çıkarç
+
+val f: Float = 0.34444f // rounding hatası
+println(f) // 0.34444001
+
+
+
+
+
+
+
 
 
 
