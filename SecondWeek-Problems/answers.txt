@@ -159,3 +159,20 @@ Ondalık sayıları ifade ederken nokta (.) kullanılır.
 Binlik ayıraç olarak genellikle virgül (,) kullanılır.
 
 ---------------------------------------------------------------------------------------
+Soru 6:Double ve Float değişkenler ondalık kısımda kaç basamağa kadar işlem yaparlar? Bu sınırın üzerinde gelen ondalık bilgileri için nasıl davranırlar? Hangi durumlar için Float ve hangi durumlar için Double kullanılmalıdır?
+
+Cevap: 
+
+Float: Float veri türü, yaklaşık olarak 6-9 basamak ondalık sayı hassasiyetine sahiptir. 6-9 basamak ondalık sayıları tam olarak temsil eder. Ancak bu aralığın dışındaki değerler daha düşük hassasiyetle temsil edilir.
+Hassasiyet sayıların ondalık kısımlarının ne kadar doğru bir şekilde temsil edileceğini belirler.
+
+Double: Double veri türü, yaklaşık olarak 15-17 basamak ondalık sayı hassasiyetine sahiptir. 15-17 basamak ondalık sayıları tam olarak temsil eder. Yüksek hassasiyet sebebiyle genellikle daha yaygın kullanılır.
+
+Double ve Floatta bu sınırlar dışındaki değerler veri türünün temsil yeteneğinin ötesine geçtiği için "yuvarlama" veya "kırpma" gibi işlemlerle temsil etmeye çalışır.
+Buda veri kayıplarına neden olabilir. 
+
+Double ve Float'ın kullanım alanları ise şöyle ayrıştırılabilir;
+Float bellek kullanımını azaltmak istendiği durumlarda daha düşük hassasiyetin yeterli olduğu durumlarda. Double ise yüksek hassasiyet gerektiren matematiksel hesaplar veya finansal uygulamalar gibi durumlarda yani standart olarak daha yüksek hassasiyet beklenen durumlarda ve karmaşık matematiksel işlemlerde kullanılır.
+Double işlemleri Float'a göre daha hızlıdır ancak bellek kullanımı kritik bir öneme sahipse ve daha düşük hassasiyet yeterliyse float tercih edilebilir.
+
+-------------------------------------------------------------------------------------
