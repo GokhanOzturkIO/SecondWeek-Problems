@@ -281,3 +281,8 @@ Byte değerleri arasında aynı nesneyi işaret ederken Byte dışında farklı 
 
 +   -   *   /   %   ++  --  +(Unary Plus)   -(Unary Minus)  range operator
 ------------------------------------------------------------
+
+#14 Sayısal değişkenlerde hangi karşılaştırma operatörleri kullanılabilir?
+
+>   <   >=  <=  ==  !=
+------------------------------------------------------------
