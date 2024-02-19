@@ -318,3 +318,14 @@ round() - en yakın tam sayıya yuvarlar.
 ceil() - en yakın tam sayıya yukarı yuvarlar.
 floor() - en yakın tam sayıya aşağı yuvarlar.
 ------------------------------------------------------------
+
+İşaretsiz Sayılar
+
+#1 "İşaretsiz" (Unsigned) değişkenler ne demektir? İşaretli olanlarla aralarındaki fark nedir?
+
+Yalnızca 0 ve pozitif değerleri alabilen veri türüdür. Negatif sayılar için kullanılmaz
+Negatif sayılara ayıracağı bellek miktarını daha fazla pozitif sayı gösterebilmek için kullanır.
+
+A signed byte is a data type that can represent values from -128 to 127.
+An unsigned byte is a data type that can represent values from 0 to 255
+------------------------------------------------------------
