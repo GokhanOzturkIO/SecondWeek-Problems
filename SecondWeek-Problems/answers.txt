@@ -240,3 +240,14 @@ Soru 13: Sayısal değişkenlerde hangi matematiksel operatörler kullanılabili
 Cevap: Toplama(+),Çıkartma(-),Bölme(/),Çarpma(*),Modül(%),Arttırma(++),Azaltma(--) ayrıca bu operatörlerin yanı sıra karşılaştırma operatörleri olan 
 ('<', '<=',' >',' >=') ve eşitlik operatörü (==) de sayılarla kullanılabilir.
 -------------------------------------------------------------------------------------
+Soru 14:Sayısal değişkenlerde hangi karşılaştırma operatörleri kullanılabilir?
+
+Cevap:
+-Eşittir (==): İki değer birbirine eşitse true, değilse false döner.
+-Eşit Değildir (!=): İki değer birbirine eşit değilse true, eşitse false döner.
+-Daha Büyük (>): Bir değer diğerinden büyükse true, değilse false döner.
+-Daha Küçük (<): Bir değer diğerinden küçükse true, değilse false döner.
+-Büyük Eşittir (>=): Bir değer diğerinden büyük veya eşitse true, değilse false döner.
+-Küçük Eşittir (<=): Bir değer diğerinden küçük veya eşitse true, değilse false döner.
+--------------------------------------------------------------------------------------
+
