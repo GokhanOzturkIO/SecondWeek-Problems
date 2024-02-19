@@ -57,4 +57,11 @@ Cevap: Kotlin tip güvenliğini sağlamak için bazı parametreler geliştirmiş
 Bu parametreler,geliştiricilere programlarını yazarken daha az hata yapma ve daha güvenli bir kod üretme imkanı sağlar.
 
 ---------------------------------------------------------------------------------------
+Soru 7: Bir değişkeni nullable yapmak için ne yapmalıyız?
 
+Cevap: Bir değişkene null değer ataması yapmak istiyorsak o değişken tipinin sonuna ? koyup = null diyoruz.
+
+Val name:String? =null
+
+Herhangi bir veri dipinin sonuna soru işareti koyarak onu nullayabilirsiniz, her veri tipinde bu yapılabiliyor.
+---------------------------------------------------------------------------------------
