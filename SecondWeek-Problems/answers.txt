@@ -102,4 +102,18 @@ Cevap: Nullable bir değişkenle çalışırken (!!.) ve (?.) operatörlerini ku
 ?. Uygulamada sadece hata mesajı bildirir, çok kritik olmayan bölgelerde örn girişte kullanıcı ismini vererek hoşgeldin demediyse bu sorun uygulamayı crash edecek kadar mühim bir sorun olmadığından hata vermesi yeterlidir.
 
 -------------------------------------------------------------------------------------
+Sayılar
+
+Soru 1:Kaç farklı tipte "number" sınıfı miras alan "alt sınıf" (child class) vardır? Bunların değer aralıkları neden önemlidir?
+
+Cevap: 
+Number sınıfı miras alan değişkenler;
+-Byte
+-Short
+-Int
+-Long
+-Double
+-Float 
+Bunların değer aralkları bellekte kapladıkları yer ve hızları bakımından önemlidir.
+------------------------------------------------------------------------------------
 
