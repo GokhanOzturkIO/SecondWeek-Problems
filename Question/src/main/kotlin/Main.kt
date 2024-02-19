@@ -1,37 +1,42 @@
 fun main() {
 
     println("Hoş geldiniz")
-    calculate()
-}
 
-fun calculate() {
-    print("birinci sayıyı girin: ")
-    val firstNumber = readlnOrNull()
+    do {
+
+        print("Birinci sayıyı girin ")
+        val firstNumber = readlnOrNull()?.toDoubleOrNull()
 
 
-    print("yapmak istediğiniz matematiksel işlemin karakterini girin: ")
-    val operator = readlnOrNull()
+        print("Yapmak istediğiniz matematiksel işlemin karakterini girin ")
+        val operator = readlnOrNull()
 
-    print("ikinci sayıyı girin: ")
-    val secondNumber = readlnOrNull()
 
-    firstNumber?.toDoubleOrNull()?.let { n1 ->
-        secondNumber?.toDoubleOrNull()?.let { n2 ->
+        print("İkinci sayıyı girin ")
+        val secondNumber = readlnOrNull()?.toDoubleOrNull()
+
+        if (firstNumber != null && secondNumber != null) {
             val result = when (operator) {
-                "+" -> (n1 + n2)
-                "-" -> (n1 - n2)
-                "*" -> (n1 * n2)
-                "/" -> (n1 / n2)
-                "%" -> (n1 % n2)
-                else -> "Hatalı Operatör!"
+                "+" -> firstNumber + secondNumber
+                "-" -> firstNumber - secondNumber
+                "*" -> firstNumber * secondNumber
+                "/" -> firstNumber / secondNumber
+                "%" -> firstNumber % secondNumber
+                else -> {
+                    println("Hatalı Operatör")
+                    return
+                }
             }
 
             println("Sonuç: $result")
+        } else {
+            println("Hatalı giriş")
         }
-    }
 
-    print("Devam etmek ister misiniz? (E/H): ")
-    val answer = readlnOrNull()
+        print("Devam etmek istiyor musunuz? (E/H)")
+        val answer = readlnOrNull()?.uppercase()
 
-    if (answer?.uppercase() == "E") calculate()
+    } while (answer == "E")
+
+    println("Program sonlandırıldı")
 }
