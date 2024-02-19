@@ -40,3 +40,8 @@ Nullable kullanırken yani null değerleriyle çalışırken kesin olarak belirt
 
 Type inference tanımına ek olarak; sayısal değerler için eğer ki verilen değer integer değer aralığının içindeyse o zaman integer set edilir. Yani byte ve short aralığında olsa bile integer set edilir. Ama integerdan daha büyük bir değer aralığındaysa her zaman long set edilir.
 -------------------------------------------------------------------------------------
+Soru 5: Kotlin'de tüm değişkenlerin sınıf olarak bulunması, "ilkel tip" (primitive type) olmadıkları anlamına gelir mi? Arka planda neler oluyor?
+
+Cevap: Kotlinde primitive değişken tipleri class olarak görünseler bile yapılan özel optimizasyonlarla bytecode çevrilirken java tarafındaki gerçek primitive tiplere karşılık gelir.
+-------------------------------------------------------------------------------------
+
