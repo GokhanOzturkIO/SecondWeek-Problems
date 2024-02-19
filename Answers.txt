@@ -409,6 +409,45 @@ if (number1 !is Int) {
 }
 ------------------------------------------------------------
 
+#2 "Akıllı Dönüşüm" (Smart Cast) ne demektir? Farklı kod örnekleri ile açıklayın. Bu özelliğin sınırlamaları nelerdir?
+
+Derleyici is kontrollerini ve açık dönüşümleri takip ederek immutable değerler için gerekli durumlarda otomatik olarak safe casting yapar.
+Bu yüzden çoğu durumda kotlin kullanırken explicit casting kullanmamıza gerek yoktur.
+
+val local variable -> için local delegated properties harici kullanılabilir.
+val properties -> private, internal, ... durumlarda kullanılamaz.
+var properties -> asla kullanılmaz. Çünkü herhangi bir zamanda değişme ihtimali var.
+
+
+fun demo(x: Any) {
+    if (x is String) {
+        print(x.length) // x is automatically cast to String
+    }
+}
+
+
+if (x !is String) return
+print(x.length) // x is automatically cast to String
+
+
+// x is automatically cast to String on the right-hand side of `||`
+if (x !is String || x.length == 0) return
+
+// x is automatically cast to String on the right-hand side of `&&`
+if (x is String && x.length > 0) {
+    print(x.length) // x is automatically cast to String
+}
+
+
+when (x) {
+    is Int -> print(x + 1)
+    is String -> print(x.length + 1)
+    is IntArray -> print(x.sum())
+}
+
+
+------------------------------------------------------------
+
 #5 "val b: Byte = 1 ile val i: Int = b ve son olarak print(b == i) gibi bir kod yazıldığında çıktı ne olur? Neden böyle bir çıktı aldığınızı açıklayın.
 
 Daha küçük türler daha büyük türlerin bir alt kümesi değildir. // Due to different representations, smaller types are not subtypes of bigger ones. 
