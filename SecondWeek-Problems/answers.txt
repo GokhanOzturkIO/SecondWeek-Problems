@@ -33,4 +33,10 @@ Cevap: Val değişkenlere genellikle immutable denildiğini duyarız ancak bu ya
 Ama biz basitçe,val değişkeninin değerinin değişebilir olduğunu göstermek için örnek verecek olursak bir classtaki val değişkeninin get fonksiyonuna sabit bir değer değilde değişkenlerden oluşan bir işlemin sonucunu verirsek bu işlemin sonucu değişkenlerin değerine bağlı olarak değişeceği için her seferinde biz available space çağırdığımızda yani bu val değişkeni çağırdığımızda farklı sonuçlar alabiliriz. 
 Dolayısıyla immutable değil ReadOnly'dir val değişkenler.
 ---------------------------------------------------------------------------------------
+Soru 4: "Tip Çıkarımı" (Type inference) kavramını açıklayın. Hangi durumlarda tip belirtmek kesin olarak gereklidir?
 
+Cevap: Eşitliğin sağ tarafında bir value varsa siz o değişkenin tipini vermeseniz bile diğer taraftaki değere bakarak değişkenin tipinin ne olacağına karar verir Ide, buna type inference denir. 
+Nullable kullanırken yani null değerleriyle çalışırken kesin olarak belirtmesi gereklidir. 
+
+Type inference tanımına ek olarak; sayısal değerler için eğer ki verilen değer integer değer aralığının içindeyse o zaman integer set edilir. Yani byte ve short aralığında olsa bile integer set edilir. Ama integerdan daha büyük bir değer aralığındaysa her zaman long set edilir.
+-------------------------------------------------------------------------------------
