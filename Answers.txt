@@ -286,3 +286,19 @@ Byte değerleri arasında aynı nesneyi işaret ederken Byte dışında farklı 
 
 >   <   >=  <=  ==  !=
 ------------------------------------------------------------
+
+#15 Bit düzeyinde operatörler (Bitwise operators) nelerdir? Ne amaçla kullanılır? Kotlin'de bunları nasıl kullanabilirsiniz?
+
+Bit düzeyinde işlem yapmamıza olanak sağlayan operatörlerdir.Bu sayede tamsayı bitleri direkt olarak manipüle edilebilir.
+Bit manipülasyonu, belirli bitleri ayarlama veya temizleme ve ikili bir sayı içindeki belirli bitlerin durumunu kontrol etme gibi görevler için faydalıdır.
+Düşük seviyeli donanımlara daha iyi hükmedebilmek için kullanılır.
+
+Operation Name                      Java Operator   Kotlin Int/Long Function
+Conjunction (and)	                a & b	        a and b
+Disjunction (or)	                a | b	        a or b
+Exclusive disjunction (xor)	        a ^ b	        a xor b
+Inversion	                        ~ a	            a.inv()
+Shift Left	                        a << bits	    a shl bits
+Shift Right	                        a >> bits	    a shr bits
+Unsigned Shift Right	            a >>> bits	    a ushr bits
+------------------------------------------------------------
