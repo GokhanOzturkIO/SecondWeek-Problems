@@ -77,4 +77,13 @@ fun main(){
             </summary>
             Kotlin dilinde tüm değişkenler sınıf olarak bulunur doğru, ancak değişken nullable değil ise ve primitive tip karşılığı da var ise derleme esnasında yapılan optimizasyon sayesinde ürettiği byte code ile aynı kodun javada primitive tip ile yazılabilen kodun ürettiği byte code'una eş değerdir.
         </details>
+        <details>
+            <summary>
+            "Tip Güvenliği" (Type Safety) kavramını açıklayın.
+            </summary>
+            Type Safety, program derlenirken değişken tiplerinin doğru aralıkta değer alıp almadığını kontrol eder.
+            Örneğin;
+            ```var str: String = null // str değişkenimiz nullable olmadığından dolayı programın derlenmesi esnasında type safety gereğince programcı hata alacaktır..``` 
+            ```var num: Int = "str".toIntOrNull() // num değişkeni sadece `Number` kabul ettiği için bu örnekte de derlenme sırasında hata alırız.```
+        </details>
 </details>
