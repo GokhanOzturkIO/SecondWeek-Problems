@@ -86,4 +86,13 @@ fun main(){
             ```var str: String = null // str değişkenimiz nullable olmadığından dolayı programın derlenmesi esnasında type safety gereğince programcı hata alacaktır..``` 
             ```var num: Int = "str".toIntOrNull() // num değişkeni sadece `Number` kabul ettiği için bu örnekte de derlenme sırasında hata alırız.```
         </details>
+        <details>
+            <summary>
+            Bir değişkeni nullable yapmak için ne yapmalıyız?
+            </summary>
+            Bir değişkeni nullable bir değişken olarak tanımlamak istiyorsak, tanımladığımız değişken tipinin yanına soru işareti (?) koyarız.
+            Örneğin;
+            ```var nonNullInt: Int = 5 // non-null değişken tanımı```
+            ```var nullableInt: Int? = null // nullable değişken tanımı```
+        </details>
 </details>
