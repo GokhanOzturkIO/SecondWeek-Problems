@@ -104,3 +104,15 @@ Eğer ki değerin null gelmeyeceğine emin isek !! operatörünü kullanmak daha
 
 Byte, Short, Int, Float, Double, Long, Number sınıfını miras almaktadır. Bunların değer aralıkları oldukça önem arz etmektedir. Örneğin Byte tipinde bir değişken atandı ve buna Byte tipinin değer aralığının dışında bir değer verilirse bu durumda hata ile karşı karşıya kalırız. Aynı zamanda bu tiplerin hepsinin bir boyutu vardır. Örneğin Int değer aralığındaki bir değişkeni Long tipini atamak fazladan yer kaplanmasına neden olacaktır.
 
+===========================
+
+14-) Eğer bir değişkene tip belirtimi yapılmaz ve bir değer atanırsa, Kotlin tip çıkarımını nasıl yapar?
+
+Eğer ki tip belirtimi yapılmadan bir sayısal değer atanırsa Kotlin olabildiğince en optimal cevabı verebilmek için bunu Int olarak algılar.
+
+val age = 50
+
+Yukarıdaki örneğe bakarsak tip belirtimi yapılmadan 50 değeri atanmış. Normalde 50 sayısı değer olarak Byte aralığında yer almaktadır. Fakat Kotlin bunu Int olarak algılar. Bundan dolayı değişkenin tipi önemli ise mutlaka tipi belirtilmelidir.
+Eğer atanan değer Int değer aralığından büyük ise bu defa default olarak Long set edilir.
+
+===========================
