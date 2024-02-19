@@ -124,3 +124,23 @@ Soru 3:Float değişken oluştururken F ve f harfleri varken, Long değişken ol
 
 Cevap: Long değişken oluştururken küçük l harfinin olmama sebebi bazı yazı stillerinde küçük l harfinin 1 sayısına benzerliğinden dolayı bir karışıklık olmaması adına yoktur.
 --------------------------------------------------------------------------------------
+Soru 4: Tek duyarlıklı (Single precision) ve Çift duyarlıklı (Double precision) kavramlarını açıklayın.
+
+Cevap: Tek duyarlıklı (Single Precision) ve Çift duyarlıklı (Double Precision), sayısal hesaplamalarda kullanılan kayan nokta (floating-point) veri türlerini tanımlayan terimlerdir.
+
+Tek Duyarlıklı (Single Precision):
+-Tek duyarlıklı, ondalık sayıları temsil etmek için kullanılan bir kayan nokta veri türüdür.
+-32 bit uzunluğundadır.
+-Tipik olarak float anahtar kelimesiyle ifade edilir.
+-Hassasiyet yaklaşık 6-9 basamaklı ondalık sayı hassasiyetine sahiptir.
+-Bellekte daha az yer kaplar ve daha hızlı işlemler için kullanılır.
+
+Çift Duyarlıklı (Double Precision):
+-Çift duyarlıklı, daha büyük değer aralıklarına ve daha yüksek hassasiyete ihtiyaç duyan uygulamalarda kullanılan bir kayan nokta veri türüdür.
+-64 bit uzunluğundadır.
+-Tipik olarak double anahtar kelimesiyle ifade edilir.
+-Hassasiyet yaklaşık 15-17 basamaklı ondalık sayı hassasiyetine sahiptir.
+-Daha fazla bellek alanı kullanır ancak daha yüksek hassasiyet sunar.
+
+Tek ve çift duyarlıklı sayılar, bilimsel ve mühendislik uygulamalarında hassas sayılar üzerinde çalışmak için yaygın olarak kullanılır. Seçim, uygulama gereksinimlerine ve hesaplama hassasiyetine bağlıdır. Çift duyarlıklı genellikle daha yüksek hassasiyet sağlar, ancak bu da daha fazla bellek kullanımına neden olur.
+------------------------------------------------------------------------------------
