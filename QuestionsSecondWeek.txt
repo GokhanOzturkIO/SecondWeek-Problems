@@ -396,6 +396,25 @@ Bu fonksiyonlar şunlardır:
 
 -ushr: Bir sayının bitlerini belirtilen sayıda sağa kaydırır, ancak işaret bitini korur. Örneğin, -5 ushr 2 sonucu 1073741822 olur.
 
+Soru 28: Kotlin'de büyük sayılarla çalışırken hangi ek türlerden yararlanılır ve bu türlerin sınırları nelerdir?
+
+Cevap: Kotlin’de büyük sayılarla çalışırken, Java’dan miras aldığı BigInteger ve BigDecimal türlerinden yararlanabilirsiniz. Bu türler, Int ve Long gibi sabit boyutlu sayısal türlerin sınırlarını
+aşan çok büyük veya çok hassas sayıları temsil etmek için kullanılır.
+
+BigInteger türü, tam sayıları temsil eder. Bu türün sınırı yoktur, yani istediğiniz büyüklükte bir tam sayı oluşturabilirsiniz. Ancak, bu türün performansı, Int ve Long türlerine göre daha düşüktür.
+Örneğin, aşağıdaki kodda çok büyük bir tam sayı oluşturalım:
+
+val bigInt = BigInteger("1234567890123456789012345678901234567890")
+
+BigDecimal türü, ondalık sayıları temsil eder. Bu türün de sınırı yoktur, yani istediğiniz büyüklükte ve hassasiyette bir ondalık sayı oluşturabilirsiniz. Ancak, bu türün de performansı, Double
+ve Float türlerine göre daha düşüktür. Örneğin, aşağıdaki kodda çok büyük ve çok hassas bir ondalık sayı oluşturalım:
+
+val bigDec = BigDecimal("3.14159265358979323846264338327950288419716939937510")
+
+
+
+
+
 
 
 
