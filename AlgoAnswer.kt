@@ -1,3 +1,4 @@
+import java.util.BitSet
 
 var userOperationIsPlus: Boolean = false
 var userOperationIsMinus : Boolean = false
@@ -7,35 +8,40 @@ var userOperationChecked : Boolean = false
 var numberIsInt: Boolean = false
 var numberIsFloat: Boolean = false
 var userOperation : String? = null
-var userNumberFirst = null
-var userNumberSecond = null
-var userFirtsNumberIntOrFloat = null
-var userSecondNumberIntOrFloat = null
-var calculatedValue = null
+var userNumberFirst :Int? = null
+var userNumberSecond :Int? = null
+var calculatedValue : Int? = null
+var userNumberIsChecked : Boolean = false
 
 fun main(){
-    val userInput : String = readLine()!!
-    println("$userInput")
 
+    welcomeWord()
+    getUserInputs()
+    getUserOperation()
+    println(userNumberIsChecked and userOperationChecked)
+    calculate()
+  println("result: $calculatedValue")
+//    if (userNumberIsChecked && userOperationChecked){
+//        calculate()
+//        println("result: $calculatedValue")
+//    }else{
+//        getUserInputs()
+//    }
 }
 fun welcomeWord(){
     println("Welcome to calculator")
 }
-
 fun getUserInputs(){
     println("Enter the a number:")
-    userNumber = readLine()
+    val userNumber = readLine()
     val userNumberInt = userNumber?.toIntOrNull()
     val userNumberFloat = userNumber?.toFloatOrNull()
+    getUserOperation()
+    userNumberIsChecked = checkNumberValue(userNumberInt, userNumberFloat,numberIsInt,numberIsFloat)
 
-    val checkedNumber = checkNumberValue(userNumberInt, userNumberFloat,numberIsInt,numberIsFloat)
-    if (checkedNumber){
-
-    }
 }
 fun checkNumberValue(userNumberInt: Int?, userNumberFloat: Float?,
                      numberIsInt: Boolean, numberIsFloat: Boolean): Boolean{
-
     var updatedNumberIsInt = numberIsInt
     var updatedNumberIsFloat = numberIsFloat
     if (userNumberInt != null){
@@ -48,20 +54,16 @@ fun checkNumberValue(userNumberInt: Int?, userNumberFloat: Float?,
     }
     return updatedNumberIsInt || updatedNumberIsFloat
 }
-
 fun getUserOperation(){
     println("Enter the operation: ('+','-','*','/'")
     userOperation = readLine()
-    if(userOperationIsPlus || userOperationIsMinus || userOperationIsDivision|| userOperaitonIsMultiply) userOperationChecked == true
-
-}
+    if(userOperationIsPlus || userOperationIsMinus || userOperationIsDivision|| userOperaitonIsMultiply) userOperationChecked == true }
 fun calculate(){
   calculatedValue =  when(userOperation){
-        "+" -> calculatedValue = userNumberFirst + userNumberSecond
-        "-" -> calculatedValue = userNumberFirst - userNumberSecond
-        "*" -> calculatedValue = userNumberFirst * userNumberSecond
-        "/" -> calculatedValue = userNumberFirst / userNumberSecond
+        "+" -> userNumberFirst!! + userNumberSecond!!
+        "-" -> userNumberFirst!! - userNumberSecond!!
+        "*" -> userNumberFirst!! * userNumberSecond!!
+        "/" -> userNumberFirst!! / userNumberSecond!!
+        else -> null
      }
-
-
 }
