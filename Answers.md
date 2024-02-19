@@ -71,4 +71,10 @@ fun main(){
             </summary>
             Type inference kavramı, değişkene değer atanırken derleyici tarafından atanan değerin tipinin anlaşılmasıdır. Nullable bir değer ataması yapacağımız zaman bunu açıkça belirtmeliyiz.
         </details>
+        <details>
+            <summary>
+            Kotlin'de tüm değişkenlerin sınıf olarak bulunması, "ilkel tip" (primitive type) olmadıkları anlamına gelir mi? Arka planda neler oluyor?
+            </summary>
+            Kotlin dilinde tüm değişkenler sınıf olarak bulunur doğru, ancak değişken nullable değil ise ve primitive tip karşılığı da var ise derleme esnasında yapılan optimizasyon sayesinde ürettiği byte code ile aynı kodun javada primitive tip ile yazılabilen kodun ürettiği byte code'una eş değerdir.
+        </details>
 </details>
