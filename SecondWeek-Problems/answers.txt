@@ -235,3 +235,8 @@ println(a === b)
 true döner çünkü a ve b aynı bellek konumunu paylaşırlar.
 
 --------------------------------------------------------------------------------------
+Soru 13: Sayısal değişkenlerde hangi matematiksel operatörler kullanılabilir?
+
+Cevap: Toplama(+),Çıkartma(-),Bölme(/),Çarpma(*),Modül(%),Arttırma(++),Azaltma(--) ayrıca bu operatörlerin yanı sıra karşılaştırma operatörleri olan 
+('<', '<=',' >',' >=') ve eşitlik operatörü (==) de sayılarla kullanılabilir.
+-------------------------------------------------------------------------------------
