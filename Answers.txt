@@ -352,3 +352,12 @@ Ancak, Kotlin'de örtük tip genişletme (implicit widening conversions) otomati
 12."val x = 5 / 2.toDouble() println(x == 2.5)" gibi bir işlemin sonucu ve tipi nedir? Neden böyle olduğunu açıklayın.
 
 -true döner çünkü to double ile double dönüşüyor.
+
+
+
+13.Kotlin'de tür dönüşümü yapılırken, dönüşümün başarısız olması durumunda TypeCastException nasıl ele alınır ve bu tür hataların önüne geçmek için hangi önlemler alınabilir?
+
+-try-catch Bloğu Kullanma
+-Safe Call ve Elvis Operatörü
+-is ve as Operatörleri Kullanma
+-Kotlin Standard Library Fonksiyonları
