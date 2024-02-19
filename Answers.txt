@@ -355,3 +355,7 @@ a2  ->  ULong   ->  281474976710655 sayısı UInt'in dışında olduğundan ULon
 0xFFFF_FFFF_FFFF = 281474976710655
 hexadecimal to decimal
 ------------------------------------------------------------
+
+#5 "İşaretsiz" "Long" harf gösterimi nasıl yapılır?
+ULong
+------------------------------------------------------------
