@@ -209,3 +209,9 @@ Bu ifade, matematikte bir doğru denklemi olan "y = mx + b" ifadesini temsil ede
 
 Yani tekrar özetlemek gerekirse geleneksel Notasyon, belirli bir konsepti, formülü veya ifadeyi açık ve anlaşılır bir şekilde ifade etmek için belirli sembollerin ve kuralların kullanımını içerir. Bu, belirli bir alan veya disiplinde kabul edilmiş standartları ifade eder.
 --------------------------------------------------------------------------------------
+Soru 10:Sayısal değişkenlerde alt çizgi (underscore) nasıl kullanılır? Kotlin bunu nasıl yorumlar?
+
+Cevap: Sayısal değerlerde alt çizgi (underscore) kullanımı, sayıları daha okunabilir hale getirmek için kullanılır. Alt çizgiler, sayıları gruplamak ve sayıları okurken onları daha anlaşılır kılmak için eklenir.
+
+Alt çizgiler milyarları,ondalık sayıları, telefon numaralarını, kredi kartlarını, Tc kimlik no,bytes daha okunabilir hale getirebilir. İsteğe bağlı kullanılır ve bu alt çizgiler Kotlin tarafından okunmaz sayı değeri neyse o okunur sadece.
+-------------------------------------------------------------------------------------
