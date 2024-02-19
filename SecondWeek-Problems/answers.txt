@@ -120,4 +120,7 @@ Soru 2:Eğer bir değişkene tip belirtimi yapılmaz ve bir değer atanırsa, Ko
 
 Cevap:Bir değişkene tip belirtimi yapılmaz ve bir değer atanırsa kotlin tip çıkarımını verilen değere göre yapar.
 -------------------------------------------------------------------------------------
+Soru 3:Float değişken oluştururken F ve f harfleri varken, Long değişken oluştururken neden küçük l harfi yoktur?
 
+Cevap: Long değişken oluştururken küçük l harfinin olmama sebebi bazı yazı stillerinde küçük l harfinin 1 sayısına benzerliğinden dolayı bir karışıklık olmaması adına yoktur.
+--------------------------------------------------------------------------------------
