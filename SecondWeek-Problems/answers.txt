@@ -44,4 +44,17 @@ Soru 5: Kotlin'de tüm değişkenlerin sınıf olarak bulunması, "ilkel tip" (p
 
 Cevap: Kotlinde primitive değişken tipleri class olarak görünseler bile yapılan özel optimizasyonlarla bytecode çevrilirken java tarafındaki gerçek primitive tiplere karşılık gelir.
 -------------------------------------------------------------------------------------
+Soru 6:"Tip Güvenliği" (Type Safety) kavramını açıklayın.
+
+Cevap: Kotlin tip güvenliğini sağlamak için bazı parametreler geliştirmiştir bunlar;
+
+-Tür Belirleme (Type Inference):Kotlin, değişkenlerin türünü otomatik olarak belirleme yeteneğine sahiptir.
+
+-Null Güvenliği (Null Safety):Kotlin, null referanslarını önlemek için güçlü bir null güvenliği sistemine sahiptir. Değişkenlerin varsayılan olarak null olamayacak şekilde tanımlanması ve nullable türlerin açıkça belirtilmesi, null ile ilgili hataları minimize eder.
+
+-Tür Dönüşümleri (Type Casts):Kotlin, tür dönüşümleri sırasında güvenli olmayan işlemleri engellemek için güvenli tür dönüşümlerini destekler. Güvenli bir tür dönüşümü için as? operatörü kullanılır.
+
+Bu parametreler,geliştiricilere programlarını yazarken daha az hata yapma ve daha güvenli bir kod üretme imkanı sağlar.
+
+---------------------------------------------------------------------------------------
 
