@@ -341,3 +341,8 @@ Değer sınıfları (Value Class) bir başka sınıfın yalnızca tek bir özell
 Value class'ları bildirilirken @JvmInline annotation'ı kullanılmadır.
 @JvmInline value class'lar üzerinde çeşitli optimizasyonlar yaparak verimliliği arttırır.
 ------------------------------------------------------------
+
+#3 "İşaretsiz" değişkenlerin harf gösterimi nasıldır?
+
+UBayt   UShort  UInt    ULong
+------------------------------------------------------------
