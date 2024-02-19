@@ -1,0 +1,49 @@
+
+### Temel Türler & Null Güvenliği
+
+- `val` ile `var` arasındaki fark nedir?
++  Val değişkenler bir değer ataması yapıldıktan sonra bu değerin bir daha değişmez. Var değişkenlerde ise bu değer daha sonradan değiştirilebilir. Val read-only'dir Immutable değildir.
+
+- Bir `var` değişkeni `val` gibi davranmasını nasıl sağlayabiliriz `val` kelimesini kullanmadan? Bunu neden yapmak isteriz? Örnek bir senaryo verin.
++ Bir var değişkenin val gibi davranabilmesi için var değişkenin set'ini ve get'ini private yapmak gerekir. Set'i private olduktan sonra herhangi bir yerden erişilemeyeceği için val gibi çalışır.
+
+- "Değişmez" (Immutable) ve "Salt Okunur" (ReadOnly) kavramlarını açıklayın. `val` değişkenler neden aslında "değişmez" değil de "salt okunur" olarak açıklanmalıdır?
++ Read-only değeri okunabilen ama set edilemeyen demektir. Yani val sadece referansın değişmez olduğunu belirtir. Immutable kavramı ise değeri hiçbir şekilde değiştirilemez anlamına gelir.
+
+- "Tip Çıkarımı" (Type inference) kavramını açıklayın. Hangi durumlarda tip belirtmek kesin olarak gereklidir?
++ Type inference Ide'nin tanımlanan bir değişkenin değerine göre yerleştirdiği sınıf demektir.
+	Ör;
+	val name : String = "Emre" -> Bu şekilde tanımlamak için;
+ 	val name = "Emre" -> Ide bu tanımlamda benden bir tanımlama beklemeden name değişkenin String'e ait olduğunu anlar. Buna Type inference denir.
+
+- Kotlin'de tüm değişkenlerin sınıf olarak bulunması, "ilkel tip" (primitive type) olmadıkları anlamına gelir mi? Arka planda neler oluyor?
++ Kotlin'de Class olarak bulunan primitive type gibi görünen değişken tipleri özel optimizasyonlarla primitve type şekline çevrilir.
+
+- "Tip Güvenliği" (Type Safety) kavramını açıklayın.
++ Type Safety bir değişkene yanlış bir değişken tipi verildiği durumda IDE tarafından uyarılma kavramına denir.
+	Ör;
+	val name : String = 24 	Bu kodda Ide bize değişkende verilen değerin belirtilen değişken tipine uymadığını söyler.
+
+- Bir değişkeni nullable yapmak için ne yapmalıyız?
++ Bir değişkeni nullable yapmak için değişkenin belirtilen değişken tipinin sonuna ? koymamız yeterlidir. Yada direkt değişkeni null değerine eşitleyebiliriz.
+	Ör;
+	val name : String? = "Emre"
+	val name = null
+
+- "Null Güvenliği" (Null Safety) kavramını açıklayın.
++ Null Safety bir nesne null olduğu durumda o nesneye erişilmeye çalışıldığında programın patlamaması için alınan bir önlemdir..
+  Örneğin kullanıcıdan bir Input alınacağı zaman kullanıcının hiçbirşey girmemesi durumunda programın çökmemesi olabilir.
+	
+- Bir değişkene null değer atanır ve tip belirtilmezse Kotlin bu değişkeni nasıl yorumlar?
++ Bir değişkene null değer atanırsa Kotlin bu değişkeni Nothing? olarak yorumlar.
+
+- İlkel bir değişkenin nullable olması ile null değer alamaması arasında bellek yönetimi açısından nasıl farklar vardır?
++ Eğer bir değişken nullable'sa bellekte daha fazla yer kaplar. Çünkü null olma ihtimali vardır. Fakat null olamayan bir değişken zaten null değer alamayacağı için nullable değişkene göre bellekte daha az yer kaplar.
+
+- Nullable bir değişkenin bir değere sahip olması ile null olması arasında bellek yönetimi açısından nasıl bir fark vardır? Null değer almış bir değişken bellekte yer kaplamaz diyebilir miyiz?
++ Evet null bir değişken için bellekte yer kaplamaz denilebilir. Fakat nullable bir değişkenin bir değere sahip olması bellekte yer kaplamasına sebep olur.
+
+- Nullable bir değişkenle çalışırken hangi operatörleri kullanırız? Bu operatörlerin kullanım farkları nelerdir? Hangisini ne zaman kullanmak daha anlamlıdır?
++ ?. Operatoru null bir değer varsa işlemi gerçekleştirmez.
+  ?: Operatoru null bir değer varsa alternatif bir değer belirler.
+  !!. Operatoru bir değişkenin null olmayacağı zamanlarda kullanılır.
