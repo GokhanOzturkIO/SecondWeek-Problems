@@ -144,3 +144,18 @@ Tek Duyarlıklı (Single Precision):
 
 Tek ve çift duyarlıklı sayılar, bilimsel ve mühendislik uygulamalarında hassas sayılar üzerinde çalışmak için yaygın olarak kullanılır. Seçim, uygulama gereksinimlerine ve hesaplama hassasiyetine bağlıdır. Çift duyarlıklı genellikle daha yüksek hassasiyet sağlar, ancak bu da daha fazla bellek kullanımına neden olur.
 ------------------------------------------------------------------------------------
+Soru 5:Double ve Float değişkenlerle çalışırken ondalık ayıracı olarak hangi işaretler kullanılır? Bu ayıraçların kullanımında nelere dikkat etmek gerekir?
+
+Cevap: Double ve float değişkenlerinde ondalık sayıları ifade ederken nokta (.) işareti kullanılır. Ayrıca, sayıları biçimlendirirken binlik ayıraç olarak alt çizgi (_) kullanabiliriz. Ancak, ondalık sayıları ifade ederken her zaman nokta kullanılmalıdır.
+
+Dillere de dikkat edilmelidir bu konuda, yani İngilizce ve Türkçeden örnek verelim.
+
+Türkçede;
+Ondalık sayıları ifade ederken virgül (,) kullanılır.
+Binlik ayıraç olarak genellikle nokta (.) kullanılır.
+
+İngilizcede;
+Ondalık sayıları ifade ederken nokta (.) kullanılır.
+Binlik ayıraç olarak genellikle virgül (,) kullanılır.
+
+---------------------------------------------------------------------------------------
