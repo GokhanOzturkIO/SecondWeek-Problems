@@ -221,6 +221,23 @@ var n: Number = 1_000_000 // Number tipinde
 var x = 10 + 20 // Int olarak tanımlanır, çünkü sonuç Int aralığına sığar
 var y = 1000000000 * 2 // Long olarak tanımlanır, çünkü sonuç Int aralığından büyük
 
+Soru 15: Float değişken oluştururken F ve f harfleri varken, Long değişken oluştururken neden küçük l harfi yoktur?
+
+Cevap: Float bir değişken oluştururken F ve f kullanmak durumundayız çünkü ondalık sayılar kotlin dilinde varsayılan olarak Double tanımlanmaktadır bu nedenle Float tipinde olduğunu belirtmek
+için F tanımlamasını kullanmak durumundayız.
+
+val x = 3.14 // Double tipinde
+val y = 3.14f // Float tipinde
+
+Long bir değişken oluştururken L harfi kullanmak zorunlu değildir çünkü Kotlin tip çıkarımı zaten yaparç Eğer değişken Int aralığının dışında ise Long tipinde tanımlanmaktadır.
+
+val x = 1000000000 // Int tipinde
+val y = 1000000000000 // Long tipinde
+
+ küçük L harfi yani "l" 1 rakamı ile karışabileceği için küçük l kullanımı Kotlin dilinde yoktur.
+
+
+
 
 
 
