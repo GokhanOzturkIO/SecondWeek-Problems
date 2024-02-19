@@ -47,3 +47,67 @@
 + ?. Operatoru null bir değer varsa işlemi gerçekleştirmez.
   ?: Operatoru null bir değer varsa alternatif bir değer belirler.
   !!. Operatoru bir değişkenin null olmayacağı zamanlarda kullanılır.
+
+
+### Sayılar
+- Kaç farklı tipte "number" sınıfı miras alan "alt sınıf" (child class) vardır? Bunların değer aralıkları neden önemlidir?
++ Int, Float, Double, Long, Byte, Short olarak 6 adet vardır. Bunların değer aralıkları şu yüzden önemlidir. Örneğin kullanıcan Tc kimlik numarasının bilgisi alınacaksa ve siz alınan değeri Int'e eşitlerseniz verilen değer Int aralığında olmayacağı için program patlar.
+
+- Eğer bir değişkene tip belirtimi yapılmaz ve bir değer atanırsa, Kotlin tip çıkarımını nasıl yapar?
++ Atanan değer eğer bir sayı ise ve Int değer aralığındaysa Int değiken tipini alır. Int aralığında değilse Long değişken tipini alır.
+- Float değişken oluştururken `F` ve `f` harfleri varken, Long değişken oluştururken neden küçük `l` harfi yoktur?
++ 1'in yazımı ile l'nin yazımının birbirine benzemesinden dolayı yoktur.
+
+- Tek duyarlıklı (Single precision) ve Çift duyarlıklı (Double precision) kavramlarını açıklayın.
++ Tek duyarlıklı sayılar 32 bitlik bir kayan nokta formatı kullanır.
+  Çift duyarlıklı sayılar ise daha fazla bellek kullanır fakat daha yüksek hassasiyete sahiptir.
+
+- Double ve Float değişkenlerle çalışırken ondalık ayıracı olarak hangi işaretler kullanılır? Bu ayıraçların kullanımında nelere dikkat etmek gerekir?
++ Genelde .(nokta) işaretiyle kullanılır. Fakat Backend'den dönecek olan ayıracın bazı durumlarda değişkenlik göstermesinden dolayı dikkatli olmak gerekir. 
+
+- Double ve Float değişkenler ondalık kısımda kaç basamağa kadar işlem yaparlar? Bu sınırın üzerinde gelen ondalık bilgileri için nasıl davranırlar? Hangi durumlar için Float ve hangi durumlar için Double kullanılmalıdır?
++ Float, 6-7 basamağa kadar, Double 15-16 basamağa kadar işlem yapar.Daha fazla basamak sınırın üzerine gelen ondalık sayılarda overflow olur ve program crash verebilir.
+
+- Ondalık(Decimal), Onaltılık (Hexadecimal) ve İkilik (Binary) değişkenleri Kotlin'de nasıl tanımlayabilirsiniz
++   val decimalNo = 1881
+    val hexadecimalNo = 0X4005 
+    val binaryNo = 0b010001011 şeklinde tanımlanabilir.
+
+- Sekizlik (Octal) değişkenler Java'da nasıl tanımlanır? Kotlin'de Sekizlik değişken tanımlanabilir mi?
+*
+
+- "Geleneksel Notasyon" (Conventional Notation) gösterimi nasıl yapılır?
++ Kotlinde conventional notation gösterimi şu şekilde yapılır;
+	-12233.41
+	-1923.4F gibi
+- Sayısal değişkenlerde alt çizgi (underscore) nasıl kullanılır? Kotlin bunu nasıl yorumlar?
++ Yazılan sayıları daha kolay okunabilir hale getirmek için kullanılır. Örneğin 213213124 sayısını 
+	val number = 213213124 şeklinde yazmak yerine
+	val number = 213_213_124 şeklinde yazabiliriz.
+
+- `==` ile neyi karşılaştırırız? `===` ile neyi karşılaştırırız?
++ == operatoru ile değişkenlerin değerini, === operatoru ile memory'deki yerlerini karşılaştırırız.
+
+- `===` operatörü ile karşılaştırma yaparken Byte değer aralığı neden önemlidir? Kotlin bu aralığa göre neden özel bir davranış sergiler?
++ Byte değer aralığında iki farklı aynı valueya sahip değişken === karşılaştırmasında farklı olsalar bile true değer alır.
+- Sayısal değişkenlerde hangi matematiksel operatörler kullanılabilir?
+	+ Toplamak için
+	- Çıkarmak için
+	* Çarpmak için
+	/ Bölmek için
+	% Modüler bölme işlemleri yapılabilir.
+
+- Sayısal değişkenlerde hangi karşılaştırma operatörleri kullanılabilir?
+	== -----> Eşitlik varsa true döndürür.
+	!= -----> Eşitlik varsa false döndürür.
+	< -----> Soldaki değer sağdaki değerden küçükse true döndürür.
+	> -----> Soldaki değer sağdaki değerden büyükse true döndürür.
+	<= -----> Soldaki değer sağdaki değerden küçük veya eşitse true döndürür.
+	>= -----> Soldaki değer sağdaki değerden büyükse veya eşitse true döndürür.
+- Bit düzeyinde operatörler (Bitwise operators) nelerdir? Ne amaçla kullanılır? Kotlin'de bunları nasıl kullanabilirsiniz?
+*
+- Kotlin'de büyük sayılarla çalışırken hangi ek türlerden yararlanılır ve bu türlerin sınırları nelerdir?
++ BigInteger gibi ek türlerden yararlanılır.
+
+- Double ve Float değişkenler kullanılırken "yuvarlama" davranışı nasıldır? Bu nasıl değiştirilebilir?
++IEEE 754 standartına göre yuvarlama yapılır. Harici bir fonksiyon yazılarak yuvarlama davranışı değiştirilebilir.
