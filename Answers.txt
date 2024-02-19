@@ -312,3 +312,10 @@ Ancak, Kotlin'de örtük tip genişletme (implicit widening conversions) otomati
 
 -Bu durumda, Kotlin'de tamsayı türlerinde otomatik genişletme (implicit widening) yapılmadığından dolayı bir tip uyumsuzluğu hatası alırsınız. İlk atama işlemi sırasında bir küçük tamsayı değeri Byte bir değişkene atanmış olur, ancak ikinci atama sırasında bu Byte değeri bir büyük tamsayı türü olan Int bir değişkene atanmaya çalışılmaktadır.
 
+
+
+6.val b: Byte = 1 ile val i: Int = b.toInt() ve son olarak print(b == i) gibi bir kod yazıldığında çıktı ne olur? Neden böyle bir çıktı aldığınızı açıklayın.
+
+
+-true sonucunu verir çümkü b yi inte dönüştürdük.
+
