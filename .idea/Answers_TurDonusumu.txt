@@ -1,0 +1,9 @@
+##Tür Dönüşümü
+
+Answer 1:
+    is:Genel olarak tür kontrolü yaparken if veya when gibi yapılarda kullanılır. örneğin a is String
+    dediğimizde a nın String olup olmadığı kontrol edilip ona göre değer döner. Doğru ise if
+    içerisinde girer ve artık a string olduğu için lenght özelliğine erişebiliriz.
+    !is: is operatörünün tam tersi olarak a !is String şeklinde kullanılıyor. burada da a string
+    değil midir diye kontrol eder. Eğer String değilse if içerisine girecektir.
+
