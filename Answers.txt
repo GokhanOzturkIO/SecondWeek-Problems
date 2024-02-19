@@ -142,3 +142,63 @@
 	ULong = 0-18446744073709551615
 - "İşaretsiz" değişken türleri (UInt, ULong vs.) kullanırken, Java API'leri ile uyumluluk konusunda ne gibi sorunlar olabilir? Bunları çözmek için neler yapabilirsiniz?
 *
+
+### Tür Dönüşümü
+- `is` ve `!is` operatörlerinin kullanımını açıklayın.
++ is ve !is operatörleri genellikle bir değişkenin tipini sorgulamak için kullanılır.
+	Ör;
+	val asd = "hElLo"
+	if(asd is String){
+	println(asd)	// Çıktı:hElLo
+}
+
+- "Akıllı Dönüşüm" (Smart Cast) ne demektir? Farklı kod örnekleri ile açıklayın. Bu özelliğin sınırlamaları nelerdir?
++ 	Ör;
+	val emre : Any = "Merhaba"
+	if(emre is String){
+	println(emre.lenght)	// Any verdik fakat String olduğu için bu kod çalışır.
+	}
+		
+-"Güvenli & Güvensiz" operatörler nelerdir?
++ Güvenli ve Güvensiz operatörler NullPointerException hatasının önlenmesi için kullanılır.
+	Güvenli Çağrı Ör;
+	val x : String? = null
+	println(x?.length)	// Çıktı : null
+	
+	Güvenli Atama Ör;
+	val x : String? = null
+	val length = x?.length?: -1 // x null'sa çıktı -1 olur.,
+
+	Güvensiz Çağrı Ör;
+	val x : String? = null
+	println(x!!.lenght) // Bu kodda x null'sa NullPointException hatası alırız.
+	
+
+- Sayısal değişkenlerde örtük tip genişletme (implicit widening conversions) ne demektir? Kotlin'de bu neden yapılamaz?
++ Bir veri türünün daha büyük bir veri türüne otomatik olarak dönüştürülmesi işlemidir. Kotlin bu işlemlerin görünmesini ister. Örneğin Int bir değeri Long yapmak için toLong() fonksiyonu kullanılmalıdır.
+ 
+- "`val b: Byte = 1` ile `val i: Int = b` ve son olarak `print(b == i)` gibi bir kod yazıldığında çıktı ne olur? Neden böyle bir çıktı aldığınızı açıklayın.
++ Kod çalışmıyor çünkü byte bir değeri Int yapmaya çalışıyoruz. Önceki soruda da bahsettiğim gibi Kotlin bu dönüşümü desteklemiyor.
+
+- "`val b: Byte = 1` ile `val i: Int = b.toInt()` ve son olarak `print(b == i)` gibi bir kod yazıldığında çıktı ne olur? Neden böyle bir çıktı aldığınızı açıklayın.
++ Bu kodda ise yazdırırken Byte == Int kontrolü yapıldığı için hata almaktayız. Kotlin otomatik olarak tip dönüşümü yapmadığı için hata alıyoruz.
+
+- Sayısal değişkenlerde açık dönüşüm (Explicit Type Conversion) yaparken hangi fonksiyonları kullanabilirsiniz?
++ toInt(), toLong() gibi fonksiyonlar kullanılabilir.
+
+- "`val result = 1L + 3`" // "Long + Int" gibi bir işlemin sonucunda "result" değişkeninin tipi ve değeri ne olur? Neden böyle olduğunu açıklayın.
++ Kotlinde iki farkli tipteki değerlerin toplamında hangi değer daha büyükse sonuç o değerin tipinde olur. Fakat Int'ten küçük boyuttaki tiplerdeki toplamalarda değer Int olarak alınır.
+
+- "`val result = Int.MAX_VALUE + Int.MAX_VALUE`" gibi bir işlemin sonucunda "result" değişkeninin tipi ve değeri ne olur? Neden böyle olduğunu açıklayın.
++ resultun değeri Int olur fakat Ide bize resultun değerini değiştirmemiz, overflow konusunda uyaracaktır.
+
+- "`val x = 5 / 2` `println(x == 2)`" gibi bir işlemin sonucu ve tipi nedir? Neden böyle olduğunu açıklayın.
++ Bu kodun sonucu 2 çıktısını verir ve Int tipindedir. İşlem yapılan değişkenlerin tipi Int türünde olduğu için 5/2 işleminin sonucu 2.5 olsa dahi yuvarlandıktan sonra bu değer 2'ye eşitlenir.
+
+- "`val x = 5L / 2` `println(x == 2L)`" gibi bir işlemin sonucu ve tipi nedir? Neden böyle olduğunu açıklayın.
++ Kotlin'de sayısal bölme işlemleri türler arası uyumsuzluklar ve beklenmeyen sonuçlar üretebilir, bu nedenle tür uyumunu dikkatlice kontrol etmek önemlidir. Bu kodun düzgün çalışması isteniyorsa 2nin yanına L harfi yazılmalıdır.
+
+- "`val x = 5 / 2.toDouble()` `println(x == 2.5)`" gibi bir işlemin sonucu ve tipi nedir? Neden böyle olduğunu açıklayın.
++ Bu kodun sonucu true'dur. Int bir değeri double bir değere böldükten sonra x değeri double olmaktadır.
+- Kotlin'de tür dönüşümü yapılırken, dönüşümün başarısız olması durumunda TypeCastException nasıl ele alınır ve bu tür hataların önüne geçmek için hangi önlemler alınabilir?
+*
