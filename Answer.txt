@@ -96,3 +96,11 @@ Eğer ki değerin null gelmemesi önemliyse ve değerin null mı yoksa değil mi
 Eğer ki değerin null gelmeyeceğine emin isek !! operatörünü kullanmak daha anlamlı olacaktır.
 
 ===========================
+
+
+== Temel Türler & Null Güvenliği ==
+
+13-) Kaç farklı tipte "number" sınıfı miras alan "alt sınıf" (child class) vardır? Bunların değer aralıkları neden önemlidir?
+
+Byte, Short, Int, Float, Double, Long, Number sınıfını miras almaktadır. Bunların değer aralıkları oldukça önem arz etmektedir. Örneğin Byte tipinde bir değişken atandı ve buna Byte tipinin değer aralığının dışında bir değer verilirse bu durumda hata ile karşı karşıya kalırız. Aynı zamanda bu tiplerin hepsinin bir boyutu vardır. Örneğin Int değer aralığındaki bir değişkeni Long tipini atamak fazladan yer kaplanmasına neden olacaktır.
+
