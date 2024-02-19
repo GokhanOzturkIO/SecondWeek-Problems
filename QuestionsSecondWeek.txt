@@ -268,7 +268,14 @@ Cevap: Double değişkenler 15 basamak, Float değişkenler ise 6-7 basamak işl
     println(number1 + number2)
 
 Bu işlemin sonucu 0.3000000001 olarak çıkarken (ide'de böyle görünmeyecek çünkü yuvarlama yapılıyor Float aralığına) Double ile işlem yapılırsa 0.3 çıkar. Yüksek duyarlılıklı matematiksel
-işlemlerde Double tipini kullanmak daha iyidir. Çünkü hassas işlemlerde Float tipinin yanılgı payı daha yüksektir.
+işlemlerde Double tipini kullanmak daha iyidir. Çünkü hassas işlemlerde Float tipinin yanılgı oranını arttıracaktır.
+
+Soru 19: Ondalık(Decimal), Onaltılık (Hexadecimal) ve İkilik (Binary) değişkenleri Kotlin'de nasıl tanımlayabilirsiniz?
+
+Cevap: Ondalık(Decimal) değişkenler, 0-9 arasındaki rakamlardan oluşur. Örneğin, val x = 123 gibi. Onaltılık (Hexadecimal) değişkenler, 0x veya 0X ile başlar ve 0-9 ile A-F arasındaki
+rakamlardan oluşur. Örneğin, val y = 0x0F gibi. İkilik (Binary) değişkenler, 0b veya 0B ile başlar ve 0-1 arasındaki rakamlardan oluşur. Örneğin, val z = 0b1010 gibi. 
+Ayrıca, sayısal sabitleri daha okunabilir hale getirmek için alt çizgi (_) işareti kullanabilirsiniz. Örneğin, val oneMillion = 1_000_000 gibii
+
     
     
 
