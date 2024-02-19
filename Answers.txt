@@ -478,3 +478,11 @@ x(Long) == 2L(Long) true çıkar.
 Int / Double = Double
 Double virgüllü say desteklediği için doğru sonuç çıkar ve true olur.
 ------------------------------------------------------------
+
+#13 Kotlin'de tür dönüşümü yapılırken, dönüşümün başarısız olması durumunda TypeCastException nasıl ele alınır ve bu tür hataların önüne geçmek için hangi önlemler alınabilir?
+
+Tür dönüşümü yapılırken iki farklı exception hatası aldım.
+1 - NumberFormatException
+2 - ClassCastException
+
+Try Cath blokları ile bu hataların programı çökertmesini önleyebiliriz.
