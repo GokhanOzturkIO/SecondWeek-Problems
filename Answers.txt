@@ -335,3 +335,9 @@ Ancak, Kotlin'de örtük tip genişletme (implicit widening conversions) otomati
 9.val result = Int.MAX_VALUE + Int.MAX_VALUE" gibi bir işlemin sonucunda "result" değişkeninin tipi ve değeri ne olur? Neden böyle olduğunu açıklayın.
 
 -saçna bir sonuç verecektir çünkü taşma olacaktır.
+
+
+
+10.val x = 5 / 2 println(x == 2)" gibi bir işlemin sonucu ve tipi nedir? Neden böyle olduğunu açıklayın.
+
+-true döner çünkü iki int sayı bölünüyor sonuçta in olur.
