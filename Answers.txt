@@ -329,3 +329,15 @@ Negatif sayılara ayıracağı bellek miktarını daha fazla pozitif sayı göst
 A signed byte is a data type that can represent values from -128 to 127.
 An unsigned byte is a data type that can represent values from 0 to 255
 ------------------------------------------------------------
+
+#2 "İşaretsiz" değişkenler nasıl bir sınıf yapısında tutulurlar? Bu neden önemlidir?
+
+public value class UInt --> Sınıfın kaynak koduna göz attığımda 'value' anahtar kelimesi dikkatimi çekti. Values Class?
+aynı zamanda '@JvmInline' bu annotation da dikkatimi çekti. Inline Class?
+
+Inline Value Class yapısında tutulurlar.
+
+Değer sınıfları (Value Class) bir başka sınıfın yalnızca tek bir özelliğini içerir. Bu durum hafıza kullanımını azaltıp performansı arttırabilir.
+Value class'ları bildirilirken @JvmInline annotation'ı kullanılmadır.
+@JvmInline value class'lar üzerinde çeşitli optimizasyonlar yaparak verimliliği arttırır.
+------------------------------------------------------------
