@@ -453,6 +453,16 @@ güvensiz -> as
 güvenli -> as?
 ------------------------------------------------------------
 
+#4 Sayısal değişkenlerde örtük tip genişletme (implicit widening conversions) ne demektir? Kotlin'de bu neden yapılamaz?
+
+byte>short>int>long>float>double
+
+Otomatik olarak gerektiğinde değişkenin bir üst veri tipine geçirilmesidir.
+Kotlin bunu desteklemez çünkü tutarlı bir kod oluşturma felsefesi vardır. İleride oluşabilecek sorunların önünü kesmek için.
+
+implicit cast ile bu istersek küçükden büyük veri tipine geçiş yapabiliriz.
+------------------------------------------------------------
+
 #5 "val b: Byte = 1 ile val i: Int = b ve son olarak print(b == i) gibi bir kod yazıldığında çıktı ne olur? Neden böyle bir çıktı aldığınızı açıklayın.
 
 Daha küçük türler daha büyük türlerin bir alt kümesi değildir. // Due to different representations, smaller types are not subtypes of bigger ones. 
