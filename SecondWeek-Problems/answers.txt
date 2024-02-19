@@ -26,4 +26,11 @@ Cevap: Basitçe örnek verecek olursak
 Bu senaryoda, surname değişkeni var olarak tanımlanmış ancak set metodu private olarak ayarlanmıştır. Bu, surname değişkeninin sadece sınıf içinde değiştirilebileceği anlamına gelir ve sınıf dışından doğrudan erişim engellenir. Bu durum, değişkenin kontrol altında tutulmasını ve doğrudan erişimin engellenmesini sağlar.
 
 -------------------------------------------------------------------------------------
+Soru 3: "Değişmez" (Immutable) ve "Salt Okunur" (ReadOnly) kavramlarını açıklayın. val değişkenler neden aslında "değişmez" değil de "salt okunur" olarak açıklanmalıdır?
+
+Cevap: Val değişkenlere genellikle immutable denildiğini duyarız ancak bu yanlıştır çünkü ımmutable derken asla değiştirilemez anlamına gelir. Val değişkenler ise değeri okunabilen yani (ReadOnly) ama değişemez anlamına gelmez, değeri okunup set edilemeyen değişkendir. 
+
+Ama biz basitçe,val değişkeninin değerinin değişebilir olduğunu göstermek için örnek verecek olursak bir classtaki val değişkeninin get fonksiyonuna sabit bir değer değilde değişkenlerden oluşan bir işlemin sonucunu verirsek bu işlemin sonucu değişkenlerin değerine bağlı olarak değişeceği için her seferinde biz available space çağırdığımızda yani bu val değişkeni çağırdığımızda farklı sonuçlar alabiliriz. 
+Dolayısıyla immutable değil ReadOnly'dir val değişkenler.
+---------------------------------------------------------------------------------------
 
