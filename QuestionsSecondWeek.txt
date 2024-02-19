@@ -282,6 +282,10 @@ Cevap: Sekizlik (Octal) değişkenler 8'lik sayı sisteminde ifade edilen sayıl
 yeterlidir. Örneğin, int x = 034 gibi. Kotlinde bu işlemi doğrudan yapmak mümkün değildir çünkü sekizlik değişkenler yoktur yalnızca ikilik, ondalık ve onaltılık olarak tanımlanabilir. Dolaylı
 olarak ise val octNumber = "155".toInt(8)  => Stringte tanimlayip onu da toInt ile 8'ilk yapmak istedigimizi belirtebiliriz.
 
+Soru 21:"Geleneksel Notasyon" (Conventional Notation) gösterimi nasıl yapılır?
+
+Cevap: Değişkenlerin en basit ve bilinen hali ile tanımlama işlemidir. Int için a = 172, Double için a = 24.2 şeklinde.
+
 
 
 
