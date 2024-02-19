@@ -367,8 +367,19 @@ Signed olan türlerine göre aynı alanı kaplar. Yalnızca pozitif tamsayılar�
 
 #7 "İşaretsiz" değişkenlerle yapılan matematiksel işlemlerde, özellikle büyük sayılarla çalışırken karşılaşılabilecek taşma (overflow) ve taşma olmaması (underflow) durumları için Kotlin nasıl bir yönetim sağlar?
 
-UBayt sınırlarını aşınca IDE type safety özelliğini kullanarak error veriyor. uNumber.toUByte() metodunu kullanınca error gidiyor ancak sonucu ekrana yazdırmıyor. Boş çıktı üretiyor.
-UInt sınırlarını aşınca herhangi bir hata vermiyor ancak print fonksiyonu boş çıktı üretiyor.
+Maksimum sınırın üstüne çıkılırsa sonuç 0'a eşitlenir.
+Minimum sınırın altına inilirse sonuc maksimum değere eşitlenir.
+
+val a: UInt = UInt.MIN_VALUE // UInt minimum değeri
+val b: UInt = 1u // 1 işaretsiz tamsayı
+// Çıkarma işlemi
+val result: UInt = a - b --> underflow, result = 4294967295 
+
+
+val a: UInt = UInt.MAX_VALUE // UInt maksimum değeri
+val b: UInt = 1u // 1 işaretsiz tamsayı
+// Toplama işlemi
+val result: UInt = a + b --> overflow, result = 0
 ------------------------------------------------------------
 
 #8 "İşaretsiz" değişkenlerin sınırlamaları nelerdir?
