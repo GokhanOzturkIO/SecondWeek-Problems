@@ -296,3 +296,13 @@ Güvenli operatör, bir nesnenin null olup olmadığını kontrol ederek, null d
 -Güvensiz (Unsafe) Operatör (!!.):
 Güvensiz operatör, bir nesnenin null olup olmadığını kontrol etmeden doğrudan erişim sağlar. Bu operatörü kullanmak, programcının nesnenin kesinlikle null olmadığına emin olduğu durumlarda uygun olabilir.
 
+
+
+4.Sayısal değişkenlerde örtük tip genişletme (implicit widening conversions) ne demektir? Kotlin'de bu neden yapılamaz?
+
+-Örtük tip genişletme (implicit widening conversions), bir programda kullanılan sayısal veri türünün bir diğer sayısal veri türüne dönüştürülmesini ifade eder. Bu dönüşüm, genellikle küçük bir veri türünden daha büyük bir veri türüne yapılır ve bu işlem otomatik olarak gerçekleşir.
+
+Örneğin, bir küçük tamsayı veri türü olan Short bir değeri, daha büyük bir tamsayı veri türü olan Int'e dönüştürmek örtük tip genişletme örneğidir.
+
+Ancak, Kotlin'de örtük tip genişletme (implicit widening conversions) otomatik olarak yapılmaz. Kotlin, bu tür dönüşümleri otomatik olarak gerçekleştirmez çünkü bu durum, tip güvenliği açısından riskli olabilir. Bilinçsiz bir şekilde küçük bir tamsayıyı büyük bir tamsayıya dönüştürmek, değerin taşma (overflow) riskini taşıyabilir ve beklenmeyen sonuçlara yol açabilir.
+
