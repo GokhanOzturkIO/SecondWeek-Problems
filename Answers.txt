@@ -275,3 +275,9 @@ Byte değerleri arasında aynı nesneyi işaret ederken Byte dışında farklı 
 
     println(boxedB == anotherBoxedB)    // true
     println(boxedB === anotherBoxedB)   // false
+------------------------------------------------------------
+
+#13 Sayısal değişkenlerde hangi matematiksel operatörler kullanılabilir?
+
++   -   *   /   %   ++  --  +(Unary Plus)   -(Unary Minus)  range operator
+------------------------------------------------------------
