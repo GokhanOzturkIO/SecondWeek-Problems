@@ -461,6 +461,14 @@ val result = Int.MAX_VALUE + Int.MAX_VALUE // Int + Int = ? --> Int
 
 #10 "val x = 5 / 2 println(x == 2)" gibi bir işlemin sonucu ve tipi nedir? Neden böyle olduğunu açıklayın.
 
+true
 Int / Int = Int olur.
 5 / 2 bir alt Int sayıya yuvarlanırsa da sonuç 2 olmuş olur.
+------------------------------------------------------------
+#11 "val x = 5L / 2 println(x == 2L)" gibi bir işlemin sonucu ve tipi nedir? Neden böyle olduğunu açıklayın.
+
+Long / Int = Long
+büyük veri tipinin türü değişkene atanır.
+
+x(Long) == 2L(Long) true çıkar.
 ------------------------------------------------------------
