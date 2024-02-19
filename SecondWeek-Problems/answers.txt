@@ -13,4 +13,17 @@ Eğer akademik level'da bir konu ise ve salt dümdüz bir kodu konuşuyorsak (va
 
 Günlük hayat problemlerinde ise (val) kullanmak var'a göre daha avantajlı hale geliyor çünki; Thread işlemlerden dolayı var maliyet ve performansta düşüş yaşatıyor.
 --------------------------------------------------------------------------------------
+Soru 2:Bir var değişkeni val gibi davranmasını nasıl sağlayabiliriz val kelimesini kullanmadan? Bunu neden yapmak isteriz? Örnek bir senaryo verin.
+
+Cevap: Basitçe örnek verecek olursak 
+
+       class Person {
+
+       val name:String = "Sena"
+       var surname:String = "GEZER"
+       private set 
+                     {
+Bu senaryoda, surname değişkeni var olarak tanımlanmış ancak set metodu private olarak ayarlanmıştır. Bu, surname değişkeninin sadece sınıf içinde değiştirilebileceği anlamına gelir ve sınıf dışından doğrudan erişim engellenir. Bu durum, değişkenin kontrol altında tutulmasını ve doğrudan erişimin engellenmesini sağlar.
+
+-------------------------------------------------------------------------------------
 
