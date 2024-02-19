@@ -336,3 +336,21 @@ Cevap:"Işaretsiz" (unsigned) ve "işaretli" (signed) değişkenler, sayıları 
 İşaretli değişkenler, hem pozitif hem de negatif sayıları temsil edebilir.
 
 --------------------------------------------------------------------------------------
+Soru 2:"İşaretsiz" değişkenler nasıl bir sınıf yapısında tutulurlar? Bu neden önemlidir?
+
+Cevap: Kotlin'da işaretsiz değişkenler, UByte, UShort, UInt, ve ULong gibi özel veri türleri tarafından temsil edilir. Bu veri türleri, işaret bitine sahip olmayan ve sadece pozitif sayıları temsil eden değerleri saklamak için tasarlanmıştır.
+
+İşaretsiz değişkenlerin sınıf yapısında tutulmasının birkaç önemli nedeni vardır:
+
+-Negatif Değer Sorunu:
+
+İşaretsiz değişkenler, doğası gereği pozitif sayıları temsil eder. Bu, negatif sayılarla ilgili sorunların ortaya çıkma olasılığını azaltır. Özellikle sayının her zaman pozitif olduğu durumlar için kullanışlıdır.
+
+-Veri Temsilinde Netlik:
+
+İşaretsiz değişkenlerin kullanılması, değerlerin sadece pozitif olabileceğini belirtir, bu da değeri okuyan ve anlayan kişilere daha fazla bilgi sağlar.
+
+-Bit Düzeninde Kullanım:
+
+Bazı durumlarda, sayıları bit düzeninde manipüle etmek veya spesifik bir bit desenini temsil etmek önemlidir. İşaretsiz değişkenler, bu tür durumlar için daha uygun olabilir.
+-------------------------------------------------------------------------------------
