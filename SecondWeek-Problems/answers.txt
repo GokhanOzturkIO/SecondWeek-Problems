@@ -65,3 +65,13 @@ Val name:String? =null
 
 Herhangi bir veri dipinin sonuna soru işareti koyarak onu nullayabilirsiniz, her veri tipinde bu yapılabiliyor.
 ---------------------------------------------------------------------------------------
+Soru 8: "Null Güvenliği" (Null Safety) kavramını açıklayın.
+
+Cevap: Kotlin'de "Null Güvenliği" (Null Safety), uygulamalarda null referans hatalarını önlemek ve daha güvenli bir programlama deneyimi sağlamak için tasarlanmış bir özelliktir. Null güvenliği, uygulama kodunda null referanslarının daha etkili bir şekilde yönetilmesini sağlar ve böylece çoğu null referans hatasını önler.
+
+Null güvenliğinin temel özellikleri:
+-Nullable Türler(?)
+-Güvenli Çağrılar (Safe Calls)
+-Elvis Operatörü (Elvis Operator)
+-!! Operatörü (Not-Null Assertion Operator)
+---------------------------------------------------------------------------------------
