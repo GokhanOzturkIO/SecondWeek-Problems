@@ -472,3 +472,9 @@ büyük veri tipinin türü değişkene atanır.
 
 x(Long) == 2L(Long) true çıkar.
 ------------------------------------------------------------
+
+#12 "val x = 5 / 2.toDouble() println(x == 2.5)" gibi bir işlemin sonucu ve tipi nedir? Neden böyle olduğunu açıklayın.
+
+Int / Double = Double
+Double virgüllü say desteklediği için doğru sonuç çıkar ve true olur.
+------------------------------------------------------------
