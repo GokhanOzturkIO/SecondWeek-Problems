@@ -319,3 +319,9 @@ Ancak, Kotlin'de örtük tip genişletme (implicit widening conversions) otomati
 
 -true sonucunu verir çümkü b yi inte dönüştürdük.
 
+
+
+7.Sayısal değişkenlerde açık dönüşüm (Explicit Type Conversion) yaparken hangi fonksiyonları kullanabilirsiniz?
+
+-toByte(),toShort(),toInt(),toLong(),toFloat(),toDouble()
+
