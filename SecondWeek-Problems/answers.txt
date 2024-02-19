@@ -83,4 +83,10 @@ Soru 10: İlkel bir değişkenin nullable olması ile null değer alamaması ara
 
 Cevap: Bellek yönetimi açısından, nullable değişkenlerin bellekte null durumunu temsil etmek için ek bir durum gerektirmesi ve null kontrolü yapma ihtiyacının olması, nullable olmayan değişkenlere göre ekstra bir maliyeti ifade edebilir. 
 ---------------------------------------------------------------------------------------
+Soru 11: Nullable bir değişkenin bir değere sahip olması ile null olması arasında bellek yönetimi açısından nasıl bir fark vardır? Null değer almış bir değişken bellekte yer kaplamaz diyebilir miyiz?
+
+Cevap: Null değer almış bir nullable değişken, bellekte genellikle bir işaretçi (pointer) olarak temsil edilir ve bu işaretçi null olduğunda, gerçek veri için ayrı bir bellek alanı ayrılmaz. Bu nedenle, null değerli değişkenler bellekte genellikle daha az yer kaplar.
+Eğer nullable bir değişkenin bir değeri varsa, bu değer bellekte ayrı bir yerde saklanır ve bu durum bellek kullanımını etkiler.
+Yani bellekte yer kaplamaz diyemeyiz sadece ayrı bir bellek alanı ayrılmaz farkı vardır.
+--------------------------------------------------------------------------------------
 
