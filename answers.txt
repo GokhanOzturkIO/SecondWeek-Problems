@@ -37,3 +37,7 @@ Nullable bir değişken, bellekte ilave bir boşluk ayırır. Null değer alamay
 
 12.Nullable bir değişkenle çalışırken hangi operatörleri kullanırız? Bu operatörlerin kullanım farkları nelerdir? Hangisini ne zaman kullanmak daha anlamlıdır?
 -Nullable bir değişkenle çalışırken !!. ve ?. operatörlerini kullanırız. !!. operatörü değişkenin null olamayacağının garantisini vereceğimiz zaman kullanmalıyız. ?. operatörü de değişken null değilse çalışsın istediğimiz zaman kullanmalıyız. Kodun önemli bir yerinde yani eğer bir hata verdiğinde uygulama crash yicekse !! operatörünü, daha az önemli yerlerde ?. kullanmak daha faydalıdır.
+
+SAYILAR
+1.Kaç farklı tipte "Number" sınıfı miras alan "alt sınıf" (Child class) vardır? Bunların değer aralıkları neden önemlidir?
+-"Number" sınıfını miras alan 6 tane Child class vardır. Bunlar Byte, Short, Long, Integer, Float, Double. Değer aralıklarının bilinmesi ve buna göre kullanılması projenin performansını etkileyebilir. Bu yüzden önemlidir.
