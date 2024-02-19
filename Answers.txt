@@ -400,6 +400,9 @@ if (number1 !is Int) {
 
 #5 "val b: Byte = 1 ile val i: Int = b ve son olarak print(b == i) gibi bir kod yazıldığında çıktı ne olur? Neden böyle bir çıktı aldığınızı açıklayın.
 
+Daha küçük türler daha büyük türlerin bir alt kümesi değildir. // Due to different representations, smaller types are not subtypes of bigger ones. 
+Daha küçük türler daha büyük türlere otomatik olarak döndürülmez. 
+
 Type mismatch: inferred type is Byte but Int was expected --> Int değişkene Byte değer atarken hata aldık.
 Operator '==' cannot be applied to 'Byte' and 'Int' --> Int ve Byte'ı value karşılatrması yapamam diyor IDE. Farklı veri türlerini kullandığımızdan dolayı == karşılaştırma yapamıyor. 
 ------------------------------------------------------------
@@ -408,3 +411,18 @@ Operator '==' cannot be applied to 'Byte' and 'Int' --> Int ve Byte'ı value kar
 
 Operator '==' cannot be applied to 'Byte' and 'Int' --> Value karşılaştırması yaparken Byte ve Int'in karşılaştırılamayacağını belirten bir error.
 Farklı veri türlerini kullandığımızdan dolayı == karşılaştırma yapamıyor. 
+------------------------------------------------------------
+#7 Sayısal değişkenlerde açık dönüşüm (Explicit Type Conversion) yaparken hangi fonksiyonları kullanabilirsiniz?
+
+toByte(): Byte
+
+toShort(): Short
+
+toInt(): Int
+
+toLong(): Long
+
+toFloat(): Float
+
+toDouble(): Double
+------------------------------------------------------------
