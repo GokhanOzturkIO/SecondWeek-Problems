@@ -199,3 +199,13 @@ Ancak, Kotlin'de doğrudan bir sekizlik sayı tanımlama yoktur. Kotlin, ondalı
 
 Burada Integer.parseInt("123", 8) ifadesi, "123" sayısını 8'lik bir sayıya dönüştürmektedir. Ancak, bu dönüşüm sonucu bir ondalık sayıya atanabilir, çünkü Kotlin'de doğrudan sekizlik bir sayı tanımlama olanağı yoktur.
 ------------------------------------------------------------------------------------
+Soru 9:"Geleneksel Notasyon" (Conventional Notation) gösterimi nasıl yapılır?
+
+Cevap:Geleneksel Notasyon, belirli bir bağlamda, bir dilde veya bir alanda genel olarak kabul edilmiş veya yaygın olarak kullanılan bir gösterim şeklidir. Bu terim genellikle matematiksel ifadeler, programlama kodları, müzik notaları veya diğer sembolik gösterimler için kullanılabilir.
+
+Örneğin, matematiksel bir ifadeyi ele alalım: y=mx+b   (Geleneksel Notasyon Matematik)
+
+Bu ifade, matematikte bir doğru denklemi olan "y = mx + b" ifadesini temsil eder. Burada, y,m,x ve b sembollerinin kullanımı geleneksel matematik notasyonuna dayanmaktadır.
+
+Yani tekrar özetlemek gerekirse geleneksel Notasyon, belirli bir konsepti, formülü veya ifadeyi açık ve anlaşılır bir şekilde ifade etmek için belirli sembollerin ve kuralların kullanımını içerir. Bu, belirli bir alan veya disiplinde kabul edilmiş standartları ifade eder.
+--------------------------------------------------------------------------------------
