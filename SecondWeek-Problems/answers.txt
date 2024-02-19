@@ -187,3 +187,15 @@ val hexadecimalNumber: Int = 0xABCD
 İkilik (Binary)'de: "0b" ön ekiyle birlikte ikilik sayıları tanımlanır.
 val binaryNumber: Int = 0b1010
 --------------------------------------------------------------------------------------
+Soru 8:Sekizlik (Octal) değişkenler Java'da nasıl tanımlanır? Kotlin'de Sekizlik değişken tanımlanabilir mi?
+
+Cevap: Java'da sekizlik (octal) sayıları tanımlamak için sayıyı 0 ile başlatmak yeterlidir. 
+
+örn: int octalNumber = 0123;
+
+Ancak, Kotlin'de doğrudan bir sekizlik sayı tanımlama yoktur. Kotlin, ondalık, onaltılık ve ikilik sayıları destekler ancak özel bir sekizlik tanımlama olanağı sunmaz.Kotlin'de eğer bir sayıyı sekizlik olarak tanımlamak istiyorsak, onlu bir sayıyı 8'lik bir sayıya dönüştürmek gibi bir yöntemi kullanabiliriz.
+
+örn; val octalNumber: Int = Integer.parseInt("123", 8)
+
+Burada Integer.parseInt("123", 8) ifadesi, "123" sayısını 8'lik bir sayıya dönüştürmektedir. Ancak, bu dönüşüm sonucu bir ondalık sayıya atanabilir, çünkü Kotlin'de doğrudan sekizlik bir sayı tanımlama olanağı yoktur.
+------------------------------------------------------------------------------------
