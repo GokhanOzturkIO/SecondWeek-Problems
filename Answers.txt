@@ -58,7 +58,7 @@ Temel Türler & Null Güvenliği
 
 11.Nullable bir değişkenin bir değere sahip olması ile null olması arasında bellek yönetimi açısından nasıl bir fark vardır? Null değer almış bir değişken bellekte yer kaplamaz diyebilir miyiz?
 
--Daha sonra cevaplanacak
+-Nullable bir değişken, 'null' dışında bir değere sahip olursa, null değer almış bir değişkene göre bellekte daha fazla yer kaplar. Bunun sebebi ise, 'null' değer alan bir değişken için bellekte sadece o değişkenin referansı tutulur. Bu da değer ataması olan bir değişkene göre bellekte daha az yer kaplar. Dolayısıyla null değer almış bir değişken bellekte yer kaplamaz diyemeyiz ama değeri atanmış bir değişkene göre daha az yer kaplar diyebiliriz.
 
 12.Nullable bir değişkenle çalışırken hangi operatörleri kullanırız? Bu operatörlerin kullanım farkları nelerdir? Hangisini ne zaman kullanmak daha anlamlıdır?
 
