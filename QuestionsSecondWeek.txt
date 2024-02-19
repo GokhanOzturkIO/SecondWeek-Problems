@@ -334,6 +334,23 @@ val b1: Byte = -129
 val b2: Byte = -129
 println(b1 === b2) // false
 
+Soru: Sayısal değişkenlerde hangi matematiksel operatörler kullanılabilir?
+
+Cevap: 
+
+-Toplama (+): İki sayıyı birbirine ekler. Örneğin, 5 + 3 sonucu 8 olur.
+
+-Çıkarma (-): İki sayıyı birbirinden çıkarır. Örneğin, 5 - 3 sonucu 2 olur.
+
+-Çarpma (*): İki sayıyı birbirine çarpar. Örneğin, 5 * 3 sonucu 15 olur.
+
+-Bölme (/): İki sayıyı birbirine böler. Örneğin, 5 / 3 sonucu 1.6666666666666667 olur.
+
+-Mod (%): İki sayının bölümünden kalanı verir. Örneğin, 5 % 3 sonucu 2 olur.
+
+-Üs (**): Bir sayının başka bir sayıya göre üssünü alır. Örneğin, 5 ** 3 sonucu 125 olur.
+
+
 
 
 
