@@ -373,7 +373,28 @@ val z = x == y // Boolean, z = false
 val w = x > y // Boolean, w = true
 val t = x <= y // Boolean, t = false
 
+Soru 27: Bit düzeyinde operatörler (Bitwise operators) nelerdir? Ne amaçla kullanılır? Kotlin'de bunları nasıl kullanabilirsiniz?
 
+Cevap: 
+Bit düzeyinde operatörler (Bitwise operators), sayısal değişkenlerin bitlerini manipüle etmek için kullanılan düşük seviyeli operatörlerdir. Bu operatörler, bit düzeyinde mantıksal işlemler,
+kaydırmalar ve maskeler gibi işlemleri gerçekleştirir1. Bit düzeyinde operatörler, performansı artırmak, bellek tasarrufu sağlamak, şifreleme, sıkıştırma, grafik işleme gibi alanlarda
+kullanılabilir.
+Kotlin’de bit düzeyinde operatörler, yalnızca Int ve Long veri tiplerine uygulanabilir. Bu operatörleri kullanmak için, Kotlin’in sağladığı 7 fonksiyonu infix notasyonu ile çağırabiliriz.
+Bu fonksiyonlar şunlardır:
+
+-and(&&): İki sayının bitlerini karşılaştırır ve her iki bit de 1 ise sonuç bitini 1 yapar. Örneğin, 5 and 3 sonucu 1 olur.
+
+-or(||): İki sayının bitlerini karşılaştırır ve herhangi bir bit 1 ise sonuç bitini 1 yapar. Örneğin, 5 or 3 sonucu 7 olur.
+
+-xor: İki sayının bitlerini karşılaştırır ve bitler farklı ise sonuç bitini 1 yapar. Örneğin, 5 xor 3 sonucu 6 olur.
+
+-inv: Bir sayının bitlerini tersine çevirir. Örneğin, 5.inv() sonucu -6 olur.
+
+-shl: Bir sayının bitlerini belirtilen sayıda sola kaydırır. Örneğin, 5 shl 2 sonucu 20 olur.
+
+-shr: Bir sayının bitlerini belirtilen sayıda sağa kaydırır. Örneğin, 5 shr 2 sonucu 1 olur.
+
+-ushr: Bir sayının bitlerini belirtilen sayıda sağa kaydırır, ancak işaret bitini korur. Örneğin, -5 ushr 2 sonucu 1073741822 olur.
 
 
 
