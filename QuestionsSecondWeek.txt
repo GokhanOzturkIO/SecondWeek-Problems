@@ -274,7 +274,20 @@ Soru 19: Ondalık(Decimal), Onaltılık (Hexadecimal) ve İkilik (Binary) deği�
 
 Cevap: Ondalık(Decimal) değişkenler, 0-9 arasındaki rakamlardan oluşur. Örneğin, val x = 123 gibi. Onaltılık (Hexadecimal) değişkenler, 0x veya 0X ile başlar ve 0-9 ile A-F arasındaki
 rakamlardan oluşur. Örneğin, val y = 0x0F gibi. İkilik (Binary) değişkenler, 0b veya 0B ile başlar ve 0-1 arasındaki rakamlardan oluşur. Örneğin, val z = 0b1010 gibi. 
-Ayrıca, sayısal sabitleri daha okunabilir hale getirmek için alt çizgi (_) işareti kullanabilirsiniz. Örneğin, val oneMillion = 1_000_000 gibii
+Ayrıca, sayısal sabitleri daha okunabilir hale getirmek için alt çizgi (_) işareti kullanabilirsiniz. Örneğin, val oneMillion = 1_000_000 gibi.
+
+Soru 20: Sekizlik (Octal) değişkenler Java'da nasıl tanımlanır? Kotlin'de Sekizlik değişken tanımlanabilir mi?
+
+Cevap: Sekizlik (Octal) değişkenler 8'lik sayı sisteminde ifade edilen sayılardır. Sekizlik sayılar, 0-7 arasındaki rakamlardan oluşur. Java dilinde bu tanımlamayı yapmak için başına 0 eklemek
+yeterlidir. Örneğin, int x = 034 gibi. Kotlinde bu işlemi doğrudan yapmak mümkün değildir çünkü sekizlik değişkenler yoktur yalnızca ikilik, ondalık ve onaltılık olarak tanımlanabilir. Dolaylı
+olarak ise val octNumber = "155".toInt(8)  => Stringte tanimlayip onu da toInt ile 8'ilk yapmak istedigimizi belirtebiliriz.
+
+
+
+
+
+
+
 
     
     
