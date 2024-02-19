@@ -1,0 +1,16 @@
+Temel Türler & Null Güvenliği
+
+
+Soru 1: val ile var arasındaki fark nedir?
+
+Cevap: Val: Value/Immutable: İlk aldığı değer değiştirilemez olarak bilinen değişkendir.
+       Var: Variable: Değişebilir değişkendir.
+
+Çok bilinenin aksine val değişkene immutable yerine ready only denilmelidir.
+
+Performans açısından farklarına bakacak olursak yok denecek kadar azdır.
+Eğer akademik level'da bir konu ise ve salt dümdüz bir kodu konuşuyorsak (var) kullanmak daha performanslı ama çok küçük bir performans farkı bu.
+
+Günlük hayat problemlerinde ise (val) kullanmak var'a göre daha avantajlı hale geliyor çünki; Thread işlemlerden dolayı var maliyet ve performansta düşüş yaşatıyor.
+--------------------------------------------------------------------------------------
+
