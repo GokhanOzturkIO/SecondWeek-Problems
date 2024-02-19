@@ -286,3 +286,13 @@ fun printLength(value: Any) {
 }
 Yukarıdaki örnekte, value değişkeni bir Any türündedir, ancak is operatörü ile kontrol edildikten sonra Kotlin bu blok içinde value'yi String olarak akıllıca ele alır.
 
+
+
+3."Güvenli & Güvensiz" operatörler nelerdir?
+
+-Kotlin'de "Güvenli (Safe) Operatör" ve "Güvensiz (Unsafe) Operatör" terimleri, özellikle nullable (nullable olabilen) türlerle çalışırken değerlere güvenli bir şekilde erişimi ifade etmek için kullanılır.
+-Güvenli (Safe) Operatör (?.):
+Güvenli operatör, bir nesnenin null olup olmadığını kontrol ederek, null değilse ancak null olma olasılığı varsa nesnenin özelliklerine veya fonksiyonlarına güvenli bir şekilde erişimi sağlar.
+-Güvensiz (Unsafe) Operatör (!!.):
+Güvensiz operatör, bir nesnenin null olup olmadığını kontrol etmeden doğrudan erişim sağlar. Bu operatörü kullanmak, programcının nesnenin kesinlikle null olmadığına emin olduğu durumlarda uygun olabilir.
+
