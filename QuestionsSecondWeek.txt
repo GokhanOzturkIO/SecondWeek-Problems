@@ -236,6 +236,23 @@ val y = 1000000000000 // Long tipinde
 
  küçük L harfi yani "l" 1 rakamı ile karışabileceği için küçük l kullanımı Kotlin dilinde yoktur.
 
+Soru 16: Tek duyarlıklı (Single precision) ve Çift duyarlıklı (Double precision) kavramlarını açıklayın.
+
+Cevap: Tek duyarlıklı ve çift duyarlıklı kavramları kotlin dilinde floating point number ifadesi için kullanılmaktadır. Kotlin'de bu iki kavram için Float ve Double veri tipi kullanılmaktadır.
+Tek duyarlıklı sayılar (Float) bellekte 32 bit çift duyarlıklı sayılar (Double) 64 bit yer tutmaktadır. Bu durum farklı hassasiyet aralıklarında depolanmalarını sağlar. Float veri tipininin
+hassasiyeti 6-7 ondalık basamak iken, Double değişkenlerin hassasiyeti ise 15 basamaktır. Bu nedenle hesaplamalarda Double kullanmak daha güvenlidir
+
+Kotlin'de default olarak ondalık sayı tanımlaması yaparsak direkt olarak Double tipini çıkaracaktır
+
+val pi = 3.14 // Double
+
+Eğer Float tipinde olmasını istiyorsak bunu açıkca belirtmemiz gerekmektedir. F veya f keyword'u ile ancak sayımız 6-7 basamaktan daha fazla ise yuvarlanma işlemi yapacaktır. 
+
+val e = 2.7182818284 // Double
+val eFloat = 2.7182818284f // Float, gerçek değer 2.7182817
+
+
+
 
 
 
