@@ -458,3 +458,9 @@ bu yüzden kod satırımızı kotlin bu şekilde yorumlar.
 val result = Int.MAX_VALUE + Int.MAX_VALUE // Int + Int = ? --> Int
 İki aynı türdeki değişkenin maks değeri toplanıp yeni değişkene atanırsa yeni değişken yine aynı tipte olur. Sonuç da o veri türünün sınırının dışında olacağından dolayı hatalı sonuç oluşur.
 ------------------------------------------------------------
+
+#10 "val x = 5 / 2 println(x == 2)" gibi bir işlemin sonucu ve tipi nedir? Neden böyle olduğunu açıklayın.
+
+Int / Int = Int olur.
+5 / 2 bir alt Int sayıya yuvarlanırsa da sonuç 2 olmuş olur.
+------------------------------------------------------------
