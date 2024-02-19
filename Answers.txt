@@ -325,3 +325,7 @@ Ancak, Kotlin'de örtük tip genişletme (implicit widening conversions) otomati
 
 -toByte(),toShort(),toInt(),toLong(),toFloat(),toDouble()
 
+
+8.val result = 1L + 3" // "Long + Int" gibi bir işlemin sonucunda "result" değişkeninin tipi ve değeri ne olur? Neden böyle olduğunu açıklayın.
+
+-long türünde olur çünkü kotlin büyük olanı alıyor.
