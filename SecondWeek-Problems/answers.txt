@@ -215,3 +215,8 @@ Cevap: Sayısal değerlerde alt çizgi (underscore) kullanımı, sayıları daha
 
 Alt çizgiler milyarları,ondalık sayıları, telefon numaralarını, kredi kartlarını, Tc kimlik no,bytes daha okunabilir hale getirebilir. İsteğe bağlı kullanılır ve bu alt çizgiler Kotlin tarafından okunmaz sayı değeri neyse o okunur sadece.
 -------------------------------------------------------------------------------------
+Soru 11:== ile neyi karşılaştırırız? === ile neyi karşılaştırırız?
+
+Cevap: "==" operatörü değişkenlerin değerini karşılaştırır.
+       "===" operatörü değişkenlerin referansını karşılaştırır.
+--------------------------------------------------------------------------------------
