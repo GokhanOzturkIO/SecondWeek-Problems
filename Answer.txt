@@ -116,3 +116,8 @@ Yukarıdaki örneğe bakarsak tip belirtimi yapılmadan 50 değeri atanmış. No
 Eğer atanan değer Int değer aralığından büyük ise bu defa default olarak Long set edilir.
 
 ===========================
+
+15-) Float değişken oluştururken F ve f harfleri varken, Long değişken oluştururken neden küçük l harfi yoktur?
+
+Çünkü küçük l harfinin 1 sayısı ile karıştırılma durumu söz konusu olabilir. Bundan dolayı Long değişken oluşturulurken büyük L kullanılması gerekmektedir.
+
