@@ -309,3 +309,12 @@ Unsigned Long veya Unsigned Int kullanılabilir. -> Belirli bir sınırı vardı
 String olarak veri saklayabiliriz. -> Sistemin ve OS'un izin verdiği ölçüde sınırları belirlenir.
 BigInteger sınıfını kullanabiliriz. -> Sistemin ve OS'un izin verdiği ölçüde sınırları belirlenir.
 ------------------------------------------------------------
+
+#17 Double ve Float değişkenler kullanılırken "yuvarlama" davranışı nasıldır? Bu nasıl değiştirilebilir?
+
+Varsayılan olarak en yakın tamsayıya yuvarlar. Çeştli fonksiyonlar kullanarak bunu değiştirebiliriz.
+
+round() - en yakın tam sayıya yuvarlar.
+ceil() - en yakın tam sayıya yukarı yuvarlar.
+floor() - en yakın tam sayıya aşağı yuvarlar.
+------------------------------------------------------------
