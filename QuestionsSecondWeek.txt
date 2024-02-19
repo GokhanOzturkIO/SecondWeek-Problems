@@ -318,7 +318,7 @@ println(s1 === s2) // false
 
 Nesne referansı ve değer eşitliği kontrollerinde kullanabiliriz bu iki operatörü.
 
-Soru: === operatörü ile karşılaştırma yaparken Byte değer aralığı neden önemlidir? Kotlin bu aralığa göre neden özel bir davranış sergiler?
+Soru 24: === operatörü ile karşılaştırma yaparken Byte değer aralığı neden önemlidir? Kotlin bu aralığa göre neden özel bir davranış sergiler?
 
 Cevap: === operatörü, Kotlin’de iki değişkenin aynı nesneyi referans edip etmediğini kontrol eder. Byte değer aralığı, -128 ile 127 arasındaki sayıları kapsar. Kotlin, bu aralıktaki Byte
 değerlerini, bellek tasarrufu sağlamak için aynı nesneye referans eden Int değerleri olarak tutar. Bu nedenle, === operatörü ile karşılaştırma yaparken, bu aralıktaki Byte değerleri her zaman
@@ -334,7 +334,7 @@ val b1: Byte = -129
 val b2: Byte = -129
 println(b1 === b2) // false
 
-Soru: Sayısal değişkenlerde hangi matematiksel operatörler kullanılabilir?
+Soru 25: Sayısal değişkenlerde hangi matematiksel operatörler kullanılabilir?
 
 Cevap: 
 
@@ -349,6 +349,29 @@ Cevap:
 -Mod (%): İki sayının bölümünden kalanı verir. Örneğin, 5 % 3 sonucu 2 olur.
 
 -Üs (**): Bir sayının başka bir sayıya göre üssünü alır. Örneğin, 5 ** 3 sonucu 125 olur.
+
+Soru 26: Sayısal değişkenlerde hangi karşılaştırma operatörleri kullanılabilir?
+
+Cevap: 
+Eşitlik (==): İki sayının eşit olup olmadığını kontrol eder. Örneğin, 5 == 3 sonucu false olur.
+
+Eşitsizlik (!=): İki sayının eşit olmadığını kontrol eder. Örneğin, 5 != 3 sonucu true olur.
+
+Küçüklük (<): Bir sayının diğerinden küçük olup olmadığını kontrol eder. Örneğin, 5 < 3 sonucu false olur.
+
+Büyüklük (>): Bir sayının diğerinden büyük olup olmadığını kontrol eder. Örneğin, 5 > 3 sonucu true olur.
+
+Küçük Eşit (<=): Bir sayının diğerinden küçük veya eşit olup olmadığını kontrol eder. Örneğin, 5 <= 3 sonucu false olur.
+
+Büyük Eşit (>=): Bir sayının diğerinden büyük veya eşit olup olmadığını kontrol eder. Örneğin, 5 >= 3 sonucu true olur.
+
+Bu operatörleri kullanarak, sayısal değişkenleri birbirleriyle karşılaştırabilir ve mantıksal ifadeler oluşturabilirsiniz. Örneğin:
+
+val x = 5 // Int
+val y = 3 // Int
+val z = x == y // Boolean, z = false
+val w = x > y // Boolean, w = true
+val t = x <= y // Boolean, t = false
 
 
 
