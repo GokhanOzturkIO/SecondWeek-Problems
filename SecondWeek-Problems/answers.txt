@@ -89,4 +89,17 @@ Cevap: Null değer almış bir nullable değişken, bellekte genellikle bir işa
 Eğer nullable bir değişkenin bir değeri varsa, bu değer bellekte ayrı bir yerde saklanır ve bu durum bellek kullanımını etkiler.
 Yani bellekte yer kaplamaz diyemeyiz sadece ayrı bir bellek alanı ayrılmaz farkı vardır.
 --------------------------------------------------------------------------------------
+Soru 12:Nullable bir değişkenle çalışırken hangi operatörleri kullanırız? Bu operatörlerin kullanım farkları nelerdir? Hangisini ne zaman kullanmak daha anlamlıdır?
+
+Cevap: Nullable bir değişkenle çalışırken (!!.) ve (?.) operatörlerini kullanırız.
+
+(?.): Bu operatör, bu değer nullable olabilir ama sen buna daha sonradan bir başka değer atadıysan bu kod çalışsın demek. Yani null hariç başka bir değer aldıysa çalıştır, değeri null ise bu kodu çalıştırma anlamına gelir.
+
+(!!.): Ben vereceğim değerin null olmayacağını garanti ediyorum. Sen değer ne gelirse gelsin bu kodu çalıştır anlamına geliyor.Eğer değeri null gelirse zaten exception hatası veriyor.
+
+!!. Uygulamayı crash yaptığı için çok kritik bölgelerde örn kredi tutarları gibi alanlarda hata görmektense uygulamayı crash et diyebiliriz.
+
+?. Uygulamada sadece hata mesajı bildirir, çok kritik olmayan bölgelerde örn girişte kullanıcı ismini vererek hoşgeldin demediyse bu sorun uygulamayı crash edecek kadar mühim bir sorun olmadığından hata vermesi yeterlidir.
+
+-------------------------------------------------------------------------------------
 
