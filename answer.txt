@@ -65,4 +65,8 @@
 ## 1) Kaç farklı tipte "number" sınıfı miras alan "alt sınıf" (child class) vardır? Bunların değer aralıkları neden önemlidir?
  Byte, Short, Int, Long, Double, Float sınıfları Number sınıfının child class'larıdır. Bunların değer aralıkları bellek yönetimi açısından önemlidir
 
+## 2) Eğer bir değişkene tip belirtimi yapılmaz ve bir değer atanırsa, Kotlin tip çıkarımını nasıl yapar?
+ Kotlin böyle bir durumda eğer değer "Byte" ile "Integer" değer aralığındaysa "Integer" olarak, eğer değer "Int" değer aralığından büyük ise "Long" olarak
+ tip çıkarımı yapar. Ondalıklı sayılarda ise Float ile Double değerler için aynı mentalite ile davranmaktadır.
+
 
