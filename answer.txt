@@ -77,3 +77,8 @@
  Double Precision: Bilgisayar hafızasında 64 bitlik yer kaplar  Örnek ==>  3.1415926535897932384626433832795 (Daha fazla ondalık basamağı korunur)
  Bu durumlardan biri ihtiyaca göre seçilebilir. Single Precision bellekte daha az yer kaplar. Double precision daha hassastır fakat bellekte daha fazla yer kaplar. 
  
+## 5) Double ve Float değişkenlerle çalışırken ondalık ayıracı olarak hangi işaretler kullanılır? Bu ayıraçların kullanımında nelere dikkat etmek gerekir?
+ Kotlinde ondalıklı sayılar ile çalışırken nokta kulanılır(.) Burada dikkat edilmesi gerekilen en önemli durum ise bazı ulusların dillerinde kullanılan
+ ayraç tipleridir. Bazı ulusal dillerde virgül ayraç olarak kullanılırken bazılarında nokta ayraç olarak kullanılabilir. Developerlar uygulamalarını
+ geliştirirken bu durumu göz önünde bulundurmalıdırlar.
+
