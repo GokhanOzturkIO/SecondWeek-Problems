@@ -114,4 +114,7 @@
  Kotlin === operatörünü referans karşılaştırması için kullanır. Kotlinde Byte değer aralığı en çok kullanılan sayısal aralık olduğu için, bellek yönetiminde
  bu aralığa özel bir yönetim sağlar. Byte veri tipi -128 ile 127 arasındadır. 
 
+## 13) Sayısal değişkenlerde hangi matematiksel operatörler kullanılabilir?
+ "==", "!=", ">", "<", ">=", "<=", "===" operatorleri kullanılır.
+
 
