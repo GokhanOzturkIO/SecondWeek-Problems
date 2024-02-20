@@ -817,6 +817,14 @@ Tam sayı bölmesi yapmak istemiyorsanız, bölünen veya bölen değerlerden bi
 Double tipindedir ve nokta (.) ile ayrılır. Örneğin, 5.0 / 2 veya 5 / 2.0 işlemlerinde, bölüm 2.5 olarak verilir. Bu durumda, x değişkeninin değeri 2.5 olur. println(x == 2) ifadesinde,
 x değişkeninin değeri 2 ile karşılaştırılır ve sonucu false olarak döndürür. Bu ifadenin tipi yine Boolean olur, çünkü eşitlik operatörü == aynı şekilde çalışır.
 
+Soru: 50: "val x = 5L / 2 println(x == 2L)" gibi bir işlemin sonucu ve tipi nedir? Neden böyle olduğunu açıklayın.
+
+Cevap: Bu işlemin sonucu true ve tipi Boolean olur. Bunun nedeni, Kotlin’in sayısal işlemlerde tam sayı bölmesi (integer division) yapmasıdır. Tam sayı bölmesi, bölümün
+ondalık kısmını yuvarlamadan atar. Örneğin, 5L / 2 işleminde, bölüm 2.5 olur, ancak tam sayı bölmesi sonucu 2 olarak verir. Bu durumda, x değişkeninin değeri 2 olur.
+println(x == 2L) ifadesinde, x değişkeninin değeri 2L ile karşılaştırılır ve sonucu true olarak döndürür. Bu ifadenin tipi Boolean olur, çünkü eşitlik operatörü ==, iki değerin
+birbirine eşit olup olmadığını kontrol eder ve sonucu true veya false olarak döndürür.
+
+
 
 
 
