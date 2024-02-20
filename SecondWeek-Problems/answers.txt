@@ -488,4 +488,8 @@ Soru 11:"val x = 5L / 2 println(x == 2L)" gibi bir işlemin sonucu ve tipi nedir
 
 Cevap: işlemin sonucu ondalık sayı kısmı atıldığı ve tam sayı alındığı için 2L olacak (2L==2L) çıktı olarakta true verecek, Tipi long.
 --------------------------------------------------------------------------------------
+Soru 12:"val x = 5 / 2.toDouble() println(x == 2.5)" gibi bir işlemin sonucu ve tipi nedir? Neden böyle olduğunu açıklayın.
 
+Cevap: toDouble ifadesi kodlinin varsayılan olarak ondalıkları atma yani tam sayılarla işlem yapmasını engeller ve ondalık çıktı almamızı sağlar.Ondalık çıktı ile 2.0 elde ederiz bu sebeple 5/2.toDouble() kodundan sonuç olarak 2.5 sonucu alırız. (2.5==2.5) sonucundan da true çıktısı alırız. Tipi Double
+
+---------------------------------------------------------------------------------------
