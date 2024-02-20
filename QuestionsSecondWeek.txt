@@ -788,6 +788,12 @@ val b: Byte = CONVERT(i, Byte) // CONVERT fonksiyonu
 
 (Ancak 2.yolu sadece SQL server için kullanabiliyoruz) 
 
+Soru: "val result = 1L + 3" // "Long + Int" gibi bir işlemin sonucunda "result" değişkeninin tipi ve değeri ne olur? Neden böyle olduğunu açıklayın.
+
+Cevap: Bu işlem sonucunda result değişkeninin tipi Long ve değeri 4 olur. Bunun nedeni Kotlin'in sayısal işlemlerde tipleri en uygun türe dönüştürüyor olmasıdır. İşlemdeki
+en büyük tip hangisi ise ona dönüşüm gerçekleşir. Büyük olan tipe çevirmesinin nedenleri de küçük olan tipin yapılacak işlem için yetersiz geleceği durumlar olabilir. Bu da 
+istenmeyen sonuçlar doğurabilir.
+
 
 
 
