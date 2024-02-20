@@ -752,7 +752,14 @@ Cevap:
 Bu şekilde iki tane hata alırız bu kodu çalıştırdığımızda çünkü implict widening conversion yani örtük tip dönüşümü Kotlin dilinde yoktur.Yani byte'ı Int' e doğrudan çeviremeyiz.
 b.toInt() kullanabiliriz bunun için ancak bu sefer de ikinci hata kodunu alacağız sorun ise Byte bir değer ile Int bir değerin karşılaştırılamaz olduğudur.
 
+Soru 45: "val b: Byte = 1 ile val i: Int = b.toInt() ve son olarak print(b == i) gibi bir kod yazıldığında çıktı ne olur? Neden böyle bir çıktı aldığınızı açıklayın.
 
+Cevap : Bu kodda yer alan problem Byte bir değer ile Int bir değerin karşılaştırılamıyor olduğudur eğer çalıştırmayı denersek:
+
+
+Operator '==' cannot be applied to 'Byte' and 'Int'  şeklinde bir hata alırız. 
+
+Bu sorunu print(b.toInt() == i) şu şekilde çözebiliriz cevabımız true yani b'nin i değişkenine eşit olması durumudur.
 
 
 
