@@ -446,4 +446,9 @@ Güvensiz çağırma operatörü, bir nesnenin null olup olmadığını kontrol 
 
 Kritik bölgelerde (!) crash etmeyi isteyebilirken, kritik olmayan bölgelerde (?) hata vermesi bizim için yeterli olacaktır.
 ---------------------------------------------------------------------------------------
+Soru 4:Sayısal değişkenlerde örtük tip genişletme (implicit widening conversions) ne demektir? Kotlin'de bu neden yapılamaz?
 
+Cevap:Örtük tip genişletme (implicit widening conversion), bir sayısal türün daha küçük bir türden daha büyük bir türe dönüşümünü ifade eder. Yani, küçük bir türdeki bir değeri daha büyük bir türe otomatik olarak dönüştürme işlemidir. Bu işlemde veri kaybı olmaz, çünkü küçük türdeki değer daha büyük bir türde sığar.
+
+Ancak, Kotlin'de bu tür otomatik dönüşümler (örtük tip genişletmeler) yapılamaz. Kotlin, tür güvenliği ve güvenilirliği amacıyla bu tür otomatik dönüşümleri sağlamaz. Bu, programcının bilinçli bir şekilde tür dönüşümlerini yapmasını ve bu işlemi kontrol altında tutmasını sağlar.Kotlin bizden açık dönüşüm yapmamızı bekler.
+-------------------------------------------------------------------------------------
