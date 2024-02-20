@@ -499,6 +499,12 @@ ULong veri tipleri Unsigned sınıfının alt sınıflarıdır. Bu sayede, onlar
     val z: ULong = x.toULong()
     val w: UInt = y.toUInt()
 
+Soru 32:  "İşaretsiz" değişkenlerin harf gösterimi nasıldır?
+
+Cevap: “İşaretsiz” değişkenlerin harf gösterimi, değişkenin tanımlandığı veri tipine bağlıdır. Örneğin, UInt veri tipi için U harfi, ULong veri tipi için UL harfi, UByte veri tipi
+için UB harfi, UShort veri tipi için US harfi kullanılır. Bu harfler, değişkenin işaretsiz olduğunu belirtmek için değişken değerinin sonuna eklenir.
+
+ Örneğin, val x: UInt = 42U şeklinde bir tanımlama yapılabilir
 
 
 
