@@ -160,3 +160,9 @@ Octal değişkenler Kotlin'de desteklenmez. Java'da ise aşağıdaki gibi tanım
 int octalNumber = 0123;
 
 ===========================
+
+21-) "Geleneksel Notasyon" (Conventional Notation) gösterimi nasıl yapılır?
+
+153.5e10 şeklinde gösterimi yapılır.
+
+===========================
