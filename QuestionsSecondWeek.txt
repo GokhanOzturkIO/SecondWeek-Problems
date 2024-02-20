@@ -566,6 +566,19 @@ ULong: 0 ile 18.446.744.073.709.551.615 arasında 64 bit işaretsiz tam sayı
 
  Örneğin, UInt.MAX_VALUE 4.294.967.295 değerini verir.
 
+Soru 38: "İşaretsiz" değişken türleri (UInt, ULong vs.) kullanırken, Java API'leri ile uyumluluk konusunda ne gibi sorunlar olabilir? Bunları çözmek için neler yapabilirsiniz?
+
+Cevap:  İşaretsiz değişken türleri ile Java API’leri arasındaki uyumluluk sorunlarını çözmek için şunları yapabilirsiniz:
+
+İşaretsiz değişkenleri kullanmadan önce, Java ile etkileşime girecek kodunuzun olup olmadığını kontrol edin. Eğer varsa, işaretsiz değişkenleri işaretli değişkenlere dönüştürmek
+için .to<Type>() fonksiyonunu kullanın.
+ Örneğin, val x: UInt = 10u; val y: Int = x.toInt() şeklinde bir dönüşüm yapabilirsiniz. Ancak, dönüştürülen değer işaretli değişkenin sınır aralığına uygun olmalıdır, aksi takdirde
+hata alırsınız.
+İşaretsiz değişkenleri Java’nın standart kütüphaneleriyle kullanırken, uygun veri türlerine dikkat edin. Örneğin, işaretsiz bir UInt değişkenini bir ArrayList’e eklemek isterseniz,
+ArrayList<Int> yerine ArrayList<UInt> kullanın. Böylece, değişkenin değeri korunur ve hata vermez.
+İşaretsiz değişkenleri performans açısından kritik olan kodlarda kullanmaktan kaçının. Eğer mümkünse, işaretsiz değişkenleri işaretli değişkenlere dönüştürün veya işaretli
+değişkenleri kullanın. Böylece, bellek ve işlem kaybını önleyebilirsiniz.
+
 
 
 
