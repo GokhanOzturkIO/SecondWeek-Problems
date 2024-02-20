@@ -670,19 +670,65 @@ Bu kodu çalıştırdığımızda, şu hatayı alırız:
 
 Unresolved reference: length
 
+SORU 41: "Güvenli & Güvensiz" operatörler nelerdir?
+
+Cevap: Güvenli ve güvensiz operatörler, Kotlin’de null olabilen (nullable) değişkenlerle çalışmak için kullanılan operatörlerdir. Null olabilen değişkenler, değerleri null
+olabilecek değişkenlerdir. Örneğin:
 
 
+var x: String? = null // x null olabilir
+var y: String = "Merhaba" // y null olamaz
+
+Güvenli operatörler, null olabilen değişkenlerin null olmadığından emin olmak için kullanılır. Güvenli operatörler şunlardır:
+
+?. operatörü: Bu operatör, değişkenin null olup olmadığını kontrol eder. Eğer null ise, işlemi yapmaz ve null döndürür. Eğer null değilse, işlemi yapar ve sonucu döndürür.
+ Örneğin:
 
 
+    var x: String? = null
+    var y: String = "Merhaba"
+
+    println(x?.length) // null
+    println(y?.length) // 6
+
+?: operatörü: Bu operatör, değişkenin null olup olmadığını kontrol eder. Eğer null ise, belirtilen varsayılan değeri döndürür. Eğer null değilse, değişkenin kendisini döndürür.
+ Örneğin:
+
+    var x: String? = null
+    var y: String = "Merhaba"
+
+    println(x ?: "Boş") // Boş
+    println(y ?: "Boş") // Merhaba
+
+?.let operatörü: Bu operatör, değişkenin null olup olmadığını kontrol eder. Eğer null ise, hiçbir şey yapmaz. Eğer null değilse, değişkeni bir lambda fonksiyonuna gönderir.
+ Örneğin:
+
+    var x: String? = null
+    var y: String = "Merhaba"
+
+    x?.let { println("x'in uzunluğu: ${it.length}") } // Hiçbir şey yapmaz
+    y?.let { println("y'nin uzunluğu: ${it.length}") } // y'nin uzunluğu: 6
+
+Güvensiz operatörler, null olabilen değişkenlerin null olmadığını varsayar ve işlemi yapar. Eğer değişken null ise, bir NullPointerException hatası fırlatır.
+ Güvensiz operatörler şunlardır:
+
+!! operatörü: Bu operatör, değişkenin null olmadığını belirtir. Eğer değişken null ise, bir NullPointerException hatası fırlatır. Örneğin:
+
+   var x: String? = null
+    var y: String = "Merhaba"
+
+    println(x!!.length) // Hata: NullPointerException
+    println(y!!.length) // 6
 
 
+as operatörü: Bu operatör, değişkenin belirtilen türe dönüştürülmesini sağlar. Eğer değişken null ise veya dönüştürülemez ise, bir ClassCastException hatası fırlatır.
+ Örneğin:
 
+    var x: Any? = null
+    var y: Any = "Merhaba"
 
-
-
-
-
-
+    println(x as String) // Hata: ClassCastException
+    println(y as String) // Merhaba
 
 
 
