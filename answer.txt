@@ -60,4 +60,9 @@
  göre çalışır. "!!" operatörü ise IDE ye bu değişkenin değerinin null olmayacağının teminatını vermektedir. Eğer null gelirse uygulamanın "crash" olmasının 
  önünü açmaktadır. Gerekli durumlarda bu iki operatörden biri kullanılmaktadır.
 
+# Sayılar
+
+## 1) Kaç farklı tipte "number" sınıfı miras alan "alt sınıf" (child class) vardır? Bunların değer aralıkları neden önemlidir?
+ Byte, Short, Int, Long, Double, Float sınıfları Number sınıfının child class'larıdır. Bunların değer aralıkları bellek yönetimi açısından önemlidir
+
 
