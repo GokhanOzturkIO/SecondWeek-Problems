@@ -426,4 +426,13 @@ is operatörü, bir nesnenin belirli bir türle uyumlu olup olmadığını kontr
 
 !is operatörü, bir nesnenin belirli bir türle uyumlu olmadığını kontrol etmek için kullanılır.
 -------------------------------------------------------------------------------------
+Soru 2:"Akıllı Dönüşüm" (Smart Cast) ne demektir? Farklı kod örnekleri ile açıklayın. Bu özelliğin sınırlamaları nelerdir?
 
+Cevap:"Akıllı Dönüşüm" (Smart Cast), Kotlin'in tür güvenliği özelliğinden biridir. Bu özellik, belirli bir tür kontrolünden sonra ilgili değişkenin türünün otomatik olarak dönüşümünü sağlar. Bu sayede, kodunuz daha okunabilir ve tür güvenliği sağlanmış olur. Akıllı dönüşüm, ifade içinde yapılan tür kontrolü sonrasında ilgili değişkenin türünün otomatik olarak değişmesini ifade eder.
+
+Sınırlamaları şunlardır;
+
+Akıllı dönüşüm sadece belirli koşullar altında çalışır. Örneğin, if veya when ifadelerinde yapılan tür kontrolü sonrasında geçerlidir.
+Akıllı dönüşümün kullanılabileceği yerler sınırlıdır ve her durumda otomatik olarak uygulanmaz.
+Akıllı dönüşümün çalışabilmesi için, ilgili değişkenin kullanıldığı blok içinde tür kontrolü yapılması gerekir.
+---------------------------------------------------------------------------------------
