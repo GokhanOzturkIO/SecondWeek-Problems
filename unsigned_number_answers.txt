@@ -65,3 +65,14 @@ karşılaşılabilecek taşma (overflow) ve taşma olmaması (underflow) durumla
     UShort -> 0 .. 65,535
     UInt -> 0 .. 4,294,967,295 (232 - 1)
     ULong -> 0 .. 18,446,744,073,709,551,615 (264 - 1)
+
+------------------------------------------------------------------------------------------------------------------------
+
+9 - "İşaretsiz" değişken türleri (UInt, ULong vs.) kullanırken, Java API'leri ile uyumluluk konusunda ne gibi sorunlar olabilir?
+Bunları çözmek için neler yapabilirsiniz?
+
+  Java, işaretsiz değişkenleri desteklemediği için sorunlar yaşanabiliyor. Java 'int' bir değer
+      beklerken, Kotlin'de 'UInt' vermek uyumsuzluk sağlayabiliyor. Buna çözüm olarak işaretsiz
+      değişkenleri işaretli değişkenlere dönüştürebiliriz. Bir diğer sorun ise Kotlin'de 'UInt'
+      olarak tanımladığımız bir değişken Java'da 'int' bir değişkene dönüştürülürken veri kayıpları
+      yaşanabilir.
