@@ -106,4 +106,8 @@
 ## 10) Sayısal değişkenlerde alt çizgi (underscore) nasıl kullanılır? Kotlin bunu nasıl yorumlar?
  Kotlin sayısal değerlerde kullanılan _ (alt çizgi) ifadesini görmezden gelir. Bu sayısal verilerin okunabilirliğini arttırır.
 
+## 11) == ile neyi karşılaştırırız? === ile neyi karşılaştırırız?
+ == operatörü ile bir değişkenlerin değerlerini karşılaştırırız
+ === ifadesi ile değişkenleri referanslarını karşılaştırırız
+
 
