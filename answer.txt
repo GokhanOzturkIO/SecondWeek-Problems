@@ -87,3 +87,8 @@
  bu durumda yuvarlama işlemi yapılır. Son basamak 5 ve 5 ten büyükse yukarıya doğru, küçük ise aşağı yönlü yuvarlama işlemi yapılır. Float ise bu durum 7. basamak içinde geçerlidir. Hangi değişken tipinin kullanılacağı
  ise işlemlerdeki hassasiyet ve uygulamanın belek yönetimi göz önünde bulundurularak yapılmalıdır. Çünkü Float bellekte 32 bit Double ise 64 bitlik alan kaplamaktadır.
 
+## 7) Ondalık(Decimal), Onaltılık (Hexadecimal) ve İkilik (Binary) değişkenleri Kotlin'de nasıl tanımlayabilirsiniz?
+ Ondalık(Decimal): Tanımlamak için herhangi bir özel söz dizimine gerek yoktur. Günlük hayatta kullanılan bir sayı metodolojisidir.
+ Onaltılık(Hexadecimal): Bu sayıalrın başına "0x" veya "0X" kullanılarak tanımlanırlar "val hexNum: Int = 0x2B"
+ İkilik(Binary): İkilik sayıların başına ise "0b" veya "0B" eki eklenerek tanımlanabilir "val binaryNum: Int = 0b101110"
+
