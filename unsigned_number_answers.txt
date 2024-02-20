@@ -51,3 +51,17 @@ Soru 6: "İşaretsiz" değişkenlerin kullanım amaçları nelerdir?
  - İşaretsiz değişkenlerin kullanım amacı sadece 0 ve pozitif değerleri içeren sayıları daha az yer kaplayarak ve daha fazla
  değer aralığı içerisinde çalışmak için kullanılabilir.
 
+------------------------------------------------------------------------------------------------------------------------
+
+Soru 7: "İşaretsiz" değişkenlerle yapılan matematiksel işlemlerde, özellikle büyük sayılarla çalışırken
+karşılaşılabilecek taşma (overflow) ve taşma olmaması (underflow) durumları için Kotlin nasıl bir yönetim sağlar?
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+8- "İşaretsiz" değişkenlerin sınırlamaları nelerdir?
+
+    UByte -> 0 .. 255
+    UShort -> 0 .. 65,535
+    UInt -> 0 .. 4,294,967,295 (232 - 1)
+    ULong -> 0 .. 18,446,744,073,709,551,615 (264 - 1)
