@@ -190,3 +190,17 @@ Eğer ki primitive tipte bir değişken nullable yapılır ve === operatörü il
 25-) Sayısal değişkenlerde hangi matematiksel operatörler kullanılabilir?
 Toplama (+), Çıkarma (-), Çarpma (*) , Bölme (/), Mod Alma (%)
 
+===========================
+
+26-) Sayısal değişkenlerde hangi karşılaştırma operatörleri kullanılabilir?
+< (Küçüktür)
+> (Büyüktür)
+>= (Büyük eşittir)
+<= (Küçük eşittir)
+== (Eşittir)
+!= (Eşit değildir)
+
+===========================
+
+
+
