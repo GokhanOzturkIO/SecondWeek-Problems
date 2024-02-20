@@ -166,3 +166,12 @@ int octalNumber = 0123;
 153.5e10 şeklinde gösterimi yapılır.
 
 ===========================
+
+22-) Sayısal değişkenlerde alt çizgi (underscore) nasıl kullanılır? Kotlin bunu nasıl yorumlar?
+
+Sayıyı daha okunaklı hale getirmek maksadıyla alt çizgi kullanılır.
+
+1_000_000 sayısını Kotlin 1000000 şeklinde yorumlar.
+
+===========================
+
