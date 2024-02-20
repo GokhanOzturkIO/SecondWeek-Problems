@@ -163,3 +163,5 @@
  Kotlinde işaretsiz "Long" türü için bir harf gösterimi yoktur. Fakat 4. sorudaki a2 değişkeni gibi atanan Integer değer aralığının üstündeki sayılara "ULong" tipinde bir veri tanımlanılabilir. Tabi sonuna 
  "u" harfi konulması gerektiğini unutmayalım.
 
+## 6) "İşaretsiz" değişkenlerin kullanım amaçları nelerdir?
+ Pozitif tamsayıları temsil etmek için kullanılırlar. Performans optimizasyonu açısından bazı durumlarda daha hızlı işlenebilirler. Ayrıca işaretli sayılara göre pozitif değer aralıkları daha geniştir.
