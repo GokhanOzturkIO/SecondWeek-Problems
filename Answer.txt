@@ -145,6 +145,9 @@ Float tek duyarlıklı olması hasebiyle bellekte 32 bit’lik bir yer kaplar. E
 
 ===========================
 
+19-) Ondalık(Decimal), Onaltılık (Hexadecimal) ve İkilik (Binary) değişkenleri Kotlin'de nasıl tanımlayabilirsiniz?
 
-
+val dec = 130 //Decimal
+val hexDec = 0x0FF // Hexadecimal tanımlamak için başına 0x getirilmelidir.
+val bin = 0b0001 // Binary tanımlamak için başına 0b getirilmelidir.
 
