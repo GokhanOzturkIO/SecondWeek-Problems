@@ -517,6 +517,12 @@ Soru 34:  "İşaretsiz" "Long" harf gösterimi nasıl yapılır?
 
 Cevap: “İşaretsiz” “Long” harf gösterimi, değişken değerinin sonuna UL veya ul harfi ekleyerek yapılır. Örneğin, val x: ULong = 18446744073709551615UL
 
+Soru 35: "İşaretsiz" değişkenlerin kullanım amaçları nelerdir?
+
+Cevap: “İşaretsiz” değişkenler, sadece pozitif sayılar alabilen değişkenlerdir. İşaretli değişkenler ise hem pozitif hem negatif sayılar alabilirler. Bu yüzden, işaretsiz değişkenler
+daha büyük değerlere sahip olabilirler.
+
+
 
 
 
