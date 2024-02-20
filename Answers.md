@@ -107,4 +107,10 @@ fun main(){
             </summary>
             Tip çıkarımı yapılamadığı için `Nothing?` olarak tipi belirlenir ve o değişkene bir daha `null` değer dışında atama yapılamayacağı için o değişken `null` olarak kalmaya devam eder.
         </details>
+        <details>
+            <summary>
+            İlkel bir değişkenin nullable olması ile null değer alamaması arasında bellek yönetimi açısından nasıl farklar vardır?
+            </summary>
+            Nullable bir primitive değişken null bir değer tutabileceği için yani null olabilme ihtimali yüzünden bellekte daha fazla yer kaplar. Non-null değişkenler için ise bu yer ayrılmaz. Bu sebeple non-null değişken tipinin bellekte tutulmasının daha performanslı olduğu söylenebilir.
+        </details>
 </details>
