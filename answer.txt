@@ -110,4 +110,8 @@
  == operatörü ile bir değişkenlerin değerlerini karşılaştırırız
  === ifadesi ile değişkenleri referanslarını karşılaştırırız
 
+## 12) === operatörü ile karşılaştırma yaparken Byte değer aralığı neden önemlidir? Kotlin bu aralığa göre neden özel bir davranış sergiler?
+ Kotlin === operatörünü referans karşılaştırması için kullanır. Kotlinde Byte değer aralığı en çok kullanılan sayısal aralık olduğu için, bellek yönetiminde
+ bu aralığa özel bir yönetim sağlar. Byte veri tipi -128 ile 127 arasındadır. 
+
 
