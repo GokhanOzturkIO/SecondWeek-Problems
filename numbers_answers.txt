@@ -159,3 +159,9 @@ Kotlin bu aralığa göre neden özel bir davranış sergiler?
    Kotlin'de -128 ile 127 arasındaki byte tam sayıları için aynı bellek konumunu paylaşan bir özel optimizasyon vardır
    ve bu nedenle bu aralıktaki tamsayılar için değer karşılaştırması yapılır. Yani bu değerler arasında olan değişkenlerin
    hepsi bellekte STACK kısmında tutulur.
+
+------------------------------------------------------------------------------------------------------------------------
+
+Soru 13: Sayısal değişkenlerde hangi matematiksel operatörler kullanılabilir?
+
+ - Toplama (+),Çıkarma (-),Çarpma (*),Bölme (/),Modül (%),Artırma (++) ,Azaltma (--)
