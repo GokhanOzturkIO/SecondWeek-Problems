@@ -412,3 +412,18 @@ val signedInt: Int = unsignedInt.toInt()
 -İşaretli tam sayı kullanabilme imkanımız varsa işaretli kullanma
 -Özel dönüşüm fonksiyonları yapılabilir.
 --------------------------------------------------------------------------------------
+Tür Dönüşümü
+
+Soru 1:is ve !is operatörlerinin kullanımını açıklayın.
+
+Cevap:is ve !is operatörleri Kotlin dilinde tür kontrolü için kullanılır.
+
+is Operatörü:
+
+is operatörü, bir nesnenin belirli bir türle uyumlu olup olmadığını kontrol etmek için kullanılır.
+
+!is Operatörü:
+
+!is operatörü, bir nesnenin belirli bir türle uyumlu olmadığını kontrol etmek için kullanılır.
+-------------------------------------------------------------------------------------
+
