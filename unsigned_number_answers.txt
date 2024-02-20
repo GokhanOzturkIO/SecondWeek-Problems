@@ -44,3 +44,10 @@ Soru 4:  "`val a1 = 42u` ve `val a2 = 0xFFFF_FFFF_FFFFu`" değişkenlerin tipler
 Soru 5: "İşaretsiz" "Long" harf gösterimi nasıl yapılır?
 
   'İşaretsiz' 'Long' harf gösterimi 'uL' veya 'UL' kullanılarak gösterilir.
+
+------------------------------------------------------------------------------------------------------------------------
+Soru 6: "İşaretsiz" değişkenlerin kullanım amaçları nelerdir?
+
+ - İşaretsiz değişkenlerin kullanım amacı sadece 0 ve pozitif değerleri içeren sayıları daha az yer kaplayarak ve daha fazla
+ değer aralığı içerisinde çalışmak için kullanılabilir.
+
