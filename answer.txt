@@ -73,7 +73,7 @@
  Çünkü bazı fontlarda "l" harfi "1" sayısına benzemektedir. Bu yanlış anlamanın önüne geçmek için "l" harfi kullanılmaz
 
 ## 4) Tek duyarlıklı (Single precision) ve Çift duyarlıklı (Double precision) kavramlarını açıklayın.
- Single Precision: Bilgisayar hafızasında 32 bitlik yer kaplar. Örnek ==>  3.14159  (Daha az ondalık basamağı korunur)
+ Single Precision: Bilgisayar hafızasında 32 bitlik yer kaplar. Örnek ==>  3.141592  (Daha az ondalık basamağı korunur)
  Double Precision: Bilgisayar hafızasında 64 bitlik yer kaplar  Örnek ==>  3.1415926535897932384626433832795 (Daha fazla ondalık basamağı korunur)
  Bu durumlardan biri ihtiyaca göre seçilebilir. Single Precision bellekte daha az yer kaplar. Double precision daha hassastır fakat bellekte daha fazla yer kaplar. 
  
@@ -81,4 +81,9 @@
  Kotlinde ondalıklı sayılar ile çalışırken nokta kulanılır(.) Burada dikkat edilmesi gerekilen en önemli durum ise bazı ulusların dillerinde kullanılan
  ayraç tipleridir. Bazı ulusal dillerde virgül ayraç olarak kullanılırken bazılarında nokta ayraç olarak kullanılabilir. Developerlar uygulamalarını
  geliştirirken bu durumu göz önünde bulundurmalıdırlar.
+
+## 6) Double ve Float değişkenler ondalık kısımda kaç basamağa kadar işlem yaparlar? Bu sınırın üzerinde gelen ondalık bilgileri için nasıl davranırlar? Hangi durumlar için Float ve hangi durumlar için Double kullanılmalıdır?
+ Float 6-7 ondalık basamağa kadar hassasiyet sağlar, Double ise 15-16 ondalık basamağa kadar hassasiyet sağlamaktadır. Örnek olarak Double bir veri türünü ele alalım. Eğer sonuc Double ın alabileceği onladılığı aşarsa (max 16)
+ bu durumda yuvarlama işlemi yapılır. Son basamak 5 ve 5 ten büyükse yukarıya doğru, küçük ise aşağı yönlü yuvarlama işlemi yapılır. Float ise bu durum 7. basamak içinde geçerlidir. Hangi değişken tipinin kullanılacağı
+ ise işlemlerdeki hassasiyet ve uygulamanın belek yönetimi göz önünde bulundurularak yapılmalıdır. Çünkü Float bellekte 32 bit Double ise 64 bitlik alan kaplamaktadır.
 
