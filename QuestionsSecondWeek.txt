@@ -761,6 +761,33 @@ Operator '==' cannot be applied to 'Byte' and 'Int'  şeklinde bir hata alırız
 
 Bu sorunu print(b.toInt() == i) şu şekilde çözebiliriz cevabımız true yani b'nin i değişkenine eşit olması durumudur.
 
+Soru 46: Sayısal değişkenlerde açık dönüşüm (Explicit Type Conversion) yaparken hangi fonksiyonları kullanabilirsiniz?
+
+Cevap: Kotlin’de sayısal tipler arasında açık dönüşüm yapmak için kullanabileceğiniz fonksiyonlar şunlardır:
+
+1.Yol Cast Fonksiyonu ile 
+
+-toByte(): Bir sayısal değeri Byte tipine dönüştürür.
+
+-toShort(): Bir sayısal değeri Short tipine dönüştürür.
+
+-toInt(): Bir sayısal değeri Int tipine dönüştürür.
+
+-toLong(): Bir sayısal değeri Long tipine dönüştürür.
+
+-toFloat(): Bir sayısal değeri Float tipine dönüştürür.
+
+-toDouble(): Bir sayısal değeri Double tipine dönüştürür.
+
+-toChar(): Bir sayısal değeri Char tipine dönüştürür.
+
+2.Yol Convert yöntemi ile:
+
+val i: Int = 1000
+val b: Byte = CONVERT(i, Byte) // CONVERT fonksiyonu  
+
+(Ancak 2.yolu sadece SQL server için kullanabiliyoruz) 
+
 
 
 
