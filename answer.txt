@@ -117,4 +117,17 @@
 ## 13) Sayısal değişkenlerde hangi matematiksel operatörler kullanılabilir?
  "==", "!=", ">", "<", ">=", "<=", "===" operatorleri kullanılır.
 
+## 14) Sayısal değişkenlerde hangi karşılaştırma operatörleri kullanılabilir?
+
+ VE (AND) (&): İki sayının her iki biti de 1 ise sonuç 1 olur, diğer durumlarda sonuç 0 olur.
+
+ VEYA (OR) (|): İki sayının herhangi biri 1 ise sonuç 1 olur, her iki bit de 0 ise sonuç 0 olur.
+
+ XOR (XOR) (^): İki sayının bitleri farklıysa sonuç 1 olur, aynıysa sonuç 0 olur.
+
+ Tersi Alma (NOT) (~): Bir sayının her bir bitini tersine çevirir, yani 0'ları 1 yapar, 1'leri 0 yapar.
+
+ Sola Kaydırma (Shift Left) (<<): Belirtilen sayıda biti sola doğru kaydırır, sağdaki boşlukları 0 yapar.
+
+ Sağa Kaydırma (Shift Right) (>>): Belirtilen sayıda biti sağa doğru kaydırır, soldaki boşlukları işaret biti ile doldurur.
 
