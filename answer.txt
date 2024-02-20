@@ -160,5 +160,6 @@
  tipi ULong olacaktır.
 
 ## 5) "İşaretsiz" "Long" harf gösterimi nasıl yapılır?
- Kotlinde işaretsiz "Long" türü için bir harf gösterimi yoktur. Fakat 4. sorudaki a2 değişkeni gibi yapılırsa "ULong" tipinde bir veri tanımlanılabilir.
+ Kotlinde işaretsiz "Long" türü için bir harf gösterimi yoktur. Fakat 4. sorudaki a2 değişkeni gibi atanan Integer değer aralığının üstündeki sayılara "ULong" tipinde bir veri tanımlanılabilir. Tabi sonuna 
+ "u" harfi konulması gerektiğini unutmayalım.
 
