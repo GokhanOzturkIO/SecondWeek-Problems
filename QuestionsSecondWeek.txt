@@ -824,6 +824,18 @@ ondalık kısmını yuvarlamadan atar. Örneğin, 5L / 2 işleminde, bölüm 2.5
 println(x == 2L) ifadesinde, x değişkeninin değeri 2L ile karşılaştırılır ve sonucu true olarak döndürür. Bu ifadenin tipi Boolean olur, çünkü eşitlik operatörü ==, iki değerin
 birbirine eşit olup olmadığını kontrol eder ve sonucu true veya false olarak döndürür.
 
+Soru 51:  "val x = 5 / 2.toDouble() println(x == 2.5)" gibi bir işlemin sonucu ve tipi nedir? Neden böyle olduğunu açıklayın.
+
+Cevap:  işlemin sonucu true ve tipi Boolean olur. Bunun nedeni, Kotlin’in sayısal işlemlerde ondalıklı sayı bölmesi (floating-point division) yapmasıdır. Ondalıklı sayı bölmesi,
+bölümün ondalık kısmını yuvarlamadan korur. Örneğin, 5 / 2.toDouble() işleminde, bölünen değer 5, bölen değer ise 2.toDouble() olarak belirtilir. 2.toDouble() ifadesi,
+2 değerini Double tipine dönüştürür. Bu durumda, bölüm 2.5 olarak verilir. Bu durumda, x değişkeninin değeri 2.5 olur. println(x == 2.5) ifadesinde, x değişkeninin değeri 2.5
+ile karşılaştırılır ve sonucu true olarak döndürür. Bu ifadenin tipi Boolean olur, çünkü eşitlik operatörü ==, iki değerin birbirine eşit olup olmadığını kontrol eder ve sonucu
+true veya false olarak döndürür
+
+
+
+
+
 
 
 
