@@ -484,4 +484,8 @@ Soru 10:"val x = 5 / 2 println(x == 2)" gibi bir işlemin sonucu ve tipi nedir? 
 Cevap:Kotlin'de, iki tamsayı bölme işlemi (5 / 2) sonucunda bir tamsayı elde edilir ve ondalık kısmı atılır. Bu nedenle, x değişkeninin değeri 2,5 değil 2  olacaktır.
 x değişkeninin değeri iki olduğu için değerleri eşit olacak ve true çıktısı alacak.Tipi varsayılan olarak ınt.
 ---------------------------------------------------------------------------------------
+Soru 11:"val x = 5L / 2 println(x == 2L)" gibi bir işlemin sonucu ve tipi nedir? Neden böyle olduğunu açıklayın.
+
+Cevap: işlemin sonucu ondalık sayı kısmı atıldığı ve tam sayı alındığı için 2L olacak (2L==2L) çıktı olarakta true verecek, Tipi long.
+--------------------------------------------------------------------------------------
 
