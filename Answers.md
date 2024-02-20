@@ -101,4 +101,10 @@ fun main(){
             </summary>
             Nullable olarak tanımlanan değişkenin runtime esnasında uygulamanın/projenin çökmemesine sebebiyet vermemesi için null referans sorununun ele alındığı duruma Null Safety denir.
         </details>
+        <details>
+            <summary>
+            Bir değişkene null değer atanır ve tip belirtilmezse Kotlin bu değişkeni nasıl yorumlar?
+            </summary>
+            Tip çıkarımı yapılamadığı için `Nothing?` olarak tipi belirlenir ve o değişkene bir daha `null` değer dışında atama yapılamayacağı için o değişken `null` olarak kalmaya devam eder.
+        </details>
 </details>
