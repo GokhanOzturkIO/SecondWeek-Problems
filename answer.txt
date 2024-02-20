@@ -118,6 +118,7 @@
  "==", "!=", ">", "<", ">=", "<=", "===" operatorleri kullanılır.
 
 ## 14) Sayısal değişkenlerde hangi karşılaştırma operatörleri kullanılabilir?
+## 15) Bit düzeyinde operatörler (Bitwise operators) nelerdir? Ne amaçla kullanılır? Kotlin'de bunları nasıl kullanabilirsiniz?
 
  VE (AND) (&): İki sayının her iki biti de 1 ise sonuç 1 olur, diğer durumlarda sonuç 0 olur.
 
