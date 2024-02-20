@@ -135,5 +135,16 @@ Tek duyarlıklı, sayının bellekte 32 bit’lik bir yer kapladığını ifade 
 
 ===========================
 
+18-) Double ve Float değişkenler ondalık kısımda kaç basamağa kadar işlem yaparlar? Bu sınırın üzerinde gelen ondalık bilgileri için nasıl davranırlar? Hangi durumlar için Float ve hangi durumlar için Double kullanılmalıdır?
+
+Float 6-7 basamağa kadar işlem yapabilirken Double’da bu 15-16 basamağa kadar yükselebilmektedir. 
+
+Eğer ki sınırın üzerinde gelen ondalık bilgileri olursa bunlar en yakın sayıya doğru yuvarlanırlar.
+
+Float tek duyarlıklı olması hasebiyle bellekte 32 bit’lik bir yer kaplar. Eğer ki sayının ondalık bilgileri çok önemli değil ise Float tercih edilmelidir. Finans uygulamaları, kripto paralar gibi küsüratların önem arz ettiği uygulamalarda Double tercih edilmelidir.
+
+===========================
+
+
 
 
