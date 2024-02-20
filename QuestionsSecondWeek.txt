@@ -730,7 +730,14 @@ as operatörü: Bu operatör, değişkenin belirtilen türe dönüştürülmesin
     println(x as String) // Hata: ClassCastException
     println(y as String) // Merhaba
 
+Soru 43 : Sayısal değişkenlerde örtük tip genişletme (implicit widening conversions) ne demektir? Kotlin'de bu neden yapılamaz?
 
+Cevap: Örtük tip genişletme, bir sayısal değişkenin değerinin daha büyük bir sayısal tipe otomatik olarak dönüştürülmesi anlamına gelir. Örneğin, Java’da bir int değişkeni bir
+double değişkenine atayabilirsiniz, çünkü double tipi int tipinden daha geniş bir aralık kapsar. Bu, Java’nın otomatik olarak int değerini double değerine dönüştürmesi demektir.
+
+Kotlin’de ise örtük tip genişletme yoktur. Bu, Kotlin’in daha güvenli ve tutarlı bir dil olmasını sağlar, çünkü örtük tip genişletme bazen hassasiyet kaybına veya veri
+bozulmasına neden olabilir. Kotlin’de bir sayısal değişkeni başka bir sayısal tipe dönüştürmek istiyorsanız, açıkça belirtmeniz gerekir. Örneğin, bir int değişkenini bir double
+değişkenine dönüştürmek için toDouble() fonksiyonunu kullanabilirsiniz
 
 
 
