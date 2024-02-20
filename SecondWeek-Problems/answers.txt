@@ -479,3 +479,9 @@ Soru 9:"val result = Int.MAX_VALUE + Int.MAX_VALUE" gibi bir işlemin sonucunda 
 Cevap:Tipi Int olur cevap ise - bla bla bir sonuç çıkar. Matematiksel işlemlerde her zaman büyük olan tip neyse cevabı o tipte alırız, sonuç büyük olan tipinde üstünde çıkınca overflow yani taşma durumu olduğu için anlamsız bir sonuç alırız.
 
 ---------------------------------------------------------------------------------------
+Soru 10:"val x = 5 / 2 println(x == 2)" gibi bir işlemin sonucu ve tipi nedir? Neden böyle olduğunu açıklayın.
+
+Cevap:Kotlin'de, iki tamsayı bölme işlemi (5 / 2) sonucunda bir tamsayı elde edilir ve ondalık kısmı atılır. Bu nedenle, x değişkeninin değeri 2,5 değil 2  olacaktır.
+x değişkeninin değeri iki olduğu için değerleri eşit olacak ve true çıktısı alacak.Tipi varsayılan olarak ınt.
+---------------------------------------------------------------------------------------
+
