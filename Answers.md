@@ -95,4 +95,10 @@ fun main(){
             ```var nonNullInt: Int = 5 // non-null değişken tanımı```
             ```var nullableInt: Int? = null // nullable değişken tanımı```
         </details>
+        <details>
+            <summary>
+            "Null Güvenliği" (Null Safety) kavramını açıklayın.
+            </summary>
+            Nullable olarak tanımlanan değişkenin runtime esnasında uygulamanın/projenin çökmemesine sebebiyet vermemesi için null referans sorununun ele alındığı duruma Null Safety denir.
+        </details>
 </details>
