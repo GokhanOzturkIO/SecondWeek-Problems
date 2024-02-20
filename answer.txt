@@ -136,4 +136,6 @@
  Kotlinde Long türünden daha büyük sayılar ile çalışırken BigInteger kullanılabilmektedir. 
  Double türünden daha büyük sayılarda ise BigDecimal kullanılır.
 
+## 17) Double ve Float değişkenler kullanılırken "yuvarlama" davranışı nasıldır? Bu nasıl değiştirilebilir?
+ Son basamak 5 (ondalıklı sayılarda 0.5) veya 5 den büyükse yukarıya doğru. Altında ise aşağıya doğru yuvarlama işlemi gerçekleştirilir.
 
