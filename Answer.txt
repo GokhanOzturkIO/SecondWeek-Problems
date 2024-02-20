@@ -121,8 +121,19 @@ Eğer atanan değer Int değer aralığından büyük ise bu defa default olarak
 
 Çünkü küçük l harfinin 1 sayısı ile karıştırılma durumu söz konusu olabilir. Bundan dolayı Long değişken oluşturulurken büyük L kullanılması gerekmektedir.
 
+===========================
+
 16-) Tek duyarlıklı (Single precision) ve Çift duyarlıklı (Double precision) kavramlarını açıklayın.
 
 Tek duyarlıklı, sayının bellekte 32 bit’lik bir yer kapladığını ifade eder. Tek duyarlıklı sayılar float veri tipiyle gösterilir. Çift duyarlıklı ise sayının bellekte 64 bit’lik bir yer kapladığını ifade eder. Çift duyarlıklı ise double veri tipiyle gösterilir.
+
+===========================
+
+17-) Double ve Float değişkenlerle çalışırken ondalık ayıracı olarak hangi işaretler kullanılır? Bu ayıraçların kullanımında nelere dikkat etmek gerekir?
+
+Ülkelerin kullanım alışkanlıklarına göre virgül veya nokta işaretleri kullanılır.
+
+===========================
+
 
 
