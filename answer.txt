@@ -44,3 +44,5 @@
  "Null Safety" kavramı bir programın veya yazılım bileşenlerinin null referanslar veya değerler nedeniyle ortaya çıkabilecek olan hataları önlemek amacıyla
  oluşturulan sistemdir.
 
+## 9) Bir değişkene null değer atanır ve tip belirtilmezse Kotlin bu değişkeni nasıl yorumlar?
+ "Nothing" tipi ile yorumlamaktadır.
