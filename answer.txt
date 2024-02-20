@@ -48,6 +48,10 @@
  "Nothing" tipi ile yorumlamaktadır.
 
 ## 10) İlkel bir değişkenin nullable olması ile null değer alamaması arasında bellek yönetimi açısından nasıl farklar vardır?
+ Primitive bir değişken "Nullable" olursa primitive değil artık referans tipli bir değişken olmaktadır.
+
+## 11)Nullable bir değişkenin bir değere sahip olması ile null olması arasında bellek yönetimi açısından nasıl bir fark vardır? Null değer almış bir değişken bellekte yer kaplamaz diyebilir miyiz?
+ Hayır diyemeyiz. Çünkü;
  "Null" değer almış olan bir değişken bellekte az da olsa bir yer kaplar. Yani bir değişkenin nullable olması o değişkenin bellekte yer tutmadığı anlamına gelmemektedir.
- Stack'te bir değer tutuluyor ama Heap'te bir değer tutulmaması anlamına gelir.
+ Stack'te bir değer tutuluyor ama Heap'te bir değer tutulmaması anlamına gelir. Fakat değer alması durumunda Heap' te de bir değer tutulması anlamına gelmektedir.
 
