@@ -358,6 +358,7 @@ Soru 3:"İşaretsiz" değişkenlerin harf gösterimi nasıldır?
 
 Cevap: Işaretsiz (unsigned) değişkenler, genellikle harf gösterimiyle birlikte U harfi kullanılarak temsil edilir. Bu harf, "unsigned" (işaretsiz) anlamına gelir.
 örn: UByte,UShort,UInt,ULong.
+--------------------------------------------------------------------------------------
 
 Soru 4:val a1 = 42u ve val a2 = 0xFFFF_FFFF_FFFFu" değişkenlerin tipleri ne olur? Neden?
 
@@ -367,3 +368,4 @@ Cevap: val a1 = 42u UByte aralığındadır.
 Değerlerin sonlarındaki "u" harfinden unsigned olduğunu ve verilen değer'den de aralığını bulup uygun tipi bulmuş oluyoruz.
 
 ---------------------------------------------------------------------------------------
+
