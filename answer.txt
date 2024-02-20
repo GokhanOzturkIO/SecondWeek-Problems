@@ -103,3 +103,7 @@
  Kotlin'de geleneksel matematiksel notasyonu kullanarak bir işlem gerçekleştirmek istersek, genellikle temel matematiksel operatörleri ve ifadeleri kullanarak bunu yapabiliriz.
  Örneğin, toplama, çıkarma, çarpma, bölme işlemleri için kullanılan operatörlerin yanı sıra üs alma ve kök alma gibi matematiksel işlemleri ifade edebiliriz.
 
+## 10) Sayısal değişkenlerde alt çizgi (underscore) nasıl kullanılır? Kotlin bunu nasıl yorumlar?
+ Kotlin sayısal değerlerde kullanılan _ (alt çizgi) ifadesini görmezden gelir. Bu sayısal verilerin okunabilirliğini arttırır.
+
+
