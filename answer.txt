@@ -72,4 +72,8 @@
 ## 3) Float değişken oluştururken F ve f harfleri varken, Long değişken oluştururken neden küçük l harfi yoktur?
  Çünkü bazı fontlarda "l" harfi "1" sayısına benzemektedir. Bu yanlış anlamanın önüne geçmek için "l" harfi kullanılmaz
 
-
+## 4) Tek duyarlıklı (Single precision) ve Çift duyarlıklı (Double precision) kavramlarını açıklayın.
+ Single Precision: Bilgisayar hafızasında 32 bitlik yer kaplar. Örnek ==>  3.14159  (Daha az ondalık basamağı korunur)
+ Double Precision: Bilgisayar hafızasında 64 bitlik yer kaplar  Örnek ==>  3.1415926535897932384626433832795 (Daha fazla ondalık basamağı korunur)
+ Bu durumlardan biri ihtiyaca göre seçilebilir. Single Precision bellekte daha az yer kaplar. Double precision daha hassastır fakat bellekte daha fazla yer kaplar. 
+ 
