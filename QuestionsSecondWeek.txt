@@ -788,11 +788,23 @@ val b: Byte = CONVERT(i, Byte) // CONVERT fonksiyonu
 
 (Ancak 2.yolu sadece SQL server için kullanabiliyoruz) 
 
-Soru: "val result = 1L + 3" // "Long + Int" gibi bir işlemin sonucunda "result" değişkeninin tipi ve değeri ne olur? Neden böyle olduğunu açıklayın.
+Soru 47: "val result = 1L + 3" // "Long + Int" gibi bir işlemin sonucunda "result" değişkeninin tipi ve değeri ne olur? Neden böyle olduğunu açıklayın.
 
 Cevap: Bu işlem sonucunda result değişkeninin tipi Long ve değeri 4 olur. Bunun nedeni Kotlin'in sayısal işlemlerde tipleri en uygun türe dönüştürüyor olmasıdır. İşlemdeki
 en büyük tip hangisi ise ona dönüşüm gerçekleşir. Büyük olan tipe çevirmesinin nedenleri de küçük olan tipin yapılacak işlem için yetersiz geleceği durumlar olabilir. Bu da 
 istenmeyen sonuçlar doğurabilir.
+
+Soru 48: "val result = Int.MAX_VALUE + Int.MAX_VALUE" gibi bir işlemin sonucunda "result" değişkeninin tipi ve değeri ne olur? Neden böyle olduğunu açıklayın.
+
+Cevap: Bu işlemin sonucunda, result değişkeninin tipi Int ve değeri -2 olur. Bunun nedeni, Kotlin’in sayısal işlemlerde taşma (overflow) olasılığını göz ardı etmesidir.
+Taşma, bir sayısal değişkenin değerinin, değişkenin tipinin kapsayabileceği aralığı aşması durumunda ortaya çıkar. Örneğin, Int tipi, -2,147,483,648 ile 2,147,483,647 arasındaki
+değerleri kapsar.
+
+Int.MAX_VALUE + Int.MAX_VALUE işleminde, iki Int değeri toplanır. Bu değerler, Int tipinin en büyük değerleridir. Bu işlem, Int tipinin kapsayabileceği aralığı aşar, çünkü sonuç
+4,294,967,294 olur. Bu değer, Int tipinin en büyük değerinden 1 büyüktür. Bu durumda, Kotlin, taşmayı önlemek için, sonucu Int tipinin aralığının başına döndürür.
+Yani, Int.MAX_VALUE + 1 ifadesi, Int.MIN_VALUE değerine eşit olur. Bu, Int tipinin dairesel bir aralığa sahip olduğu anlamına gelir. Bu nedenle,
+ Int.MAX_VALUE + Int.MAX_VALUE ifadesi, Int.MIN_VALUE + Int.MIN_VALUE - 2 ifadesine eşit olur. Bu ifadenin değeri ise -2 olur. Bu durumlar için daha geniş değer aralığına
+sahip Long kullanılabilir. 
 
 
 
