@@ -165,3 +165,17 @@ Kotlin bu aralığa göre neden özel bir davranış sergiler?
 Soru 13: Sayısal değişkenlerde hangi matematiksel operatörler kullanılabilir?
 
  - Toplama (+),Çıkarma (-),Çarpma (*),Bölme (/),Modül (%),Artırma (++) ,Azaltma (--)
+
+------------------------------------------------------------------------------------------------------------------------
+
+Soru 14: Sayısal değişkenlerde hangi karşılaştırma operatörleri kullanılabilir?
+
+   Eşittir (==) :
+   Eşit Değildir (!=) :
+   Büyük (>) :
+   Küçük (<):
+   Büyük Eşit (>=):
+   Küçük Eşit (<=):
+   (x in a..b): x bunların arasında mı
+   (x !in a..b): x bunların arasında değil mi
+   karşılaştırma operatörleri kullanılabilir.
