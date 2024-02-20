@@ -132,3 +132,8 @@
 
  Sağa Kaydırma (Shift Right) (>>): Belirtilen sayıda biti sağa doğru kaydırır, soldaki boşlukları işaret biti ile doldurur.
 
+## 16) Kotlin'de büyük sayılarla çalışırken hangi ek türlerden yararlanılır ve bu türlerin sınırları nelerdir?
+ Kotlinde Long türünden daha büyük sayılar ile çalışırken BigInteger kullanılabilmektedir. 
+ Double türünden daha büyük sayılarda ise BigDecimal kullanılır.
+
+
