@@ -149,3 +149,6 @@
  İşaretsiz (unsigned) sayılar, Kotlin'in temel kütüphaneleri içerisinde tanımanmışlardır. Bu değerler derleyici tarafından özel olarak işlenmiştir. Bunlar Java'nın temel sınıfları içerisinde değil
  Kotlin'in kendi yapıları içerisinde bulunur. Bu durum; veri bütünlüğü, uygulama güvenliği ve bellek kulannımı açısından önemlidir.
 
+## 4) "İşaretsiz" değişkenlerin harf gösterimi nasıldır?
+ 10u bir UInt değeri olan 10'u temsil eder.
+ 1000000uL bir ULong değeri olan 1000000'u temsil eder.
