@@ -832,11 +832,40 @@ bölümün ondalık kısmını yuvarlamadan korur. Örneğin, 5 / 2.toDouble() i
 ile karşılaştırılır ve sonucu true olarak döndürür. Bu ifadenin tipi Boolean olur, çünkü eşitlik operatörü ==, iki değerin birbirine eşit olup olmadığını kontrol eder ve sonucu
 true veya false olarak döndürür
 
+Soru 52: Kotlin'de tür dönüşümü yapılırken, dönüşümün başarısız olması durumunda TypeCastException nasıl ele alınır ve bu tür hataların önüne geçmek için hangi önlemler
+alınabilir?
+
+Cevap: Kotlin’de tür dönüşümü yapılırken, dönüşümün başarısız olması durumunda, TypeCastException adlı bir istisna (exception) fırlatılır. Bu istisna, bir değişkenin türünün,
+dönüştürülmeye çalışılan türle uyumlu olmadığını gösterir. Örneğin, bir String değişkenini Int tipine dönüştürmeye çalışırsanız, TypeCastException alırsınız:
+
+val s: String = "Hello"
+val i: Int = s as Int // TypeCastException
+
+Bu tür hataların önüne geçmek için, şu önlemler alınabilir:
+
+Tür dönüşümü yapmadan önce, değişkenin türünü is operatörü ile kontrol edebilirsiniz. Bu operatör, bir değişkenin belirli bir türe ait olup olmadığını döndürür. Örneğin,
+ bir String değişkeninin Int tipine ait olup olmadığını kontrol etmek için şöyle yazabilirsiniz:
 
 
+val s: Any = "Hello"
+if (s is Int) {
+    val i: Int = s as Int // güvenli dönüşüm
+} else {
+    println("s, Int tipine ait değil")
+}
 
 
+Tür dönüşümü yaparken, as? operatörünü kullanabilirsiniz. Bu operatör, dönüşüm başarılı olursa dönüştürülen değeri, başarısız olursa null değerini döndürür. Bu şekilde,
+TypeCastException fırlatılmaz. Örneğin, bir String değişkenini Int tipine dönüştürmeye çalışmak için şöyle yazabilirsiniz:
 
+val s: String = "Hello"
+val i: Int? = s as? Int // null döndürür
+
+Tür dönüşümü yapmak yerine, uygun fonksiyonları kullanabilirsiniz. Kotlin, farklı türler arasında dönüşüm yapmak için birçok fonksiyon sunar. Örneğin, bir String değişkenini
+Int tipine dönüştürmek için toInt() fonksiyonunu kullanabilirsiniz:
+
+val s: String = "123"
+val i: Int = s.toInt() // 123 döndürür
 
 
 
