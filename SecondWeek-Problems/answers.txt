@@ -456,4 +456,8 @@ Soru 5: "val b: Byte = 1 ile val i: Int = b ve son olarak print(b == i) gibi bir
 
 Cevap:Çıktısı hata verir çünkü farklı tiplerdeki değişkenlerin karşılaştırılması yapılamaz.
 ---------------------------------------------------------------------------------------
+Soru 6:"val b: Byte = 1 ile val i: Int = b.toInt() ve son olarak print(b == i) gibi bir kod yazıldığında çıktı ne olur? Neden böyle bir çıktı aldığınızı açıklayın.
+
+Cevap:Bu kodu çalıştırdığınızda, çıktı true olacaktır. Bunun nedeni, b değişkeni toInt() fonksiyonu kullanılarak Int türüne dönüştürüldüğünde, artık b ve i aynı türdedir ve değerleri eşit olduğu için karşılaştırma true sonucunu verir.
+---------------------------------------------------------------------------------------
 
