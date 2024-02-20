@@ -377,4 +377,10 @@ Soru 6:"İşaretsiz" değişkenlerin kullanım amaçları nelerdir?
 Cevap: işaretsiz değişkenler genellikle pozitif tamsayıları temsil etmek ve belirli matematiksel veya bilgisayar bilimi uygulamalarında özel kullanımlar için kullanılır.
 
 --------------------------------------------------------------------------------------
+Soru 7:"İşaretsiz" değişkenlerle yapılan matematiksel işlemlerde, özellikle büyük sayılarla çalışırken karşılaşılabilecek taşma (overflow) ve taşma olmaması (underflow) durumları için Kotlin nasıl bir yönetim sağlar?
+
+Cevap: Taşma olmaması durumunda (underflow) kotlin doğru sonucu verir ancak taşma olması durumunda (overflow) sayılar tekrar sıfırdan başlayarak işlemi devam ettirir ve doğru bir sonuç vermez.
+
+Bu tür durumları kontrol etmek istiyorsanız, Kotlin'de toUByte(), toUShort(), toUInt(), ve toULong() gibi fonksiyonlar kullanarak taşma durumu kontrolü yapabilir ve gerekirse uygun önlemleri alabilirsiniz.
+---------------------------------------------------------------------------------------
 
