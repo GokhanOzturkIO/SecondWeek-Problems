@@ -550,6 +550,25 @@ fun main() {
     println("w = $w") //Hata fırlatılır
 }
 
+Soru 37 : "İşaretsiz" değişkenlerin sınırlamaları nelerdir?
+
+Cevap: Kotlin’de işaretsiz değişkenlerin sınır aralıkları şu şekildedir:
+
+UByte: 0 ile 255 arasında 8 bit işaretsiz tam sayı
+
+UShort: 0 ile 65.535 arasında 16 bit işaretsiz tam sayı
+
+UInt: 0 ile 4.294.967.295 arasında 32 bit işaretsiz tam sayı
+
+ULong: 0 ile 18.446.744.073.709.551.615 arasında 64 bit işaretsiz tam sayı
+
+İşaretsiz değişkenlerin sınır aralıklarını belirlemek için, değişken tipinin sonuna .MIN_VALUE veya .MAX_VALUE ekleyebilirsiniz.
+
+ Örneğin, UInt.MAX_VALUE 4.294.967.295 değerini verir.
+
+
+
+
 
 
 
