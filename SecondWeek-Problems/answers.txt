@@ -436,3 +436,14 @@ Akıllı dönüşüm sadece belirli koşullar altında çalışır. Örneğin, i
 Akıllı dönüşümün kullanılabileceği yerler sınırlıdır ve her durumda otomatik olarak uygulanmaz.
 Akıllı dönüşümün çalışabilmesi için, ilgili değişkenin kullanıldığı blok içinde tür kontrolü yapılması gerekir.
 ---------------------------------------------------------------------------------------
+Soru 3:"Güvenli & Güvensiz" operatörler nelerdir?
+
+Cevap: Güvenli Çağırma Operatörü (?):
+Güvenli çağırma operatörü, bir nesnenin null olup olmadığını kontrol eder ve eğer null değilse ilgili işlemi gerçekleştirir. Eğer nesne null ise, null döndürür yani hata verir. Bu operatör, NullPointerException'ları önlemek için kullanılır.
+
+Güvensiz Çağırma Operatörü (!):
+Güvensiz çağırma operatörü, bir nesnenin null olup olmadığını kontrol etmez ve doğrudan ilgili işlemi gerçekleştirir.Bu operatöre null gelmeyecek sen bize bırak yaklaşımı ile yaklaşıyoruz.Ki eğer nesne null gelir ise, NullPointerException hatası alınır ve uygulamayı crash eder.
+
+Kritik bölgelerde (!) crash etmeyi isteyebilirken, kritik olmayan bölgelerde (?) hata vermesi bizim için yeterli olacaktır.
+---------------------------------------------------------------------------------------
+
