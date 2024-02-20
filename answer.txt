@@ -99,3 +99,7 @@
   val octalNumber = Integer.parseInt(octalNumberString, 8) // 10 sayısını sekizlik tabanda tanımlama
   println(octalNumber)
 
+## 9) "Geleneksel Notasyon" (Conventional Notation) gösterimi nasıl yapılır?
+ Kotlin'de geleneksel matematiksel notasyonu kullanarak bir işlem gerçekleştirmek istersek, genellikle temel matematiksel operatörleri ve ifadeleri kullanarak bunu yapabiliriz.
+ Örneğin, toplama, çıkarma, çarpma, bölme işlemleri için kullanılan operatörlerin yanı sıra üs alma ve kök alma gibi matematiksel işlemleri ifade edebiliriz.
+
