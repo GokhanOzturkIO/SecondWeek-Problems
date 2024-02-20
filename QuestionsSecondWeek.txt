@@ -513,6 +513,10 @@ Cevap: val a1 = 42u değişkeninin tipi UInt olur. Çünkü 42 sayısı UInt ver
 val a2 = 0xFFFF_FFFF_FFFFu değişkeninin tipi ise ULong olur. Çünkü 0xFFFF_FFFF_FFFFu sayısı, UInt veri tipinin değer aralığından büyüktür.
 ULong veri tipi, 0 ile 18446744073709551615 arasında değerler alabilir. Eğer sayı sonunda U harfi olmasaydı, değişkenin tipi Long olurdu.
 
+Soru 34:  "İşaretsiz" "Long" harf gösterimi nasıl yapılır?
+
+Cevap: “İşaretsiz” “Long” harf gösterimi, değişken değerinin sonuna UL veya ul harfi ekleyerek yapılır. Örneğin, val x: ULong = 18446744073709551615UL
+
 
 
 
