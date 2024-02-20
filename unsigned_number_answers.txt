@@ -1,0 +1,10 @@
+Soru 1: "İşaretsiz" (Unsigned) değişkenler ne demektir? İşaretli olanlarla aralarındaki fark nedir?
+
+ İşaretsiz değişkenler 0 ve pozitif sayıları temsil eden sayılara denir. Yani bu değişkenler içerisinde herhangi bir
+ şekilde negatif sayılar bulunduramayız. Yapacağımız işler sadece pozitif sayılarla ise bu değişkenleri kullanmak bize
+ daha fazla bir değer aralığında işlem yapmamızı sağlar.
+ Byte üzerinden örnek verecek olursak, Byte'ın değer aralığı -128 ile 127'dir.
+ UByte'ın (Unsigned Byte'ın) değer aralığı ise 0 ile 255'dir.
+
+------------------------------------------------------------------------------------------------------------------------
+
