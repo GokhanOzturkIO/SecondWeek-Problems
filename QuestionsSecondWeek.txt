@@ -448,6 +448,48 @@ olur. Bu fonksiyon, Double ve Float gibi ondalık sayıları temsil eden değiş
 
 Bu yöntemler dışında kendi extension fonksiyonlarımızı da kullanabiliriz.
 
+- - - - - - - - - - -
+İşaretsiz Sayılar
+- - - - - - - - - - -
+
+Soru 30: "İşaretsiz" (Unsigned) değişkenler ne demektir? İşaretli olanlarla aralarındaki fark nedir?
+
+Cevap: İşaretsiz değişkenler sadece pozitif sayı alabbilen değişkenlerdir. İşaretli değişkenler ise hem pozitif hem negatif sayı alabilirler. Örneğin, unsigned int
+değişkeni 0 ile 4294967295 arasında değerler alabilirken, signed int değişkeni -2147483647 ile +2147483647 arasında değerler alabilir. (negatif taraftaki değer de eklenir).
+Kotlin dilinde, unsigned değişkenler için ayrı veri tipleri vardır. Bunlar UInt, ULong, UByte, UShort ve UByteArray’dır. Bu veri tiplerini kullanmak için kotlin-stdlib-common
+modülünü projenize eklemeniz gerekir. Ayrıca, unsigned değişkenleri tanımlarken sayıların sonuna U veya u harfi eklemeniz gerekiyor.
+
+ Örneğin, val x: UInt = 42U.
+
+
+    //İşaretli değişkenler
+    val a: Int = -10
+    val b: Byte = 127
+    val c: Short = -32768
+ 
+  //İşaretsiz değişkenler
+  
+    val d: UInt = 753U
+    val e: UByte = 255U
+    val f: UShort = 65535U
+  
+  //Tanımlanan değişkenler ekrana yazdırılıyor.
+  
+  println("İşaretli değişkenler:")
+    println("a=$a")
+    println("b=$b")
+    println("c=$c")
+    
+  println("İşaretsiz değişkenler:")
+    println("d=$d")
+    println("e=$e")
+    println("f=$f")
+
+
+
+
+
+
 
 
 
