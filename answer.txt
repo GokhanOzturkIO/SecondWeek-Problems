@@ -159,3 +159,6 @@
  a2 değişkeni ULong olur. Unsigned olmasının sebebi u harf gösteriminden dolayıdır. Long olmasının sebebi ise değer aralığının Integer'ı aşıp (281474976710655) long aralığına gelmesidir. Bu 2 durum sonucunda
  tipi ULong olacaktır.
 
+## 5) "İşaretsiz" "Long" harf gösterimi nasıl yapılır?
+ Kotlinde işaretsiz "Long" türü için bir harf gösterimi yoktur. Fakat 4. sorudaki a2 değişkeni gibi yapılırsa "ULong" tipinde bir veri tanımlanılabilir.
+
