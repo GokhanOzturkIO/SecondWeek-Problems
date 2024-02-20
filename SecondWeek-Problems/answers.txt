@@ -368,4 +368,8 @@ Cevap: val a1 = 42u UByte aralığındadır.
 Değerlerin sonlarındaki "u" harfinden unsigned olduğunu ve verilen değer'den de aralığını bulup uygun tipi bulmuş oluyoruz.
 
 ---------------------------------------------------------------------------------------
+Soru 5:"İşaretsiz" "Long" harf gösterimi nasıl yapılır?
+
+Cevap:Kotlin'da "İşaretsiz" Long türünü ifade etmek için harf gösterimi olarak 'UL' kullanılır.
+-------------------------------------------------------------------------------------
 
