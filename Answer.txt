@@ -181,8 +181,12 @@ Sayıyı daha okunaklı hale getirmek maksadıyla alt çizgi kullanılır.
 
 ===========================
 
-12-) === operatörü ile karşılaştırma yaparken Byte değer aralığı neden önemlidir? Kotlin bu aralığa göre neden özel bir davranış sergiler?
+24-) === operatörü ile karşılaştırma yaparken Byte değer aralığı neden önemlidir? Kotlin bu aralığa göre neden özel bir davranış sergiler?
 
 Eğer ki primitive tipte bir değişken nullable yapılır ve === operatörü ile kontrol edilirse Byte aralığında (-128 – 127) aralığında ise aynı memory alanına işaret edildiği için true sonucunu döner. Eğer ki byte aralığında değil ise farklı memory alanı işaret edildiği için false sonucunu verecektir.
 
 ===========================
+
+25-) Sayısal değişkenlerde hangi matematiksel operatörler kullanılabilir?
+Toplama (+), Çıkarma (-), Çarpma (*) , Bölme (/), Mod Alma (%)
+
