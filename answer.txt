@@ -145,3 +145,7 @@
  Unsigned sayılar pozitif sayıları ifade eder. İşaretli sayılar negatif değerler alabilirken, işaretsiz sayılar pozitif değerler alır. Ayrıca işaretsiz sayılar negatif değer almadıkları için
  bellekteki negatif değer aralığı pozitif değer aralığının üzerine aktarılır.
 
+## 2) "İşaretsiz" değişkenler nasıl bir sınıf yapısında tutulurlar? Bu neden önemlidir?
+ İşaretsiz (unsigned) sayılar, Kotlin'in temel kütüphaneleri içerisinde tanımanmışlardır. Bu değerler derleyici tarafından özel olarak işlenmiştir. Bunlar Java'nın temel sınıfları içerisinde değil
+ Kotlin'in kendi yapıları içerisinde bulunur. Bu durum; veri bütünlüğü, uygulama güvenliği ve bellek kulannımı açısından önemlidir.
+
