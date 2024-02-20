@@ -493,3 +493,13 @@ Soru 12:"val x = 5 / 2.toDouble() println(x == 2.5)" gibi bir işlemin sonucu ve
 Cevap: toDouble ifadesi kodlinin varsayılan olarak ondalıkları atma yani tam sayılarla işlem yapmasını engeller ve ondalık çıktı almamızı sağlar.Ondalık çıktı ile 2.0 elde ederiz bu sebeple 5/2.toDouble() kodundan sonuç olarak 2.5 sonucu alırız. (2.5==2.5) sonucundan da true çıktısı alırız. Tipi Double
 
 ---------------------------------------------------------------------------------------
+Soru 13:Kotlin'de tür dönüşümü yapılırken, dönüşümün başarısız olması durumunda TypeCastException nasıl ele alınır ve bu tür hataların önüne geçmek için hangi önlemler alınabilir?
+
+Cevap:
+-safe cast (as?)
+-safe cast ile smart cast
+-is operatörü
+-try-catch bloğu
+
+Bu önlemler, tür dönüşümlerini güvenli hale getirmek ve TypeCastException gibi hataları ele almak için kullanılabilir. Seçilecek yöntem, uygulama mantığına ve ihtiyaca bağlı olarak değişebilir.
+---------------------------------------------------------------------------------------
