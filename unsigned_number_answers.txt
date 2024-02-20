@@ -8,3 +8,10 @@ Soru 1: "İşaretsiz" (Unsigned) değişkenler ne demektir? İşaretli olanlarla
 
 ------------------------------------------------------------------------------------------------------------------------
 
+Soru 2: "İşaretsiz" değişkenler nasıl bir sınıf yapısında tutulurlar? Bu neden önemlidir?
+
+    İşaretsiz sayılar, aynı değer aralığındaki işaretli karşılık türünü içeren tek bir depolama özelliğine sahip satır içi (inline value classes) sınıflar
+    olarak uygulanır.
+
+    İşaretsiz sayılar, inline value sınıflar olarak uygulanmıştır. Inline sınıflar, runtime üzerinde ek bir maliyet olmadan hafif
+  sarmalayıcı sınıfların tanımlanmasına olanak tanıyan bir programlama dilindeki bir özelliktir.
