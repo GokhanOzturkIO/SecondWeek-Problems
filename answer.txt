@@ -37,3 +37,6 @@
  Tipi belirlenen bir değişkenin daha sonra tipinin değiştirilememesi durumudur. İlk başta esnekliği azaltan bir durum gibi gözüksede bence hayat kurtaran bir durumdur.
  Çünkü programlama dillerinde developer'ların en sık karşılaştığı hatalardan biri tip uyuşmazlığı hatalarıdır. Tip güvenliği bu hataların önüne geçmektedir.
 
+## 7) Bir değişkeni nullable yapmak için ne yapmalıyız?
+ Kotlinde bir değişkeni şu şekilde nullable yapabiliriz. "var/val name: type?"
+
