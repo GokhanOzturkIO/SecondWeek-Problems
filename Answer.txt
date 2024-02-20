@@ -151,3 +151,12 @@ val dec = 130 //Decimal
 val hexDec = 0x0FF // Hexadecimal tanımlamak için başına 0x getirilmelidir.
 val bin = 0b0001 // Binary tanımlamak için başına 0b getirilmelidir.
 
+===========================
+
+20-) Sekizlik (Octal) değişkenler Java'da nasıl tanımlanır? Kotlin'de Sekizlik değişken tanımlanabilir mi?
+
+Octal değişkenler Kotlin'de desteklenmez. Java'da ise aşağıdaki gibi tanımlanır.
+
+int octalNumber = 0123;
+
+===========================
