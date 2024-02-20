@@ -1,0 +1,9 @@
+Soru 1: `is` ve `!is` operatörlerinin kullanımını açıklayın.
+
+is operatörü, bir nesnenin belirli bir türde olup olmadığını kontrol etmek için kullanılır.
+Bu operatör, nesnenin belirtilen türde olup olmadığını kontrol eder ve sonuca göre bir boolean değeri döndürür.
+
+!is operatörü, is operatörünün tersi olarak kullanılır.
+Yani, bir nesnenin belirli bir türde olup olmadığını kontrol eder ve sonuca göre bir boolean değeri döndürür.
+
+------------------------------------------------------------------------------------------------------------------------
