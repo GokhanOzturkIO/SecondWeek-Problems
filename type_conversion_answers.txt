@@ -28,3 +28,17 @@ Bu özelliğin sınırlamaları nelerdir?
     Yine yukarıdaki örnekten devam edelim, `value` değişkeninin `String` olup olmadığını kontrol ettik ve
     `if` içerisinde açık bir şekilde `Type Conversion` işlemini yapmadan `String` tipine ait olan `length` özelliğini
     kullanabildim. İşte tam olarak bu duruma `Smart Cast(Akıllı Dönüşüm)` denir.
+
+------------------------------------------------------------------------------------------------------------------------
+
+Soru 3: Güvenli & Güvensiz" operatörler nelerdir?
+
+    Bir nesneyi başka bir nesneye cast etmek istediğimizde iki operatör vardır. Bunlar as(unSafe) ve as?(safe)
+
+    val x: String = y as String
+
+    Bu işlemde eğer y String'e cast edilemezse programımız hata verip çökecektir.
+
+    val x:String? = y as? String
+
+    Burada ise eğer işlem gerçekleşmesse x değişkenine null değer atanır ve programda çökme meydana gelmez.
