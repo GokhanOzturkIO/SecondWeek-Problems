@@ -55,3 +55,9 @@
  "Null" değer almış olan bir değişken bellekte az da olsa bir yer kaplar. Yani bir değişkenin nullable olması o değişkenin bellekte yer tutmadığı anlamına gelmemektedir.
  Stack'te bir değer tutuluyor ama Heap'te bir değer tutulmaması anlamına gelir. Fakat değer alması durumunda Heap' te de bir değer tutulması anlamına gelmektedir.
 
+## 12) Nullable bir değişkenle çalışırken hangi operatörleri kullanırız? Bu operatörlerin kullanım farkları nelerdir? Hangisini ne zaman kullanmak daha anlamlıdır?
+ Nullable değişkenlerle çalışırken "!!" ve "?" operatörleri kullanılır. "?" operatörü bu değeişkenin null olabileceğini IDE ye bildirme işlevini yapar ve kod buna
+ göre çalışır. "!!" operatörü ise IDE ye bu değişkenin değerinin null olmayacağının teminatını vermektedir. Eğer null gelirse uygulamanın "crash" olmasının 
+ önünü açmaktadır. Gerekli durumlarda bu iki operatörden biri kullanılmaktadır.
+
+
