@@ -175,3 +175,9 @@ Sayıyı daha okunaklı hale getirmek maksadıyla alt çizgi kullanılır.
 
 ===========================
 
+23-) == ile neyi karşılaştırırız? === ile neyi karşılaştırırız?
+
+== operatörü ile değişkenlerin değeri karşılaştırılır === operatörü ile ise değişkenlerin referansları karşılaştırılır.
+
+===========================
+
