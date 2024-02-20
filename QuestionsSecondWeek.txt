@@ -506,6 +506,13 @@ için UB harfi, UShort veri tipi için US harfi kullanılır. Bu harfler, deği�
 
  Örneğin, val x: UInt = 42U şeklinde bir tanımlama yapılabilir
 
+Soru 33: "val a1 = 42u ve val a2 = 0xFFFF_FFFF_FFFFu" değişkenlerin tipleri ne olur? Neden?
+
+Cevap: val a1 = 42u değişkeninin tipi UInt olur. Çünkü 42 sayısı UInt veri tipinin değer aralığına girer. UInt veri tipi, 0 ile 4294967295 arasında değerler alabilir3. Eğer sayı sonunda U harfi olmasaydı, değişkenin tipi Int olurdu.
+
+val a2 = 0xFFFF_FFFF_FFFFu değişkeninin tipi ise ULong olur. Çünkü 0xFFFF_FFFF_FFFFu sayısı, UInt veri tipinin değer aralığından büyüktür.
+ULong veri tipi, 0 ile 18446744073709551615 arasında değerler alabilir. Eğer sayı sonunda U harfi olmasaydı, değişkenin tipi Long olurdu.
+
 
 
 
