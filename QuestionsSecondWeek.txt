@@ -522,6 +522,34 @@ Soru 35: "İşaretsiz" değişkenlerin kullanım amaçları nelerdir?
 Cevap: “İşaretsiz” değişkenler, sadece pozitif sayılar alabilen değişkenlerdir. İşaretli değişkenler ise hem pozitif hem negatif sayılar alabilirler. Bu yüzden, işaretsiz değişkenler
 daha büyük değerlere sahip olabilirler.
 
+Soru 36: "İşaretsiz" değişkenlerle yapılan matematiksel işlemlerde, özellikle büyük sayılarla çalışırken karşılaşılabilecek taşma (overflow) ve taşma olmaması (underflow)
+durumları için Kotlin nasıl bir yönetim sağlar?
+
+Cevap: “İşaretsiz” değişkenlerle yapılan matematiksel işlemlerde, özellikle büyük sayılarla çalışırken karşılaşılabilecek taşma (overflow) ve taşma olmaması (underflow) durumları için Kotlin, iki farklı yöntem sunar1:
+
+Sessiz (silent) yöntem: Bu yöntemde, taşma veya taşma olmaması durumunda, değişkenin değeri sınırların içine sığacak şekilde döner. Örneğin, UInt veri tipinin en büyük
+değeri olan 4294967295’e 1 eklenirse, sonuç 0 olur. Bu yöntem, işaretsiz değişkenlerin normal aritmetik işlemlerinde kullanılır. Örneğin, +, -, *, /, % gibi operatörler sessiz
+yöntemi uygular.
+
+Sesli (checked) yöntem: Bu yöntemde, taşma veya taşma olmaması durumunda, bir hata (exception) fırlatılır. Bu sayede, programcı bu durumu yakalayabilir ve uygun bir
+şekilde işleyebilir. Bu yöntem, işaretsiz değişkenlerin özel fonksiyonlarında kullanılır. Örneğin, plus, minus, times, div, rem gibi fonksiyonlar sesli yöntemi uygular.
+
+
+fun main() {
+
+    //İşaretsiz değişkenler
+    val x: UInt = 4294967295U //UInt veri tipinin en büyük değeri
+    val y: UInt = 1U
+
+    //Sessiz yöntem
+    val z = x + y //Operatör kullanımı
+    println("z = $z") //Sonuç 0 olur
+
+    //Sesli yöntem
+    val w = x.plus(y) //Fonksiyon kullanımı
+    println("w = $w") //Hata fırlatılır
+}
+
 
 
 
