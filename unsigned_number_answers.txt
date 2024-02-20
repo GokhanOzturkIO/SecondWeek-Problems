@@ -15,3 +15,18 @@ Soru 2: "İşaretsiz" değişkenler nasıl bir sınıf yapısında tutulurlar? B
 
     İşaretsiz sayılar, inline value sınıflar olarak uygulanmıştır. Inline sınıflar, runtime üzerinde ek bir maliyet olmadan hafif
   sarmalayıcı sınıfların tanımlanmasına olanak tanıyan bir programlama dilindeki bir özelliktir.
+
+------------------------------------------------------------------------------------------------------------------------
+
+Soru 3: "İşaretsiz" değişkenlerin harf gösterimi nasıldır?
+
+    İşaretsiz bir sayıyı tanımlamak için sadece tip belirtmek yeterli olmuyor. İlk değer atamasında sayının sonun
+    'u' veya 'U' harflerini kullanmalıyız.
+
+    val uByteNumber:UByte = 34u
+    val uShortNumber:UShort = 34u
+    val uByteNumber = 34u // Eğer type Inference ile tanımlama yaparsak tipimiz UInt olacaktır.
+
+    Yine atama sırasında tipimizi ULong olarak atanmasını istiyorsa `UL` eklemesi yapmamız gerekiyor.
+
+    val uLongNumber = 435UL
