@@ -139,3 +139,9 @@
 ## 17) Double ve Float değişkenler kullanılırken "yuvarlama" davranışı nasıldır? Bu nasıl değiştirilebilir?
  Son basamak 5 (ondalıklı sayılarda 0.5) veya 5 den büyükse yukarıya doğru. Altında ise aşağıya doğru yuvarlama işlemi gerçekleştirilir.
 
+# İşaretsiz Sayılar
+
+## 1) "İşaretsiz" (Unsigned) değişkenler ne demektir? İşaretli olanlarla aralarındaki fark nedir?
+ Unsigned sayılar pozitif sayıları ifade eder. İşaretli sayılar negatif değerler alabilirken, işaretsiz sayılar pozitif değerler alır. Ayrıca işaretsiz sayılar negatif değer almadıkları için
+ bellekteki negatif değer aralığı pozitif değer aralığının üzerine aktarılır.
+
