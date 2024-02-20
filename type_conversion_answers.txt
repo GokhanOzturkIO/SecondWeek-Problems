@@ -7,3 +7,24 @@ Bu operatör, nesnenin belirtilen türde olup olmadığını kontrol eder ve son
 Yani, bir nesnenin belirli bir türde olup olmadığını kontrol eder ve sonuca göre bir boolean değeri döndürür.
 
 ------------------------------------------------------------------------------------------------------------------------
+
+Soru 2: "Akıllı Dönüşüm" (Smart Cast) ne demektir? Farklı kod örnekleri ile açıklayın.
+Bu özelliğin sınırlamaları nelerdir?
+
+    val value: Any = "Merhaba, Kotlin!"
+
+    if (value is String) {
+        println(value.length)
+    }
+
+    if (value !is Int) {
+        println("Değişken bir Int türünde değildir.")
+    }
+
+ Kotlin dilinde bir değişkenin tipi üzerinde `compiler` tarafından otomatik olarak dönüşümün gerçekleştirilme
+    işlemidir. Bu şekilde açık bir şekilde `Type Conversion` işlemini yapmadan o tipin sahip olduğu bütün özellikleri
+    methodları kullanmamıza sağlar.
+
+    Yine yukarıdaki örnekten devam edelim, `value` değişkeninin `String` olup olmadığını kontrol ettik ve
+    `if` içerisinde açık bir şekilde `Type Conversion` işlemini yapmadan `String` tipine ait olan `length` özelliğini
+    kullanabildim. İşte tam olarak bu duruma `Smart Cast(Akıllı Dönüşüm)` denir.
