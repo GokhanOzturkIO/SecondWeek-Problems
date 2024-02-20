@@ -40,3 +40,7 @@
 ## 7) Bir değişkeni nullable yapmak için ne yapmalıyız?
  Kotlinde bir değişkeni şu şekilde nullable yapabiliriz. "var/val name: type?"
 
+## 8) "Null Güvenliği" (Null Safety) kavramını açıklayın.
+ "Null Safety" kavramı bir programın veya yazılım bileşenlerinin null referanslar veya değerler nedeniyle ortaya çıkabilecek olan hataları önlemek amacıyla
+ oluşturulan sistemdir.
+
