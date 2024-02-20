@@ -485,7 +485,19 @@ modülünü projenize eklemeniz gerekir. Ayrıca, unsigned değişkenleri tanım
     println("e=$e")
     println("f=$f")
 
+Soru 31: "İşaretsiz" değişkenler nasıl bir sınıf yapısında tutulurlar? Bu neden önemlidir?
 
+Cevap: İşaretsiz değişkenler, Unsigned adlı bir soyut sınıfın alt sınıflarıdır. Bu sınıf, işaretsiz değişkenlere özel işlemler ve özellikler sağlar. Örneğin, aşağıdaki kodda, UInt ve
+ULong veri tipleri Unsigned sınıfının alt sınıflarıdır. Bu sayede, onlara toUInt ve toULong gibi dönüştürme işlemleri uygulanabilir.
+
+
+  //İşaretsiz değişkenler
+    val x: UInt = 42U
+    val y: ULong = 1000U
+
+    //Dönüştürme işlemleri
+    val z: ULong = x.toULong()
+    val w: UInt = y.toUInt()
 
 
 
