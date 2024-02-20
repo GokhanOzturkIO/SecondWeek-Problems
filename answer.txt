@@ -69,4 +69,7 @@
  Kotlin böyle bir durumda eğer değer "Byte" ile "Integer" değer aralığındaysa "Integer" olarak, eğer değer "Int" değer aralığından büyük ise "Long" olarak
  tip çıkarımı yapar. Ondalıklı sayılarda ise Float ile Double değerler için aynı mentalite ile davranmaktadır.
 
+## 3) Float değişken oluştururken F ve f harfleri varken, Long değişken oluştururken neden küçük l harfi yoktur?
+ Çünkü bazı fontlarda "l" harfi "1" sayısına benzemektedir. Bu yanlış anlamanın önüne geçmek için "l" harfi kullanılmaz
+
 
