@@ -383,4 +383,19 @@ Cevap: Taşma olmaması durumunda (underflow) kotlin doğru sonucu verir ancak t
 
 Bu tür durumları kontrol etmek istiyorsanız, Kotlin'de toUByte(), toUShort(), toUInt(), ve toULong() gibi fonksiyonlar kullanarak taşma durumu kontrolü yapabilir ve gerekirse uygun önlemleri alabilirsiniz.
 ---------------------------------------------------------------------------------------
+Soru 8:"İşaretsiz" değişkenlerin sınırlamaları nelerdir?
+
+Cevap:
+Kotlin'deki işaretsiz tamsayı türleri şu sınırlamalara tabidir;
+
+UByte: 0 ile 255 arasındaki işaretsiz 8-bit tamsayı değerlerini temsil eder.
+
+UShort: 0 ile 65,535 arasındaki işaretsiz 16-bit tamsayı değerlerini temsil eder.
+
+UInt: 0 ile 4,294,967,295 arasındaki işaretsiz 32-bit tamsayı değerlerini temsil eder.
+
+ULong: 0 ile 18,446,744,073,709,551,615 arasındaki işaretsiz 64-bit tamsayı değerlerini temsil eder.
+
+Bu sınırlamalar, her bir işaretsiz tamsayı türünün temsil edebileceği en küçük ve en büyük değerleri belirtir. Sınırlara ulaşıldığında, modüler aritmetik kullanılarak sayılar tekrar sıfırdan başlar.Bir önceki soru cevabında da belirttiğim gibi taşma durumları kontrol edilebilir ve gerekirse uygun önlemler alınabilir.
+---------------------------------------------------------------------------------------
 
