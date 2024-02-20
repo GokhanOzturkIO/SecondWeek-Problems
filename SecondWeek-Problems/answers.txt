@@ -398,4 +398,17 @@ ULong: 0 ile 18,446,744,073,709,551,615 arasındaki işaretsiz 64-bit tamsayı d
 
 Bu sınırlamalar, her bir işaretsiz tamsayı türünün temsil edebileceği en küçük ve en büyük değerleri belirtir. Sınırlara ulaşıldığında, modüler aritmetik kullanılarak sayılar tekrar sıfırdan başlar.Bir önceki soru cevabında da belirttiğim gibi taşma durumları kontrol edilebilir ve gerekirse uygun önlemler alınabilir.
 ---------------------------------------------------------------------------------------
+Soru 9:"İşaretsiz" değişken türleri (UInt, ULong vs.) kullanırken, Java API'leri ile uyumluluk konusunda ne gibi sorunlar olabilir? Bunları çözmek için neler yapabilirsiniz?
 
+Cevap:Kotlin'de işaretsiz tamsayı türleri (UInt, ULong vb.) kullanılırken, Java API'leri ile uyumluluk konusunda bazı sorunlar ortaya çıkabilir. Bunun nedeni, Java dilinin doğası gereği işaretsiz tamsayı türlerini desteklememesidir. Java'da sadece işaretli tamsayı türleri bulunmaktadır (int, long vb.).
+
+Bu durumda, Kotlin'de işaretsiz tamsayı türlerini Java API'leriyle uyumlu bir şekilde kullanabilmek için şunları yapabiliriz:
+
+-İşaretsiz tamsayıları işaretli tamsayılara çevirme:
+
+val unsignedInt: UInt = 42u
+val signedInt: Int = unsignedInt.toInt()
+
+-İşaretli tam sayı kullanabilme imkanımız varsa işaretli kullanma
+-Özel dönüşüm fonksiyonları yapılabilir.
+--------------------------------------------------------------------------------------
