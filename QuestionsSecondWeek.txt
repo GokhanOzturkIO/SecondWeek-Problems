@@ -579,6 +579,97 @@ ArrayList<Int> yerine ArrayList<UInt> kullanın. Böylece, değişkenin değeri 
 İşaretsiz değişkenleri performans açısından kritik olan kodlarda kullanmaktan kaçının. Eğer mümkünse, işaretsiz değişkenleri işaretli değişkenlere dönüştürün veya işaretli
 değişkenleri kullanın. Böylece, bellek ve işlem kaybını önleyebilirsiniz.
 
+- - - - - - - - -
+Tür Dönüşümü
+- - - - - - - - - 
+
+Soru 39: is ve !is operatörlerinin kullanımını açıklayın.
+
+Cevap : is ve !is operatörleri, Kotlin programlama dilinde bir nesnenin çalışma zamanında belirli bir türe uyup uymadığını kontrol etmek için kullanılır. is operatörü, nesne
+türe uyuyorsa true, uymuyorsa false döndürür. !is operatörü ise is operatörünün tersidir, yani nesne türe uymuyorsa true, uyuyorsa false döndürür. Örneğin:
+
+val x: Any = "Hello"
+if (x is String) {
+    println("x is a String")
+}
+
+if (x !is Int) {
+    println("x is not an Int")
+}
+
+x is a String
+x is not an Int
+
+
+is ve !is operatörleri, (smart cast) özelliği ile birlikte kullanılabilir. Bu özellik sayesinde, bir değişkenin türünü kontrol ettikten sonra, değişkeni o türe otomatik olarak
+ dönüştürür. Örneğin:
+
+val x: Any = "Hello"
+if (x is String) {
+    println(x.length) // x is automatically cast to String
+}
+
+Bu kod, x değişkeninin String türüne uyduğunu kontrol ettikten sonra, x.length ifadesini kullanır. Bu ifade, x’in String türüne dönüştürüldüğünü gösterir. Bu durumda,
+ x’in uzunluğu olan 5 değerini verir.
+
+Soru 40: "Akıllı Dönüşüm" (Smart Cast) ne demektir? Farklı kod örnekleri ile açıklayın. Bu özelliğin sınırlamaları nelerdir?
+
+Cevap: “Akıllı Dönüşüm” (Smart Cast), Kotlin’de bir değişkenin türünü kontrol ederken, derleyicinin bu türü otomatik olarak algılayıp dönüştürmesi anlamına gelir. Böylece,
+değişkeni kullanırken açıkça tür dönüşümü yapmanıza gerek kalmaz. Örneğin:
+
+fun main() {
+    val x: Any = "Merhaba"
+    if (x is String) {
+        // x burada String olarak algılanır, dönüşüm gerekmez
+        println(x.length)
+    }
+}
+
+Akıllı Dönüşüm, is veya !is operatörleriyle birlikte kullanılabilir. Ayrıca, when ifadeleri ve while döngüleri için de geçerlidir. Örneğin:
+
+    val y: Any = 42
+
+    when (y) {
+        is Int -> println(y + 1) // y burada Int olarak algılanır
+        is String -> println(y.length + 1) // y burada String olarak algılanır
+        else -> println("Bilinmeyen tür")
+    }
+
+
+Akıllı Dönüşümün bazı sınırlamaları vardır. Derleyici, değişkenin kontrol ve kullanım arasında değişmediğinden emin olmalıdır. Bu nedenle, akıllı dönüşüm şu durumlarda
+çalışmaz:
+
+val değişkenleri için, değişkenin değeri başka bir kod parçası tarafından belirleniyorsa veya değişkenin değerini almak için özel bir işlem yapılıyorsa veya değişken başka bir
+sınıfın içinde tanımlanmışsa, akıllı dönüşüm çalışmaz.
+
+class Person(val name: Any) // name özelliği başka bir sınıfın parçası
+
+fun main() {
+    val person = Person("Ali")
+    if (person.name is String) {
+        println(person.name.length) // Hata: akıllı dönüşüm çalışmaz
+    }
+}
+
+var değişkenleri için, değişkenin değeri kontrol etmeden sonra değiştiriliyorsa veya değişkenin değerini değiştiren bir fonksiyon içinde kullanılıyorsa veya değişkenin değeri
+başka bir kod parçası tarafından belirleniyorsa, akıllı dönüşüm çalışmaz.
+
+Aşağıdaki kodda, x değişkeni var olarak tanımlanmıştır ve kontrol etmeden sonra değiştirilmiştir. Bu yüzden, akıllı dönüşüm çalışmaz:
+
+
+fun main() {
+    var x: Any = "Merhaba"
+    if (x is String) {
+        x = 42 // x'in değeri değiştirildi
+        println(x.length) // Hata: akıllı dönüşüm çalışmaz
+    }
+}
+
+
+Bu kodu çalıştırdığımızda, şu hatayı alırız:
+
+Unresolved reference: length
+
 
 
 
