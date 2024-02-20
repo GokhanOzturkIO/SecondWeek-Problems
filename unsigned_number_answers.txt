@@ -30,3 +30,11 @@ Soru 3: "İşaretsiz" değişkenlerin harf gösterimi nasıldır?
     Yine atama sırasında tipimizi ULong olarak atanmasını istiyorsa `UL` eklemesi yapmamız gerekiyor.
 
     val uLongNumber = 435UL
+
+------------------------------------------------------------------------------------------------------------------------
+
+Soru 4:  "`val a1 = 42u` ve `val a2 = 0xFFFF_FFFF_FFFFu`" değişkenlerin tipleri ne olur? Neden?
+
+ İlk değişkenin tipi 'UInt' olur çünkü girilen değer 'Int' değer aralığındadır ve unsigned 'u'
+ harf gösterimi almıştır. İkinci değişkenin tipi ise 'ULong' olur çünkü verilen 'Hexadecimal'
+ değer, 'Long' değer aralığındadır
