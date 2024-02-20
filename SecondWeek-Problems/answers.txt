@@ -460,4 +460,14 @@ Soru 6:"val b: Byte = 1 ile val i: Int = b.toInt() ve son olarak print(b == i) g
 
 Cevap:Bu kodu çalıştırdığınızda, çıktı true olacaktır. Bunun nedeni, b değişkeni toInt() fonksiyonu kullanılarak Int türüne dönüştürüldüğünde, artık b ve i aynı türdedir ve değerleri eşit olduğu için karşılaştırma true sonucunu verir.
 ---------------------------------------------------------------------------------------
+Soru 7:Sayısal değişkenlerde açık dönüşüm (Explicit Type Conversion) yaparken hangi fonksiyonları kullanabilirsiniz?
+
+Cevap:
+toByte(): Sayıyı Byte türüne dönüştürür.
+toShort(): Sayıyı Short türüne dönüştürür.
+toInt(): Sayıyı Int türüne dönüştürür.
+toLong(): Sayıyı Long türüne dönüştürür.
+toFloat(): Sayıyı Float türüne dönüştürür.
+toDouble(): Sayıyı Double türüne dönüştürür.
+--------------------------------------------------------------------------------------
 
