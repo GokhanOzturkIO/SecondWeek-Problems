@@ -452,3 +452,8 @@ Cevap:Örtük tip genişletme (implicit widening conversion), bir sayısal tür�
 
 Ancak, Kotlin'de bu tür otomatik dönüşümler (örtük tip genişletmeler) yapılamaz. Kotlin, tür güvenliği ve güvenilirliği amacıyla bu tür otomatik dönüşümleri sağlamaz. Bu, programcının bilinçli bir şekilde tür dönüşümlerini yapmasını ve bu işlemi kontrol altında tutmasını sağlar.Kotlin bizden açık dönüşüm yapmamızı bekler.
 -------------------------------------------------------------------------------------
+Soru 5: "val b: Byte = 1 ile val i: Int = b ve son olarak print(b == i) gibi bir kod yazıldığında çıktı ne olur? Neden böyle bir çıktı aldığınızı açıklayın.
+
+Cevap:Çıktısı hata verir çünkü farklı tiplerdeki değişkenlerin karşılaştırılması yapılamaz.
+---------------------------------------------------------------------------------------
+
