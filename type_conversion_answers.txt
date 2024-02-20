@@ -42,3 +42,17 @@ Soru 3: Güvenli & Güvensiz" operatörler nelerdir?
     val x:String? = y as? String
 
     Burada ise eğer işlem gerçekleşmesse x değişkenine null değer atanır ve programda çökme meydana gelmez.
+
+------------------------------------------------------------------------------------------------------------------------
+
+Soru 4: Sayısal değişkenlerde örtük tip genişletme (implicit widening conversions) ne demektir? Kotlin'de bu neden yapılamaz?
+
+      Sayısal değişkenlerde örtük tip genişletme, örneğin bir fonksiyon var ve bizden parametre
+      olarak 'Long' bir değer istiyor. Bizim bu parametreye 'Int' bir değer verdiğimizde tür dönüşümü işlemi
+      otomatik olarak yapılma işlemine denir.
+
+      Kotlin'de sayısal türler arasında örtük tip genişletme bulunmaz. Bu, bilinçli bir tasarım tercihidir
+      Kotlin'de bunun yapılamama sebebi, olası hataları önlemek içindir.
+
+      Dönşüm yapmak için açık bir şekilde belirtmeliyiz.
+      Örn. "toLong()", "toByte()" vs.
