@@ -38,3 +38,9 @@ Soru 4:  "`val a1 = 42u` ve `val a2 = 0xFFFF_FFFF_FFFFu`" değişkenlerin tipler
  İlk değişkenin tipi 'UInt' olur çünkü girilen değer 'Int' değer aralığındadır ve unsigned 'u'
  harf gösterimi almıştır. İkinci değişkenin tipi ise 'ULong' olur çünkü verilen 'Hexadecimal'
  değer, 'Long' değer aralığındadır
+
+------------------------------------------------------------------------------------------------------------------------
+
+Soru 5: "İşaretsiz" "Long" harf gösterimi nasıl yapılır?
+
+  'İşaretsiz' 'Long' harf gösterimi 'uL' veya 'UL' kullanılarak gösterilir.
