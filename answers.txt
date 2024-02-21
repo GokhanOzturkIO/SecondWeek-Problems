@@ -153,7 +153,7 @@ q8-"İşaretsiz" değişkenlerin sınırlamaları nelerdir?
 Unsigned değişkenler negatif sayı tutamazlar. 0'dan tip türlerine göre bellekte ne kadar yer kaplayabiliyorlarsa o sınıra kadar değer aralıkları vardır.
 
 q9-"İşaretsiz" değişken türleri (UInt, ULong vs.) kullanırken, Java API'leri ile uyumluluk konusunda ne gibi sorunlar olabilir? Bunları çözmek için neler yapabilirsiniz?
-
+Java unsigned değişkenleri doğrudan desteklemez bu yüzden API'ler arasında da desteklenmeyenler olabilir. Uyumlu olan API'ları bulup onları kullanabiliriz, unsigned değişkenlerini dönüşüm fonksiyonlarını kullanarak signed değişkenlere çevirebiliriz.
 
 
 
