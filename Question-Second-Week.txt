@@ -48,4 +48,13 @@ Elvis Operatörü (?:) = Bu operatör, bir ifade null değilse onu kullanır, nu
 Ancak bu operatörü kullanmak, dikkatlice ele alınmalıdır, çünkü eğer ifade null ise, NullPointerException hatası alınabilir.
 
 
+Sayılar
+
+13-> Kaç farklı tipte "number" sınıfı miras alan "alt sınıf" (child class) vardır? Bunların değer aralıkları neden önemlidir?
+Number sınıfını miras alan 6 adet alt sınıf vardır bunlar (Byte, Short, Int, Long, Float, Double) 
+Değer aralıkları aldıkları minimum veya maximum değerler için önemlidir. Biz fazla bir değer verirsek eğer o bize hata döndürür.
+
+
+ 
+
  
