@@ -182,3 +182,23 @@ uLong şeklinde gösterilir. Örnek = val unsignedLong: ULong = 1234567890123456
 36-> "İşaretsiz" değişkenlerle yapılan matematiksel işlemlerde, özellikle büyük sayılarla çalışırken karşılaşılabilecek taşma (overflow) ve taşma olmaması (underflow) durumları için Kotlin nasıl bir yönetim sağlar?
  İşaretsiz değişkenlerin sınırları, veri türünün boyutuna (bit uzunluğuna) bağlıdır. Eğer bir işlem sonucunda bu sınırlar aşılıyorsa, değer döngüsel olarak sıfıra sarılır.
 
+37-> "İşaretsiz" değişkenlerin sınırlamaları nelerdir?
+UByte:
+
+8-bit işaretsiz tamsayı.
+Değer Aralığı: 0 ila 255
+UShort:
+
+16-bit işaretsiz tamsayı.
+Değer Aralığı: 0 ila 65,535
+UInt:
+
+32-bit işaretsiz tamsayı.
+Değer Aralığı: 0 ila 4,294,967,295
+ULong:
+
+64-bit işaretsiz tamsayı.
+Değer Aralığı: 0 ila 18,446,744,073,709,551,615
+
+Sınırlamalar bu şekildedir.
+
