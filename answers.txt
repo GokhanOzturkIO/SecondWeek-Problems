@@ -132,7 +132,10 @@ UShort 0 - 65,535
 UInt 0 - 4,294,967,295 (232 - 1)
 ULong 0 - 18,446,744,073,709,551,615 (264 - 1)
 
-q2-
+q2-"İşaretsiz" değişkenler nasıl bir sınıf yapısında tutulurlar? Bu neden önemlidir?
+
+q3-"İşaretsiz" değişkenlerin harf gösterimi nasıldır?
+UByte, UShort, UInt, ULong
 
 
 
