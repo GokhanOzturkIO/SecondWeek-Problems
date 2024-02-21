@@ -174,5 +174,8 @@ Bu şekilde gösterilir.
 İlk değişken Int olur Çünkü Int değer aralığındadır. Diğeri ise Long olur çünkü Hexadecımaldir.
 
 34-> "İşaretsiz" "Long" harf gösterimi nasıl yapılır?
-uLong şeklinde gösterilir.
+uLong şeklinde gösterilir. Örnek = val unsignedLong: ULong = 12345678901234567890uL
+
+35-> "İşaretsiz" değişkenlerin kullanım amaçları nelerdir?
+"Işaretsiz" (Unsigned) değişkenler, genellikle belirli durumlarda negatif sayılarla ilgilenmeyi ve belirli bir veri aralığında daha fazla sayı temsil etmeyi sağlamak için kullanılır. 
 
