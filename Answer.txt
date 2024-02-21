@@ -236,3 +236,10 @@ inline value sınıflar içerisinde tutulurlar. Inline value sınıflar performa
 
 ===========================
 
+31-) "İşaretsiz" değişkenlerin harf gösterimi nasıldır?
+
+u harfi ile gösterimi sağlanmaktadır.
+
+
+
+
