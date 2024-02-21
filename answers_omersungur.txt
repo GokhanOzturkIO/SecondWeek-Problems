@@ -110,3 +110,12 @@ Tek Duyarlıklı (Single Precision):
 
 6 -> Float bir değişkene değer atarken . 'dan sonra 7 karakter koyabiliriz. Bundan sonrakileri yazdıramayız. Fakat 7'den fazla karakter verdiğimizde double bir değer ile toplandığında meydana gelecek sayıda o fazladan verdiğimiz değerler de işlem görecektir. Bu yüzden ondalık sayılarda ondalık kısmında 7'den fazla karakter varsa double kullanılması daha uygundur.
 
+7 -> val hexadecimalNumber = 0xFF // Hexadecimal
+     println(hexadecimalNumber)
+
+     val binaryNumber = 0b00001011 // Binary
+     println(binaryNumber)
+    
+     val decimalNumber: Int = 123 // Decimal
+     println(decimalNumber)
+
