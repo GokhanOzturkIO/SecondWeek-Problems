@@ -88,4 +88,5 @@ Java'da sekizlik (octal) sayıları tanımlamak için, sayıların başına 0 ö
 22-> Sayısal değişkenlerde alt çizgi (underscore) nasıl kullanılır? Kotlin bunu nasıl yorumlar?
 Alt çizgiler sayılarda okumayı kolaylaştırmak için kullanılır. örneğin: bir milyon = 1_000_000
 
-23-> 
+23-> == ile neyi karşılaştırırız? === ile neyi karşılaştırırız?
+2 eşittir ile değerleri karşılaştırırız. 3 eşittir ile referans kodlarını karşılaştırırız.
