@@ -220,6 +220,10 @@
  Sonuc true olacaktır. Kotlin matematiksel işlemlerde en büyük olan değerin tipini sonuca atayacaktır. Yine Değişkenler ondalıklı tipe uygun olmadığından
  sonucta ondalık kısım bulunmayacaktir.
 
+## 11) "val x = 5 / 2.toDouble() println(x == 2.5)" gibi bir işlemin sonucu ve tipi nedir? Neden böyle olduğunu açıklayın
+ Sonuc true çıkıcaktır. Ondalıklı sayılarla yapılan işlemlerin sonucu Ondalık sayının tipince olacaktır.  Buradaki 2 sayısı 2.0' a dönüştürülmüştür.
+
+
 
 
 
