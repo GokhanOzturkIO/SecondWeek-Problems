@@ -81,9 +81,11 @@ fun main() {
 
 ------------- Sayılar -------------
 
-1 -> Byte, Short, Int, Long, Float ve Double olmak üzere 6 tane sınıf Number sınıfını miras alır. Number tipinde bir değişkene değer verdiğimizde eğer int aralığındaysa default olarak int tipine dönüşür. Eğer noktalı sayı yazarsak default olarak double tipini alır. Bunları toByte(), toShort() gibi fonksiyonlarla istediğimiz veri tipine de dönüştürebiliriz. Örneğin aşağıdaki örnekte maksimum int değerini verdiğimiz için myNumber int tipinde olacaktır. Üstte belirtiğim gibi 0 versekte int olacak, byte aralığını alıyor diye byte olmuyor. Int aralığını geçersek Long tipine dönüşecek. Bu arada çıktıda referans tipli olan Integer ifadesi yazıldığına da dikkat çekerim. 
+1 -> Byte, Short, Int, Long, Float ve Double olmak üzere 6 tane sınıf Number sınıfını miras alır. Number tipinde bir değişkene değer verdiğimizde eğer int aralığındaysa default olarak int tipine dönüşür. Eğer noktalı sayı yazarsak default olarak double tipini alır. Bunları toByte(), toShort() gibi fonksiyonlarla istediğimiz veri tipine de dönüştürebiliriz. Örneğin aşağıdaki örnekte maksimum int değerini verdiğimiz için myNumber int tipinde olacaktır. Üstte belirtiğim gibi 0 versekte int olacak, byte aralığını alıyor diye byte olmuyor. Int aralığını geçersek Long tipine dönüşecek. Bu arada çıktıda referans tipli olan Integer ifadesi yazıldığına da dikkat çekerim
 
 fun main() {
     val myNumber: Number = Int.MAX_VALUE
     println(myNumber.javaClass) // class java.lang.Integer
 }
+
+2 -> Değer aralıklarına göre belirler. 1.Soruda bu konuya kısaca bakış atmıştık. Bir değişkene int aralığında değer atanıyorsa (-2^31 ve 2^31 -1) bu sayının tipi integer olarak belirlenir. Byte, Short gibi diğer türlerin verilmesini istiyorsak dönüştürme fonksiyonlarını kullanabiliriz (toShort() gibi). Bir değişkene noktalı sayı verdiğimizde default olarak double değerini alır. Float yapabilmek için f ifadesini sayını sonuna verebiliriz.
