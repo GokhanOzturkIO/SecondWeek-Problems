@@ -93,3 +93,7 @@ Alt çizgiler sayılarda okumayı kolaylaştırmak için kullanılır. örneğin
 
 24-> === operatörü ile karşılaştırma yaparken Byte değer aralığı neden önemlidir? Kotlin bu aralığa göre neden özel bir davranış sergiler?
 Byte değer aralığında -127 ve 128 arasındadır. Bu aralık dışındaki değerler için her bir Byte değeri ayrı bir bellek konumunu temsil eder ve bu durumda referans eşitliği false döner.
+
+25-> Sayısal değişkenlerde hangi matematiksel operatörler kullanılabilir?
+Sayısal değişkenlerde (+, -, *, /, %) gibi ifadeler kullanılabilir.
+Bunlar (+ = Toplama), (-= Çıkarma), (*= Çarpma), (/ = Bölme), (%=Modül) şeklindedir.
