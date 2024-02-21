@@ -223,3 +223,10 @@ BigInteger ve BigDecimal kullanılır.
 
 ===========================
 
+29-) "İşaretsiz" (Unsigned) değişkenler ne demektir? İşaretli olanlarla aralarındaki fark nedir?
+
+Unsigned değişkenler en basit haliyle 0 ve üzerindeki sayıları temsil eder. Signed değişkenler 0 ve altındaki negatif sayıları da kapsamaktadır. Unsigned değişkenler Signed değişkenlere göre daha geniş bir kapsam aralığı vardır. Örneğin signed byte 127 sayısına kadar
+kapsama sağlarken ubyte 255 sayısına kadar kapsama sağlamaktadır.
+
+===========================
+
