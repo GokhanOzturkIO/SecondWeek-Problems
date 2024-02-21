@@ -93,3 +93,13 @@ Soru 7: Sayısal değişkenlerde açık dönüşüm (Explicit Type Conversion) y
 -toDouble(): Bir sayısal değeri Double tipine dönüştürür.
 
 -toChar(): Bir sayısal değeri Char tipine dönüştürür.
+
+------------------------------------------------------------------------------------------------------------------------
+
+Soru 8: "val result = 1L + 3" // "Long + Int" gibi bir işlemin sonucunda "result" değişkeninin tipi ve değeri ne olur?
+Neden böyle olduğunu açıklayın.
+
+    Sayılar işlemlerde aritmetik işlemler yaptığımızda, değişkenin tipi büyük sayının tipinde olacaktır.
+
+    Örneğimizde Long tipi, Int değerden daha fazla bir aralığa sahşp olduğu için değişken türümüz Long olacaktır ve işlemin
+    sonucu 4 olacaktır.
