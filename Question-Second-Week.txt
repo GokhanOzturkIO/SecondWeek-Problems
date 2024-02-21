@@ -54,10 +54,11 @@ Sayılar
 Number sınıfını miras alan 6 adet alt sınıf vardır bunlar (Byte, Short, Int, Long, Float, Double) 
 Değer aralıkları aldıkları minimum veya maximum değerler için önemlidir. Biz fazla bir değer verirsek eğer o bize hata döndürür.
 
-14->Eğer bir değişkene tip belirtimi yapılmaz ve bir değer atanırsa, Kotlin tip çıkarımını nasıl yapar?
+14-> Eğer bir değişkene tip belirtimi yapılmaz ve bir değer atanırsa, Kotlin tip çıkarımını nasıl yapar?
 Kotlin akıllı bir dil olduğu için tip çıkarımını yazılan değer hangi sayılar arasında ise o tipte arka planda yazdırır.
 
 
- 
+15-> Float değişken oluştururken F ve f harfleri varken, Long değişken oluştururken neden küçük l harfi yoktur?
+Çünkü l harfi 1(bir) rakamına benzediği için yalnışlıklar olmasın diye küçük l harfi kullanılmaz.
 
  
