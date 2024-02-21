@@ -85,4 +85,7 @@ Java'da sekizlik (octal) sayıları tanımlamak için, sayıların başına 0 ö
 21-> "Geleneksel Notasyon" (Conventional Notation) gösterimi nasıl yapılır?
 "Geleneksel Notasyon" (Conventional Notation), matematiksel ifadelerin, sembollerin, operatörlerin ve kuralların alışılageldiği ve genellikle kabul edilen bir biçimde temsil edildiği bir terimdir.
 
-22-> 
+22-> Sayısal değişkenlerde alt çizgi (underscore) nasıl kullanılır? Kotlin bunu nasıl yorumlar?
+Alt çizgiler sayılarda okumayı kolaylaştırmak için kullanılır. örneğin: bir milyon = 1_000_000
+
+23-> 
