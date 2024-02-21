@@ -36,7 +36,13 @@ Not : val ve var arasında memoryde yer kaplama anlamındaki fark çok çok azd�
 Cevap : Immutable kavramı "değişmez" demektir ve bir değişkene hiçbir şey tanımlanamaz. Read only ise ilk tanım yapılabilir fakat sonrasında değiştirme yapılmaz. Bu sebepten ötürü val read-only olarak tanımlanmalıdır. Çünkü val'da ilk değişken tanımlanır sonrasında değişmez.
 
 - "Tip Çıkarımı" (Type inference) kavramını açıklayın. Hangi durumlarda tip belirtmek kesin olarak gereklidir?
+
+Cevap : Type inference kavramı bir kodu yazarken o kodun hangi değişken türünü açıklamaya gerek olmaması durumudur. Örneğin var name = "ece" kullanımında Kotlin'de type inference olduğu için türünü String olarak belirtmemize gerek yoktur. Buna implict kullanım denir. var name: Strin = "ece" kullanımı ise explict bir kullanımdır. Ayrıca sayılarda type inference yapıldığında int sınırları içerisinde ise Integer,int'i aşarsa Long kullanılır.
+
 - Kotlin'de tüm değişkenlerin sınıf olarak bulunması, "ilkel tip" (primitive type) olmadıkları anlamına gelir mi? Arka planda neler oluyor?
+
+Cevap : Kotlin'de her şey class'dır. Fakat Kotlin'de olan optimizasyonlarla beraber sankş primitive'miş gibi davranır. Unutulmaması gereken bir husus da nullable yapılırsa bu değişkenin class olacağı
+
 - "Tip Güvenliği" (Type Safety) kavramını açıklayın.
 - Bir değişkeni nullable yapmak için ne yapmalıyız?
 - "Null Güvenliği" (Null Safety) kavramını açıklayın.
