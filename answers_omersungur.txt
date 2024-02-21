@@ -141,3 +141,5 @@ Buradaki ifade false dönecek çünkü myValue2 başka 128'i myValue3 başka 128
     println(System.identityHashCode(myValue3))
 
 13 -> Temel olarak + - * / % ++ -- operatörlerini sayabiliriz. İlk 4'ü matematiksel operatörler zaten. 5. modül almak için kullanılır. ++ ile bir değişkenin değerini 1 arttırıp o değer içine atarız. -- ile de 1 azaltıp o değer içine atarız.
+
+14 -> < > <= >= == != operatörlerini sayabiliriz. İki sayı arasında sırasıyla küçüktür, büyüktür, küçük eşittir, büyük eşittir, eşittir ve eşit değildir kıyaslaması yapar.
