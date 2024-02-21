@@ -67,4 +67,7 @@ Tek Duyarlıklı (Single Precision): Genellikle 32 bit uzunluğunda ve 1 bit iş
 Çift Duyarlıklı (Double Precision): Genellikle 64 bit uzunluğunda ve 1 bit işaret, 11 bit üst düzen (exponent) ve 52 bit kesirli (mantissa) olmak üzere üç kısımdan oluşur. Daha fazla bellek kullanır, daha yavaş işlemler sağlar, ancak daha geniş sayı aralığı ve daha yüksek hassasiyet sunar.
 Not: Genellikle, bilimsel ve mühendislik uygulamalarında daha fazla hassasiyet gerektiğinde çift duyarlıklı, daha az hassasiyet yeterli olduğunda ise tek duyarlıklı format tercih edilir.
 
- 
+17-> Double ve Float değişkenlerle çalışırken ondalık ayıracı olarak hangi işaretler kullanılır? Bu ayıraçların kullanımında nelere dikkat etmek gerekir?
+Double ve float değişkenlerle çalışırken (.) kullanılır. Burada (.) kullanırken (,) kullanmamaya özen göstermemiz gerekir çünkü hata alırız bu yüzden.
+
+18->
