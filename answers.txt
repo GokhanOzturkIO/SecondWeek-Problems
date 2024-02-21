@@ -176,6 +176,16 @@ fun demo(x: Any) {
 }
 Smart casting yalnızca val değişkenlere uygulanır. Yalnızca kotlin türleri için geçerlidir, Java veya farklı dil türleri kullanıldığında smart casting uygulanamayabilir.
 q3-"Güvenli & Güvensiz" operatörler nelerdir?
+Casting sırasında exception fırlatılıyorsa Unsafe casting yapılmış olur. as ifadesi kullanılarak yapılır.
+val obj: Any? = null  
+val str: String = obj as String  
+println(str) // nullable strign can not cast to non nullable string so this throws TypeCastException.
+Safe casting'De as? kullanılır, unsafe versiyonuna göre casting yapılamadığında exception fırlatmak yerine null döndürür.
+val location: Any = "Kotlin"  
+val safeString: String? = location as? String  
+val safeInt: Int? = location as? Int  
+println(safeString)  //Kotlin
+println(safeInt)  //null
 
 q4-Sayısal değişkenlerde örtük tip genişletme (implicit widening conversions) ne demektir? Kotlin'de bu neden yapılamaz?
 
