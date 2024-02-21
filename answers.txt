@@ -147,8 +147,10 @@ q6-"İşaretsiz" değişkenlerin kullanım amaçları nelerdir?
 Asla negatif değer almaması gereken sayılar için örneğin bir array'in index değeri gibi kullanılabilir. Ve pozitif değer aralığı signed değişkenlere göre daha geniş olduğu için de kullanılabilir.
 
 q7-"İşaretsiz" değişkenlerle yapılan matematiksel işlemlerde, özellikle büyük sayılarla çalışırken karşılaşılabilecek taşma (overflow) ve taşma olmaması (underflow) durumları için Kotlin nasıl bir yönetim sağlar?
+Unsigned değişkenlerde overflow gerçekleştiğinde döngüsel davranış gösterirler. Örneğin UByte değeri 255 iken 1 eklendiğinde overflow olup değeri 0 olacaktır.
 
 q8-"İşaretsiz" değişkenlerin sınırlamaları nelerdir?
+Unsigned değişkenler negatif sayı tutamazlar. 0'dan tip türlerine göre bellekte ne kadar yer kaplayabiliyorlarsa o sınıra kadar değer aralıkları vardır.
 
 q9-"İşaretsiz" değişken türleri (UInt, ULong vs.) kullanırken, Java API'leri ile uyumluluk konusunda ne gibi sorunlar olabilir? Bunları çözmek için neler yapabilirsiniz?
 
