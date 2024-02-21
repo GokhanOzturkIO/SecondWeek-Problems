@@ -56,6 +56,10 @@ fun calculateT(){
         var result: Number? = null
         when (theOperation) {
             "+" -> result = firstNumber!!.toDouble() + secondNumber!!.toDouble()
+            "-" -> result = firstNumber!!.toDouble() - secondNumber!!.toDouble()
+            "*" -> result = firstNumber!!.toDouble() * secondNumber!!.toDouble()
+            "/" -> result = firstNumber!!.toDouble() / secondNumber!!.toDouble()
+
             // Add more cases for other operations
         }
         println("Your result: $result")
