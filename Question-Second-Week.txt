@@ -106,4 +106,43 @@ Bunlar (+ = Toplama), (-= Çıkarma), (*= Çarpma), (/ = Bölme), (%=Modül) şe
 (<) -> Sayının küçük olup olmadığını kontrol eder.
 (>) -> Sayının büyük olup olmadığını kontrol eder.
 
-27-> 
+27-> Bit düzeyinde operatörler (Bitwise operators) nelerdir? Ne amaçla kullanılır? Kotlin'de bunları nasıl kullanabilirsiniz?
+
+Bit düzeyinde operatörler (bitwise operators), sayıların ikili (binary) temsilini kullanarak, bit seviyesinde doğrudan manipülasyon yapmaya yönelik operatörlerdir.
+Bitwise AND (&):
+
+Her iki bit de 1 ise, sonuç biti 1 olur.
+Örnek: a & b
+Bitwise OR (|):
+
+En az bir bit 1 ise, sonuç biti 1 olur.
+Örnek: a | b
+Bitwise XOR (^):
+
+Yalnızca bir bit 1 ise, sonuç biti 1 olur.
+Örnek: a ^ b
+Bitwise NOT (~):
+
+Bir biti tersine çevirir (1 ise 0 yapar, 0 ise 1 yapar).
+Örnek: ~a
+Shift Left (<<):
+
+Belirtilen sayıda biti sola kaydırır (boş alanlar sıfır ile doldurulur).
+Örnek: a << 2 (a'yı 2 bit sola kaydır)
+Shift Right (>>):
+
+Belirtilen sayıda biti sağa kaydırır (boş alanlar en soldaki bit ile doldurulur, işarete bağlıdır).
+Örnek: a >> 3 (a'yı 3 bit sağa kaydır)
+
+val a = 0b1010
+val b = 0b1100
+
+val resultAnd = a and b  // Bitwise AND
+val resultOr = a or b    // Bitwise OR
+val resultXor = a xor b  // Bitwise XOR
+val resultNot = a.inv()   // Bitwise NOT
+
+val resultShiftLeft = a shl 2  // Shift Left
+val resultShiftRight = a shr 1 // Shift Right
+
+28->
