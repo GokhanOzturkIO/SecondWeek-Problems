@@ -39,3 +39,15 @@ class Car() {
 }
 
 Buradaki ilk çıktı BMW ikincisi ise Mercedes oluyor. Görüldüğü üzere sınıf içerisinde tanımlanan val property'nin değerini değiştirebiliyoruz. Immutable diyebilmemiz için getter fonksiyonunu değiştirememiz gerekiyor. Bunu yapmanın yolu da bu val değişkenleri bir fonksiyon scope'u içinde tanımlamaktır. Bu şekilde arka planda getter ve setter fonksiyonları oluşmayacak ve gerçekten immutable olacaktır.
+
+4 -> Type inference (tip çıkarımı), değişkenlerin tiplerinin otomatik veya bizim yazmamızla belirlenmesidir. Eğer değişkenin değerini verirsek doğrudan verirsek burada otomatik bir tip çıkarımı olur. Onun hangi tip bir değişken olduğunu belirtmemize gerek yoktur. Lokal bir değişkenin başlangıç değerini vermeden tanımlayabilir fakat bu tanımlama sırasında değişkenin tipini de kesinlikle yazmalıyız.
+
+class Car {
+    // val carName : String // Başlangıç değeri olmadan sınıf değişkeni tanımlanamıyor.
+    val carName : String = "Audi" // Explicit Type Inference
+    val carName2 = "Audi" // Implicit Type Inference
+    
+    fun printCarName() {
+        val carName: String // başlangıç değeri olmadan lokal bir değişken tanımlanabiliyor.
+    }
+}
