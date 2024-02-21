@@ -53,3 +53,8 @@ class Car {
 }
 
 5 -> Hayır, özel optimazsyonlar ile primitive performansını yakayabiliriz. Örneğin Int, Java'daki int tipine denk gelirken Int?, Integer tipine karşılık gelir. Bu şekilde primitive - referans tip ayrımı yapılabiliyor.
+
+6 -> Tip güvenliği, bir değişken hangi tipte tanımlandıysan o tipteki değişkenleri alabilmesidir. Diğer tipteki değişkenleri alamaz.
+
+val myStr = "Omer"
+myStr = 5 // exception (String ifadeye int veremeyiz)
