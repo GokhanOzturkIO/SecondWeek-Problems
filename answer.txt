@@ -169,3 +169,9 @@
 ## 7) "İşaretsiz" değişkenlerle yapılan matematiksel işlemlerde, özellikle büyük sayılarla çalışırken karşılaşılabilecek taşma (overflow) ve taşma olmaması (underflow) durumları için Kotlin nasıl bir yönetim sağlar?
  Kotlin işaretsiz sayıalrda taşma ılması durumunda işlem sonucunu sıfırlar e kalanı üzerine ekler.   a1 = UInt.MAX_VALUE + 10u işlemide a1 değeri 9 olacaktır.
 
+## 8) "İşaretsiz" değişkenlerin sınırlamaları nelerdir?
+ UByte ==> 0-255
+ UShort ==> 65,535
+ UInt ==> 6,294,967,295 (2^32-1)
+ ULong ==> 18,446,744,073,709,551,615 (2^64 - 1)
+
