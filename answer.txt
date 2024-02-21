@@ -186,3 +186,10 @@
  if(a is Long) ==> a Long tipinde bir değişkense statement in içine girer
  if(a !is Int) ==> a Int tipinde bir değişken değilse statement içerisine girer
 
+## 2) "Akıllı Dönüşüm" (Smart Cast) ne demektir? Farklı kod örnekleri ile açıklayın. Bu özelliğin sınırlamaları nelerdir? "Güvenli & Güvensiz" operatörler nelerdir?
+ Tip dönüşümünün otomatik olarak yapılması durumudur. Fakat Kotlinde Smart Casting özelliği yoktur. Ona en yakın kullanım şekli "is" keywordu ile sağlanabilir.
+ var x: Number = 0
+ if(x is Int){ ==> eğer bu koşul sağlanıyorsa tip dönüşümünü ide yapmış gibi gözüküyor.
+  // Bu alanda Int fonksiyonlarını kullanabiliyorsun
+ }
+
