@@ -70,4 +70,7 @@ Not: Genellikle, bilimsel ve mühendislik uygulamalarında daha fazla hassasiyet
 17-> Double ve Float değişkenlerle çalışırken ondalık ayıracı olarak hangi işaretler kullanılır? Bu ayıraçların kullanımında nelere dikkat etmek gerekir?
 Double ve float değişkenlerle çalışırken (.) kullanılır. Burada (.) kullanırken (,) kullanmamaya özen göstermemiz gerekir çünkü hata alırız bu yüzden.
 
-18->
+18->Double ve Float değişkenler ondalık kısımda kaç basamağa kadar işlem yaparlar? Bu sınırın üzerinde gelen ondalık bilgileri için nasıl davranırlar? Hangi durumlar için Float ve hangi durumlar için Double kullanılmalıdır?
+Float 7 double 15-16 basamağa kadar işlem yapabilir. İşlem aralıkları hangisinde ise ona göre kullanılır genellikle banka uygulamalarında double kullanılır.
+
+19->  
