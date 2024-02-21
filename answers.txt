@@ -123,6 +123,17 @@ Ancak yuvarlama kriteri String.format, Math.round kullanılarak değiştirilebil
     val number2 = 3.45579
     println(String.format("%.2f", number2)) //3.46 yazdırılır
 
+İşaretsiz Sayılar
+
+q1-"İşaretsiz" (Unsigned) değişkenler ne demektir? İşaretli olanlarla aralarındaki fark nedir?
+Unsigned sayısal değişkenler 0'dan başlayıp bellekte yer kapladığı alanlara göre o değere kadar yer kaplayabilirler. Unsigned değişkenler signed olanların yapabildiği işlemlerin çoğunu destekler. Aralarındaki fark unsigned olan yalnızca 0 ve pozitif sayıları taşıyabilirken signed olanlar negatif de taşıyabilir.
+UByte 0 - 255
+UShort 0 - 65,535
+UInt 0 - 4,294,967,295 (232 - 1)
+ULong 0 - 18,446,744,073,709,551,615 (264 - 1)
+
+q2-
+
 
 
 
