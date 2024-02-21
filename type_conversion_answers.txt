@@ -76,3 +76,20 @@ Soru 6: "val b: Byte = 1 ile val i: Int = b.toInt() ve son olarak print(b == i) 
  Çıktımız true olur. Çünkü '==' operatörü ile değişkenlerin aldığı değerler karşılaştırılıyor ve örneğimize baktığımızda
  her ikiside 1 değerine sahip olduğu için sonuç true olur
 
+------------------------------------------------------------------------------------------------------------------------
+
+Soru 7: Sayısal değişkenlerde açık dönüşüm (Explicit Type Conversion) yaparken hangi fonksiyonları kullanabilirsiniz?
+
+-toByte(): Bir sayısal değeri Byte tipine dönüştürür.
+
+-toShort(): Bir sayısal değeri Short tipine dönüştürür.
+
+-toInt(): Bir sayısal değeri Int tipine dönüştürür.
+
+-toLong(): Bir sayısal değeri Long tipine dönüştürür.
+
+-toFloat(): Bir sayısal değeri Float tipine dönüştürür.
+
+-toDouble(): Bir sayısal değeri Double tipine dönüştürür.
+
+-toChar(): Bir sayısal değeri Char tipine dönüştürür.
