@@ -122,3 +122,5 @@ Tek Duyarlıklı (Single Precision):
 8 -> Hayır oktal sayılar Kotlin'de desteklenmiyor.
 
 9 -> "Geleneksel Notasyon" terimi, matematiksel ifadelerin genellikle kullanılan geleneksel gösterimine atıfta bulunur. Mesela + işareti toplama işaretini ifade eder. * işareti çarpım işaretini gösterir.
+
+10 -> Uzun haneden oluşan sayıların daha okunaklı olması için _ kullanılır. Yorumlanırken _ işaretleri görmezden gelinir.
