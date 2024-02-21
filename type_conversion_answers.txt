@@ -103,3 +103,18 @@ Neden böyle olduğunu açıklayın.
 
     Örneğimizde Long tipi, Int değerden daha fazla bir aralığa sahşp olduğu için değişken türümüz Long olacaktır ve işlemin
     sonucu 4 olacaktır.
+
+------------------------------------------------------------------------------------------------------------------------
+
+Soru 9: "val result = Int.MAX_VALUE + Int.MAX_VALUE" gibi bir işlemin sonucunda "result" değişkeninin tipi ve değeri ne olur?
+Neden böyle olduğunu açıklayın.
+
+    Bu işlemin sonucu -2 olacak ve bir overflow durumu meydana gelecek ve beklediğimiz bir sonucu olmayacaktır. ve aynı zamanda
+    result değişkeninin tipi Int olacaktır.
+
+    Burada result değişkeninin Int olma sebebi Kotlin Type Inference sırasında bir aritmetik işlem yapıldığında bu işlemin
+    hangi değer aralığına geldiğini kontrol etmiyor. Bunu biz developerların kontrolüne bırakmıştır.
+
+    Bunu yapmalarındaki sebep ise eğer bu kontrolü gerçekleştirselerdi, gereksiz yere her aritmetik işlemde bu kontrol
+    sağlanacaktı. Çoğu uygulamada genellikle işlemler Int değer aralığında yapılır daha
+    büyük veri tiplerine ihtiyaç olmaz. Bu durumda bu kontrolü gerçekleştirmek ek bir maliyet getirecekti.
