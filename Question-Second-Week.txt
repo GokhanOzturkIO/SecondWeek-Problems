@@ -164,3 +164,8 @@ Sadece pozitif sayıları temsil eden değişkenlerdir. Aralarındaki fark değe
 
 31-> "İşaretsiz" değişkenler nasıl bir sınıf yapısında tutulurlar? Bu neden önemlidir?
 İşaretsiz değişkenler unsigned sınıfında tutulurlar. Bu tür değişkenler, pozitif sayılarla çalışmanın gerektiği durumlarda kullanılır.
+
+32-> "İşaretsiz" değişkenlerin harf gösterimi nasıldır?
+val unsignedInt: UInt = 42u
+val unsignedLong: ULong = 42uL
+Bu şekilde gösterilir.
