@@ -130,3 +130,10 @@ Soru 10: "val x = 5 / 2 println(x == 2)" gibi bir işlemin sonucu ve tipi nedir?
     Ama burada örneğin bir değeri açıkca(örn: 5f / 2) float olduğunu belirtseydik sonuç false olurdu. Çünkü sonuç bize
     2.5 olacak dönecekti.
 
+------------------------------------------------------------------------------------------------------------------------
+
+Soru 11: "val x = 5L / 2 println(x == 2L)" gibi bir işlemin sonucu ve tipi nedir? Neden böyle olduğunu açıklayın.
+
+    Sonuç true olacaktır. Long bir değer ile Int bir değer matematiksel bir işlem yaptığımzda sonuç Long tipinde olacaktır.
+    Long tipinde ise ondalıklı sayılar gösterimi yapamadığı için sonucumuz 2 olacaktır.
+
