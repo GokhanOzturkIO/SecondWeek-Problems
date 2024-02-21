@@ -92,7 +92,7 @@ fun main() {
 
 3 -> 1 (sayı olan 1 :D) ifadesiyle karışmaması için :) Örneğin: val myNumber = 111.1f dediğimizde herhangi bir okuma problemi yaşanmıyor fakat 111.1l yapsaydık sondakinin 1 mi l mi olduğunu tam olarak göremezdik.
 
-4 -> Kayan noktanın ne kadar uzunluğa sahip olacağını belirleyen kavramlardır.
+4 -> Kayan noktanın ne kadar uzunluğa sahip olacağını belirleyen kavramlardır. Float bir değer için .'dan sonra 9-10 hane yazsak bile bunların hepsi o değer içine atanmıyor.
 
 Tek Duyarlıklı (Single Precision):
 
@@ -105,3 +105,5 @@ Tek Duyarlıklı (Single Precision):
 - Çift duyarlıklı, IEEE 754 standardına göre 64-bit uzunluğunda bir kayan nokta sayı formatıdır.
 - Çift duyarlıklı format, daha fazla bellek kullanımı ve daha yüksek hesaplama hassasiyeti sağlar.
 - Daha geniş bir aralık ve daha yüksek hassasiyet sağlar, bu da büyük ve küçük sayılarla çalışırken daha doğru sonuçlar elde etmeyi mümkün kılar.
+
+5 -> ondalık ayıracı için ikisinde de . işareti kullanılır. Aralarındaki farkı ise float ifadesinin sonundaki f veya F harfinden anlarız.
