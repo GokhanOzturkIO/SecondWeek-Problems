@@ -216,6 +216,10 @@
 ## 9) "val x = 5 / 2 println(x == 2)" gibi bir işlemin sonucu ve tipi nedir? Neden böyle olduğunu açıklayın.
  Sonuc true olacaktır. 2 sayıda Integer tipindedir. Bundan dolayı çıkan sonucta ondalık kısım bulunmayacaktır.
 
+## 10) "val x = 5L / 2 println(x == 2L)" gibi bir işlemin sonucu ve tipi nedir? Neden böyle olduğunu açıklayın.
+ Sonuc true olacaktır. Kotlin matematiksel işlemlerde en büyük olan değerin tipini sonuca atayacaktır. Yine Değişkenler ondalıklı tipe uygun olmadığından
+ sonucta ondalık kısım bulunmayacaktir.
+
 
 
 
