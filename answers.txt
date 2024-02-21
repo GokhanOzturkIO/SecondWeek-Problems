@@ -168,7 +168,13 @@ Bir değişken tipini kontrol etmek istendiğinde kullabilirler. is yanındaki t
     }
 
 q2-"Akıllı Dönüşüm" (Smart Cast) ne demektir? Farklı kod örnekleri ile açıklayın. Bu özelliğin sınırlamaları nelerdir?
-
+Compiler is check'lerini takip eder ve sonradan kullanımlar olduğunda gerekli durumlarda smart casting uygular.
+fun demo(x: Any) {
+    if (x is String) {
+        print(x.length) // x is automatically cast to String
+    }
+}
+Smart casting yalnızca val değişkenlere uygulanır. Yalnızca kotlin türleri için geçerlidir, Java veya farklı dil türleri kullanıldığında smart casting uygulanamayabilir.
 q3-"Güvenli & Güvensiz" operatörler nelerdir?
 
 q4-Sayısal değişkenlerde örtük tip genişletme (implicit widening conversions) ne demektir? Kotlin'de bu neden yapılamaz?
