@@ -32,6 +32,9 @@ Not : val ve var arasında memoryde yer kaplama anlamındaki fark çok çok azd�
 
 - Bir `var` değişkeni `val` gibi davranmasını nasıl sağlayabiliriz `val` kelimesini kullanmadan? Bunu neden yapmak isteriz? Örnek bir senaryo verin.
 - "Değişmez" (Immutable) ve "Salt Okunur" (ReadOnly) kavramlarını açıklayın. `val` değişkenler neden aslında "değişmez" değil de "salt okunur" olarak açıklanmalıdır?
+
+Cevap : Immutable kavramı "değişmez" demektir ve bir değişkene hiçbir şey tanımlanamaz. Read only ise ilk tanım yapılabilir fakat sonrasında değiştirme yapılmaz. Bu sebepten ötürü val read-only olarak tanımlanmalıdır. Çünkü val'da ilk değişken tanımlanır sonrasında değişmez.
+
 - "Tip Çıkarımı" (Type inference) kavramını açıklayın. Hangi durumlarda tip belirtmek kesin olarak gereklidir?
 - Kotlin'de tüm değişkenlerin sınıf olarak bulunması, "ilkel tip" (primitive type) olmadıkları anlamına gelir mi? Arka planda neler oluyor?
 - "Tip Güvenliği" (Type Safety) kavramını açıklayın.
