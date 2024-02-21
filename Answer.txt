@@ -240,6 +240,14 @@ inline value sınıflar içerisinde tutulurlar. Inline value sınıflar performa
 
 u harfi ile gösterimi sağlanmaktadır.
 
+===========================
+
+32-) "val a1 = 42u ve val a2 = 0xFFFF_FFFF_FFFFu" değişkenlerin tipleri ne olur? Neden?
+
+val a1 = 42u // UInt olacaktır. Özellikle bir tip belirtilmediği için default olarak daha büyük değerlerle çalışılma ihtimaline karşın
+kotlin UInt olarak tip çıkarımı yapmaktadır.
+
+val a2 = 0xFFFF_FFFF_FFFFu // Büyüklüğü sebebiyle ULong olacaktır.
 
 
 
