@@ -259,5 +259,9 @@ val numb = 52541uL
 
 ===========================
 
+34-) "İşaretsiz" değişkenlerin kullanım amaçları nelerdir?
 
+İşaretsiz sayılar, işaretli sayılara göre daha geniş bir kapsama alanına sahiptir. Örneğin byte 127'ye kadar kapsama alanı sağlarken Ubyte 255'e kadar kapsama alanına sahiptir.
+
+===========================
 
