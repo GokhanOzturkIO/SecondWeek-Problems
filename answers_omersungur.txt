@@ -119,3 +119,4 @@ Tek Duyarlıklı (Single Precision):
      val decimalNumber: Int = 123 // Decimal
      println(decimalNumber)
 
+8 -> Hayır oktal sayılar Kotlin'de desteklenmiyor.
