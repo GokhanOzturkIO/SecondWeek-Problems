@@ -1,6 +1,3 @@
-
-var numberIsInt = false
-var numberIsDouble = false
 var intNumber : Int? = null
 var doubleNumber : Double? = null
 var theOperation : String? = null

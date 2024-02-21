@@ -1,3 +1,44 @@
+1.is ve !is operatörlerinin kullanımını açıklayın.
+    val x: Any = 123
+    if (x !is String) {
+        println("x is not a String")
+    }
+    val x: Any = "hello"
+     if (x is String) {
+         println(x.length)
+     }
+2."Akıllı Dönüşüm" (Smart Cast) ne demektir? Farklı kod örnekleri ile açıklayın. Bu özelliğin sınırlamaları nelerdir?
+    fun printStringLength(str: Any) {
+        if (str is String) {
+            println("String length is: ${str.length}") // Smart cast: str automatically cast to String
+        }
+    }
+    printStringLength("hello") // Output: String length is: 5
+
+3."Güvenli & Güvensiz" operatörler nelerdir?
+    safe operator - val length: Int? = nullableString?.length
+    non safe operator - val length: Int = nullableString!!.length
+
+4.Sayısal değişkenlerde örtük tip genişletme (implicit widening conversions) ne demektir? Kotlin'de bu neden yapılamaz?
+    int intValue = 10;
+    long longValue = intValue; // Implicit widening conversion from int to long
+
+5."val b: Byte = 1 ile val i: Int = b ve son olarak print(b == i) gibi bir kod yazıldığında çıktı ne olur? Neden böyle bir çıktı aldığınızı açıklayın.
+    val b: Byte = 1
+    val i: Int = b
+    print(b == i)//true
+
+6."val b: Byte = 1 ile val i: Int = b.toInt() ve son olarak print(b == i) gibi bir kod yazıldığında çıktı ne olur? Neden böyle bir çıktı aldığınızı açıklayın.
+    val b: Byte = 1
+    val i: Int = b.toInt()
+    print(b == i)//true
+
+7.Sayısal değişkenlerde açık dönüşüm (Explicit Type Conversion) yaparken hangi fonksiyonları kullanabilirsiniz?
+        toByte()  toFloat()
+        toShort()  toDouble()
+        toInt()     toChar()
+        toLong()
+
 8.- Sayısal değişkenlerde açık dönüşüm (Explicit Type Conversion) yaparken hangi fonksiyonları kullanabilirsiniz?
     val intNumber: Int = 42
     val byteNumber: Byte = intNumber.toByte()
@@ -25,4 +66,4 @@
     val someVariable: Any = "Hello"
     if (someVariable is String){
         println("is String")
-    }
+}

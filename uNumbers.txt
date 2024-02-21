@@ -1,0 +1,35 @@
+1."İşaretsiz" (Unsigned) değişkenler ne demektir? İşaretli olanlarla aralarındaki fark nedir?
+    For example, an 8-bit unsigned variable can hold values from 0 to 255,
+    but a signed 8-bit variable can hold values from -128 to 127.
+    Unsigned variables are often used to represent positive values within a specific range
+2."İşaretsiz" değişkenler nasıl bir sınıf yapısında tutulurlar? Bu neden önemlidir?
+    "Unsigned" variables are typically not held within a class structure. Instead, they are considered as a data type within programming languages,
+     specifically within the category of integer data types. These data types are primarily used for storing integer values and occupy a certain amount of memory.
+3."İşaretsiz" değişkenlerin harf gösterimi nasıldır?
+    unsigned int (unsigned integer)
+    unsigned char (unsigned character)
+    unsigned short (unsigned short integer)
+    unsigned long (unsigned long integer)
+4."val a1 = 42u ve val a2 = 0xFFFF_FFFF_FFFFu" değişkenlerin tipleri ne olur? Neden?
+    a1 is an unsigned Int value
+    a2 is an unsigned Long value because of their value range.
+5."İşaretsiz" "Long" harf gösterimi nasıl yapılır?
+    val unsignedLongValue: ULong = 123456789UL
+6."İşaretsiz" değişkenlerin kullanım amaçları nelerdir?
+    Representation of Only Non-Negative Numbers
+7."İşaretsiz" değişkenlerle yapılan matematiksel işlemlerde, özellikle büyük sayılarla çalışırken karşılaşılabilecek taşma (overflow) ve taşma olmaması (underflow) durumları için Kotlin nasıl bir yönetim sağlar?
+     // Unsigned Overflow Example
+        val overflowUInt = maxValueUInt + 1u
+        println("Overflow Example (UInt): $overflowUInt")
+     //Unsigned Underflow Example
+     val underflowUInt = (-1).toUInt()
+     println("Underflow Example (UInt): $underflowUInt")
+8."İşaretsiz" değişkenlerin sınırlamaları nelerdir?
+    Inability to Represent Negative Values
+    Data Compatibility
+    Limited Range for Smaller Data Types
+
+9."İşaretsiz" değişken türleri (UInt, ULong vs.) kullanırken, Java API'leri ile uyumluluk konusunda ne gibi sorunlar olabilir? Bunları çözmek için neler yapabilirsiniz?
+    Method Signatures: Java methods often expect parameters and return types of signed integer types (int or long).
+    When using Kotlin's unsigned types (UInt or ULong),
+    direct compatibility may be an issue due to the difference in types.
