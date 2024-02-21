@@ -137,3 +137,10 @@ Soru 11: "val x = 5L / 2 println(x == 2L)" gibi bir işlemin sonucu ve tipi nedi
     Sonuç true olacaktır. Long bir değer ile Int bir değer matematiksel bir işlem yaptığımzda sonuç Long tipinde olacaktır.
     Long tipinde ise ondalıklı sayılar gösterimi yapamadığı için sonucumuz 2 olacaktır.
 
+------------------------------------------------------------------------------------------------------------------------
+
+Soru 12: "val x = 5 / 2.toDouble() println(x == 2.5)" gibi bir işlemin sonucu ve tipi nedir? Neden böyle olduğunu açıklayın.
+
+    İşlemin sonucu true olacaktır. Bu ifade, matematiksel bir işlemi gerçekleştirir. 5 sayısını 2 sayısına böler.
+    Ancak, 2.toDouble() ifadesi, 2 sayısını Double türüne dönüştürür. Böylece bölme işlemi sonucu ondalık sayı olarak elde
+    edileceğinden dolayı ve değeri 2.5 olacak. Bu değeri de 2.5 ile karşılaştırdığımızda sonuç true olur.
