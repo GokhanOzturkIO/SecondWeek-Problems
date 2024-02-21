@@ -90,3 +90,6 @@ Alt çizgiler sayılarda okumayı kolaylaştırmak için kullanılır. örneğin
 
 23-> == ile neyi karşılaştırırız? === ile neyi karşılaştırırız?
 2 eşittir ile değerleri karşılaştırırız. 3 eşittir ile referans kodlarını karşılaştırırız.
+
+24-> === operatörü ile karşılaştırma yaparken Byte değer aralığı neden önemlidir? Kotlin bu aralığa göre neden özel bir davranış sergiler?
+Byte değer aralığında -127 ve 128 arasındadır. Bu aralık dışındaki değerler için her bir Byte değeri ayrı bir bellek konumunu temsil eder ve bu durumda referans eşitliği false döner.
