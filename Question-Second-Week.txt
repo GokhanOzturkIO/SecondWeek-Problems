@@ -97,3 +97,13 @@ Byte değer aralığında -127 ve 128 arasındadır. Bu aralık dışındaki de�
 25-> Sayısal değişkenlerde hangi matematiksel operatörler kullanılabilir?
 Sayısal değişkenlerde (+, -, *, /, %) gibi ifadeler kullanılabilir.
 Bunlar (+ = Toplama), (-= Çıkarma), (*= Çarpma), (/ = Bölme), (%=Modül) şeklindedir.
+
+26-> Sayısal değişkenlerde hangi karşılaştırma operatörleri kullanılabilir?
+(==) -> İki sayının eşit olup olmadığını kontrol eder.
+(!=) -> İki sayının eşit olmadığını kontrol eder.
+(<=) -> Sayının küçük veya eşit olup olmadığını kontrol eder.
+(>=) -> Sayının büyük veya eşit olup olmadığını kontrol eder.
+(<) -> Sayının küçük olup olmadığını kontrol eder.
+(>) -> Sayının büyük olup olmadığını kontrol eder.
+
+27-> 
