@@ -58,3 +58,5 @@ class Car {
 
 val myStr = "Omer"
 myStr = 5 // exception (String ifadeye int veremeyiz)
+
+7 -> Nullable yapabilmek için ? ifadesini tipin sonuna koyabiliriz. Örneğin: String -> String? bu şekilde nullable yapmış oluyoruz.
