@@ -198,6 +198,14 @@ q6-"val b: Byte = 1 ile val i: Int = b.toInt() ve son olarak print(b == i) gibi 
 Operator '==' cannot be applied to 'Byte' and 'Int'çıktısını verdi. i değişkenine b atanırken türü Int'e çevirilmiş olabilir ancak b'nin asıl hali hala Byte türündedir ve bu yüzden de tip uyuşmazlığı gerçekleşir.
 
 q7-Sayısal değişkenlerde açık dönüşüm (Explicit Type Conversion) yaparken hangi fonksiyonları kullanabilirsiniz?
+toInt()- integer a çevirir
+toLong() - long a çevirir
+toByte()- byte a çevirir
+toShort()- short a çevirir
+toFLoat()- float a çevirir
+toDouble()- double a çevirir
+toChar()- char a çevirir
+boolean türü için dönüşüm yoktur
 
 q8-"val result = 1L + 3" // "Long + Int" gibi bir işlemin sonucunda "result" değişkeninin tipi ve değeri ne olur? Neden böyle olduğunu açıklayın.
 
