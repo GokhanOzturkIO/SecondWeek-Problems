@@ -173,3 +173,6 @@ Bu şekilde gösterilir.
 33-> "val a1 = 42u ve val a2 = 0xFFFF_FFFF_FFFFu" değişkenlerin tipleri ne olur? Neden?
 İlk değişken Int olur Çünkü Int değer aralığındadır. Diğeri ise Long olur çünkü Hexadecımaldir.
 
+34-> "İşaretsiz" "Long" harf gösterimi nasıl yapılır?
+uLong şeklinde gösterilir.
+
