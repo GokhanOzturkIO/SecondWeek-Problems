@@ -51,3 +51,5 @@ class Car {
         val carName: String // başlangıç değeri olmadan lokal bir değişken tanımlanabiliyor.
     }
 }
+
+5 -> Hayır, özel optimazsyonlar ile primitive performansını yakayabiliriz. Örneğin Int, Java'daki int tipine denk gelirken Int?, Integer tipine karşılık gelir. Bu şekilde primitive - referans tip ayrımı yapılabiliyor.
