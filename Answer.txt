@@ -203,4 +203,17 @@ Toplama (+), Çıkarma (-), Çarpma (*) , Bölme (/), Mod Alma (%)
 ===========================
 
 
+27-) Bit düzeyinde operatörler (Bitwise operators) nelerdir? Ne amaçla kullanılır? Kotlin'de bunları nasıl kullanabilirsiniz?
+
+and (ve)
+or (veya)
+xor
+inv
+shl
+shr
+ushr
+
+Bu operatörler binary seviyesinde bitlerle çalışırlar. Infix fonksiyon şeklindedirler. Bundan dolayı bu fonksiyonları çağırırken nokta ve parantez kullanımına gerek yoktur.
+
+===========================
 
