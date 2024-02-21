@@ -144,3 +144,42 @@ Soru 12: "val x = 5 / 2.toDouble() println(x == 2.5)" gibi bir işlemin sonucu v
     İşlemin sonucu true olacaktır. Bu ifade, matematiksel bir işlemi gerçekleştirir. 5 sayısını 2 sayısına böler.
     Ancak, 2.toDouble() ifadesi, 2 sayısını Double türüne dönüştürür. Böylece bölme işlemi sonucu ondalık sayı olarak elde
     edileceğinden dolayı ve değeri 2.5 olacak. Bu değeri de 2.5 ile karşılaştırdığımızda sonuç true olur.
+
+------------------------------------------------------------------------------------------------------------------------
+
+Soru 13: Kotlin'de tür dönüşümü yapılırken, dönüşümün başarısız olması durumunda TypeCastException nasıl ele alınır
+ve bu tür hataların önüne geçmek için hangi önlemler alınabilir?
+
+    Bu durumlarda kullanabileceğimiz birkaç durum var.
+
+    1- as? operatörünü kullanmak
+
+    val result:Int? = someValue as? Int
+    Bu işlemi yaptığımızda someValue değişkeni Int ise başarılı bir şekilde dönüştürülür. Ama Int bir tip değil ise
+    result değişkenine null değer atanır. Bu durumda TypeCastException hatasını almayız ama result değişkenini kullanmak
+    istediğimizde null kontrolü yapmamız gerekir.
+
+    2 - to...OrNull() Fonksiyonları kullanabiliriz
+
+    Yukarıda as? ile yaptığımız işlemin aynısın yapar. Sadece bir extension fonksiyon olarak kullanımıdır.
+
+    val x = "5"
+
+    val number = x.toIntOrNull()
+
+    3 - Dönüşüm sırasında try-catch kullanarak hata durumunda işlemin başarısız olduğu ile ilgili bir bilgilendirme yapılabilir.
+
+    4 - Veya Smart Cast'den yararlanabiliriz.
+
+     Biz sadece bu değişkeninin hangi nesnenin türü olduğunu kontrolünü gerçekleştiririz. Eğer o if içerisine girer ise
+     değişkenimiz istediğimiz değişken tipine SmartCast ile dönüştürülmüş olur.
+
+     val value: Any = "Merhaba, Kotlin!"
+
+     if (value is String) {
+         println(value.length)
+     }
+
+     if (value is Int) {
+         println(value * value)
+     }
