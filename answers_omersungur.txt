@@ -60,3 +60,11 @@ val myStr = "Omer"
 myStr = 5 // exception (String ifadeye int veremeyiz)
 
 7 -> Nullable yapabilmek için ? ifadesini tipin sonuna koyabiliriz. Örneğin: String -> String? bu şekilde nullable yapmış oluyoruz.
+
+8 -> Nullable bir değişkeni direkt olarak kullanamıyoruz. Bu da bize null safety kavramını getiriyor. Nullable bir değişkeni kullanabilmek için ? ve !! ifadelerine yoğunlaşabiliriz. Eğer bir ifade null değil ise bu işlem yap demek istersek ? ifadesini, eğer bu ifade kesinlikle null değil ben eminim, kullan bunu demek istersek !! operatörünü kullanabiliriz. Fakat değer null ise exception oluşur.
+
+fun main() {
+    val myStr: String? = null
+    println(myStr?.length) // null döner
+    // println(myStr!!.length) // exception oluşur.
+}
