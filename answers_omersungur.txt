@@ -91,3 +91,17 @@ fun main() {
 2 -> Değer aralıklarına göre belirler. 1.Soruda bu konuya kısaca bakış atmıştık. Bir değişkene int aralığında değer atanıyorsa (-2^31 ve 2^31 -1) bu sayının tipi integer olarak belirlenir. Byte, Short gibi diğer türlerin verilmesini istiyorsak dönüştürme fonksiyonlarını kullanabiliriz (toShort() gibi). Bir değişkene noktalı sayı verdiğimizde default olarak double değerini alır. Float yapabilmek için f ifadesini sayını sonuna verebiliriz.
 
 3 -> 1 (sayı olan 1 :D) ifadesiyle karışmaması için :) Örneğin: val myNumber = 111.1f dediğimizde herhangi bir okuma problemi yaşanmıyor fakat 111.1l yapsaydık sondakinin 1 mi l mi olduğunu tam olarak göremezdik.
+
+4 -> Kayan noktanın ne kadar uzunluğa sahip olacağını belirleyen kavramlardır.
+
+Tek Duyarlıklı (Single Precision):
+
+- Tek duyarlıklı, IEEE 754 standardına göre 32-bit uzunluğunda bir kayan nokta sayı formatıdır.
+- Tek duyarlıklı format, daha az bellek kullanımı ve daha düşük hesaplama hassasiyeti sağlar.
+- Ancak, daha sınırlı bir aralık ve hassasiyet sağlar. Özellikle büyük veya çok küçük sayılarla çalışırken hassasiyet kaybı yaşanabilir.
+
+Çift Duyarlıklı (Double Precision):
+
+- Çift duyarlıklı, IEEE 754 standardına göre 64-bit uzunluğunda bir kayan nokta sayı formatıdır.
+- Çift duyarlıklı format, daha fazla bellek kullanımı ve daha yüksek hesaplama hassasiyeti sağlar.
+- Daha geniş bir aralık ve daha yüksek hassasiyet sağlar, bu da büyük ve küçük sayılarla çalışırken daha doğru sonuçlar elde etmeyi mümkün kılar.
