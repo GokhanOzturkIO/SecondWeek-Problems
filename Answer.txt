@@ -217,3 +217,9 @@ Bu operatörler binary seviyesinde bitlerle çalışırlar. Infix fonksiyon şek
 
 ===========================
 
+28-) Kotlin'de büyük sayılarla çalışırken hangi ek türlerden yararlanılır ve bu türlerin sınırları nelerdir?
+
+BigInteger ve BigDecimal kullanılır.
+
+===========================
+
