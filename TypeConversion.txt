@@ -1,0 +1,79 @@
+is ve !is operatörlerinin kullanımını açıklayın.
+* Type checking ve type casting işlemlerinde kullanılır. Nesnenin belirli bi türe ait olup olmadığını kontrol eder. Sonuç olumlu ise true veya olumsuz ise false değerini döndürür. 
+
+
+"Akıllı Dönüşüm" (Smart Cast) ne demektir? Farklı kod örnekleri ile açıklayın. Bu özelliğin sınırlamaları nelerdir?
+* Type conversion işlemini daha güvenli ve kolay hale getiren bir özelliktir. Bir objenin belli koşullar sağlandığında otomatik olarak type ını değiştirmeye yarar. Örnek olarak verilebilecek kodlar;
+fun example(str: String?) {
+    if (str != null) {
+        // Artık nullable değil String olarak işlem görür.
+        println(str.length) // No need for null checks here
+    }
+}
+
+fun process(obj: Any) {
+    if (obj is String) {
+        // Any type ında değil String type ındadır.
+        println(obj.length) // No need for explicit casting here
+    }
+}
+
+fun process(obj: Any) {
+    when (obj) {
+        is String -> println(obj.length) // Koşula göre eğer String Type ındaysa otomatik olarak Anyden String e çevrilir.
+        is Int -> println(obj * 2) // Aynı şekilde Integer a çevrilir.
+    }
+}
+
+Smart cast belli kısıtlamalara sahiptir . Bir sınıfın private olmayan alanlarında çalışır ve değişkenin içeriğinin değiştirilemez olması. Örnek verecek olursak List<Any> yi  is MutableList şeklinde yazdığımızda hata verir. Onun yerine  List<String> şeklinde yazmalıyız.
+
+
+
+"Güvenli & Güvensiz" operatörler nelerdir?
+* Güvenli çağrı "?" ile sağlanır. Null kontrolü yaptıktan sonra eğer null ise kodumuz hata vermeden devam edecektir. Güvensiz çağrı "!!" ile sağlanır. Null kontrolünden geçemezse kodumuz NullPointerException hatası verecektir.
+
+Sayısal değişkenlerde örtük tip genişletme (implicit widening conversions) ne demektir? Kotlin'de bu neden yapılamaz?
+* Bir veri tipini daha büyük bir veri tipine dönüştürmektir. Örnek olarak Byte ı Integer a dönüştürmek gibi. Küçükten büyüğe dönüştürüldüğü için veri kaybı olmaz. Kotlin dilinde bu yapılamaz çünkü güvenli bir dil olarak tasarlanmıştır. Bunun yerine implicit değil explicit şekilde (toInt() gibi )belirtmemiz gerekmektedir.
+
+"val b: Byte = 1 ile val i: Int = b ve son olarak print(b == i) gibi bir kod yazıldığında çıktı ne olur? Neden böyle bir çıktı aldığınızı açıklayın.
+*  Hata verir çünkü bu tip conversionlar Kotlin' de yapılamaz ve açıkça belirtmemiz gerekir val b: Byte = 1  ve val i : Int = b.toInt() demek lazım. Fakat bu durumda da hata verecektir. Kotlin: Operator '==' cannot be applied to 'Byte' and 'Int' . Bu hatanın sebebi aynı type ların karşılaştırılması yapılabileceğindendir. Düzeltmek için print(b.toInt() == i) diyerek Byte ı explicit şekilde Integer ' a çevirmemiz gerekir.
+
+"val b: Byte = 1 ile val i: Int = b.toInt() ve son olarak print(b == i) gibi bir kod yazıldığında çıktı ne olur? Neden böyle bir çıktı aldığınızı açıklayın.
+* Aynı type karşılaştırması yapmadığımız için "Kotlin: Operator '==' cannot be applied to 'Byte' and 'Int' " hatası alırız. Eğer b.toInt() == i demiş olsaydık bir hata almazdık ve çıktımız true olurdu.
+
+Sayısal değişkenlerde açık dönüşüm (Explicit Type Conversion) yaparken hangi fonksiyonları kullanabilirsiniz?
+* toByte(), toShort(), toInteger(), toFloat(), toDouble() ve toChar() fonksiyonlarını kullanabiliriz.
+
+"val result = 1L + 3" // "Long + Int" gibi bir işlemin sonucunda "result" değişkeninin tipi ve değeri ne olur? Neden böyle olduğunu açıklayın.
+*  Type ı Long olur çünkü iki değişken ile işlem yaparken Kotlin en büyük Type ı sonucun Type' ı olarak belirler. Değeri ise 4 olur.
+
+
+"val result = Int.MAX_VALUE + Int.MAX_VALUE" gibi bir işlemin sonucunda "result" değişkeninin tipi ve değeri ne olur? Neden böyle olduğunu açıklayın.
+* Overflow yaşanır. Tipi Integer olur ve değeri -2 olur. En büyük Type ı sonuç olarak kabul etsek de sonuç Integer değerinin dışına çıkmış olacağı için yanlış bir cevap verecektir. Bunu önlemek için explicit casting yapabiliriz. Herhangi bir değere Int.MAX_VALUE.toLong() dersek sonucu en büyük Tipte alacağı için Long değerine sahip olacaktır ve değeri 4294967294 şeklinde doğru verilecektir.
+
+
+"val x = 5 / 2 println(x == 2)" gibi bir işlemin sonucu ve tipi nedir? Neden böyle olduğunu açıklayın.
+* True dur ve Integer tipindedir. Çünkü 5 ve 2 tamsayıları otomatik olarak Integer tipine dönüştürülür. Dolayısıyla sonucun da Integer olması beklenir. Bu yüzden değer 2.5 değil 2 olacaktır.
+
+
+
+"val x = 5L / 2 println(x == 2L)" gibi bir işlemin sonucu ve tipi nedir? Neden böyle olduğunu açıklayın.
+* Type ı en büyük Tip olan Long ve değeri de 2.5 değil küsüratı atıldığı için 2L olacaktır.
+
+
+"val x = 5 / 2.toDouble() println(x == 2.5)" gibi bir işlemin sonucu ve tipi nedir? Neden böyle olduğunu açıklayın.
+* Sonucun tipi Integer' dan daha büyük olan Double olacaktır. Küsürata sahip olacağından sonuç 2.5 tur.
+
+Kotlin'de tür dönüşümü yapılırken, dönüşümün başarısız olması durumunda TypeCastException nasıl ele alınır ve bu tür hataların önüne geçmek için hangi önlemler alınabilir?
+* Try-catch bloklarından faydalanırız. Örnek olarak 
+try{
+val a:Int = "123".toInt()
+}catch (e: TypeCastException){
+println("Hata: $e.message")
+}
+Integer a dönüşmemesi durumunda Hata mesajı yazdırılackatır. Bir diğer çözüm  Integer a çevirmeye çalıştığımızda toIntOrNull() gibi fonksiyonlar kullanmaya yönelik olacaktır. Eğer null değilse  dönüşüm başarılıdır. Fakat null geldiyse dönüşüm başarısız olmuş demektir.
+
+
+
+
+

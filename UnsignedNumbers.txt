@@ -1,0 +1,32 @@
+"İşaretsiz" (Unsigned) değişkenler ne demektir? İşaretli olanlarla aralarındaki fark nedir?
+* Unsigned değişkenler sadece pozitif sayıları temsil eden veri tipleridir. İşaretli olanlarla arasındaki fark - ve + değerleri arasında değil sadece 0 ile pozitif değer aralığındadır. Örnek olarak Unsigned olan UByte' ın değer aralığı 0 255 arasındadır. Signed değişken olan Byte ' ın değer aralığı -128 ile 127 arasındadır.
+
+"İşaretsiz" değişkenler nasıl bir sınıf yapısında tutulurlar? Bu neden önemlidir?
+*Inline sınıf yapısında tutulurlar.
+
+"İşaretsiz" değişkenlerin harf gösterimi nasıldır?
+* U harfi ile başlar sonra type ı alır. UByte, UShort, UInt ve ULong değişkenler örnek olarak verilebilir.
+
+
+"val a1 = 42u ve val a2 = 0xFFFF_FFFF_FFFFu" değişkenlerin tipleri ne olur? Neden?
+* a1 değişkeni değerinin sonuna u harfi aldığı için Unsigned, tip belirtilmediği için ve integer değer aralığında olduğu için de integer tipindedir. a2 değişkeni de integer değerini geçtiği için ve tip belirtilmediği için Unsigned Long tipindedir. 
+
+
+"İşaretsiz" "Long" harf gösterimi nasıl yapılır?
+*uL veya UL tag ı ile yapılır. Örnek olarak val a = 1UL verilebilir.
+
+"İşaretsiz" değişkenlerin kullanım amaçları nelerdir?
+* Sadece pozitif bir değer geleceğinden emin olduğumuz değişkenler için kullanılabilir. İşaret biti kullanılmadığı için daha performanslıdır.
+
+
+"İşaretsiz" değişkenlerle yapılan matematiksel işlemlerde, özellikle büyük sayılarla çalışırken karşılaşılabilecek taşma (overflow) ve taşma olmaması (underflow) durumları için Kotlin nasıl bir yönetim sağlar?
+* Kotlin' in Unsigned değişkenlerde overflow ve underflow olmaması için yürüttüğü bir mekanizma yoktur. Değişkenin sınırlarının içerisinde olup olmadığını kontrol etmek için require() veya assert() kullanabiliriz.
+
+"İşaretsiz" değişkenlerin sınırlamaları nelerdir?
+* Veri boyutu (8 bit UByte veya 16 bit UShort), Değer aralığı(UByte için 0 - 255 arasındadır),Overflow ve Underflow(kendi değer aralığından aşağıda veya yukarıda olduğu taşma durumlarıdır),Bellek kısıtlamaları.(Büyük boyutlu unsigned değişkenler bellekte daha fazla yer kaplar bu yüzden dikkatlice kullanılmalıdır)
+
+
+"İşaretsiz" değişken türleri (UInt, ULong vs.) kullanırken, Java API'leri ile uyumluluk konusunda ne gibi sorunlar olabilir? Bunları çözmek için neler yapabilirsiniz?
+* Java API leri genellikle signed değişkenleri kullanır. Unsigned bir değişkeni kullanmaya çalıştığımızda veri kaybı gibi uyumsuzluklar yaratabilir. Bunu çözmek için unsigned değişkenlerin signed karşılıkları kullanılabilir. 
+
+

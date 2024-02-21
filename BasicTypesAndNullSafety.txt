@@ -1,0 +1,43 @@
+val ile var arasındaki fark nedir?
+* Val kullanarak oluşturduğumuz değişkenler ReadOnly 'dir, değeri tekrardan set etilemez fakat var değerlerini tekrardan set edebiliriz. Yaygın bilinenin aksine val immutable değildir. Get fonksiyonu ile değeri değiştirilebilir.
+
+
+Bir var değişkeni val gibi davranmasını nasıl sağlayabiliriz val kelimesini kullanmadan? Bunu neden yapmak isteriz? Örnek bir senaryo verin.
+* Var kullanarak oluşturduğumuz değişkenin setter ını private yaptığımızda val değişkenleri gibi artık set edilemeyecektir.
+
+"Değişmez" (Immutable) ve "Salt Okunur" (ReadOnly) kavramlarını açıklayın. val değişkenler neden aslında "değişmez" değil de "salt okunur" olarak açıklanmalıdır?
+* Immutable kavramı bir değişkenin değerinin bir kere atandıktan sonra hiçbir şekilde değiştirilememesidir. ReadOnly ise bir değişken değerinin sadece okunabilir olduğunu, setter ı ile işlem yapılamayacağını belirtir. Val değişkeninin immutable değil de ReadOnly olmamasının sebebi getter kullanarak aldığı değerin değişmesini sağlayabildiğimizdendir. Örnek verirsek kullanıcıdan a ve b adında iki input değeri alıp result adını verdiğimiz val bir değişkenin değerini de get() { return(a+b) } yaptığımızda sonucun kullanıcının input değerlerine göre değiştiğini görürüz.
+
+
+"Tip Çıkarımı" (Type inference) kavramını açıklayın. Hangi durumlarda tip belirtmek kesin olarak gereklidir?
+* Type Inference oluşturduğumuz bir değişkenin türünü tanımlanmadığımız durumlarda IDE nin bu değişkeni otomatik olarak tanımlaması, çıkarım yapmasıdır. Örnek olarak val a = 1 dediğimizde veya type ını Number olarak belirtmiş olsak da IDE bunu eğer integer aralığındaysa integer olarak tanımlar. Byte ve Short type ını verseydi değer aralıkları 1 değerini kapsadığı için yine de kod çalışırdı fakat integer yaygın bir kullanıma sahip olduğu için IDE tarafından tercih edilir. Type inferenceda dikkat edilmesi gereken diğer bir konu eğer iki tane short ve byte tipinde variable ı çarparsak ve tip belirtmezsek IDE sonucun tipini bu tiplerden en geniş aralığa sahip olanı yani shortu sonucun tipi olarak belirler. Bu bir kolaylık gibi gözükse de alabileceği maksimum aralık 32,768 olan short variable ı yaptığımız çarpma işlemi sonucu bu değerin üzerine çıktığında hatalı sonuç verecektir. Diğer bir örnek 128 olan integer değerini toByte() explicit type inference ile Byte koduna çevirdiğimizde de bir hata alırız çünkü Byte ın değer aralığı -128 ile 127' dır. Bu gibi durumlarda tip belirtmek gerekir.
+
+Kotlin'de tüm değişkenlerin sınıf olarak bulunması, "ilkel tip" (primitive type) olmadıkları anlamına gelir mi? Arka planda neler oluyor?
+* Hayır gelmez. val a:Integer = 1 değişkeni bir Integer sınıfını işaret etsede arka planda JVM Kotlin kodunu Java ByteCode una çevirdiğinde primitive type a karşılık geldiğini görürüz. Javada Integer a:Integer = 30; değerini primitive e dönüştürmek için Wrapper classlarını kullanmak zorundayız. Integer.ParseInt(a) sonucunu primitive verir. Bu işleme boxing denir. Eğer int variable ı Integer a dönüştürdüysek bu da unboxingtir.
+
+"Tip Güvenliği" (Type Safety) kavramını açıklayın.
+* IDE nin değişken değerleri ile o değişkenin type larını karşılaştırıp ters bir durumda kodu derlemeyip uyarı vermesidir. String olarak val a = "2" ve integer olarak val b = 2 değişkenlerimiz olsun bunları çarptığımızda anlamlı bir sonuç alamayız. TypeSafety kriterine uyması için a değişkenini 2 olarak değiştirebiliriz.
+
+Bir değişkeni nullable yapmak için ne yapmalıyız?
+* Kotlin dilinde bir değişkeni nullable yapmak için değişken tipine ? = null eklenir. var a:String? = null stringi null bir değer alabilir.
+
+"Null Güvenliği" (Null Safety) kavramını açıklayın.
+* Null bir değişkenin hiçbir nesneye referans olmaması anlamına gelir. Kotlin null safety bir dildir. Javadaki gibi run edilmiş bir kodda NullPointerException hatasını daha almadan IDE tarafından uyarı verir.
+
+Bir değişkene null değer atanır ve tip belirtilmezse Kotlin bu değişkeni nasıl yorumlar?
+* Kotlin değişkenin tipini null olarak belirler. Değişken türü artık String? gibi nullable olur.
+
+İlkel bir değişkenin nullable olması ile null değer alamaması arasında bellek yönetimi açısından nasıl farklar vardır?
+*Null bir nesneye referans etmemektir. Fakat primitive type lar referans edilmez değeri memory de saklanır. Bu yüzden nullable olamaz. Primitive değişkenin referans edilmiş bir değişkenden farkı bellek optimizasyonunun daha iyi olmasıdır. Bellekte sabit bir boyutta tutulur. Java ve Kotlin dilinde Garbage Collecton olarak adlandırılan yapı zaman zaman bellekteki yükü boşaltıp optimize eder ve bu otomatik olarak yapılır. Primitive type lar bir referansa işaret etmediğinden bellek yönetimi daha verimli ve stabil olur.
+
+
+Nullable bir değişkenin bir değere sahip olması ile null olması arasında bellek yönetimi açısından nasıl bir fark vardır? Null değer almış bir değişken bellekte yer kaplamaz diyebilir miyiz?
+* Nullable değişkenin bir değeri varsa pointer adresinde az da olsa bir alan kaplar ama null olarak setlenmişse daha az yer kaplar. Göz ardı edilecek seviyededir.
+
+
+
+Nullable bir değişkenle çalışırken hangi operatörleri kullanırız? Bu operatörlerin kullanım farkları nelerdir? Hangisini ne zaman kullanmak daha anlamlıdır?
+* Eğer bir değişkenin null olup olmadığını kontrol etmek istiyorsak ?. veya !! kullanırız. Örnek result!!.text ve result?.text  . Soru işaretinde amacımız IDE ye eğer result null ise kodun çalışmasına devam et mesajı vermektir. Eğer !! kullanırsak null gelen bir senaryoda uygulama crash verir ve çalışmaz. Örnek olarak bankacılık uygulamasında kullanıcının para değerinin null olarak döndüğü durumda para!! kullanmak daha mantıklı olacaktır. Çünkü uygulama kullanıcının para yönetimi üzerine yapılmıştır. Crash vermesi kullanıcının hem vakit kaybının önüne geçer hem de kodlayanın hatayı tespit edip kısa sürede çözmesine olanak sağlar.
+
+
+
