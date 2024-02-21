@@ -118,7 +118,10 @@ q15-Kotlin'de büyük sayılarla çalışırken hangi ek türlerden yararlanıl�
 Int 32 bitlik, Long 64 bitlik memory alanı kaplar. Int aralığı: -2_147_483_648 to 2_147_483_647, Long aralığı: -9,223,372,036,854,775,808 to +9,223,372,036,854,775,807
 
 q16-Double ve Float değişkenler kullanılırken "yuvarlama" davranışı nasıldır? Bu nasıl değiştirilebilir?
-
+Değişken tiplerine göre bellekte belirli alanda yer kapladıkları için o sınırın dışına çıkan değerleri saklayamazlar ve örneğin bu virgülden sonraki ilk 10 basamak belleği dolduruyorsa sonraki basamaklar saklanmaz. 
+Ancak yuvarlama kriteri String.format, Math.round kullanılarak değiştirilebilir.
+    val number2 = 3.45579
+    println(String.format("%.2f", number2)) //3.46 yazdırılır
 
 
 
