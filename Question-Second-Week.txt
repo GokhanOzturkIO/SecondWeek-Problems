@@ -61,4 +61,10 @@ Kotlin akıllı bir dil olduğu için tip çıkarımını yazılan değer hangi 
 15-> Float değişken oluştururken F ve f harfleri varken, Long değişken oluştururken neden küçük l harfi yoktur?
 Çünkü l harfi 1(bir) rakamına benzediği için yalnışlıklar olmasın diye küçük l harfi kullanılmaz.
 
+16-> Tek duyarlıklı (Single precision) ve Çift duyarlıklı (Double precision) kavramlarını açıklayın?
+Tek Duyarlıklı (Single Precision): Genellikle 32 bit uzunluğunda ve 1 bit işaret, 8 bit üst düzen (exponent) ve 23 bit kesirli (mantissa) olmak üzere üç kısımdan oluşur. Daha az bellek kullanır, daha hızlı işlemler sağlar, ancak daha sınırlı sayı aralığı ve hassasiyet sunar.
+
+Çift Duyarlıklı (Double Precision): Genellikle 64 bit uzunluğunda ve 1 bit işaret, 11 bit üst düzen (exponent) ve 52 bit kesirli (mantissa) olmak üzere üç kısımdan oluşur. Daha fazla bellek kullanır, daha yavaş işlemler sağlar, ancak daha geniş sayı aralığı ve daha yüksek hassasiyet sunar.
+Not: Genellikle, bilimsel ve mühendislik uygulamalarında daha fazla hassasiyet gerektiğinde çift duyarlıklı, daha az hassasiyet yeterli olduğunda ise tek duyarlıklı format tercih edilir.
+
  
