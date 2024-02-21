@@ -68,4 +68,11 @@ Operator '==' cannot be applied to 'Byte' and 'Int'  şeklinde bir hata alırız
 
 Bu sorunu print(b.toInt() == i) şu şekilde çözebiliriz cevabımız true yani b'nin i değişkenine eşit olması durumudur.
 
+------------------------------------------------------------------------------------------------------------------------
+
+Soru 6: "val b: Byte = 1 ile val i: Int = b.toInt() ve son olarak print(b == i) gibi bir kod yazıldığında çıktı ne olur?
+ Neden böyle bir çıktı aldığınızı açıklayın.
+
+ Çıktımız true olur. Çünkü '==' operatörü ile değişkenlerin aldığı değerler karşılaştırılıyor ve örneğimize baktığımızda
+ her ikiside 1 değerine sahip olduğu için sonuç true olur
 
