@@ -1,0 +1,69 @@
+1.is ve !is operatörlerinin kullanımını açıklayın.
+    val x: Any = 123
+    if (x !is String) {
+        println("x is not a String")
+    }
+    val x: Any = "hello"
+     if (x is String) {
+         println(x.length)
+     }
+2."Akıllı Dönüşüm" (Smart Cast) ne demektir? Farklı kod örnekleri ile açıklayın. Bu özelliğin sınırlamaları nelerdir?
+    fun printStringLength(str: Any) {
+        if (str is String) {
+            println("String length is: ${str.length}") // Smart cast: str automatically cast to String
+        }
+    }
+    printStringLength("hello") // Output: String length is: 5
+
+3."Güvenli & Güvensiz" operatörler nelerdir?
+    safe operator - val length: Int? = nullableString?.length
+    non safe operator - val length: Int = nullableString!!.length
+
+4.Sayısal değişkenlerde örtük tip genişletme (implicit widening conversions) ne demektir? Kotlin'de bu neden yapılamaz?
+    int intValue = 10;
+    long longValue = intValue; // Implicit widening conversion from int to long
+
+5."val b: Byte = 1 ile val i: Int = b ve son olarak print(b == i) gibi bir kod yazıldığında çıktı ne olur? Neden böyle bir çıktı aldığınızı açıklayın.
+    val b: Byte = 1
+    val i: Int = b
+    print(b == i)//true
+
+6."val b: Byte = 1 ile val i: Int = b.toInt() ve son olarak print(b == i) gibi bir kod yazıldığında çıktı ne olur? Neden böyle bir çıktı aldığınızı açıklayın.
+    val b: Byte = 1
+    val i: Int = b.toInt()
+    print(b == i)//true
+
+7.Sayısal değişkenlerde açık dönüşüm (Explicit Type Conversion) yaparken hangi fonksiyonları kullanabilirsiniz?
+        toByte()  toFloat()
+        toShort()  toDouble()
+        toInt()     toChar()
+        toLong()
+
+8.- Sayısal değişkenlerde açık dönüşüm (Explicit Type Conversion) yaparken hangi fonksiyonları kullanabilirsiniz?
+    val intNumber: Int = 42
+    val byteNumber: Byte = intNumber.toByte()
+    val longNumber: Long = 12345
+    val shortNumber: Short = longNumber.toShort()
+    val intResult: Int = doubleNumber.toInt()
+
+9.- "`val result = 1L + 3`" // "Long + Int" gibi bir işlemin sonucunda "result" değişkeninin tipi ve değeri ne olur? Neden böyle olduğunu açıklayın.
+    when you do any operation with the mixed type numbers,the type of result will be the type of biggest one.
+    so tle type of 'result' is L(Long)
+
+10.- "`val result = Int.MAX_VALUE + Int.MAX_VALUE`" gibi bir işlemin sonucunda "result" değişkeninin tipi ve değeri ne olur? Neden böyle olduğunu açıklayın.
+    The type of the result is Int, because of  integer overflow
+11.- "`val x = 5 / 2` `println(x == 2)`" gibi bir işlemin sonucu ve tipi nedir? Neden böyle olduğunu açıklayın.
+    the result is true because "==" is comparing their exact values so,2 is  equal to integer value of  '5/2' = 2
+
+12- "`val x = 5L / 2` `println(x == 2L)`" gibi bir işlemin sonucu ve tipi nedir? Neden böyle olduğunu açıklayın.
+    here 5L is Long and 2 is an Int.so the result will be Long. //True
+13.- "`val x = 5 / 2.toDouble()` `println(x == 2.5)`" gibi bir işlemin sonucu ve tipi nedir? Neden böyle olduğunu açıklayın.
+    here 5 and 2 is integers and to toDouble() is for convert its type to double. so the result will be True
+14.- Kotlin'de tür dönüşümü yapılırken, dönüşümün başarısız olması durumunda TypeCastException nasıl ele alınır ve bu tür hataların önüne geçmek için hangi önlemler alınabilir?
+   - as? (smart casting operator)
+    val result : String? = aVariable as? String
+   - is (type check operator)
+    val someVariable: Any = "Hello"
+    if (someVariable is String){
+        println("is String")
+}

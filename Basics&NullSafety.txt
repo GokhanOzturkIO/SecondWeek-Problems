@@ -1,0 +1,82 @@
+Temel Türler & Null Güvenliği
+
+  1.val ile var arasındaki fark nedir?
+    var a = 5
+    a = 4 //as you see in this simple code when we want to reassign the value of variable then we use var
+    val b = 4
+    b = 5 // val can not be reassigned. if you create one variable that its value never changed you have to use val
+
+  2.Bir var değişkeni val gibi davranmasını nasıl sağlayabiliriz val kelimesini kullanmadan? Bunu neden yapmak isteriz? Örnek bir senaryo verin.
+    when we want to use var variable like val,we need to use 'private set'.
+    we use this because we don't want to directly access to modify our variable in out of class .
+    class exampleClass{
+        var myVarVariable : Int = 0
+            private set
+        fun modifyValue(newValue : Int){
+            myVarVariable = newValue
+        }
+    }
+    fun main(){
+        val myObj = exampleClass()
+        myObj.myVarVariable = 1 // if you try to modify like that you will get compiler error because of 'private set' didn't let to do like that
+        myObj.modifyValue(10) // here you will be modify successfully the value of myV  ariable
+
+    }
+    val myObj = exampleClass()
+    myObj.myVarVariable = 1 // if you try to modify like that you will get compiler error because of 'private set' didn't let to do like that
+    myObj.modifyValue(10) // here you will be modify successfully the value of myV  ariable
+
+  3."Değişmez" (Immutable) ve "Salt Okunur" (ReadOnly) kavramlarını açıklayın. val değişkenler neden aslında "değişmez" değil de "salt okunur" olarak açıklanmalıdır?
+
+    suppose that we have a val variable that we called it immutable, but I will show you
+    in the bellow example that it is correct wat to call it ReadOnly rather than immutable.
+
+    class giveGrossMoney{
+    var income : Int = 100
+    var expenses : Int = 33
+
+    val grossMoney : Int
+        get(){
+            return income - expenses        // ass you can see here the value of grossMoney that use val will be
+                                           //  changed when the values of income and expenses change
+        }
+    }
+  4."Tip Çıkarımı" (Type inference) kavramını açıklayın. Hangi durumlarda tip belirtmek kesin olarak gereklidir?
+
+  var a = 10           // when you declare a variable without declaring its type
+  var b = "name"      // the compiler or interpreter will be declare its type by looking its value
+
+  5.Kotlin'de tüm değişkenlerin sınıf olarak bulunması, "ilkel tip" (primitive type) olmadıkları anlamına gelir mi? Arka planda neler oluyor?
+    Yes. Kotlin stores each variable as an object .
+    Boxing: when you convert Int to Integer  //  In kotlin you doesn't need to boxing and unboxing ,compiler does it automatically
+    Unboxing: reverse Integer to Int        //
+
+  6."Tip Güvenliği" (Type Safety) kavramını açıklayın.
+    -Static Typing: Kotlin is a statically-typed language, meaning that the type of every expression is known at compile-time.
+    This allows the compiler to perform thorough type checks before the code is executed,
+    reducing the likelihood of runtime errors related to type mismatches.
+    -Type Inference: Kotlin features type inference, which allows you to omit explicit type declarations in many cases.
+    The compiler can often infer the types of variables and expressions based on context, reducing verbosity while maintaining type safety.
+
+  7.Bir değişkeni nullable yapmak için ne yapmalıyız?
+  we need to use '?' sign right after its type
+  var a : Int?
+
+  8."Null Güvenliği" (Null Safety) kavramını açıklayın.
+    var word : String? = "hello"   //Safe-call '?.' when you call an object that can be nullable
+    var length : Int? = a?.length   //then if it is null you never will be faced NullPointerException by calling like this
+    var length : Int? = a!!.length // if word is null you will get NPE
+
+  9.Bir değişkene null değer atanır ve tip belirtilmezse Kotlin bu değişkeni nasıl yorumlar?
+    var a = null // the compiler decide its type 'Any?' that means it can take any value such as int or string
+
+  10.İlkel bir değişkenin nullable olması ile null değer alamaması arasında bellek yönetimi açısından nasıl farklar vardır?
+    when you declare a variable nullable it will take more memory rather than declared type
+
+  11.Nullable bir değişkenin bir değere sahip olması ile null olması arasında bellek yönetimi açısından nasıl bir fark vardır? Null değer almış bir değişken bellekte yer kaplamaz diyebilir miyiz?
+    when you declare a variable nullable it will take more memory rather than declared type
+    because when compiler knows the type of variable it gives enough memory to store but for nullable it can not decide its size
+
+  12.Nullable bir değişkenle çalışırken hangi operatörleri kullanırız? Bu operatörlerin kullanım farkları nelerdir? Hangisini ne zaman kullanmak daha anlamlıdır?
+    '?.' : when your variable can be null ,but you don't want to be faced NPE
+    '!!.': here you telling the compiler that call the obj each time but if its value is null welcome 'NPE'
