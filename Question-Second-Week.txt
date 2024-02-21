@@ -145,4 +145,8 @@ val resultNot = a.inv()   // Bitwise NOT
 val resultShiftLeft = a shl 2  // Shift Left
 val resultShiftRight = a shr 1 // Shift Right
 
-28->
+28->Kotlin'de büyük sayılarla çalışırken hangi ek türlerden yararlanılır ve bu türlerin sınırları nelerdir?
+BigInteger ve BıgDecımal türlerinden yararlanılır bunların sınırları.
+val bigIntNumber = BigInteger("123456789012345678901234567890")
+val bigDecimalNumber = BigDecimal("123.456789012345678901234567890")
+
