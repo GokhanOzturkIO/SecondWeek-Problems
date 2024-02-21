@@ -195,6 +195,7 @@ Kodu çalıştırmadan önce i değeri b olarak atandığı satırda Type Mismat
 Ve çıktı bu şekilde: Type mismatch: inferred type is Byte but Int was expected, bu hata alınır çünkü Kotlin implicit widening conversation ları desteklemez.
 
 q6-"val b: Byte = 1 ile val i: Int = b.toInt() ve son olarak print(b == i) gibi bir kod yazıldığında çıktı ne olur? Neden böyle bir çıktı aldığınızı açıklayın.
+Operator '==' cannot be applied to 'Byte' and 'Int'çıktısını verdi. i değişkenine b atanırken türü Int'e çevirilmiş olabilir ancak b'nin asıl hali hala Byte türündedir ve bu yüzden de tip uyuşmazlığı gerçekleşir.
 
 q7-Sayısal değişkenlerde açık dönüşüm (Explicit Type Conversion) yaparken hangi fonksiyonları kullanabilirsiniz?
 
