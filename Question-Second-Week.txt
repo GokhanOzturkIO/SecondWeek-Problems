@@ -169,3 +169,7 @@ Sadece pozitif sayıları temsil eden değişkenlerdir. Aralarındaki fark değe
 val unsignedInt: UInt = 42u
 val unsignedLong: ULong = 42uL
 Bu şekilde gösterilir.
+
+33-> "val a1 = 42u ve val a2 = 0xFFFF_FFFF_FFFFu" değişkenlerin tipleri ne olur? Neden?
+İlk değişken Int olur Çünkü Int değer aralığındadır. Diğeri ise Long olur çünkü Hexadecımaldir.
+
