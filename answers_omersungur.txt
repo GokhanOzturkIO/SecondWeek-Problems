@@ -126,3 +126,16 @@ Tek Duyarlıklı (Single Precision):
 10 -> Uzun haneden oluşan sayıların daha okunaklı olması için _ kullanılır. Yorumlanırken _ işaretleri görmezden gelinir.
 
 11 -> == ile iki ifadenin içeriğini kıyaslarız. === ile referanslarını kıyaslarız.
+
+12 -> Byte değer aralığındaki sayılar için farklı bir optimazsyon uygulanıyor ve referansları farklı olsa bile ref kıyaslamasında true döner elde ediyoruz.
+
+    // Byte aralığında true dönecek!
+    val myValue2 : Int? = 128
+    val myValue3: Int? = 128
+
+    println(myValue2 === myValue3)
+
+Buradaki ifade false dönecek çünkü myValue2 başka 128'i myValue3 başka 128'i işaret edecek. Referansları farklı olduğu için false dönüyor. Fakat -128 ve 127 aralığında bir sayı girersek bu kıyaslama sonucunda true değer elde edeceğiz. Hatta aşağıdaki kod örnekleriyle farklı referansları olduğunu da garanti edebiliriz.
+
+    println(System.identityHashCode(myValue2))
+    println(System.identityHashCode(myValue3))
