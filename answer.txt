@@ -179,3 +179,10 @@
  Bu durum bazı sorunlara yol açabilir. Çünkü Java da doğrudan işaretsiz tam sayı türleri bulunmamaktadir. Bu sorunlar Veri Türü uyumsuzluğu ile karşımıza çıkabilir. Bu sorunları çözebilmek için
  Gerekli dönüşümler yapılmalıdır.
 
+# Tür Dönüşümü
+
+## 1) is ve !is operatörlerinin kullanımını açıklayın.
+ Kotlin'de "is" keywordu bir değişkenin belirli bir türe ait olup olmadığını kontrol etmek için kullanılır. Bir if statement içerisinde kullanımını inceleyeleim
+ if(a is Long) ==> a Long tipinde bir değişkense statement in içine girer
+ if(a !is Int) ==> a Int tipinde bir değişken değilse statement içerisine girer
+
