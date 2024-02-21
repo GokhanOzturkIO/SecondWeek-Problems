@@ -162,3 +162,11 @@ Buradaki ifade false dönecek çünkü myValue2 başka 128'i myValue3 başka 128
     println(notResult)
     println(leftShiftResult)
     println(rightShiftResult)
+
+16 -> Bu iş için kullanılan iki adet tipten yararlanabiliriz.
+
+BigInteger: Büyük tamsayılar için kullanılır. BigInteger sınıfı, istediğiniz kadar büyük tamsayıları temsil etmek için kullanılır. Sınırsız büyüklükte tamsayıları temsil edebilir.
+
+BigDecimal: Büyük ondalıklı sayılar için kullanılır. BigDecimal sınıfı, yüksek hassasiyet gerektiren büyük ondalıklı sayıları temsil etmek için kullanılır. Bu sınıf, herhangi bir boyutta ondalıklı sayıları temsil etmek için kullanılabilir.
+
+BigInteger ve BigDecimal sınıflarının sınırları, bellek ve işlemci gücüyle sınırlıdır. Bellek ve işlemci kapasiteniz ne kadar büyükse, temsil edebileceğiniz sayılar da o kadar büyük olabilir.
