@@ -56,3 +56,16 @@ Soru 4: Sayısal değişkenlerde örtük tip genişletme (implicit widening conv
 
       Dönşüm yapmak için açık bir şekilde belirtmeliyiz.
       Örn. "toLong()", "toByte()" vs.
+
+------------------------------------------------------------------------------------------------------------------------
+
+Soru 5:  "`val b: Byte = 1` ile `val i: Int = b` ve son olarak `print(b == i)` gibi bir kod yazıldığında çıktı ne olur?
+Neden böyle bir çıktı aldığınızı açıklayın.
+
+Bu kodda yer alan problem Byte bir değer ile Int bir değerin karşılaştırılamıyor olduğudur eğer çalıştırmayı denersek:
+
+Operator '==' cannot be applied to 'Byte' and 'Int'  şeklinde bir hata alırız.
+
+Bu sorunu print(b.toInt() == i) şu şekilde çözebiliriz cevabımız true yani b'nin i değişkenine eşit olması durumudur.
+
+
