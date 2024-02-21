@@ -191,6 +191,8 @@ q4-Sayısal değişkenlerde örtük tip genişletme (implicit widening conversio
 Daha küçük bir veri tipinin daha büyük bir veri tipine dönüştürülme işlemine denir. Bu değişimler küçük tipten büyük tipe dönüştürüldüğü için veri kayıplarına neden olabilir, kodun anlaşılmasını zorlaştırabilir ve hatalara neden olabilir bu yüzden de Kotlin tarafından desteklenmez.
 
 q5-"val b: Byte = 1 ile val i: Int = b ve son olarak print(b == i) gibi bir kod yazıldığında çıktı ne olur? Neden böyle bir çıktı aldığınızı açıklayın.
+Kodu çalıştırmadan önce i değeri b olarak atandığı satırda Type Mismatch hatası veriyordu, çünkü byte türlü bir dğeişken int türlüye atanmaya çalışılıyor.
+Ve çıktı bu şekilde: Type mismatch: inferred type is Byte but Int was expected, bu hata alınır çünkü Kotlin implicit widening conversation ları desteklemez.
 
 q6-"val b: Byte = 1 ile val i: Int = b.toInt() ve son olarak print(b == i) gibi bir kod yazıldığında çıktı ne olur? Neden böyle bir çıktı aldığınızı açıklayın.
 
