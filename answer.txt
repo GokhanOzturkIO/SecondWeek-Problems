@@ -213,6 +213,9 @@
  Int olacaktır. Çünkü kotlinde 2 Integer değeri topladığımızda sonuc tipi yine integer olacaktır. Bu durumda taşma olur ve sonuc -2 çıkar. Bu Type Safety
  ile ilgili bir durumdur. Kotlin tip çıkarımını bağlam içerisindeki değişkenlerin tiplerini görerek yapar. Sonuca odaklanmaz.
 
+## 9) "val x = 5 / 2 println(x == 2)" gibi bir işlemin sonucu ve tipi nedir? Neden böyle olduğunu açıklayın.
+ Sonuc true olacaktır. 2 sayıda Integer tipindedir. Bundan dolayı çıkan sonucta ondalık kısım bulunmayacaktır.
+
 
 
 
