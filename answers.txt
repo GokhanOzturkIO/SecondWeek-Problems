@@ -141,9 +141,17 @@ q4-"val a1 = 42u ve val a2 = 0xFFFF_FFFF_FFFFu" değişkenlerin tipleri ne olur?
 a1 UInt, a2 ise ULong tipindedir. Eğer bir tip belirtilmez ise değerin büyüklüğüne göre UInt veya ULong kullanılır.
 
 q5-"İşaretsiz" "Long" harf gösterimi nasıl yapılır?
-ULong şeklinde yapılır
+ULong şeklinde yapılır.
 
-q6-
+q6-"İşaretsiz" değişkenlerin kullanım amaçları nelerdir?
+Asla negatif değer almaması gereken sayılar için örneğin bir array'in index değeri gibi kullanılabilir. Ve pozitif değer aralığı signed değişkenlere göre daha geniş olduğu için de kullanılabilir.
+
+q7-"İşaretsiz" değişkenlerle yapılan matematiksel işlemlerde, özellikle büyük sayılarla çalışırken karşılaşılabilecek taşma (overflow) ve taşma olmaması (underflow) durumları için Kotlin nasıl bir yönetim sağlar?
+
+q8-"İşaretsiz" değişkenlerin sınırlamaları nelerdir?
+
+q9-"İşaretsiz" değişken türleri (UInt, ULong vs.) kullanırken, Java API'leri ile uyumluluk konusunda ne gibi sorunlar olabilir? Bunları çözmek için neler yapabilirsiniz?
+
 
 
 
