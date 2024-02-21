@@ -150,3 +150,9 @@ BigInteger ve BıgDecımal türlerinden yararlanılır bunların sınırları.
 val bigIntNumber = BigInteger("123456789012345678901234567890")
 val bigDecimalNumber = BigDecimal("123.456789012345678901234567890")
 
+29-> Double ve Float değişkenler kullanılırken "yuvarlama" davranışı nasıldır? Bu nasıl değiştirilebilir?
+
+Double ve Float türleri, sayıları belirli bir hassasiyetle temsil eder ve bu temsil sırasında yuvarlama işlemi gerçekleşebilir. Bu yuvarlama, IEEE 754 standardına göre gerçekleşir ve belirli bir sayı aralığında hassasiyet kaybına neden olabilir.
+
+Yuvarlama davranışını değiştirmek için, özellikle finansal hesaplamalarda veya hassas sayı temsillerinde, BigDecimal türü kullanılabilir. Ancak, bu türü kullanırken performans maliyeti göz önünde bulundurmak önemlidir.
+
