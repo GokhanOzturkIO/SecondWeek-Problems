@@ -82,4 +82,7 @@ Onaltılık (Hexadecimal) = val hexadecimalInt: Int = 0x7B
 Java'da sekizlik (octal) sayıları tanımlamak için, sayıların başına 0 önekini eklemeniz yeterlidir. 
 Örnek = int octalNumber = 0123;
 
-21-> 
+21-> "Geleneksel Notasyon" (Conventional Notation) gösterimi nasıl yapılır?
+"Geleneksel Notasyon" (Conventional Notation), matematiksel ifadelerin, sembollerin, operatörlerin ve kuralların alışılageldiği ve genellikle kabul edilen bir biçimde temsil edildiği bir terimdir.
+
+22-> 
