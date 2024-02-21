@@ -68,3 +68,5 @@ fun main() {
     println(myStr?.length) // null döner
     // println(myStr!!.length) // exception oluşur.
 }
+
+9 -> Nothing tipini alır. Nothing, hiçbir değeri olmayan bir şeyi temsil etmek için kullanılır
