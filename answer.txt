@@ -165,3 +165,7 @@
 
 ## 6) "İşaretsiz" değişkenlerin kullanım amaçları nelerdir?
  Pozitif tamsayıları temsil etmek için kullanılırlar. Performans optimizasyonu açısından bazı durumlarda daha hızlı işlenebilirler. Ayrıca işaretli sayılara göre pozitif değer aralıkları daha geniştir.
+
+## 7) "İşaretsiz" değişkenlerle yapılan matematiksel işlemlerde, özellikle büyük sayılarla çalışırken karşılaşılabilecek taşma (overflow) ve taşma olmaması (underflow) durumları için Kotlin nasıl bir yönetim sağlar?
+ Kotlin işaretsiz sayıalrda taşma ılması durumunda işlem sonucunu sıfırlar e kalanı üzerine ekler.   a1 = UInt.MAX_VALUE + 10u işlemide a1 değeri 9 olacaktır.
+
