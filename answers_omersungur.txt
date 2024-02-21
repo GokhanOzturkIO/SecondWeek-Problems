@@ -120,3 +120,5 @@ Tek Duyarlıklı (Single Precision):
      println(decimalNumber)
 
 8 -> Hayır oktal sayılar Kotlin'de desteklenmiyor.
+
+9 -> "Geleneksel Notasyon" terimi, matematiksel ifadelerin genellikle kullanılan geleneksel gösterimine atıfta bulunur. Mesela + işareti toplama işaretini ifade eder. * işareti çarpım işaretini gösterir.
