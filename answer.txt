@@ -193,3 +193,7 @@
   // Bu alanda Int fonksiyonlarını kullanabiliyorsun
  }
 
+## 3) Sayısal değişkenlerde örtük tip genişletme (implicit widening conversions) ne demektir? Kotlin'de bu neden yapılamaz?
+ Örtük tip genişletme, bir veri türünün daha büyük bir veri türüne dönüştürülmesini otomatik olarak gerçekleştiren bir dönüşüm tipidir. Kotlinde bu yoktur.
+ Çünkü kotlin Type Safety ön planda tutularak geliştirilmiş bir dildir. Kotlinde tür dönüşümlerinin açık bir şekilde yapılması gerekmektedir.
+
