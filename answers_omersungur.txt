@@ -143,3 +143,22 @@ Buradaki ifade false dönecek çünkü myValue2 başka 128'i myValue3 başka 128
 13 -> Temel olarak + - * / % ++ -- operatörlerini sayabiliriz. İlk 4'ü matematiksel operatörler zaten. 5. modül almak için kullanılır. ++ ile bir değişkenin değerini 1 arttırıp o değer içine atarız. -- ile de 1 azaltıp o değer içine atarız.
 
 14 -> < > <= >= == != operatörlerini sayabiliriz. İki sayı arasında sırasıyla küçüktür, büyüktür, küçük eşittir, büyük eşittir, eşittir ve eşit değildir kıyaslaması yapar.
+
+15 -> Bit düzeyinde operatörler, bilgisayar belleğindeki verilerin bit seviyesinde manipüle edilmesini sağlayan operatörlerdir. Örneklerini göstermek için kullanılan operatörlerle birlikte aşağıya yazıyorum.
+
+    val a = 0b1010
+    val b = 0b1100
+
+    val andResult = a and b // 1000 = 8 -> (2^0 * 0) + (2^1 * 0) + ...
+    val orResult = a or b // 1110 = 14
+    val xorResult = a xor b
+    val notResult = a.inv()
+    val leftShiftResult = a shl 2
+    val rightShiftResult = a shr 2
+
+    println(andResult)
+    println(orResult)
+    println(xorResult)
+    println(notResult)
+    println(leftShiftResult)
+    println(rightShiftResult)
