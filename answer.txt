@@ -223,6 +223,9 @@
 ## 11) "val x = 5 / 2.toDouble() println(x == 2.5)" gibi bir işlemin sonucu ve tipi nedir? Neden böyle olduğunu açıklayın
  Sonuc true çıkıcaktır. Ondalıklı sayılarla yapılan işlemlerin sonucu Ondalık sayının tipince olacaktır.  Buradaki 2 sayısı 2.0' a dönüştürülmüştür.
 
+## 12) Kotlin'de tür dönüşümü yapılırken, dönüşümün başarısız olması durumunda TypeCastException nasıl ele alınır ve bu tür hataların önüne geçmek için hangi önlemler alınabilir?
+ Bu hata tür dönüşümünün hedef türde olmadığı durumlarda ortaya çıkabilmektedir. Bu hatanın öneüne geçmek için "Try-Catch" blokları, "is" keywordu ile kontrol ederek işlem yapma,
+ "as?" operatörü ile güvenli bir şekilde dönüşüm yapma gibi yöntemler kullanılabilir. Developerlar bu yöntemleri kullanarak bu hataların önüne geçebilirler.
 
 
 
