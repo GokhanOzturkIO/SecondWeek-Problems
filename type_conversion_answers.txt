@@ -118,3 +118,15 @@ Neden böyle olduğunu açıklayın.
     Bunu yapmalarındaki sebep ise eğer bu kontrolü gerçekleştirselerdi, gereksiz yere her aritmetik işlemde bu kontrol
     sağlanacaktı. Çoğu uygulamada genellikle işlemler Int değer aralığında yapılır daha
     büyük veri tiplerine ihtiyaç olmaz. Bu durumda bu kontrolü gerçekleştirmek ek bir maliyet getirecekti.
+
+------------------------------------------------------------------------------------------------------------------------
+
+Soru 10: "val x = 5 / 2 println(x == 2)" gibi bir işlemin sonucu ve tipi nedir? Neden böyle olduğunu açıklayın.
+
+    Bu işlemin sonucu true olacaktır. Çünkü iki Int değerde bir matematiksel işlem yaptığımızda sonuç Int tipinde olacaktır.
+
+    Kotlin Type Inference sırasında değer Int Aralığında ise değeri Int olarak belirtir.
+
+    Ama burada örneğin bir değeri açıkca(örn: 5f / 2) float olduğunu belirtseydik sonuç false olurdu. Çünkü sonuç bize
+    2.5 olacak dönecekti.
+
