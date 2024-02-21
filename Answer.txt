@@ -230,3 +230,9 @@ kapsama sağlarken ubyte 255 sayısına kadar kapsama sağlamaktadır.
 
 ===========================
 
+30-) "İşaretsiz" değişkenler nasıl bir sınıf yapısında tutulurlar? Bu neden önemlidir?
+
+inline value sınıflar içerisinde tutulurlar. Inline value sınıflar performans açısından daha iyidir.
+
+===========================
+
