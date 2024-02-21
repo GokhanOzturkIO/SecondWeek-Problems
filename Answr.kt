@@ -6,10 +6,16 @@ var doubleNumber : Double? = null
 var theOperation : String? = null
 var firstNumber : Number? = null
 var secondNumber: Number? = null
+var stop: Boolean = true
 
 fun main(){
-    getUserInput()
+    while (stop){
+        getUserInput()
+    }
     calculateT()
+    println(firstNumber)
+    println(secondNumber)
+    println(theOperation)
 
 }
 fun welcomeWords(){
@@ -44,20 +50,34 @@ fun getUserInput(): Triple<Number?, String?,Number?> {
 
     println("Enter your second number:")
     secondNumber = getNumber()
-
+    if (secondNumber != null){
+        stop = false
+    }
     return Triple(firstNumber,theOperation,secondNumber)
 }
 fun calculateT(){
-    val fNum: Number? = getUserInput().first
-    val operation = getUserInput().second
-    val sNum: Number? = getUserInput().third
-    var result: Number? = null
-
-    if (fNum != null && sNum != null && operation != null) {
-        when (operation) {
-            "+" -> result = fNum.toDouble() + sNum.toDouble()
+    if (firstNumber != null && secondNumber != null && theOperation != null) {
+        var result: Number? = null
+        when (theOperation) {
+            "+" -> result = firstNumber!!.toDouble() + secondNumber!!.toDouble()
             // Add more cases for other operations
         }
+        println("Your result: $result")
     }
-    println("Your result: $result")
+//    val fNum: Number? = getUserInput().first
+//    val operation = getUserInput().second
+//    val sNum: Number? = getUserInput().third
+//    var result: Number? = null
+//    println(fNum)
+//    println(sNum)
+//    println(operation)
+//
+//
+//    if (fNum != null && sNum != null && operation != null) {
+//        when (operation) {
+//            "+" -> result = fNum.toDouble() + sNum.toDouble()
+//            // Add more cases for other operations
+//        }
+//    }
+//    println("Your result: $result")
 }
