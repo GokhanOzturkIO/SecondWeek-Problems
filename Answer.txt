@@ -249,5 +249,15 @@ kotlin UInt olarak tip çıkarımı yapmaktadır.
 
 val a2 = 0xFFFF_FFFF_FFFFu // Büyüklüğü sebebiyle ULong olacaktır.
 
+===========================
+
+33-) "İşaretsiz" "Long" harf gösterimi nasıl yapılır?
+
+uL şeklinde gösterimi yapılır. 
+
+val numb = 52541uL
+
+===========================
+
 
 
