@@ -175,3 +175,7 @@
  UInt ==> 6,294,967,295 (2^32-1)
  ULong ==> 18,446,744,073,709,551,615 (2^64 - 1)
 
+## 9) "İşaretsiz" değişken türleri (UInt, ULong vs.) kullanırken, Java API'leri ile uyumluluk konusunda ne gibi sorunlar olabilir? Bunları çözmek için neler yapabilirsiniz?
+ Bu durum bazı sorunlara yol açabilir. Çünkü Java da doğrudan işaretsiz tam sayı türleri bulunmamaktadir. Bu sorunlar Veri Türü uyumsuzluğu ile karşımıza çıkabilir. Bu sorunları çözebilmek için
+ Gerekli dönüşümler yapılmalıdır.
+
