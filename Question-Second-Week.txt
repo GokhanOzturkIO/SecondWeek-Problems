@@ -77,3 +77,9 @@ Float 7 double 15-16 basamağa kadar işlem yapabilir. İşlem aralıkları hang
 Ondalık(Decimal) = val decimalInt: Int = 123
 Onaltılık (Hexadecimal) = val hexadecimalInt: Int = 0x7B
 İkilik (Binary) = val binaryInt: Int = 0b01111011
+
+20-> Sekizlik (Octal) değişkenler Java'da nasıl tanımlanır? Kotlin'de Sekizlik değişken tanımlanabilir mi?
+Java'da sekizlik (octal) sayıları tanımlamak için, sayıların başına 0 önekini eklemeniz yeterlidir. 
+Örnek = int octalNumber = 0123;
+
+21-> 
