@@ -92,7 +92,7 @@ fun main() {
 
 3 -> 1 (sayı olan 1 :D) ifadesiyle karışmaması için :) Örneğin: val myNumber = 111.1f dediğimizde herhangi bir okuma problemi yaşanmıyor fakat 111.1l yapsaydık sondakinin 1 mi l mi olduğunu tam olarak göremezdik.
 
-4 -> Kayan noktanın ne kadar uzunluğa sahip olacağını belirleyen kavramlardır. Float bir değer için .'dan sonra 9-10 hane yazsak bile bunların hepsi o değer içine atanmıyor.
+4 -> Kayan noktanın ne kadar uzunluğa sahip olacağını belirleyen kavramlardır. Float bir değer için .'dan sonra 9-10 hane yazsak bile bunların hepsi o değer içine atanmıyor. Daha doğrusu yazdırırken göremiyoruz.
 
 Tek Duyarlıklı (Single Precision):
 
@@ -107,3 +107,6 @@ Tek Duyarlıklı (Single Precision):
 - Daha geniş bir aralık ve daha yüksek hassasiyet sağlar, bu da büyük ve küçük sayılarla çalışırken daha doğru sonuçlar elde etmeyi mümkün kılar.
 
 5 -> ondalık ayıracı için ikisinde de . işareti kullanılır. Aralarındaki farkı ise float ifadesinin sonundaki f veya F harfinden anlarız.
+
+6 -> Float bir değişkene değer atarken . 'dan sonra 7 karakter koyabiliriz. Bundan sonrakileri yazdıramayız. Fakat 7'den fazla karakter verdiğimizde double bir değer ile toplandığında meydana gelecek sayıda o fazladan verdiğimiz değerler de işlem görecektir. Bu yüzden ondalık sayılarda ondalık kısmında 7'den fazla karakter varsa double kullanılması daha uygundur.
+
