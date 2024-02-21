@@ -11,11 +11,10 @@ var stop: Boolean = true
 fun main(){
     while (stop){
         getUserInput()
+        calculateT()
+        stopOrRun()
     }
-    calculateT()
-    println(firstNumber)
-    println(secondNumber)
-    println(theOperation)
+
 
 }
 fun welcomeWords(){
@@ -64,20 +63,22 @@ fun calculateT(){
         }
         println("Your result: $result")
     }
-//    val fNum: Number? = getUserInput().first
-//    val operation = getUserInput().second
-//    val sNum: Number? = getUserInput().third
-//    var result: Number? = null
-//    println(fNum)
-//    println(sNum)
-//    println(operation)
-//
-//
-//    if (fNum != null && sNum != null && operation != null) {
-//        when (operation) {
-//            "+" -> result = fNum.toDouble() + sNum.toDouble()
-//            // Add more cases for other operations
-//        }
-//    }
-//    println("Your result: $result")
+}
+fun errorMessage(){
+    var errMsg:String = "it seems like you did something wrong"
+}
+fun stopOrRun(){
+    println("Do you want to continue Y or N:")
+    val yesOrNo = readln()
+    when(yesOrNo){
+        "Y" -> stop=true
+        "y" -> stop=true
+        "N" -> stop=false
+        "n" -> stop=false
+
+
+    }
+    if (stop == false){
+        println(" Okay byeeee")
+    }
 }
