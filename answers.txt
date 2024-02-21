@@ -188,6 +188,7 @@ println(safeString)  //Kotlin
 println(safeInt)  //null
 
 q4-Sayısal değişkenlerde örtük tip genişletme (implicit widening conversions) ne demektir? Kotlin'de bu neden yapılamaz?
+Daha küçük bir veri tipinin daha büyük bir veri tipine dönüştürülme işlemine denir. Bu değişimler küçük tipten büyük tipe dönüştürüldüğü için veri kayıplarına neden olabilir, kodun anlaşılmasını zorlaştırabilir ve hatalara neden olabilir bu yüzden de Kotlin tarafından desteklenmez.
 
 q5-"val b: Byte = 1 ile val i: Int = b ve son olarak print(b == i) gibi bir kod yazıldığında çıktı ne olur? Neden böyle bir çıktı aldığınızı açıklayın.
 
