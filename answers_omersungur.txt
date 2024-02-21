@@ -72,3 +72,5 @@ fun main() {
 9 -> Nothing tipini alır. Nothing, hiçbir değeri olmayan bir şeyi temsil etmek için kullanılır. Burada tipini bilmediğimiz için Nothing? olarak işaretlenir.
 
 10 -> Primitive tiplerin değişken adı ve değişkenin değeri bellekte stack alanında saklanır. Referans tiplerin değişken adı stackte, değeri ise heap alanında saklanır. Stack alanına erişim daha hızlı olduğu için primitive tipler daha performanslı çalışır.
+
+11 -> Yer kaplamaz diyemeyiz. Değişkenin adı stackte yine yer kaplar fakat değeri olmadığı için (null) heap alanında yer tutmaz. Sonuç olarak stackte yer tuttuğu için yine de yer kaplar diyebiliriz.
