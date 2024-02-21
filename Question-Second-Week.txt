@@ -156,3 +156,11 @@ Double ve Float türleri, sayıları belirli bir hassasiyetle temsil eder ve bu 
 
 Yuvarlama davranışını değiştirmek için, özellikle finansal hesaplamalarda veya hassas sayı temsillerinde, BigDecimal türü kullanılabilir. Ancak, bu türü kullanırken performans maliyeti göz önünde bulundurmak önemlidir.
 
+İşaretsiz Sayılar
+
+30-> "İşaretsiz" (Unsigned) değişkenler ne demektir? İşaretli olanlarla aralarındaki fark nedir?
+
+Sadece pozitif sayıları temsil eden değişkenlerdir. Aralarındaki fark değer aralıkları farkıdır.
+
+31-> "İşaretsiz" değişkenler nasıl bir sınıf yapısında tutulurlar? Bu neden önemlidir?
+İşaretsiz değişkenler unsigned sınıfında tutulurlar. Bu tür değişkenler, pozitif sayılarla çalışmanın gerektiği durumlarda kullanılır.
