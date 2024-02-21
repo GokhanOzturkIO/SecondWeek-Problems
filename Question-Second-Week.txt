@@ -202,3 +202,6 @@ Değer Aralığı: 0 ila 18,446,744,073,709,551,615
 
 Sınırlamalar bu şekildedir.
 
+38-> "İşaretsiz" değişken türleri (UInt, ULong vs.) kullanırken, Java API'leri ile uyumluluk konusunda ne gibi sorunlar olabilir? Bunları çözmek için neler yapabilirsiniz?
+Java işaretsiz değişkenleri desteklemez bu yüzden sorun çıkabilir.Javada int kullanılır kotlinde ise uInt kullanılır.
+Eğer mümkünse, kullanılan Java API'lerini güncellemek veya işaretsiz tamsayıları destekleyen özel metodlar eklemek de bir çözüm olabilir.
