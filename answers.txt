@@ -137,6 +137,10 @@ q2-"İşaretsiz" değişkenler nasıl bir sınıf yapısında tutulurlar? Bu ned
 q3-"İşaretsiz" değişkenlerin harf gösterimi nasıldır?
 UByte, UShort, UInt, ULong
 
+q4-"val a1 = 42u ve val a2 = 0xFFFF_FFFF_FFFFu" değişkenlerin tipleri ne olur? Neden?
+a1 UInt, a2 ise ULong tipindedir. Eğer bir tip belirtilmez ise değerin büyüklüğüne göre UInt veya ULong kullanılır.
+
+
 
 
 
