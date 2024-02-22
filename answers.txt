@@ -46,4 +46,9 @@ SAYILAR
 -Eğer bir değişkene tip belirtimi yapılmaz ve bir değer atanırsa, Kotlin "Type Reference" yaparak onun tipini belirtir. Eğer değişkenin değer aralığı Int değer aralığı içinde veya Int değer aralığından küçükse otomatik olarak Int set edilir, Eğer İnt değer aralığından büyükse otomatik olarak Long set edilir.
 
 3.Float değişken oluştururken F ve f harfleri varken, Long değişken oluştururken neden küçük l harfi yoktur?
--Long değişken oluştururken küçük l harfi kullanımına izin verilmez. Bunun sebebi I harfiye karıştırılabilme olasılığından dolayı. 
+-Long değişken oluştururken küçük l harfi kullanımına izin verilmez. Bunun sebebi I harfiye karıştırılabilme olasılığından dolayı.
+
+4.Tek duyarlıklı (Single Precision) ve Çift Duyarlıklı (Double Precision) kavramlarını açıklayın.
+-Single Precision (float) floating point sayıları temsil eder. Bellekte 4 byte yer kaplar. Single Precision 1 Sign bit, 8 exponent bit ve 23 mantissa bit olmak üzere 32 bit alan kaplar.
+-Double Precision (double)  floating point sayıları. Bellekte 8 byte yer kaplar.  Double precision 1 sign bit, 11 exponent bit, 52 mantissa bit olmak üzere 64 alan yer kaplar.
+
