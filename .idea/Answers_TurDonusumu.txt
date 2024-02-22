@@ -36,3 +36,12 @@ Answer 3:
 
         // Güvensiz dönüşümde as direkt kullanıldığı için null gelme ihtimali
         düşünülmemiş bir kod parçası, burada null gelirse uygulama hata verir crash olacaktır.
+
+Answer 4:
+    Örtük Tip Genişletme = Bir dilde daha küçük olan veri tipini daha büyük olan veri tipine
+    otomatik olarak dönüştürülmesidir. Örnek olarak Int  değerini Long a atama yaparsak otomatik
+    olarak artık Long olacaktır. Çünkü Long, Int den daha büyüktür.
+
+    Ancak Kotlinde bu yapılamıyor çünkü Kotlin, tür güvenliğine odaklanan bir dildir. ve bu tip
+    otomatik tür dönüştürme işlemlerinin problem çıkarabileceğine inanarak potansiyel alınabilecek
+    hataların önüne geçmeyi amaçlamıştır. Kotlinde dönüşümler açık bir şekilde yapılmalıdır.
