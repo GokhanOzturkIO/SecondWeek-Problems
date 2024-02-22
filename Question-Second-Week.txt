@@ -240,3 +240,6 @@ Tip dönüşümün belirttiğimiz için long olur. Değeri de işlemi toplar yan
 
 47-> "val result = Int.MAX_VALUE + Int.MAX_VALUE" gibi bir işlemin sonucunda "result" değişkeninin tipi ve değeri ne olur? Neden böyle olduğunu açıklayın.
 Bunun cevabı -2 dir değişkenin tipi Int olur.Sebebi şudur 32-bitlik yeri aştığından dolayı overflow durumu söz konusu olur.32-bit işaretsiz tamsayı sınırları içinde bir değeri temsil etmektedir.
+
+48-> "val x = 5 / 2 println(x == 2)" gibi bir işlemin sonucu ve tipi nedir? Neden böyle olduğunu açıklayın.
+Tipi otomatik olarak Int olur değeri iste True olarak döner.Sebebi Şudur 5/2 ye bölündüğü için en fazla true döndürür bize
