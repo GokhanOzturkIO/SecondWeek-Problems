@@ -327,5 +327,13 @@ alımı için de uygundurlar örneğin negatif olamayacak sayılar kullanıcıda
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+7- "İşaretsiz" değişkenlerle yapılan matematiksel işlemlerde, özellikle büyük sayılarla çalışırken karşılaşılabilecek taşma (overflow) ve taşma olmaması (underflow) durumları için Kotlin nasıl bir yönetim sağlar?
+
+İşaretsiz değişkenlerden bağımsız kotlin overflow işlemleri için bazı önlemler barındırır. Taşma durum kontrolü "+", "-", "*", "/" gibi matematiksel operatörler 
+kullanıldığında derleme zamanında uyarı verebilir. Taşma kontrolü işlevleri özelliği sayesinde "toUIntOrNull", "toULongOrNull", "toUByte", "toUShort" gibi işlevlerle,
+işaretsiz değişkenlere dönüştürme yapmadan önce kontrol yapmanıza olanak tanır.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 
 
