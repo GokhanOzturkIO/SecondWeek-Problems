@@ -52,6 +52,12 @@ Not : Double ve Integer toplamında da benzer bir durum bekleyebiliriz fakat bu 
 (Gemini aynı görüşte değil.) (ChatGPT bizimle aynı görüşte.)
 
 - Bir değişkeni nullable yapmak için ne yapmalıyız?
+
+
+Cevap : Nullable kavramı bir değişkenin null olabilmesi durumunda kullanılır. Bir değişkeni nullable yapmak için explict bir yaklaşım kullanmamız gerekir
+
+Örneğin `var a = "Metin"` ifadesini nullable yapmak istiyorsak `var a : String? = "Metin"` şeklinde değişken türünün sonuna `?` koymamız gerekir.
+
 - "Null Güvenliği" (Null Safety) kavramını açıklayın.
 - Bir değişkene null değer atanır ve tip belirtilmezse Kotlin bu değişkeni nasıl yorumlar?
 - İlkel bir değişkenin nullable olması ile null değer alamaması arasında bellek yönetimi açısından nasıl farklar vardır?
