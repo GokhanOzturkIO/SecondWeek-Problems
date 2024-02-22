@@ -90,3 +90,11 @@ Answer 9:
     mi geçmeyecekmi kontrolü yapması her seferinde yapacağı anlamına gelir. Böyle olduğu zaman ek iş
     yüklenmiş oluyor.Daha yavaş derleme çalışma problemleri çıkabilir. Zaten bu tip işlemler çok sık
     kullanılmadığı için istisnalarda kendimiz bunu kontrol ettirebiliriz.
+
+Answer 10:
+    val x = 5 / 2  println(x == 2) Burada x in değeri otomatik olarak Int olarak algılanıyor. Int/Int in
+    cevabını otomatik olarak int kullandığımız için üstteki örneklerden yola çıkarak, int ile int çarpımı,
+    bölümü, toplamı gibi işlemlerde ide bunun int değerlerinin taşıp taşmayacağını bilemez. sürekli
+    kontrolü yapılamaz. Yani yapılır ama gereksiz iş yükü. bu nedenle 5/2 nin cevabı 2.5 evet ama burada
+    int olarak algılandığı için yuvarlayarak . dan öncesi alınıyor. yani 2 olacaktır. bu durumda println
+    ifadesinin içerisi her zaman true olacaktır.
