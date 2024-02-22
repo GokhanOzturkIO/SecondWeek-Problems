@@ -223,4 +223,5 @@ Güvensiz dönüşüm operatörü (as)= Güvensiz dönüşüm operatörü, bir n
 Örtük tip genişletme (Implicit Widening Conversions), bir programın çalışması sırasında bir sayısal veri tipinin daha küçük bir veri tipinden daha büyük bir veri tipine otomatik olarak dönüştürülmesini ifade eder.
 Kotlin, tip güvenli bir dil olarak tasarlandığından, bu tür otomatik genişletmeleri sağlamaz.
 
-
+43->"val b: Byte = 1 ile val i: Int = b ve son olarak print(b == i) gibi bir kod yazıldığında çıktı ne olur? Neden böyle bir çıktı aldığınızı açıklayın.
+Böyle bir çıktı oluşturamayız çünkü byte olan bir değişkeni Inte veremeyız.Bunun sebebi tip dönüşümüdür.
