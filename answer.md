@@ -59,6 +59,11 @@ Cevap : Nullable kavramı bir değişkenin null olabilmesi durumunda kullanılı
 Örneğin `var a = "Metin"` ifadesini nullable yapmak istiyorsak `var a : String? = "Metin"` şeklinde değişken türünün sonuna `?` koymamız gerekir.
 
 - "Null Güvenliği" (Null Safety) kavramını açıklayın.
+
+Cevap : Null Safety kavramı olası null değer alınması durumunda hata almamamak için kullanılan durumu ifade eder. Bunu yaparken örnek verecek olursak `var a:String = null` kullanılmasına izin verilmez. Soru işareti kullanılması gerekiyor. 
+
+Exception hatası almamak için de `?.` veya `!!.` kullanmamız gerekiyor. `?.` kullanımını kullanırken yaptığımız iş kodda null varsa çalıştırma fakat hata da verme. `!!.` kullanımıda ise eğer null içeriyorsa excption hatası al ve uygulamayı çökert diyoruz.
+
 - Bir değişkene null değer atanır ve tip belirtilmezse Kotlin bu değişkeni nasıl yorumlar?
 - İlkel bir değişkenin nullable olması ile null değer alamaması arasında bellek yönetimi açısından nasıl farklar vardır?
 - Nullable bir değişkenin bir değere sahip olması ile null olması arasında bellek yönetimi açısından nasıl bir fark vardır? Null değer almış bir değişken bellekte yer kaplamaz diyebilir miyiz?
