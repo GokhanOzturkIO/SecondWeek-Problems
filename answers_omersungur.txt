@@ -182,3 +182,5 @@ BigInteger ve BigDecimal sınıflarının sınırları, bellek ve işlemci güc�
 3 -> Tanımladığımız işaretsiz değişkenin değerinin sonuna u ya da U harfini koymamız gerekiyor. val myNumber : UByte = 129u gibi
 
 4 -> val a1 = 42u değişkeni int aralığında kaldığı için default olarak UInt tipini alacaktır fakat val a2 = 0xFFFF_FFFF_FFFFu değişkeni bir hexadecimal gösterimidir ve Int sınırlarını aştığı için ULong tipinde olacaktır.
+
+5 -> Sayının sonuna uL veya UL ifadesini getirerek yapabiliriz.
