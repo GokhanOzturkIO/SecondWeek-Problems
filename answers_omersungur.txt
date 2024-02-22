@@ -195,4 +195,4 @@ BigInteger ve BigDecimal sınıflarının sınırları, bellek ve işlemci güc�
     UInt : 0 ile 4,294,967,295
     ULong : 0 ile 18,446,744,073,709,551,615 arasıdır.
 
-9 -> 
+9 -> Java'da işaretsiz sayılar desteklenmediği için bu bazı problemlere yol açabilir. Örneğin işaretsiz sayılarda int aralığı pozitif aralık olarak daha fazladır bunu java'da kullanırsak veri kayıplarına yol açabilir. Bunu çözebilmek için işaretsiz sayıyı normal tipli değişkenlere dönüştürebiliriz. Örneğin: 255u.toInt() gibi. Fakat veri kaybının önüne geçmez zor bir durum. Bu durumu kontrol altına almak için sınırlar üzerinden o sayıyı maksimum aralığa çekip kalan kısmını başka bir değişkene atayabiliriz.
