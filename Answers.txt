@@ -296,8 +296,7 @@ sayıları temsil edebilir.
 
 2- "İşaretsiz" değişkenler nasıl bir sınıf yapısında tutulurlar? Bu neden önemlidir?
 
-İşaretsiz değişkenler kendilerine özel sınıflarda tutulurlar. Örneğin "UInt","UShort" gibi kendilerine özel classlara sahiptirler. Farklı classlarda tutulmalarına
-rağmen ramde ayrılan yer işaretli değişkenlerle aynıdır.
+İşaretsiz değişkenler kendilerine özel sınıflarda tutulurlar. Örneğin "UInt","UShort" gibi kendilerine özel classlara sahiptirler. İşaretli değişkenler işaretsiz değişkenlere kıyasla bellekte daha fazla yer kaplarlar.
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -318,6 +317,13 @@ alakalıdır.
 5- "İşaretsiz" "Long" harf gösterimi nasıl yapılır?
 
 İşaretsiz long oluşturmak için oluşturulan sayının yanına "uL" ya da "UL" konulabilir. Örneğin "val unsignedLong = 123456789UL"
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+6- "İşaretsiz" değişkenlerin kullanım amaçları nelerdir?
+
+İşaretsiz değişkenler, işaretli değişkenlere kıyasla bellekte daha az yer kaplarlar bu nedenle bellek tasarrufu adına tercih edilebilirler. Ayrıca belirli tipte veri 
+alımı için de uygundurlar örneğin negatif olamayacak sayılar kullanıcıdan alındığında kullanılabilirler. (yaş bilgisi, tc no gibi)
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
