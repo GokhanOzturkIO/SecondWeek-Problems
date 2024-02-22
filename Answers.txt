@@ -356,6 +356,16 @@ Java'da birçok API, işaretli değişkenlerle çalışır ve işaretsiz değiş
 sorunlarına yol açabilir. Buna çözüm olarak işaretsiz değişkenleri kullanmamak veya işaretsiz değişkenleri işaretli değişkenlere dönüştürme yöntemleri kullanılabilir.
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Tür Dönüşümü
+
+1- `is` ve `!is` operatörlerinin kullanımını açıklayın.
+
+Bu operatörlerin kullanım amacı bir nesnenin belirli bir türe uygun olup olmadığının kontrolünü sağlamaktır. Örneğin "name is String" ifadesi name değeri bir String tutuyorsa doğru, String dışında bir değer tutuyorsa yanlış değerini dönmektedir. !is operatörü ise is operatörünün tam tersidir. Örneğin "name !is String" ifadesi
+name değeri bir String tutuyorsa yanlış, String dışında bir değer tutuyorsa doğru olarak dönmektedir.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 
