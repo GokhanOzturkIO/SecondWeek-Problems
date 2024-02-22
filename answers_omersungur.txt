@@ -244,3 +244,11 @@ fun calculate(number1: Short) {
 }
 
 Bu şekilde bir kullanım yaparsak 5 aslında bir Int sayıdır fakat print ifadesi bize Short döner, otomatik dönüştürme buralarda olabiliyor.
+
+5 -> Buradaki kodları run edemeyiz, 4.soruda belirttiğim gibi açıkça dönüşüm yapmamız gerekiyor. Int bir değer içine byte bir değer atıyoruz. Burada type mismatch hatası alırız. Aynı şekilde print ifadesinde de iki tipi aynı türe çevirip kontrol ettirmeliyiz. Doğru kullanımı şu şekil olabilir:
+
+    val b: Byte = 1
+    val i: Int = b.toInt()
+    print(b == i.toByte())
+
+son satırdaki ifadeyi şu şekilde de yapabiliriz, print(b.toInt() == i). Yeter ki aynı türden olsunlar.
