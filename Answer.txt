@@ -286,5 +286,24 @@ is, belirtilen türde olup olmadığını kontrol ederken !is operatörü ise ta
 
 ===========================
 
+38-) "Akıllı Dönüşüm" (Smart Cast) ne demektir? Farklı kod örnekleri ile açıklayın. Bu özelliğin sınırlamaları nelerdir?
 
+Smart cast sayesinde tip dönüşümüne ihtiyaç olmadan otomatik olarak tip dönüştürme işlemi gerçekleştirilmektedir.
+
+    val obj: Any = "Kursat"
+    when (obj) {
+        is String -> {
+            println(obj.reversed())
+        }
+        is Int -> {
+            println(obj + 20)
+        }
+        else -> {
+            println("This variable is not String or Int")
+        }
+    }
+
+output: tasruK
+
+örneğin burada when ile obj değişkeninin tipini kontrol ederek String ise String tipine ait bir fonksiyon olan reversed() fonksiyonunu çağırabiliyoruz. 
 
