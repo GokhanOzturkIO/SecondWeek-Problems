@@ -252,3 +252,5 @@ Bu şekilde bir kullanım yaparsak 5 aslında bir Int sayıdır fakat print ifad
     print(b == i.toByte())
 
 son satırdaki ifadeyi şu şekilde de yapabiliriz, print(b.toInt() == i). Yeter ki aynı türden olsunlar.
+
+6 -> 5.Soruda cevabı verildi. Print satırı hata verecektir çünkü aynı türden verileri kıyaslamıyoruz.
