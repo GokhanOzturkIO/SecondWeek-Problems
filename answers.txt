@@ -65,5 +65,8 @@ val hexadecimal =0x759
 val binari =0b0100011 
 
 8.Sekizlik (Octal) değişkenler Java'da nasıl tanımlanır? Kotlin'de Sekizlik değişken tanımlanabilir mi?
-Java'da Octal değişkenler 0 rakamıyla başlayan şekilde tanımlanır, Bunun ardından 0 ile 7 arasında rakamlar içerebilir. int octal= 075
+-Java'da Octal değişkenler 0 rakamıyla başlayan şekilde tanımlanır, Bunun ardından 0 ile 7 arasında rakamlar içerebilir. int octal= 075
 Kotlin'de Octal değişkenler tanımlanamaz.
+
+9."Geleneksel Notasyon" (Conventional Notation) gösterimi nasıl yapılır?
+-Conventional Notation matematiksel ifadeleri veya aritmetik işlemleri ifade etmek için kullanılan bir notasyondur. Operatörler ve operandolar tipik olarak birbirinin yanında ve öncelik sırası ve işlem önceliğine göre belirtilir.
