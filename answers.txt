@@ -57,3 +57,9 @@ Ondalık sayıları yazarken ayıraç olarak nokta (.) ve virgül (,) kullanıl�
 
 6.Double ve Float değişkenler ondalık kısımda kaç basamağa kadar işlem yaparlar? Bu sınırın üzerinde gelen ondalık bilgileri için nasıl davranırlar? Hangi durumlar için Float ve hangi durumlar için Double kullanılmalıdır?
 -Double  değişkenler genellikle 15 haneli basamaklara kadar işlem yaparlar. Float değişkenler, genellikle 7 haneli basamaklara kadar işlem yaparlar.Bu sınırın üzerinde gelen ondalık bilgileri genellikle kaybederler veya yuvarlarlar. Daha düşük bellek kullanımı ve daha hızlı işlem için Float, yüksek hassasiyet ve daha az yuvarlama hatası için Double kullanılmalıdır.
+
+7.Ondalık(Decimal), Onaltılık (Hexadecimal) ve İkilik (Binary) değişkenleri Kotlin'de nasıl tanımlayabilirsiniz?
+Değişken şeklinde tanımlama yapabiliriz.
+val decimal =1903
+val hexadecimal =0x759
+val binari =0b0100011 
