@@ -367,5 +367,21 @@ name değeri bir String tutuyorsa yanlış, String dışında bir değer tutuyor
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+2- "Akıllı Dönüşüm" (Smart Cast) ne demektir? Farklı kod örnekleri ile açıklayın. Bu özelliğin sınırlamaları nelerdir?
+
+Smart cast bir değişkenin belirli durumlarda ide tarafından tür dönüşümünün sağlanması işlemidir.
+
+fun printLength(obj: Any) {
+    if (obj is String) {
+        println("String uzunluğu: ${obj.length}") // Smart cast
+    }
+}
+
+Smart cast işlemi için sınırlamalar ise var değişkenlerde kullanılamıyor oluşu, iç içe veya karmaşık yapılar içerisinde zaman zaman düzgün çalışmıyor oluşu ve bir değişkenin null olmadığına dair kesin bir bilgi olmadığında kullanılmaması şeklinde özetlenebilir.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
 
 
