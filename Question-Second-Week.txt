@@ -249,3 +249,7 @@ Yine yukarıdaki sorularda dediğim gibi Tipi verildiği için değişkende Tipi
 
 50-> "val x = 5 / 2.toDouble() println(x == 2.5)" gibi bir işlemin sonucu ve tipi nedir? Neden böyle olduğunu açıklayın.
 Burada true sonucunu alırız ve değerimiz Double değerinde olur.Çünkü double olduğunu açık Dönüşüm yaptık.
+
+51-> Kotlin'de tür dönüşümü yapılırken, dönüşümün başarısız olması durumunda TypeCastException nasıl ele alınır ve bu tür hataların önüne geçmek için hangi önlemler alınabilir?
+as? operötörüyle güvenli bir dönüşüm yapabiliriz. Güvenli dönüşüm başarısız oldugunda null döner bize.
+is operatörü ile nesnenin türünü kontrol edebilir ve sadece uygun türlerde dönüşüm yapabilirsiniz.
