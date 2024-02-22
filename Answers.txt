@@ -301,4 +301,10 @@ rağmen ramde ayrılan yer işaretli değişkenlerle aynıdır.
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+3- "İşaretsiz" değişkenlerin harf gösterimi nasıldır?
+
+İşaretsiz değişkenler için harf gösterimi "u" veya "U" şeklindedir. "val unsignedByte : UByte = 200u.toUByte" veya "val unsignedInt : UInt = 42u" şeklinde tanımlanabilir.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 
