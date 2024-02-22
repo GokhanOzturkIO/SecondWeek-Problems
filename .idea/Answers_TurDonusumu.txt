@@ -45,3 +45,18 @@ Answer 4:
     Ancak Kotlinde bu yapılamıyor çünkü Kotlin, tür güvenliğine odaklanan bir dildir. ve bu tip
     otomatik tür dönüştürme işlemlerinin problem çıkarabileceğine inanarak potansiyel alınabilecek
     hataların önüne geçmeyi amaçlamıştır. Kotlinde dönüşümler açık bir şekilde yapılmalıdır.
+
+Answer 5:
+
+    val a :Byte=1
+    val b:Int =a
+    println(a==b)
+
+    Şeklinde bir kod yazdığımızda henüz daha run etmeden zaten IDE bize burada bir sıkıntı olduğunu
+    belirtiyor. biz yine de run edelim diyerek çalıştırınca,
+    Alacağımız ilk hata şudur:Type mismatch: inferred type is Byte but Int was expected
+        YANİ: b değişkeni için ben Int bekliyorum ama sen bana Byte gönderiyorsun.
+
+    Alacağımız ikinci hata ise şudur:  Operator '==' cannot be applied to 'Byte' and 'Int'
+        YANİ: == operatörü ile birbirinden farklı olan Int ve Byte tiplerini karşılaştıramazsın.(gibi)
+    Özetle bu kod baştan fail veriyor.
