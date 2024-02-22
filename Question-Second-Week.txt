@@ -205,3 +205,8 @@ Sınırlamalar bu şekildedir.
 38-> "İşaretsiz" değişken türleri (UInt, ULong vs.) kullanırken, Java API'leri ile uyumluluk konusunda ne gibi sorunlar olabilir? Bunları çözmek için neler yapabilirsiniz?
 Java işaretsiz değişkenleri desteklemez bu yüzden sorun çıkabilir.Javada int kullanılır kotlinde ise uInt kullanılır.
 Eğer mümkünse, kullanılan Java API'lerini güncellemek veya işaretsiz tamsayıları destekleyen özel metodlar eklemek de bir çözüm olabilir.
+
+Tür Dönüşümü
+
+39-> is ve !is operatörlerinin kullanımını açıklayın.
+is anahtarı, bir nesnenin belirli bir tipe ait olup olmadığını kontrol etmek için kullanılır. !is ise nesnenin belirli bir türden olup olmadığını kontrol eder.
