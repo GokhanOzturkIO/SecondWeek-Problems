@@ -65,6 +65,9 @@ Cevap : Null Safety kavramı olası null değer alınması durumunda hata almama
 Exception hatası almamak için de `?.` veya `!!.` kullanmamız gerekiyor. `?.` kullanımını kullanırken yaptığımız iş kodda null varsa çalıştırma fakat hata da verme. `!!.` kullanımıda ise eğer null içeriyorsa excption hatası al ve uygulamayı çökert diyoruz.
 
 - Bir değişkene null değer atanır ve tip belirtilmezse Kotlin bu değişkeni nasıl yorumlar?
+
+Cevap : Nothing? dediğimiz bir değişken tipi olarak tanımlar.
+
 - İlkel bir değişkenin nullable olması ile null değer alamaması arasında bellek yönetimi açısından nasıl farklar vardır?
 - Nullable bir değişkenin bir değere sahip olması ile null olması arasında bellek yönetimi açısından nasıl bir fark vardır? Null değer almış bir değişken bellekte yer kaplamaz diyebilir miyiz?
 - Nullable bir değişkenle çalışırken hangi operatörleri kullanırız? Bu operatörlerin kullanım farkları nelerdir? Hangisini ne zaman kullanmak daha anlamlıdır?
