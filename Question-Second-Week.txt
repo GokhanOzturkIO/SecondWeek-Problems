@@ -243,3 +243,6 @@ Bunun cevabı -2 dir değişkenin tipi Int olur.Sebebi şudur 32-bitlik yeri aş
 
 48-> "val x = 5 / 2 println(x == 2)" gibi bir işlemin sonucu ve tipi nedir? Neden böyle olduğunu açıklayın.
 Tipi otomatik olarak Int olur değeri iste True olarak döner.Sebebi Şudur 5/2 ye bölündüğü için en fazla true döndürür bize
+
+49-> "val x = 5L / 2 println(x == 2L)" gibi bir işlemin sonucu ve tipi nedir? Neden böyle olduğunu açıklayın.
+Yine yukarıdaki sorularda dediğim gibi Tipi verildiği için değişkende Tipi Long olur Değeri de değişmez bize true döndürür.
