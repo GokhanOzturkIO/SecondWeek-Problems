@@ -180,3 +180,5 @@ BigInteger ve BigDecimal sınıflarının sınırları, bellek ve işlemci güc�
 2 -> İşaretsiz değişkenler arka planda value classlar olarak tanımlanmıştır. Normal sınıflar referans tipli şekilde bellekte yer kaplar fakat value classlar primitive tip gibi bellekte yer tutar. Arka planda constructorları private şeklidedir bu yüzden nesne üretemeyiz gibi gözükür fakat nesne oluşturma yazımını yaptıktan sonra primitive bir tip gibi kullanabiliriz. Primitive tip gibi kullanılmasından dolayı çok daha performanslı ve daha az maliyetlidir.
 
 3 -> Tanımladığımız işaretsiz değişkenin değerinin sonuna u ya da U harfini koymamız gerekiyor. val myNumber : UByte = 129u gibi
+
+4 -> val a1 = 42u değişkeni int aralığında kaldığı için default olarak UInt tipini alacaktır fakat val a2 = 0xFFFF_FFFF_FFFFu değişkeni bir hexadecimal gösterimidir ve Int sınırlarını aştığı için ULong tipinde olacaktır.
