@@ -196,3 +196,11 @@ BigInteger ve BigDecimal sınıflarının sınırları, bellek ve işlemci güc�
     ULong : 0 ile 18,446,744,073,709,551,615 arasıdır.
 
 9 -> Java'da işaretsiz sayılar desteklenmediği için bu bazı problemlere yol açabilir. Örneğin işaretsiz sayılarda int aralığı pozitif aralık olarak daha fazladır bunu java'da kullanırsak veri kayıplarına yol açabilir. Bunu çözebilmek için işaretsiz sayıyı normal tipli değişkenlere dönüştürebiliriz. Örneğin: 255u.toInt() gibi. Fakat veri kaybının önüne geçmez zor bir durum. Bu durumu kontrol altına almak için sınırlar üzerinden o sayıyı maksimum aralığa çekip kalan kısmını başka bir değişkene atayabiliriz.
+
+------------- Tür Dönüşümü -------------
+
+1 -> is operatörü ile tür kontrolü yaparız. Örneğin elimizde bir değişken var tipi şu mu diye bir kontrol yapmak istiyoruz, işte burada kullanabiliriz. !is ise kontrolü tam tersi şeklinde yapar. Yani bu tip şu değildir diye kontrol ediyoruz.
+
+    val myInt = 50
+    println(myInt is Int) // myInt değişkeni Int tipinde ise true dönecek.
+
