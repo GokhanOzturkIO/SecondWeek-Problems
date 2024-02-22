@@ -204,3 +204,16 @@ BigInteger ve BigDecimal sınıflarının sınırları, bellek ve işlemci güc�
     val myInt = 50
     println(myInt is Int) // myInt değişkeni Int tipinde ise true dönecek.
 
+2 -> IDE tarafından bir tip için otomatik dönüştürme işlemidir. Biz tip dönüşümü yapmadan kendisi o tipe dönüşüm yaptırır.
+
+    val x: Number
+    x = 50
+
+    when (x) {
+        is Int -> println("Int")
+        is Short -> println("Short")
+        is Byte -> println("Byte")
+    }
+
+Örneğin bu örnekte x Number tipinde ve int, double, short vs. gibi tiplerdeki sayıları verebiliriz. is ile kontrol yaptırıyoruz. Eğer is bloğu true gelirse onun içindeki blok çalışacak. İçindeki blok çalışırsa şöyle bir durum oluşuyor (Int için konuşuyorum): is Int bloğu içine girdik, demek ki bu değişkenin değeri Int. Ben artık bu değişkeni Int olarak düşünüyorum ve onun fonksiyonlarını onun özelliklerini kullanabilirim. İşte bu smart case'dir
+
