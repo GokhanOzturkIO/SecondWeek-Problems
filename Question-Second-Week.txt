@@ -219,9 +219,15 @@ Güvensiz çağrı operatörü (!!.)=Nesneni null olup olmadığını kontrol et
 Güvenli çağrı operatörü (?.)= Nesnenin null olup olmadığını kontrol eder.----- Bu ikisinden birini kullanırken dikkat etmek gerekir uygulama crash olabilir ve Null pointer exception hatası alırız.
 Güvensiz dönüşüm operatörü (as)= Güvensiz dönüşüm operatörü, bir nesneyi belirli bir türe dönüştürür. Eğer dönüşüm mümkün değilse, ClassCastException hatası alınabilir. Bu operatörü kullanırken dikkatli olunmalı ve mümkünse güvenli dönüşüm (as?) tercih edilmelidir.
 
-42->Sayısal değişkenlerde örtük tip genişletme (implicit widening conversions) ne demektir? Kotlin'de bu neden yapılamaz?
+42-> Sayısal değişkenlerde örtük tip genişletme (implicit widening conversions) ne demektir? Kotlin'de bu neden yapılamaz?
 Örtük tip genişletme (Implicit Widening Conversions), bir programın çalışması sırasında bir sayısal veri tipinin daha küçük bir veri tipinden daha büyük bir veri tipine otomatik olarak dönüştürülmesini ifade eder.
 Kotlin, tip güvenli bir dil olarak tasarlandığından, bu tür otomatik genişletmeleri sağlamaz.
 
-43->"val b: Byte = 1 ile val i: Int = b ve son olarak print(b == i) gibi bir kod yazıldığında çıktı ne olur? Neden böyle bir çıktı aldığınızı açıklayın.
+43-> "val b: Byte = 1 ile val i: Int = b ve son olarak print(b == i) gibi bir kod yazıldığında çıktı ne olur? Neden böyle bir çıktı aldığınızı açıklayın.
 Böyle bir çıktı oluşturamayız çünkü byte olan bir değişkeni Inte veremeyız.Bunun sebebi tip dönüşümüdür.
+
+44-> "val b: Byte = 1 ile val i: Int = b.toInt() ve son olarak print(b == i) gibi bir kod yazıldığında çıktı ne olur? Neden böyle bir çıktı aldığınızı açıklayın.
+Burdada aynı hatayı alırız ama bunun çözümü şu şekildedir.
+val b: Byte = 1
+val i: Int = b.toInt()
+print(b.toInt() == i)
