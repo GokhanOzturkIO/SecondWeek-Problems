@@ -1,0 +1,280 @@
+------------- Temel Türler & Null Güvenliği -------------
+
+1 - val değişkenler farklı senaryolara göre ya read-only ya da immutable olabilir. var değişkenler ise mutable'dır, yani değeri sonradan değiştirilebilir. Arasındaki fark temel olarak budur. Performans açısından kıyaslayacak olursak, yine farklı bakış açılarıyla farklı sonuçlar elde ederiz. Val bir property'nin setter fonksiyonu olmadığı için doğrudan atama yapılamıyor. Atama yaparken threadlerden yararlanacağımızı düşünecek olursak bu threadlerin maaliyeti "var" için yapılacak kullanım kadar fazla değildir. var bir property'e değer atarken hangi thread bu işlemi yapıyor ve diğer threadlerin bu değişikliği takip etmesi gibi durumları düşünmeliyiz. Bu açıdan val daha performanslıdır. Fakat başka bir bakış açısıyla şunu da söyleyebiliriz: val propertylerde tekrar değer ataması olmadığı için burada bir if case'i varmış gibi düşünebiliriz. Sürekli kontrol sağlanarak değer atanıp atanmadığını düşünecek olursak val burada daha az performanslı olur. var propertyler için böyle bir kontrol olmadığını düşünebiliriz.
+
+2 - var bir property'nin val gibi davranması için setter fonksiyonunu private yapabiliriz. Bu şekilde dışarıdan bu property'e değer atanamaz. Bunu neden yapmak isteyebiliriz? Tanımlanan bir property sadece o sınıf içinde değiştirilebilir olsun, dışarıdan değiştirilemez olsun istiyorsak kullanabiliriz. Örneğin mutableLiveData yapısını bu şekilde kullanabiliriz, sadece view model içinden değiştirip UI'da erişemeyiz. Örnek kod:
+
+fun main() {
+    val user = User()
+    user.name = "" // Error! (Cannot assign to 'name': the setter is private in 'User')
+}
+
+class User() {
+    var name: String = "Omer"
+        private set
+
+    fun printName() {
+        name = "Ahmet"
+    }
+}
+
+3 - Immutable, değeri sonradan değiştirilemeyen veya atama yapılamayan kavramına denk gelir. Read-only ise değişkene bir atama yapıldıktan sonra tekrar atama yapılamadığı anlamına gelir. Peki val hangisidir? val için senaryolara göre farklı cevapları vardır. Bir class içinde val ile birlikte tanımlanan property, read onlydir. Immutable diyemeyiz çünkü getter fonksiyonu içinde değer ataması yapabiliriz. Eğer bu değer atamaları farklı propertyler olursa, val değerin değişkeni de doğrudan değişmiş oluyor. Fakat genel olarak val propertyler için read only'dir diyebiliriz. Hemen örnek verelim:
+
+fun main() {
+    val car = Car()
+    car.printCarName()
+}
+
+class Car() {
+    private var varCarName = "Audi"
+    private val valCarName: String
+        get() {
+            return varCarName
+        }
+
+    fun printCarName() {
+        varCarName = "BMW"
+        println(valCarName) // BMW
+        varCarName = "Mercedes"
+        println(valCarName) // Mercedes
+    }
+}
+
+Buradaki ilk çıktı BMW ikincisi ise Mercedes oluyor. Görüldüğü üzere sınıf içerisinde tanımlanan val property'nin değerini değiştirebiliyoruz. Immutable diyebilmemiz için getter fonksiyonunu değiştirememiz gerekiyor. Bunu yapmanın yolu da bu val değişkenleri bir fonksiyon scope'u içinde tanımlamaktır. Bu şekilde arka planda getter ve setter fonksiyonları oluşmayacak ve gerçekten immutable olacaktır.
+
+4 -> Type inference (tip çıkarımı), değişkenlerin tiplerinin otomatik veya bizim yazmamızla belirlenmesidir. Eğer değişkenin değerini verirsek doğrudan verirsek burada otomatik bir tip çıkarımı olur. Onun hangi tip bir değişken olduğunu belirtmemize gerek yoktur. Lokal bir değişkenin başlangıç değerini vermeden tanımlayabilir fakat bu tanımlama sırasında değişkenin tipini de kesinlikle yazmalıyız.
+
+class Car {
+    // val carName : String // Başlangıç değeri olmadan sınıf değişkeni tanımlanamıyor.
+    val carName : String = "Audi" // Explicit Type Inference
+    val carName2 = "Audi" // Implicit Type Inference
+    
+    fun printCarName() {
+        val carName: String // başlangıç değeri olmadan lokal bir değişken tanımlanabiliyor.
+    }
+}
+
+5 -> Hayır, özel optimazsyonlar ile primitive performansını yakayabiliriz. Örneğin Int, Java'daki int tipine denk gelirken Int?, Integer tipine karşılık gelir. Bu şekilde primitive - referans tip ayrımı yapılabiliyor.
+
+6 -> Tip güvenliği, bir değişken hangi tipte tanımlandıysan o tipteki değişkenleri alabilmesidir. Diğer tipteki değişkenleri alamaz.
+
+val myStr = "Omer"
+myStr = 5 // exception (String ifadeye int veremeyiz)
+
+7 -> Nullable yapabilmek için ? ifadesini tipin sonuna koyabiliriz. Örneğin: String -> String? bu şekilde nullable yapmış oluyoruz.
+
+8 -> Nullable bir değişkeni direkt olarak kullanamıyoruz. Bu da bize null safety kavramını getiriyor. Nullable bir değişkeni kullanabilmek için ? ve !! ifadelerine yoğunlaşabiliriz. Eğer bir ifade null değil ise bu işlem yap demek istersek ? ifadesini, eğer bu ifade kesinlikle null değil ben eminim, kullan bunu demek istersek !! operatörünü kullanabiliriz. Fakat değer null ise exception oluşur.
+
+fun main() {
+    val myStr: String? = null
+    println(myStr?.length) // null döner
+    // println(myStr!!.length) // exception oluşur.
+}
+
+9 -> Nothing tipini alır. Nothing, hiçbir değeri olmayan bir şeyi temsil etmek için kullanılır. Burada tipini bilmediğimiz için Nothing? olarak işaretlenir.
+
+10 -> Primitive tiplerin değişken adı ve değişkenin değeri bellekte stack alanında saklanır. Referans tiplerin değişken adı stackte, değeri ise heap alanında saklanır. Stack alanına erişim daha hızlı olduğu için primitive tipler daha performanslı çalışır.
+
+11 -> Yer kaplamaz diyemeyiz. Değişkenin adı stackte yine yer kaplar fakat değeri olmadığı için (null) heap alanında yer tutmaz. Sonuç olarak stackte yer tuttuğu için yine de yer kaplar diyebiliriz.
+
+12 -> 8.cevapta verildi. !! ve ? kullanımıyla ilgili...
+
+------------- Sayılar -------------
+
+1 -> Byte, Short, Int, Long, Float ve Double olmak üzere 6 tane sınıf Number sınıfını miras alır. Number tipinde bir değişkene değer verdiğimizde eğer int aralığındaysa default olarak int tipine dönüşür. Eğer noktalı sayı yazarsak default olarak double tipini alır. Bunları toByte(), toShort() gibi fonksiyonlarla istediğimiz veri tipine de dönüştürebiliriz. Örneğin aşağıdaki örnekte maksimum int değerini verdiğimiz için myNumber int tipinde olacaktır. Üstte belirtiğim gibi 0 versekte int olacak, byte aralığını alıyor diye byte olmuyor. Int aralığını geçersek Long tipine dönüşecek. Bu arada çıktıda referans tipli olan Integer ifadesi yazıldığına da dikkat çekerim
+
+fun main() {
+    val myNumber: Number = Int.MAX_VALUE
+    println(myNumber.javaClass) // class java.lang.Integer
+}
+
+2 -> Değer aralıklarına göre belirler. 1.Soruda bu konuya kısaca bakış atmıştık. Bir değişkene int aralığında değer atanıyorsa (-2^31 ve 2^31 -1) bu sayının tipi integer olarak belirlenir. Byte, Short gibi diğer türlerin verilmesini istiyorsak dönüştürme fonksiyonlarını kullanabiliriz (toShort() gibi). Bir değişkene noktalı sayı verdiğimizde default olarak double değerini alır. Float yapabilmek için f ifadesini sayını sonuna verebiliriz.
+
+3 -> 1 (sayı olan 1 :D) ifadesiyle karışmaması için :) Örneğin: val myNumber = 111.1f dediğimizde herhangi bir okuma problemi yaşanmıyor fakat 111.1l yapsaydık sondakinin 1 mi l mi olduğunu tam olarak göremezdik.
+
+4 -> Kayan noktanın ne kadar uzunluğa sahip olacağını belirleyen kavramlardır. Float bir değer için .'dan sonra 9-10 hane yazsak bile bunların hepsi o değer içine atanmıyor. Daha doğrusu yazdırırken göremiyoruz.
+
+Tek Duyarlıklı (Single Precision):
+
+- Tek duyarlıklı, IEEE 754 standardına göre 32-bit uzunluğunda bir kayan nokta sayı formatıdır.
+- Tek duyarlıklı format, daha az bellek kullanımı ve daha düşük hesaplama hassasiyeti sağlar.
+- Ancak, daha sınırlı bir aralık ve hassasiyet sağlar. Özellikle büyük veya çok küçük sayılarla çalışırken hassasiyet kaybı yaşanabilir.
+
+Çift Duyarlıklı (Double Precision):
+
+- Çift duyarlıklı, IEEE 754 standardına göre 64-bit uzunluğunda bir kayan nokta sayı formatıdır.
+- Çift duyarlıklı format, daha fazla bellek kullanımı ve daha yüksek hesaplama hassasiyeti sağlar.
+- Daha geniş bir aralık ve daha yüksek hassasiyet sağlar, bu da büyük ve küçük sayılarla çalışırken daha doğru sonuçlar elde etmeyi mümkün kılar.
+
+5 -> ondalık ayıracı için ikisinde de . işareti kullanılır. Aralarındaki farkı ise float ifadesinin sonundaki f veya F harfinden anlarız.
+
+6 -> Float bir değişkene değer atarken . 'dan sonra 7 karakter koyabiliriz. Bundan sonrakileri yazdıramayız. Fakat 7'den fazla karakter verdiğimizde double bir değer ile toplandığında meydana gelecek sayıda o fazladan verdiğimiz değerler de işlem görecektir. Bu yüzden ondalık sayılarda ondalık kısmında 7'den fazla karakter varsa double kullanılması daha uygundur.
+
+7 -> val hexadecimalNumber = 0xFF // Hexadecimal
+     println(hexadecimalNumber)
+
+     val binaryNumber = 0b00001011 // Binary
+     println(binaryNumber)
+    
+     val decimalNumber: Int = 123 // Decimal
+     println(decimalNumber)
+
+8 -> Hayır oktal sayılar Kotlin'de desteklenmiyor.
+
+9 -> "Geleneksel Notasyon" terimi, matematiksel ifadelerin genellikle kullanılan geleneksel gösterimine atıfta bulunur. Mesela + işareti toplama işaretini ifade eder. * işareti çarpım işaretini gösterir.
+
+10 -> Uzun haneden oluşan sayıların daha okunaklı olması için _ kullanılır. Yorumlanırken _ işaretleri görmezden gelinir.
+
+11 -> == ile iki ifadenin içeriğini kıyaslarız. === ile referanslarını kıyaslarız.
+
+12 -> Byte değer aralığındaki sayılar için farklı bir optimazsyon uygulanıyor ve referansları farklı olsa bile ref kıyaslamasında true döner elde ediyoruz.
+
+    // Byte aralığında true dönecek!
+    val myValue2 : Int? = 128
+    val myValue3: Int? = 128
+
+    println(myValue2 === myValue3)
+
+Buradaki ifade false dönecek çünkü myValue2 başka 128'i myValue3 başka 128'i işaret edecek. Referansları farklı olduğu için false dönüyor. Fakat -128 ve 127 aralığında bir sayı girersek bu kıyaslama sonucunda true değer elde edeceğiz. Hatta aşağıdaki kod örnekleriyle farklı referansları olduğunu da garanti edebiliriz.
+
+    println(System.identityHashCode(myValue2))
+    println(System.identityHashCode(myValue3))
+
+13 -> Temel olarak + - * / % ++ -- operatörlerini sayabiliriz. İlk 4'ü matematiksel operatörler zaten. 5. modül almak için kullanılır. ++ ile bir değişkenin değerini 1 arttırıp o değer içine atarız. -- ile de 1 azaltıp o değer içine atarız.
+
+14 -> < > <= >= == != operatörlerini sayabiliriz. İki sayı arasında sırasıyla küçüktür, büyüktür, küçük eşittir, büyük eşittir, eşittir ve eşit değildir kıyaslaması yapar.
+
+15 -> Bit düzeyinde operatörler, bilgisayar belleğindeki verilerin bit seviyesinde manipüle edilmesini sağlayan operatörlerdir. Örneklerini göstermek için kullanılan operatörlerle birlikte aşağıya yazıyorum.
+
+    val a = 0b1010
+    val b = 0b1100
+
+    val andResult = a and b // 1000 = 8 -> (2^0 * 0) + (2^1 * 0) + ...
+    val orResult = a or b // 1110 = 14
+    val xorResult = a xor b
+    val notResult = a.inv()
+    val leftShiftResult = a shl 2
+    val rightShiftResult = a shr 2
+
+    println(andResult)
+    println(orResult)
+    println(xorResult)
+    println(notResult)
+    println(leftShiftResult)
+    println(rightShiftResult)
+
+16 -> Bu iş için kullanılan iki adet tipten yararlanabiliriz.
+
+BigInteger: Büyük tamsayılar için kullanılır. BigInteger sınıfı, istediğiniz kadar büyük tamsayıları temsil etmek için kullanılır. Sınırsız büyüklükte tamsayıları temsil edebilir.
+
+BigDecimal: Büyük ondalıklı sayılar için kullanılır. BigDecimal sınıfı, yüksek hassasiyet gerektiren büyük ondalıklı sayıları temsil etmek için kullanılır. Bu sınıf, herhangi bir boyutta ondalıklı sayıları temsil etmek için kullanılabilir.
+
+BigInteger ve BigDecimal sınıflarının sınırları, bellek ve işlemci gücüyle sınırlıdır. Bellek ve işlemci kapasiteniz ne kadar büyükse, temsil edebileceğiniz sayılar da o kadar büyük olabilir.
+
+17 -> Double ve Float veri tiplerinde, sayılar bilgisayarın sınırlı hassasiyeti nedeniyle tam olarak temsil edilemeyebilir. Bu nedenle, bazı durumlarda sayılar yuvarlanabilir. Yuvarlama davranışı, IEEE 754 standardı tarafından tanımlanan bir dizi kurala göre belirlenir. Bu standarta göre, sayılar en yakın değere yuvarlanabilir, yukarı veya aşağı yuvarlanabilir veya sıfıra yuvarlanabilir. Ancak, Kotlin veya Java gibi dillerde, yuvarlama davranışını değiştirmek için doğrudan bir seçenek bulunmamaktadır. Bu durumu 4.cevapta biraz görmüştük.
+
+------------- İşaretsiz Sayılar -------------
+
+1 -> İşaretsiz değişkenler sadece pozitif değer aralığında sayılara sahip olan değişkenlerdir. Örneğin byte aralığı -128 ve 127 arasındadır. UByte aralığı ise 0 ile 255 aralığındadır. Negatif aralığı pozitif aralığa itiyormuşuz gibi düşünebiliriz.
+
+2 -> İşaretsiz değişkenler arka planda value classlar olarak tanımlanmıştır. Normal sınıflar referans tipli şekilde bellekte yer kaplar fakat value classlar primitive tip gibi bellekte yer tutar. Arka planda constructorları private şeklidedir bu yüzden nesne üretemeyiz gibi gözükür fakat nesne oluşturma yazımını yaptıktan sonra primitive bir tip gibi kullanabiliriz. Primitive tip gibi kullanılmasından dolayı çok daha performanslı ve daha az maliyetlidir.
+
+3 -> Tanımladığımız işaretsiz değişkenin değerinin sonuna u ya da U harfini koymamız gerekiyor. val myNumber : UByte = 129u gibi
+
+4 -> val a1 = 42u değişkeni int aralığında kaldığı için default olarak UInt tipini alacaktır fakat val a2 = 0xFFFF_FFFF_FFFFu değişkeni bir hexadecimal gösterimidir ve Int sınırlarını aştığı için ULong tipinde olacaktır.
+
+5 -> Sayının sonuna uL veya UL ifadesini getirerek yapabiliriz.
+
+6 -> Eğerki negatif sayıları kullanmak anlamsız bir senaryo oluşturuyorsa veya negatif değerlerden ziyade pozitif değer aralığını daha da genişletmek istiyorsak aynı zamanda bir üst tipe geçiş yapmak istemiyorsak kullanabiliriz.
+
+7 -> Eğerki sınırlar dışında bir ifade oluşursa IDE bizi uyarır ve kodu run etmemizi engeller. Örneğin 2 adet UByte olsun elimizde birisi 250 diğeri 6 değerine sahip olsun. Bunları topladığımızda çıkan sonucu başka değere atalım. Artık o değişken UByte tipinde olamaz. Yazsak bile run edemeyiz, IDE hata gösterir. Ama çıkarma işlemi için farklı bir durum söz konusu. Diyelim ki 254u sayısından 255u sayısını çıkartıyoruz. Bu durumda 32 bitlik UInt için maksimum değer olan 4294967295 ifadesini elde ediyoruz. 250u - 255u yaparsak 4294967291 sayısını elde ediyoruz. Çıkarma işlemine bağlı olarak bu değerden geriye gidiyoruz.
+
+8 -> Normal sayı aralıklarında bulunan negatif kısmının pozitife eklenmesiyle oluşan sınırlara sahiptir. 1. Soruda örneğini vermiştim.
+    UByte : 0 ile 255
+    UShort : 0 ile 65,535
+    UInt : 0 ile 4,294,967,295
+    ULong : 0 ile 18,446,744,073,709,551,615 arasıdır.
+
+9 -> Java'da işaretsiz sayılar desteklenmediği için bu bazı problemlere yol açabilir. Örneğin işaretsiz sayılarda int aralığı pozitif aralık olarak daha fazladır bunu java'da kullanırsak veri kayıplarına yol açabilir. Bunu çözebilmek için işaretsiz sayıyı normal tipli değişkenlere dönüştürebiliriz. Örneğin: 255u.toInt() gibi. Fakat veri kaybının önüne geçmez zor bir durum. Bu durumu kontrol altına almak için sınırlar üzerinden o sayıyı maksimum aralığa çekip kalan kısmını başka bir değişkene atayabiliriz.
+
+------------- Tür Dönüşümü -------------
+
+1 -> is operatörü ile tür kontrolü yaparız. Örneğin elimizde bir değişken var tipi şu mu diye bir kontrol yapmak istiyoruz, işte burada kullanabiliriz. !is ise kontrolü tam tersi şeklinde yapar. Yani bu tip şu değildir diye kontrol ediyoruz.
+
+    val myInt = 50
+    println(myInt is Int) // myInt değişkeni Int tipinde ise true dönecek.
+
+2 -> IDE tarafından bir tip için otomatik dönüştürme işlemidir. Biz tip dönüşümü yapmadan kendisi o tipe dönüşüm yaptırır.
+
+    val x: Number
+    x = 50
+
+    when (x) {
+        is Int -> println("Int")
+        is Short -> println("Short")
+        is Byte -> println("Byte")
+    }
+
+Örneğin bu örnekte x Number tipinde ve int, double, short vs. gibi tiplerdeki sayıları verebiliriz. is ile kontrol yaptırıyoruz. Eğer is bloğu true gelirse onun içindeki blok çalışacak. İçindeki blok çalışırsa şöyle bir durum oluşuyor (Int için konuşuyorum): is Int bloğu içine girdik, demek ki bu değişkenin değeri Int. Ben artık bu değişkeni Int olarak düşünüyorum ve onun fonksiyonlarını onun özelliklerini kullanabilirim. İşte bu smart case'dir
+
+3 -> Casting işlemi için as ve as? operatörlerini kullanabiliriz. Burada as güvensiz, as? güvenlidir diyebiliriz. 
+
+    val myStr = "Omer" as Int
+    println(myStr) // Exception
+
+    val myStr2 = "Omer" as? Int
+    println(myStr2) // null
+
+Birinci örnekte "Omer" ifadesini Int değerine cast etmeye çalışıyoruz ve kesinlikle bu işlemi yap diyoruz. Dönüştürme yapılamadığı için exception oluşacak. İkinci örnekte ise cast işlemini yapmaya çalış eğer olmazsa null değer ata diyoruz.
+
+4 -> Kotlin'de bir değişkene sadece o tipte veri atayabiliriz. Eğer farklı bir tipten değer atayacaksak o atanan değeri atadığımız değerin tipine kendimiz dönüştürmeliyiz. Otomatik bir dönüşüm söz konusu değildir, olası hataları engellemek için bunu kendimiz yaparız.
+
+var myNum = 10
+val myNum2: Long = 20
+myNum = myNum2
+
+Üstteki örnekteki gibi bir kullanım yapamayız. myNum2 değişkenini integer'a çevirmeliyiz. myNum = myNum2.toInt() şeklinde kullanabiliriz. Bu her durumda böyle olmayabiliyor. Örneğin bir fonksiyon parametresinde Short tipinde bir değer istendiğinde biz 20 gibi bir değer yazdığımızda (default olarak integer oluyordu) ve bunu toShort ile short'a dönüştürmesek bile otomatik olarak short tipine dönüşecektir.
+
+fun main() {
+    calculate(5)
+}
+
+fun calculate(number1: Short) {
+    println(number1.javaClass)
+}
+
+Bu şekilde bir kullanım yaparsak 5 aslında bir Int sayıdır fakat print ifadesi bize Short döner, otomatik dönüştürme buralarda olabiliyor.
+
+5 -> Buradaki kodları run edemeyiz, 4.soruda belirttiğim gibi açıkça dönüşüm yapmamız gerekiyor. Int bir değer içine byte bir değer atıyoruz. Burada type mismatch hatası alırız. Aynı şekilde print ifadesinde de iki tipi aynı türe çevirip kontrol ettirmeliyiz. Doğru kullanımı şu şekil olabilir:
+
+    val b: Byte = 1
+    val i: Int = b.toInt()
+    print(b == i.toByte())
+
+son satırdaki ifadeyi şu şekilde de yapabiliriz, print(b.toInt() == i). Yeter ki aynı türden olsunlar.
+
+6 -> 5.Soruda cevabı verildi. Print satırı hata verecektir çünkü aynı türden verileri kıyaslamıyoruz.
+
+7 -> Sayısal değerleri birbirine dönüştürebiliriz. Burada dikkat etmememiz gereken şey dönüştüreceğimiz tip kendi sayı aralığında kalıyor mu, kalmıyor mu? Eğer o aralık dışına çıkıyorsa o dönüşüme IDE izin verir fakat hatalı sonuç alırız. Örneğin:
+
+    val myNum: Short = 128
+    println(myNum.toByte())
+
+burada 128 değeri short bir ifade ve ben bunu byte'a dönüştürmek istiyorum. IDE izin verir, run edebiliriz fakat çıktı yanlıştır. Şu an -128 olarak bir çıktı aldım.
+Bunların dışında sayısal değerleri birbirine dönüştürmek için kullanılabilecek fonksiyonlar: toByte(), toShort(), toInt(), toLong(), toDouble(), toFloat() ve to Char(). Bu arada toChar() fonksiyonu deprecated olmuş. toInt().toChar() şeklinde kullanım öneriliyor.
+
+8 -> val result = 1L + 3 ifadesinin değeri Long olur. Bu tarz işlemlerde kullanılan değişkenlerden sayı aralığı olarak büyük olan tip ne ise sonuçta onun tipini alır. Tabii ki bazı istisnaları vardır. Örneğin Short ve Byte tipli bir değişkeni topladığımızda değeri Int olacaktır.
+
+    val myNum1: Short = 200
+    val myNum2: Byte = 100
+    val result = myNum1 + myNum2 // result int tipindedir.
+
+9 -> val result = Int.MAX_VALUE + Int.MAX_VALUE ifadesinde integer için bir overflow oluşma durumu vardır. Buradaki çıktı -2 olacaktır. Çıktının mantığı şudur: Eğer ki overflow durumu var ise bu sayı en soldaki yani en küçük değerinden başlayarak bize sonuç üretmeye başlıyor. Eğer Int.MAX_VALUE + 1 ifadesini yazdıracak olursak bu -2147483648 ifadesini verir. Yani integer sayı aralığındaki en küçük aralık. 1 değerini artırdıkça bu sayı da büyümeye yani sağ tarafa doğru kaymaya devam edecektir.
+
+10 ->   val x = 5 / 2 println(x == 2) ifadesinden true döner. Int sayıları böldüğümüzde kayan kısım dikkate alınmaz. 3.99 gibi bir sayıyı integer'a çevirdiğimizde 3 değerini alırız. Üstte de 2.5 değerini elde ederiz fakat integer değeri 2 olur. Aksini belirtmediğimiz sürece değer int aralığında kalıyorsa değeri integerdı o yüzden dolayı int tipini alıyoruz.
+
+11 -> val x = 5L / 2 println(x == 2L) Burada da ifademiz long olacaktır. 4 işlem yaptığımızda büyük olan tip ne ise ve o aralık içinde kalıyorsa o tipi alacağını söylemiştim. Integer gibi long ifadede de noktadan sonraki haneler dikkate alınmaz. Sonuç 2L ifadesine eşittir.
+
+12 -> val x = 5 / 2.toDouble() println(x == 2.5) Burada da sonuç Double tipinde çıkacaktır. Ondalık sayı gösterimine sahip tipler diğer number tiplerine göre daha baskındır. İşleme girdiğinde o tipe dönüşecektir. Burada double ifadesi olduğu için sonuç 2.5 çıkacaktır.
+
+13 -> TypeCastExcepiton hatasını almamak için güvenli cast operatörünü as? kullanmalıyız. Bunun bir alternatifi toTypeOrNull fonksiyonu kullanılabilir eğer dönüşüm yapılamazsa null ifade atanır. Bu fonksiyondaki Type yerine dönüştürmek istediğimiz tip yazılır, örneğin: "123".toIntOrNull(). Bir diğer yol olarak try catch yapısını kullanabiliriz. Eğer exception meydana gelirse değere null değer atayabiliriz ya da başka bir işlem yaptırabiliriz. Son olarak smart casting'den yararlanabiliriz. Eğer dönüşüm yapılabiliyorsa IDE zaten bunu bizim için yapar ve kodlarımız çalışır.
