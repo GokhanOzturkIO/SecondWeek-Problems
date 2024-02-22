@@ -72,6 +72,9 @@ Cevap : Nothing? dediğimiz bir değişken tipi olarak tanımlar.
 - Nullable bir değişkenin bir değere sahip olması ile null olması arasında bellek yönetimi açısından nasıl bir fark vardır? Null değer almış bir değişken bellekte yer kaplamaz diyebilir miyiz?
 - Nullable bir değişkenle çalışırken hangi operatörleri kullanırız? Bu operatörlerin kullanım farkları nelerdir? Hangisini ne zaman kullanmak daha anlamlıdır?
 
+Cevap : `?.` veya `!!.` operatörlerini kullanabiliriz. `?.` kullanımını kullanırken yaptığımız iş kodda null varsa çalıştırma fakat hata da verme. `!!.` kullanımıda ise eğer null içeriyorsa excption hatası al ve uygulamayı çökert diyoruz.
+
+
 ### Sayılar
 - Kaç farklı tipte "number" sınıfı miras alan "alt sınıf" (child class) vardır? Bunların değer aralıkları neden önemlidir?
 - Eğer bir değişkene tip belirtimi yapılmaz ve bir değer atanırsa, Kotlin tip çıkarımını nasıl yapar?
