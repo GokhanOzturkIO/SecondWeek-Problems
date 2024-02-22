@@ -70,3 +70,6 @@ Kotlin'de Octal değişkenler tanımlanamaz.
 
 9."Geleneksel Notasyon" (Conventional Notation) gösterimi nasıl yapılır?
 -Conventional Notation matematiksel ifadeleri veya aritmetik işlemleri ifade etmek için kullanılan bir notasyondur. Operatörler ve operandolar tipik olarak birbirinin yanında ve öncelik sırası ve işlem önceliğine göre belirtilir.
+
+10.Sayısal değişkenlerde alt çizgi (underscore) nasıl kullanılır? Kotlin bunu nasıl yorumlar?
+-Sayısal değişkenlerde alt çizgi büyük basamaklı sayının okunabilirliğini artırmak için kullanılır. Kotlin bunu görmezden gelerek sayının tamamını düzgün bir şekilde alır.
