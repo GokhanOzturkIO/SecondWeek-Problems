@@ -54,3 +54,6 @@ SAYILAR
 
 5.Double ve Float değişkenlerle çalışırken ondalık ayıracı olarak hangi işaretler kullanılır? Bu ayıraçların kullanımında nelere dikkat etmek gerekir?
 Ondalık sayıları yazarken ayıraç olarak nokta (.) ve virgül (,) kullanılır ama kotlin'de ondalık sayıları yazarken (.) kullanılır, virgül (,) kullanılmadığı için başka dillerle etkileşimde bulunurken veya kullanıcı girdilerini alırken bu durum mutlaka kontrol edilmelidir.
+
+6.Double ve Float değişkenler ondalık kısımda kaç basamağa kadar işlem yaparlar? Bu sınırın üzerinde gelen ondalık bilgileri için nasıl davranırlar? Hangi durumlar için Float ve hangi durumlar için Double kullanılmalıdır?
+-Double  değişkenler genellikle 15 haneli basamaklara kadar işlem yaparlar. Float değişkenler, genellikle 7 haneli basamaklara kadar işlem yaparlar.Bu sınırın üzerinde gelen ondalık bilgileri genellikle kaybederler veya yuvarlarlar. Daha düşük bellek kullanımı ve daha hızlı işlem için Float, yüksek hassasiyet ve daha az yuvarlama hatası için Double kullanılmalıdır.
