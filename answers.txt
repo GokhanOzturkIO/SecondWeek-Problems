@@ -52,3 +52,5 @@ SAYILAR
 -Single Precision (float) floating point sayıları temsil eder. Bellekte 4 byte yer kaplar. Single Precision 1 Sign bit, 8 exponent bit ve 23 mantissa bit olmak üzere 32 bit alan kaplar.
 -Double Precision (double)  floating point sayıları. Bellekte 8 byte yer kaplar.  Double precision 1 sign bit, 11 exponent bit, 52 mantissa bit olmak üzere 64 alan yer kaplar.
 
+5.Double ve Float değişkenlerle çalışırken ondalık ayıracı olarak hangi işaretler kullanılır? Bu ayıraçların kullanımında nelere dikkat etmek gerekir?
+Ondalık sayıları yazarken ayıraç olarak nokta (.) ve virgül (,) kullanılır ama kotlin'de ondalık sayıları yazarken (.) kullanılır, virgül (,) kullanılmadığı için başka dillerle etkileşimde bulunurken veya kullanıcı girdilerini alırken bu durum mutlaka kontrol edilmelidir.
