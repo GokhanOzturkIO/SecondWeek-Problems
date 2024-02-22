@@ -398,6 +398,13 @@ olmaktır. Örneğin küçük bir tamsayı türünün büyük bir tamsayı tür�
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+5- "`val b: Byte = 1` ile `val i: Int = b` ve son olarak `print(b == i)` gibi bir kod yazıldığında çıktı ne olur? Neden böyle bir çıktı aldığınızı açıklayın.
+
+Kotlinde örtük tip dönüşümü yapılmadığından ötürü "b" değerini "i" değişkenine atayamayız. Bunu yapmaya çalıştığımızda henüz derleme yapmadan ide bize şu hatayı verir,
+"Type mismatch: inferred type is Byte but Int was expected". Ayrıca yine tipler uyumsuz olduğu için "Operator '==' cannot be applied to 'Byte' and 'Int'" hatasını da alırız.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 
 
 
