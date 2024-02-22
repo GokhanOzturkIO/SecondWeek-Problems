@@ -81,6 +81,9 @@ Cevap : `?.` veya `!!.` operatörlerini kullanabiliriz. `?.` kullanımını kull
 Cevap : Number sınıfını miras alan byte,short,int,float olmak üzere 5 alt sınıf vardır. Bunların kapladıkları alan(bit sayısı) farklıdır ve duruma uygun belirtilmelidir.
 
 - Eğer bir değişkene tip belirtimi yapılmaz ve bir değer atanırsa, Kotlin tip çıkarımını nasıl yapar?
+
+Cevap : Integer aralığında ise integer,integer değer aralığını aşarsa Long yapar. Ondalıklı sayılarda ise otomatik olarak Double yapar.
+
 - Float değişken oluştururken `F` ve `f` harfleri varken, Long değişken oluştururken neden küçük `l` harfi yoktur?
 - Tek duyarlıklı (Single precision) ve Çift duyarlıklı (Double precision) kavramlarını açıklayın.
 - Double ve Float değişkenlerle çalışırken ondalık ayıracı olarak hangi işaretler kullanılır? Bu ayıraçların kullanımında nelere dikkat etmek gerekir?
