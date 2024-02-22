@@ -350,5 +350,12 @@ ULong = 0-18,446,744,073,709,551,615 (2^64 - 1)
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+9- "İşaretsiz" değişken türleri (UInt, ULong vs.) kullanırken, Java API'leri ile uyumluluk konusunda ne gibi sorunlar olabilir? Bunları çözmek için neler yapabilirsiniz?
+
+Java'da birçok API, işaretli değişkenlerle çalışır ve işaretsiz değişkenleri doğrudan kabul etmez. Bu durumda Kotlin'de işaretsiz değişkenleri kullanmak uyumluluk
+sorunlarına yol açabilir. Buna çözüm olarak işaretsiz değişkenleri kullanmamak veya işaretsiz değişkenleri işaretli değişkenlere dönüştürme yöntemleri kullanılabilir.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 
 
