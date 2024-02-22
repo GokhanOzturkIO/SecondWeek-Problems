@@ -108,3 +108,10 @@ Answer 12:
     val x = 5 / 2.toDouble() println(x == 2.5) Burada bölme işleminin alt veya üstündeki verinin
     herhangi biri Double olduğu zaman artık IDE bu x değerini double olarak eşliyor. Bu durumda
     println içerisindeki ifade 2.5 a eşit olduğu için daima true dönecektir.
+
+Answer 13:
+    Bu tip durumlar için güvenli dönüşüm operatörleri bulunmakta.Örneğin int e dönüşüm yapılacaksa
+    toInt yerine toIntOrNull() şeklinde exception almak yerine null dönmesini sağlayacaktır. Bir başka
+    örneği toDoubleOrNull() şeklindedir. Bunlar dışında as yerine as? şeklinde bir dönüşüm yapılırsa
+    da hata almak yerine null dönmesi sağlanabilmekte. İlla bunların hiçbirini kullanmadan yapılacaksa
+    try catch blokları ile hata yakalayıp ona göre bir değişiklik yaptırarak Exceptionu handle edebiliriz.
