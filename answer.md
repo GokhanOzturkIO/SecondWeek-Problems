@@ -77,6 +77,9 @@ Cevap : `?.` veya `!!.` operatörlerini kullanabiliriz. `?.` kullanımını kull
 
 ### Sayılar
 - Kaç farklı tipte "number" sınıfı miras alan "alt sınıf" (child class) vardır? Bunların değer aralıkları neden önemlidir?
+
+Cevap : Number sınıfını miras alan byte,short,int,float olmak üzere 5 alt sınıf vardır. Bunların kapladıkları alan(bit sayısı) farklıdır ve duruma uygun belirtilmelidir.
+
 - Eğer bir değişkene tip belirtimi yapılmaz ve bir değer atanırsa, Kotlin tip çıkarımını nasıl yapar?
 - Float değişken oluştururken `F` ve `f` harfleri varken, Long değişken oluştururken neden küçük `l` harfi yoktur?
 - Tek duyarlıklı (Single precision) ve Çift duyarlıklı (Double precision) kavramlarını açıklayın.
