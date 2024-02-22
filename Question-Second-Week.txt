@@ -237,3 +237,6 @@ Tüm sayısal değişkenlerin önüne 'to' koyarsak hepsini kullanabiliriz. Önr
 
 46-> "val result = 1L + 3" // "Long + Int" gibi bir işlemin sonucunda "result" değişkeninin tipi ve değeri ne olur? Neden böyle olduğunu açıklayın.
 Tip dönüşümün belirttiğimiz için long olur. Değeri de işlemi toplar yani değer: 4
+
+47-> "val result = Int.MAX_VALUE + Int.MAX_VALUE" gibi bir işlemin sonucunda "result" değişkeninin tipi ve değeri ne olur? Neden böyle olduğunu açıklayın.
+Bunun cevabı -2 dir değişkenin tipi Int olur.Sebebi şudur 32-bitlik yeri aştığından dolayı overflow durumu söz konusu olur.32-bit işaretsiz tamsayı sınırları içinde bir değeri temsil etmektedir.
