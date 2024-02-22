@@ -4,6 +4,22 @@ Answer 1:
     is:Genel olarak tür kontrolü yaparken if veya when gibi yapılarda kullanılır. örneğin a is String
     dediğimizde a nın String olup olmadığı kontrol edilip ona göre değer döner. Doğru ise if
     içerisinde girer ve artık a string olduğu için lenght özelliğine erişebiliriz.
+
     !is: is operatörünün tam tersi olarak a !is String şeklinde kullanılıyor. burada da a string
     değil midir diye kontrol eder. Eğer String değilse if içerisine girecektir.
+
+Answer 2:
+    Akıllı Dönüşüm(Smart Cast): Bir verinin tipini belirtmediğimizde, daha sonra bu verinin tipini
+    kontrol ettikten sonra o verinin otomatik o türe dönüştürülmesini sağlar.
+
+    Örneğin:
+
+    val a=21
+
+    if(a is String) println(a.length) // string ise length özelliği kullanılabilir. kontrol ettiğimiz
+                                      //için artık zaten o string e dönüşmüştür.
+
+    if(a is Int) println(a*10) // int mi kontrolünü yaptıktan sonra eğer int ise zaten çarpım gibi
+                               //işlemleri yapabiliriz. Int e dönüşmüş olur.
+
 
