@@ -177,3 +177,4 @@ BigInteger ve BigDecimal sınıflarının sınırları, bellek ve işlemci güc�
 
 1 -> İşaretsiz değişkenler sadece pozitif değer aralığında sayılara sahip olan değişkenlerdir. Örneğin byte aralığı -128 ve 127 arasındadır. UByte aralığı ise 0 ile 255 aralığındadır. Negatif aralığı pozitif aralığa itiyormuşuz gibi düşünebiliriz.
 
+2 -> İşaretsiz değişkenler arka planda value classlar olarak tanımlanmıştır. Normal sınıflar referans tipli şekilde bellekte yer kaplar fakat value classlar primitive tip gibi bellekte yer tutar. Arka planda constructorları private şeklidedir bu yüzden nesne üretemeyiz gibi gözükür fakat nesne oluşturma yazımını yaptıktan sonra primitive bir tip gibi kullanabiliriz. Primitive tip gibi kullanılmasından dolayı çok daha performanslı ve daha az maliyetlidir.
