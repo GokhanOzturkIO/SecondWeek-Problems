@@ -246,3 +246,6 @@ Tipi otomatik olarak Int olur değeri iste True olarak döner.Sebebi Şudur 5/2 
 
 49-> "val x = 5L / 2 println(x == 2L)" gibi bir işlemin sonucu ve tipi nedir? Neden böyle olduğunu açıklayın.
 Yine yukarıdaki sorularda dediğim gibi Tipi verildiği için değişkende Tipi Long olur Değeri de değişmez bize true döndürür.
+
+50-> "val x = 5 / 2.toDouble() println(x == 2.5)" gibi bir işlemin sonucu ve tipi nedir? Neden böyle olduğunu açıklayın.
+Burada true sonucunu alırız ve değerimiz Double değerinde olur.Çünkü double olduğunu açık Dönüşüm yaptık.
