@@ -172,3 +172,8 @@ BigDecimal: Büyük ondalıklı sayılar için kullanılır. BigDecimal sınıf�
 BigInteger ve BigDecimal sınıflarının sınırları, bellek ve işlemci gücüyle sınırlıdır. Bellek ve işlemci kapasiteniz ne kadar büyükse, temsil edebileceğiniz sayılar da o kadar büyük olabilir.
 
 17 -> Double ve Float veri tiplerinde, sayılar bilgisayarın sınırlı hassasiyeti nedeniyle tam olarak temsil edilemeyebilir. Bu nedenle, bazı durumlarda sayılar yuvarlanabilir. Yuvarlama davranışı, IEEE 754 standardı tarafından tanımlanan bir dizi kurala göre belirlenir. Bu standarta göre, sayılar en yakın değere yuvarlanabilir, yukarı veya aşağı yuvarlanabilir veya sıfıra yuvarlanabilir. Ancak, Kotlin veya Java gibi dillerde, yuvarlama davranışını değiştirmek için doğrudan bir seçenek bulunmamaktadır. Bu durumu 4.cevapta biraz görmüştük.
+
+------------- İşaretsiz Sayılar -------------
+
+1 -> İşaretsiz değişkenler sadece pozitif değer aralığında sayılara sahip olan değişkenlerdir. Örneğin byte aralığı -128 ve 127 arasındadır. UByte aralığı ise 0 ile 255 aralığındadır. Negatif aralığı pozitif aralığa itiyormuşuz gibi düşünebiliriz.
+
