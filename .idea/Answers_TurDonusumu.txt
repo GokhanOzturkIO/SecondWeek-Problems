@@ -78,3 +78,7 @@ Answer 6:
 
 Answer 7:
     toInt(), toDouble(), toFloat(), toLong(), toByte(), toShort() fonksiyonları ile açık dönüşüm yapılabilir.
+
+Answer 8:
+    val result = 1L+3 dediğimizde IDE bu değişkenin tipini otomatik olarak Long yapıyor. çünkü
+    alabileceği en küçük değer aralığı Long içerdiği için Long a eşleyecektir.
