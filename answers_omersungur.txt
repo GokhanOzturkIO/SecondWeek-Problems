@@ -227,3 +227,20 @@ BigInteger ve BigDecimal sınıflarının sınırları, bellek ve işlemci güc�
 
 Birinci örnekte "Omer" ifadesini Int değerine cast etmeye çalışıyoruz ve kesinlikle bu işlemi yap diyoruz. Dönüştürme yapılamadığı için exception oluşacak. İkinci örnekte ise cast işlemini yapmaya çalış eğer olmazsa null değer ata diyoruz.
 
+4 -> Kotlin'de bir değişkene sadece o tipte veri atayabiliriz. Eğer farklı bir tipten değer atayacaksak o atanan değeri atadığımız değerin tipine kendimiz dönüştürmeliyiz. Otomatik bir dönüşüm söz konusu değildir, olası hataları engellemek için bunu kendimiz yaparız.
+
+var myNum = 10
+val myNum2: Long = 20
+myNum = myNum2
+
+Üstteki örnekteki gibi bir kullanım yapamayız. myNum2 değişkenini integer'a çevirmeliyiz. myNum = myNum2.toInt() şeklinde kullanabiliriz. Bu her durumda böyle olmayabiliyor. Örneğin bir fonksiyon parametresinde Short tipinde bir değer istendiğinde biz 20 gibi bir değer yazdığımızda (default olarak integer oluyordu) ve bunu toShort ile short'a dönüştürmesek bile otomatik olarak short tipine dönüşecektir.
+
+fun main() {
+    calculate(5)
+}
+
+fun calculate(number1: Short) {
+    println(number1.javaClass)
+}
+
+Bu şekilde bir kullanım yaparsak 5 aslında bir Int sayıdır fakat print ifadesi bize Short döner, otomatik dönüştürme buralarda olabiliyor.
