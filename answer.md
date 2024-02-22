@@ -44,6 +44,13 @@ Cevap : Type inference kavramı bir kodu yazarken o kodun hangi değişken tür�
 Cevap : Kotlin'de her şey class'dır. Fakat Kotlin'de olan optimizasyonlarla beraber sankş primitive'miş gibi davranır. Unutulmaması gereken bir husus da nullable yapılırsa bu değişkenin class olacağı
 
 - "Tip Güvenliği" (Type Safety) kavramını açıklayın.
+
+Cevap :Type Safety kavramı oluşturduğumuz bir değişkene başka türde bir değişken atayamama durumudur.
+Örnek : `var a = 10` ifadesini yazdıktan sonra `a = "string"` yaparsak hata alırız.
+
+Not : Double ve Integer toplamında da benzer bir durum bekleyebiliriz fakat bu şekilde yapıldığında herhangi bir hata alınmadı. Double sonucu verdi IDE. 
+(Gemini aynı görüşte değil.) (ChatGPT bizimle aynı görüşte.)
+
 - Bir değişkeni nullable yapmak için ne yapmalıyız?
 - "Null Güvenliği" (Null Safety) kavramını açıklayın.
 - Bir değişkene null değer atanır ve tip belirtilmezse Kotlin bu değişkeni nasıl yorumlar?
