@@ -274,3 +274,5 @@ Bunların dışında sayısal değerleri birbirine dönüştürmek için kullan�
 10 ->   val x = 5 / 2 println(x == 2) ifadesinden true döner. Int sayıları böldüğümüzde kayan kısım dikkate alınmaz. 3.99 gibi bir sayıyı integer'a çevirdiğimizde 3 değerini alırız. Üstte de 2.5 değerini elde ederiz fakat integer değeri 2 olur. Aksini belirtmediğimiz sürece değer int aralığında kalıyorsa değeri integerdı o yüzden dolayı int tipini alıyoruz.
 
 11 -> val x = 5L / 2 println(x == 2L) Burada da ifademiz long olacaktır. 4 işlem yaptığımızda büyük olan tip ne ise ve o aralık içinde kalıyorsa o tipi alacağını söylemiştim. Integer gibi long ifadede de noktadan sonraki haneler dikkate alınmaz. Sonuç 2L ifadesine eşittir.
+
+12 -> val x = 5 / 2.toDouble() println(x == 2.5) Burada da sonuç Double tipinde çıkacaktır. Ondalık sayı gösterimine sahip tipler diğer number tiplerine göre daha baskındır. İşleme girdiğinde o tipe dönüşecektir. Burada double ifadesi olduğu için sonuç 2.5 çıkacaktır.
