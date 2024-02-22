@@ -268,3 +268,5 @@ Bunların dışında sayısal değerleri birbirine dönüştürmek için kullan�
     val myNum1: Short = 200
     val myNum2: Byte = 100
     val result = myNum1 + myNum2 // result int tipindedir.
+
+9 -> val result = Int.MAX_VALUE + Int.MAX_VALUE ifadesinde integer için bir overflow oluşma durumu vardır. Buradaki çıktı -2 olacaktır. Çıktının mantığı şudur: Eğer ki overflow durumu var ise bu sayı en soldaki yani en küçük değerinden başlayarak bize sonuç üretmeye başlıyor. Eğer Int.MAX_VALUE + 1 ifadesini yazdıracak olursak bu -2147483648 ifadesini verir. Yani integer sayı aralığındaki en küçük aralık. 1 değerini artırdıkça bu sayı da büyümeye yani sağ tarafa doğru kaymaya devam edecektir.
