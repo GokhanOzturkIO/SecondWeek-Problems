@@ -293,3 +293,12 @@ Signed (İşaretli) değişkenler örneğin signed integers hem pozitif hem de n
 sayıları temsil edebilir.
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+2- "İşaretsiz" değişkenler nasıl bir sınıf yapısında tutulurlar? Bu neden önemlidir?
+
+İşaretsiz değişkenler kendilerine özel sınıflarda tutulurlar. Örneğin "UInt","UShort" gibi kendilerine özel classlara sahiptirler. Farklı classlarda tutulmalarına
+rağmen ramde ayrılan yer işaretli değişkenlerle aynıdır.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
