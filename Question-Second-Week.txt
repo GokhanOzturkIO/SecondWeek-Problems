@@ -231,3 +231,8 @@ Burdada aynı hatayı alırız ama bunun çözümü şu şekildedir.
 val b: Byte = 1
 val i: Int = b.toInt()
 print(b.toInt() == i)
+
+45-> Sayısal değişkenlerde açık dönüşüm (Explicit Type Conversion) yaparken hangi fonksiyonları kullanabilirsiniz?
+Tüm sayısal değişkenlerin önüne 'to' koyarsak hepsini kullanabiliriz. Önreğin: toLong, toInt, toByte
+
+46-> 
