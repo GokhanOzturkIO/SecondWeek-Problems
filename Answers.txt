@@ -307,4 +307,12 @@ rağmen ramde ayrılan yer işaretli değişkenlerle aynıdır.
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+4- "`val a1 = 42u` ve `val a2 = 0xFFFF_FFFF_FFFFu`" değişkenlerin tipleri ne olur? Neden?
+
+a1 isminde tanımlanan ifade işaretsiz bir int değerini temsil eder, yani "UInt" tipindedir ve 32 bitlik bir tam sayıyı ifade eder. Ancak a2 isminde tanımlanan değişken
+işaretsiz bir long değerini temsil eder, yani "ULong" tipindedir ve 64 bitlik bir bir sayıyı temsil eder. Bu farklılığın olma sebebi ise tamamen atanan değerler ile
+alakalıdır.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 
