@@ -280,6 +280,11 @@ Java işaretsiz değişken tiplerini desteklemez. Çözmek için UInt değişken
 
 ===========================
 
+37-) is ve !is operatörlerinin kullanımını açıklayın.
+
+is, belirtilen türde olup olmadığını kontrol ederken !is operatörü ise tam tersi işlemi yapar.
+
+===========================
 
 
 
