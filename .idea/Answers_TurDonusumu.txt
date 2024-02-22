@@ -60,3 +60,18 @@ Answer 5:
     Alacağımız ikinci hata ise şudur:  Operator '==' cannot be applied to 'Byte' and 'Int'
         YANİ: == operatörü ile birbirinden farklı olan Int ve Byte tiplerini karşılaştıramazsın.(gibi)
     Özetle bu kod baştan fail veriyor.
+
+
+Answer 6:
+
+    val x:Byte=1
+    val y:Int=x.toInt()
+    println(x==y)
+
+    Şeklinde bir kod yazdığımızda aynı şekilde run etmeden IDE bize kızmaya başlıyor.Burada üstteki
+    örnekten farklı olarak tek bir hata alıyoruz çünkü y değişkenine Byte tipinde bir değişkeni Int e
+    çevirerek atıyoruz, bu da probleme sebep olmayacaktır.
+
+    Çalıştırınca alacağımız hata şudur:Operator '==' cannot be applied to 'Byte' and 'Int'
+        YANİ: == operatörü ile karşılaştırmaya çalıştığın değişkenlerin türleri birbirinden
+        farklı (Byte&Int) Bunu yapamazsın.
