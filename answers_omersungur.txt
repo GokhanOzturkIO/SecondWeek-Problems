@@ -186,3 +186,5 @@ BigInteger ve BigDecimal sınıflarının sınırları, bellek ve işlemci güc�
 5 -> Sayının sonuna uL veya UL ifadesini getirerek yapabiliriz.
 
 6 -> Eğerki negatif sayıları kullanmak anlamsız bir senaryo oluşturuyorsa veya negatif değerlerden ziyade pozitif değer aralığını daha da genişletmek istiyorsak aynı zamanda bir üst tipe geçiş yapmak istemiyorsak kullanabiliriz.
+
+7 -> Eğerki sınırlar dışında bir ifade oluşursa IDE bizi uyarır ve kodu run etmemizi engeller. Örneğin 2 adet UByte olsun elimizde birisi 250 diğeri 6 değerine sahip olsun. Bunları topladığımızda çıkan sonucu başka değere atalım. Artık o değişken UByte tipinde olamaz. Yazsak bile run edemeyiz, IDE hata gösterir.
