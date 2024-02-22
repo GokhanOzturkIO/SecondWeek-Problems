@@ -262,3 +262,9 @@ son satırdaki ifadeyi şu şekilde de yapabiliriz, print(b.toInt() == i). Yeter
 
 burada 128 değeri short bir ifade ve ben bunu byte'a dönüştürmek istiyorum. IDE izin verir, run edebiliriz fakat çıktı yanlıştır. Şu an -128 olarak bir çıktı aldım.
 Bunların dışında sayısal değerleri birbirine dönüştürmek için kullanılabilecek fonksiyonlar: toByte(), toShort(), toInt(), toLong(), toDouble(), toFloat() ve to Char(). Bu arada toChar() fonksiyonu deprecated olmuş. toInt().toChar() şeklinde kullanım öneriliyor.
+
+8 -> val result = 1L + 3 ifadesinin değeri Long olur. Bu tarz işlemlerde kullanılan değişkenlerden sayı aralığı olarak büyük olan tip ne ise sonuçta onun tipini alır. Tabii ki bazı istisnaları vardır. Örneğin Short ve Byte tipli bir değişkeni topladığımızda değeri Int olacaktır.
+
+    val myNum1: Short = 200
+    val myNum2: Byte = 100
+    val result = myNum1 + myNum2 // result int tipindedir.
