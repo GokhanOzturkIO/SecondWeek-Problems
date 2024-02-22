@@ -63,3 +63,7 @@ Değişken şeklinde tanımlama yapabiliriz.
 val decimal =1903
 val hexadecimal =0x759
 val binari =0b0100011 
+
+8.Sekizlik (Octal) değişkenler Java'da nasıl tanımlanır? Kotlin'de Sekizlik değişken tanımlanabilir mi?
+Java'da Octal değişkenler 0 rakamıyla başlayan şekilde tanımlanır, Bunun ardından 0 ile 7 arasında rakamlar içerebilir. int octal= 075
+Kotlin'de Octal değişkenler tanımlanamaz.
