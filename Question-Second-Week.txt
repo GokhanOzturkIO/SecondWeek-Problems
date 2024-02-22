@@ -210,3 +210,7 @@ Tür Dönüşümü
 
 39-> is ve !is operatörlerinin kullanımını açıklayın.
 is anahtarı, bir nesnenin belirli bir tipe ait olup olmadığını kontrol etmek için kullanılır. !is ise nesnenin belirli bir türden olup olmadığını kontrol eder.
+
+40-> "Akıllı Dönüşüm" (Smart Cast) ne demektir? Farklı kod örnekleri ile açıklayın. Bu özelliğin sınırlamaları nelerdir?
+Smart cast belirli bir türde değişken olup olmadığını kontrol ettikten sonra o değişkeni otomatik olarak başka bir değişken türüne dönüştürmeyi sağlar.
+
