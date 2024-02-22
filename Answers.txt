@@ -381,6 +381,14 @@ Smart cast işlemi için sınırlamalar ise var değişkenlerde kullanılamıyor
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+3- "Güvenli & Güvensiz" operatörler nelerdir?
+
+Kotlinde güvenli ve güvensiz operatörler, null güvenliğini sağlamak için kullanılan operatörlerdir. Güvenli operatör ("?.") : Bu operatör, bir nesnenin null olup olmadığını
+kontrol eder ve nesne null ise çağrının gerçekleştirilmesini engeller, örnek kullanım "val length = str?.length". Güvenli dönüşüm operatörü ("as?") : Bu operatör, belirli
+bir türde bir dönüşüm yapmayı dener, eğer dönüşüm başarılı ise, sonuç belirtilen türde bir nesne olur; ancak eğer sonuç başarısız ise sonuç null olur. Bu operatör "ClassCastException" hatalarını önlemek için kullanılır, örnek kullanım "val strLength: Int? = str as? String". Bu örnekte, str değişkeni bir String türüne dönüştürülmeye çalışılır. Eğer str bir String ise, strLength değişkenine str değişkeni atanır; eğer str bir String değilse, strLength null olur.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 
 
 
