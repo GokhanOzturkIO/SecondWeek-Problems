@@ -82,3 +82,11 @@ Answer 7:
 Answer 8:
     val result = 1L+3 dediğimizde IDE bu değişkenin tipini otomatik olarak Long yapıyor. çünkü
     alabileceği en küçük değer aralığı Long içerdiği için Long a eşleyecektir.
+
+Answer 9:
+    val result = Int.MAX_VALUE + Int.MAX_VALUE dediğimizde IDE result değişkenine eşlenen değerlerin
+    iki tane int değerin toplamı olduğunu görerek Int e eşleyecektir. Evet Int in max değerleri yani
+    toplandığında Long olması lazım fakat IDE her toplama gibi işlemlerde bunun değeri aralığı geçecek
+    mi geçmeyecekmi kontrolü yapması her seferinde yapacağı anlamına gelir. Böyle olduğu zaman ek iş
+    yüklenmiş oluyor.Daha yavaş derleme çalışma problemleri çıkabilir. Zaten bu tip işlemler çok sık
+    kullanılmadığı için istisnalarda kendimiz bunu kontrol ettirebiliriz.
