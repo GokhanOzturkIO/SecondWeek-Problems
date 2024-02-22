@@ -1,0 +1,53 @@
+##Sayılar##
+
+Answer 1:
+    Integer,Long,Float,Double,Short,Byte.
+    Değer aralıkları, sayısal tiplerin tutabileceği maksimum ve minimum değerler belirli veri türüne
+    bağlı olduğu için önemlidir. Programın hesaplama ihtiyaçları için uygun olanlarını kullanmak
+    önemlidir.
+
+Answer 2:
+    Tipini belirtmeden bir değer atanırsa, o değer için en uygun aralığa IDE karar vererek
+    eşleyecektir.(type inference) Örneğin, verilen değer byte'a da uyuyor olsa bile kotlin bu konuda
+    olabilecek hataları ön görerek yine de onu int olarak atayacaktır.
+
+Answer 3:
+    Çünkü bazı fontlarda 'l' ile '1' çok benzer göründüğü için karışıklığı önleme amacı ile 'l'
+    kullanılmamaktadır.
+
+Answer 4-10 arası soruların cevaplarını direkt araştırıp yazmak istemedim. Biraz daha kafamda
+oturttuğum zaman güncelleyeceğim.
+
+Answer 11:
+    == ile değişkenlerin içerisindeki değeri karşılaştırıyoruz.
+    === ile değişkenlerin referansını karşılaştırıyoruz.
+
+Answer 12:
+    Verdiğimiz değerler -128/+127 aralığında ise referans kontrolü yaparken aynı nesnelere denk gelecekler.
+    Fakat bu aralığın üzerinde ise referans kontrolü yaparken farklı nesnelere denk geleceklerdir. Bu yüzden
+    byte değer aralığı önemlidir.
+
+Answer 13:
+    Sayısal değişkenlerde ( +, - , *, /, %) matematiksel operatörler kullanılabilir.
+
+Answer 14:
+    Sayısal değişkenlerde (==, !=, >, >=, <, <=) karşılaştırma operatörleri kullanılabilir.
+
+Answer 15:
+    Bit düzeyinde operatörler ( &, |, ^, ~, <<, >>) bunlardır. sırası ile AND, OR, XOR, NOT,
+    Letf Shift, Right Shift olarak isimlendirilir. Ben bunları isim olarak biliyorum fakat kod
+    yazarken bazılarını kullanmadım. Genellikle veri maskeleme, bit temizlemei bitler arası
+    işlemlerde kullanılıyorlar.
+
+Answer 16:
+    Büyük sayılarla çalışırken long un da yetemediği durumlarda BigInteger ve kassas hesaplamalar
+    için de BigDecimal kullanılır. Bunların sınırları yoktur ama kullanılabilir bellek alanı ile
+    sınırlıdır.
+
+Answer 17:
+    Double ve float ondalıklı sayıları genelde hassas bir şekilde ifade edemezler. Tam olarak
+    temsil edemediği için yuvarlama davranışı ortaya çıkar. Yani değer tam olarak temsil edilemediği
+     için en yakın değerine yuvarlanacaktır. Kotlinde bunu BigDecimal kullanarak çözebiliriz. Ama
+     onu da kullanmazsak bu yuvarlama davranışı dile veya paltorma bağlı olduğu için değiştirilemez.
+
+###İşaretsiz sayılar kısmındaki soruları araştırma yaptıktan sonra cevaplayacağım.

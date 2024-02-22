@@ -1,0 +1,117 @@
+##Tür Dönüşümü
+
+Answer 1:
+    is:Genel olarak tür kontrolü yaparken if veya when gibi yapılarda kullanılır. örneğin a is String
+    dediğimizde a nın String olup olmadığı kontrol edilip ona göre değer döner. Doğru ise if
+    içerisinde girer ve artık a string olduğu için lenght özelliğine erişebiliriz.
+
+    !is: is operatörünün tam tersi olarak a !is String şeklinde kullanılıyor. burada da a string
+    değil midir diye kontrol eder. Eğer String değilse if içerisine girecektir.
+
+Answer 2:
+    Akıllı Dönüşüm(Smart Cast): Bir verinin tipini belirtmediğimizde, daha sonra bu verinin tipini
+    kontrol ettikten sonra o verinin otomatik o türe dönüştürülmesini sağlar.
+
+    Örneğin:
+
+    val a=21
+
+    if(a is String) println(a.length) // string ise length özelliği kullanılabilir. kontrol ettiğimiz
+                                      //için artık zaten o string e dönüşmüştür.
+
+    if(a is Int) println(a*10) // int mi kontrolünü yaptıktan sonra eğer int ise zaten çarpım gibi
+                               //işlemleri yapabiliriz. Int e dönüşmüş olur.
+
+
+Answer 3:
+    Güvenli Tür Dönüşümü:
+        val slm :Any="Selam"
+        val slmString:String? = slm as? String
+        //Güvenli dönüşüm olduğu için null olması durumunda null dönecektir.
+    slm Any tipinde olduğu için Boş olması durumunu daha iyi kontrol edip hata almamak için as? şeklinde kullanırız.
+
+    Güvensiz Tür Dönüşümü:
+        val slm:Any="Selam"
+        val slmString:String = slm as String
+
+        // Güvensiz dönüşümde as direkt kullanıldığı için null gelme ihtimali
+        düşünülmemiş bir kod parçası, burada null gelirse uygulama hata verir crash olacaktır.
+
+Answer 4:
+    Örtük Tip Genişletme = Bir dilde daha küçük olan veri tipini daha büyük olan veri tipine
+    otomatik olarak dönüştürülmesidir. Örnek olarak Int  değerini Long a atama yaparsak otomatik
+    olarak artık Long olacaktır. Çünkü Long, Int den daha büyüktür.
+
+    Ancak Kotlinde bu yapılamıyor çünkü Kotlin, tür güvenliğine odaklanan bir dildir. ve bu tip
+    otomatik tür dönüştürme işlemlerinin problem çıkarabileceğine inanarak potansiyel alınabilecek
+    hataların önüne geçmeyi amaçlamıştır. Kotlinde dönüşümler açık bir şekilde yapılmalıdır.
+
+Answer 5:
+
+    val a :Byte=1
+    val b:Int =a
+    println(a==b)
+
+    Şeklinde bir kod yazdığımızda henüz daha run etmeden zaten IDE bize burada bir sıkıntı olduğunu
+    belirtiyor. biz yine de run edelim diyerek çalıştırınca,
+    Alacağımız ilk hata şudur:Type mismatch: inferred type is Byte but Int was expected
+        YANİ: b değişkeni için ben Int bekliyorum ama sen bana Byte gönderiyorsun.
+
+    Alacağımız ikinci hata ise şudur:  Operator '==' cannot be applied to 'Byte' and 'Int'
+        YANİ: == operatörü ile birbirinden farklı olan Int ve Byte tiplerini karşılaştıramazsın.(gibi)
+    Özetle bu kod baştan fail veriyor.
+
+
+Answer 6:
+
+    val x:Byte=1
+    val y:Int=x.toInt()
+    println(x==y)
+
+    Şeklinde bir kod yazdığımızda aynı şekilde run etmeden IDE bize kızmaya başlıyor.Burada üstteki
+    örnekten farklı olarak tek bir hata alıyoruz çünkü y değişkenine Byte tipinde bir değişkeni Int e
+    çevirerek atıyoruz, bu da probleme sebep olmayacaktır.
+
+    Çalıştırınca alacağımız hata şudur:Operator '==' cannot be applied to 'Byte' and 'Int'
+        YANİ: == operatörü ile karşılaştırmaya çalıştığın değişkenlerin türleri birbirinden
+        farklı (Byte&Int) Bunu yapamazsın.
+
+Answer 7:
+    toInt(), toDouble(), toFloat(), toLong(), toByte(), toShort() fonksiyonları ile açık dönüşüm yapılabilir.
+
+Answer 8:
+    val result = 1L+3 dediğimizde IDE bu değişkenin tipini otomatik olarak Long yapıyor. çünkü
+    alabileceği en küçük değer aralığı Long içerdiği için Long a eşleyecektir.
+
+Answer 9:
+    val result = Int.MAX_VALUE + Int.MAX_VALUE dediğimizde IDE result değişkenine eşlenen değerlerin
+    iki tane int değerin toplamı olduğunu görerek Int e eşleyecektir. Evet Int in max değerleri yani
+    toplandığında Long olması lazım fakat IDE her toplama gibi işlemlerde bunun değeri aralığı geçecek
+    mi geçmeyecekmi kontrolü yapması her seferinde yapacağı anlamına gelir. Böyle olduğu zaman ek iş
+    yüklenmiş oluyor.Daha yavaş derleme çalışma problemleri çıkabilir. Zaten bu tip işlemler çok sık
+    kullanılmadığı için istisnalarda kendimiz bunu kontrol ettirebiliriz.
+
+Answer 10:
+    val x = 5 / 2  println(x == 2) Burada x in değeri otomatik olarak Int olarak algılanıyor. Int/Int in
+    cevabını otomatik olarak int kullandığımız için üstteki örneklerden yola çıkarak, int ile int çarpımı,
+    bölümü, toplamı gibi işlemlerde ide bunun int değerlerinin taşıp taşmayacağını bilemez. sürekli
+    kontrolü yapılamaz. Yani yapılır ama gereksiz iş yükü. bu nedenle 5/2 nin cevabı 2.5 evet ama burada
+    int olarak algılandığı için yuvarlayarak . dan öncesi alınıyor. yani 2 olacaktır. bu durumda println
+    ifadesinin içerisi her zaman true olacaktır.
+
+Answer 11:
+    Üstteki örneklerle benzer cevaba sahip. Burada 5L/int olması bir şeyi değiştirmeyecektir sonuçta
+    Long olan bir sayıyı bölüyoruz. IDE otomatik olarak Long e eşleme yapacaktır. Bu durumda println
+    ifadesinin içerisi her zaman true olacaktır.
+
+Answer 12:
+    val x = 5 / 2.toDouble() println(x == 2.5) Burada bölme işleminin alt veya üstündeki verinin
+    herhangi biri Double olduğu zaman artık IDE bu x değerini double olarak eşliyor. Bu durumda
+    println içerisindeki ifade 2.5 a eşit olduğu için daima true dönecektir.
+
+Answer 13:
+    Bu tip durumlar için güvenli dönüşüm operatörleri bulunmakta.Örneğin int e dönüşüm yapılacaksa
+    toInt yerine toIntOrNull() şeklinde exception almak yerine null dönmesini sağlayacaktır. Bir başka
+    örneği toDoubleOrNull() şeklindedir. Bunlar dışında as yerine as? şeklinde bir dönüşüm yapılırsa
+    da hata almak yerine null dönmesi sağlanabilmekte. İlla bunların hiçbirini kullanmadan yapılacaksa
+    try catch blokları ile hata yakalayıp ona göre bir değişiklik yaptırarak Exceptionu handle edebiliriz.

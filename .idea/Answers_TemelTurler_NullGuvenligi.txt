@@ -1,0 +1,119 @@
+##Temel Türler & Null Güvenliği
+
+Answer 1:
+    val: yalnızca okunabilir. Bir kere atama yaptıktan sonra tekrar bir atama gerçekleştiremeyiz.
+    var: İstenen yerde atama yaptıktan sonra tekrar atamalar yapılabilir.
+
+Answer 2:
+    var değişkeninin val gibi davranabilmesi için var ın set metoduna erişim belirleyici
+    ekleyebiliriz.
+
+    örnekleyelim:
+        var deneme=10           /// burada deneme normalde tekrar atama yapılabilir oluyor fakat
+            private set         /// private set dediğimiz için set etme işlemi yapılamaz hale geldi.
+
+    *Bunu neden yapmak isteriz ?
+        Projelerde class içerisindeki bir değişkenin sadece kendi class metodları içerisinde set
+        edilip dışarıya karşı val gibi davranarak değiştirilmesini ve kötü amaçla kullanılmasını
+        önleme amacıyla, Encapsulation yapmak için kullanmak isteyebiliriz.
+
+Answer 3:
+   **Değişmez(Immutable): Ne yaparsak yapalım hiçbir şekilde değiştirilemeyen anlamına gelir.
+   **Salt Okunur(Read Only): İçeriği değiştirip set edemezsin fakat içeriğini okuyabilirsin. set
+    etmeden belli yöntemlerle içeriği değişebilen anlamına gelir.
+   **val değişkenler immutable değildir çünkü set edemesek bile val değişkenine atadığımız kısım
+    sabit değil de değeri dışarıdan alıyorsa her seferinde farklı değere sahip olabilir. Bu nedenle
+    val immutable değil read-only dir.
+
+    örnekleyelim:
+        fun deneme(s1:Int,s2:Int){
+            val carpim = s1*s2
+            println(carpim)
+        }
+        üstteki fonksiyonda dışarıdan iki tane int değer alıyor. val olarak tanımlanan carpim
+        değerine de iki sayının çarpımı veriliyor. Dışarıdan gelen değer her değiştiğinde carpim
+        değeri de değişeceği için val immutable'dir diyemiyoruz. val read-only dir.
+
+Answer 4:
+  **Tip çıkarımı(Type inference): Bir değişkene değer ataması yaparken hangi türde olduğunu
+    belirtmediğimizde, atama yaptığımız değere göre IDE'nin bu değeri otomatik olarak kendisinin
+    algılayıp değişkeni en uygun veri tipine eşlemesi. En uygun için örnek olarak sayısal değerlerde
+    verilen sayı int değer aralığındaysa normalde byte/short aralığında da olsa olabilecek hataları
+    önleme amacı ile en uygun tipe int e eşleyecektir, int aralığından da büyük bir sayı ise bu sefer
+    long olarak görüntülenecektir.
+  **bir değişkene örneğin var a = null dediğimizde tipini belirtmeliyiz çünkü belirtmediğimizde IDE
+    bunun Nothing tipine eşler. Unit den farklıdır. unit bir şey döner ama boştur, Nothing bir şey
+    de dönmez. Daha sonradan bir değer atamak istediğimizde şöyle bir hata verecek : Bunun tipi
+    Nothing ama sen int atıyorsun (gibi).(BUNUN DIŞINDA BAŞKA NEDENLERİ DE VAR FAKAT BU KISIM İÇİN
+    TEKRAR ARAŞTIRMA YAPARAK TAMAMLAYACAĞIM)
+
+Answer 5:
+    Kotlinde class gibi görünen değişken tipleri özel optimizasyon ile proje derlenirken otomatik
+    olarak bytecode'a dçnüştürürken yine primitive tip olarak çeviriliyor.
+
+    örnekleyelim:
+         //KOTLIN İÇİN//                    //JAVA İÇİN//
+        val a:Int=10                    int a =10;
+
+    üstteki örnekte kotlinde Int olarak belirttiğimiz tip javaya çevrildiğinde primitive tipe
+    dönüşüyor. Her derlendiği zaman IDE bunu arkaplanda çeviriyor.
+
+Answer 6:
+    Type Safety: Kod yazarken iki uyumsuz tipi birbirine atama yapmaya çalışırsak IDE bize kızıyor.
+    Örneğin int bir değişkene String atamaya çalışırsak bu hata ile karşılaşırız. IDE kodu düzeltene
+    kadar derlemeye izin vermez, derlemez.
+
+Answer 7:
+    Bir değişkeni nullable yapmak için değişkenin tipini belirtirken sonuna ? eklememiz yeterlidir.
+    Örnekleyeyim:
+        var a:Int? = 11  //Burada a değişkeni artık nullable oluyor.
+
+Answer 8:
+    NullSafety: Eskiden bu kavram yokken projelerde içi dolu gelmesini beklediğimiz bir veri null
+    olarak geldiği zaman gerekli kontroller de yapılmadıysa nullpointerexception hatası almamız
+    kaçınılmazdı. Bu soruna çözüm olması için nullSafety çıktı. Kotlinde bir verinin null gelme
+    ihtimali varsa bunu daha iyi kontrol edebilmek için ? veya !! kullanırız.
+    ? nin anlamı: null olabilir nullsa yap değilse yapma. (burda null gelirse en fazla o işlemi yapmayı
+    atlayacaktır. crash olmaz.)
+    !! in anlamı: ben gelecek veriden eminim null gelmeyecek sen işlemi kesinlikle devam et. (bunu
+    kullanmanın kötü yanı: eminim işleme devam et dedik ama null geldi. Bu sefer hata alırız. uygulama
+    crash olur.)
+
+Answer 9:
+    Bir değişkene null değer atayıp tipini belirtmezsek IDE o değişkenin tipini Nothing olarak
+    algılayacaktır. Nothing hiçbir şey dönmez. Unit den farklıdır. unit yine boş da olsa bir şey döner.
+    Örneğin bu değişken var ise daha sonra ona bir int, string veya başka bir veri atamaya çalışırsak
+    hata verecektir. Bunun tipi Nothing ama sen başka bir tip atamaya çalışıyorsun gibi.
+
+Answer 10:
+    nullable olursa -> Bellekte iki durum (null olması, bir  değeri olması) için yer ayırması gerekiyor.
+    nullable olmazsa (non-nullable) -> Bellekte değişkenin tipine göre sabit bir yer ayırır. Null olma
+    durumu olmadığı için ekstra yer ayrılmaz.
+
+Answer 11:
+    null olursa -> Bellekte null referans saklanır. Küçük bir yer kaplar. Bellekte hiç bir gerçek veri
+    saklanmaz, yani ekstra veri boyutu yoktur.
+    bir değeri olursa -> Bellekte null referansı saklanır ve ayrıca gerçek veri de yer kaplar.
+    ÖZETLE:null olursa, sadece referansı bellekte saklanırken, bir değeri varsa hem referansı hem de
+    değer için yer ayırması gerekmektedir.
+
+Answer 12:
+    İki farklı operatör ile çalışırız.(!! ve ?.)
+    (!!) in anlamı : Ben bu veriye gelecek veriden eminim. nullable yaptım ama null gelmeyecek problem
+    yok sen derlemeye devam et. Yani bu !! den sonra gelecek kodları çalıştırmasını söylüyoruz. Biz bu
+    işareti kullandık diyelim, ama bize yine de bir problem çıktı ve null değer geldi. Bu durumda kod
+    yine çalışacak fakat null geldiği için uygulama crash olacaktır.
+    (?.) nın anlamı : Bu veri null gelirse devamındaki işlemleri yapma. null gelmezse yap.
+ ---Örnek olarak bir kullanıcı giriş yaptı ve giriş ekranında hoşgeldiniz Büşra Macak şeklinde bir
+    yazı göstereceğiz. Fakat bu yazı null geldi biz burada ?. ile kontrol edersek null geldiği için
+    devamını yapmayacak ve hoşgeldiniz den sonraki kısımda ad soyad yazmayacak. ama biz !! kullanırsak
+    ve null gelirse uygulama crash olacaktır. Bu senaryoda isim gelmedi diye uygulamayı crash etmek
+    çok mantıklı değil ad soyad o an gelmemiştir boş kalabilir. Bu yüzden ?. kullanmak çok daha mantıklı.
+ ---Başka bir örnek verirsek, Sayılarla işlem yapıyoruz bu kredi bilgileri olabilir, borç bilgileri
+    olabilir bu gibi önemli verilerle işler yaparken bize gelecek veriye hesap yaptırıp sonuç
+    hesaplatacaksak kullanıcı da ona göre işlemi onaylayıp onaylamayacağına karar verecekse, biz
+    kontrolleri ?. kullanarak yaparsak veri null gelirse işlemler devam etmeyecek ve o kısımlar boş
+    kalacak ve kalan hesapları yaparken bu değeri de kullanacağı için hatalı hesaplamalar yaparak ,
+    yanlış sonuç verecektir. !! kullanırsak bu değer null gelirse uygulama hiçbir işleme devam
+    edemeyerek crash olacaktır. Bu senaryoda o kısım boş kalıp da yanlış hespqlamaya devam etmesindense,
+    crash alarak önemli hataları önlemek daha öncelikli olacağı için !! kullanmak daha mantıklı olacaktır.
