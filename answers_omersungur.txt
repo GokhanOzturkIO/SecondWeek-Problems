@@ -254,3 +254,11 @@ Bu şekilde bir kullanım yaparsak 5 aslında bir Int sayıdır fakat print ifad
 son satırdaki ifadeyi şu şekilde de yapabiliriz, print(b.toInt() == i). Yeter ki aynı türden olsunlar.
 
 6 -> 5.Soruda cevabı verildi. Print satırı hata verecektir çünkü aynı türden verileri kıyaslamıyoruz.
+
+7 -> Sayısal değerleri birbirine dönüştürebiliriz. Burada dikkat etmememiz gereken şey dönüştüreceğimiz tip kendi sayı aralığında kalıyor mu, kalmıyor mu? Eğer o aralık dışına çıkıyorsa o dönüşüme IDE izin verir fakat hatalı sonuç alırız. Örneğin:
+
+    val myNum: Short = 128
+    println(myNum.toByte())
+
+burada 128 değeri short bir ifade ve ben bunu byte'a dönüştürmek istiyorum. IDE izin verir, run edebiliriz fakat çıktı yanlıştır. Şu an -128 olarak bir çıktı aldım.
+Bunların dışında sayısal değerleri birbirine dönüştürmek için kullanılabilecek fonksiyonlar: toByte(), toShort(), toInt(), toLong(), toDouble(), toFloat() ve to Char(). Bu arada toChar() fonksiyonu deprecated olmuş. toInt().toChar() şeklinde kullanım öneriliyor.
