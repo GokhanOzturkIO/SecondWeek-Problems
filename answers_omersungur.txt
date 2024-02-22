@@ -217,3 +217,13 @@ BigInteger ve BigDecimal sınıflarının sınırları, bellek ve işlemci güc�
 
 Örneğin bu örnekte x Number tipinde ve int, double, short vs. gibi tiplerdeki sayıları verebiliriz. is ile kontrol yaptırıyoruz. Eğer is bloğu true gelirse onun içindeki blok çalışacak. İçindeki blok çalışırsa şöyle bir durum oluşuyor (Int için konuşuyorum): is Int bloğu içine girdik, demek ki bu değişkenin değeri Int. Ben artık bu değişkeni Int olarak düşünüyorum ve onun fonksiyonlarını onun özelliklerini kullanabilirim. İşte bu smart case'dir
 
+3 -> Casting işlemi için as ve as? operatörlerini kullanabiliriz. Burada as güvensiz, as? güvenlidir diyebiliriz. 
+
+    val myStr = "Omer" as Int
+    println(myStr) // Exception
+
+    val myStr2 = "Omer" as? Int
+    println(myStr2) // null
+
+Birinci örnekte "Omer" ifadesini Int değerine cast etmeye çalışıyoruz ve kesinlikle bu işlemi yap diyoruz. Dönüştürme yapılamadığı için exception oluşacak. İkinci örnekte ise cast işlemini yapmaya çalış eğer olmazsa null değer ata diyoruz.
+
