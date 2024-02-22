@@ -98,3 +98,8 @@ Answer 10:
     kontrolü yapılamaz. Yani yapılır ama gereksiz iş yükü. bu nedenle 5/2 nin cevabı 2.5 evet ama burada
     int olarak algılandığı için yuvarlayarak . dan öncesi alınıyor. yani 2 olacaktır. bu durumda println
     ifadesinin içerisi her zaman true olacaktır.
+
+Answer 11:
+    Üstteki örneklerle benzer cevaba sahip. Burada 5L/int olması bir şeyi değiştirmeyecektir sonuçta
+    Long olan bir sayıyı bölüyoruz. IDE otomatik olarak Long e eşleme yapacaktır. Bu durumda println
+    ifadesinin içerisi her zaman true olacaktır.
