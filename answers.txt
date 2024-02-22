@@ -43,4 +43,7 @@ SAYILAR
 -"Number" sınıfını miras alan 6 tane Child class vardır. Bunlar Byte, Short, Long, Integer, Float, Double. Değer aralıklarının bilinmesi ve buna göre kullanılması projenin performansını etkileyebilir. Bu yüzden önemlidir.
 
 2.Eğer bir değişkene tip belirtimi yapılmaz ve bir değer atanırsa, Kotlin tip çıkarımını nasıl yapar?
--Eğer bir değişkene tip belirtimi yapılmaz ve bir değer atanırsa, Kotlin "Type Reference" yaparak onun tipini belirtir. Eğer değişkenin değer aralığı Int değer aralığı içinde veya Int değer aralığından küçükse otomatik olarak Int set edilir, Eğer İnt değer aralığından büyükse otomatik olarak Long set edilir. 
+-Eğer bir değişkene tip belirtimi yapılmaz ve bir değer atanırsa, Kotlin "Type Reference" yaparak onun tipini belirtir. Eğer değişkenin değer aralığı Int değer aralığı içinde veya Int değer aralığından küçükse otomatik olarak Int set edilir, Eğer İnt değer aralığından büyükse otomatik olarak Long set edilir.
+
+3.Float değişken oluştururken F ve f harfleri varken, Long değişken oluştururken neden küçük l harfi yoktur?
+-Long değişken oluştururken küçük l harfi kullanımına izin verilmez. Bunun sebebi I harfiye karıştırılabilme olasılığından dolayı. 
