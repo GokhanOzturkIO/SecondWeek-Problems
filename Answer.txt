@@ -274,6 +274,11 @@ ULong --> 0 - 18,446,744,073,709,551,615 (264 - 1)
 
 ===========================
 
+36 -) "İşaretsiz" değişken türleri (UInt, ULong vs.) kullanırken, Java API'leri ile uyumluluk konusunda ne gibi sorunlar olabilir? Bunları çözmek için neler yapabilirsiniz?
+
+Java işaretsiz değişken tiplerini desteklemez. Çözmek için UInt değişkenler Int değere çevirebilir. 
+
+===========================
 
 
 
