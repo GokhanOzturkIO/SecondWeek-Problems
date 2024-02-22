@@ -385,7 +385,16 @@ Smart cast işlemi için sınırlamalar ise var değişkenlerde kullanılamıyor
 
 Kotlinde güvenli ve güvensiz operatörler, null güvenliğini sağlamak için kullanılan operatörlerdir. Güvenli operatör ("?.") : Bu operatör, bir nesnenin null olup olmadığını
 kontrol eder ve nesne null ise çağrının gerçekleştirilmesini engeller, örnek kullanım "val length = str?.length". Güvenli dönüşüm operatörü ("as?") : Bu operatör, belirli
-bir türde bir dönüşüm yapmayı dener, eğer dönüşüm başarılı ise, sonuç belirtilen türde bir nesne olur; ancak eğer sonuç başarısız ise sonuç null olur. Bu operatör "ClassCastException" hatalarını önlemek için kullanılır, örnek kullanım "val strLength: Int? = str as? String". Bu örnekte, str değişkeni bir String türüne dönüştürülmeye çalışılır. Eğer str bir String ise, strLength değişkenine str değişkeni atanır; eğer str bir String değilse, strLength null olur.
+bir türde bir dönüşüm yapmayı dener, eğer dönüşüm başarılı ise, sonuç belirtilen türde bir nesne olur; ancak eğer sonuç başarısız ise sonuç null olur. Bu operatör "ClassCastException" hatalarını önlemek için kullanılır, örnek kullanım "val strLength: Int? = str as? String". Bu örnekte, str değişkeni bir String türüne dönüştürülmeye çalışılır. Eğer str bir String ise, strLength değişkenine str değişkeni atanır; eğer str bir String değilse, strLength null olur. Güvensiz operatöre örnek vericek olursak
+as operatörünü verebiliriz. As operatörü kullanımında eğer tip dönüşümü sağlanmazsa hata alırız, ancak güvenli operatörler için böyle bir durum söz konusu değildir.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+4- Sayısal değişkenlerde örtük tip genişletme (implicit widening conversions) ne demektir? Kotlin'de bu neden yapılamaz?
+
+Örtük tip genişletme sayısal bir veri türünün daha geniş bir veri türüne otomatik olarak dönüştürülmesi işlemine verilen isinmdir. Örneğin küçük bir tamsayı türünün
+daha büyük bir tamsayı türünü dönüşmesi (Int -> Long). Ancak Kotlin'de bu tür örtük tip geniştelmeleri yapılmaz. Bunun sebebi potansiyel hatalara ve karmaşıklığa engel
+olmaktır. Örneğin küçük bir tamsayı türünün büyük bir tamsayı türüne dönüştürülmesi, veri kaybına neden olabilir.
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
