@@ -23,3 +23,16 @@ Answer 2:
                                //işlemleri yapabiliriz. Int e dönüşmüş olur.
 
 
+Answer 3:
+    Güvenli Tür Dönüşümü:
+        val slm :Any="Selam"
+        val slmString:String? = slm as? String
+        //Güvenli dönüşüm olduğu için null olması durumunda null dönecektir.
+    slm Any tipinde olduğu için Boş olması durumunu daha iyi kontrol edip hata almamak için as? şeklinde kullanırız.
+
+    Güvensiz Tür Dönüşümü:
+        val slm:Any="Selam"
+        val slmString:String = slm as String
+
+        // Güvensiz dönüşümde as direkt kullanıldığı için null gelme ihtimali
+        düşünülmemiş bir kod parçası, burada null gelirse uygulama hata verir crash olacaktır.
