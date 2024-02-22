@@ -75,3 +75,6 @@ Answer 6:
     Çalıştırınca alacağımız hata şudur:Operator '==' cannot be applied to 'Byte' and 'Int'
         YANİ: == operatörü ile karşılaştırmaya çalıştığın değişkenlerin türleri birbirinden
         farklı (Byte&Int) Bunu yapamazsın.
+
+Answer 7:
+    toInt(), toDouble(), toFloat(), toLong(), toByte(), toShort() fonksiyonları ile açık dönüşüm yapılabilir.
