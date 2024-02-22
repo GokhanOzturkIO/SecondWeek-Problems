@@ -307,3 +307,25 @@ output: tasruK
 
 örneğin burada when ile obj değişkeninin tipini kontrol ederek String ise String tipine ait bir fonksiyon olan reversed() fonksiyonunu çağırabiliyoruz. 
 
+===========================
+
+39-) "Güvenli & Güvensiz" operatörler nelerdir?
+
+as --> Unsafe (Güvensiz)
+as? --> Safe (Güvenli)
+
+val value : Any = "Kursat"
+val age = value as Int
+
+yukarıdaki işlem hata verecektir. Çünkü value değişkeninin değeri String tipindedir. Bundan dolayı Int tipine cast edilemez. Aynı işlemi 
+bir de as? yani Safe operatörü ile deneyelim.
+
+
+val value : Any = "Kursat"
+val age = value as? Int
+
+yukarıdaki cast işleminde String, Int tipine cast edilemediği için null değer verilmiştir ve böylelikle program bir hata ile karşı karşıya kalmayarak çökme sorunu yaşamamıştır.
+
+===========================
+
+
