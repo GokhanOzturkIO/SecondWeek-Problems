@@ -73,3 +73,6 @@ Kotlin'de Octal değişkenler tanımlanamaz.
 
 10.Sayısal değişkenlerde alt çizgi (underscore) nasıl kullanılır? Kotlin bunu nasıl yorumlar?
 -Sayısal değişkenlerde alt çizgi büyük basamaklı sayının okunabilirliğini artırmak için kullanılır. Kotlin bunu görmezden gelerek sayının tamamını düzgün bir şekilde alır.
+
+11.== ile neyi karşılaştırırız? === ile neyi karşılaştırırız?
+- == ile değişkenlerin değerini karşılaştırırız. === ile değişkenlerin referanslarını karşılaştırır. 
