@@ -85,6 +85,9 @@ Cevap : Number sınıfını miras alan byte,short,int,float olmak üzere 5 alt s
 Cevap : Integer aralığında ise integer,integer değer aralığını aşarsa Long yapar. Ondalıklı sayılarda ise otomatik olarak Double yapar.
 
 - Float değişken oluştururken `F` ve `f` harfleri varken, Long değişken oluştururken neden küçük `l` harfi yoktur?
+
+Cevap : Bazı fontlarda küçük L harfi 1(bir) sayısına benzediğinden olası karışıklıkların önüne geçmek için kullanılmaz
+
 - Tek duyarlıklı (Single precision) ve Çift duyarlıklı (Double precision) kavramlarını açıklayın.
 - Double ve Float değişkenlerle çalışırken ondalık ayıracı olarak hangi işaretler kullanılır? Bu ayıraçların kullanımında nelere dikkat etmek gerekir?
 - Double ve Float değişkenler ondalık kısımda kaç basamağa kadar işlem yaparlar? Bu sınırın üzerinde gelen ondalık bilgileri için nasıl davranırlar? Hangi durumlar için Float ve hangi durumlar için Double kullanılmalıdır?
