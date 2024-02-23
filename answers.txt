@@ -30,6 +30,13 @@
 	-Kotlinde null safety vardır. Bu sayede verilerin null olarak gelip çalışma zamanında ve derleme zamanında herhangibir sorun çıkamasını 
 	engeller.
 	-Diğer olarak Type inference, smart cast ve type check ve cast vardır.
+7- Bir değişkeni nullable yapmak için ne yapmalıyız?
+	-val nullableString: String? = null kodundaki gibi tipin önüne ? koyarak.
+	-Val number = null şekilde bir değken tanımladığımızda bu değişkenin tipi Nothing olur.
+
+	
+
+	
 	
 
 	
