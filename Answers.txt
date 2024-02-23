@@ -45,3 +45,33 @@ fun add(a: Int, b: Int): Int {
 Bir başka önemsememiz gereken durum da Number değişkenler için bilmemiz gereken 
  - Tanımladığımız sayı Int değer aralığından büyük değilse veri tipi Int olur.
  - eğer sayı Int değer aralığını geçiyorsa değişken türü Long olur.
+
+
+5- Kotlin'de tüm değişkenlerin sınıf olarak bulunması, "ilkel tip" (primitive type) olmadıkları anlamına gelir mi? Arka planda neler oluyor?
+
+Kotlinde ki primitive değişken tipleri sınıf(class) gibi görünseler bile yapılan optimizasyonlar ile byte code'a çevirilirken Java tarafında ki gerçek primitive tiplere karşılık gelecektir. Yani özetle kotlinde class gibi gözüken değişken tipleri
+(normalde primitive olduğunu bildiğimiz) özel optimizasyonlarla byte code'a çevrilirken yine primitive tip olacak şekilde çevriliyorlar, Çalışma zamanında(runtime) primitive hallerine optimize edilirler. 
+(Bu tip dönüşümü değil, arkaplanda Javada ki koda karşlık gelen tipi üretecek).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
