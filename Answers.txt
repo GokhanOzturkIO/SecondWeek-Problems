@@ -107,6 +107,20 @@ Eğer bir değişkenin null olmaması gerektiğini biliyorsanız ve null olması
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+-------- Sayılar -------- 
+
+1- Kaç farklı tipte "number" sınıfı miras alan "alt sınıf" (child class) vardır? Bunların değer aralıkları neden önemlidir?
+
+ "number" sınıfından miras alan alt sınıflar şunlardır:
+Byte: 8 bit, değer aralığı -128 ile 127 arasında.
+Short: 16 bit, değer aralığı -32768 ile 32767 arasında.
+Int: 32 bit, değer aralığı -2,147,483,648 (-2^31) ile 2,147,483,647 (2^31 - 1) arasında.
+Long: 64 bit, değer aralığı -9,223,372,036,854,775,808 (-2^63) ile 9,223,372,036,854,775,807 (2^63 - 1) arasında.
+Float: 32 bit, IEEE 754 standardına uyan tek hassasiyetli.
+Double: 64 bit, IEEE 754 standardına uyan çift hassasiyetli.
+Bu alt sınıfların değer aralıkları önemlidir çünkü belirli bir değer aralığındaki sayıları temsil etmek için en uygun veri tipini seçmemize olanak sağlar. Örneğin çok büyük bir sayıyı Int tipi ile tutarsak o aralıkta olmadığı için hatalı bir sonuç alırız.
+Bu yüzden sayısal değerlerin büyüklüğüne, hassasiyetine ve işlem türüne göre uygun alt sınıfı kullanmak önemlidir.
+
 
 
 
