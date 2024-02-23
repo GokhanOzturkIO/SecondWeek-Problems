@@ -102,6 +102,24 @@ Cevap : Float yaklaşık 7, Double yaklaşık 16-17 basamağa kadar işlem yapar
 Cevap : Decimal zaten ondalıklı sayıyı ifade ettiğinden herhangi özel bir şey yapmamıza gerek yoktur. Hexadecimal için değişkenin başına `0x` eklenmelidir. Binary içinse `0b` eklenmesi gerekmektedir. Kotlin'de Type Inference olduğundan ötürü türü belirtmemize gerek yoktur fakat `Long` ve `Float` için tür belirtmemiz gerekmektedir. Çünkü Type inferince gereği tam sayılar `int` ondalıklı sayılar `double` şeklinde ifade edilir.
 
 - Sekizlik (Octal) değişkenler Java'da nasıl tanımlanır? Kotlin'de Sekizlik değişken tanımlanabilir mi?
+
+Cevap : Java'da octal sayıları tanımlamak için başına `0` eklememiz yeterlidir. Kotlin'de bir sayının başına 0 eklenmediğinden ötürü bu mümkün değildir. Ancak octal bir sayıyı kullanmanız gerekiyorsa bunun farklı şöyle bir yolu vardır:
+
+Sayıyı önce `string` olarak tanımlıyoruz
+
+`val octalString = "123" // Sekizlik sayı olarak düşünülen string`
+
+`val decimalValue = octalString.toInt(8) // Sekizlikten ondalığa çevirme`
+
+`println(decimalValue) // Çıktı: 83`
+
+`toInt` fonksiyonu bir `radix` parametresi alır ve bu parametre sayesinde sekizlik sayıları işleyebilirsiniz.
+
+Peki `radix` parametresi nedir : bir sayının tabanını belirlemek için kullanılır. Bir sayının tabanı, sayıyı temsil etmek için kullanılan basamak sayısını belirler.
+
+Yukarıdaki örnekte parantez içerisinde kullandığımız sayı kaçlık sistemde çalışacağımızı ifade eder.
+
+
 - "Geleneksel Notasyon" (Conventional Notation) gösterimi nasıl yapılır?
 - Sayısal değişkenlerde alt çizgi (underscore) nasıl kullanılır? Kotlin bunu nasıl yorumlar?
 - `==` ile neyi karşılaştırırız? `===` ile neyi karşılaştırırız?
