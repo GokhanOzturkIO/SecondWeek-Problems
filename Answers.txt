@@ -232,6 +232,17 @@ Küçük Eşit (<=): Bir değerin diğerinden küçük veya eşit olup olmadığ
 a..b, x in a..b x bunların arasında mı, x !in a..b x bunların arasında değil mi : Aralık oluşturma ve aralık kontrolü
 
 
+15- Bit düzeyinde operatörler (Bitwise operators) nelerdir? Ne amaçla kullanılır? Kotlin'de bunları nasıl kullanabilirsiniz?
+
+Kotlin’de bit düzeyinde operatörler, sadece Int ve Long türlerinde bit düzeyinde işlemler gerçekleştirmek için kullanılır. İşte Kotlin’deki bit düzeyinde operatörler ve kullanımları:
+- and(&): İki değerin karşılıklı bitlerini karşılaştırır. Her iki bit de 1 ise, 1 döndürür. Aksi takdirde 0 döndürür
+- or(|): İki değerin karşılıklı bitlerini karşılaştırır. Bitlerden biri 1 ise, 1 döndürür. Aksi takdirde 0 döndürür.
+- xor(^): İki değerin karşılıklı bitlerini karşılaştırır. Karşılıklı bitler farklıysa, 1 döndürür. Aksi takdirde 0 döndürür.
+- inv(): Bit desenini tersine çevirir. Her 0’ı 1 yapar ve her 1’i 0 yapar
+- shl: Belirli bir bit sayısı kadar bit desenini sola kaydırır.
+- shr: Belirli bir bit sayısı kadar bit desenini sağa kaydırır.
+- ushr: Belirli bir bit sayısı kadar bit desenini sağa kaydırır. Ancak, bu işlem işaretli değil, işaretsizdir.
+
 
 
 
