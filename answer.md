@@ -178,6 +178,9 @@ Cevap : u ve U ile gösterilir.
 Cevap : Değişken tipleri Unsigned olur. İkisi de UInt sınırları içerisinde olduğundan ikisi de uInt olur.
 
 - "İşaretsiz" "Long" harf gösterimi nasıl yapılır?
+
+Cevap : var a:ULong = 10u şeklinde tanımlayabiliriz.
+
 - "İşaretsiz" değişkenlerin kullanım amaçları nelerdir?
 - "İşaretsiz" değişkenlerle yapılan matematiksel işlemlerde, özellikle büyük sayılarla çalışırken karşılaşılabilecek taşma (overflow) ve taşma olmaması (underflow) durumları için Kotlin nasıl bir yönetim sağlar?
 - "İşaretsiz" değişkenlerin sınırlamaları nelerdir?
