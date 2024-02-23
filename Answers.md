@@ -14,6 +14,6 @@ val değişkenlerin get metodu override edilerek alınabilecek değer farklı de
 
 ## 1.4- "Tip Çıkarımı" (Type inference) kavramını açıklayın. Hangi durumlarda tip belirtmek kesin olarak gereklidir?
 Type inference: Kullandığımız programlama dilinde veri tipini açık olarak belirtmediğimiz(explicit) durumlarda veri tipinin otomatik olarak belirlenmesidir. <p>
-Number tipindeki değişkenlerde virgülsüz bir sayı yazıyorsak otomatik olarak "Int" olarak algılanır fakat biz farklı tiplerde veri kaydetmek istiyorsak bu tipi açıkça belirtmek durumundayız. Aynı şekilde eğer virgüllü bir sayı yazıyorsak bu sayıyı "Double" tipinde algılar bu durumda da eğer float olarak bir değişken kullanmak istiyorsak bunu belirtmemiz gerekiyor. <p>
-Değişkenin değerini daha sonradan atayacaksak tipini belirtmemiz gerekir. <p>
-Bir değişkeni oluşturduğumuz class'ın parent'ının aynı seviyedeki child'ına daha sonradan eşitleyeceksek değişkenin tipini bu parent olarak göstermemiz gereklidir.
+- Number tipindeki değişkenlerde virgülsüz bir sayı yazıyorsak otomatik olarak "Int" olarak algılanır fakat biz farklı tiplerde veri kaydetmek istiyorsak bu tipi açıkça belirtmek durumundayız. Aynı şekilde eğer virgüllü bir sayı yazıyorsak bu sayıyı "Double" tipinde algılar bu durumda da eğer float olarak bir değişken kullanmak istiyorsak bunu belirtmemiz gerekiyor. <p>
+- Değişkenin değerini daha sonradan atayacaksak tipini belirtmemiz gerekir. <p>
+- Bir değişkeni oluşturduğumuz class'ın parent'ının aynı seviyedeki child'ına daha sonradan eşitleyeceksek değişkenin tipini bu parent olarak göstermemiz gereklidir.
