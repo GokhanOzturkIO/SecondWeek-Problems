@@ -244,6 +244,16 @@ Kotlin’de bit düzeyinde operatörler, sadece Int ve Long türlerinde bit düz
 - ushr: Belirli bir bit sayısı kadar bit desenini sağa kaydırır. Ancak, bu işlem işaretli değil, işaretsizdir.
 
 
+16- Kotlin'de büyük sayılarla çalışırken hangi ek türlerden yararlanılır ve bu türlerin sınırları nelerdir?
+
+
+Kotlin'de büyük sayılarla çalışırken BigInteger ve BigDecimal sınıflarından yararlanılır.
+- BigInteger: Bu sınıf, tam sayılarla çalışmak için kullanılır ve sınırsız büyüklükte tam sayılarla işlem yapabilmenizi sağlar. Sınırları, bellek ve işlem süresi ile sınırlıdır.
+    val bigIntegerNumber = BigInteger("1234567890123456789012345678901234567890")
+
+- BigDecimal: Bu sınıf, kayan noktalı sayılarla çalışmak için kullanılır ve yüksek hassasiyette finansal ve bilimsel hesaplamalar yapmanızı sağlar. BigDecimal sınıfı, noktadan sonra çok sayıda basamağa kadar hassasiyet sağlar.
+    val bigDecimalNumber = BigDecimal("1234567890.12345678901234567890")
+
 
 
 
