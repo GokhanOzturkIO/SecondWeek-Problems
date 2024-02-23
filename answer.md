@@ -227,6 +227,9 @@ Cevap : True yanıtını alırız çünkü typep inference gereği x int olarak 
 Cevap : bu soru da da yukarıdaki benzer sebeplerden ötürü true yanıtını alırız.
 
 - "`val x = 5 / 2.toDouble()` `println(x == 2.5)`" gibi bir işlemin sonucu ve tipi nedir? Neden böyle olduğunu açıklayın.
+
+Cevap : sonuç true olur. Çünkü toDouble() ile double'a çeviriyoruz.
+
 - Kotlin'de tür dönüşümü yapılırken, dönüşümün başarısız olması durumunda TypeCastException nasıl ele alınır ve bu tür hataların önüne geçmek için hangi önlemler alınabilir?
 
 ---
