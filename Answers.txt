@@ -137,6 +137,18 @@ Ondalık sayılarda ise değişkenin float olması gerektiği belirtilmezse 'f' 
 kücük 'l' harfi bazı fontlarda 1 rakamına benzediği için karıştırılma durumlarından dolayı kullanılmaz.
 
 
+4- Tek duyarlıklı (Single precision) ve Çift duyarlıklı (Double precision) kavramlarını açıklayın.
+
+Tek duyarlıklı ve Çift duyarlıklı, ondalık sayıların farklı biçimlerde saklanması ve işlenmesi demektir. Ondalıklı sayıların gösterimi için IEEE tarafından önerilen formatlardır.
+Kotlin’de Float ve Double tipleri, IEEE 754 standardına uyar.
+
+- Float: Tek duyarlıklı (Single precision) olarak da bilinir ve IEEE 754 standardının tek duyarlıklı versiyonunu yansıtır. 32 bitlik bir boyuta sahiptir ve bu boyut, kayan noktalı sayıları farklı hassasiyetle saklamak için kullanılır. 
+Önemli bit sayısı 24, üs bit sayısı 8 ve ondalık basamak sayısı 6-7’dir.
+- Double: Çift duyarlıklı (Double precision) olarak da bilinir ve IEEE 754 standardının çift duyarlıklı versiyonunu yansıtır. 64 bitlik bir boyuta sahiptir ve bu boyut, kayan noktalı sayıları daha yüksek bir hassasiyetle saklamak için kullanılır. 
+Önemli bit sayısı 53, üs bit sayısı 11 ve ondalık basamak sayısı 15-16’dır.
+Bu iki tip arasındaki fark, sakladıkları kayan noktalı sayıların hassasiyetidir. Double tipi, Float tipinden daha fazla hassasiyet sağlar ve bu nedenle daha büyük veya daha hassas sayıları temsil etmek için kullanılır.
+
+
 
 
 
