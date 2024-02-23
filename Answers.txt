@@ -427,6 +427,10 @@ değer Int değer aralığının dışında olduğu için negatif rastgele bir s
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+9- "val x = 5 / 2 println(x == 2)" gibi bir işlemin sonucu ve tipi nedir? Neden böyle olduğunu açıklayın.
 
+Bölme işleminin sonucu da 2 olarak çıkar, bu nedenle ekrana true yazdırılır. Bu sonucu almamızın sebebi tanımlanan türlerin Int (Tam sayı) olmasıdır, bu nedenle bölme işleminin yalnızca tam kısmı alınır. Özel bir atama yapılmadığı sürece ide tam sayıların değerini Int olarak tanımlar.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
