@@ -177,6 +177,13 @@ Java’da sekizlik (Octal) değişkenler 0 öneki ile tanımlanır. Örneğin, i
 Ancak, Kotlin’de sekizlik (Octal) değişkenler desteklenmez. Yani, Kotlin’de doğrudan bir sekizlik sayıyı temsil eden bir değişken tanımlayamazsınız. Bunun yerine, sayıyı ondalık veya başka bir biçimde tanımlayıp, gerektiğinde sekizlik biçime dönüştürebilirsiniz.
 
 
+9- "Geleneksel Notasyon" (Conventional Notation) gösterimi nasıl yapılır?
+
+Kotlin’de “Geleneksel Notasyon” (Conventional Notation) aşağıdaki şekillerde kullanılır:
+Tam Sayılar: Onluk tabanda yazılır. Örneğin, 123.
+Uzun Sayılar: Büyük harf L ile belirtilir. Örneğin, 123L.
+Ondalık Sayılar: Varsayılan olarak Double tipindedir ve ondalık kısmı nokta (.) ile ayrılır. Örneğin, 123.5 veya 123.5e10.
+Float Sayılar: f veya F ile belirtilir. Örneğin, 123.5f.
 
 
 
