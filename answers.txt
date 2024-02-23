@@ -43,6 +43,10 @@
 	null olup olmadığına bakmayacak ve daha performanslı olacak.,
 9- Bir değişkene null değer atanır ve tip belirtilmezse Kotlin bu değişkeni nasıl yorumlar?
 	-Val number = null şekilde bir değken tanımladığımızda bu değişkenin tipi Nothing olur.
+10-İlkel bir değişkenin nullable olması ile null değer alamaması arasında bellek yönetimi açısından nasıl farklar vardır?
+	Nullable değişken hem null hemde bir değere sahip olabileceği için bellekte null ve değeri için ayrı ayrı yer tutar ve bu yüzden null 
+	olamayan bir değişkenden daha fazla yer tutar. 
+
 
 	
 	
