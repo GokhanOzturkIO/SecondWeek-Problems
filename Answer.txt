@@ -344,6 +344,19 @@ fun getProfit(profit : Int) {
 
 41-) "val b: Byte = 1 ile val i: Int = b ve son olarak print(b == i) gibi bir kod yazıldığında çıktı ne olur? Neden böyle bir çıktı aldığınızı açıklayın.
 
-Type mismatch hatası alırız. Çünkü Byte tipinde bir değişken Int tipindeki bir değişkene eşit olamaz. Bu sorunun üstesinden gelmek için toInt() fonksiyonu kullanılarak tip dönüşümü gerçekleştirilmelidir.
+
+val i: Int = b kod satırından Type mismatch hatası alırız.
+
+Çünkü Byte tipinde bir değişken Int tipindeki bir değişkene eşit olamaz. Bu sorunun üstesinden gelmek için toInt() fonksiyonu kullanılarak tip dönüşümü gerçekleştirilmelidir.
+
 
 ===========================
+
+42-) "val b: Byte = 1 ile val i: Int = b.toInt() ve son olarak print(b == i) gibi bir kod yazıldığında çıktı ne olur? Neden böyle bir çıktı aldığınızı açıklayın.
+
+
+print(b == i) kod satırından ise == cannot be applied Byte and Int hatasını alırız. Bu sorunu da b.toInt() fonksiyonu ile çözeriz.
+
+===========================
+
+
