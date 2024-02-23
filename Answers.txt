@@ -326,6 +326,12 @@ Eğer bir overflow veya underflow durumu oluşursa, bu genellikle beklenmeyen so
 Sonuç olarak, Kotlin’de işaretsiz tam sayılarla çalışırken overflow ve underflow durumlarını yönetmek genellikle programcının sorumluluğundadır.
 
 
+8- "İşaretsiz" değişkenlerin sınırlamaları nelerdir?
+   
+    UByte -> 0 .. 255
+    UShort -> 0 .. 65,535
+    UInt -> 0 .. 4,294,967,295 (2^32 - 1)
+    ULong -> 0 .. 18,446,744,073,709,551,615 (2^64 - 1)
 
 
 
