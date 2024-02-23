@@ -187,6 +187,16 @@ Cevap : Bir değişkenin daha fazla yer kaplamasını istemiyorsak ve eğer nega
 
 - "İşaretsiz" değişkenlerle yapılan matematiksel işlemlerde, özellikle büyük sayılarla çalışırken karşılaşılabilecek taşma (overflow) ve taşma olmaması (underflow) durumları için Kotlin nasıl bir yönetim sağlar?
 - "İşaretsiz" değişkenlerin sınırlamaları nelerdir?
+
+Cevap : 
+UByte		0 - 255
+
+-UShort		0 - 65535
+
+-UInt		0 - 4294967295
+
+-ULong		0 - 18446744073709551615
+
 - "İşaretsiz" değişken türleri (UInt, ULong vs.) kullanırken, Java API'leri ile uyumluluk konusunda ne gibi sorunlar olabilir? Bunları çözmek için neler yapabilirsiniz?
 
 ### Tür Dönüşümü
