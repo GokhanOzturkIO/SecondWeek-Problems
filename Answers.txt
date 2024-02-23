@@ -269,6 +269,50 @@ Kotlin’de Double ve Float türlerinde yuvarlama işlemleri için roundToInt ve
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+-------- İşaretsiz Sayılar -------- 
+
+1- "İşaretsiz" (Unsigned) değişkenler ne demektir? İşaretli olanlarla aralarındaki fark nedir?
+
+“İşaretsiz” (Unsigned) değişkenler, yalnızca pozitif sayıları veya sıfırı temsil edebilen değişkenlerdir. İşaretli değişkenler ise hem pozitif hem de negatif sayıları temsil edebilir.
+Kotlin’de işaretsiz tam sayılar için aşağıdaki tipler mevcuttur:
+
+UByte: İşaretsiz 8-bit tam sayı, 0 ile 255 arasında değer alabilir.
+UShort: İşaretsiz 16-bit tam sayı, 0 ile 65,535 arasında değer alabilir.
+UInt: İşaretsiz 32-bit tam sayı, 0 ile 4,294,967,295 (2^32 - 1) arasında değer alabilir.
+ULong: İşaretsiz 64-bit tam sayı, 0 ile 18,446,744,073,709,551,615 (2^64 - 1) arasında değer alabilir.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
