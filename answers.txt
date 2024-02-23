@@ -7,5 +7,9 @@
 	mutli-tread işlemlerde Val daha hızlıdır.
 	-Val read-only'dir immutable değildir. Çünkü bir class'ın içindeki Val değişkenin değerini get metodu ile istediğimiz 
 	şekilde değiştirebilip geri döndürebiliriz.
+2- Bir `var` değişkeni `val` gibi davranmasını nasıl sağlayabiliriz `val` kelimesini kullanmadan? Bunu neden yapmak isteriz? Örnek bir senaryo verin.
+	-Var değişkenin set metodunu private yaparsak onu Val'a çevirmiş oluruz. 
+	-Private set'i olan bir değikenin değerini private setter'ını çağıran bir public metod ile değiştirebiliriz. Sadece bu private setter'a ulaşabilen bir metod veye başka bir 
+	şey ile bu değişkenin değerini istediğimiz gibi değiştirebilmek için kullanılabilir.
 	
 	
