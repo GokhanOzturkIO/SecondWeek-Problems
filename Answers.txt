@@ -433,4 +433,11 @@ Bölme işleminin sonucu da 2 olarak çıkar, bu nedenle ekrana true yazdırıl�
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+10- "val x = 5L / 2 println(x == 2L)" gibi bir işlemin sonucu ve tipi nedir? Neden böyle olduğunu açıklayın.
+
+İşlem sonucu Long tipnde 2 olduğu için, ekrana true yazdırılır. Yine Int bölme işleminde olduğu gibi bu işlemde de yalnızca tam sayılar alınır. Bir önceki örnekten tek farkı özel olarak Long tipinde tanımlanmış olmasıdır.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
 
