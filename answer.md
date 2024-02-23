@@ -223,6 +223,9 @@ Cevap : Long + Int şeklinde bir toplam yok burada. result değişkeninde type i
 Cevap : True yanıtını alırız çünkü typep inference gereği x int olarak tanımlanır ve sayının küsüratlı kısmınıa almaz.
 
 - "`val x = 5L / 2` `println(x == 2L)`" gibi bir işlemin sonucu ve tipi nedir? Neden böyle olduğunu açıklayın.
+
+Cevap : bu soru da da yukarıdaki benzer sebeplerden ötürü true yanıtını alırız.
+
 - "`val x = 5 / 2.toDouble()` `println(x == 2.5)`" gibi bir işlemin sonucu ve tipi nedir? Neden böyle olduğunu açıklayın.
 - Kotlin'de tür dönüşümü yapılırken, dönüşümün başarısız olması durumunda TypeCastException nasıl ele alınır ve bu tür hataların önüne geçmek için hangi önlemler alınabilir?
 
