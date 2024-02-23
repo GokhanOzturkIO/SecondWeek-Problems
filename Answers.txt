@@ -221,6 +221,16 @@ Bölme (/): Bir sayıyı diğerine bölmek için kullanılır.
 Mod (%) veya "kalan" operatörü: Bir sayının diğerine bölümünden kalanı bulmak için kullanılır.
 
 
+14- Sayısal değişkenlerde hangi karşılaştırma operatörleri kullanılabilir?
+
+Eşitlik (==): İki değerin birbirine eşit olup olmadığını kontrol etmek için kullanılır.
+Eşit Değil (!=): İki değerin birbirine eşit olmadığını kontrol etmek için kullanılır.
+Büyüklük (>): Bir değerin diğerinden büyük olup olmadığını kontrol etmek için kullanılır.
+Küçüklük (<): Bir değerin diğerinden küçük olup olmadığını kontrol etmek için kullanılır.
+Büyük Eşit (>=): Bir değerin diğerinden büyük veya eşit olup olmadığını kontrol etmek için kullanılır.
+Küçük Eşit (<=): Bir değerin diğerinden küçük veya eşit olup olmadığını kontrol etmek için kullanılır.
+a..b, x in a..b x bunların arasında mı, x !in a..b x bunların arasında değil mi : Aralık oluşturma ve aralık kontrolü
+
 
 
 
