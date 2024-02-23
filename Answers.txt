@@ -447,7 +447,10 @@ ve sonuç negatif bir değer olur. Bu nedenle, result değişkeninin değeri -2 
 Bu kodu çalıştırdığınızda, println(x == 2) ifadesi true çıktısını verir. 5 / 2 işlemi, iki Int tipindeki sayının bölümünü hesaplar. Ancak, bu bir tam sayı bölmesi olduğu için, sonuç yuvarlanır ve ondalık kısmı atılır. Bu nedenle, 5 / 2 işleminin sonucu 2 olur.
 
 
+11- "val x = 5L / 2 println(x == 2L)" gibi bir işlemin sonucu ve tipi nedir? Neden böyle olduğunu açıklayın.
 
+Bu kodu çalıştırdığınızda, println(x == 2L) ifadesi true çıktısını verir. 15L / 2 işlemi, bir Long tipindeki sayının bir Int tipindeki sayıya bölünmesini hesaplar. Long bir değer ile Int bir değer matematiksel bir işlem yaptığımzda sonuç Long tipinde olacaktır.
+5L / 2 işleminin sonucu 2L olur.
 
 
 
