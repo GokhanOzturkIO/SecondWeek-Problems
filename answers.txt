@@ -46,6 +46,10 @@
 10-İlkel bir değişkenin nullable olması ile null değer alamaması arasında bellek yönetimi açısından nasıl farklar vardır?
 	Nullable değişken hem null hemde bir değere sahip olabileceği için bellekte null ve değeri için ayrı ayrı yer tutar ve bu yüzden null 
 	olamayan bir değişkenden daha fazla yer tutar. 
+11- Nullable bir değişkenin bir değere sahip olması ile null olması arasında bellek yönetimi açısından nasıl bir fark vardır? Null değer almış bir değişken bellekte yer kaplamaz diyebilir miyiz?
+	-Nullable bir değişken bir değere sahip olduğunda stack'de ve heap'de yer kaplar. Eğer bu değişken null ise heapde bir yer kaplamaz
+	ama stack'de halen bir yer kaplar bu yüzden de null değer almış bir değişken genede yer kaplar.
+
 
 
 	
