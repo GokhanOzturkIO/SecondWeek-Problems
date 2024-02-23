@@ -305,6 +305,11 @@ val a2 = 0xFFFF_FFFF_FFFFu ifadesinde ise, a2 değişkeninin türü ULong olacak
 Bu özellik, Kotlin’in işaretsiz tam sayıları işlemek için ek bellek kullanmadan, işaretli tam sayıları kullanarak işaretsiz tam sayıları temsil etmesini sağlar. Bu, performansı artırır ve bellek kullanımını azalt
 
 
+5- "İşaretsiz" "Long" harf gösterimi nasıl yapılır?
+
+Kotlin’de işaretsiz bir Long türünü belirten bir tam sayı sabitini etiketlemek için uL veya UL sonekleri kullanılır. İşte bir örnek:
+	val number: ULong = 42UL  // ULong, beklenen tür sağlanmış
+
 
 
 
