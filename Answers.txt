@@ -212,6 +212,13 @@ Kotlin’de, -128 ile 127 arasındaki tam sayılar için özel bir optimizasyon 
 bu özel optimizasyon sadece -128 ile 127 arasındaki tam sayılar için geçerlidir. Bu aralığın dışındaki tam sayılar için, === operatörü her zaman false döner. Çünkü bu tam sayılar için, aynı değere sahip her değişken farklı bir bellek konumunu gösterir.
 
 
+13- Sayısal değişkenlerde hangi matematiksel operatörler kullanılabilir?
+
+Toplama (+): İki sayıyı toplamak için kullanılır.
+Çıkarma (-): İki sayı arasındaki farkı bulmak için kullanılır.
+Çarpma (*): İki sayıyı çarpmak için kullanılır.
+Bölme (/): Bir sayıyı diğerine bölmek için kullanılır.
+Mod (%) veya "kalan" operatörü: Bir sayının diğerine bölümünden kalanı bulmak için kullanılır.
 
 
 
