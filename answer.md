@@ -130,6 +130,9 @@ Cevap : `==` ile value yani değeri kıyaslarız. `===` ile değişkenin memoryd
 
 - `===` operatörü ile karşılaştırma yaparken Byte değer aralığı neden önemlidir? Kotlin bu aralığa göre neden özel bir davranış sergiler?
 - Sayısal değişkenlerde hangi matematiksel operatörler kullanılabilir?
+
+Cevap : Toplama(+),Çıkarma(-),Çarpma(x),Bölme(/) ve mod(%) işlemleri kullanılabilir
+
 - Sayısal değişkenlerde hangi karşılaştırma operatörleri kullanılabilir?
 - Bit düzeyinde operatörler (Bitwise operators) nelerdir? Ne amaçla kullanılır? Kotlin'de bunları nasıl kullanabilirsiniz?
 - Kotlin'de büyük sayılarla çalışırken hangi ek türlerden yararlanılır ve bu türlerin sınırları nelerdir?
