@@ -156,6 +156,13 @@ Veritabanı dili ve Kotlin dilinde ondalık ayıracının farklı olması durumu
 Örneğin, veritabanından alınan bir değer virgül (,) ile ondalık ayıracı olarak kullanıyorsa ve bu değeri Kotlin’de nokta (.) ile ondalık ayıracı olan bir Float veya Double değişkenine dönüştürmeye çalışırsanız, bu bir hata oluşturabilir. Bu durumlara dikkat etmeliyiz.
 
 
+6- Double ve Float değişkenler ondalık kısımda kaç basamağa kadar işlem yaparlar? Bu sınırın üzerinde gelen ondalık bilgileri için nasıl davranırlar? Hangi durumlar için Float ve hangi durumlar için Double kullanılmalıdır?
+
+Float tipi, 6-7 ondalık basamağa kadar hassasiyet sağlar. Eğer bir değer 6-7’den fazla ondalık basamak içeriyorsa, Float tipine dönüştürülürken yuvarlama yapılır.
+Double tipi, 15-16 ondalık basamağa kadar hassasiyet sağlar.
+Hangi tipin kullanılacağına karar verirken, gereksinimlerinize bağlıdır. Eğer yüksek hassasiyet gerekiyorsa veya büyük ondalık sayılarla çalışıyorsanız, Double kullanmak daha iyi olabilir. 
+Ancak, daha az hassasiyet gerektiren durumlar veya bellek kullanımını en aza indirmek istediğiniz durumlar için Float kullanabilirsiniz.
+
 
 
 
