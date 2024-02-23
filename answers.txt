@@ -33,6 +33,18 @@
 7- Bir değişkeni nullable yapmak için ne yapmalıyız?
 	-val nullableString: String? = null kodundaki gibi tipin önüne ? koyarak.
 	-Val number = null şekilde bir değken tanımladığımızda bu değişkenin tipi Nothing olur.
+8- "Null Güvenliği" (Null Safety) kavramını açıklayın.
+	-Kotlin dilinde null safety vardır bu sayede null pointer exeption hatasından dolayı uygulamanın çökmesi ve
+	başka olayların olması engellenir.
+	-? işareti ile bir değişkenin null olabileceğini işaretleriz.
+	-Safe calls(?.) ile propertylere erişirken veya metodları çağorırken hata meydana gelmesini engelleriz. 
+	-Elvis operatörü ile de bir değerin boş gelmesi durumunda default olarak dönülecek değeri verebiliriz.
+	-!! işaretini ise bir değişkenin hiç bir zaman null olmayacağı zamanlarda kullanabiliriz. Bu sayede Kotlin bu değişkenin 
+	null olup olmadığına bakmayacak ve daha performanslı olacak.,
+	
+	
+	
+
 
 	
 
