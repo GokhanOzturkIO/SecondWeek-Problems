@@ -392,6 +392,25 @@ Kotlin’de ise örtük tip genişletme yapılamaz. Bunun nedeni, Kotlin’in ti
 bu dönüşümü açıkça belirtmeniz gerekir.Bu, hatalı dönüşümlerin önlenmesine yardımcı olur ve kodun daha anlaşılır olmasını sağlar. Örneğin, bir Int değerini Long tipine dönüştürmek isterseniz, toLong() fonksiyonunu kullanmanız gerekir:
 
 
+"val b: Byte = 1 ile val i: Int = b ve son olarak print(b == i) gibi bir kod yazıldığında çıktı ne olur? Neden böyle bir çıktı aldığınızı açıklayın.
+
+Bu kodu çalıştırdığınızda bir hata alırsınız. Çünkü val i: Int = b satırında, Byte tipindeki b değişkenini doğrudan Int tipindeki i değişkenine atamaya çalışıyorsunuz.
+Ancak Kotlin, örtük tip genişletmeyi (implicit widening conversions) desteklemez. Yani, daha küçük bir veri tipinden daha büyük bir veri tipine otomatik dönüşüm yapmaz.
+Bu durumu çözmek için, b değişkenini Int tipine açıkça dönüştürmeniz gerekir. İşte düzeltilmiş kod:
+	val b: Byte = 1
+	val i: Int = b.toInt()  // 'b' değişkenini 'Int' tipine dönüştürür
+	print(b == i)      //Bu kodu çalıştırdığınızda, çıktı true olacaktır. Çünkü b değişkeninin Int tipine dönüştürülmüş hali i değişkenine eşittir.
+
+
+5- "val b: Byte = 1 ile val i: Int = b ve son olarak print(b == i) gibi bir kod yazıldığında çıktı ne olur? Neden böyle bir çıktı aldığınızı açıklayın.
+
+Bu kodu çalıştırdığınızda bir hata alırsınız. Çünkü val i: Int = b satırında, Byte tipindeki b değişkenini doğrudan Int tipindeki i değişkenine atamaya çalışıyorsunuz.
+Ancak Kotlin, örtük tip genişletmeyi (implicit widening conversions) desteklemez. Yani, daha küçük bir veri tipinden daha büyük bir veri tipine otomatik dönüşüm yapmaz.
+Bu durumu çözmek için, b değişkenini Int tipine açıkça dönüştürmeniz gerekir. İşte düzeltilmiş kod:
+	val b: Byte = 1
+	val i: Int = b.toInt()  // 'b' değişkenini 'Int' tipine dönüştürür
+	print(b == i)      //Bu kodu çalıştırdığınızda, çıktı true olacaktır. Çünkü b değişkeninin Int tipine dönüştürülmüş hali i değişkenine eşittir.
+
 
 
 
