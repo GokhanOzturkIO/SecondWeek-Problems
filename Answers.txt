@@ -192,6 +192,11 @@ sayısal değişkenlerde alt çizgi (_) kullanımı, sayıların okunabilirliği
 Bu özellik, sayı gruplarını ayırmak için kullanılır ve kodunuzun okunabilirliğini artırabilir. Bu özellik, Kotlin’in Java’dan miras aldığı bir özelliktir.
 
 
+11- == ile neyi karşılaştırırız? === ile neyi karşılaştırırız?
+
+== ile iki değişkenin value'sunu (içerisinde ki değeri) kontrol eder, karşılaştırır. (value eşitliğini kontrol eder)
+=== ile iki değişkenin memoride ki referanslarını kontrol ettirir. (referans eşitliğini kontrol eder)
+
 
 
 
