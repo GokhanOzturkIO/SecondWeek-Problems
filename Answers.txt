@@ -74,6 +74,12 @@ Bir değişkenin tipi null olabilen bir tipe işaret ediyorsa, o değişken null
 Bu, çalışma zamanında null-dereferans hatalarının tümünün artık derleme zamanında gösterileceği anlamına gelir. Bu, programınızın daha güvenli ve hata olasılığının daha düşük olmasını sağlar.
 
 
+9- Bir değişkene null değer atanır ve tip belirtilmezse Kotlin bu değişkeni nasıl yorumlar?
+
+Bir değişkene null değer atanır ve tip belirtilmezse IDE Type Inference(Tip Çıkarımı) sırasında bu değişkenin tipini Nothing? olarak belirler.
+"Nothing" tipi, hiçbir değere sahip olmayan bir tipi ifade eder. Bu tip genellikle herhangi bir fonksiyonun bir değer döndürmek zorunda olmadığı durumlarda veya belirli bir koşulda işlem yapılamadığında kullanılır.
+
+
 
 
 
