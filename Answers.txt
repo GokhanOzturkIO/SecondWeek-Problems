@@ -122,7 +122,14 @@ Bu alt sınıfların değer aralıkları önemlidir çünkü belirli bir değer 
 Bu yüzden sayısal değerlerin büyüklüğüne, hassasiyetine ve işlem türüne göre uygun alt sınıfı kullanmak önemlidir.
 
 
+2- Eğer bir değişkene tip belirtimi yapılmaz ve bir değer atanırsa, Kotlin tip çıkarımını nasıl yapar?
 
+Kotlin de tip çıkarımı, değişkenin tipini değerine göre otomatik belirleyen bir özelliktir eğer bir değişkene tip belirtimi yapılmaz ve bir değer atanırsa, Kotlin değişkenin tipini değer aralığına göre çıkarır.
+eğer eşitliğin karşısında ki değer Int tipinin değer aralığını geçmiyorsa, yani max değerini geçmiyorsa default olarka Int olur. Byte ve Short olmaz o aralıkta olsa bile.
+max değerini aşarsa Int'in bu sefer değişken Long olur.
+Örneğin: var x = 10 ifadesinin x değişkenin tipi Int olacak Byte ve Short aralığında olsa bile default olarak Int ve Long olabilir tipler.
+eğer bu sayıyı yani tiği Int olan bir sayıyı Long yapmak istersek sonuna 'L' koyarız. var x = 10L -> tipi artık Long oldu.
+Ondalık sayılarda ise değişkenin float olması gerektiği belirtilmezse 'f' ve 'F' ile default olarak Double olarak belirlenir tipi.
 
 
 
