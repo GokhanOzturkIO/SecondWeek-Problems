@@ -442,6 +442,18 @@ Int.MAX_VALUE Kotlin’de bir Int’in alabileceği en büyük değeri temsil ed
 ve sonuç negatif bir değer olur. Bu nedenle, result değişkeninin değeri -2 olur. Bu, Int’in maksimum değerinin iki katının Int’in değer aralığına sığmaması ve taşma oluşması nedeniyledir.
 
 
+10- "val x = 5 / 2 println(x == 2)" gibi bir işlemin sonucu ve tipi nedir? Neden böyle olduğunu açıklayın.
+
+Bu kodu çalıştırdığınızda, println(x == 2) ifadesi true çıktısını verir. 5 / 2 işlemi, iki Int tipindeki sayının bölümünü hesaplar. Ancak, bu bir tam sayı bölmesi olduğu için, sonuç yuvarlanır ve ondalık kısmı atılır. Bu nedenle, 5 / 2 işleminin sonucu 2 olur.
+
+
+
+
+
+
+
+
+
 
 
 
