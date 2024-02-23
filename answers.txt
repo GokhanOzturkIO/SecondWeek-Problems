@@ -225,7 +225,9 @@ Bu şekilde yazıldığında ekrana int çıktısını veriyor, long olup olmad�
 
 q10-"val x = 5 / 2 println(x == 2)" gibi bir işlemin sonucu ve tipi nedir? Neden böyle olduğunu açıklayın.
 İşlemin sonucu 2 çıkıyor ve x değişkeninin tipi de Int oluyor. Bölünen ve bölen sayıların ikisi de integer olduğu için sonuç da integer olarak yazıldı. Eğer bölünen veya bölenin yanına .0 koysaydık sonu. 2.5 olacaktı ve tipi de Double olacaktı.
+
 q11-"val x = 5L / 2 println(x == 2L)" gibi bir işlemin sonucu ve tipi nedir? Neden böyle olduğunu açıklayın.
+x'i ekrana yazdırınca 2 sonucunu veriyor ama println(x == 2L) bu şekilde yapınca da true sonucunu veriyor. Sonucu 2L ve tipi de Long, bunun nedeni bölünenin L ile long olduğunun belirtilmiş olması, bölen de L ile belirtilseydi yine aynı sonuç alınırdı.
 
 q12-"val x = 5 / 2.toDouble() println(x == 2.5)" gibi bir işlemin sonucu ve tipi nedir? Neden böyle olduğunu açıklayın.
 
