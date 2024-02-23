@@ -94,8 +94,18 @@ Bir değişkenin null olması, o değişkenin herhangi bir değeri olmadığın�
 Kısacası, null bir değişken hala bellekte yer kaplar, ancak bir değeri olmadığı için ekstra bellek kullanmaz. 
 
 
+12- Nullable bir değişkenle çalışırken hangi operatörleri kullanırız? Bu operatörlerin kullanım farkları nelerdir? Hangisini ne zaman kullanmak daha anlamlıdır?
+
+- ?. Bu operatör, null olmayan bir değeri çağırmak için kullanılır. Eğer değişken null ise, işlemi gerçekleştirmek yerine null döndürür. 
+- !! Bu operatör, bir değişkenin null olmadığını garanti eder. Eğer değişken null ise, NullPointerException fırlatır.
+- ?:(Elvis Operator) Bu operatör, bir ifadenin null olup olmadığını kontrol eder ve null ise belirtilen değeri döndürür
+Hangi operatörün kullanılacağı, duruma bağlıdır:
+Eğer bir değişkenin null olabileceği ve bu durumda özel bir işlem yapılması gerekiyorsa, Elvis operatörü kullanılabilir.
+Eğer bir değişkenin null olabileceği ve bu durumda işlemi atlamak istiyorsanız, Safe Call(?.) operatörü kullanılabilir.
+Eğer bir değişkenin null olmaması gerektiğini biliyorsanız ve null olması durumunda bir hatanın fırlatılmasını istiyorsanız, Not-null Assertion operatörü kullanılabilir.
 
 
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 
