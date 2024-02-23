@@ -63,6 +63,9 @@
 2- Eğer bir değişkene tip belirtimi yapılmaz ve bir değer atanırsa, Kotlin tip çıkarımını nasıl yapar?
 	-Eğer değişkenin değeri int'den büyük ise long olarak tipi belirlenir onun haricinde int'den küçük büyük fark etmeksizin
 	int olarak atanır.
+3- Float değişken oluştururken `F` ve `f` harfleri varken, Long değişken oluştururken neden küçük `l` harfi yoktur?
+	-Çünkü bazı yazı temalarında küçük "l" "ı" harfine benziyor.
+	
 
 
 	
