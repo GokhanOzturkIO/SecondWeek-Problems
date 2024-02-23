@@ -94,6 +94,9 @@ Cevap : Bazı fontlarda küçük L harfi 1(bir) sayısına benzediğinden olası
 Cevap : .(nokta) ayıracını kullanmamız gerekiyor. Çünkü Uluslararası kabul gören ayıraç noktadır. Ancak Türkçe ve bazı dillerde "," belirtme ayıracı olduğundan bu göz ardı edilmemeli ve çeşitli hatalara hazırlıklı olmak gerekmektedir.
 
 - Double ve Float değişkenler ondalık kısımda kaç basamağa kadar işlem yaparlar? Bu sınırın üzerinde gelen ondalık bilgileri için nasıl davranırlar? Hangi durumlar için Float ve hangi durumlar için Double kullanılmalıdır?
+
+Cevap : Float yaklaşık 7, Double yaklaşık 16-17 basamağa kadar işlem yapar. Daha hassas işlemler için Double'ı tercih ederiz. Float 32, Double 64 bit bellek kullanır. Bu sebepten eğer hassas hesaplamalara ihtiyaç duymuyorsak Float kullanmak bellekte daha az yer kullandığından daha mantıklıdır.
+
 - Ondalık(Decimal), Onaltılık (Hexadecimal) ve İkilik (Binary) değişkenleri Kotlin'de nasıl tanımlayabilirsiniz?
 - Sekizlik (Octal) değişkenler Java'da nasıl tanımlanır? Kotlin'de Sekizlik değişken tanımlanabilir mi?
 - "Geleneksel Notasyon" (Conventional Notation) gösterimi nasıl yapılır?
