@@ -358,6 +358,22 @@ is operatörü: Bir nesnenin belirli bir tür olup olmadığını kontrol eder. 
 	} //Bu kodda, obj bir String olmadığı için “Bu bir string değil!” çıktısını alırız. Bu operatörler, Kotlin’in tip güvenliğini sağlamak ve hataları önlemek için kullanılır.
 
 
+2- "Akıllı Dönüşüm" (Smart Cast) ne demektir? Farklı kod örnekleri ile açıklayın. Bu özelliğin sınırlamaları nelerdir?
+
+Bir değişkenin türünü kontrol ettiğimizde ve bu değişkenin belirli bir tür olduğunu bildiğimizde, Kotlin bize bu değişkeni o türmüş gibi kullanma imkanı verir. Buna “Akıllı Dönüşüm” denir.
+
+Örneğin, bir değişkenin String olup olmadığını kontrol ederiz:
+
+	fun demo(x: Any) {
+    		if (x is String) {
+        	print(x.length) // x otomatik olarak String'e dönüştürülür
+    		}
+	}
+Yapay zeka tarafından oluşturulan kod. Dikkatle gözden geçirin ve kullanın. SSS hakkında daha fazla bilgi.
+Bu kodda, x’in String olup olmadığını kontrol ediyoruz. Eğer x bir String ise, x.length ifadesini kullanabiliyoruz. Burada x otomatik olarak String’e dönüştürülür.
+
+Ancak, her durumda “Akıllı Dönüşüm” kullanamayız. Örneğin, bir değişkenin değeri kodumuz çalışırken değiştirilebiliyorsa, Kotlin bu değişken için “Akıllı Dönüşüm” yapamaz. Çünkü değişkenin türü kontrol edildikten sonra değişebilir ve bu durum hatalara yol açabilir.
+Bu nedenle, “Akıllı Dönüşüm” genellikle sabit (val) değişkenlerle veya değiştirilemeyen (var) değişkenlerle kullanılır. Bu, "Akıllı Dönüşüm"ün sınırlamalarıdır.
 
 
 
