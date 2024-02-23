@@ -217,6 +217,11 @@ q8-"val result = 1L + 3" // "Long + Int" gibi bir işlemin sonucunda "result" de
 Bu şekilde bir kod yazdığımda else if bloğu yüzünden kod hata verdi, o blpğu çıkarıp çalıştırınca ekrana long yazdırdı. Bu da result değişkenine L ile belirtip long aralığında bir sayı eklediğimiz için bu değişken otomatik olarak long türünde atandı.
 
 q9-"val result = Int.MAX_VALUE + Int.MAX_VALUE" gibi bir işlemin sonucunda "result" değişkeninin tipi ve değeri ne olur? Neden böyle olduğunu açıklayın.
+    val result2 = Int.MAX_VALUE + Int.MAX_VALUE
+    if(result2 is Int){
+        println("int")
+    }
+Bu şekilde yazıldığında ekrana int çıktısını veriyor, long olup olmadığını kontrol eden bir if bloğu yazıldığında da yine hata verdi. Bu değişjenin int tipinde olmasının nedeni değişkene eklediğimiz iki sayının int aralığındaki değerler olmasıydı, program sayların toplamı int aralığında mı diye kontrol etmiyor ve bu yüzden de tipi int olarak kalıyor.
 
 q10-"val x = 5 / 2 println(x == 2)" gibi bir işlemin sonucu ve tipi nedir? Neden böyle olduğunu açıklayın.
 
