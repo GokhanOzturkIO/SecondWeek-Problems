@@ -218,6 +218,9 @@ Cevap : Byte ve Int'i `==` ile tanımlamak mümkün olmadığından hata alırı
 Cevap : Long + Int şeklinde bir toplam yok burada. result değişkeninde type inferince olduğundan long olarak tanımlar ve tipi long olur. Değer olarak da 4 döndürür.
 
 - "`val result = Int.MAX_VALUE + Int.MAX_VALUE`" gibi bir işlemin sonucunda "result" değişkeninin tipi ve değeri ne olur? Neden böyle olduğunu açıklayın.
+
+Cevap : Değişkenin tipi integer olur fakat sonucu hatalı verir. Çünkü sayı integer aralığının dışında kalır.
+
 - "`val x = 5 / 2` `println(x == 2)`" gibi bir işlemin sonucu ve tipi nedir? Neden böyle olduğunu açıklayın.
 
 Cevap : True yanıtını alırız çünkü typep inference gereği x int olarak tanımlanır ve sayının küsüratlı kısmınıa almaz.
