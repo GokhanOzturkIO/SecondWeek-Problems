@@ -15,5 +15,11 @@
 	-Immutable ve ReadOnly değişkenlerin her ikisi de ilk değer atamasından sonra başka bir değer atanmaz. Ama read-only değişkenin değeri class içerisindeki getter'lar ile değiştirilebilir.
 	-Val read-only'dir immutable değildir. Çünkü bir class'ın içindeki Val değişkenin değerini get metodu ile istediğimiz 
 	şekilde değiştirebilip geri döndürebiliriz. 
+4- "Tip Çıkarımı" (Type inference) kavramını açıklayın. Hangi durumlarda tip belirtmek kesin olarak gereklidir?
+	-Bir değişkeni tipini belirtmeden oluşturduğumuz zamanlarda Kotlinin bu değişkenin tipini otomatik olarak algılamasıdır.
+	-Bazen karışık kod yapısı olduğunda Kotlin tip çıkarımını yapamaz veya doğru yapmaz. Bu durumda ise hata meydana gelir.
+	 val number = if (condition) 42 else 3.14 // Error: Cannot infer the type
+	-Overload metodlarla uğraşırken tipleri açık bir şekilde belirtmek lazımdır. 
+	-kompleks lampda fonksiyonlarında tipleri açık bir şekilde belirtmek gerekebilir.
 	
 	
