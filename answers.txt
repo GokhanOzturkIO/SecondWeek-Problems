@@ -1,0 +1,9 @@
+1- `val` ile `var` arasındaki fark nedir?
+	-val ile var arasındaki temel fark şudur: val anahtar kelimesi ile oluşturduğumuz bir değişkenin ilk atamasını yaptıktan
+	sonra bir daha atama işlemi ile değişkenin değerini değiştiremeyiz. Var anahtar kelimesinde ise bu durum tam tersi olup birden fazla kez
+	değişkenin değerini değiştirebiliriz.
+	-Val ile Var arasında performans olarak çok az bir fark vardır. Val anahtar kelimesi arka planda, değişkenin ilk atamasının
+	yapılıp yapılmadığına dair bir kontrol yapıtğı için ço az daha yavaştır. Akademik olarak Var daha hızlıdır ama günlük hayatta ve
+	mutli-tread işlemlerde Val daha hızlıdır.
+	
+	
