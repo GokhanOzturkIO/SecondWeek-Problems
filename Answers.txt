@@ -334,8 +334,10 @@ Sonuç olarak, Kotlin’de işaretsiz tam sayılarla çalışırken overflow ve 
     ULong -> 0 .. 18,446,744,073,709,551,615 (2^64 - 1)
 
 
+9- "İşaretsiz" değişken türleri (UInt, ULong vs.) kullanırken, Java API'leri ile uyumluluk konusunda ne gibi sorunlar olabilir? Bunları çözmek için neler yapabilirsiniz?
 
-
+“İşaretsiz” değişken türleri (UInt, ULong vs.) Kotlin’de mevcut olmasına rağmen, Java’da bu türler yoktur. Bu durum, Kotlin’den Java API’lerine geçiş yaparken uyumluluk sorunlarına neden olabilir.
+Dönüşümler: İşaretsiz türleri, karşılık gelen işaretli türlerine dönüştürebilirsiniz. Örneğin, bir UInt’i bir Int’e dönüştürebiliriz.
 
 
 
