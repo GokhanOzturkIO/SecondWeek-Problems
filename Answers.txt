@@ -27,3 +27,21 @@ readonly -> değeri okunabilen set edilemeyen (ilk değer atamasından sonra tek
 val anahtar kelimesi ile tanımlanan bir değişkenin kendisi değişmez değildir. Örneğin, bir val listesi, listeye yeni öğeler ekleyebilir veya mevcut öğeleri çıkarabilir, ancak val listesi başka bir listeye yönlendirilemez. 
 Bu nedenle, val değişkenler aslında “değişmez” değil, “salt okunur” olarak açıklanmalıdır. Bu, val değişkenlerin değerlerinin değiştirilemeyeceği, ancak atıfta bulundukları nesnelerin durumlarının değiştirilebileceği anlamına gelir.
 
+
+4- "Tip Çıkarımı" (Type inference) kavramını açıklayın. Hangi durumlarda tip belirtmek kesin olarak gereklidir?
+
+değişkenlerin tanımlanması sırasında tip belirtmeden,derleyicinin verdiğimiz değere bakarak değişkeninin türünü çıkartmasıdır diyebiliriz. kısaca bir programlama dilinin, bir değişkenin veya ifadenin türünü otomatik olarak belirlemesine olanak sağlayan bir özelliktir.
+val name = "Samet"  // Derleyici 'name' değişkeninin türünü 'String' olarak çıkarır.
+
+Eğerki değikenin değerini direkt olarak atamıyorsak, ilk değer atamasını yapmıyorsak sonradan değerini atıyacaksak bu durumda bunun tipinin ne olacağını IDE'ye belirtmemiz lazım 
+bazı durumlardaysa, tip belirtmek kesin olarak gereklidir:
+-Değişkenin ilk değeri yoksa: Eğer bir değişken tanımlanırken ilk değer atanmıyorsa, derleyici değişkenin türünü çıkaramaz. Bu durumda, değişkenin türünü açıkça belirtmek gerekir.
+var age: Int // 'age' değişkeninin türü açıkça belirtilmiştir.
+-Fonksiyon dönüş tiplerinde: Kotlin’de, fonksiyonların dönüş türlerini belirtmek zorunludur (tek istisna, hiçbir şey dönmeyen fonksiyonlardır).
+fun add(a: Int, b: Int): Int {
+    return a + b
+}
+
+Bir başka önemsememiz gereken durum da Number değişkenler için bilmemiz gereken 
+ - Tanımladığımız sayı Int değer aralığından büyük değilse veri tipi Int olur.
+ - eğer sayı Int değer aralığını geçiyorsa değişken türü Long olur.
