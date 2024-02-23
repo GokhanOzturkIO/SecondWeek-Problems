@@ -80,6 +80,13 @@ Bir değişkene null değer atanır ve tip belirtilmezse IDE Type Inference(Tip 
 "Nothing" tipi, hiçbir değere sahip olmayan bir tipi ifade eder. Bu tip genellikle herhangi bir fonksiyonun bir değer döndürmek zorunda olmadığı durumlarda veya belirli bir koşulda işlem yapılamadığında kullanılır.
 
 
+10- İlkel bir değişkenin nullable olması ile null değer alamaması arasında bellek yönetimi açısından nasıl farklar vardır?
+
+Bir değişkenin nullable olması, yani null değer alabilmesi, bellekte biraz daha fazla yer kaplar. Çünkü bu değişken hem gerçek değeri (örneğin bir sayı, bir metin vs.) hem de bu değişkenin null olup olmadığını kontrol etmek için ekstra bir bilgi saklar. 
+Öte yandan, null değer alamayan bir değişken sadece gerçek değeri saklar ve bu nedenle daha az bellek kullanır. Yani, null değer alabilen bir değişken, null değer alamayan bir değişkene göre biraz daha fazla bellek kullanır.
+Bu, genellikle performansı çok fazla etkilemez, ancak çok büyük veri setleriyle çalışırken önemli olabilir.
+
+
 
 
 
