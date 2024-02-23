@@ -149,6 +149,12 @@ Kotlin’de Float ve Double tipleri, IEEE 754 standardına uyar.
 Bu iki tip arasındaki fark, sakladıkları kayan noktalı sayıların hassasiyetidir. Double tipi, Float tipinden daha fazla hassasiyet sağlar ve bu nedenle daha büyük veya daha hassas sayıları temsil etmek için kullanılır.
 
 
+5- Double ve Float değişkenlerle çalışırken ondalık ayıracı olarak hangi işaretler kullanılır? Bu ayıraçların kullanımında nelere dikkat etmek gerekir?
+
+Kotlin’de Double ve Float değişkenlerle çalışırken ondalık ayıracı olarak nokta (.) kullanılır1. Bu, IEEE 754 standardına uygundur
+Veritabanı dili ve Kotlin dilinde ondalık ayıracının farklı olması durumunda, veri dönüşümü ve işlemleri sırasında hatalar oluşabilir.
+Örneğin, veritabanından alınan bir değer virgül (,) ile ondalık ayıracı olarak kullanıyorsa ve bu değeri Kotlin’de nokta (.) ile ondalık ayıracı olan bir Float veya Double değişkenine dönüştürmeye çalışırsanız, bu bir hata oluşturabilir. Bu durumlara dikkat etmeliyiz.
+
 
 
 
