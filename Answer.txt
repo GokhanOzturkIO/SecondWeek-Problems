@@ -359,4 +359,10 @@ print(b == i) kod satırından ise == cannot be applied Byte and Int hatasını 
 
 ===========================
 
+43-) Sayısal değişkenlerde açık dönüşüm (Explicit Type Conversion) yaparken hangi fonksiyonları kullanabilirsiniz?
+
+toByte(), toShort(), toDouble(), toFloat(), toInt(), toLong()
+
+
+===========================
 
