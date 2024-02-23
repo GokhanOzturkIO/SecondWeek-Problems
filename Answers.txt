@@ -164,6 +164,28 @@ Hangi tipin kullanılacağına karar verirken, gereksinimlerinize bağlıdır. E
 Ancak, daha az hassasiyet gerektiren durumlar veya bellek kullanımını en aza indirmek istediğiniz durumlar için Float kullanabilirsiniz.
 
 
+7- Ondalık(Decimal), Onaltılık (Hexadecimal) ve İkilik (Binary) değişkenleri Kotlin'de nasıl tanımlayabilirsiniz?
+
+Ondalık (Decimal): Ondalık sayılar doğrudan tanımlanabilir. Örneğin, val decimalNumber = 123
+Onaltılık (Hexadecimal): Onaltılık sayılar 0x veya 0X öneki ile tanımlanır. Örneğin, val hexNumber = 0x0F
+İkilik (Binary): İkilik sayılar 0b veya 0B öneki ile tanımlanır. Örneğin, val binaryNumber = 0b00001011
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
