@@ -65,6 +65,12 @@
 	int olarak atanır.
 3- Float değişken oluştururken `F` ve `f` harfleri varken, Long değişken oluştururken neden küçük `l` harfi yoktur?
 	-Çünkü bazı yazı temalarında küçük "l" "ı" harfine benziyor.
+4- Tek duyarlıklı (Single precision) ve Çift duyarlıklı (Double precision) kavramlarını açıklayın.
+	-Single precision float sayı tipidir. Ondalıklı sayılarda kullanılır. 32 bit'dir.
+	-Double precision double sayı tipidir. Bu da ondalıklı sayılar kullanılır. 64 bit'dir.
+	-Bunların farkı ise double precision daha fazla virgulden sonra hassasiyet sağlar ve daha hassas sonuçlar verir
+	ama daha fazla yer kaplar.
+
 	
 
 
