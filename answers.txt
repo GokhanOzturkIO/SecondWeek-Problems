@@ -56,6 +56,11 @@
 	-Ama eğer bu değişken basit bir yerde örneğin kullanıcını isminin yazdığı bir karşılama ekranı ise ? kullanabiliriz.
 	
 
+### Sayılar
+1- Kaç farklı tipte "number" sınıfı miras alan "alt sınıf" (child class) vardır? Bunların değer aralıkları neden önemlidir?
+	-Byte, short, int, long olarak 4 tane alt sınıf vardır. Eğer çok fazla işlem yapılacak ve gereğinden fazla bir 
+	alan kaplayan bir tip verilmiş ise bu performans sorunlar yaratabilir.
+
 
 
 	
