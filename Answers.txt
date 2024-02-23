@@ -288,6 +288,15 @@ Kotlin’de işaretsiz tam sayılar, inline sınıflar olarak uygulanır ve tek 
 Bu, Kotlin’in işaretsiz tam sayıları işlemek için ek bellek kullanmadan, işaretli tam sayıları kullanarak işaretsiz tam sayıları temsil etmesini sağlar. Bu, performansı artırır ve bellek kullanımını azaltır.
 
 
+3- "İşaretsiz" değişkenlerin harf gösterimi nasıldır?
+
+Kotlin’de işaretsiz tam sayıları daha kolay kullanabilmek için, bir tam sayı sabitini belirli bir işaretsiz türü belirten bir sonek ile etiketleme yeteneği sağlar.
+val uByte: UByte = 42u  // UByte, beklenen tür sağlanmış
+val uShort: UShort = 42u  // UShort, beklenen tür sağlanmış
+val uInt: UInt = 42U  // UInt, beklenen tür sağlanmış
+val uLong: ULong = 42uL  // ULong, beklenen tür sağlanmış
+Bu örnekte, u veya U sonekleri bir tam sayı sabitini işaretsiz bir tam sayı olarak etiketler. Belirtilen tür, tam sayı sabitinin kesin türünü belirler. Eğer beklenen bir tür sağlanmazsa, derleyici sabitin boyutuna bağlı olarak UInt veya ULong kullanır:
+
 
 
 
