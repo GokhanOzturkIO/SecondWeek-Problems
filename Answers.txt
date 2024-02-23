@@ -67,6 +67,11 @@ Bir değişkene nullable değer ataması yapabilmek için değişken tipinin son
 var degisken: String? = null
 
 
+8- "Null Güvenliği" (Null Safety) kavramını açıklayın.
+
+“Null Safety” (Null Güvenliği), bir programlama dilinde null referans hatalarını önlemeyi amaçlar. Kotlin’de, tip sistemi null olabilen (nullable) ve null olamayan (non-nullable) referansları ayırt eder. 
+Bir değişkenin tipi null olabilen bir tipe işaret ediyorsa, o değişken null değerine sahip olabilir. Ancak, bir değişkenin tipi null olamayan bir tipe işaret ediyorsa, o değişken null değerine sahip olamaz.
+Bu, çalışma zamanında null-dereferans hatalarının tümünün artık derleme zamanında gösterileceği anlamına gelir. Bu, programınızın daha güvenli ve hata olasılığının daha düşük olmasını sağlar.
 
 
 
