@@ -49,6 +49,12 @@
 11- Nullable bir değişkenin bir değere sahip olması ile null olması arasında bellek yönetimi açısından nasıl bir fark vardır? Null değer almış bir değişken bellekte yer kaplamaz diyebilir miyiz?
 	-Nullable bir değişken bir değere sahip olduğunda stack'de ve heap'de yer kaplar. Eğer bu değişken null ise heapde bir yer kaplamaz
 	ama stack'de halen bir yer kaplar bu yüzden de null değer almış bir değişken genede yer kaplar.
+12- Nullable bir değişkenle çalışırken hangi operatörleri kullanırız? Bu operatörlerin kullanım farkları nelerdir? Hangisini ne zaman kullanmak daha anlamlıdır?
+	-? öperatörü ile bu değişkenin null olabileceğini Kotlin diline anlatmış oluruz. !! operatörü ile de bu değişkenin null olamayacağını anlatırız.
+	-Eğer bir değişken uygulamadaki önemli bir olayda kullanılıyorsa örneğin bir banka uygulamasında dövizle alakalı 
+	bir işlem yapılırken bir yerden gelen verinin null veya yanlış gelip işlemin devam etmesinden yanı sıra uygulamanın çökmesini göze alabiliriz.
+	-Ama eğer bu değişken basit bir yerde örneğin kullanıcını isminin yazdığı bir karşılama ekranı ise ? kullanabiliriz.
+	
 
 
 
