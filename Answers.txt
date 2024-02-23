@@ -435,6 +435,11 @@ toChar(): Değişkeni Char tipine dönüştürür.
 İki farklı sayısal tür arasında bir işlem yapıldığında, sonucun tipi genellikle daha geniş olan tür olur.(değişkenin tipi büyük sayının tipinde olacaktır)
 
 
+9- "val result = Int.MAX_VALUE + Int.MAX_VALUE" gibi bir işlemin sonucunda "result" değişkeninin tipi ve değeri ne olur? Neden böyle olduğunu açıklayın.
+
+“val result = Int.MAX_VALUE + Int.MAX_VALUE” kodunu çalıştırdığınızda, result değişkeninin tipi Int olur. Ancak, bu işlem taşma (overflow) nedeniyle beklenmeyen bir sonuç verir.
+Int.MAX_VALUE Kotlin’de bir Int’in alabileceği en büyük değeri temsil eder ve bu değer 2,147,483,647’dir. Int.MAX_VALUE + Int.MAX_VALUE işlemi, bu değerin iki katını hesaplar, bu da Int’in maksimum değerini aşar.
+ve sonuç negatif bir değer olur. Bu nedenle, result değişkeninin değeri -2 olur. Bu, Int’in maksimum değerinin iki katının Int’in değer aralığına sığmaması ve taşma oluşması nedeniyledir.
 
 
 
