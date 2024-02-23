@@ -208,6 +208,13 @@ toChar()- char a çevirir
 boolean türü için dönüşüm yoktur
 
 q8-"val result = 1L + 3" // "Long + Int" gibi bir işlemin sonucunda "result" değişkeninin tipi ve değeri ne olur? Neden böyle olduğunu açıklayın.
+    val result = 1L + 3
+    if (result is Long) { 
+        println("long")
+    } else if (result is Int) {
+        println("integer")
+    }
+Bu şekilde bir kod yazdığımda else if bloğu yüzünden kod hata verdi, o blpğu çıkarıp çalıştırınca ekrana long yazdırdı. Bu da result değişkenine L ile belirtip long aralığında bir sayı eklediğimiz için bu değişken otomatik olarak long türünde atandı.
 
 q9-"val result = Int.MAX_VALUE + Int.MAX_VALUE" gibi bir işlemin sonucunda "result" değişkeninin tipi ve değeri ne olur? Neden böyle olduğunu açıklayın.
 
