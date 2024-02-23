@@ -138,6 +138,9 @@ Cevap : Toplama(+),Çıkarma(-),Çarpma(x),Bölme(/) ve mod(%) işlemleri kullan
 Cevap : >,< >=,<=,== ve != kullanılır
 
 - Bit düzeyinde operatörler (Bitwise operators) nelerdir? Ne amaçla kullanılır? Kotlin'de bunları nasıl kullanabilirsiniz?
+
+Cevap : &&(ve), ||(veya) vardır. İki değişkenin birbirine bağlı olduğu durumlarda kullanılır. Örneğin a değişkenin 10'dan büyük olduğu ve b değişkenin 3'den küçük olduğu durum.  
+
 - Kotlin'de büyük sayılarla çalışırken hangi ek türlerden yararlanılır ve bu türlerin sınırları nelerdir?
 - Double ve Float değişkenler kullanılırken "yuvarlama" davranışı nasıldır? Bu nasıl değiştirilebilir?
 
