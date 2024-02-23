@@ -125,6 +125,9 @@ Yukarıdaki örnekte parantez içerisinde kullandığımız sayı kaçlık siste
 Cevap : Underscore (_) genelde uzun basamaklı sayıların kaç basamaklı olduğunu daha rahat görmemizi sağlar. Örneğin 1000000 sayısını 1_000_000 şeklinde yazarsak daha kolay görmüş oluruz. Kotlin underscore'ları görmezden gelir yani sonuçd değişmez.
 
 - `==` ile neyi karşılaştırırız? `===` ile neyi karşılaştırırız?
+
+Cevap : `==` ile value yani değeri kıyaslarız. `===` ile değişkenin memorydeki adresini,bulunduğu konumu kıyaslarız.
+
 - `===` operatörü ile karşılaştırma yaparken Byte değer aralığı neden önemlidir? Kotlin bu aralığa göre neden özel bir davranış sergiler?
 - Sayısal değişkenlerde hangi matematiksel operatörler kullanılabilir?
 - Sayısal değişkenlerde hangi karşılaştırma operatörleri kullanılabilir?
