@@ -182,6 +182,9 @@ Cevap : Değişken tipleri Unsigned olur. İkisi de UInt sınırları içerisind
 Cevap : var a:ULong = 10u şeklinde tanımlayabiliriz.
 
 - "İşaretsiz" değişkenlerin kullanım amaçları nelerdir?
+
+Cevap : Bir değişkenin daha fazla yer kaplamasını istemiyorsak ve eğer negatif sayılarla işimiz yoksa kullababiliriz.
+
 - "İşaretsiz" değişkenlerle yapılan matematiksel işlemlerde, özellikle büyük sayılarla çalışırken karşılaşılabilecek taşma (overflow) ve taşma olmaması (underflow) durumları için Kotlin nasıl bir yönetim sağlar?
 - "İşaretsiz" değişkenlerin sınırlamaları nelerdir?
 - "İşaretsiz" değişken türleri (UInt, ULong vs.) kullanırken, Java API'leri ile uyumluluk konusunda ne gibi sorunlar olabilir? Bunları çözmek için neler yapabilirsiniz?
