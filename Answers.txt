@@ -186,6 +186,11 @@ Ondalık Sayılar: Varsayılan olarak Double tipindedir ve ondalık kısmı nokt
 Float Sayılar: f veya F ile belirtilir. Örneğin, 123.5f.
 
 
+10- Sayısal değişkenlerde alt çizgi (underscore) nasıl kullanılır? Kotlin bunu nasıl yorumlar?
+
+sayısal değişkenlerde alt çizgi (_) kullanımı, sayıların okunabilirliğini artırmak için kullanılır. Örneğin, 1_000_000 gibi bir kullanım, sayının bir milyon olduğunu daha net bir şekilde gösterir. 
+Bu özellik, sayı gruplarını ayırmak için kullanılır ve kodunuzun okunabilirliğini artırabilir. Bu özellik, Kotlin’in Java’dan miras aldığı bir özelliktir.
+
 
 
 
