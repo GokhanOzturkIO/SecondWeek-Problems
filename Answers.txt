@@ -412,6 +412,11 @@ Bu durumu çözmek için, b değişkenini Int tipine açıkça dönüştürmeniz
 	print(b == i)      //Bu kodu çalıştırdığınızda, çıktı true olacaktır. Çünkü b değişkeninin Int tipine dönüştürülmüş hali i değişkenine eşittir.
 
 
+6- "val b: Byte = 1 ile val i: Int = b.toInt() ve son olarak print(b == i) gibi bir kod yazıldığında çıktı ne olur? Neden böyle bir çıktı aldığınızı açıklayın.
+
+Bu kodu çalıştırdığınızda, çıktı true olacaktır. Çünkü b.toInt() ifadesi, Byte tipindeki b değişkenini Int tipine dönüştürür.
+b değişkeninin Int tipine dönüştürülmüş hali i değişkenine eşittir. Bu yüzden, b == i ifadesi true değerini döndürür
+
 
 
 
