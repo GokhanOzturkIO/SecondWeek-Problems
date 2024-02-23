@@ -170,6 +170,9 @@ Cevap : Unsigned değişkenler mutlak değerce kullanılan değişkenlerdir. Ör
 
 - "İşaretsiz" değişkenler nasıl bir sınıf yapısında tutulurlar? Bu neden önemlidir?
 - "İşaretsiz" değişkenlerin harf gösterimi nasıldır?
+
+Cevap : u ve U ile gösterilir. 
+
 - "`val a1 = 42u` ve `val a2 = 0xFFFF_FFFF_FFFFu`" değişkenlerin tipleri ne olur? Neden?
 - "İşaretsiz" "Long" harf gösterimi nasıl yapılır?
 - "İşaretsiz" değişkenlerin kullanım amaçları nelerdir?
