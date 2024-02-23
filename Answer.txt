@@ -328,4 +328,18 @@ yukarıdaki cast işleminde String, Int tipine cast edilemediği için null değ
 
 ===========================
 
+40-) Sayısal değişkenlerde örtük tip genişletme (implicit widening conversions) ne demektir? Kotlin'de bu neden yapılamaz?
+
+Açıkca belirtilmeden otomatik olarak tip dönüşüm işleminin yapılmasıdır. 
+
+fun getProfit(profit : Int) {
+
+   println("Profit: $profit")
+
+}
+
+örneğin yukarıdaki fonksiyon Int tipinde bir parametre istemektedir. Biz buna float tipinde bir parametre verdiğimizde Kotlin bunu kabul etmeyecektir. Çünkü kapalı tip dönüşümü kotlinde desteklenmez. float tipindeki bir değişkeni parametre olarak vermemiz için toInt() fonksiyonundan faydalanmamız gerekmektedir.
+
+===========================
+
 
