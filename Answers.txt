@@ -87,6 +87,12 @@ Bir değişkenin nullable olması, yani null değer alabilmesi, bellekte biraz d
 Bu, genellikle performansı çok fazla etkilemez, ancak çok büyük veri setleriyle çalışırken önemli olabilir.
 
 
+11- Nullable bir değişkenin bir değere sahip olması ile null olması arasında bellek yönetimi açısından nasıl bir fark vardır? Null değer almış bir değişken bellekte yer kaplamaz diyebilir miyiz?
+
+Bir değişkenin null olması, o değişkenin herhangi bir değeri olmadığını gösterir. Ancak bu, bellekte hiç yer kaplamadığı anlamına gelmez. Null bir değişken bile belirli bir bellek alanına ihtiyaç duyar çünkü değişkenin tipi ve diğer bilgileri hala saklanmalıdır.
+Örneğin, null bir Integer değişkeni bile bellekte yer kaplar çünkü bu değişkenin bir Integer olduğunu belirtmek için bellekte yer ayrılır. Ancak bu değişkenin değeri null olduğu için, bu değişkenin bir sayı değerini saklamak için ekstra bellek ayrılmaz.
+Kısacası, null bir değişken hala bellekte yer kaplar, ancak bir değeri olmadığı için ekstra bellek kullanmaz. 
+
 
 
 
