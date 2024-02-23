@@ -376,6 +376,13 @@ Ancak, her durumda “Akıllı Dönüşüm” kullanamayız. Örneğin, bir değ
 Bu nedenle, “Akıllı Dönüşüm” genellikle sabit (val) değişkenlerle veya değiştirilemeyen (var) değişkenlerle kullanılır. Bu, "Akıllı Dönüşüm"ün sınırlamalarıdır.
 
 
+3- "Güvenli & Güvensiz" operatörler nelerdir?
+
+- Güvenli Dönüşüm Operatörü (as?): as? operatörü, bir değişkeni belirli bir tipe dönüştürmeye çalışır. Eğer dönüşüm başarısız olursa, bu operatör null döndürür. Örneğin:
+	val x: String? = y as? String         //Bu kodda, y bir String olmadığında, x null olur.
+
+- Güvensiz Dönüşüm Operatörü (as): as operatörü, bir değişkeni belirli bir tipe dönüştürmeye çalışır. Eğer dönüşüm başarısız olursa, bu operatör bir hata fırlatır. Bu nedenle, bu operatör “güvensiz” olarak adlandırılır. Örneğin:
+	val x: String = y as String          //Bu kodda, y bir String olmadığında bu kod bir hata fırlatır.
 
 
 
