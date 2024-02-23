@@ -142,6 +142,15 @@ Cevap : >,< >=,<=,== ve != kullanılır
 Cevap : &&(ve), ||(veya) vardır. İki değişkenin birbirine bağlı olduğu durumlarda kullanılır. Örneğin a değişkenin 10'dan büyük olduğu ve b değişkenin 3'den küçük olduğu durum.  
 
 - Kotlin'de büyük sayılarla çalışırken hangi ek türlerden yararlanılır ve bu türlerin sınırları nelerdir?
+
+Cevap : BigInteger ya da BigDecimal kullanılabilir. 
+
+BigInteger: Sınırsız büyüklükte tamsayıları depolayabilir.
+
+BigDecimal: Ondalık sayıları tam hassasiyetle temsil edebilir.
+
+Dezavantajları daha fazla bellek kullanımı ve daha yavaş olmasıdır.
+
 - Double ve Float değişkenler kullanılırken "yuvarlama" davranışı nasıldır? Bu nasıl değiştirilebilir?
 
 ### İşaretsiz Sayılar
