@@ -230,6 +230,7 @@ q11-"val x = 5L / 2 println(x == 2L)" gibi bir işlemin sonucu ve tipi nedir? Ne
 x'i ekrana yazdırınca 2 sonucunu veriyor ama println(x == 2L) bu şekilde yapınca da true sonucunu veriyor. Sonucu 2L ve tipi de Long, bunun nedeni bölünenin L ile long olduğunun belirtilmiş olması, bölen de L ile belirtilseydi yine aynı sonuç alınırdı.
 
 q12-"val x = 5 / 2.toDouble() println(x == 2.5)" gibi bir işlemin sonucu ve tipi nedir? Neden böyle olduğunu açıklayın.
+Sonucu 2.5 ve tipi de Double. Çünkü bölenin yanına .toDobule() eklendi ve bu da onu Double bir sayı yaptı, bu şekilde de sonuç Double olarak ortaya çıktı.
 
 q13-Kotlin'de tür dönüşümü yapılırken, dönüşümün başarısız olması durumunda TypeCastException nasıl ele alınır ve bu tür hataların önüne geçmek için hangi önlemler alınabilir?
 
