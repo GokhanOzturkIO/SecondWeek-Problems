@@ -153,6 +153,16 @@ Dezavantajları daha fazla bellek kullanımı ve daha yavaş olmasıdır.
 
 - Double ve Float değişkenler kullanılırken "yuvarlama" davranışı nasıldır? Bu nasıl değiştirilebilir?
 
+Cevap : Kotlin'de varsayılan olan davranış küsüratlı kısmın atılmasıdır. Fakat bunu değiştirmenin metodları bulunmaktadır.
+
+`roundTo(n): Ondalık basamakları belirli bir basamak sayısına kadar yuvarlar.`
+
+`ceilToInt(): Ondalık sayıyı en yakın en büyük tam sayıya yuvarlar.`
+
+`floorToInt(): Ondalık sayıyı en yakın en küçük tam sayıya yuvarlar.`
+
+Bu fonksiyonlar sayesinde yuvarlama işlemleri yapılabilir.
+
 ### İşaretsiz Sayılar
 - "İşaretsiz" (Unsigned) değişkenler ne demektir? İşaretli olanlarla aralarındaki fark nedir?
 - "İşaretsiz" değişkenler nasıl bir sınıf yapısında tutulurlar? Bu neden önemlidir?
