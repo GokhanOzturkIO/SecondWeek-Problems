@@ -171,6 +171,10 @@ Onaltılık (Hexadecimal): Onaltılık sayılar 0x veya 0X öneki ile tanımlan�
 İkilik (Binary): İkilik sayılar 0b veya 0B öneki ile tanımlanır. Örneğin, val binaryNumber = 0b00001011
 
 
+8- Sekizlik (Octal) değişkenler Java'da nasıl tanımlanır? Kotlin'de Sekizlik değişken tanımlanabilir mi?
+
+Java’da sekizlik (Octal) değişkenler 0 öneki ile tanımlanır. Örneğin, int octalNumber = 017; ifadesi, sekizlik bir sayıyı temsil eder.
+Ancak, Kotlin’de sekizlik (Octal) değişkenler desteklenmez. Yani, Kotlin’de doğrudan bir sekizlik sayıyı temsil eden bir değişken tanımlayamazsınız. Bunun yerine, sayıyı ondalık veya başka bir biçimde tanımlayıp, gerektiğinde sekizlik biçime dönüştürebilirsiniz.
 
 
 
