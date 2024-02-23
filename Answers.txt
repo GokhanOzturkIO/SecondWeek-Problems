@@ -1,0 +1,10 @@
+ --------Temel Türler & Null Güvenliği--------
+
+1- val ile var arasındaki fark nedir?
+
+- val bir değişkenin değerinin bir kez atanıp sonrasında değiştirilemeyeceği ve sabit olduğu anlamına gelir. değişkenin tipi ve değeri belirlendikten sonra değiştirilemez.
+sabit değerler ve değişmesini istemediğimiz verilerde kullanırız.
+- var bir değişkenin değerinin herhangi bir zamanda değiştirilebileceği ve bu nedenle değişkenin değerinin değişken olabileceği anlamına gelir. Esneklik sağlar, verilen bir değer sonradan değiştirilebilir.
+Performans açısından farka bakarsak val ile var arasındaki performans farkı yok denilecek kadar azdır. val değişkenler var değişkenlere göre daha maliyetlidir, bir if şartı vardır val'da, var daha performanslı val'a göre 
+(multi-thread işlemleri saymazsak) performans farkı çok azdır. Salt dümdüz bir kod üzerinde konuşursak var daha performanslı (multi-thread işlemleri yoksa) - günlük hayat problemlerinde val daha performanslı 
+kısaca özetlemek gerekirse multi-thread işlemlerde val daha performanslı, multi-thread olmayan işlemlerde var daha performanslıdır.
