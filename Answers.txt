@@ -340,6 +340,23 @@ Sonuç olarak, Kotlin’de işaretsiz tam sayılarla çalışırken overflow ve 
 Dönüşümler: İşaretsiz türleri, karşılık gelen işaretli türlerine dönüştürebilirsiniz. Örneğin, bir UInt’i bir Int’e dönüştürebiliriz.
 
 
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+-------- Tür Dönüşümü -------- 
+
+1- is ve !is operatörlerinin kullanımını açıklayın.
+
+is operatörü: Bir nesnenin belirli bir tür olup olmadığını kontrol eder. Eğer nesne belirtilen türdeyse, true döndürür. Örneğin:
+	if (obj is String) {
+    		print(obj.length)  // obj otomatik olarak String'e dönüştürülür
+	}    //Bu kodda, obj bir String olduğu için “Bu bir string!” çıktısını alırız.
+
+!is operatörü: Bir nesnenin belirli bir tür olup olmadığını kontrol eder. Eğer nesne belirtilen türde değilse, true döndürür. Örneğin:
+	val obj = 123
+	if (obj !is String) {
+   	print("Bu bir string değil!")
+	} //Bu kodda, obj bir String olmadığı için “Bu bir string değil!” çıktısını alırız. Bu operatörler, Kotlin’in tip güvenliğini sağlamak ve hataları önlemek için kullanılır.
+
 
 
 
