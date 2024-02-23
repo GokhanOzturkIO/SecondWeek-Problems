@@ -198,6 +198,19 @@ Bu özellik, sayı gruplarını ayırmak için kullanılır ve kodunuzun okunabi
 === ile iki değişkenin memoride ki referanslarını kontrol ettirir. (referans eşitliğini kontrol eder)
 
 
+12- === operatörü ile karşılaştırma yaparken Byte değer aralığı neden önemlidir? Kotlin bu aralığa göre neden özel bir davranış sergiler?
+
+=== operatörü referans eşitliğini kontrol eder.
+Bir değişken null olabilirse, yani nullable ise, bu değişkenin değeri bir referans olur. Yani, bu değişken bir nesnenin bellekteki konumunu gösterir.
+
+    val a: Int = 120
+    val boxedA: Int? = a
+    val anotherBoxedA: Int? = a
+    println(boxedA === anotherBoxedA)
+    // a değeri byte aralığı (-128/+127) aralığında ise sonuç true değilse false döndürecek.
+Kotlin’de, -128 ile 127 arasındaki tam sayılar için özel bir optimizasyon vardır. Bu tam sayılar için, aynı değere sahip tüm değişkenler aynı bellek konumunu paylaşır. Yani, bu tam sayılar için, === operatörü değer eşitliği yerine referans eşitliği yapar.
+bu özel optimizasyon sadece -128 ile 127 arasındaki tam sayılar için geçerlidir. Bu aralığın dışındaki tam sayılar için, === operatörü her zaman false döner. Çünkü bu tam sayılar için, aynı değere sahip her değişken farklı bir bellek konumunu gösterir.
+
 
 
 
