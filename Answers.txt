@@ -411,5 +411,12 @@ toByte(), toShort(), toInt(), toLong(), toFLoat(), toDouble(), toChar() fonksiyo
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+7- "val result = 1L + 3" // "Long + Int" gibi bir işlemin sonucunda "result" değişkeninin tipi ve değeri ne olur? Neden böyle olduğunu açıklayın.
+
+Farklı tipte değerler arasında yapılan matematiksel işlemlerin sonucu, değer aralığı geniş olan sayıya göre belirlenir. Örneğin Int + Long işleminde sonuç Long türünde
+olur, bunun sebebi yapılan işlemde değer küçük olan değer aralığının dışında ise hata alma riskinin oluşu ve her seferinde çıkan sonucun değer aralığına bakılmasının
+maliyetli oluşudur.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
