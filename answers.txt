@@ -60,6 +60,12 @@
 1- Kaç farklı tipte "number" sınıfı miras alan "alt sınıf" (child class) vardır? Bunların değer aralıkları neden önemlidir?
 	-Byte, short, int, long olarak 4 tane alt sınıf vardır. Eğer çok fazla işlem yapılacak ve gereğinden fazla bir 
 	alan kaplayan bir tip verilmiş ise bu performans sorunlar yaratabilir.
+2- Eğer bir değişkene tip belirtimi yapılmaz ve bir değer atanırsa, Kotlin tip çıkarımını nasıl yapar?
+	-Eğer değişkenin değeri int'den büyük ise long olarak tipi belirlenir onun haricinde int'den küçük büyük fark etmeksizin
+	int olarak atanır.
+
+
+	
 
 
 
