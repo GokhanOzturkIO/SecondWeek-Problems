@@ -132,6 +132,11 @@ eğer bu sayıyı yani tiği Int olan bir sayıyı Long yapmak istersek sonuna '
 Ondalık sayılarda ise değişkenin float olması gerektiği belirtilmezse 'f' ve 'F' ile default olarak Double olarak belirlenir tipi.
 
 
+3- Float değişken oluştururken F ve f harfleri varken, Long değişken oluştururken neden küçük l harfi yoktur?
+
+kücük 'l' harfi bazı fontlarda 1 rakamına benzediği için karıştırılma durumlarından dolayı kullanılmaz.
+
+
 
 
 
