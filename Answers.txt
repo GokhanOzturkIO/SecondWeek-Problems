@@ -282,6 +282,10 @@ UInt: İşaretsiz 32-bit tam sayı, 0 ile 4,294,967,295 (2^32 - 1) arasında de�
 ULong: İşaretsiz 64-bit tam sayı, 0 ile 18,446,744,073,709,551,615 (2^64 - 1) arasında değer alabilir.
 
 
+2- "İşaretsiz" değişkenler nasıl bir sınıf yapısında tutulurlar? Bu neden önemlidir?
+
+Kotlin’de işaretsiz tam sayılar, inline sınıflar olarak uygulanır ve tek bir depolama özelliği içerirler. Bu depolama özelliği, aynı genişliğe sahip karşılık gelen işaretli karşıt türünü içerir. Yani, işaretsiz bir tam sayı, aslında işaretli bir tam sayının bir sarmalayıcısıdır.
+Bu, Kotlin’in işaretsiz tam sayıları işlemek için ek bellek kullanmadan, işaretli tam sayıları kullanarak işaretsiz tam sayıları temsil etmesini sağlar. Bu, performansı artırır ve bellek kullanımını azaltır.
 
 
 
