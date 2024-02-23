@@ -298,6 +298,11 @@ val uLong: ULong = 42uL  // ULong, beklenen tür sağlanmış
 Bu örnekte, u veya U sonekleri bir tam sayı sabitini işaretsiz bir tam sayı olarak etiketler. Belirtilen tür, tam sayı sabitinin kesin türünü belirler. Eğer beklenen bir tür sağlanmazsa, derleyici sabitin boyutuna bağlı olarak UInt veya ULong kullanır:
 
 
+4- "val a1 = 42u ve val a2 = 0xFFFF_FFFF_FFFFu" değişkenlerin tipleri ne olur? Neden?
+
+val a1 = 42u ifadesinde, a1 değişkeninin türü UInt olacaktır. Çünkü 42u ifadesi, UInt türüne sığacak bir değeri temsil eder.
+val a2 = 0xFFFF_FFFF_FFFFu ifadesinde ise, a2 değişkeninin türü ULong olacaktır. Çünkü 0xFFFF_FFFF_FFFFu ifadesi, UInt türüne sığmayacak bir değeri temsil eder. Bu durumda, Kotlin derleyicisi bu değeri ULong türünde bir değişkene atar.
+Bu özellik, Kotlin’in işaretsiz tam sayıları işlemek için ek bellek kullanmadan, işaretli tam sayıları kullanarak işaretsiz tam sayıları temsil etmesini sağlar. Bu, performansı artırır ve bellek kullanımını azalt
 
 
 
