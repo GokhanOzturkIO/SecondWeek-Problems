@@ -209,6 +209,9 @@ UByte		0 - 255
 Cevap : Bu kod satırıyla beraber Byte olan b değişkeniyle integer olan i sayısının `değer` olarak eşit olup olmadığını soruyor. Bu kodda hata alırız. Çünkü Integer bir değere Byte olan bir değer eklemeye çalışıyoruz. Bu tür uyuşmazlığı yaratır.
 
 - "`val b: Byte = 1` ile `val i: Int = b.toInt()` ve son olarak `print(b == i)` gibi bir kod yazıldığında çıktı ne olur? Neden böyle bir çıktı aldığınızı açıklayın.
+
+Cevap : Byte ve Int'i `==` ile tanımlamak mümkün olmadığından hata alırız.
+
 - Sayısal değişkenlerde açık dönüşüm (Explicit Type Conversion) yaparken hangi fonksiyonları kullanabilirsiniz?
 - "`val result = 1L + 3`" // "Long + Int" gibi bir işlemin sonucunda "result" değişkeninin tipi ve değeri ne olur? Neden böyle olduğunu açıklayın.
 - "`val result = Int.MAX_VALUE + Int.MAX_VALUE`" gibi bir işlemin sonucunda "result" değişkeninin tipi ve değeri ne olur? Neden böyle olduğunu açıklayın.
