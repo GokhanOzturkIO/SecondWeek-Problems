@@ -8,3 +8,14 @@ sabit değerler ve değişmesini istemediğimiz verilerde kullanırız.
 Performans açısından farka bakarsak val ile var arasındaki performans farkı yok denilecek kadar azdır. val değişkenler var değişkenlere göre daha maliyetlidir, bir if şartı vardır val'da, var daha performanslı val'a göre 
 (multi-thread işlemleri saymazsak) performans farkı çok azdır. Salt dümdüz bir kod üzerinde konuşursak var daha performanslı (multi-thread işlemleri yoksa) - günlük hayat problemlerinde val daha performanslı 
 kısaca özetlemek gerekirse multi-thread işlemlerde val daha performanslı, multi-thread olmayan işlemlerde var daha performanslıdır.
+
+
+2- Bir var değişkeni val gibi davranmasını nasıl sağlayabiliriz val kelimesini kullanmadan? Bunu neden yapmak isteriz? Örnek bir senaryo verin.
+
+Bir 'var' değişkenin set'ini private yaparak 'val' gibi davranmasını sağlayabiliriz artık var değişkene yeni bir data atanmasının önüne geçmiş oluruz.
+
+var surName = "Ersoyoglu"
+    private set
+
+aynı class'ın içinde yine değeri değiştirilebilir ama farklı bir class içerisinde değiştirilemez sadece okunabilirdir.
+
