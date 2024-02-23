@@ -98,6 +98,9 @@ Cevap : .(nokta) ayıracını kullanmamız gerekiyor. Çünkü Uluslararası kab
 Cevap : Float yaklaşık 7, Double yaklaşık 16-17 basamağa kadar işlem yapar. Daha hassas işlemler için Double'ı tercih ederiz. Float 32, Double 64 bit bellek kullanır. Bu sebepten eğer hassas hesaplamalara ihtiyaç duymuyorsak Float kullanmak bellekte daha az yer kullandığından daha mantıklıdır.
 
 - Ondalık(Decimal), Onaltılık (Hexadecimal) ve İkilik (Binary) değişkenleri Kotlin'de nasıl tanımlayabilirsiniz?
+
+Cevap : Decimal zaten ondalıklı sayıyı ifade ettiğinden herhangi özel bir şey yapmamıza gerek yoktur. Hexadecimal için değişkenin başına `0x` eklenmelidir. Binary içinse `0b` eklenmesi gerekmektedir. Kotlin'de Type Inference olduğundan ötürü türü belirtmemize gerek yoktur fakat `Long` ve `Float` için tür belirtmemiz gerekmektedir. Çünkü Type inferince gereği tam sayılar `int` ondalıklı sayılar `double` şeklinde ifade edilir.
+
 - Sekizlik (Octal) değişkenler Java'da nasıl tanımlanır? Kotlin'de Sekizlik değişken tanımlanabilir mi?
 - "Geleneksel Notasyon" (Conventional Notation) gösterimi nasıl yapılır?
 - Sayısal değişkenlerde alt çizgi (underscore) nasıl kullanılır? Kotlin bunu nasıl yorumlar?
