@@ -205,6 +205,9 @@ UByte		0 - 255
 - "Güvenli & Güvensiz" operatörler nelerdir?
 - Sayısal değişkenlerde örtük tip genişletme (implicit widening conversions) ne demektir? Kotlin'de bu neden yapılamaz?
 - "`val b: Byte = 1` ile `val i: Int = b` ve son olarak `print(b == i)` gibi bir kod yazıldığında çıktı ne olur? Neden böyle bir çıktı aldığınızı açıklayın.
+
+Cevap : Bu kod satırıyla beraber Byte olan b değişkeniyle integer olan i sayısının `değer` olarak eşit olup olmadığını soruyor. Bu kodda hata alırız. Çünkü Integer bir değere Byte olan bir değer eklemeye çalışıyoruz. Bu tür uyuşmazlığı yaratır.
+
 - "`val b: Byte = 1` ile `val i: Int = b.toInt()` ve son olarak `print(b == i)` gibi bir kod yazıldığında çıktı ne olur? Neden böyle bir çıktı aldığınızı açıklayın.
 - Sayısal değişkenlerde açık dönüşüm (Explicit Type Conversion) yaparken hangi fonksiyonları kullanabilirsiniz?
 - "`val result = 1L + 3`" // "Long + Int" gibi bir işlemin sonucunda "result" değişkeninin tipi ve değeri ne olur? Neden böyle olduğunu açıklayın.
