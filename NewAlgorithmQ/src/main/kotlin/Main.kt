@@ -7,19 +7,22 @@ fun main() {
     var operator: String
 
     do {
+        try {
+        println("Please enter the first number")
+        val number1 = readln().toDouble()
         firstInfo()
         operator = readln().trim()
 
         if (selectOperator(operator)) {
-            try {
-                println("Please enter the first number")
-                val number1 = readln().toDouble()
+
+
                 println("Please enter the second number")
                 val number2 = readln().toDouble()
                 println(calculate(number1, number2, operator))
-            } catch (e: Exception) {
-                println("Something went wrong")
             }
+        }
+        catch (e: Exception) {
+            println("Something went wrong")
         }
 
         print("Do you want to continue (Y/N): ")
