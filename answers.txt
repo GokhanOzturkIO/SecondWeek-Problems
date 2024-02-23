@@ -5,5 +5,7 @@
 	-Val ile Var arasında performans olarak çok az bir fark vardır. Val anahtar kelimesi arka planda, değişkenin ilk atamasının
 	yapılıp yapılmadığına dair bir kontrol yapıtğı için ço az daha yavaştır. Akademik olarak Var daha hızlıdır ama günlük hayatta ve
 	mutli-tread işlemlerde Val daha hızlıdır.
+	-Val read-only'dir immutable değildir. Çünkü bir class'ın içindeki Val değişkenin değerini get metodu ile istediğimiz 
+	şekilde değiştirebilip geri döndürebiliriz.
 	
 	
