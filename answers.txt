@@ -224,7 +224,7 @@ q9-"val result = Int.MAX_VALUE + Int.MAX_VALUE" gibi bir işlemin sonucunda "res
 Bu şekilde yazıldığında ekrana int çıktısını veriyor, long olup olmadığını kontrol eden bir if bloğu yazıldığında da yine hata verdi. Bu değişjenin int tipinde olmasının nedeni değişkene eklediğimiz iki sayının int aralığındaki değerler olmasıydı, program sayların toplamı int aralığında mı diye kontrol etmiyor ve bu yüzden de tipi int olarak kalıyor.
 
 q10-"val x = 5 / 2 println(x == 2)" gibi bir işlemin sonucu ve tipi nedir? Neden böyle olduğunu açıklayın.
-
+İşlemin sonucu 2 çıkıyor ve x değişkeninin tipi de Int oluyor. Bölünen ve bölen sayıların ikisi de integer olduğu için sonuç da integer olarak yazıldı. Eğer bölünen veya bölenin yanına .0 koysaydık sonu. 2.5 olacaktı ve tipi de Double olacaktı.
 q11-"val x = 5L / 2 println(x == 2L)" gibi bir işlemin sonucu ve tipi nedir? Neden böyle olduğunu açıklayın.
 
 q12-"val x = 5 / 2.toDouble() println(x == 2.5)" gibi bir işlemin sonucu ve tipi nedir? Neden böyle olduğunu açıklayın.
