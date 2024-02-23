@@ -41,7 +41,9 @@
 	-Elvis operatörü ile de bir değerin boş gelmesi durumunda default olarak dönülecek değeri verebiliriz.
 	-!! işaretini ise bir değişkenin hiç bir zaman null olmayacağı zamanlarda kullanabiliriz. Bu sayede Kotlin bu değişkenin 
 	null olup olmadığına bakmayacak ve daha performanslı olacak.,
-	
+9- Bir değişkene null değer atanır ve tip belirtilmezse Kotlin bu değişkeni nasıl yorumlar?
+	-Val number = null şekilde bir değken tanımladığımızda bu değişkenin tipi Nothing olur.
+
 	
 	
 
