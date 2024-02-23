@@ -233,7 +233,8 @@ q12-"val x = 5 / 2.toDouble() println(x == 2.5)" gibi bir işlemin sonucu ve tip
 Sonucu 2.5 ve tipi de Double. Çünkü bölenin yanına .toDobule() eklendi ve bu da onu Double bir sayı yaptı, bu şekilde de sonuç Double olarak ortaya çıktı.
 
 q13-Kotlin'de tür dönüşümü yapılırken, dönüşümün başarısız olması durumunda TypeCastException nasıl ele alınır ve bu tür hataların önüne geçmek için hangi önlemler alınabilir?
-
+Bu exception dan kaçınmak için türlerin uyumlulukları doğrulanmalıdır, safe casting opratörleri (as?) kullanılmalıdır, türlerin dönüştürülebilir olup olmadıklarını kontrol etmek için is kullanılabilir.
+Try catch blokları kullanarak bu exceptionları yakalayabiliriz. 
 
 
 
