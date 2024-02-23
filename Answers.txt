@@ -453,6 +453,12 @@ Bu kodu çalıştırdığınızda, println(x == 2L) ifadesi true çıktısını 
 5L / 2 işleminin sonucu 2L olur.
 
 
+12- "val x = 5 / 2.toDouble() println(x == 2.5)" gibi bir işlemin sonucu ve tipi nedir? Neden böyle olduğunu açıklayın.
+
+Bu kod, 5 / 2.toDouble() işlemi ile 5 sayısını 2.0 sayısına böler ve sonucu 2.5 olur. Bu sonucu x değişkenine atar. Sonra, x == 2.5 ifadesi ile x’in değerini 2.5 ile karşılaştırır. Eğer x’in değeri 2.5 ise, bu ifade true döndürür.
+Bu durumda, x’in değeri 2.5 olduğu için, println(x == 2.5) ifadesi true yazdırır. Bu yüzden, bu kodun çıktısı true olur.
+
+
 
 
 
