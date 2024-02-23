@@ -317,7 +317,13 @@ Kotlin'de "işaretsiz" değişkenler, belirli bir işareti (pozitif veya negatif
 Örneğin, bir dizinin boyutunu veya bir sayaç değerini saklamak için kullanılabilirler. Ayrıca, bellek yönetimi ve düşük seviye hesaplamalar gibi durumlarda işaretsiz veri türleri kullanılabilir.
 
 
+7- İşaretsiz" değişkenlerle yapılan matematiksel işlemlerde, özellikle büyük sayılarla çalışırken karşılaşılabilecek taşma (overflow) ve taşma olmaması (underflow) durumları için Kotlin nasıl bir yönetim sağlar?
 
+Kotlin, işaretsiz tam sayılar için özel tipler sağlar: UByte, UShort, UInt ve ULong1. Bu tipler, işaretsiz tam sayılarla çalışırken overflow ve underflow durumlarını yönetmek için kullanılabilir. Ancak, 
+Kotlin’in bu tipler üzerindeki aritmetik işlemler sırasında otomatik olarak overflow veya underflow kontrolü sağlamadığını belirtmek önemlidir
+Kotlin’in işaretsiz tam sayılar üzerindeki aritmetik işlemler sırasında otomatik olarak overflow veya underflow kontrolü sağlamadığını belirtmek önemlidir. Bu nedenle, büyük sayılarla çalışırken dikkatli olunmalıdır. 
+Eğer bir overflow veya underflow durumu oluşursa, bu genellikle beklenmeyen sonuçlara yol açar.
+Sonuç olarak, Kotlin’de işaretsiz tam sayılarla çalışırken overflow ve underflow durumlarını yönetmek genellikle programcının sorumluluğundadır.
 
 
 
