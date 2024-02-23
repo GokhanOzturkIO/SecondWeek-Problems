@@ -19,3 +19,11 @@ var surName = "Ersoyoglu"
 
 aynı class'ın içinde yine değeri değiştirilebilir ama farklı bir class içerisinde değiştirilemez sadece okunabilirdir.
 
+
+3- "Değişmez" (Immutable) ve "Salt Okunur" (ReadOnly) kavramlarını açıklayın. val değişkenler neden aslında "değişmez" değil de "salt okunur" olarak açıklanmalıdır?
+
+immutable -> hiçbir şekilde değişemez bir değişemez bir değişkendir. bir değişkenin/nesnenin durumu asla ilk değerden farklı olamaz demek.
+readonly -> değeri okunabilen set edilemeyen (ilk değer atamasından sonra tekrar değer atanamaz) demektir.
+val anahtar kelimesi ile tanımlanan bir değişkenin kendisi değişmez değildir. Örneğin, bir val listesi, listeye yeni öğeler ekleyebilir veya mevcut öğeleri çıkarabilir, ancak val listesi başka bir listeye yönlendirilemez. 
+Bu nedenle, val değişkenler aslında “değişmez” değil, “salt okunur” olarak açıklanmalıdır. Bu, val değişkenlerin değerlerinin değiştirilemeyeceği, ancak atıfta bulundukları nesnelerin durumlarının değiştirilebileceği anlamına gelir.
+
