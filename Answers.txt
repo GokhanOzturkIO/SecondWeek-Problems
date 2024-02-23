@@ -255,6 +255,19 @@ Kotlin'de büyük sayılarla çalışırken BigInteger ve BigDecimal sınıflar�
     val bigDecimalNumber = BigDecimal("1234567890.12345678901234567890")
 
 
+17- Double ve Float değişkenler kullanılırken "yuvarlama" davranışı nasıldır? Bu nasıl değiştirilebilir?
+
+Kotlin'de Double ve Float değişkenler, matematiksel olarak en yakın değere yuvarlama yaparlar.
+Kotlin’de Double ve Float türlerinde yuvarlama işlemleri için roundToInt ve roundToLong fonksiyonları kullanılır.
+- roundToInt: Double veya Float değerini en yakın tam sayıya yuvarlar ve sonucu Int olarak döndürür
+	val x = 2.5
+	val y = x.roundToInt() // y = 3
+- roundToLong: Double veya Float değerini en yakın tam sayıya yuvarlar ve sonucu Long olarak döndürür.
+	val x = 2.5
+	val y = x.roundToLong() // y = 3L
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 
