@@ -174,6 +174,9 @@ Cevap : Unsigned değişkenler mutlak değerce kullanılan değişkenlerdir. Ör
 Cevap : u ve U ile gösterilir. 
 
 - "`val a1 = 42u` ve `val a2 = 0xFFFF_FFFF_FFFFu`" değişkenlerin tipleri ne olur? Neden?
+
+Cevap : Değişken tipleri Unsigned olur. İkisi de UInt sınırları içerisinde olduğundan ikisi de uInt olur.
+
 - "İşaretsiz" "Long" harf gösterimi nasıl yapılır?
 - "İşaretsiz" değişkenlerin kullanım amaçları nelerdir?
 - "İşaretsiz" değişkenlerle yapılan matematiksel işlemlerde, özellikle büyük sayılarla çalışırken karşılaşılabilecek taşma (overflow) ve taşma olmaması (underflow) durumları için Kotlin nasıl bir yönetim sağlar?
