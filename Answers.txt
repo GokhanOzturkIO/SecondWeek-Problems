@@ -419,4 +419,14 @@ maliyetli oluşudur.
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+8- "val result = Int.MAX_VALUE + Int.MAX_VALUE" gibi bir işlemin sonucunda "result" değişkeninin tipi ve değeri ne olur? Neden böyle olduğunu açıklayın.
+
+Bu durumda değer aralığının dışında bir sonuç olacağı için çıkan sonuç negatif rastgele bir sayı olarak gösterilir. Bunun sebebi Kotlin'in Type Safe bir dil olmasıdır.
+Kotlin dilinde işlemler yapılırken sonuca değil işlem yapılan sayılara bakılır bu nedenle iki Int değerinin toplanmasında sonucun Int olması beklenir, ancak bu durumda
+değer Int değer aralığının dışında olduğu için negatif rastgele bir sayı olarak gösterilir.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
 
