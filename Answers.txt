@@ -459,14 +459,9 @@ Bu kod, 5 / 2.toDouble() işlemi ile 5 sayısını 2.0 sayısına böler ve sonu
 Bu durumda, x’in değeri 2.5 olduğu için, println(x == 2.5) ifadesi true yazdırır. Bu yüzden, bu kodun çıktısı true olur.
 
 
+13- Kotlin'de tür dönüşümü yapılırken, dönüşümün başarısız olması durumunda TypeCastException nasıl ele alınır ve bu tür hataların önüne geçmek için hangi önlemler alınabilir?
 
-
-
-
-
-
-
-
-
-
+TypeCastException hatası, Kotlin’de bir nesnenin bir türe dönüştürülememesi durumunda ortaya çıkar
+Kotlin’de tür dönüşümü yaparken, as anahtar kelimesi kullanılır. Ancak, dönüşüm başarısız olursa TypeCastException hatası alınır. Bu tür hataların önüne geçmek için as? anahtar kelimesi kullanılabilir.
+as? anahtar kelimesi, dönüşüm başarısız olduğunda null döndürür ve böylece TypeCastException hatası önlenmiş olur. Try-Catch Bloğu: try-catch bloğu kullanarak TypeCastException hatasını ele alabilirsiniz.
 
