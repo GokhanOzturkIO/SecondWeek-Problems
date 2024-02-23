@@ -445,5 +445,11 @@ Bölme işleminin sonucu da 2 olarak çıkar, bu nedenle ekrana true yazdırıl�
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+12- Kotlin'de tür dönüşümü yapılırken, dönüşümün başarısız olması durumunda TypeCastException nasıl ele alınır ve bu tür hataların önüne geçmek için hangi önlemler alınabilir?
+
+Kotlin'de tür dönüşümü yapılırken, türlerin uyumsuz olması durumda "TypeCastException" hatası ile karşılaşabiliriz bu hatanın önüne geçmek için şu yöntemler kullanılabilir;
+try-catch bloğu kullanmak, try-catch bloğu kullanarak hata çıkması durumunda uygulamanın çökmesinin önüne geçebiliriz. "is" ve "!is" operatörü kullanarak belirli bir nesnenin belirli bir türe dönüşüp dönüşmeyeceğini kontrol edebiliriz. "as?" operatörü kullanarak güvenli bir şekilde dönüşüm yapabiliriz.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
