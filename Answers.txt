@@ -61,6 +61,10 @@ Kotlinde ki primitive değişken tipleri sınıf(class) gibi görünseler bile y
 Özetle derleyicilerin, derleme esnasında değişkenleri doğrulamasıdır.
 
 
+7- Bir değişkeni nullable yapmak için ne yapmalıyız?
+
+Bir değişkene nullable değer ataması yapabilmek için değişken tipinin sonuna '?' işareti konulur.
+var degisken: String? = null
 
 
 
