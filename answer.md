@@ -165,6 +165,9 @@ Bu fonksiyonlar sayesinde yuvarlama işlemleri yapılabilir.
 
 ### İşaretsiz Sayılar
 - "İşaretsiz" (Unsigned) değişkenler ne demektir? İşaretli olanlarla aralarındaki fark nedir?
+
+Cevap : Unsigned değişkenler mutlak değerce kullanılan değişkenlerdir. Örneğin `Byte` kavramı normalde -128 ile 127 arasındadır. Fakat Unsigned Byte kavramında 0 ile 255 arasında olur.
+
 - "İşaretsiz" değişkenler nasıl bir sınıf yapısında tutulurlar? Bu neden önemlidir?
 - "İşaretsiz" değişkenlerin harf gösterimi nasıldır?
 - "`val a1 = 42u` ve `val a2 = 0xFFFF_FFFF_FFFFu`" değişkenlerin tipleri ne olur? Neden?
