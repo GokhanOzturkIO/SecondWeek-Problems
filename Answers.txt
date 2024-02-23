@@ -385,6 +385,12 @@ Bu nedenle, “Akıllı Dönüşüm” genellikle sabit (val) değişkenlerle ve
 	val x: String = y as String          //Bu kodda, y bir String olmadığında bu kod bir hata fırlatır.
 
 
+4- Sayısal değişkenlerde örtük tip genişletme (implicit widening conversions) ne demektir? Kotlin'de bu neden yapılamaz?
+
+Örtük tip genişletme (implicit widening conversions), bir programlama dilinde daha küçük bir veri tipinin, veri kaybı olmadan otomatik olarak daha büyük bir veri tipine dönüştürülmesi işlemidir. Örneğin, bir int tipindeki bir değeri long tipine dönüştürmek gibi.
+Kotlin’de ise örtük tip genişletme yapılamaz. Bunun nedeni, Kotlin’in tip güvenliği prensiplerine bağlı olmasıdır. Kotlin, tip dönüşümlerinin her zaman belirgin (explicit) olmasını gerektirir. Yani, bir değişkenin tipini değiştirmek istediğinizde, 
+bu dönüşümü açıkça belirtmeniz gerekir.Bu, hatalı dönüşümlerin önlenmesine yardımcı olur ve kodun daha anlaşılır olmasını sağlar. Örneğin, bir Int değerini Long tipine dönüştürmek isterseniz, toLong() fonksiyonunu kullanmanız gerekir:
+
 
 
 
