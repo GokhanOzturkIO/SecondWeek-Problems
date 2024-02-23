@@ -54,6 +54,12 @@ Kotlinde ki primitive değişken tipleri sınıf(class) gibi görünseler bile y
 (Bu tip dönüşümü değil, arkaplanda Javada ki koda karşlık gelen tipi üretecek).
 
 
+6- "Tip Güvenliği" (Type Safety) kavramını açıklayın.
+
+“Tip Güvenliği” (Type Safety), bir programlama dilinde değişkenlerin, ifadelerin ve fonksiyonların beklenen veri tipine uygun olarak kullanılmasını sağlayan bir özelliktir. Bu, hatalı veya beklenmeyen davranışları önlemeye yardımcı olur. 
+Örneğin, bir sayıyı bir metin dizisiyle toplamaya çalışmak gibi tip hataları, tip güvenli bir dilde derleme veya çalışma zamanında yakalanır. Bu, yazılım hatalarını azaltmaya yardımcı olur ve kodun daha güvenilir ve tahmin edilebilir olmasını sağlar.
+Özetle derleyicilerin, derleme esnasında değişkenleri doğrulamasıdır.
+
 
 
 
