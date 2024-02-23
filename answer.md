@@ -119,9 +119,11 @@ Peki `radix` parametresi nedir : bir sayının tabanını belirlemek için kulla
 
 Yukarıdaki örnekte parantez içerisinde kullandığımız sayı kaçlık sistemde çalışacağımızı ifade eder.
 
-
 - "Geleneksel Notasyon" (Conventional Notation) gösterimi nasıl yapılır?
 - Sayısal değişkenlerde alt çizgi (underscore) nasıl kullanılır? Kotlin bunu nasıl yorumlar?
+
+Cevap : Underscore (_) genelde uzun basamaklı sayıların kaç basamaklı olduğunu daha rahat görmemizi sağlar. Örneğin 1000000 sayısını 1_000_000 şeklinde yazarsak daha kolay görmüş oluruz. Kotlin underscore'ları görmezden gelir yani sonuçd değişmez.
+
 - `==` ile neyi karşılaştırırız? `===` ile neyi karşılaştırırız?
 - `===` operatörü ile karşılaştırma yaparken Byte değer aralığı neden önemlidir? Kotlin bu aralığa göre neden özel bir davranış sergiler?
 - Sayısal değişkenlerde hangi matematiksel operatörler kullanılabilir?
