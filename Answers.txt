@@ -311,6 +311,10 @@ Kotlin’de işaretsiz bir Long türünü belirten bir tam sayı sabitini etiket
 	val number: ULong = 42UL  // ULong, beklenen tür sağlanmış
 
 
+6- "İşaretsiz" değişkenlerin kullanım amaçları nelerdir?
+
+Kotlin'de "işaretsiz" değişkenler, belirli bir işareti (pozitif veya negatif) ifade etmeyen verileri temsil etmek için kullanılır. Özellikle doğal sayılar, sıfır ve pozitif tam sayıları temsil etmek için kullanılır.
+Örneğin, bir dizinin boyutunu veya bir sayaç değerini saklamak için kullanılabilirler. Ayrıca, bellek yönetimi ve düşük seviye hesaplamalar gibi durumlarda işaretsiz veri türleri kullanılabilir.
 
 
 
