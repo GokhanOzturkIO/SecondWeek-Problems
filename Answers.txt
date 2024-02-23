@@ -418,7 +418,15 @@ Bu kodu çalıştırdığınızda, çıktı true olacaktır. Çünkü b.toInt() 
 b değişkeninin Int tipine dönüştürülmüş hali i değişkenine eşittir. Bu yüzden, b == i ifadesi true değerini döndürür
 
 
+7- Sayısal değişkenlerde açık dönüşüm (Explicit Type Conversion) yaparken hangi fonksiyonları kullanabilirsiniz?
 
+toByte(): Değişkeni Byte tipine dönüştürür.
+toShort(): Değişkeni Short tipine dönüştürür.
+toInt(): Değişkeni Int tipine dönüştürür.
+toLong(): Değişkeni Long tipine dönüştürür.
+toFloat(): Değişkeni Float tipine dönüştürür.
+toDouble(): Değişkeni Double tipine dönüştürür.
+toChar(): Değişkeni Char tipine dönüştürür.
 
 
 
