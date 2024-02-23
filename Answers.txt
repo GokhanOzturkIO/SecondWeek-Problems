@@ -405,7 +405,11 @@ Kotlinde örtük tip dönüşümü yapılmadığından ötürü "b" değerini "i
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+6- Sayısal değişkenlerde açık dönüşüm (Explicit Type Conversion) yaparken hangi fonksiyonları kullanabilirsiniz?
 
+toByte(), toShort(), toInt(), toLong(), toFLoat(), toDouble(), toChar() fonksiyonları kullanılabilir.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 
