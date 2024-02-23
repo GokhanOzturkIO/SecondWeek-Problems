@@ -70,6 +70,9 @@
 	-Double precision double sayı tipidir. Bu da ondalıklı sayılar kullanılır. 64 bit'dir.
 	-Bunların farkı ise double precision daha fazla virgulden sonra hassasiyet sağlar ve daha hassas sonuçlar verir
 	ama daha fazla yer kaplar.
+5- Double ve Float değişkenlerle çalışırken ondalık ayıracı olarak hangi işaretler kullanılır? Bu ayıraçların kullanımında nelere dikkat etmek gerekir?
+	-Programlama dillerinde (.) kullanılır ama veri tabanlarında veya başka yerlerde (,) kullanılabilir. Buna dikkat etmek lazım
+	ciddi matematiksel problemlere yol açabilir.
 
 	
 
