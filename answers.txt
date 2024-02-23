@@ -24,6 +24,13 @@
 5- Kotlin'de tüm değişkenlerin sınıf olarak bulunması, "ilkel tip" (primitive type) olmadıkları anlamına gelir mi? Arka planda neler oluyor?
 	-Kotlinde primitive'ler class gibi gözükselerde özel optimizasyonlar ile primitive'e dönüşür. Byte koda çevrilirken primitive
 	çevrilirler. Bu bize class yapısını bir çok özelliğini kazandırken primitive kadar alan kaplamasını sağlar.
+6- "Tip Güvenliği" (Type Safety) kavramını açıklayın.
+	-Tip güvenliği dilin compile zamanında herhangi bir hata çıkmaması için zorunlu olarak bazı kuralları uygulaması. 
+	-Kotlin dili static olarak yazılmıştır yani her değişkenin tipi compile zamanında biliniyor.
+	-Kotlinde null safety vardır. Bu sayede verilerin null olarak gelip çalışma zamanında ve derleme zamanında herhangibir sorun çıkamasını 
+	engeller.
+	-Diğer olarak Type inference, smart cast ve type check ve cast vardır.
 	
+
 	
 	
