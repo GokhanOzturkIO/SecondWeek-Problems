@@ -38,3 +38,7 @@ val availableSpace: Int
 1.7 Bir değişkeni nullable yapmak için ne yapmalıyız?
 
 - Bir değişkene null değer ataması yapabilmek için değişken tipinin sonuna soru işareti (?) konulur. Örneğin: val name: String? = null
+
+1.8 "Null Güvenliği" (Null Safety) kavramını açıklayın.
+
+- Nullable olmayan değişkene null atanırsa hata alınır, bu null güvenliği sayesinde gerçekleşir. Örneğin val name: String = null kodu çalışmaz. "Null can not be a value of a non-null type String" hatası alınır.
