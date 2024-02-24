@@ -302,3 +302,121 @@ ULong:64 bit, 18,446,744,073,709,551,615 (2^64 - 1)
 
 - Örneğin bir UInt değişkenin değeri Java'da bir int değişkene aktarılacaksa ve UInt olanın değeri int'in maksimum değerinin üstündeyse overflow olur.
 - Çözüm olarak Java API'leri kullanılmadan önce bu değişkenler Java ile uyumlu değişkenlere çevrilebilir.
+
+
+4. Tür Dönüşümü
+
+
+4.1 is ve !is operatörlerinin kullanımını açıklayın.
+
+- is çalışma zamanında (runtime) bir objenin ilgili tipte olup olmadığını kontrol eder. !is'de bunun tersidir, == ve != karşıtlığında olduğu gibi.
+
+if (obj is String) {
+    print(obj.length)
+}
+
+if (obj !is String) { // !(obj is String) ile aynı
+    print("String değildir")
+} else {
+    print(obj.length) //.length bir String özelliği
+}
+
+4.2 "Akıllı Dönüşüm" (Smart Cast) ne demektir? Farklı kod örnekleri ile açıklayın. Bu özelliğin sınırlamaları nelerdir?
+
+- Smart Cast bir değişkenin tipinin kod çalıştırıldığında otomatik olarak belirlenmesidir. Örneğin:
+
+val x = "Erdinç" // zaten x'in String olduğunu anlıyor
+
+val y: Any = "Erdinç"
+if (y is String) { // y'yi String olarak kabul etti, artık String'in özelliklerini kullanabilir.
+	println(x.length)
+}
+
+- Bir örnek daha:
+
+val age: Number = 45
+
+when(age) {
+	is Byte -> {
+		println("Byte")
+	}
+	is Short -> {
+		println("Short")
+	}
+	is Int -> {
+		println("Int")
+	}
+}
+
+4.3 "Güvenli & Güvensiz" operatörler nelerdir?
+
+- "Unsafe" cast operator
+
+val x: String = y as String
+
+örneğinde "as" infix operatörü ile unsafe cast yapılmıştır. Eğer y String gelmezse exception fırlatılır. Bu yüzden bu durum güvensiz olarak adlandırılır. Tabii normalde kodun null değerler için düzgün çalışması için val x: String? = y as String? şekline getirilmesi gerekir.
+
+- "Safe" (nullable) cast operator
+
+val x: String? = y as? String
+
+örneğinde as? ile safe cast yapılmıştır. Bu operatör sayesinde eğer bir failure gerçekleşirse; exception fırlatılmak yerine null değer dönülür. Şurası dikkat çekicidir ki, eşitliğin sağ tarafında String non-nullable olmasına rağmen cast işleminin sonucu null olabilmektedir (failure olursa null döndüğünden).
+
+4.4 Sayısal değişkenlerde örtük tip genişletme (implicit widening conversions) ne demektir? Kotlin'de bu neden yapılamaz?
+
+- Implicit widening conversions, değer aralığı olarak küçük değişkenin değerinin büyük değişkene atanmasına denir. Örneğin Int tipinde olan bir değişkenin değerinin Long tipinde bir değişkene atanması. Bu Kotlin'de ancak explicit şekilde .toLong() gibi fonksiyonlarla gerçekleştirilebilir.
+- Kotlin'de örtük tip genişletmenin olmaması "type safety"yi sağlamak ve beklenmeyen durumlardan kaçınmak sebebiyledir.
+
+4.5 "val b: Byte = 1 ile val i: Int = b ve son olarak print(b == i) gibi bir kod yazıldığında çıktı ne olur? Neden böyle bir çıktı aldığınızı açıklayın.
+
+- "Type mismatch: inferred type is Byte but Int was expected" hata mesajı alınır. Çünkü Kotlin'de implicit widening conversions (örtük tip genişletme) yoktur, Byte olan b'nin değeri Int olan i'ye direkt olarak atanamaz.
+
+4.6 "val b: Byte = 1 ile val i: Int = b.toInt() ve son olarak print(b == i) gibi bir kod yazıldığında çıktı ne olur? Neden böyle bir çıktı aldığınızı açıklayın.
+
+- "Operator '==' cannot be applied to 'Byte' and 'Int'" hata mesajı alınır. b.toInt() yapıldı ancak o kod o an için b'nin değerinin Int tipine çevrilerek i değişkenine atanmasını sağlaadı. b hala Byte, i hala Int sonuçta. Bu yüzden ikisinin karşılaştırılabilmesi için kod şu şekilde yazılmalıdır: println(b.toInt() == i)
+
+4.7 Sayısal değişkenlerde açık dönüşüm (Explicit Type Conversion) yaparken hangi fonksiyonları kullanabilirsiniz?
+
+- toByte(), toShort(), toInt(), toLong(), toFLoat(), toDouble() fonksiyonları kullanılabilir. toChar() konusunda değişiklik olmuştur.
+
+4.8 "val result = 1L + 3" // "Long + Int" gibi bir işlemin sonucunda "result" değişkeninin tipi ve değeri ne olur? Neden böyle olduğunu açıklayın.
+
+- result'ın tipi Long, değeri 4 olur. Kotlin'de farklı tiplerle toplama yapılırken sonuç, değerlerin içinden tipi en büyük olanın tipine sahip olur.
+
+4.9 "val result = Int.MAX_VALUE + Int.MAX_VALUE" gibi bir işlemin sonucunda "result" değişkeninin tipi ve değeri ne olur? Neden böyle olduğunu açıklayın.
+
+- result'ın tipi Int, değeri -2 olur. Değerlerin toplamında Kotlin taşma (overflow) olup olmayacağını kontrol etmez. Bir sürü değişken var, hepsini kontrol etseydi maliyetli olurdu. Ancak iki Int'in toplamının Long olacağı senaryolar nadir senaryolardır. Bu tür edge case'ler için gerektiğinde önlem almak, gerekmedikçe Defensive Programming yapmamak gerekir.
+
+4.10 "val x = 5 / 2 println(x == 2)" gibi bir işlemin sonucu ve tipi nedir? Neden böyle olduğunu açıklayın.
+
+- x'in tipi Int, değeri 2'dir, println() true döner. 5/2 işlemi yapılır, sonuç 2.5'dur. Sonucun ondalıklı olmasına dair herhangi bir şey belirtilmediğinden 2.5 sayısının ondalıklı bölümü kesilir, sonuç 2 olur. Tip belirtilmediği sürece Byte, Short, Int değer aralıklarındaki sayıların tipi Int atanır, 2 bu aralıktadır.
+
+4.11 "val x = 5L / 2 println(x == 2L)" gibi bir işlemin sonucu ve tipi nedir? Neden böyle olduğunu açıklayın.
+
+- x'in tipi Long, değeri 2'dir, println() true döner. Kotlin'de matematiksel işlemin sonucunda değişken tipinin ne olacağını iki değişken tipinden hangisi büyükse o belirler, işlemin sonucu değil. Long ondalıklı olmadığından kesme işlemi uygulanır ve sonuç 2 olur.
+
+4.12 "val x = 5 / 2.toDouble() println(x == 2.5)" gibi bir işlemin sonucu ve tipi nedir? Neden böyle olduğunu açıklayın.
+
+- x'in tipi Double, değeri 2.5'dur, println() true döner. Kotlin'de matematiksel işlemin sonucunda değişken tipinin ne olacağını iki değişken tipinden hangisi büyükse o belirler, işlemin sonucu değil. İşlem esnasında 2 sayısı Double tipine çevrildiğinden, denklemdeki en büyük tip de bu olduğundan sonuç Double olur.
+
+4.13 Kotlin'de tür dönüşümü yapılırken, dönüşümün başarısız olması durumunda TypeCastException nasıl ele alınır ve bu tür hataların önüne geçmek için hangi önlemler alınabilir?
+
+-Bu yollar uygulanabilir:
+
+-Safe Cast Operator'ünü kullanmak (as?)
+
+val x: Any = "abcdef"
+val intValue: Int? = x as? Int // TypeCastException fırlatmak yerine intValue null olur
+
+-Cast öncesi Type Checking yapmak
+
+val x: Any = "abcdef"
+
+if (x is Int) {
+    val intValue: Int = x // x Int ise bu satir calisir
+} else {
+    // x Int degilse burada gereken yapilir
+}
+
+- try-catch ile exception handle edilebilir.
+- ChatGPT "What is TypeCastException in Kotlin and how to prevent this exception?"
