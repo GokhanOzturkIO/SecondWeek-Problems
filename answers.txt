@@ -90,6 +90,11 @@
 10- Sayısal değişkenlerde alt çizgi (underscore) nasıl kullanılır? Kotlin bunu nasıl yorumlar?
 	-Değeri büyük sayısal değerlerin daha rahat okunabilmesi için kullanılır. 
 	-var billion = 1_000_000_000.
+11- `==` ile neyi karşılaştırırız? `===` ile neyi karşılaştırırız?
+	-'==' operatörü iki değşkenin değerlerinin aynı olup olmadığnı kontrol ederken '==='  operatörü ile ise iki değişkenin aynı
+	referans adresini gösterip göstermediği kontrol eder.
+	
+
 		
 	
 	
