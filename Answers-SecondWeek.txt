@@ -1,0 +1,7 @@
+1. Temel Türler & Null Güvenliği
+
+1.1 val ile var arasındaki fark nedir?
+
+- val'a bir kez değer atanır, yeniden atanamaz. var'a sonradan değer atanabilir.
+- val read-only, var mutable değişkendir.
+- Değişken oluştururken önce val ile oluşturup sonra gerekirse var'a çevirmek best practise olarak kabul edilebilir.
