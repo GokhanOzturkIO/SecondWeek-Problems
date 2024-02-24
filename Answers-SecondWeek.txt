@@ -67,3 +67,12 @@ Integer boxedNumber = Integer.valueOf(number)
 1.11 Nullable bir değişkenin bir değere sahip olması ile null olması arasında bellek yönetimi açısından nasıl bir fark vardır? Null değer almış bir değişken bellekte yer kaplamaz diyebilir miyiz?
 
 - Nullable değişkenler obje referansı olarak tutulduğundan (Boxed) değişkenin değeri belleğin Heap kısmında, bu değerin bulunduğu adresi işaret eden referansı ise Stack kısmında bulunur. Bu yüzden null değer almış değişken her ne kadar Heap'te yer kaplamasa da Stack'te yer kaplar.
+
+1.12 Nullable bir değişkenle çalışırken hangi operatörleri kullanırız? Bu operatörlerin kullanım farkları nelerdir? Hangisini ne zaman kullanmak daha anlamlıdır?
+
+- !! ve ?. operatörleri kullanılır. Örneklerle incelenecek olursa:
+
+result!!.plus(324) kodu şunu ifade eder: result kesinlikle null değil, bunu !! garanti ediyor, kodun devamını her zaman çalıştır. Ancak eğer null gelirse KotlinNullPointerException fırlatılır.
+result?.plus(324) kodu şunu ifade eder: result'ın değeri varsa yani null değilse çalıştır, null ise çalıştırma.
+
+-Best practise olarak oluşturulacak alan kritikse !!, değilse ?. kullanılır.
