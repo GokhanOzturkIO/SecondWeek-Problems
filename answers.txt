@@ -87,6 +87,12 @@
 9- "Geleneksel Notasyon" (Conventional Notation) gösterimi nasıl yapılır?
 	-Matematiksel bir ifadenin geleneksel notasyo kurallarına uyarak göstermektir.
 	-57600 yazmak yerine 5.76x10^4 yazmak.
+10- Sayısal değişkenlerde alt çizgi (underscore) nasıl kullanılır? Kotlin bunu nasıl yorumlar?
+	-Değeri büyük sayısal değerlerin daha rahat okunabilmesi için kullanılır. 
+	-var billion = 1_000_000_000.
+		
+	
+	
 	
 
 
