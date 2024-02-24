@@ -9,3 +9,5 @@
 
 -"Tip Çıkarımı" (Type inference) kavramını açıklayın. Hangi durumlarda tip belirtmek kesin olarak gereklidir?
     Tip çıkarımı, değişken oluştururken açıktan ilan edilmemesine rağmen IDE'nin değişkene eşitlenen değere bakarak o değişkenin tipini belirleyebilmesidir. Nullable olması istenen değerler için açıkça tip belirtmek gerekir.
+-Kotlin'de tüm değişkenlerin sınıf olarak bulunması, "ilkel tip" (primitive type) olmadıkları anlamına gelir mi? Arka planda neler oluyor?
+    Kotlin'de derleme sırasında değişken sınıfları eğer varsa ilkel tip karşılıklarına dönüştürülerek optimizasyon sağlanır.
