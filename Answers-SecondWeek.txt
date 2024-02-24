@@ -21,3 +21,8 @@ val availableSpace: Int
 	get() {
 		return (width * height * length) - usedSpace
 	}
+
+1.4 "Tip Çıkarımı" (Type inference) kavramını açıklayın. Hangi durumlarda tip belirtmek kesin olarak gereklidir?
+
+- Type Inference bir değişken tipinin eşitliğin sağındaki değere göre atanması demektir. Örneğin val age = 34 kodunda age değişkenine değer atandığı için Kotlin değişkenin hangi tipte olduğunu anlar, age'in değişken tipi Int olarak belirlenir.
+- Bazı durumlarda tip belirtmek kesin olarak gereklidir. Sayısal değerler için; değişkene girilen değer Int aralığı içerisindeyse Int set edilir (Byte ve Short aralığında olsa bile). Int'in üstünde bir değer ise Long set edilir. Örneğin val longNumber = 1586L kodunda değişkenin Long olması istenirse sonuna L konulur yoksa 1586 sayısı Int aralığında olduğundan değişkene Int atanır.
