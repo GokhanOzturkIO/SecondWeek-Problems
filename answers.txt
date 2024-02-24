@@ -159,6 +159,9 @@
 5- "`val b: Byte = 1` ile `val i: Int = b` ve son olarak `print(b == i)` gibi bir kod yazıldığında çıktı ne olur? Neden böyle bir çıktı aldığınızı açıklayın.
 	-Operator '==' cannot be applied to 'Byte' and 'Int'  şeklinde bir hata alırız.
 	-Bunu sebebi bir Int tipindeki bir değişken ile Byte değişkenin karşılaştırılamamasıdır.
+6- "`val b: Byte = 1` ile `val i: Int = b.toInt()` ve son olarak `print(b == i)` gibi bir kod yazıldığında çıktı ne olur? Neden böyle bir çıktı aldığınızı açıklayın.
+	-True sonucunu verir çünkü (==) iki değişkenin değerlerini kontrol eder.
+
 
 
 
