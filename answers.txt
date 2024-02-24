@@ -7,3 +7,5 @@
 -"Değişmez" (Immutable) ve "Salt Okunur" (ReadOnly) kavramlarını açıklayın. val değişkenler neden aslında "değişmez" değil de "salt okunur" olarak açıklanmalıdır?
     Değişmez değer gerçekten de değeri sonradan hiç değiştirilemez bir değerken "salt okunur" değer aslında sadece setterı private yapılmış, aslında atamasına bağlı olarak sürekli farklı değerler döndürebilen bir değerdir.
 
+-"Tip Çıkarımı" (Type inference) kavramını açıklayın. Hangi durumlarda tip belirtmek kesin olarak gereklidir?
+    Tip çıkarımı, değişken oluştururken açıktan ilan edilmemesine rağmen IDE'nin değişkene eşitlenen değere bakarak o değişkenin tipini belirleyebilmesidir. Nullable olması istenen değerler için açıkça tip belirtmek gerekir.
