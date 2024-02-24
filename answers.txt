@@ -93,6 +93,8 @@
 11- `==` ile neyi karşılaştırırız? `===` ile neyi karşılaştırırız?
 	-'==' operatörü iki değşkenin değerlerinin aynı olup olmadığnı kontrol ederken '==='  operatörü ile ise iki değişkenin aynı
 	referans adresini gösterip göstermediği kontrol eder.
+12- `===` operatörü ile karşılaştırma yaparken Byte değer aralığı neden önemlidir? Kotlin bu aralığa göre neden özel bir davranış sergiler?
+	Kotin'de -128 127 arasında byte değişkenler için bellekte ayrı bir alan ayrılmıştır.
 	
 
 		
