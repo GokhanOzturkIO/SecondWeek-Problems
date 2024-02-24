@@ -46,3 +46,6 @@
 
 -Float değişken oluştururken F ve f harfleri varken, Long değişken oluştururken neden küçük l harfi yoktur?
     Çünkü bazı yazı fontlarında küçük "L" harfi ile "1" rakamı, geliştirici tarafından okunurken karıştırılabilir.
+
+-Tek duyarlıklı (Single precision) ve Çift duyarlıklı (Double precision) kavramlarını açıklayın.
+    Tek duyarlıklı (Float) 32 bit, çift duyarlıklı (Double) 64 bit kullanır, bu da saklayabilecekleri veri miktarını ve kesinliği etkiler.
