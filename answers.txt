@@ -172,3 +172,5 @@
 -"val x = 5 / 2.toDouble() println(x == 2.5)" gibi bir işlemin sonucu ve tipi nedir? Neden böyle olduğunu açıklayın.
     Matematiksel işlemin sonucu 2.5, kodun sonucu ise true dönmesi olur. Dönen küsuratlı matematiksel sonuç direkt kullanılır çünkü operandlar arasında en "doğruluklu"(precise) tip, sonuca atanır.
 
+-Kotlin'de tür dönüşümü yapılırken, dönüşümün başarısız olması durumunda TypeCastException nasıl ele alınır ve bu tür hataların önüne geçmek için hangi önlemler alınabilir?
+    as, is, !is operatörleri, try-catch blokları veya"let-run" gibi elkoyma fonksiyonları kullanılabilir. Hatayı önlemek için, kod yazarken tür dönüşümlerinin neden gerekli olduğunu ve olası alternatifleri değerlendirmek gerekir. Ayrıca imkan olduğunca, tür dönüşümü gerektiren durumları azaltacak şekilde API'ler ve veri yapıları tasarlanmalıdır.
