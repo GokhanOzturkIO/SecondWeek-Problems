@@ -24,3 +24,7 @@
 
 -Bir değişkene null değer atanır ve tip belirtilmezse Kotlin bu değişkeni nasıl yorumlar?
     Kotlin bu değişkeni otomatik olarak "Nothing?" sınıfına dahil eder.
+
+-İlkel bir değişkenin nullable olması ile null değer alamaması arasında bellek yönetimi açısından nasıl farklar vardır?
+    Nullable olmayan değerler primitif hallerine dönüştürülüp optimize edilebilirken nullable değerler kendi tiplerinin bir objesi olarak değerlendirilirler.
+
