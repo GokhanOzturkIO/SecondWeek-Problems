@@ -123,3 +123,6 @@
 
 -"İşaretsiz" değişkenlerle yapılan matematiksel işlemlerde, özellikle büyük sayılarla çalışırken karşılaşılabilecek taşma (overflow) ve taşma olmaması (underflow) durumları için Kotlin nasıl bir yönetim sağlar?
      Taşma durumunda değer en düşük değere döner (wrap around), taşma olmaması durumunda ise en yüksek değere.
+
+-"İşaretsiz" değişkenlerin sınırlamaları nelerdir?
+    JVM'de doğrudan işaretsiz tür desteği yoktur. Bu, Java ile Kotlin arasında kod paylaşımını zorlaştırabilir. Ayrıca bazı Java kütüphaneleri işaretsiz türleri doğrudan desteklemez.
