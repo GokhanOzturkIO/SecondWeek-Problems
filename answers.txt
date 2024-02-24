@@ -73,8 +73,11 @@
 5- Double ve Float değişkenlerle çalışırken ondalık ayıracı olarak hangi işaretler kullanılır? Bu ayıraçların kullanımında nelere dikkat etmek gerekir?
 	-Programlama dillerinde (.) kullanılır ama veri tabanlarında veya başka yerlerde (,) kullanılabilir. Buna dikkat etmek lazım
 	ciddi matematiksel problemlere yol açabilir.
-
-	
+6- Double ve Float değişkenler ondalık kısımda kaç basamağa kadar işlem yaparlar? Bu sınırın üzerinde gelen ondalık bilgileri için nasıl davranırlar? Hangi durumlar için Float ve hangi durumlar için Double kullanılmalıdır?
+	-Double tipli değişkenler ondalık kısımda 7 basamağa kadar işlem yaparlar.
+	-Float tipli değişkenler ondalık kısımda 16 basamağa kadar işlem yaparlar.
+	-Eğer çok önemli ve hassas işlemler yapmamız gerekiyorsa double kullanabiliriz. Eğer ondalık kısım 7 den fazla ise de double kullanırız.
+	-Eğer float veya double bir değişkene ondalıklı basamağı fazla olan bir veri verirsek o zaman veri yuvarlanır.
 
 
 	
