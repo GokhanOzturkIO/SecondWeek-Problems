@@ -64,3 +64,6 @@
 
 -"Geleneksel Notasyon" (Conventional Notation) gösterimi nasıl yapılır?
     Floating numbers kullanılırken rakamların arasına veya sayının sonuna yerine göre "e/f/F" konulabilir.
+
+-Sayısal değişkenlerde alt çizgi (underscore) nasıl kullanılır? Kotlin bunu nasıl yorumlar?
+    Büyük sayıları okurken kolaylık olsun diye rakamların arasında altçizgi(_) konur. Bu çizgiler IDE tarafından görmezden gelinir.
