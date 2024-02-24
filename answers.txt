@@ -73,3 +73,6 @@
 
 - "===" operatörü ile karşılaştırma yaparken Byte değer aralığı neden önemlidir? Kotlin bu aralığa göre neden özel bir davranış sergiler?
     Bir değişkeni nullable yaparsak optimizasyon için primitife dönüştürülmez, sınıf referansı olarak kalır. Ancak bu değer eğer Byte aralığına(-128..+127) sığıyorsa durum değişir ve primitife dönüştürülen değer bellek referansı olarak da aynı noktayı işaret eder. Neden? Boxing denen bi zımbırtı nedeniyle...
+
+-Sayısal değişkenlerde hangi matematiksel operatörler kullanılabilir?
+        Matematiksel olarak +, -, *, /, % operatörleri, karşılaştırma içinse >, <, >=, <= operatörleri.
