@@ -149,4 +149,10 @@ fun main(){
             </summary>
             Bir değişkene tip belirtimi yapılmadığında ve bir değer atanırsa, Kotlin derleyicisi, atanan değere bakarak uygun veri türünü çıkarır. Örneğin atanan değer bir sayı ise bunun hangi değer aralığında olduğuna göre derleyici değişkenin tipini belirler.
         </details>
+        <details>
+            <summary>
+            Float değişken oluştururken F ve f harfleri varken, Long değişken oluştururken neden küçük l harfi yoktur?
+            </summary>
+            Bazı fontlarda küçük l harfi 1 sayısına benzediği için karmaşıklığı engellemek için alınan önlem olarak düşünülebilir.
+        </details>
 </details>
