@@ -43,3 +43,6 @@
 
 -Eğer bir değişkene tip belirtimi yapılmaz ve bir değer atanırsa, Kotlin tip çıkarımını nasıl yapar?
     Bu değişken bir sayı ise, ondalık olmadığı ve maximum integer değerinden küçük olduğu sürece Int çıkarımı yapılır. Ondalık değil ve Integerdan büyükse Long çıkarımı yapılır. Ondalıklı olması durumunda varsayılan olarak Double, ancak özellikle belirtilirse Float çıkarımı yapılır.
+
+-Float değişken oluştururken F ve f harfleri varken, Long değişken oluştururken neden küçük l harfi yoktur?
+    Çünkü bazı yazı fontlarında küçük "L" harfi ile "1" rakamı, geliştirici tarafından okunurken karıştırılabilir.
