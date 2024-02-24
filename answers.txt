@@ -12,3 +12,7 @@
 
 -Kotlin'de tüm değişkenlerin sınıf olarak bulunması, "ilkel tip" (primitive type) olmadıkları anlamına gelir mi? Arka planda neler oluyor?
     Kotlin'de derleme sırasında değişken sınıfları eğer varsa ilkel tip karşılıklarına dönüştürülerek optimizasyon sağlanır.
+
+-"Tip Güvenliği" (Type Safety) kavramını açıklayın.
+    Tip güvenliği sayesinde değişkenlere değer atanırken hatalı bir türde değer atanmaya çalışılması ve çökmeler daha kodu yazarken engellenir çünkü IDE uyarı verir.
+
