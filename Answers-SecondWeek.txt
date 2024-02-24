@@ -34,3 +34,7 @@ val availableSpace: Int
 1.6 "Tip Güvenliği" (Type Safety) kavramını açıklayın.
 
 - Değişkenin tipiyle değişkene atanan değerin tipinin farklı olması durumunda hata alınması tip güvenliği sayesindedir. Değişkene istenilen tipin dışında bir tipte değer atanmasının önüne geçer.
+
+1.7 Bir değişkeni nullable yapmak için ne yapmalıyız?
+
+- Bir değişkene null değer ataması yapabilmek için değişken tipinin sonuna soru işareti (?) konulur. Örneğin: val name: String? = null
