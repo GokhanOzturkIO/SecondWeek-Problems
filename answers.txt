@@ -106,3 +106,6 @@
 
 -"İşaretsiz" değişkenler nasıl bir sınıf yapısında tutulurlar? Bu neden önemlidir?
     Kotlin'de işaretsiz değişkenler (UInt, ULong, UByte, UShort), işaretli karşılıklarının (Int, Long, Byte, Short) aynı bit büyüklüğüne sahip olmalarına rağmen, yalnızca pozitif değerleri temsil edebilecek şekilde tasarlanmıştır. Bu işaretsiz değişkenler, Kotlin'in tip sistemi içerisinde özel sınıflar olarak tutulurlar. Örneğin, UInt sınıfı, işaretsiz bir 32-bit tam sayıyı temsil eder. Bellek kullanımı(verimlilik), güvenlik ve pratiklik açısından önemlidir.
+
+-"İşaretsiz" değişkenlerin harf gösterimi nasıldır?
+        u, uL gibi ekler kullanılır. Örneğin, 42u, 0xFFFF_FFFF_FFFFuL.
