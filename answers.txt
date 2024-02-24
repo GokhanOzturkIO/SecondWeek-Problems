@@ -153,6 +153,10 @@
 	-Bir nesneyi başka bir nesneye cast etmek için as(unsafe), as?(safe) vardır.
 	-as kullanılırken eğer cast edilemezse uygulamada hata meydana gelir.
 	as? kullanılırken eğer cast edilemezse değişkene null değer atanır ve programda çökme olmaz.
+4- Sayısal değişkenlerde örtük tip genişletme (implicit widening conversions) ne demektir? Kotlin'de bu neden yapılamaz?
+	-Mesela bir fonksiyonda parametre olarak Long istenir ve biz ona int parametre verirsek parametre Int tipine dönüşmesine denir. Ama bu kotlinde
+	yoktur bunu sebebi belirli tasarım tercihi ve bazı hataları önlemek içindir.
+
 
 
 	
