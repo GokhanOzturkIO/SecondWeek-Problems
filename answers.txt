@@ -76,3 +76,6 @@
 
 -Sayısal değişkenlerde hangi matematiksel operatörler kullanılabilir?
        +, -, *, /, % operatörleri.
+
+-Sayısal değişkenlerde hangi karşılaştırma operatörleri kullanılabilir?
+    >, <, >=, <= operatörleri.
