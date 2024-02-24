@@ -129,6 +129,8 @@
     -val b : ULong şeklinde gösterilir.
 6- "İşaretsiz" değişkenlerin kullanım amaçları nelerdir?
 	-İşaretli değişkenlere göre daha az yer kaplarlar. Eğer negatif olmayacak ve çok fazla işlem yapacak değerlerde kullanabiliriz.
+7- "İşaretsiz" değişkenlerle yapılan matematiksel işlemlerde, özellikle büyük sayılarla çalışırken karşılaşılabilecek taşma (overflow) ve taşma olmaması (underflow) durumları için Kotlin nasıl bir yönetim sağlar?
+	-"+", "-", "*", "/" gibi matematiksel operatörler kullanıldığında derleme zamanında uyarı verebilir. 
 
 	
 
