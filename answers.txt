@@ -55,3 +55,6 @@
 
 -Double ve Float değişkenler ondalık kısımda kaç basamağa kadar işlem yaparlar? Bu sınırın üzerinde gelen ondalık bilgileri için nasıl davranırlar? Hangi durumlar için Float ve hangi durumlar için Double kullanılmalıdır?
     Float yaklaşık 7, Double yaklaşık 15 basamak doğruluğa sahiptir. Kesinlik gerektiren durumlar için Double, daha az bellek kullanımı için Float tercih edilir.
+
+-Ondalık(Decimal), Onaltılık (Hexadecimal) ve İkilik (Binary) değişkenleri Kotlin'de nasıl tanımlayabilirsiniz?
+    Ondalık sayılar hiçbir değişiklik yapılmadan yazılırken, Onaltılık sayıların başına "0x", İkilik sayıların başına ise "0b" konulmalıdır.
