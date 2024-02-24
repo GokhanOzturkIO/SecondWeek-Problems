@@ -378,4 +378,10 @@ tipi Integer ve değeri de -2 olacaktır. Burada iki Int sayısının maksimum d
 
 ===========================
 
+46-) "val x = 5 / 2 println(x == 2)" gibi bir işlemin sonucu ve tipi nedir? Neden böyle olduğunu açıklayın.
+
+tipi Int, işlemin sonucu ise true olacaktır. x, type inference özelliğinden dolayı otomatik olarak Int tipinde algılanmış ve 5 sayısının ikiye bölümünün sonucu 2 olarak verilmiştir. Eğer ki float ya da double gibi kesirli işlemlerde kullanılan bir tip belirtilmiş olsaydı ortaya çıkan değer 2.5 olacaktı.
+
+===========================
+
 
