@@ -127,6 +127,8 @@
 	-a1 ismindeki değişken UInt tipi, a2 ise ULong tipinde oluşur. Çünkü a2'nin değer aralığı Ulong a girer.
 5- "İşaretsiz" "Long" harf gösterimi nasıl yapılır?
     -val b : ULong şeklinde gösterilir.
+6- "İşaretsiz" değişkenlerin kullanım amaçları nelerdir?
+	-İşaretli değişkenlere göre daha az yer kaplarlar. Eğer negatif olmayacak ve çok fazla işlem yapacak değerlerde kullanabiliriz.
 
 	
 
