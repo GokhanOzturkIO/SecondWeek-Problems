@@ -78,6 +78,11 @@
 	-Float tipli değişkenler ondalık kısımda 16 basamağa kadar işlem yaparlar.
 	-Eğer çok önemli ve hassas işlemler yapmamız gerekiyorsa double kullanabiliriz. Eğer ondalık kısım 7 den fazla ise de double kullanırız.
 	-Eğer float veya double bir değişkene ondalıklı basamağı fazla olan bir veri verirsek o zaman veri yuvarlanır.
+7- Ondalık(Decimal), Onaltılık (Hexadecimal) ve İkilik (Binary) değişkenleri Kotlin'de nasıl tanımlayabilirsiniz?
+	-val a =100 decimal
+	-val b =0x0A hexadecimal
+	-val c = 0b0000111 binary
+
 
 
 	
