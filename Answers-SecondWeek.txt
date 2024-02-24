@@ -10,3 +10,14 @@
 
 - var değişkenin set'i private yapılırsa val gibi davranır.
 - var değişkenin değeri Class'ın dışından değiştirilemesin ancak Class'ın içinden değiştirilebilsin isteniyorsa bu yöntem kullanılabilir.
+
+1.3 "Değişmez" (Immutable) ve "Salt Okunur" (ReadOnly) kavramlarını açıklayın. val değişkenler neden aslında "değişmez" değil de "salt okunur" olarak açıklanmalıdır?
+
+- Read-only: İlk değer atamasından sonra tekrar değer atanamaz.
+- Immutable: Değişkenin/Nesnenin durumu asla ilk değerden farklı olamaz.
+- val read-only'dir, immutable değil. Bunun açıklaması bir örnekle verilecek olursa, aşağıdaki kodda availableSpace'in değeri her seferinde farklı sonuç üretebilir:
+
+val availableSpace: Int
+	get() {
+		return (width * height * length) - usedSpace
+	}
