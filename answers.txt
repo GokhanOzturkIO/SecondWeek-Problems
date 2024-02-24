@@ -148,3 +148,6 @@
 
 -"Güvenli & Güvensiz" operatörler nelerdir?
     Nullable türlerle çalışırken kullanılır. ?. null kontrolü yapar, !! null olmadığını varsayar.
+
+-Sayısal değişkenlerde örtük tip genişletme (implicit widening conversions) ne demektir? Kotlin'de bu neden yapılamaz?
+    Küçük sayısal türlerin (örneğin, Byte, Short) otomatik olarak daha büyük sayısal türlere (örneğin, Int, Long) dönüştürülmesi anlamına gelir. Kotlin'de yapılamaz çünkü tip güvenliği sağlamak için her tür dönüşümünün açıkça yapılması gerekir.
