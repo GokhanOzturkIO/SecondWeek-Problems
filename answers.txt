@@ -99,6 +99,15 @@
 	- Toplama '+',Çıkarma '-',Çarpma '*',Bölme '/',Modül '%',Artırma '++' ,Azaltma '--' operatörleri kullanılabilir.
 14- Sayısal değişkenlerde hangi karşılaştırma operatörleri kullanılabilir?
 	-Eşittir (==), Eşit Değildir (!=) Büyük (>), Küçük (<), Büyük Eşit (>=), Küçük Eşit (<=) operatörleri kullanılabilir.
+15- Bit düzeyinde operatörler (Bitwise operators) nelerdir? Ne amaçla kullanılır? Kotlin'de bunları nasıl kullanabilirsiniz?
+	-Bellekdeki bitleri manipule etmek ve bunlar üzerinde işlemler yapmak için kullanılır.
+	-Ve  Operatörü (&)
+	-Veya Operatörü (|)
+	-XOR  Operatörü (^)
+	-(NOT) Operatörü (~)
+	-Sağa Kaydırma Operatörü (>>)
+	-Sola Kaydırma Operatörü (<<)
+	
 
 
 	
