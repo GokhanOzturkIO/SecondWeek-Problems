@@ -113,4 +113,10 @@ fun main(){
             </summary>
             Nullable bir primitive değişken null bir değer tutabileceği için yani null olabilme ihtimali yüzünden bellekte daha fazla yer kaplar. Non-null değişkenler için ise bu yer ayrılmaz. Bu sebeple non-null değişken tipinin bellekte tutulmasının daha performanslı olduğu söylenebilir.
         </details>
+        <details>
+            <summary>
+            Nullable bir değişkenin bir değere sahip olması ile null olması arasında bellek yönetimi açısından nasıl bir fark vardır? Null değer almış bir değişken bellekte yer kaplamaz diyebilir miyiz?
+            </summary>
+            Nullable değişkenler referans tipli oldukları için içerisinde bir değer barındırmasa bile adresleri belleğin stack kısmında tutulur. Değişkenin bir değeri olmadığı için belleğin heap kısmı boştur. Sonuç olarak nullable bir değişken içerisinde değer barındırsada barındırmasada bellekte yer kaplar. İçerisinde bir değer varsa daha fazla yer kaplar.
+        </details>
 </details>
