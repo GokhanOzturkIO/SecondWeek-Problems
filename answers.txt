@@ -1,6 +1,9 @@
 -val ile var arasındaki fark nedir?
     "var" varsayılan olarak değiştirilebilir bir "değişken" iken "var" varsayılan olarak read-only bir değişkendir.
+
 -Bir var değişkeni val gibi davranmasını nasıl sağlayabiliriz val kelimesini kullanmadan? Bunu neden yapmak isteriz? Örnek bir senaryo verin.
     değişkenin setterını private yaparak val gibi davrandırabiliriz. Örneğin classımız içindeki bir değerin sadece class içinden değiştirilebilmesini ama dışarıdan doğrudan modifiyeye kapalı olmasını isteyebiliriz.
+
 -"Değişmez" (Immutable) ve "Salt Okunur" (ReadOnly) kavramlarını açıklayın. val değişkenler neden aslında "değişmez" değil de "salt okunur" olarak açıklanmalıdır?
     Değişmez değer gerçekten de değeri sonradan hiç değiştirilemez bir değerken "salt okunur" değer aslında sadece setterı private yapılmış, aslında atamasına bağlı olarak sürekli farklı değerler döndürebilen bir değerdir.
+
