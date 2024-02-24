@@ -98,3 +98,8 @@
 
 -Double ve Float değişkenler kullanılırken "yuvarlama" davranışı nasıldır? Bu nasıl değiştirilebilir?
     Double ve Float değişkenler IEEE 754 standardına göre çalışırMIŞ ve genellikle en yakın sayıya yuvarlarlar. Ancak, tam kesinlik sağlamazlar ve bazı durumlarda beklenmeyen sonuçlar doğurabilirler. Yuvarlama davranışını daha fazla kontrol etmek için BigDecimal kullanılabilir, burada yuvarlama kuralı (RoundingMode) belirlenerek daha kesin yuvarlama işlemleri yapılabilir.
+
+**İşaretsiz Sayılar**
+
+-"İşaretsiz" (Unsigned) değişkenler ne demektir? İşaretli olanlarla aralarındaki fark nedir?
+    Tüm sayı değerli değişkenler varsayılan olarak işaretsizdir ve eksi bir sınırdan artı bir sınıra kadar değer aralığındadır. İşaretli değişkenler, tipinin kısıtladığı aralık içindeki eksi değerlere kesinlikle eşit olmayan, yani kesinlikle sıfır veya pozitif olan ve hatta max değer + bu eksi değerlerin toplamı kadar büyüyebilirler.
