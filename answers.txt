@@ -145,3 +145,6 @@
             println(input.length) // String sınıfının metodları kullanılabilir.
         }
     }
+
+-"Güvenli & Güvensiz" operatörler nelerdir?
+    Nullable türlerle çalışırken kullanılır. ?. null kontrolü yapar, !! null olmadığını varsayar.
