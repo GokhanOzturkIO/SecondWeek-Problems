@@ -19,3 +19,5 @@
 -Bir değişkeni nullable yapmak için ne yapmalıyız?
     Değişkeni oluştururken belirttiğimiz tip keywordünün sonuna soru işareti koymalıyız(bkz: "String" -> "String?")
 
+-"Null Güvenliği" (Null Safety) kavramını açıklayın.
+    Null güvenliği, potansiyel olarak null dönebilecek değişkenlerin daha kod yazarken belirlenmesi ve eğer olmasaydı null dönmeleriyle oluşabilecek hataların baştan önlenmesini sağlayan bir özelliktir. Bunun için geliştiricinin, kullanacağı verilerin null olmadığından emin olması ve ona göre kod yazması beklenir(bkz: myVar?.toLowercase veya myVar!!.toLowercase)
