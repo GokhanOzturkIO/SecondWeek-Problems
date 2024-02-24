@@ -58,3 +58,6 @@
 
 -Ondalık(Decimal), Onaltılık (Hexadecimal) ve İkilik (Binary) değişkenleri Kotlin'de nasıl tanımlayabilirsiniz?
     Ondalık sayılar hiçbir değişiklik yapılmadan yazılırken, Onaltılık sayıların başına "0x", İkilik sayıların başına ise "0b" konulmalıdır.
+
+-Sekizlik (Octal) değişkenler Java'da nasıl tanımlanır? Kotlin'de Sekizlik değişken tanımlanabilir mi?
+    Sayının başına sıfır(0) konulur. Nope.
