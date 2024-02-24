@@ -30,3 +30,7 @@ val availableSpace: Int
 1.5 Kotlin'de tüm değişkenlerin sınıf olarak bulunması, "ilkel tip" (primitive type) olmadıkları anlamına gelir mi? Arka planda neler oluyor?
 
 - Kotlin'de primitif tipler Class olarak bulunsalar bile kodlar bytecode'a çevrilirken yapılan optimizasyonlarla Java'daki gerçek primitif tiplere dönüştürülürler.
+
+1.6 "Tip Güvenliği" (Type Safety) kavramını açıklayın.
+
+- Değişkenin tipiyle değişkene atanan değerin tipinin farklı olması durumunda hata alınması tip güvenliği sayesindedir. Değişkene istenilen tipin dışında bir tipte değer atanmasının önüne geçer.
