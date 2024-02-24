@@ -84,6 +84,11 @@
 	-val c = 0b0000111 binary
 8- Sekizlik (Octal) değişkenler Java'da nasıl tanımlanır? Kotlin'de Sekizlik değişken tanımlanabilir mi?
 	-Kotlinde octal değişkenleri tanımlayamayız. Java'da int number = 0433; şekilde tanımlayabiliriz.
+9- "Geleneksel Notasyon" (Conventional Notation) gösterimi nasıl yapılır?
+	-Matematiksel bir ifadenin geleneksel notasyo kurallarına uyarak göstermektir.
+	-57600 yazmak yerine 5.76x10^4 yazmak.
+	
+
 
 
 
