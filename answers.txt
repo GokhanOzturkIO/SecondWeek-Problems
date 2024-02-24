@@ -49,3 +49,6 @@
 
 -Tek duyarlıklı (Single precision) ve Çift duyarlıklı (Double precision) kavramlarını açıklayın.
     Tek duyarlıklı (Float) 32 bit, çift duyarlıklı (Double) 64 bit kullanır, bu da saklayabilecekleri veri miktarını ve kesinliği etkiler.
+
+-Double ve Float değişkenlerle çalışırken ondalık ayıracı olarak hangi işaretler kullanılır? Bu ayıraçların kullanımında nelere dikkat etmek gerekir?
+    Ondalık ayırıcı olarak nokta(.) kullanılır. Eğer ondalık ayırıcı olarak nokta dışında, örneğin virgül gibi farklı bir ayırıcı kullanan konuşma dili kullanılıyorsa sorun yaşamamak için kod yazarken buna dikkat edilmelidir.
