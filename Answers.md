@@ -119,4 +119,13 @@ fun main(){
             </summary>
             Nullable değişkenler referans tipli oldukları için içerisinde bir değer barındırmasa bile adresleri belleğin stack kısmında tutulur. Değişkenin bir değeri olmadığı için belleğin heap kısmı boştur. Sonuç olarak nullable bir değişken içerisinde değer barındırsada barındırmasada bellekte yer kaplar. İçerisinde bir değer varsa daha fazla yer kaplar.
         </details>
+        <details>
+            <summary>
+            Nullable bir değişkenle çalışırken hangi operatörleri kullanırız? Bu operatörlerin kullanım farkları nelerdir? Hangisini ne zaman kullanmak daha anlamlıdır?
+            </summary>
+            Üç farklı operatör kullanırız. Bunlar; `?.` (Safe Call Operator), `?:` (Elivs Operator) ve `!!` (Not-Null Assertion Operator) operatörleridir.
+            `?.` (Safe Call Operator) : nullable bir değişkenin null olup olmadığını kontrol eder ve değişken null değilse işlem yapar. Bu, null referanslarını güvenli bir şekilde işlemek için kullanılır ve null olma durumunda hata almayı önler.
+            `?:` (Elivs Operator) : null olabilen bir değişkenin null olması durumunda varsayılan bir değer döndürmek/atamak için kullanılır. Bu, değişkenin null olması durumunda bir varsayılan değeri kullanmanın kısa bir yolunu sağlar.
+            `!!` (Not-Null Assertion Operator) : nullable değişkenin null olmadığına dair bir garanti verir. Bu operatörü kullanarak, bir nullable değişkenin değerini non-nullable olarak kabul ederiz ve eğer değişken null ise bir NullPointerException alırız.
+        </details>
 </details>
