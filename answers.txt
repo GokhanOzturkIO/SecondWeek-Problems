@@ -61,3 +61,6 @@
 
 -Sekizlik (Octal) değişkenler Java'da nasıl tanımlanır? Kotlin'de Sekizlik değişken tanımlanabilir mi?
     Sayının başına sıfır(0) konulur. Nope.
+
+-"Geleneksel Notasyon" (Conventional Notation) gösterimi nasıl yapılır?
+    Büyük sayıları okurken kolaylık olsun diye rakamların arasında altçizgi(_) konur. Bu çizgiler IDE tarafından görmezden gelinir.
