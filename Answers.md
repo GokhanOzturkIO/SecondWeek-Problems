@@ -129,3 +129,18 @@ fun main(){
             `!!` (Not-Null Assertion Operator) : nullable değişkenin null olmadığına dair bir garanti verir. Bu operatörü kullanarak, bir nullable değişkenin değerini non-nullable olarak kabul ederiz ve eğer değişken null ise bir NullPointerException alırız.
         </details>
 </details>
+<details open>
+    <summary>Sayılar</summary>
+    <details>
+        <summary>
+        Kaç farklı tipte "number" sınıfı miras alan "alt sınıf" (child class) vardır? Bunların değer aralıkları neden önemlidir?
+        </summary>
+        Number sınıfını miras alan 6 adet child class vardır. Bunlar; `Byte`, `Short`, `Int`, `Long`, `Float` ve `Double` sınıflarıdır.
+        Byte 8 bit yer kaplar. Değer aralığı ise -128'den +127'ye kadardır.</br>
+        Short 16 bit yer kaplar. Değer aralığı ise -32768'den +32767'ye kadardır.</br>
+        Int 32 bit yer kaplar. Değer aralığı ise -2,147,483,648'den +2,147,483,647'ye kadardır.</br>
+        Long 64 bit yer kaplar. Değer aralığı ise -9,223,372,036,854,775,808'den +9,223,372,036,854,775,807'ye kadardır.</br>
+        Float 32 bit yer kaplar. Değer aralığı ise 1.40129846432481700e-45F'den 3.40282346638528860e+38F'e kadardır.</br>
+        Double 64 bit yer kaplar. Değer aralığı ise 4.94065645841246544e-324'den 1.79769313486231570e+308'e kadardır.
+        </details>
+</details>
