@@ -126,3 +126,6 @@
 
 -"İşaretsiz" değişkenlerin sınırlamaları nelerdir?
     JVM'de doğrudan işaretsiz tür desteği yoktur. Bu, Java ile Kotlin arasında kod paylaşımını zorlaştırabilir. Ayrıca bazı Java kütüphaneleri işaretsiz türleri doğrudan desteklemez.
+
+-"İşaretsiz" değişken türleri (UInt, ULong vs.) kullanırken, Java API'leri ile uyumluluk konusunda ne gibi sorunlar olabilir? Bunları çözmek için neler yapabilirsiniz?
+    İşaretsiz türleri işaretli türlerine dönüştürerek ve tersi işlemler yaparak çözülebilir. toLong(), toInt() gibi dönüşüm fonksiyonları kullanılabilir.
