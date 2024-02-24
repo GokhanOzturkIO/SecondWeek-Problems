@@ -165,3 +165,6 @@
 
 -"val x = 5 / 2 println(x == 2)" gibi bir işlemin sonucu ve tipi nedir? Neden böyle olduğunu açıklayın.
     Matematiksel işlemin sonucu 2, kodun sonucu ise true dönmesi olur. Dönen küsuratlı matematiksel sonuç inte çevrildiğinde virgülden sonrasını kaybeder.
+
+-"val x = 5L / 2 println(x == 2L)" gibi bir işlemin sonucu ve tipi nedir? Neden böyle olduğunu açıklayın.
+    Aynı durum. Matematiksel işlemin sonucu 2, kodun sonucu ise true dönmesi olur. Dönen küsuratlı matematiksel sonuç inte çevrildiğinde virgülden sonrasını kaybeder.
