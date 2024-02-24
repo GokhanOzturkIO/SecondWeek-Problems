@@ -67,3 +67,7 @@
 
 -Sayısal değişkenlerde alt çizgi (underscore) nasıl kullanılır? Kotlin bunu nasıl yorumlar?
     Büyük sayıları okurken kolaylık olsun diye rakamların arasında altçizgi(_) konur. Bu çizgiler IDE tarafından görmezden gelinir.
+
+- "==" ile neyi karşılaştırırız? "===" ile neyi karşılaştırırız?
+    Çift eşittir ile değerleri, 3 eşittir ile ise bellek referansları karşılaştırılır.
+
