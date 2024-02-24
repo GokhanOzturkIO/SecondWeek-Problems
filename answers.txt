@@ -28,3 +28,5 @@
 -İlkel bir değişkenin nullable olması ile null değer alamaması arasında bellek yönetimi açısından nasıl farklar vardır?
     Nullable olmayan değerler primitif hallerine dönüştürülüp optimize edilebilirken nullable değerler kendi tiplerinin bir objesi olarak değerlendirilirler.
 
+-Nullable bir değişkenin bir değere sahip olması ile null olması arasında bellek yönetimi açısından nasıl bir fark vardır? Null değer almış bir değişken bellekte yer kaplamaz diyebilir miyiz?
+    Değişken bir değere sahip olmasa, null olarak kalsa bile adresi bellekte saklanır. Sadece değer açısından bi ekstra bellek kaplamama görülür.
