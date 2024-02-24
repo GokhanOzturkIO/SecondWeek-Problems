@@ -151,3 +151,6 @@
 
 -Sayısal değişkenlerde örtük tip genişletme (implicit widening conversions) ne demektir? Kotlin'de bu neden yapılamaz?
     Küçük sayısal türlerin (örneğin, Byte, Short) otomatik olarak daha büyük sayısal türlere (örneğin, Int, Long) dönüştürülmesi anlamına gelir. Kotlin'de yapılamaz çünkü tip güvenliği sağlamak için her tür dönüşümünün açıkça yapılması gerekir.
+
+-"val b: Byte = 1 ile val i: Int = b ve son olarak print(b == i) gibi bir kod yazıldığında çıktı ne olur? Neden böyle bir çıktı aldığınızı açıklayın.
+    b ve i farklı türler olduğu ve Kotlin'de farklı sayısal türler arasında doğrudan == kullanılarak karşılaştırma yapılamadığı için hata alınır.
