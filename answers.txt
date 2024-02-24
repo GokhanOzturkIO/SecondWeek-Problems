@@ -149,6 +149,10 @@
 	- if (obj is Int) {
         println("String uzunluğu: ${obj.inc()}") // Smart cast
     }
+3- "Güvenli & Güvensiz" operatörler nelerdir?
+	-Bir nesneyi başka bir nesneye cast etmek için as(unsafe), as?(safe) vardır.
+	-as kullanılırken eğer cast edilemezse uygulamada hata meydana gelir.
+	as? kullanılırken eğer cast edilemezse değişkene null değer atanır ve programda çökme olmaz.
 
 
 	
