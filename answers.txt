@@ -104,3 +104,5 @@
 -"İşaretsiz" (Unsigned) değişkenler ne demektir? İşaretli olanlarla aralarındaki fark nedir?
     Tüm sayı değerli değişkenler varsayılan olarak işaretlidir ve eksi bir sınırdan artı bir sınıra kadar değer aralığındadır. İşaretsiz değişkenler, tipinin kısıtladığı aralık içindeki eksi değerlere kesinlikle eşit olmayan, yani kesinlikle sıfır veya pozitif olan ve hatta max değer + bu eksi değerlerin toplamı kadar büyüyebilirler.
 
+-"İşaretsiz" değişkenler nasıl bir sınıf yapısında tutulurlar? Bu neden önemlidir?
+    Kotlin'de işaretsiz değişkenler (UInt, ULong, UByte, UShort), işaretli karşılıklarının (Int, Long, Byte, Short) aynı bit büyüklüğüne sahip olmalarına rağmen, yalnızca pozitif değerleri temsil edebilecek şekilde tasarlanmıştır. Bu işaretsiz değişkenler, Kotlin'in tip sistemi içerisinde özel sınıflar olarak tutulurlar. Örneğin, UInt sınıfı, işaretsiz bir 32-bit tam sayıyı temsil eder. Bellek kullanımı(verimlilik), güvenlik ve pratiklik açısından önemlidir.
