@@ -129,3 +129,9 @@
 
 -"İşaretsiz" değişken türleri (UInt, ULong vs.) kullanırken, Java API'leri ile uyumluluk konusunda ne gibi sorunlar olabilir? Bunları çözmek için neler yapabilirsiniz?
     İşaretsiz türleri işaretli türlerine dönüştürerek ve tersi işlemler yaparak çözülebilir. toLong(), toInt() gibi dönüşüm fonksiyonları kullanılabilir.
+
+
+**Tür Dönüşümü**
+
+-is ve !is operatörlerinin kullanımını açıklayın.
+    Bir nesnenin türünü kontrol etmek için kullanılır. "if (obj is String)" gibi.
