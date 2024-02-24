@@ -115,3 +115,8 @@
 
 -"İşaretsiz" "Long" harf gösterimi nasıl yapılır?
     Sonuna "uL" ekleyerek.
+
+-"İşaretsiz" değişkenlerin kullanım amaçları nelerdir?
+    Negatif Değerlerin Geçersiz Olduğu Durumlar: Dizi indeksleri, zaman damgaları gibi.
+    Bit Düzeyinde İşlemler: Maskeler, bayraklar ve diğer bit düzeyinde manipülasyonlar.
+    Büyük Sayı Aralıkları: İşaret bitini değer biti olarak kullanarak daha geniş pozitif sayı aralıkları elde etmek.
