@@ -16,3 +16,6 @@
 -"Tip Güvenliği" (Type Safety) kavramını açıklayın.
     Tip güvenliği sayesinde değişkenlere değer atanırken hatalı bir türde değer atanmaya çalışılması ve çökmeler daha kodu yazarken engellenir çünkü IDE uyarı verir.
 
+-Bir değişkeni nullable yapmak için ne yapmalıyız?
+    Değişkeni oluştururken belirttiğimiz tip keywordünün sonuna soru işareti koymalıyız(bkz: "String" -> "String?")
+
