@@ -175,7 +175,8 @@
 12- "`val x = 5 / 2.toDouble()` `println(x == 2.5)`" gibi bir işlemin sonucu ve tipi nedir? Neden böyle olduğunu açıklayın.
 	-Burda sonuç True olacaktır. Çünkü 2 sayısı double'a çevrilmiştir ve bir int bir double işlem yaparsa işlem sonucunda
 	double olarak sonuç gelir.
-
+13- Kotlin'de tür dönüşünmü yapılırken, dönüşümün başarısız olması durumunda TypeCastException nasıl ele alınır ve bu tür hataların önüne geçmek için hangi önlemler alınabilir?
+	-as? operatörünü, OrNull() fonksiyonunu, try-catch bloklarını kullanabiliriz.
 	
 
 
