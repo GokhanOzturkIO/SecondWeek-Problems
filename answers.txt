@@ -92,3 +92,6 @@
     Sol Kaydırma (shl): Belirli bir sayıda biti sola kaydırır ve sağdan sıfırlar ekler. "x shl n"
     Sağ Kaydırma (shr): Belirli bir sayıda biti sağa kaydırır ve soldan işaret bitine (0 veya 1) bağlı olarak bitler ekler. "x shr n"
     Sıfırdan Sağa Kaydırma (ushr): Belirli bir sayıda biti sağa kaydırır ve soldan sıfır ekler. İşaretsiz sağ kaydırma olarak da bilinir. "x ushr n"
+
+-Kotlin'de büyük sayılarla çalışırken hangi ek türlerden yararlanılır ve bu türlerin sınırları nelerdir?
+     BigInteger ve BigDecimal türlerinden yararlanılır. İkisi de sınırsız büyüklükteki sayılarla çalışmayı sağlar ve bellek kapasitesi ve işlemcinin izin verdiği ölçüde herhangi bir büyüklükteki sayıyı temsil edebilir.
