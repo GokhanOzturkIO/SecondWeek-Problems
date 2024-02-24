@@ -390,4 +390,12 @@ tipi Long, sonuç ise true olacaktır. Büyük olan sayının tipi Long olduğu 
 
 ===========================
 
+48-) "val x = 5 / 2.toDouble() println(x == 2.5)" gibi bir işlemin sonucu ve tipi nedir? Neden böyle olduğunu açıklayın.
+
+değer 2.5 sonuç ise true olacaktır. Burada bölen sayının tipi double olarak verildiği için kotlin küsüratın önemli olduğunu algılayarak değişkenin tipini double olarak algılamıştır.
+
+===========================
+
+
+
 
