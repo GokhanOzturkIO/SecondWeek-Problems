@@ -76,3 +76,159 @@ result!!.plus(324) kodu şunu ifade eder: result kesinlikle null değil, bunu !!
 result?.plus(324) kodu şunu ifade eder: result'ın değeri varsa yani null değilse çalıştır, null ise çalıştırma.
 
 -Best practise olarak oluşturulacak alan kritikse !!, değilse ?. kullanılır.
+
+
+2. Sayılar
+
+
+2.1 Kaç farklı tipte "number" sınıfı miras alan "alt sınıf" (child class) vardır? Bunların değer aralıkları neden önemlidir?
+
+- Number sınıfını miras alan alt sınıflar: Byte, Double, Float, Int, Long, Short.
+- Değer aralıkları önemlidir, değer aralıklarına riayet edilmezse problemler ortaya çıkabilir. Örneğin ilgili değer aralığından büyük bir değer değişkene atanmaya çalıştığında farklı ve yanlış bir değer atanır, "value overflow" olur
+
+2.2 Eğer bir değişkene tip belirtimi yapılmaz ve bir değer atanırsa, Kotlin tip çıkarımını nasıl yapar?
+
+- Sayısal değerler için değer Int aralığı içerisindeyse Int atanır (Byte ve Short aralığında olsa bile) Int'in üstünde bir değer ise Long atanır.
+- Örneğin val longNumber = 1586L kodunda değişkenin Long olması istendiğinden L konulmuştur. Aksi taktirde 1586 sayısı Int aralığında olduğundan Int atanırdı.
+
+2.3 Float değişken oluştururken F ve f harfleri varken, Long değişken oluştururken neden küçük l harfi yoktur?
+
+- Sayı olan 1 ile karışmaması için.
+
+2.4 Tek duyarlıklı (Single precision) ve Çift duyarlıklı (Double precision) kavramlarını açıklayın.
+
+- Bu kavramlar ondalıklı sayıların IEEE 754 standartlarına göre temsiliyle ilgilidir. Float tek duyarlıklı, Double çift duyarlıklıdır.
+- Tek duyarlıklı sayılar virgülden sonra 6-7 basamak alabilir, bellekte 32 bit yer kaplar, çift duyarlıklı sayılara göre daha hızlı ancak düşük hassasiyetlidir.
+- Çift duyarlıklı sayılar virgülden sonra 15-16 basamak alabilir, bellekte 64 bit yer kaplar, tek duyarlıklı sayılara göre daha yavaş ancak yüksek hassasiyetlidir.
+
+2.5 Double ve Float değişkenlerle çalışırken ondalık ayıracı olarak hangi işaretler kullanılır? Bu ayıraçların kullanımında nelere dikkat etmek gerekir?
+
+- Ondalık ayracı olarak nokta (.) kullanılır.
+- Kullanılacak veride sayıların nokta (.) ile mi virgül (,) ile mi ayrıldığına dikkat edilmelidir. Örneğin Türkiye'de para miktarı 1.245,34 formatında yazılırken bazı yabancı ülkelerde 1245.34 formatındadır. Split işlemini gerçekleştirirken Backend'den gelen formata dikkat edilmelidir.
+
+2.6 Double ve Float değişkenler ondalık kısımda kaç basamağa kadar işlem yaparlar? Bu sınırın üzerinde gelen ondalık bilgileri için nasıl davranırlar? Hangi durumlar için Float ve hangi durumlar için Double kullanılmalıdır?
+
+-Float değişkenler 6-7, Double değişkenler 15-16 basamağa kadar işlem yaparlar.
+-Sınırın üstünde gelen bilgiler yuvarlanır, fazla kısım atılır. Örneğin:
+
+val e = 2.7182818284 // Double
+val eFloat = 2.7182818284f // Float, hakiki değeri: 2.7182817
+
+-Float'ın basamak sayısı yeterli ise Double kullanıp gereksiz yere bellekte yer işgal etmeye gerek yoktur. Float'ın sınırını aşmak gerekiyorsa Double kullanılabilir.
+
+2.7 Ondalık(Decimal), Onaltılık (Hexadecimal) ve İkilik (Binary) değişkenleri Kotlin'de nasıl tanımlayabilirsiniz?
+
+- Ondalık (Decimal) sayılar direkt tanımlanabilir. Örneğin: 123
+- Onaltılık (Hexadecimal) sayılar başına 0x getirilerek tanımlanabilir. Örneğin: 0x0F
+- İkilik (Binary) sayılar başına 0b getirilerek tanımlanabilir. Örneğin: 0b00001011
+
+2.8 Sekizlik (Octal) değişkenler Java'da nasıl tanımlanır? Kotlin'de Sekizlik değişken tanımlanabilir mi?
+
+- Java'da Sekizlik (Octal) sayı tanımlamak için sayının başına 0 eklenir. Örneğin: int a = 024; 
+- Kotlin'de Sekizlik (Octal) değişkenler desteklenmemektedir.
+- Kotlin'de String olarak bulunan Sekizlik değerler parseInt(), toInt(), BigInteger() fonksiyonları ile Ondalık sayılara çevrilebilir.
+-Örneğin:
+
+fun octalToDecimalUsingToInt(octal: String): Int {
+    return octal.toInt(8)
+}
+Assertions.assertEquals(28, octalToDecimalUsingToInt("34")) //test ve kontrol
+
+2.9 "Geleneksel Notasyon" (Conventional Notation) gösterimi nasıl yapılır?
+
+- Kotlin kayan noktalı (floating-point) sayılar için Geleneksel Notasyon'u (Conventional Notation) destekler
+- Double sayılar default olarak 123.5, 123.5e10 gibi temsil edilirler.
+- Float sayılar f veya F ile etiketlenirler. Örneğin: 123.5f
+
+2.10 Sayısal değişkenlerde alt çizgi (underscore) nasıl kullanılır? Kotlin bunu nasıl yorumlar?
+
+- Büyük sayıların okunurluğunu artırmak için kullanılır. Örneğin val oneMillion = 1_000_000 kodunda alt çizgi eklemekle 1 milyonun değeri değişmez.
+-Örnekler:
+
+val creditCardNumber = 1234_5678_9012_3456L
+val socialSecurityNumber = 999_99_9999L
+val hexBytes = 0xFF_EC_DE_5E
+val bytes = 0b11010010_01101001_10010100_10010010
+
+2.11 == ile neyi karşılaştırırız? === ile neyi karşılaştırırız?
+
+- === operatörü değişkenlerin bellekteki referanslarını yani point ettikleri adresleri karşılaştırır (reference equality).
+- == operatörü değişkenlerin içindeki değerlerini karşılaştırır (value equality).
+- UnBoxed'ların karşılaştırılması. Aynı adresi işaret ediyorlar:
+
+val a: Int = 300
+val b: Int = a
+val c: Int = a
+println(b === c) //true
+println(b == c)  //true
+
+- Boxed'ların karşılaştırılması. Memory'de 2 farklı alanda tutuluyor sayılar:
+
+val number: Int = 100000
+val boxedNumber: Int? = number
+val anotherBoxedNumber: Int? = number
+println(boxedNumber === anotherBoxedNumber) //false
+println(boxedNumber == anotherBoxedNumber)  //true
+
+2.12 === operatörü ile karşılaştırma yaparken Byte değer aralığı neden önemlidir? Kotlin bu aralığa göre neden özel bir davranış sergiler?
+
+- Özel durum, Byte aralığında (-128, 127) Unboxed gibi karşılaştırır.
+
+val number: Int = 50
+val boxedNumber: Int? = number
+val anotherBoxedNumber: Int? = number
+println(boxedNumber === anotherBoxedNumber) //true
+println(boxedNumber == anotherBoxedNumber)  //true
+
+- Bu özel davranışın sebebi, bu aralıktaki değerlerin bellekte aynı konumda tutularak bellek kullanımından tasarruf edilen bir sistemin var olmasıdır.
+
+2.13 Sayısal değişkenlerde hangi matematiksel operatörler kullanılabilir?
+
+- +, -, *, /, % operatörleri kullanılabilir.
+
+2.14 Sayısal değişkenlerde hangi karşılaştırma operatörleri kullanılabilir?
+
+- Eşitlik kontrolü (equality check): a == b, a != b
+- Karşılaştırma (comparison): a < b, a > b, a <= b, a >= b
+- Aralık kontrolü (range instantiation and range check): a..b, x in a..b, x !in a..b
+- Ayrıyeten referans kontrolü (reference check) de yapılabilir tabii: a === b
+
+2.15 Bit düzeyinde operatörler (Bitwise operators) nelerdir? Ne amaçla kullanılır? Kotlin'de bunları nasıl kullanabilirsiniz?
+
+- Bit düzeyinde operatörleri sayıların binary halleri üzerinde işlem yapmak için kullanılır.
+- Örneğin shr (shift right) fonksiyonu ile 8 sayısı (1000) üzerinde kaydırma yapalım:
+
+fun main(args: Array<String>) {
+	var a = 8
+
+	// // infix notasyonu ile kullanim
+	var result1 = a shr 2
+	println("2 bit sag tarafa kaydirildi, deger: $result1") // Cikti: 2
+	// nokta ve parantez ile kullanim
+	var result2 = a.shr(1)
+	println("1 bit sag tarafa kaydirildi, deger: $result2") // Cikti: 4
+}
+
+- Bit düzeyinde operatörler:
+shl(bits) – signed shift left
+shr(bits) – signed shift right
+ushr(bits) – unsigned shift right
+and(bits) – bitwise AND
+or(bits) – bitwise OR
+xor(bits) – bitwise XOR
+inv() – bitwise inversion
+
+2.16 Kotlin'de büyük sayılarla çalışırken hangi ek türlerden yararlanılır ve bu türlerin sınırları nelerdir?
+
+- Kotlin'de büyük sayılarla çalışırken BigInteger ve BigDecimal kullanılır. Her ikisi içinde sınır kullanılan donanımın (bellek vs.) sınırları kadardır. BigInteger tam sayılar için, BigDecimal ondalıklı sayılar için kullanılır. Bankacılık gibi sektörlerde bu tiplere ihtiyaç duyulabilmektedir.
+
+2.17 Double ve Float değişkenler kullanılırken "yuvarlama" davranışı nasıldır? Bu nasıl değiştirilebilir?
+
+- ceil(), floor(), round(), roundToInt(), roundToLong() fonksiyonları yuvarlamada kullanılabilir.
+- Floating Point Arithmetic kavramıyla alakalı olarak bilgisayarlar esasen sayıları tam sayı olarak tutarlar. Ondalıklı sayılar için farklı bir sistem geliştirilmiştir. Bu sistemden dolayı Double ve Float kullanımında ondalıklı sayılarla işlem yaparken sonuç net olmayabilmekte, bu durumlarda arka plandaki işlemlerden kalan artık sayılar da sonuca eklenmektedir. Yaygın bir örnek olarak:
+
+println(.1 + .2)   // Cikti: 0.30000000000000004
+println(.1F + .2F) // Cikti: 0.3
+
+- Bu sorun sayıları BigDecimal'e çevirerek ya da toPrecision() fonksiyonuyla hassasiyet değeri vererek çözülebilir.
+- Ayrıca kendi yuvarlama fonksiyonumuzu yazabiliriz.
