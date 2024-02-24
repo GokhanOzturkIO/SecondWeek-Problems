@@ -1,0 +1,2 @@
+-val ile var arasındaki fark nedir?
+    "var" varsayılan olarak değiştirilebilir bir "değişken" iken "var" varsayılan olarak read-only bir değişkendir.
