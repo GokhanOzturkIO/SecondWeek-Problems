@@ -1,0 +1,58 @@
+Temel Türler & Null Güvenliği
+
+1) val ile var arasındaki fark nedir?
+- var tanımlamak istediğmiz değişkenin değerini daha sonra değiştirebilmemizi sağlarken, val tanımladığımız değişkenin değerini bir kez atar ve daha sonra değiştiremeyiz. İkisi arasındaki performans farkını değerlendirecek olursak ikisi arasındaki performans farkı yok denecek kadar azdır. Akademik boyuttan ikisi arasındaki performans farkını söyleyecek olursak "var" "val" a göre daha performanslı. Bunun nedeni de tanımladığımız val değişkenine, değişkenimize val komutu atayarak değişkenimizin değerinin bir daha değişmeyeceğini belirtmiş oluyoruz. Yani bu değişken val değer alıyorsa (if) bu değişkeni bir daha değiştirme demek istiyoruz (Ekstra bir şartımız var gibi düşünürsek) Bu da, var değişkenini val' a göre byte code açısından daha az maliyetli oluyor.  
+
+
+2) Bir var değişkeni val gibi davranmasını nasıl sağlayabiliriz val kelimesini kullanmadan? Bunu neden yapmak isteriz? Örnek bir senaryo verin.
+-Değişkenin setini private yaparak belirli durumlarda değişkenin değerini değiştirmeyi sınırlaayabilriz. Dışarıdan gelebilecek yanlış veya istenmeyen verilerin değişkenin değerini değiştirmesini önlemek, değişkenin değerini sınırlı bir şekilde değiştirerek uygulamanın güvenliğini arttırmak için kullanmak isteyebiliriz. Örneğin, bir siparişi temsil eden bir sınıfımız var. Siparişin içeriğini ve toplam fiyatını tutan iki özellik var. Ancak, bu özelliklerin dışarıdan kontrol edilmesini ve yanlışlıkla değiştirilmesini engellemek istiyoruz. Bunun için, toplam fiyatı değiştiren işlemi sadece sınıf içinde yapılmasını istiyoruz, böylece fiyatın her zaman güncel ve mantıklı olmasını sağlarız.
+
+
+3) "Değişmez" (Immutable) ve "Salt Okunur" (ReadOnly) kavramlarını açıklayın. val değişkenler neden aslında "değişmez" değil de "salt okunur" olarak açıklanmalıdır?
+-Immutable:Değeri hiçbir şekilde değiştirilemez anlamına gelmektedir. 
+ReadOnly:Değeri sadece okuyabilir, set edilemez anlamına gelmektedir. 
+Çünkü "val" ile tanımlanan bir değişkenin referansı değişmez olsa bile bu referansın işaret ettiği nesnenin içeriği "var" değişkenlerden oluşmuş yani değiştirilebilir olabilir bu nedenle val değişkenler ımmutable değil de readOnly olarak açıklanmalıdır.
+
+
+4) "Tip Çıkarımı" (Type inference) kavramını açıklayın. Hangi durumlarda tip belirtmek kesin olarak gereklidir?
+-Kotlin dilinde IDE'ye herhangi bir değişken tipi vermesek bile, IDE'nin bizim değişkene atadığımız değerden yola çıkarak bunun tipinin ne olduğunu bilmesine "type inference" denir.Kodun daha okunabilir ve anlaşılır olması için, daha güvenli olmasını sağlamak için, kodun daha tutarlı olmasını sağlamak için, tip dönüşümü yaparken, null güvenliği sağlamak için, fonksiyon parametrelerinin tiplerini belirlerken kesin olarak tip belirtmek gereklidir
+
+
+5) Kotlin'de tüm değişkenlerin sınıf olarak bulunması, "ilkel tip" (primitive type) olmadıkları anlamına gelir mi? 
+Arka planda neler oluyor?
+- Hayır, gelmez çünkü kotlinde class gibi görünen değişken tipleri (normalde primitive olduğunu bildiğimiz)
+özel optimizasyonlarla byte code'a çevirilirlen arka planda yine primitive olucak şekilde çevrilirler.
+
+
+6) "Tip Güvenliği" (Type Safety) kavramını açıklayın.
+-Tip güvenliği (type safety), bir programlama dilinin değişken tiplerine odaklanarak ve tipler arası dönüşümleri kontrollü bir şekilde sağlayarak hata oluşma riskini azaltma özelliğidir. Tip güvenliği, özellikle büyük ve karmaşık projelerde kodun stabilitesini ve okunabilirliğini artırmak için önemlidir. Hataları azaltarak ve kodu daha kolay bakılabilir hale getirerek size zamandan ve kaynaklardan tasarruf sağlayabilir.
+
+7) Bir değişkeni nullable yapmak için ne yapmalıyız?
+-Kotlin de bir değişkene null değer ataması yapabilmek için  o değişkenin sonuna "?" işareti koymamız gerekir. Bunu yapmamız "bu bir değişken tipi (int, string,boolean) ama bu değişken değer alabilir de almayabilirde " anlamına gelir.
+
+ 
+8) "Null Güvenliği" (Null Safety) kavramını açıklayın.
+-Null değerler, programlamada yaygın olarak kullanılır. Ancak null değerlerle çalışırken dikkatli olunmazsa, NullPointerException gibi hatalar oluşabilir. Bu hatalar programın çökmesine neden olabilir. Null safety, null değerlerle güvenli bir şekilde çalışmanızı sağlayarak bu hataları önler.
+
+
+9) Bir değişkene null değer atanır ve tip belirtilmezse Kotlin bu değişkeni nasıl yorumlar?
+-Eğer ki bit değişkene null değer atayıp, type belirtmezsek KOtlin bunu "Nothing?" denen type'a dönüşür. Buradaki "Nothing?" ifadeside hiçbir değeri temsil etmez.
+
+
+10) İlkel bir değişkenin nullable olması ile null değer alamaması arasında bellek yönetimi açısından nasıl farklar vardır?
+-Nullable olması, null değer atayabilme özelliğinden dolayı daha fazla bellek kullanır. Non-nullable olması, null değer atayamadığı için daha az bellek kullanır. 
+Nullable, null değer kontrolü için ek işlem yükü oluşturur ve hızı etkileyebilir. Non- nullable değer kontrolüne gerek olmadığı için daha hızlıdır. 
+Nullable, NullPointerException hatalarına yol açabilir. Non-nullable ise böyle bir hata riski yoktur.
+
+
+11) Nullable bir değişkenin bir değere sahip olması ile null olması arasında bellek yönetimi açısından nasıl bir fark vardır? Null değer almış bir değişken bellekte yer kaplamaz diyebilir miyiz?
+-Değişkenin bir değere sahip olması değerin türüne bağlı olarak ek bellek kullanır. Değişkenin null olması referans sakladığı için daha az bellek kullanır. Nullable değere erişim, doğrudan bellek konumundan yapıldığında daha hızlıdır. Null olması ise null kontrolü ve referans çözümleme ek işlem yükü oluşturur ve hızı etkileyebilir.
+Evet, diyebiliriz null değer almış bir değişken bellekte yer kaplar çünkü değişkenin kendisi, bellekteki konumunu ve null değer atayabilme özelliğini saklayan bir referans saklar. Ancak, değerin kendisini saklamaz.
+
+
+12) Nullable bir değişkenle çalışırken hangi operatörleri kullanırız? Bu operatörlerin kullanım farkları nelerdir? Hangisini ne zaman kullanmak daha anlamlıdır?
+- "?." ya da "!." operatörlerini kullanırız. "?." operatörü, nullable bir değişkenin bir fonksiyonunu çağırmak için kullanılır. Eğer değişken null ise operatör null değer döndürür. Ayrıca bu operatörü nullable bir değişkenin bir özelliğine veya fonksiyonuna erişmek için kullanırız.
+"!!." operatörünü ise nullable bir değişkenin null olmadığını varsayarak ona erişmek için kullanırız. Eğer değilen null ise operatör NullPointException hatası fırlatır.
+Güvenli Erişim Operatörü (?.) ve Güvenli Çağrı Operatörü (?.): NullPointerException hatalarından kaçınmak için her zaman bu operatörleri kullanmak daha iyidir.
+Elvis Operatörü (?:): Basit null değer kontrolü ve varsayılan değer atama işlemleri için kullanılabilir.
+Null Birleştirme Operatörü (!!): Değişkenin null olmadığından kesinlikle emin olduğunuz durumlarda kullanın. Gereksiz yere NullPointerException hatası fırlatma riskini ortadan kaldırmak için bu operatörden kaçınmak daha iyidir.

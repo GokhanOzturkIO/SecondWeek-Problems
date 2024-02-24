@@ -1,0 +1,91 @@
+Tür Dönüşümü
+
+1) is ve !is operatörlerinin kullanımını açıklayın.
+-is Operatörü, bir nesnenin belirli bir sınıfa veya türe ait olup olmadığını kontrol etmek için kullanılır.
+!is Operatörü, bir nesnenin belirli bir sınıfa veya türe ait olmadığını kontrol eder.
+
+
+2) "Akıllı Dönüşüm" (Smart Cast) ne demektir? Farklı kod örnekleri ile açıklayın. Bu özelliğin sınırlamaları nelerdir?
+-Akıllı dönüşüm, Kotlin'de bir değişkenin türünü, kodun akışına göre otomatik olarak dönüştürme özelliğidir. Bu özellik, kod okunabilirliğini ve kod yazma süresini kısaltır.
+
+fun main() {
+    val x: Any = "Hello, World!" // Herhangi bir türden bir değişken
+    
+    // x değişkeninin String türüne dönüştürülüp edilebilir mi diye kontrol edelim
+    if (x is String) {
+        println(x.length) // String türünün özelliği olan length'e erişilebilir
+    } else {
+        println("x değişkeni bir String değil.")
+    }
+}
+
+-Akıllı dönüşümün sınırlamaları şunlardır:
+
+Null Kontrolü: Akıllı dönüşüm, nullable türlerle çalışırken çalışmaz. Eğer bir değişken nullable ise, akıllı dönüşüm yapılamaz ve değişkenin null olup olmadığını kontrol etmek gerekir.
+
+Döngülerde Sınırlı Kullanım: Akıllı dönüşüm, döngüler gibi bazı durumlarda kullanılamaz. Bu durumda, dönüşümü manuel olarak yapmak gerekebilir.
+
+Karmaşık Koşullarda Kullanılamama: Akıllı dönüşüm, bazı karmaşık koşullar altında kullanılamaz. Bu durumlarda, tür dönüşümünü manuel olarak yapmak gerekebilir
+
+
+3) "Güvenli & Güvensiz" operatörler nelerdir?
+-Güvenli Operatörler:
+"?." Elvis operatörü, bir nesnenin null olup olmadığını kontrol eder ve null ise belirli bir değeri döndürür.
+"?:" Elvis operatörü, bir nesnenin null olup olmadığını kontrol eder ve null ise belirli bir değeri döndürür.
+-Güvensiz Operatörler:
+"!!" Güvenli olmayan çağrı operatörü, bir nesnenin null olmadığını varsayar ve null ise "NullPointerException" hatası oluşmasına neden olur
+
+
+4) Sayısal değişkenlerde örtük tip genişletme (implicit widening conversions) ne demektir? Kotlin'de bu neden yapılamaz?
+-Örtük tip genişletme, bir sayısal değişkenin daha büyük bir veri türüne otomatik olarak dönüştürülmesidir. Bu dönüşüm, veri kaybına neden olmaz. Kotlin'de örtük tip genişletme, null güvenliği ve tip güvenliği ilkelerine aykırı olduğu için izin verilmez. Sayısal bir değişkeni daha büyük bir veri türüne dönüştürmek için açık dönüştürme yapılması gerekir.
+
+
+5) "val b: Byte = 1 ile val i: Int = b ve son olarak print(b == i) gibi bir kod yazıldığında çıktı ne olur? Neden böyle bir çıktı aldığınızı açıklayın.
+- "Type mismatch: inferred type is Byte but Int was expected " çıktısı alınır. Bu da, Byte türündeki bir değeri Int türüne dönüştürdüğümüz için tip uyumsuzluğu olduğu anlamına gelir. Bu sebeple, print(b == i) ifadesi derleme sırasında hata üretti ve bu kod parçasını çalıştıramayacağımızı söyledi. Eğer bu karşılaştırmayı yapmak istiyorsak, b.toInt() == i şeklinde bir tür dönüşümü gerçekleştirmemiz gerekecektir.
+
+
+6) "val b: Byte = 1 ile val i: Int = b.toInt() ve son olarak print(b == i) gibi bir kod yazıldığında çıktı ne olur? Neden böyle bir çıktı aldığınızı açıklayın.
+-"Operator '==' cannot be applied to 'Byte' and 'Int'" çıktısı alınır. Bu da, farklı veri tiplerini doğrudan karşılaştıramayacağımız anlamına gelir. Bu hata, Byte türünden bir değişken ile Int türünden bir değişken arasında doğrudan karşılaştırma operatörü (==) kullanılmaya çalışıldığında ortaya çıkar. Kotlin dilinde, farklı veri türlerini doğrudan karşılaştırmak için tür dönüşümü yapılması gerekir.
+
+
+7) Sayısal değişkenlerde açık dönüşüm (Explicit Type Conversion) yaparken hangi fonksiyonları kullanabilirsiniz?
+-toByte(): Bir Int, Long, Short, Float veya Double değişkenini Byte'a dönüştürmek için kullanılır.
+toInt(): Bir Byte, Short, Long, Float veya Double değişkenini Int'e dönüştürmek için kullanılır.
+toShort(): Bir Byte, Int, Long, Float veya Double değişkenini Short'a dönüştürmek için kullanılır.
+toLong(): Bir Byte, Short, Int, Float veya Double değişkenini Long'a dönüştürmek için kullanılır.
+toFloat(): Bir Byte, Short, Int, Long veya Double değişkenini Float'a dönüştürmek için kullanılır.
+toDouble(): Bir Byte, Short, Int, Long veya Float değişkenini Double'a dönüştürmek için kullanılır.
+
+
+8) "val result = 1L + 3" // "Long + Int" gibi bir işlemin sonucunda "result" değişkeninin tipi ve değeri ne olur? Neden böyle olduğunu açıklayın.
+-Tipi Long'dur ve değeri de 4'tür. Kotlin'de, '+' operatörü için aşağıdaki tip önceliği kuralları geçerlidir: Long, 
+Int, Short, Byte . Bu kurallar, sayısal tiplerin veri aralıklarına ve işlemci üzerindeki temsillerine göre belirlenmiştir. Long tipi, Int tipinden daha geniş bir veri aralığına sahip olduğundan ve işlemci üzerinde daha fazla yer kapladığından, '+' operatöründe önceliklidir.
+
+
+9) "val result = Int.MAX_VALUE + Int.MAX_VALUE" gibi bir işlemin sonucunda "result" değişkeninin tipi ve değeri ne olur? Neden böyle olduğunu açıklayın.
+-Değişkenin tipi Int ve değeri de -2 olarak çıkar. Bunun nedeni Int türü 32 bit uzunluğunda bir işaretli tamsayıyı temsil eder ve en büyük değeri "Int.MAX_VALUE" olarak tanımlanmıştır. Bu durumda, işlem sonucu sınırları aşacağı için taşma(overflow) oluşur. Kotlin'de taşma durumunda otomatik olarak bir hata fırlatılmaz veya program durmaz. Bunun yerine, sonuç beklenmedik bir değere sahip olur. Taşma sonucu, beklenen sonucun sınırlarının ötesinde bir değere eşit olacaktır.
+
+
+10) "val x = 5 / 2 println(x == 2)" gibi bir işlemin sonucu ve tipi nedir? Neden böyle olduğunu açıklayın.
+-x değişkeninin tipi Int ve değeri 2'dir. Bunun sebebi, Kotlin'in tamsayı bölme işleminde farklı bir yaklaşım kullanmasıdır. Tamsayı bölme işleminde, iki tamsayının bölünmesinden elde edilen sonuç, ondalık basamaklar kesilerek tamsayıya dönüştürülür. Bu işlem, "kesme" (truncation) olarak bilinir.
+
+
+11) "val x = 5L / 2 println(x == 2L)" gibi bir işlemin sonucu ve tipi nedir? Neden böyle olduğunu açıklayın.
+-x değişkeninin tipi Long ve değeri 2L olur. Bölme işleminin sonucu, iki Long değerinin bölünmesinden elde edilen bir Double değeridir. Bu durumda, 5L / 2 işleminin sonucu 2.5'tir. Ancak, x değişkeninin tipi Long olduğundan, 2.5 değeri Long tipine dönüştürülür. Dönüşüm sırasında, ondalık basamaklar kesilir ve kalan tamsayı değeri kullanılır. Bu durumda, 2.5 değeri 2L'ye dönüştürülür. Bu satırda, x değişkeninin değeri 2L ile karşılaştırılır. Karşılaştırmanın sonucu true'dur.
+
+
+12) "val x = 5 / 2.toDouble() println(x == 2.5)" gibi bir işlemin sonucu ve tipi nedir? Neden böyle olduğunu açıklayın.
+-Bu kodda, x değişkeninin tipi Double ve değeri 2.5 olur. Kotlin, '+' operatörünün operandlarının tiplerine göre sonucun tipini belirler. Bu durumda, Double tipinin Int tipine göre önceliği vardır. Bu nedenle, bölme işleminin sonucu Double tipinde olur. Bölme işleminin sonucu, 5 ve 2'nin bölünmesinden elde edilen bir Double değeridir. Bu durumda, 5 / 2.toDouble() işleminin sonucu 2.5'tir. Bu satırda, x değişkeninin değeri 2.5 ile karşılaştırılır. Karşılaştırmanın sonucu true'dur.
+
+
+13) Kotlin'de tür dönüşümü yapılırken, dönüşümün başarısız olması durumunda TypeCastException nasıl ele alınır ve bu tür hataların önüne geçmek için hangi önlemler alınabilir?
+-"try-catch" bloğu, kodun olası hataları yakalamak ve işlemek için kullanılabilen bir yapıdır. 
+"as?" operatörü, bir değerin belirli bir veri tipine dönüştürülüp dönüştürülemeyeceğini kontrol etmek için kullanılır. Dönüşüm başarısız olursa, null değeri döndürülür.
+"when" ifadesi, bir değerin birden fazla olası değere karşı kontrol edilmesi için kullanılabilir. Her bir değer için, farklı bir kod bloğu çalıştırılabilir.
+"TypeCastException" hatasını önlemek için her zaman doğru veri tipinin kullanılmasına dikkat edilmelidir. Bir değerin belirli bir veri tipine olup olmadığını kontrol etmek için is operatörü kullanılabilir. Bu sayede, hatalı dönüşümler önlenebilir. Bir değeri metne dönüştürmek için toString() fonksiyonu kullanılabilir. Bu sayede, farklı veri tiplerindeki değerler birbiriyle karşılaştırılabilir veya yazdırılabilir.
+
+
+
+
+
+
