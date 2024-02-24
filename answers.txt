@@ -110,6 +110,9 @@
 	
 16- Kotlin'de büyük sayılarla çalışırken hangi ek türlerden yararlanılır ve bu türlerin sınırları nelerdir?
 	-Kotlin'de büyük sayılar için BigInteger ve BigDecimal tipleri vardır. Bunlar büyük ve kesirli sayılar için kullanılır.
+17- Double ve Float değişkenler kullanılırken "yuvarlama" davranışı nasıldır? Bu nasıl değiştirilebilir?
+	-yuvarlama işlemleri için "roundToInt()" veya "roundToLong()" fonksiyonları kullanılabilir
+
 	
 
 
