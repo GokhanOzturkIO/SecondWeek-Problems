@@ -120,3 +120,6 @@
     Negatif Değerlerin Geçersiz Olduğu Durumlar: Dizi indeksleri, zaman damgaları gibi.
     Bit Düzeyinde İşlemler: Maskeler, bayraklar ve diğer bit düzeyinde manipülasyonlar.
     Büyük Sayı Aralıkları: İşaret bitini değer biti olarak kullanarak daha geniş pozitif sayı aralıkları elde etmek.
+
+-"İşaretsiz" değişkenlerle yapılan matematiksel işlemlerde, özellikle büyük sayılarla çalışırken karşılaşılabilecek taşma (overflow) ve taşma olmaması (underflow) durumları için Kotlin nasıl bir yönetim sağlar?
+     Taşma durumunda değer en düşük değere döner (wrap around), taşma olmaması durumunda ise en yüksek değere.
