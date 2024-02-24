@@ -1,2 +1,4 @@
 -val ile var arasındaki fark nedir?
     "var" varsayılan olarak değiştirilebilir bir "değişken" iken "var" varsayılan olarak read-only bir değişkendir.
+-Bir var değişkeni val gibi davranmasını nasıl sağlayabiliriz val kelimesini kullanmadan? Bunu neden yapmak isteriz? Örnek bir senaryo verin.
+    değişkenin setterını private yaparak val gibi davrandırabiliriz. Örneğin classımız içindeki bir değerin sadece class içinden değiştirilebilmesini ama dışarıdan doğrudan modifiyeye kapalı olmasını isteyebiliriz.
