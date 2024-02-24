@@ -156,6 +156,10 @@
 4- Sayısal değişkenlerde örtük tip genişletme (implicit widening conversions) ne demektir? Kotlin'de bu neden yapılamaz?
 	-Mesela bir fonksiyonda parametre olarak Long istenir ve biz ona int parametre verirsek parametre Int tipine dönüşmesine denir. Ama bu kotlinde
 	yoktur bunu sebebi belirli tasarım tercihi ve bazı hataları önlemek içindir.
+5- "`val b: Byte = 1` ile `val i: Int = b` ve son olarak `print(b == i)` gibi bir kod yazıldığında çıktı ne olur? Neden böyle bir çıktı aldığınızı açıklayın.
+	-Operator '==' cannot be applied to 'Byte' and 'Int'  şeklinde bir hata alırız.
+	-Bunu sebebi bir Int tipindeki bir değişken ile Byte değişkenin karşılaştırılamamasıdır.
+
 
 
 
