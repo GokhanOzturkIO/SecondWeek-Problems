@@ -5,3 +5,8 @@
 - val'a bir kez değer atanır, yeniden atanamaz. var'a sonradan değer atanabilir.
 - val read-only, var mutable değişkendir.
 - Değişken oluştururken önce val ile oluşturup sonra gerekirse var'a çevirmek best practise olarak kabul edilebilir.
+
+1.2 Bir var değişkeni val gibi davranmasını nasıl sağlayabiliriz val kelimesini kullanmadan? Bunu neden yapmak isteriz? Örnek bir senaryo verin.
+
+- var değişkenin set'i private yapılırsa val gibi davranır.
+- var değişkenin değeri Class'ın dışından değiştirilemesin ancak Class'ın içinden değiştirilebilsin isteniyorsa bu yöntem kullanılabilir.
