@@ -102,4 +102,5 @@
 **İşaretsiz Sayılar**
 
 -"İşaretsiz" (Unsigned) değişkenler ne demektir? İşaretli olanlarla aralarındaki fark nedir?
-    Tüm sayı değerli değişkenler varsayılan olarak işaretsizdir ve eksi bir sınırdan artı bir sınıra kadar değer aralığındadır. İşaretli değişkenler, tipinin kısıtladığı aralık içindeki eksi değerlere kesinlikle eşit olmayan, yani kesinlikle sıfır veya pozitif olan ve hatta max değer + bu eksi değerlerin toplamı kadar büyüyebilirler.
+    Tüm sayı değerli değişkenler varsayılan olarak işaretlidir ve eksi bir sınırdan artı bir sınıra kadar değer aralığındadır. İşaretsiz değişkenler, tipinin kısıtladığı aralık içindeki eksi değerlere kesinlikle eşit olmayan, yani kesinlikle sıfır veya pozitif olan ve hatta max değer + bu eksi değerlerin toplamı kadar büyüyebilirler.
+
