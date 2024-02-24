@@ -154,3 +154,6 @@
 
 -"val b: Byte = 1 ile val i: Int = b ve son olarak print(b == i) gibi bir kod yazıldığında çıktı ne olur? Neden böyle bir çıktı aldığınızı açıklayın.
     b ve i farklı türler olduğu ve Kotlin'de farklı sayısal türler arasında doğrudan == kullanılarak karşılaştırma yapılamadığı için hata alınır.
+
+-Sayısal değişkenlerde açık dönüşüm (Explicit Type Conversion) yaparken hangi fonksiyonları kullanabilirsiniz?
+    toInt(), toByte(), toDouble(), toFloaat(), toByte(), toString()
