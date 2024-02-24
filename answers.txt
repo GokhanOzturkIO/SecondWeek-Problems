@@ -97,6 +97,9 @@
 	Kotin'de -128 127 arasında byte değişkenler için bellekte ayrı bir alan ayrılmıştır.
 13- Sayısal değişkenlerde hangi matematiksel operatörler kullanılabilir?
 	- Toplama '+',Çıkarma '-',Çarpma '*',Bölme '/',Modül '%',Artırma '++' ,Azaltma '--' operatörleri kullanılabilir.
+14- Sayısal değişkenlerde hangi karşılaştırma operatörleri kullanılabilir?
+	-Eşittir (==), Eşit Değildir (!=) Büyük (>), Küçük (<), Büyük Eşit (>=), Küçük Eşit (<=) operatörleri kullanılabilir.
+
 
 	
 
