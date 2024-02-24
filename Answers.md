@@ -155,4 +155,10 @@ fun main(){
             </summary>
             Bazı fontlarda küçük l harfi 1 sayısına benzediği için karmaşıklığı engellemek için alınan önlem olarak düşünülebilir.
         </details>
+        <details>
+            <summary>
+            Tek duyarlıklı (Single precision) ve Çift duyarlıklı (Double precision) kavramlarını açıklayın.
+            </summary>
+            Tek duyarlıklı (Single Precision) ve Çift duyarlıklı (Double Precision), kayan noktalı sayıları temsil etme yöntemleridir. Tek duyarlıklı format, 32 bitlik bir bellek alanında depolanırken, çift duyarlıklı format 64 bitlik bir bellek alanında depolanır. Çift duyarlıklı format, daha büyük bir veri aralığına ve daha yüksek bir kesinliğe sahipken, tek duyarlıklı format daha küçük bir veri aralığı ve daha düşük bir kesinlik sunar. Bu nedenle, kullanılan uygulamanın gereksinimlerine ve bellek / performans dengesine bağlı olarak tercih edilirler.
+        </details>
 </details>
