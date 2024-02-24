@@ -1,0 +1,49 @@
+İşaretsiz Sayılar
+
+1) "İşaretsiz" (Unsigned) değişkenler ne demektir? İşaretli olanlarla aralarındaki fark nedir?
+- Yalnızca 0 ve 0'dan büyük değerleri saklayabilen değişkenler demektir. "u" harfi eklenerek tanımlanırlar.Örneğin, "UInt", "ULong" vs. 0 ile 2^n-1 arasında değerler alabilirler (n, değişkenin bit uzunluğudur). Dizilerdeki indisler, renk kodları gibi 0 ve 0'dan büyük değerler için kullanılır. İşaretli değişkenler, işaret bitinden dolayı değer aralığı bakımından sınırlıdır. İşaretli değişkenler, işaret biti nedeniyle bir bit daha fazla bellek kullanır.
+
+
+2) "İşaretsiz" değişkenler nasıl bir sınıf yapısında tutulurlar? Bu neden önemlidir?
+-Kotlin'de "unsigned" değişkenlerin doğrudan bir sınıf yapısında tutulmaları mümkün değildir. Ancak, işaretsiz tamsayıları temsil etmek için özel sınıflar veya tipler oluşturabilir ve bu sınıfları kullanabiliriz. Bu yazdığımız kod'un bellek kullanımı ve veri tutma sınırlarını daha verimli kullanmamızı sağlar. Ayrıca, veri doğruluğu, veri tipi güvenliği ve ifade gücü, dil özellikleri ve kütüphane uyumluluğu açısından da çok önemlidir.
+
+
+3) "İşaretsiz" değişkenlerin harf gösterimi nasıldır?
+- Kotlin'de, işaretsiz tamsayıları temsil etmek için UInt, ULong, UShort ve UByte gibi ifadeler kullanılır.
+
+4) "val a1 = 42u ve val a2 = 0xFFFF_FFFF_FFFFu" değişkenlerin tipleri ne olur? Neden?
+-a1 değişkeninin tipi UInt (32-bit işaretsiz tamsayı) olacaktır. Çünkü "u" öneki, bu değerin işaretsiz olduğunu ve 32-bit bir tamsayıyı temsil ettiğini belirtir.a2 değişkeninin tipi ULong (64-bit işaretsiz tamsayı) olacaktır. Çünkü 0xFFFF_FFFF_FFFF, 64-bit bir tamsayıyı temsil eder ve "u" öneki işaretsiz olduğunu belirtir.
+
+
+5) "İşaretsiz" "Long" harf gösterimi nasıl yapılır?
+- "işaretsiz Long" için özel bir harf gösterimi yoktur; sadece ULong türünü kullanmamız yeterlidir.
+
+
+6) "İşaretsiz" değişkenlerin kullanım amaçları nelerdir?
+-Belirli bir aralığı temsil etmek için kullanılır. Örneğin,piksel değerlerinin (renk bileşenleri gibi) 0 ile 255 arasında olduğu durumlarda işaretsiz tamsayılar kullanılır. 
+Bellek ve performsns optimizasyonu için kullanılır: İşaretsiz tamsayılar, işaretli tamsayılara kıyasla daha geniş bir değer aralığını temsil edebilir. Bu, belirli durumlarda daha az bellek kullanımı ve daha iyi performans sağlayabilir.
+Veri doğruluğu: Belirli durumlarda, işaretsiz tamsayılar doğru değer aralıklarını garanti eder. Örneğin, bir boyutun veya miktarın negatif olamayacağı durumlarda işaretsiz tamsayılar kullanılır.
+Veri kaybını önleme: İşaretsiz tamsayılar, belirli bir aralıktaki değerleri doğrudan temsil edebilirler. Bu, işaretli tamsayılarda olduğu gibi işaret biti işlemi gerektirmediği için, işaretli tamsayılarda görülebilecek veri kaybını önler.
+Platform bağımsızlığı: Bazı durumlarda, platform bağımsızlığı sağlamak için işaretsiz tamsayılar tercih edilebilir. Çünkü işaretsiz tamsayılar, işaretli tamsayılara göre platforma bağımlı değildir ve aynı değer aralığını temsil ederler.
+
+7) "İşaretsiz" değişkenlerle yapılan matematiksel işlemlerde, özellikle büyük sayılarla çalışırken 
+karşılaşılabilecek taşma (overflow) ve taşma olmaması (underflow) durumları için Kotlin nasıl bir yönetim sağlar?
+-Kontrollü işlemler: checkedAdd, checkedSubtract gibi kontrollü işlemler kullanılarak taşma ve taşma olmama durumlarının oluşup oluşmadığı kontrol edilebilir.
+Döküm işlemleri: toUInt, toULong gibi döküm işlemleri kullanılarak bir sayının farklı bir işaretsiz veri tipine dönüştürülebilir ve taşma veya taşma olmama durumları kontrol edilebilir.
+Özel fonksiyonlar: UInt.overflowedAdd, ULong.underflowedSubtract gibi özel fonksiyonlar kullanılarak taşma ve taşma olmama durumlarının oluşup oluşmadığı kontrol edilebilir.
+
+
+8) "İşaretsiz" değişkenlerin sınırlamaları nelerdir?
+-Taşma (Overflow): İşaretsiz değişkenler, belirli bir bit uzunluğuna sahip olduğundan, bu bit uzunluğunu aşan değerlerle çalışırken taşma (overflow) olabilir. Örneğin, bir UInt değişkeni 32 bit uzunluğunda olduğundan, bu değişken 2^32'den büyük bir değeri temsil edemez.
+
+Bellek Kullanımı: İşaretsiz değişkenlerin boyutu belirli bir bit uzunluğu ile sınırlıdır. Büyük değerlerle çalışırken daha fazla bellek kullanımı gerekebilir.
+
+Platform Bağımlılığı: İşaretsiz değişkenlerin boyutu platforma bağlı olabilir. Örneğin, UInt değişkeni 32 bit uzunluğunda olabilirken, bazı platformlarda bu boyut farklı olabilir.
+
+Negatif Değerleri Temsil Edemezler: İşaretsiz değişkenler, işaretli değişkenler gibi negatif değerleri temsil edemez. Bu nedenle, negatif değerlerle çalışılması gereken durumlarda uygun bir işaretli veri türü kullanılmalıdır.
+
+Veri Doğruluğu: İşaretsiz değişkenler, belirli bir aralıktaki tam sayıları temsil ederler. Bu aralık dışındaki değerlerin temsil edilmesi mümkün değildir ve bu durum veri doğruluğunu etkileyebilir.
+
+
+9) "İşaretsiz" değişken türleri (UInt, ULong vs.) kullanırken, Java API'leri ile uyumluluk konusunda ne gibi sorunlar olabilir? Bunları çözmek için neler yapabilirsiniz?
+-Farklı veri tipleri, Taşma ve taşma olmama durumu, Döküm işlemleri Java API'leri ile uyumluluk konusunda sıkıntılar yaşayabilir. Kotlin'de "UInt", "ULong" gibi işaretsiz değişken türleri kullanırken Java API'leri ile uyumluluk konusunda dikkatli olunmalıdır. Veri tiplerini uyumlu hale getirmek, taşma ve taşma olmama durumlarını kontrol etmek ve kütüphaneleri kullanmak gibi yöntemler uyumluluk sorunlarını çözmek için kullanılabilir.
