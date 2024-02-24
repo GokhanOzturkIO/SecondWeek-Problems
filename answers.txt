@@ -131,6 +131,13 @@
 	-İşaretli değişkenlere göre daha az yer kaplarlar. Eğer negatif olmayacak ve çok fazla işlem yapacak değerlerde kullanabiliriz.
 7- "İşaretsiz" değişkenlerle yapılan matematiksel işlemlerde, özellikle büyük sayılarla çalışırken karşılaşılabilecek taşma (overflow) ve taşma olmaması (underflow) durumları için Kotlin nasıl bir yönetim sağlar?
 	-"+", "-", "*", "/" gibi matematiksel operatörler kullanıldığında derleme zamanında uyarı verebilir. 
+8- "İşaretsiz" değişkenlerin sınırlamaları nelerdir?
+	-UByte = 0-255
+	UShort = 0-65,535
+	UInt = 0-4,294,967,295 (2^32 - 1)
+	ULong = 0-18,446,744,073,709,551,615 (2^64 - 1) 
+
+
 
 	
 
