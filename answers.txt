@@ -165,7 +165,9 @@
 	toByte(), toShort(), toInt(), toLong(), toFloat(), oDouble(), toChar()
 8- "`val result = 1L + 3`" // "Long + Int" gibi bir işlemin sonucunda "result" değişkeninin tipi ve değeri ne olur? Neden böyle olduğunu açıklayın.
 	-Burada aritmatik bir işlem olduğu için en büyük tip olan (Long) a çevrilir ve sonuç 4 olur.
-
+9- "`val result = Int.MAX_VALUE + Int.MAX_VALUE`" gibi bir işlemin sonucunda "result" değişkeninin tipi ve değeri ne olur? Neden böyle olduğunu açıklayın.
+	-Sonuç overlow durumundan dolayı -2 olup tipi'de int olacaktır.
+	-Burda Int tipinin max değeri geçildiği için overflow durumu meydana gelmiştir bu sorunu çözmek developlara bırakılmıştır.
 
 
 
