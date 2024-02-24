@@ -26,3 +26,7 @@ val availableSpace: Int
 
 - Type Inference bir değişken tipinin eşitliğin sağındaki değere göre atanması demektir. Örneğin val age = 34 kodunda age değişkenine değer atandığı için Kotlin değişkenin hangi tipte olduğunu anlar, age'in değişken tipi Int olarak belirlenir.
 - Bazı durumlarda tip belirtmek kesin olarak gereklidir. Sayısal değerler için; değişkene girilen değer Int aralığı içerisindeyse Int set edilir (Byte ve Short aralığında olsa bile). Int'in üstünde bir değer ise Long set edilir. Örneğin val longNumber = 1586L kodunda değişkenin Long olması istenirse sonuna L konulur yoksa 1586 sayısı Int aralığında olduğundan değişkene Int atanır.
+
+1.5 Kotlin'de tüm değişkenlerin sınıf olarak bulunması, "ilkel tip" (primitive type) olmadıkları anlamına gelir mi? Arka planda neler oluyor?
+
+- Kotlin'de primitif tipler Class olarak bulunsalar bile kodlar bytecode'a çevrilirken yapılan optimizasyonlarla Java'daki gerçek primitif tiplere dönüştürülürler.
