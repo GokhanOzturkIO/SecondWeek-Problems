@@ -111,7 +111,16 @@
 16- Kotlin'de büyük sayılarla çalışırken hangi ek türlerden yararlanılır ve bu türlerin sınırları nelerdir?
 	-Kotlin'de büyük sayılar için BigInteger ve BigDecimal tipleri vardır. Bunlar büyük ve kesirli sayılar için kullanılır.
 17- Double ve Float değişkenler kullanılırken "yuvarlama" davranışı nasıldır? Bu nasıl değiştirilebilir?
-	-yuvarlama işlemleri için "roundToInt()" veya "roundToLong()" fonksiyonları kullanılabilir
+	-Yuvarlama işlemleri için "roundToInt()" veya "roundToLong()" fonksiyonları kullanılabilir.
+
+
+### İşaretsiz Sayılar
+
+1- "İşaretsiz" (Unsigned) değişkenler ne demektir? İşaretli olanlarla aralarındaki fark nedir?
+	-işaretsiz değişkenler sıfır ve pozifit olabilen değişkenlerdir. Örneğin byte -128 127 arasında değer alabilirken
+	UByte değer aralığı ise 0 255'dir.
+ 
+	
 
 	
 
