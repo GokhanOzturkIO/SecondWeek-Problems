@@ -232,3 +232,73 @@ println(.1F + .2F) // Cikti: 0.3
 
 - Bu sorun sayıları BigDecimal'e çevirerek ya da toPrecision() fonksiyonuyla hassasiyet değeri vererek çözülebilir.
 - Ayrıca kendi yuvarlama fonksiyonumuzu yazabiliriz.
+
+
+3. İşaretsiz Sayılar
+
+
+3.1 "İşaretsiz" (Unsigned) değişkenler ne demektir? İşaretli olanlarla aralarındaki fark nedir?
+
+- Unsigned, negatif/pozitif işareti olmayan yani negatif olmayan sayılardan oluşan anlamındadır. Signed değişkenlerdeki negatif değerlere sahip olmadığından Unsigned değişkenler Signed versiyonlarına göre daha fazla pozitif değer saklarlar. Örneğin Byte (-128,127) aralığındayken UByte (0,255) aralığındadır.
+
+3.2 "İşaretsiz" değişkenler nasıl bir sınıf yapısında tutulurlar? Bu neden önemlidir?
+
+- Unsigned sınıflar version 1.3 itibariyle inline class içinde tutulurlar. Bu sınıf tipi kod içinde value keyword'ü ile kullanılır. Bu sınıflar bilgi tutar, kendilerine has kimlikleri yoktur. Unsigned class'lar da Signed karşılıklarının değerini tutarlar. Örneğin
+- JVM Backend'i kullanabilmek için @JvmInline anotasyonuna sahiptir.
+
+3.3 "İşaretsiz" değişkenlerin harf gösterimi nasıldır?
+
+- Örneğin val b: UByte = 1u şeklinde U ve u ile gösterilirler.
+
+3.4 "val a1 = 42u ve val a2 = 0xFFFF_FFFF_FFFFu" değişkenlerin tipleri ne olur? Neden?
+
+- a1 UInt, a2 ULong olur. Değer UInt aralığındaysa aynı zamanda UShort ve UByte aralığında olsa bile UInt olarak atanır. UInt'in üstünde bir değerse ULong olarak atanır.
+
+3.5 "İşaretsiz" "Long" harf gösterimi nasıl yapılır?
+
+- uL veya UL iel gösterilir. Örneğin: val a = 1UL Örnekte tip belirtilmemiş ve değer aralığı UInt'in aralığında olmasına rağmen a'nın tipi ULong olarak atanır.
+
+3.6 "İşaretsiz" değişkenlerin kullanım amaçları nelerdir?
+
+- Int'ten UInt'e geçerek daha fazla pozitif tam sayıyı kullanabilmek için. Örneğin 32-bit'lik AARRGGBB renk formatı İşaretli tiplere sığmıyor, bu yüzden UInt kullanılıyor.
+
+data class Color(val representation: UInt)
+val yellow = Color(0xFFCC00CCu)
+
+- Ayrıca toByte() ile casting yapmadan byte array'i oluşturulabilir:
+
+val byteOrderMarkUtf8 = ubyteArrayOf(0xEFu, 0xBBu, 0xBFu)
+
+3.7 "İşaretsiz" değişkenlerle yapılan matematiksel işlemlerde, özellikle büyük sayılarla çalışırken karşılaşılabilecek taşma (overflow) ve taşma olmaması (underflow) durumları için Kotlin nasıl bir yönetim sağlar?
+
+- Overflow. Minimum değeri alır.
+
+val maxValue: UByte = UByte.MAX_VALUE
+val result: UByte = maxValue + 1u
+println(result) // Cikti: 0
+
+- Underflow. Maksimum değeri alır.
+
+val minValue: UByte = UByte.MIN_VALUE
+val result: UByte = minValue - 1u
+println(result) // Cikti: 255
+
+- Bölme. Taban değerine yuvarlar.
+
+val value: UInt = 10u
+val result: UInt = value / 3u
+println(result) // Cikti 3
+
+3.8 "İşaretsiz" değişkenlerin sınırlamaları nelerdir?
+
+- Tip, Boyut (bit büyüklüğü), Min değer, Max değer
+
+UByte: 8 bit, 0-255
+UShort: 16 bit, 0-65,535
+UInt: 32 bit, 4,294,967,295 (2^32 - 1)
+ULong:64 bit, 18,446,744,073,709,551,615 (2^64 - 1)
+
+3.9 "İşaretsiz" değişken türleri (UInt, ULong vs.) kullanırken, Java API'leri ile uyumluluk konusunda ne gibi sorunlar olabilir? Bunları çözmek için neler yapabilirsiniz?
+
+- Örneğin bir UInt değişkenin değeri Java'da bir int değişkene aktarılacaksa ve UInt olanın değeri int'in maksimum değerinin üstündeyse overflow olur.
+- Çözüm olarak Java API'leri kullanılmadan önce bu değişkenler Java ile uyumlu değişkenlere çevrilebilir.
