@@ -135,3 +135,13 @@
 
 -is ve !is operatörlerinin kullanımını açıklayın.
     Bir nesnenin türünü kontrol etmek için kullanılır. "if (obj is String)" gibi.
+
+-"Akıllı Dönüşüm" (Smart Cast) ne demektir? Farklı kod örnekleri ile açıklayın. Bu özelliğin sınırlamaları nelerdir?
+    "Akıllı Dönüşüm", derleyicinin bir değişkenin türünü is kontrolü sonrasında otomatik olarak belirli bir türe dönüştürmesi anlamına gelir.
+
+    fun printStringLength(input: Any) {
+        if (input is String) {
+            // input otomatik olarak String olarak dönüştürülür
+            println(input.length) // String sınıfının metodları kullanılabilir.
+        }
+    }
