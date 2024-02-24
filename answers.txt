@@ -145,6 +145,10 @@
 	-Bu operatörler bir nesnenin veya değişkenin türünü karşılaştırmak için kullanılır.
 	-x is Int x'in Int olup olmadığına bakar True döndürür. 
 	-x !is Int x'in Int olup olmadığına bakar False döndürür. 
+2- "Akıllı Dönüşüm" (Smart Cast) ne demektir? Farklı kod örnekleri ile açıklayın. Bu özelliğin sınırlamaları nelerdir?
+	- if (obj is Int) {
+        println("String uzunluğu: ${obj.inc()}") // Smart cast
+    }
 
 
 	
