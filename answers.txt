@@ -1,3 +1,5 @@
+**Temel Türler & Null Güvenliği**
+
 -val ile var arasındaki fark nedir?
     "var" varsayılan olarak değiştirilebilir bir "değişken" iken "var" varsayılan olarak read-only bir değişkendir.
 
@@ -34,5 +36,8 @@
 -Nullable bir değişkenle çalışırken hangi operatörleri kullanırız? Bu operatörlerin kullanım farkları nelerdir? Hangisini ne zaman kullanmak daha anlamlıdır?
     İki ünlem(!!) veya soru işareti(?) operatörleri kullanılabilir. Soru işareti kullanmak, kontrol edilen değer eğer null değilse o komutun işlenmeye devam edilmesini sağlar. Çift ünlem ise o değerin kesin olarak null olmadığını IDE'ye garanti etmek anlamına gelir. Çift ünlem, "null geleceğine exception atıp uygulama çöksün daha iyi" denilen durumlar hariç kullanılmamalıdır.
 
+**Sayılar**
+
 -Kaç farklı tipte "number" sınıfı miras alan "alt sınıf" (child class) vardır? Bunların değer aralıkları neden önemlidir?
     Byte, Short, Int, Long, Float ve Double olmak üzere 6 alt sınıf vardır. Değer aralıklarını bilmek, hem bellek optimizasyonu hem de dönüşümler sırasında potansiyel value overflow yaşanmaması için önemlidir.
+
