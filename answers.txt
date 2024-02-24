@@ -109,3 +109,6 @@
 
 -"İşaretsiz" değişkenlerin harf gösterimi nasıldır?
         u, uL gibi ekler kullanılır. Örneğin, 42u, 0xFFFF_FFFF_FFFFuL.
+
+-"val a1 = 42u ve val a2 = 0xFFFF_FFFF_FFFFu" değişkenlerin tipleri ne olur? Neden?
+    UInt ve ULong. UInt çünkü değer UInt türünün sınırları içerisinde ve Int boyutundadır. ULong çünkü söz konusu değer çok büyük olduğundan ve UInt türünün maksimum sınırını aştığından, Kotlin bu sabiti ULong olarak çıkarır.
