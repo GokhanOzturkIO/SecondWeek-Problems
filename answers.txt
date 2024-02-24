@@ -170,6 +170,10 @@
 	-Burda Int tipinin max değeri geçildiği için overflow durumu meydana gelmiştir bu sorunu çözmek developlara bırakılmıştır.
 10- "`val x = 5 / 2` `println(x == 2)`" gibi bir işlemin sonucu ve tipi nedir? Neden böyle olduğunu açıklayın.
 	-Sonuç olarak true dönecektir. İki int değer matematiksel bir işlem yaptığı için int değer olacaktır.
+11- "`val x = 5L / 2` `println(x == 2L)`" gibi bir işlemin sonucu ve tipi nedir? Neden böyle olduğunu açıklayın.
+	-Sonuç olarak true dönecektir. Büyük tipli olan tipin yani Long'un tipi olacakttır.
+
+	
 
 
 
