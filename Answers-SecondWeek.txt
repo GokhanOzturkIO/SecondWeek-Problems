@@ -42,3 +42,7 @@ val availableSpace: Int
 1.8 "Null Güvenliği" (Null Safety) kavramını açıklayın.
 
 - Nullable olmayan değişkene null atanırsa hata alınır, bu null güvenliği sayesinde gerçekleşir. Örneğin val name: String = null kodu çalışmaz. "Null can not be a value of a non-null type String" hatası alınır.
+
+1.9 Bir değişkene null değer atanır ve tip belirtilmezse Kotlin bu değişkeni nasıl yorumlar?
+
+- Bir değişkene null değer atanır ve tip belirtilmezse, IDE tip çıkarımı yaparken bu değişkenin değerini Nothing? olarak işaretler. Örneğin val number = null kodu aslında val number: Nothing? = null koduna denktir.
