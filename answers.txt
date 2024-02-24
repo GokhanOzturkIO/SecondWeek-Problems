@@ -162,3 +162,6 @@
 
 -"val result = Int.MAX_VALUE + Int.MAX_VALUE" gibi bir işlemin sonucunda "result" değişkeninin tipi ve değeri ne olur? Neden böyle olduğunu açıklayın.
     Yine int olur çünkü operandlar arasında en geniş aralıklı tip int. Ancak sonuç int aralığının dışına taşacağı için hatalı veri döner.
+
+-"val x = 5 / 2 println(x == 2)" gibi bir işlemin sonucu ve tipi nedir? Neden böyle olduğunu açıklayın.
+    Matematiksel işlemin sonucu 2, kodun sonucu ise true dönmesi olur. Dönen küsuratlı matematiksel sonuç inte çevrildiğinde virgülden sonrasını kaybeder.
