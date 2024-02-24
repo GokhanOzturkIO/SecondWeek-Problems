@@ -28,6 +28,6 @@ fun main() {
 
         print("Wanna try again (Type 'Y' for 'yes', 'N' for 'Nope':")
         val answer = readLine()
-    } while (answer?.toLowerCase() == "y")
+    } while (answer?.lowercase() == "y")
     print("\n:DD\n")
 }
