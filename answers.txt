@@ -79,3 +79,16 @@
 
 -Sayısal değişkenlerde hangi karşılaştırma operatörleri kullanılabilir?
     >, <, >=, <= operatörleri.
+
+-Bit düzeyinde operatörler (Bitwise operators) nelerdir? Ne amaçla kullanılır? Kotlin'de bunları nasıl kullanabilirsiniz?
+    Bit düzeyinde operatörler, sayıları ikilik tabanda (binary) temsil edildiklerinde, bitler üzerinde işlem yapmak için kullanılan operatörlerdir. Bu operatörler genellikle düşük seviyeli programlama, donanım ile iletişim, şifreleme algoritmaları ve performansı kritik uygulamalarda kullanılır. Bit düzeyinde işlemler, veri sıkıştırma, resim işleme gibi alanlarda da önemli rol oynar.
+
+    Kotlin'de bit düzeyinde operatörler şunlardır:
+
+    AND (and): İki biti karşılaştırır ve her iki bit de 1 ise sonuç 1, aksi takdirde 0 olur. "x and y"
+    OR (or): İki biti karşılaştırır ve bitlerden en az biri 1 ise sonuç 1, aksi takdirde 0 olur. "x or y"
+    XOR (xor): İki biti karşılaştırır ve bitler farklı ise sonuç 1, aksi takdirde 0 olur. "x xor y"
+    NOT (inv): Tüm bitleri tersine çevirir; 1'leri 0 yapar, 0'ları 1 yapar. "x.inv()"
+    Sol Kaydırma (shl): Belirli bir sayıda biti sola kaydırır ve sağdan sıfırlar ekler. "x shl n"
+    Sağ Kaydırma (shr): Belirli bir sayıda biti sağa kaydırır ve soldan işaret bitine (0 veya 1) bağlı olarak bitler ekler. "x shr n"
+    Sıfırdan Sağa Kaydırma (ushr): Belirli bir sayıda biti sağa kaydırır ve soldan sıfır ekler. İşaretsiz sağ kaydırma olarak da bilinir. "x ushr n"
