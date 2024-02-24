@@ -108,6 +108,10 @@
 	-Sağa Kaydırma Operatörü (>>)
 	-Sola Kaydırma Operatörü (<<)
 	
+16- Kotlin'de büyük sayılarla çalışırken hangi ek türlerden yararlanılır ve bu türlerin sınırları nelerdir?
+	-Kotlin'de büyük sayılar için BigInteger ve BigDecimal tipleri vardır. Bunlar büyük ve kesirli sayılar için kullanılır.
+	
+
 
 
 	
