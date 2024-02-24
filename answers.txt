@@ -157,3 +157,5 @@
 
 -Sayısal değişkenlerde açık dönüşüm (Explicit Type Conversion) yaparken hangi fonksiyonları kullanabilirsiniz?
     toInt(), toByte(), toDouble(), toFloaat(), toByte(), toString()
+-"val result = 1L + 3" // "Long + Int" gibi bir işlemin sonucunda "result" değişkeninin tipi ve değeri ne olur? Neden böyle olduğunu açıklayın.
+    Long olur çünkü operandlardan en geniş aralıklısının tipi sonuç için kullanılır.
