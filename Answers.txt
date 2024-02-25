@@ -67,7 +67,7 @@ fun main() {
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-4-"Tip Çıkarımı" (Type inference) kavramını açıklayın. Hangi durumlarda tip belirtmek kesin olarak gereklidir? sorusunun cevabı nedir:
+4-"Tip Çıkarımı" (Type inference) kavramını açıklayın. Hangi durumlarda tip belirtmek kesin olarak gereklidir? sorusunun cevabı:
 
 -->"Tip Çıkarımı" (type inference), değişkenin veya ifadenin tipini derleyicinin otomatik olarak belirlemesini ifade eder. Bu, genellikle değişkenin tipini açıkça belirtmek zorunda kalmadan daha kısa ve daha okunabilir kod yazmanızı sağlar.
 
@@ -82,7 +82,7 @@ Tip belirtmenin kesin olarak gerektiği durumlar şunlardır:
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-5-"Tip Güvenliği" (Type Safety) kavramını açıklayın. Sorusunun Cevabı nedir:
+5-"Tip Güvenliği" (Type Safety) kavramını açıklayın. Sorusunun Cevabı:
 
 -->Type Safety, bir programlama dilinde, değişkenlerin ve ifadelerin veri tiplerine uygun olarak kullanılmasını ve tip uyumsuzluklarının önlenmesini sağlayan bir özelliktir.
 
@@ -96,12 +96,22 @@ val number: Int = 42
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-6-Bir değişkeni nullable yapmak için ne yapmalıyız?
+6-Bir değişkeni nullable yapmak için ne yapmalıyız? Sorusunun Cevabı:
 
 -->Bir değişkeni nullable yapmak için değişkenin tipinin sonuna ? işareti eklenir. Bu sayede değişken null değerini alabilir hale gelir. Örneğin, bir String değişkeni nullable yapmak için şu şekilde yapabiliriz:
 
 --> val nullableString: String? = null
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+7-"Null Güvenliği" (Null Safety) kavramını açıklayın. Sorusunun Cevabı:
+
+-->"Null Güvenliği" (Null Safety), bir programlama dilinde veya bir programda, null referans hatalarını önlemek için alınan önlemleri ifade eder. Bu kavram, bir değişkenin veya nesnenin null olabileceği durumları dikkate alarak programlama yapmayı ve bu durumları kontrol altına almaya yönelik bir yaklaşımı temsil eder.
+
+-->var nullableString: String? = null
+val length = nullableString?.length // Eğer nullableString null değilse, uzunluğunu al. Null ise null döndür.
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 
 
