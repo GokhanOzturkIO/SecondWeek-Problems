@@ -17,3 +17,8 @@ Type inference: Kullandığımız programlama dilinde veri tipini açık olarak 
 - Number tipindeki değişkenlerde virgülsüz bir sayı yazıyorsak otomatik olarak "Int" olarak algılanır fakat biz farklı tiplerde veri kaydetmek istiyorsak bu tipi açıkça belirtmek durumundayız. Aynı şekilde eğer virgüllü bir sayı yazıyorsak bu sayıyı "Double" tipinde algılar bu durumda da eğer float olarak bir değişken kullanmak istiyorsak bunu belirtmemiz gerekiyor. <p>
 - Değişkenin değerini daha sonradan atayacaksak tipini belirtmemiz gerekir. <p>
 - Bir değişkeni oluşturduğumuz class'ın parent'ının aynı seviyedeki child'ına daha sonradan eşitleyeceksek değişkenin tipini bu parent olarak göstermemiz gereklidir.
+
+## 1.5- Kotlin'de tüm değişkenlerin sınıf olarak bulunması, "ilkel tip" (primitive type) olmadıkları anlamına gelir mi? Arka planda neler oluyor?
+
+Kotlin'de primitive tipler doğrudan oluşturulamaz. Bu tiplerin class'ları primitive tiplerin wrapper class'ları olarak geçer ve bu tipleri özel optimizasyonlar ile sınıf olarak kullanmamızı sağlar.
+
