@@ -1,3 +1,7 @@
-Soru 3 : "Değişmez" (Immutable) ve "Salt Okunur" (ReadOnly) kavramlarını açıklayın. val değişkenler neden aslında "değişmez" değil de "salt okunur" olarak açıklanmalıdır?
-Cevap 3 : Değişmez (Immutable):Bir nesnenin değeri hiçbir zaman değiştirilemez. Oluşturulduktan sonra içeriği sabittir. Salt Okunur (ReadOnly):Bir nesnenin değeri sadece okunabilir, yani bir kez atandıktan sonra değiştirilemez. Ancak, içindeki özellikler (alt öğeler) değiştirilebilir.
-Kotlin'deki val değişkenleri "salt okunur" olarak adlandırılır, çünkü bir kez değer atandıktan sonra değiştirilemez. Ancak, nesnenin kendisi değişmez değildir, sadece referansı değiştirilemez.val değişkeni bir kez bir nesneye referans yapılırsa, bu referans daha sonra başka bir nesneye (farklı bir bellek adresine) değiştirilemez denebilir .
+
+Soru 4 : "Tip Çıkarımı" (Type inference) kavramını açıklayın. Hangi durumlarda tip belirtmek kesin olarak gereklidir?
+Cevap 4 : Programlama dilinde, değişken türlerinin otomatik olarak belirlendiği bir süreçtir.
+**Belirli bir tür kullanılmalıysa: Ornek olarak val uzunSayi: Long = 10000000000
+**Karışık türler kullanıldığında: Ornek olarak : val ortalamaInt: Int = ((3.5 + 4.5) / 2).toInt()  
+**Genel okunabilirlik ve belgelendirme: val miktar: Double = 42.0 
+kotlin tip çıkarımını destekleyerek kodun açıklığını hem de yazma hızını arttırır ancak belirli durumlarda tür belirtmek daha açıklayıcı olabilir.
