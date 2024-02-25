@@ -1,0 +1,8 @@
+Temel Türler & Null Güvenliği
+Soru 1 : val ile var arasındaki fark nedir?
+Cevap 1 : val: Değişkenin bir kere atanabildiği (değiştirilemeyen) bir tanımlayıcıdır. Ornek olarak val pi = 3.14
+
+var: Değişkenin birden çok kez atanabildiği (değiştirilebilir) bir tanımlayıcıdır. Ornek olarak var counter = 0 counter = counter + 1
+
+******************
+
