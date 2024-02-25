@@ -21,3 +21,5 @@ Type inference: Kullandığımız programlama dilinde veri tipini açık olarak 
 ## 1.5- Kotlin'de tüm değişkenlerin sınıf olarak bulunması, "ilkel tip" (primitive type) olmadıkları anlamına gelir mi? Arka planda neler oluyor?
 Kotlin'de primitive tipler doğrudan oluşturulamaz. Bu tiplerin class'ları primitive tiplerin wrapper class'ları olarak geçer ve bu tipleri özel optimizasyonlar ile sınıf olarak kullanmamızı sağlar.
 
+## 1.6- "Tip Güvenliği" (Type Safety) kavramını açıklayın.
+Bir değişkenin belirtilen tipten başka bir tipte değerle atanmasının engellenmesidir. Örnek vermek gerekirse başlangıçta "int" olarak belirtilen bir değişkene sonrasında "String" bir değer atanmaya çalışılırsa derleme zamanında hata alırsınız.
