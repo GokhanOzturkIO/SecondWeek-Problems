@@ -94,3 +94,14 @@ val number: Int = text // Hata! String bir değişkeni Int'e atamak mümkün de�
 val number: Int = 42
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+6-Bir değişkeni nullable yapmak için ne yapmalıyız?
+
+-->Bir değişkeni nullable yapmak için değişkenin tipinin sonuna ? işareti eklenir. Bu sayede değişken null değerini alabilir hale gelir. Örneğin, bir String değişkeni nullable yapmak için şu şekilde yapabiliriz:
+
+--> val nullableString: String? = null
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
