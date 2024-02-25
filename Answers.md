@@ -37,3 +37,5 @@ val number2: Int? = null
 Null gelebilme durumunu yazdığımız dilin dikkate alıp buna göre bizi önlem almaya zorlamasıdır. <p>
 Null Safety'nin olmadığı dillerde NullPointerException hatasıyla sıkça karşılaşırız bu hata ile sıkça karşılaşmamızın sebebi dilin null'a özel önlemler almamasıdır. NullPointerException hatası Null olan bir değişkenle Null değilmiş gibi işlem yapmaya çalıştığımız zaman karşımıza çıkar. Tabi ki null safety olan dillerde bu hata alınabilir ama bu hatayı almak için null gelebilecek durumları göz ardı edip kod yazmamız gerekiyor fakat bu önerilen bir yazım tarzı değil.
 
+## 1.9- Bir değişkene null değer atanır ve tip belirtilmezse Kotlin bu değişkeni nasıl yorumlar?
+Kotlin bu değişkeni type inference ile Nothing? olarak belirler. Nothing type'ı genelde fonksiyonların dönüşlerinde sonuçların hata olarak yakalanması amacı ile kullanılır. "Nothing?" ifadesi ise sadece null olarak bir değer saklamak istiyorsak kullanabileceğimiz bir type olabilir.
