@@ -1,3 +1,15 @@
 
- **Nullable bir değişkenin bir değere sahip olması ile null olması arasında bellek yönetimi açısından nasıl bir fark vardır? Null değer almış bir değişken bellekte yer kaplamaz diyebilir miyiz?
- Cevap : Nullable bir değişkenin bir değere sahip olması durumunda bu değer bellekte yer kaplar .Null değerine sahip olduğunda ise genellikle küçük bir alan kaplar, çünkü null bir referansı ifade eder. Alan minimumda tutulur. 
+ **Nullable bir değişkenle çalışırken hangi operatörleri kullanırız? Bu operatörlerin kullanım farkları nelerdir? Hangisini ne zaman kullanmak daha anlamlıdır?
+ Cevap :
+ ? : Bir nullable değişkenin değeri null ise varsayılan bir değer atar.
+Örnek: val sonuc = nullableDegisken ?: varsayilanDeger
+
+ ?. :Değişkenin null olup olmadığını kontrol eder ve işlemi sadece null değilse gerçekleştirir.
+Örnek: val uzunluk = nullableString?.length
+
+Let Fonksiyonu:let fonksiyonu, nullable değişken üzerinde işlem yaparken kullanılır.
+Örnek: nullableDegisken?.let { // işlem yap }
+
+!! :Nullable değişkenin değerini null olduğunu bilmeden güvenli bir şekilde almak için kullanılır. Ancak, null ise NullPointerException hatası oluşur.
+Örnek: val uzunluk = nullableString!!.length
+
