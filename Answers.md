@@ -32,3 +32,7 @@ val/var [variable_name]: [type]? = [value] <p>
 val number: Int? = 10
 val number2: Int? = null
 ```
+
+## 1.8- "Null Güvenliği" (Null Safety) kavramını açıklayın.
+Null gelebilme durumunu yazdığımız dilin dikkate alıp buna göre bizi önlem almaya zorlamasıdır. Bunun olmadığı dillerde nullPointerException hatasıyla sıkça karşılaşırız bunun sebebi ise dilin null'a özel önlemler almamasıdır. Tabi ki null safety olan dillerde bu hata alınabilir ama bu hatayı almak için null gelebilecek durumları göz ardı edip kod yazmamız gerekiyor ve bu önerilen bir yazım tarzı değil.
+
