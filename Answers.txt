@@ -1,3 +1,5 @@
+Temel Türler & Null Güvenliği
+
 1-val ile var arasındaki fark nedir? Sorusunun Cevabı:
 
 -->val(value),değeri sonradan değiştirilemez anlamındadır.Ek olarak get edilebilir fakat set edilemez.
@@ -168,7 +170,9 @@ Hangi operatörü kullanmanın daha anlamlı olduğu, duruma ve kullanım senary
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-12-
+Sayılar 
+
+1-
 
 
 
