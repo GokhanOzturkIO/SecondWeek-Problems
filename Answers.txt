@@ -113,5 +113,18 @@ val length = nullableString?.length // Eğer nullableString null değilse, uzunl
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+8-Bir değişkene null değer atanır ve tip belirtilmezse Kotlin bu değişkeni nasıl yorumlar? Sorusunun Cevabı:
+
+-->Kotlin'de bir değişkene null değer atanırsa ve tip belirtilmezse, Kotlin bu durumu otomatik olarak nullable bir tipe atar. Yani, değişken null olabilecek şekilde tanımlanmış olur. Bu durum, değişkenin kullanımında null check (null kontrolü) yapılmasını gerektirir ve böylece null referans hatalarının önlenmesine yardımcı olur.
+
+-->var nullableString = null
+
+Bu durumda, nullableString değişkeni nullable bir tipe atanır. 
+Bu değişkeni kullanırken null check yapmadan doğrudan erişmeye çalışırsanız, derleme zamanında hata alırsınız:
+
+-->val length = nullableString.length // Hata! nullableString null olabilir, null check yapılmalı
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 
 
