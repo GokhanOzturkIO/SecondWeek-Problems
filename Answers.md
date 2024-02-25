@@ -23,3 +23,12 @@ Kotlin'de primitive tipler doğrudan oluşturulamaz. Bu tiplerin class'ları pri
 
 ## 1.6- "Tip Güvenliği" (Type Safety) kavramını açıklayın.
 Bir değişkenin belirtilen tipten başka bir tipte değerle atanmasının engellenmesidir. Örnek vermek gerekirse başlangıçta "int" olarak belirtilen bir değişkene sonrasında "String" bir değer atanmaya çalışılırsa derleme zamanında hata alırsınız.
+
+## 1.7- Bir değişkeni nullable yapmak için ne yapmalıyız?
+Nullable yapmak istediğimiz değişkenin tipini explicit olarak belirtip tipinin sonuna "?" koymamız gereklidir. <p>
+Örnek vermek gerekirse: <p>
+val/var [variable_name]: [type]? = [value] <p>
+```kotlin
+val number: Int? = 10
+val number2: Int? = null
+```
