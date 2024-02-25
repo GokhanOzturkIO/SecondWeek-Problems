@@ -126,5 +126,14 @@ Bu değişkeni kullanırken null check yapmadan doğrudan erişmeye çalışırs
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+9-İlkel bir değişkenin nullable olması ile null değer alamaması arasında bellek yönetimi açısından nasıl farklar vardır? Sorusunun Cevabı:
 
+-->Nullable Olmayan Değişkenler: İlkel bir değişken null değer alamaz. Bu durumda, derleyici değişkenin değerini null olarak atamaya çalıştığınızda hata verir. Bellek yönetimi açısından, bu tür değişkenlerin değerleri derleme zamanında belirlenir ve bellekte sabit bir alan kaplarlar.
 
+-->Nullable Değişkenler: Nullable bir değişken null değer alabilir. Bu durumda, bellekte bu değişkenin değerinin null olabileceği durum da göz önünde bulundurulur. Nullable değişkenler, bellekte ekstra bir işaretçi (pointer) veya işaretçiye ek bir alan kullanır. Bu ekstra işaretçi, değişkenin null olup olmadığını belirtir. Bu nedenle, nullable değişkenler bellekte biraz daha fazla yer kaplar ve bellek yönetimi açısından ekstra bir durumu kontrol etmek gerekebilir.
+
+Bu farklar, nullable olmayan ve nullable değişkenler arasında bellek yönetimi açısından önemli farklar olduğunu gösterir. Nullable değişkenler kullanılırken, ekstra bellek kullanımı ve null değer kontrolü gibi durumlar göz önünde bulundurulmalıdır.
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+10-
