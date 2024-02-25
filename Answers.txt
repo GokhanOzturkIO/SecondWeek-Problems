@@ -147,3 +147,28 @@ Sorusunun Cevabı:
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+11-Nullable bir değişkenle çalışırken hangi operatörleri kullanırız? Bu operatörlerin kullanım farkları nelerdir? Hangisini ne zaman kullanmak daha anlamlıdır? Sorusunun Cevabı:
+
+-->!!: Bu operatör, nullable bir değişkenin null olmadığını garanti etmek için kullanılır. Eğer değişken null ise, NullPointerException hatası fırlatılır. 
+
+Örneğin: 
+val nullableString: String? = null
+val length = nullableString!!.length // nullableString null olduğu için NullPointerException hatası fırlatır
+
+Bu operatörü kullanırken dikkatli olmak gerekir, çünkü null olabilecek bir değişkenin !! operatörü ile erişilmeye çalışılması hata riskini artırabilir.
+
+-->?.: Bu operatör, nullable bir değişkene güvenli bir şekilde erişmek için kullanılır. Eğer değişken null ise, operatörün sağ tarafı çalışmaz ve sonuç null olur. 
+
+Örneğin:
+val nullableString: String? = null
+val length = nullableString?.length // length null olarak atanır, NullPointerException hatası oluşmaz
+
+-->Bu operatör, null değer kontrolü yapmak için kullanışlıdır ve genellikle nullable değişkenlere erişirken tercih edilir.
+Hangi operatörü kullanmanın daha anlamlı olduğu, duruma ve kullanım senaryosuna bağlıdır. Genel olarak, null olabilecek bir değişkene erişirken ?. operatörünü kullanmak daha güvenlidir, çünkü null değer kontrolü yapılmasını sağlar ve potansiyel NullPointerException hatalarını önler. !! operatörü ise, null olmadığından emin olduğumuz durumlarda kullanılabilir, ancak bu durumda dikkatli olmak ve null olma ihtimalini göz ardı etmemek önemlidir.
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+12-
+
+
+
