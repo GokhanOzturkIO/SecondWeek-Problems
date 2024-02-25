@@ -1,12 +1,3 @@
-Soru 2 : Bir var değişkeni val gibi davranmasını nasıl sağlayabiliriz val kelimesini kullanmadan? Bunu neden yapmak isteriz? Örnek bir senaryo verin.
-Cevap 2 : Bir değişkenin "var " gibi davranmasını yalnızca bir kez atanabilir .O değişkenin referansı değiştirmemeye özen göstermeliyiz.
-
-    var readOnlyOnce: String = "Başlangıç Değeri"
-    
-    // Tikkat : readOnlyOnce değişkenini sadece bir kez değiştirebiliriz.
-    readOnlyOnce = "Yeni Değer"
-    println(readOnlyOnce)
-
-Bu örnekte, readOnlyOnce değişkeni başlangıçta bir değere atanır ve daha sonra bir kez daha değiştirilmeye çalışılır, ancak bu durumda hata alınır. Bu şekilde değişkenin bir kez değiştirilebilir olduğunu ancak daha sonra değiştirilemez olduğunu simgeliyoruz. Ancak, bu hala tam anlamıyla bir val değişkeni oluşturmak değildir.
-
-
+Soru 3 : "Değişmez" (Immutable) ve "Salt Okunur" (ReadOnly) kavramlarını açıklayın. val değişkenler neden aslında "değişmez" değil de "salt okunur" olarak açıklanmalıdır?
+Cevap 3 : Değişmez (Immutable):Bir nesnenin değeri hiçbir zaman değiştirilemez. Oluşturulduktan sonra içeriği sabittir. Salt Okunur (ReadOnly):Bir nesnenin değeri sadece okunabilir, yani bir kez atandıktan sonra değiştirilemez. Ancak, içindeki özellikler (alt öğeler) değiştirilebilir.
+Kotlin'deki val değişkenleri "salt okunur" olarak adlandırılır, çünkü bir kez değer atandıktan sonra değiştirilemez. Ancak, nesnenin kendisi değişmez değildir, sadece referansı değiştirilemez.val değişkeni bir kez bir nesneye referans yapılırsa, bu referans daha sonra başka bir nesneye (farklı bir bellek adresine) değiştirilemez denebilir .
