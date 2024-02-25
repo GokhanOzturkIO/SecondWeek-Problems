@@ -82,3 +82,15 @@ Tip belirtmenin kesin olarak gerektiği durumlar şunlardır:
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+5-"Tip Güvenliği" (Type Safety) kavramını açıklayın. Sorusunun Cevabı nedir:
+
+-->Type Safety, bir programlama dilinde, değişkenlerin ve ifadelerin veri tiplerine uygun olarak kullanılmasını ve tip uyumsuzluklarının önlenmesini sağlayan bir özelliktir.
+
+--> // Tip uyumsuzluğu
+val text: String = "Hello"
+val number: Int = text // Hata! String bir değişkeni Int'e atamak mümkün değil
+
+// Tip uyumlu
+val number: Int = 42
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
