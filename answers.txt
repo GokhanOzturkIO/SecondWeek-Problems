@@ -1,9 +1,3 @@
 
-Soru 6 : "Null Güvenliği" (Null Safety) kavramını açıklayın.
-Cevap 6 :Null güvenliği bir kodun null değerlerle ilgili hataları önleyen ve kontrol eden yapı. Örneğin 
-var metin: String? = null
-
-metin?.let {
-    val uzunluk: Int = it.length
-    println("Metin uzunluğu: $uzunluk")
-} ?: println("Metin null")
+ **Bir değişkene null değer atanır ve tip belirtilmezse Kotlin bu değişkeni nasıl yorumlar?
+ Cevap : Eğer bir değişkene null değer atanır ve tip belirtilmezse, Kotlin bu değişkeni otomatik olarak Any? tipi olarak yorumlar ve  değişkenin herhangi bir türde bir nesneye veya null değerine sahip olabileceği anlamı taşır .
