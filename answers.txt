@@ -1,3 +1,3 @@
 
- **Bir değişkene null değer atanır ve tip belirtilmezse Kotlin bu değişkeni nasıl yorumlar?
- Cevap : Eğer bir değişkene null değer atanır ve tip belirtilmezse, Kotlin bu değişkeni otomatik olarak Any? tipi olarak yorumlar ve  değişkenin herhangi bir türde bir nesneye veya null değerine sahip olabileceği anlamı taşır .
+ **İlkel bir değişkenin nullable olması ile null değer alamaması arasında bellek yönetimi açısından nasıl farklar vardır?
+ Cevap : İlkel bir değişken nullable olmazsa, genellikle sabit bir bellek boyutuna sahiptir ve null değer alamaz. Nullable ilkel değişkenler, null değeri alabilme yeteneğine sahiptir ve bu durumda bellekte daha fazla yer kaplayabilir. Bellek yönetimi , dilin tip sistemi , bellek stratejileri ve paradigmalara bağlı değişiklikler gösterebilir.Garbage collector gibi mekanimalar kullanıldığında bellek yönetimi üzerinde daha az etkisi olabilir. 
