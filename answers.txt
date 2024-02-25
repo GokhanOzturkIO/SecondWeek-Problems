@@ -1,5 +1,3 @@
 
-Soru 6 : "Tip Güvenliği" (Type Safety) kavramını açıklayın
-Cevap 6 : Programın, belirli bir veri tipi beklenirken başka bir veri tipiyle işlem yapmamasını, böylece olası hataları minimize etmesini sağlayan bir özelliktir. Örneğin elimizde int ve string tipinde iki veri varken int + string yapmak type safety uymaz iken int ve long tipinde veriler varken bunların toplamı uyuşmazlığa sebep olmaz.
-Örnek olarak    val sayi: Int = 5
-    		val metin: String = "Merhaba"  burada val sonuc : Int = sayi + metin 
+Soru 6 : Bir değişkeni nullable yapmak için ne yapmalıyız?
+Cevap 6 :Bir değişkeni nullable yapmak için, değişkenin türüne bir soru işareti (?) ekleyebilirsiniz. Örneğin :  var metin: String? = null
