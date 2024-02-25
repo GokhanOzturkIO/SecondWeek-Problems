@@ -1,3 +1,5 @@
 
-Soru 5 : Kotlin'de tüm değişkenlerin sınıf olarak bulunması, "ilkel tip" (primitive type) olmadıkları anlamına gelir mi? Arka planda neler oluyor?
-Cevap 5 : Evet , kotlinde tüm değişkenler nesne olarak kabul edilir ve primitive type bulunmaz. Bunun yerine temel veri tipleri optimize edilmiş sınıflar olarak ele alınır.Bu dilin tutartlılığını artırır ve özellikle null güvenşliği gibi avantajları beraberinde getirir.
+Soru 6 : "Tip Güvenliği" (Type Safety) kavramını açıklayın
+Cevap 6 : Programın, belirli bir veri tipi beklenirken başka bir veri tipiyle işlem yapmamasını, böylece olası hataları minimize etmesini sağlayan bir özelliktir. Örneğin elimizde int ve string tipinde iki veri varken int + string yapmak type safety uymaz iken int ve long tipinde veriler varken bunların toplamı uyuşmazlığa sebep olmaz.
+Örnek olarak    val sayi: Int = 5
+    		val metin: String = "Merhaba"  burada val sonuc : Int = sayi + metin 
