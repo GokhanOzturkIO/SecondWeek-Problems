@@ -46,3 +46,12 @@ Eğer daha detaylı incelersek kotlin'de oluşturulan nullable bir primitive typ
 
 ## 1.11- Nullable bir değişkenin bir değere sahip olması ile null olması arasında bellek yönetimi açısından nasıl bir fark vardır? Null değer almış bir değişken bellekte yer kaplamaz diyebilir miyiz?
 Referans tipli değişkenler null ile atandığı zaman heap kısmında gösterdikleri bir şey olmadığı anlamına gelir fakat her iki durumda da stack kısmında bu referans için yer tutulur.
+
+## 1.12- Nullable bir değişkenle çalışırken hangi operatörleri kullanırız? Bu operatörlerin kullanım farkları nelerdir? Hangisini ne zaman kullanmak daha anlamlıdır?
+"?.", "!!" ve "?:" operatörlerini kullanabiliriz.
+- "?." Safe call operator: Eğer ifademiz null değilse işlem yapar fakat null ise bu işlemi gerçekleştirmez.
+- "!!" Not-null assertion operator: İfademizin null gelmeyeceğini garanti eder fakat kullanılması tavsiye edilmez. Null-safety özelliğine uygun olmayan durumlar yaratabilir.
+- "?:" Elvis Operator: ifademiz null gelirse bu operatörden sonra yapılacak işleri yazabiliriz.
+
+Safe call operatörü null gelmediği durumlarda kodumuzun olağan akışında çalışması için kullanılabilir. Elvis operatörü ile beraber kullanmak uygun olacaktır çünkü null geldiği durumda da farklı işlemler yaptırmak isteyebiliriz. <p>
+Not-null assertion operatörü ise gelecek ifadenin null olmadığını garanti etmemiz gereken durumlarda kullanılabilir fakat kullanırken dikkat etmek gerekir çünkü bu şekilde garanti ettiğimiz değer eğer null gelirse NullPointerException ile karşılaşmamız mümkündür.
