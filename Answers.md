@@ -167,4 +167,11 @@ fun main(){
             </summary>
             Bazı ülkelerde ondalık ayıraç olarak nokta işareti kullanılırken, bazılarında virgül kullanılır. Bu nedenle, uygulamanın kullanılacağı hedef kitlenin coğrafi konumuna bağlı olarak uygun ondalık ayıraçlarının kullanılması önemlidir. Kotlin'de, ondalık sayılar varsayılan olarak Double türüne atanır. Float türünde bir değer atanmak istenirse, sayının sonuna f veya F harfi eklenmelidir. Bu, derleyicinin sayının Float türü olduğunu anlamasını sağlar.
         </details>
+        <details>
+            <summary>
+            Double ve Float değişkenler ondalık kısımda kaç basamağa kadar işlem yaparlar? Bu sınırın üzerinde gelen ondalık bilgileri için nasıl davranırlar? Hangi durumlar için Float ve hangi durumlar için Double kullanılmalıdır?
+            </summary>
+            Float: 32 bitlik bellek alanında depolanır. Yaklaşık olarak 6-7 basamağa kadar kesinlik sağlar. Daha küçük bir veri aralığı ve daha düşük bir kesinlik sunar. Bellek tasarrufu veya hız gereksinimi olan işlemlerde kullanılabilir.
+            Double: 64 bitlik bellek alanında depolanır. Yaklaşık olarak 15 basamağa kadar kesinlik sağlar. Daha büyük bir veri aralığı ve daha yüksek bir kesinlik sunar. Bilimsel hesaplamalar finansal işlemler gibi yüksek kesinlik gerektiren alanlarda tercih edilir.
+        </details>
 </details>
