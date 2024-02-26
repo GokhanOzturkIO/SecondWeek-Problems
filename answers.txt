@@ -1,36 +1,44 @@
 
- ** Sayısal değişkenlerde hangi karşılaştırma operatörleri kullanılabilir?
- Cevap : ( == , != , >, < , % , >= , <=) operatörlerini kullanabilirler. 
-	Eşittir (==):
-	val x = 2
-	val y = 2
-	println(x == y) // true
+ ** Bit düzeyinde operatörler (Bitwise operators) nelerdir? Ne amaçla kullanılır? Kotlin'de bunları nasıl kullanabilirsiniz?
+ Cevap : ( AND (&) , OR (|) , XOR (^), Complement (inv()) , Left Shift (shl) , Right Shift (shr) , Unsigned Right Shift (ushr)) 
+	AND (&) - Her iki bit de 1 ise sonuç 1, diğer durumlarda 0 :
+	val a = 5 // 101
+	val b = 3 // 011
+	val result = a and b // 001 (1)
 
-	Eşit Değildir (!=):
-	val x = 5
-	val y = 10
-	println(x != y) // true
+	OR (|) - Herhangi bir iki bit 1 ise sonuç 1, diğer durumlarda 0 : 
+	val a = 5 // 101
+	val b = 3 // 011
+	val result = a or b // 111 (7)
 
-	Büyüktür (>):
-	val x = 10
-	val y = 5
-	println(x > y) // true
+	XOR (^) - Her iki bit de farklı ise sonuç 1, aynı ise 0 :
+	val a = 5 // 101
+	val b = 3 // 011
+	val result = a xor b // 110 (6)
+	
+	Complement (inv()) - Bitleri ters çevirir (0'ları 1'e, 1'leri 0'a çevirir) :
+	val a = 5 // 101
+	val result = a.inv() // 11111111111111111111111111111010 (-6)
 
-	Küçüktür (<):
-	val x = 5
-	val y = 10
-	println(x < y) // true
+	Left Shift (shl) - Belirli sayıda biti sola kaydırır :
+	val a = 5 // 101
+	val result = a shl 1 // 1010 (10)
 
-	Büyük Eşittir (>=):
-	val x = 10
-	val y = 10
-	println(x >= y) // true
+	Right Shift (shr) - Belirli sayıda biti sağa kaydırır. Boş bırakılan yerlere en sol bitin değeri eklenir (signed shift) :
+	val a = 5 // 101
+	val result = a shr 1 // 10 (2)
 
-	Küçük Eşittir (<=):
-	val x = 5
-	val y = 10
-	println(x <= y) // true
+	Unsigned Right Shift (ushr) - Belirli sayıda biti sağa kaydırır. Boş bırakılan yerlere sıfır eklenir (unsigned shift) :
+	val a = -5 // 11111111111111111111111111111011
+	val result = a ushr 1 // 01111111111111111111111111111101 (2147483645)
+
+	Bit düzeyinde operatörler, özellikle donanım düzeyinde programlama, şifreleme ve veri manipülasyonu gibi alanlarda kullanılır.
 
 
+
+
+
+	
+	
 
 
