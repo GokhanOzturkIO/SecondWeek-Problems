@@ -1,7 +1,6 @@
 
- ** "İşaretsiz" (Unsigned) değişkenler ne demektir? İşaretli olanlarla aralarındaki fark nedir?
- Cevap : İşaretsiz değişkenler , sadece pozitif sayıoları temsil edebilen ve herhangi bir işaret bitine sahip olmayan sayı türü. Unsigned Int sadece 0 ve pozitif sayılar.
-İşaretli değişkenler hem negatif hem pozzitif sayıları temsil eder. İşaret biti kullanırlar bu nedenle bir bit daha az kullanılır , ancak sıfır ve negatif sayıları temsil edebilir.
+ ** "İşaretsiz" değişkenler nasıl bir sınıf yapısında tutulurlar? Bu neden önemlidir?
+ Cevap : İşaretsiz değişkenler kotlin'de ayrı bir sınıf yapısı içinde tutulurlar . ( UByte, UShort, UInt, ULong ) Bu sınıflar işaretsiz sayıalrı temsil etmek ve geniş bir sayı aralığına erişmek için kullanılır.Genellikle sıfrdan büyük pozitif sayılı senaryolarda kullanılır.
 
 
 
