@@ -1,15 +1,6 @@
 
- **Nullable bir değişkenle çalışırken hangi operatörleri kullanırız? Bu operatörlerin kullanım farkları nelerdir? Hangisini ne zaman kullanmak daha anlamlıdır?
- Cevap :
- ? : Bir nullable değişkenin değeri null ise varsayılan bir değer atar.
-Örnek: val sonuc = nullableDegisken ?: varsayilanDeger
-
- ?. :Değişkenin null olup olmadığını kontrol eder ve işlemi sadece null değilse gerçekleştirir.
-Örnek: val uzunluk = nullableString?.length
-
-Let Fonksiyonu:let fonksiyonu, nullable değişken üzerinde işlem yaparken kullanılır.
-Örnek: nullableDegisken?.let { // işlem yap }
-
-!! :Nullable değişkenin değerini null olduğunu bilmeden güvenli bir şekilde almak için kullanılır. Ancak, null ise NullPointerException hatası oluşur.
-Örnek: val uzunluk = nullableString!!.length
-
+ **Kaç farklı tipte "number" sınıfı miras alan "alt sınıf" (child class) vardır? Bunların değer aralıkları neden önemlidir?
+ Cevap :Int (Integer): Tam sayıları temsil eder.
+	Double (Double): Ondalık sayıları (kesirli sayıları) temsil eder.
+	Float (Float): Aynı şekilde ondalık sayıları temsil eder.
+Deger aralığı dilin türüne ve platforma göre değişiklik gösterebilir . Int 32 veya 64 bit gibi. 
