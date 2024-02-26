@@ -1,5 +1,11 @@
 
- ** Sayısal değişkenlerde alt çizgi (underscore) nasıl kullanılır? Kotlin bunu nasıl yorumlar?
- Cevap : Kotlin'de sayısal değerlere alt çizgi kullanmak daha okunabilir hale getirir.
-	val buyukSayi: Long = 1_000_000_000
-	val ondalikSayi: Double = 3.14_15_93 // sayilar matematiksel olarak etkilenmez. 
+ ** == ile neyi karşılaştırırız? === ile neyi karşılaştırırız?
+ Cevap : == operatörü , yapısal eşitliği kontrol eder ve iki nesnenin değerlerini karşılaştırır. === operatörü ise referans eşitliğini kontrol eder ve iki nesnenin aynı bellek adresine sahip olup olmadığını kontrol eder . Örnek olarak : 
+
+	val a: Int = 5
+	val b: Int = 5
+	println(a == b) // true  // == kontrolü
+	**********
+	val x: Int = 5
+	val y: Int = 5
+	println(x === y) // true veya false  // === kontrolü
