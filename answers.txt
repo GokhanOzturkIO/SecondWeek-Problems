@@ -1,6 +1,3 @@
 
- ** Eğer bir değişkene tip belirtimi yapılmaz ve bir değer atanırsa, Kotlin tip çıkarımını nasıl yapar?
- Cevap : Kotlin, tip çıkarımı (type inference) yapabilen bir dildir. Eğer değişkin tipi belirtilmezse atanan değere göre çıkarır. 
-	 Örnek olarak : val sayi = 42 // burada int 
-			val pi = 3.14 // burada double
-			val isim = "ismail" // burada String şeklinde tip çıkarımı yapılır
+ ** Float değişken oluştururken F ve f harfleri varken, Long değişken oluştururken neden küçük l harfi yoktur?
+ Cevap : Float tipi için F veya f harfi kullanılırken, Long tipi için küçük l harfi zorunlu değildir, ancak tercihe bağlı olarak kullanılabilir veya büyük L harfi de tercih edilebilir. Bunun en olası nedeni l harfinin 1 (bir) sayısı ile aynı görünmesi ve yanlış anlaşılmaları engellemektir.
