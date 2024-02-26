@@ -1,8 +1,9 @@
 
- ** "İşaretsiz" "Long" harf gösterimi nasıl yapılır?
- Cevap : İşaretsiz Long harf gösterimi ULong olarak yapılır. Örnek :
-		val unsignedLong : ULong = 123uL
-
+ ** "İşaretsiz" değişkenlerin kullanım amaçları nelerdir?
+ Cevap : Bit düzeyi manipülasyonlar: İşaretsiz değişkenler, bit düzeyinde operasyonlar için kullanışlıdır. Özellikle, işaretsiz tamsayılar, her bitin pozisyonunu belirtmek için kullanılır.
+Veri sıkıştırma ve şifreleme: İşaretsiz değişkenler, veriyi sıkıştırmak veya şifrelemek gibi durumlar için kullanışlıdır.
+Veri temsilini genişletme: İşaretsiz değişkenler, belirli bir üst sınıra kadar olan pozitif sayıları temsil ettiği için, sıfırdan büyük sayılarla çalışan uygulamalarda kullanılır.
+Bellek tasarrufu: İşaretsiz değişkenler, işaret bitine ihtiyaç duymadıkları için işaretsiz tamsayılar işaretli tamsayılara göre bir bit daha fazla veriyi temsil edebilirler.
 
 
 
