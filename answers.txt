@@ -1,6 +1,6 @@
 
- ** "İşaretsiz" değişkenler nasıl bir sınıf yapısında tutulurlar? Bu neden önemlidir?
- Cevap : İşaretsiz değişkenler kotlin'de ayrı bir sınıf yapısı içinde tutulurlar . ( UByte, UShort, UInt, ULong ) Bu sınıflar işaretsiz sayıalrı temsil etmek ve geniş bir sayı aralığına erişmek için kullanılır.Genellikle sıfrdan büyük pozitif sayılı senaryolarda kullanılır.
+ ** "İşaretsiz" değişkenlerin harf gösterimi nasıldır?
+ Cevap : İşaretsiz (Unsigned) değişkenlerin harf gösterimleri, ilgili veri türünün adının başına U harfinin eklenmesiyle oluşur. (UByte : 8 bit, UShort : 16 bit , UInt : 32 bit, ULong : 64 bit )
 
 
 
