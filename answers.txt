@@ -1,19 +1,36 @@
 
- ** Sayısal değişkenlerde hangi matematiksel operatörler kullanılabilir?
- Cevap : ( + , - , *, / , % , += , _=) operatörlerini kullanabilirler. 
-	Toplama (+) :
-	val sonuc = 5 + 3 
-	Çıkarma (-) :
-	val sonuc = 2 - 1
-	Çarpma (*) :
-	val sonuc = 5 * 2
-	Bölme (/) :
-	val sonuc = 7 / 3
-	Modüler Bölme (%) :
-	val kalan = 8 % 3
-	Artırma (+=) ve Azaltma (-=) :
-	var sayi = 7
-	sayi += 3  // sayi şimdi 10
-	sayi -= 2  // sayi şimdi 5
+ ** Sayısal değişkenlerde hangi karşılaştırma operatörleri kullanılabilir?
+ Cevap : ( == , != , >, < , % , >= , <=) operatörlerini kullanabilirler. 
+	Eşittir (==):
+	val x = 2
+	val y = 2
+	println(x == y) // true
+
+	Eşit Değildir (!=):
+	val x = 5
+	val y = 10
+	println(x != y) // true
+
+	Büyüktür (>):
+	val x = 10
+	val y = 5
+	println(x > y) // true
+
+	Küçüktür (<):
+	val x = 5
+	val y = 10
+	println(x < y) // true
+
+	Büyük Eşittir (>=):
+	val x = 10
+	val y = 10
+	println(x >= y) // true
+
+	Küçük Eşittir (<=):
+	val x = 5
+	val y = 10
+	println(x <= y) // true
+
+
 
 
