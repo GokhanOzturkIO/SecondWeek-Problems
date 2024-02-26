@@ -1,12 +1,7 @@
 
- ** "İşaretsiz" değişken türleri (UInt, ULong vs.) kullanırken, Java API'leri ile uyumluluk konusunda ne gibi sorunlar olabilir? Bunları çözmek için neler yapabilirsiniz?
- Cevap : Java API'lerine Parametre Aktarımı:Java API'leri işaretli tamsayıları bekliyorsa, işaretsiz tamsayıları uygun şekilde dönüştürmek önemlidir.
-	Taşma Kontrolü:İşaretsiz değişkenlerin sınırlarına dikkat ederek taşma durumlarına karşı kontrol mekanizmaları uygulamak önemlidir.
-	Java'da Uygun Tamsayı Tipini Kullanma:Java API'leri genellikle işaretli tamsayı türleriyle çalıştığı için, uyumluluk sağlamak için Java'nın beklediği tamsayı 	türlerini kullanmak önemlidir.
-	Farklı Tamsayı Temsil Biçimleri:İşaretsiz tamsayıları işaretli tamsayılarla uyumlu şekilde temsil etmek için dönüşüm fonksiyonları kullanılabilir.
-	Dönüşüm Fonksiyonları:İşaretsiz tamsayıları işaretli tamsayılara veya tersine dönüştürmek için sağlanan dönüşüm fonksiyonları kullanılabilir.
-
-
+ ** is ve !is operatörlerinin kullanımını açıklayın.
+ Cevap : is operatörü : Bir nesnenin belirli bir türle uyumlu olup olmadığı kontrolünü yapar . Örnek ( if(obj is String) { String türüne uygun}
+	 !is operatörü : Bir nesnenin belirli bir türle uyumlu olmadığını kontrolünü yapar. Örnek ( if(obj !is String) {String türüne uygun değilse}
 
 
 
