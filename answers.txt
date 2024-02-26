@@ -1,8 +1,6 @@
 
- ** Ondalık(Decimal), Onaltılık (Hexadecimal) ve İkilik (Binary) değişkenleri Kotlin'de nasıl tanımlayabilirsiniz?
- Cevap : Ondalık sayılar varsayılan bir ondalık sistemdedir ve ön ek gerekmez : 
-		val ondalikSayi: Int = 42
-	 Onaltılık sayılar Ox veya OX ön eki kullanılır : 
-		val onaltılıkSayi: Int = 0x1F   // 31 onaltılık olarak
-	 ikilik sayılar için Ob veya OB ön eki kullanılır : 
-		val ikilikSayi: Int = 0b1101  // 13 ikilik olarak int dışında sayı tiplerinde de kullanılabilir .
+ ** Sekizlik (Octal) değişkenler Java'da nasıl tanımlanır? Kotlin'de Sekizlik değişken tanımlanabilir mi?
+ Cevap : Kotlin' de doğrudan sekizlik sayılar için ön ek yoktur. Java'da sekizlik sayılar için 0 ön eki kullanılır . Kotlinde onaltılık 0x veya 0X ikilik Ob OB sayılarını kullanılır . Örnek olarak : 
+
+		val onaltılıkSayi: Int = 0x12  // 18 onaltılık olarak
+	Sekizlik sayılar için genellikle bu tür ifade yardımcı olur . 
