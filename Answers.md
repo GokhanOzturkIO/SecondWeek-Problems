@@ -161,4 +161,10 @@ fun main(){
             </summary>
             Tek duyarlıklı (Single Precision) ve Çift duyarlıklı (Double Precision), kayan noktalı sayıları temsil etme yöntemleridir. Tek duyarlıklı format, 32 bitlik bir bellek alanında depolanırken, çift duyarlıklı format 64 bitlik bir bellek alanında depolanır. Çift duyarlıklı format, daha büyük bir veri aralığına ve daha yüksek bir kesinliğe sahipken, tek duyarlıklı format daha küçük bir veri aralığı ve daha düşük bir kesinlik sunar. Bu nedenle, kullanılan uygulamanın gereksinimlerine ve bellek / performans dengesine bağlı olarak tercih edilirler.
         </details>
+        <details>
+            <summary>
+            Double ve Float değişkenlerle çalışırken ondalık ayıracı olarak hangi işaretler kullanılır? Bu ayıraçların kullanımında nelere dikkat etmek gerekir?
+            </summary>
+            Bazı ülkelerde ondalık ayıraç olarak nokta işareti kullanılırken, bazılarında virgül kullanılır. Bu nedenle, uygulamanın kullanılacağı hedef kitlenin coğrafi konumuna bağlı olarak uygun ondalık ayıraçlarının kullanılması önemlidir. Kotlin'de, ondalık sayılar varsayılan olarak Double türüne atanır. Float türünde bir değer atanmak istenirse, sayının sonuna f veya F harfi eklenmelidir. Bu, derleyicinin sayının Float türü olduğunu anlamasını sağlar.
+        </details>
 </details>
