@@ -76,3 +76,7 @@ Kotlin'de Octal değişkenler tanımlanamaz.
 
 11.== ile neyi karşılaştırırız? === ile neyi karşılaştırırız?
 - == ile değişkenlerin değerini karşılaştırırız. === ile değişkenlerin referanslarını karşılaştırır. 
+
+12.=== operatörü ile karşılaştırma yaparken Byte değer aralığı neden önemlidir? Kotlin bu aralığa göre neden özel bir davranış sergiler?
+-Byte değer aralığındaki sayılar için özel bir optimizasyon uygulanıyor ve refeneransları farklı olsa bile referans kıyaslamasında true sonucunu elde ediyoruz.
+
