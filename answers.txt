@@ -1,7 +1,18 @@
 
- ** is ve !is operatörlerinin kullanımını açıklayın.
- Cevap : is operatörü : Bir nesnenin belirli bir türle uyumlu olup olmadığı kontrolünü yapar . Örnek ( if(obj is String) { String türüne uygun}
-	 !is operatörü : Bir nesnenin belirli bir türle uyumlu olmadığını kontrolünü yapar. Örnek ( if(obj !is String) {String türüne uygun değilse}
+ **"Akıllı Dönüşüm" (Smart Cast) ne demektir? Farklı kod örnekleri ile açıklayın. Bu özelliğin sınırlamaları nelerdir?
+ Cevap : Smart cast kotlin'de bir değişkenin türünün, belirli bir koşulu kontrol etmek için otomatik dönüştürülmesi. 
+	fun processString(input: Any) 
+ 	   if (input is String) 
+              println(input.length)
+    	Örnek : 
+	fun processNumber(input: Any) 
+   	 if (input is Int) 
+            println(input * 2)
+   	 else if (input is Double) 
+            println(input / 2)
+    	
+
+
 
 
 
