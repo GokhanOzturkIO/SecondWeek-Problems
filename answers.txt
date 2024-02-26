@@ -80,3 +80,5 @@ Kotlin'de Octal değişkenler tanımlanamaz.
 12.=== operatörü ile karşılaştırma yaparken Byte değer aralığı neden önemlidir? Kotlin bu aralığa göre neden özel bir davranış sergiler?
 -Byte değer aralığındaki sayılar için özel bir optimizasyon uygulanıyor ve refeneransları farklı olsa bile referans kıyaslamasında true sonucunu elde ediyoruz.
 
+13.Sayısal değişkenlerde hangi matematiksel operatörler kullanılabilir?
+-Sayısal değişkenlerde toplama (+), çıkarma (-), bölme (/), çarpma (*) gibi temel operatörler kullanılabilir. Bunların yanında % ile bir sayıya diğer sayıya bölünce kalanı bulabiliriz. ++ ile değeri 1 arttırıp -- ile değeri 1 azaltabiliriz.
