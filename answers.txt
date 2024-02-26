@@ -82,3 +82,6 @@ Kotlin'de Octal değişkenler tanımlanamaz.
 
 13.Sayısal değişkenlerde hangi matematiksel operatörler kullanılabilir?
 -Sayısal değişkenlerde toplama (+), çıkarma (-), bölme (/), çarpma (*) gibi temel operatörler kullanılabilir. Bunların yanında % ile bir sayıya diğer sayıya bölünce kalanı bulabiliriz. ++ ile değeri 1 arttırıp -- ile değeri 1 azaltabiliriz.
+
+14.Sayısal değişkenlerde hangi karşılaştırma operatörleri kullanılabilir?
+-Sayısal değişkenlerde <, > =<, =>, == ,!= gibi operatörler kullanılabilir.
