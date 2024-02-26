@@ -1,6 +1,6 @@
 
- **Kaç farklı tipte "number" sınıfı miras alan "alt sınıf" (child class) vardır? Bunların değer aralıkları neden önemlidir?
- Cevap :Int (Integer): Tam sayıları temsil eder.
-	Double (Double): Ondalık sayıları (kesirli sayıları) temsil eder.
-	Float (Float): Aynı şekilde ondalık sayıları temsil eder.
-Deger aralığı dilin türüne ve platforma göre değişiklik gösterebilir . Int 32 veya 64 bit gibi. 
+ ** Eğer bir değişkene tip belirtimi yapılmaz ve bir değer atanırsa, Kotlin tip çıkarımını nasıl yapar?
+ Cevap : Kotlin, tip çıkarımı (type inference) yapabilen bir dildir. Eğer değişkin tipi belirtilmezse atanan değere göre çıkarır. 
+	 Örnek olarak : val sayi = 42 // burada int 
+			val pi = 3.14 // burada double
+			val isim = "ismail" // burada String şeklinde tip çıkarımı yapılır
