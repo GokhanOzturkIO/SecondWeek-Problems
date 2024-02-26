@@ -1,11 +1,3 @@
 
- ** == ile neyi karşılaştırırız? === ile neyi karşılaştırırız?
- Cevap : == operatörü , yapısal eşitliği kontrol eder ve iki nesnenin değerlerini karşılaştırır. === operatörü ise referans eşitliğini kontrol eder ve iki nesnenin aynı bellek adresine sahip olup olmadığını kontrol eder . Örnek olarak : 
-
-	val a: Int = 5
-	val b: Int = 5
-	println(a == b) // true  // == kontrolü
-	**********
-	val x: Int = 5
-	val y: Int = 5
-	println(x === y) // true veya false  // === kontrolü
+ ** === operatörü ile karşılaştırma yaparken Byte değer aralığı neden önemlidir? Kotlin bu aralığa göre neden özel bir davranış sergiler?
+ Cevap : Kotlin'de , -128 ile 127 arasındaki küçük tamsayı (byte , short , int ) değerleri için ==== operatörü refereans eşitliğni kontrol eder.  Bu değerlerin bu aralıkta olması durumunda, bellekte sadece bir kez oluşturulup paylaşılır ve her referans isteğinde aynı nesnenin referansı döndürülür. Bu, bellek optimizasyonu ve performans iyileştirmesi sağlar. Bu özel davranış, küçük tamsayı değerlerinin sıkça kullanıldığı durumlarda bellek kullanımını azaltabilir ve eşitlik kontrollerini hızlandırabilir
