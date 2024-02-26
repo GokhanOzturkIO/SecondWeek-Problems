@@ -85,3 +85,10 @@ Kotlin'de Octal değişkenler tanımlanamaz.
 
 14.Sayısal değişkenlerde hangi karşılaştırma operatörleri kullanılabilir?
 -Sayısal değişkenlerde <, > =<, =>, == ,!= gibi operatörler kullanılabilir.
+
+15.Bit düzeyinde operatörler (Bitwise operators) nelerdir? Ne amaçla kullanılır? Kotlin'de bunları nasıl kullanabilirsiniz?
+-Bit düzeyinde operatörler and, or, xor gibi operatörlerdir. Bilgisayar belleğindeki verilerin bit seviyesinde işlemlerini yapmak için kullanılır. 
+And operatoru -> iki binary ifadeyi and ile işleme soktuğumuz zaman karşı karşıya gelen iki ifade de 1 ise sonuç 1 olur aksi durumda sonuc 0'dır.
+Or operatoru -> iki binary ifadeyi or ile işleme soktuğumuz zaman karşı karşıya gelen iki ifadeden birisi 1 olduğu durumda 1'dir. İkisi 0 ise sonuç 0'dır.
+Xor operatoru -> iki binary ifadeyi xor ile işleme soktuğumuz zaman karşı karşıya gelen iki ifade birbirinden farklıysa 1 olur aynı ise 0 sonucunu verir. Yani 1 xor 1=0, 1 xor 0=1
+Inv operatoru -> Herhangi bir binary sayısındaki bitlerin tersini alır 0 ise 1 , 1 ise 0 yapar.
