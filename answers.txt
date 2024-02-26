@@ -1,11 +1,8 @@
 
- ** Kotlin'de büyük sayılarla çalışırken hangi ek türlerden yararlanılır ve bu türlerin sınırları nelerdir?
- Cevap : Kotlinde büyük sayılarla çalışırken BigInteger ve BigDecimal sınıfları kullanılır . BigInteger tam sayılar için kullanılır ve standart veri tipi sınırlarını aşan büyük ve küçük sayıları temsil eder. Örnek olarak ( val bigInteger1 = BigInteger("123456789012345678901234567890") ) 
-BigDecimal ondalık sayılar ve yüksek hassasiyet hesaplamalar için kullanılır. 
-Örnek olarak : 
-	val bigDecimal1 = BigDecimal("123.456")
-	val bigDecimal2 = BigDecimal("789.012")
-	val result = bigDecimal1.add(bigDecimal2)
+ ** Double ve Float değişkenler kullanılırken "yuvarlama" davranışı nasıldır? Bu nasıl değiştirilebilir?
+ Cevap :Standart yuvarlama işlemleri genellikle sayıları en yakın tam sayıya yuvarlamak üzerinedir. Örneğin Math.round() fonksiyonu sayıyı en yakın tam sayıya yuvarlamak için kullanılabilir : val x: Double = 3.7
+		 val y = Math.round(x).toInt() // 4
+
 
 
 
