@@ -1,6 +1,5 @@
 
- ** Sekizlik (Octal) değişkenler Java'da nasıl tanımlanır? Kotlin'de Sekizlik değişken tanımlanabilir mi?
- Cevap : Kotlin' de doğrudan sekizlik sayılar için ön ek yoktur. Java'da sekizlik sayılar için 0 ön eki kullanılır . Kotlinde onaltılık 0x veya 0X ikilik Ob OB sayılarını kullanılır . Örnek olarak : 
-
-		val onaltılıkSayi: Int = 0x12  // 18 onaltılık olarak
-	Sekizlik sayılar için genellikle bu tür ifade yardımcı olur . 
+ ** "Geleneksel Notasyon" (Conventional Notation) gösterimi nasıl yapılır?
+ Cevap : 
+"Geleneksel Notasyon" terimi, matematikte yaygın olarak kullanılan standart ifade biçimini ifade eder. Örneğin, 3 ile 5'in toplamını gösteren bir geleneksel notasyon örneği şu şekildedir: 3+5. Örnek olarak
+	val toplam: Int = 3 + 5 .  // matematikteki geleneksel notasyon
