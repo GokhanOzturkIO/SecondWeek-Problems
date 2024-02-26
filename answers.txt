@@ -1,5 +1,5 @@
 
- ** "Geleneksel Notasyon" (Conventional Notation) gösterimi nasıl yapılır?
- Cevap : 
-"Geleneksel Notasyon" terimi, matematikte yaygın olarak kullanılan standart ifade biçimini ifade eder. Örneğin, 3 ile 5'in toplamını gösteren bir geleneksel notasyon örneği şu şekildedir: 3+5. Örnek olarak
-	val toplam: Int = 3 + 5 .  // matematikteki geleneksel notasyon
+ ** Sayısal değişkenlerde alt çizgi (underscore) nasıl kullanılır? Kotlin bunu nasıl yorumlar?
+ Cevap : Kotlin'de sayısal değerlere alt çizgi kullanmak daha okunabilir hale getirir.
+	val buyukSayi: Long = 1_000_000_000
+	val ondalikSayi: Double = 3.14_15_93 // sayilar matematiksel olarak etkilenmez. 
