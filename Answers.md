@@ -174,4 +174,17 @@ fun main(){
             Float: 32 bitlik bellek alanında depolanır. Yaklaşık olarak 6-7 basamağa kadar kesinlik sağlar. Daha küçük bir veri aralığı ve daha düşük bir kesinlik sunar. Bellek tasarrufu veya hız gereksinimi olan işlemlerde kullanılabilir.
             Double: 64 bitlik bellek alanında depolanır. Yaklaşık olarak 15 basamağa kadar kesinlik sağlar. Daha büyük bir veri aralığı ve daha yüksek bir kesinlik sunar. Bilimsel hesaplamalar finansal işlemler gibi yüksek kesinlik gerektiren alanlarda tercih edilir.
         </details>
+        <details>
+            <summary>
+            Ondalık(Decimal), Onaltılık (Hexadecimal) ve İkilik (Binary) değişkenleri Kotlin'de nasıl tanımlayabilirsiniz?
+            </summary>
+            Ondalık sayılar, varsayılan olarak Kotlin'de tanımlanır. Örnek olarak:</br>
+            val decimalNumber: Int = 42
+            </br>---</br>
+            Onaltılık sayıları tanımlamak için sayının başına 0x ön eki eklemeniz gerekir. Örnek olarak:</br>
+            val hexadecimalNumber: Int = 0x2A
+            </br>---</br>
+            İkilik sayıları tanımlamak için sayının başına 0b ön eki eklemeniz gerekir. Örnek olarak:</br>
+            val binaryNumber: Int = 0b101010
+        </details>
 </details>
