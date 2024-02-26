@@ -1,3 +1,8 @@
 
- ** Double ve Float değişkenler ondalık kısımda kaç basamağa kadar işlem yaparlar? Bu sınırın üzerinde gelen ondalık bilgileri için nasıl davranırlar? Hangi durumlar için Float ve hangi durumlar için Double kullanılmalıdır?
- Cevap : Float , genellikle 32 bit kullanır ve yaklaşık 7 basamak hassasiyet içerirken double ise genellikle 64 bit ve yaklaşık 15 basamak hassasiyeti vardır. Hassas sayılar ile temel mesele double , daha küçük sayılar ise float kullanılabilir.
+ ** Ondalık(Decimal), Onaltılık (Hexadecimal) ve İkilik (Binary) değişkenleri Kotlin'de nasıl tanımlayabilirsiniz?
+ Cevap : Ondalık sayılar varsayılan bir ondalık sistemdedir ve ön ek gerekmez : 
+		val ondalikSayi: Int = 42
+	 Onaltılık sayılar Ox veya OX ön eki kullanılır : 
+		val onaltılıkSayi: Int = 0x1F   // 31 onaltılık olarak
+	 ikilik sayılar için Ob veya OB ön eki kullanılır : 
+		val ikilikSayi: Int = 0b1101  // 13 ikilik olarak int dışında sayı tiplerinde de kullanılabilir .
