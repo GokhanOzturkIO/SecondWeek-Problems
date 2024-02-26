@@ -1,7 +1,7 @@
 
- ** Double ve Float değişkenler kullanılırken "yuvarlama" davranışı nasıldır? Bu nasıl değiştirilebilir?
- Cevap :Standart yuvarlama işlemleri genellikle sayıları en yakın tam sayıya yuvarlamak üzerinedir. Örneğin Math.round() fonksiyonu sayıyı en yakın tam sayıya yuvarlamak için kullanılabilir : val x: Double = 3.7
-		 val y = Math.round(x).toInt() // 4
+ ** "İşaretsiz" (Unsigned) değişkenler ne demektir? İşaretli olanlarla aralarındaki fark nedir?
+ Cevap : İşaretsiz değişkenler , sadece pozitif sayıoları temsil edebilen ve herhangi bir işaret bitine sahip olmayan sayı türü. Unsigned Int sadece 0 ve pozitif sayılar.
+İşaretli değişkenler hem negatif hem pozzitif sayıları temsil eder. İşaret biti kullanırlar bu nedenle bir bit daha az kullanılır , ancak sıfır ve negatif sayıları temsil edebilir.
 
 
 
