@@ -1,38 +1,11 @@
 
- ** Bit düzeyinde operatörler (Bitwise operators) nelerdir? Ne amaçla kullanılır? Kotlin'de bunları nasıl kullanabilirsiniz?
- Cevap : ( AND (&) , OR (|) , XOR (^), Complement (inv()) , Left Shift (shl) , Right Shift (shr) , Unsigned Right Shift (ushr)) 
-	AND (&) - Her iki bit de 1 ise sonuç 1, diğer durumlarda 0 :
-	val a = 5 // 101
-	val b = 3 // 011
-	val result = a and b // 001 (1)
-
-	OR (|) - Herhangi bir iki bit 1 ise sonuç 1, diğer durumlarda 0 : 
-	val a = 5 // 101
-	val b = 3 // 011
-	val result = a or b // 111 (7)
-
-	XOR (^) - Her iki bit de farklı ise sonuç 1, aynı ise 0 :
-	val a = 5 // 101
-	val b = 3 // 011
-	val result = a xor b // 110 (6)
-	
-	Complement (inv()) - Bitleri ters çevirir (0'ları 1'e, 1'leri 0'a çevirir) :
-	val a = 5 // 101
-	val result = a.inv() // 11111111111111111111111111111010 (-6)
-
-	Left Shift (shl) - Belirli sayıda biti sola kaydırır :
-	val a = 5 // 101
-	val result = a shl 1 // 1010 (10)
-
-	Right Shift (shr) - Belirli sayıda biti sağa kaydırır. Boş bırakılan yerlere en sol bitin değeri eklenir (signed shift) :
-	val a = 5 // 101
-	val result = a shr 1 // 10 (2)
-
-	Unsigned Right Shift (ushr) - Belirli sayıda biti sağa kaydırır. Boş bırakılan yerlere sıfır eklenir (unsigned shift) :
-	val a = -5 // 11111111111111111111111111111011
-	val result = a ushr 1 // 01111111111111111111111111111101 (2147483645)
-
-	Bit düzeyinde operatörler, özellikle donanım düzeyinde programlama, şifreleme ve veri manipülasyonu gibi alanlarda kullanılır.
+ ** Kotlin'de büyük sayılarla çalışırken hangi ek türlerden yararlanılır ve bu türlerin sınırları nelerdir?
+ Cevap : Kotlinde büyük sayılarla çalışırken BigInteger ve BigDecimal sınıfları kullanılır . BigInteger tam sayılar için kullanılır ve standart veri tipi sınırlarını aşan büyük ve küçük sayıları temsil eder. Örnek olarak ( val bigInteger1 = BigInteger("123456789012345678901234567890") ) 
+BigDecimal ondalık sayılar ve yüksek hassasiyet hesaplamalar için kullanılır. 
+Örnek olarak : 
+	val bigDecimal1 = BigDecimal("123.456")
+	val bigDecimal2 = BigDecimal("789.012")
+	val result = bigDecimal1.add(bigDecimal2)
 
 
 
