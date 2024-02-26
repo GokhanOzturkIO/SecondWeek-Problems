@@ -1,3 +1,3 @@
 
- ** Double ve Float değişkenlerle çalışırken ondalık ayıracı olarak hangi işaretler kullanılır? Bu ayıraçların kullanımında nelere dikkat etmek gerekir?
- Cevap :Double ve float değişkenlşeri için ayıracı genellikle nokta ( . ) kullanılır. Float için sayı belirtilerken  f veya F harif eklemek gereklidir ( Örnek 2.5f) .Virgül ondalık ayıracı olarak kullanılmaz. 
+ ** Double ve Float değişkenler ondalık kısımda kaç basamağa kadar işlem yaparlar? Bu sınırın üzerinde gelen ondalık bilgileri için nasıl davranırlar? Hangi durumlar için Float ve hangi durumlar için Double kullanılmalıdır?
+ Cevap : Float , genellikle 32 bit kullanır ve yaklaşık 7 basamak hassasiyet içerirken double ise genellikle 64 bit ve yaklaşık 15 basamak hassasiyeti vardır. Hassas sayılar ile temel mesele double , daha küçük sayılar ise float kullanılabilir.
