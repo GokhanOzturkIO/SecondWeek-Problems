@@ -1,3 +1,19 @@
 
- ** === operatörü ile karşılaştırma yaparken Byte değer aralığı neden önemlidir? Kotlin bu aralığa göre neden özel bir davranış sergiler?
- Cevap : Kotlin'de , -128 ile 127 arasındaki küçük tamsayı (byte , short , int ) değerleri için ==== operatörü refereans eşitliğni kontrol eder.  Bu değerlerin bu aralıkta olması durumunda, bellekte sadece bir kez oluşturulup paylaşılır ve her referans isteğinde aynı nesnenin referansı döndürülür. Bu, bellek optimizasyonu ve performans iyileştirmesi sağlar. Bu özel davranış, küçük tamsayı değerlerinin sıkça kullanıldığı durumlarda bellek kullanımını azaltabilir ve eşitlik kontrollerini hızlandırabilir
+ ** Sayısal değişkenlerde hangi matematiksel operatörler kullanılabilir?
+ Cevap : ( + , - , *, / , % , += , _=) operatörlerini kullanabilirler. 
+	Toplama (+) :
+	val sonuc = 5 + 3 
+	Çıkarma (-) :
+	val sonuc = 2 - 1
+	Çarpma (*) :
+	val sonuc = 5 * 2
+	Bölme (/) :
+	val sonuc = 7 / 3
+	Modüler Bölme (%) :
+	val kalan = 8 % 3
+	Artırma (+=) ve Azaltma (-=) :
+	var sayi = 7
+	sayi += 3  // sayi şimdi 10
+	sayi -= 2  // sayi şimdi 5
+
+
