@@ -95,3 +95,6 @@ Inv operatoru -> Herhangi bir binary sayısındaki bitlerin tersini alır 0 ise 
 
 16.Kotlin'de büyük sayılarla çalışırken hangi ek türlerden yararlanılır ve bu türlerin sınırları nelerdir?
 -Büyük sayılarla çalışırken Big Decimal ve Big Integer türlerinden yararlanılır. BigDecimal büyük ondalıklı sayılar için kullanılır. BigInteger büyük tamsayıları temsil etmek için kullanılır.
+
+17.Double ve Float değişkenler kullanılırken "yuvarlama" davranışı nasıldır? Bu nasıl değiştirilebilir?
+-Double ve Float değişkenler kullanılırken yuvarlama davranışı genel olarak matematiksel kurala göre yuvarlama yapılır. Yani 0.5'ten büyük olan ondalık kısımlar yukarı yuvarlanır. Küçük olan ondalık kısımlar aşağı yuvarlanır. Özel yuvarlama kullanma istiyorsanız bunu BigDecimal ile yapabilirsiniz.
