@@ -1,6 +1,7 @@
 
- ** "val a1 = 42u ve val a2 = 0xFFFF_FFFF_FFFFu" değişkenlerin tipleri ne olur? Neden?
- Cevap : a1 değişkeni UInt türündedir ve a2 değişkeni ULong türündedir. 42u ifadesi işaretsiz bir 32 bit . a2 ise 64 bit bir sayı olduğu için ULong kabul edilir.
+ ** "İşaretsiz" "Long" harf gösterimi nasıl yapılır?
+ Cevap : İşaretsiz Long harf gösterimi ULong olarak yapılır. Örnek :
+		val unsignedLong : ULong = 123uL
 
 
 
