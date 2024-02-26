@@ -1,9 +1,10 @@
 
- ** "İşaretsiz" değişkenlerle yapılan matematiksel işlemlerde, özellikle büyük sayılarla çalışırken karşılaşılabilecek taşma (overflow) ve taşma olmaması (underflow) durumları için Kotlin nasıl bir yönetim sağlar?
- Cevap : İşaretsiz değişkenlerle matematiksel işlemlerde overflow ve underflow durumları için :
-	Dönüş Metot Kontrolu : toUByte , toUShort , toUInt , toLong gibi metotlar, işaretsiz tamsayısının başka bir işaretsiz tamsayı tipine dönüştürülmesi durumu taşma 	kontrolü yapar.
-	Matematiksel İşlem Kontrolü : Sonuç işaretsiz tamsayının sınırları içinde olup olmadığı kontrolü yapar.
-	Taşma İşlemlerini İgnore Etme : toUByteExact, toUShortExact, toUIntExact, toULongExact metotlar, taşma durumlarını kontrol eder ve taşma olması durumunda bir istisna 	fırlatır.
+ ** "İşaretsiz" değişkenlerin sınırlamaları nelerdir?
+ Cevap : Sadece Pozitif değerler : İşaretsiz değişkenler pozitif sayıları temsil eder. Sıfr küçük değerler kullanılmaz.
+	 Taşma Durumları : İşaretsiz değişkenlerin belirli bir üst sınıra sahip olması nedeniyle, bu sınıra ulaşıldığında taşma kontrolü yapılmalı.
+	 İşaretsiz- İşaretli Karşılaştırmalar : Dikkatli olunması gereken doğrudan karşılaştırmalarda beklenmeyen sonuçlara sebebiyet verebilir.
+	 Dönüşümler ve Kesirli sayılar : İşaretsiz değişkenler , kesirli sayıları veya negatif sayıları temsil edemez. Dönüşümler ve operatörler kullanılırken dikkat edilmeli
+	 Uygulama Bağımlılıkları : İşaretsiz değişkenerin kullanımı , uygulamanın ihtiyaçlarını ve kullanım senaryolarına bağlıdır. 
 
 
 
