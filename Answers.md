@@ -187,4 +187,11 @@ fun main(){
             İkilik sayıları tanımlamak için sayının başına 0b ön eki eklemeniz gerekir. Örnek olarak:</br>
             val binaryNumber: Int = 0b101010
         </details>
+        <details>
+            <summary>
+            Sekizlik (Octal) değişkenler Java'da nasıl tanımlanır? Kotlin'de Sekizlik değişken tanımlanabilir mi?
+            </summary>
+            Java'da sekizlik (octal) sayıları tanımlamak için sayının başına 0 ön eki eklemeniz gerekir. Ancak Kotlin'de bu doğrudan desteklenmez. Örneğin, Java'da sekizlik bir sayıyı tanımlamak için:</br>
+            int octalNumber = 052; // Bu 42 ondalık sayısına karşılık gelir
+        </details>
 </details>
