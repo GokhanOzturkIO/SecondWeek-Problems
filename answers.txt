@@ -1,17 +1,9 @@
 
- **"Akıllı Dönüşüm" (Smart Cast) ne demektir? Farklı kod örnekleri ile açıklayın. Bu özelliğin sınırlamaları nelerdir?
- Cevap : Smart cast kotlin'de bir değişkenin türünün, belirli bir koşulu kontrol etmek için otomatik dönüştürülmesi. 
-	fun processString(input: Any) 
- 	   if (input is String) 
-              println(input.length)
-    	Örnek : 
-	fun processNumber(input: Any) 
-   	 if (input is Int) 
-            println(input * 2)
-   	 else if (input is Double) 
-            println(input / 2)
-    	
-
+ ** Güvenli & Güvensiz" operatörler nelerdir?
+ Cevap : Güvenli çağırma operatörü : ?.
+	 Güvensiz çağırma operatörü : !!.
+	Null kontrolü yapmadan bir nesnenin özelliğine veya metoduna güvenli bir şekilde erişim sağlar. Örnek (val length: Int? = text?.length)
+	Null kontrolü yapmadan bir nesnenin özelliğine veya metoduna güvensiz bir şekilde erişim sağlar . Örnek (val length: Int = text!!.length)
 
 
 
