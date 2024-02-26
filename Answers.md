@@ -43,3 +43,6 @@ Kotlin bu değişkeni type inference ile Nothing? olarak belirler. Nothing type'
 ## 1.10- İlkel bir değişkenin nullable olması ile null değer alamaması arasında bellek yönetimi açısından nasıl farklar vardır?
 Bu duruma ilk başta şu şekilde yaklaşabiliriz: null değer alabilen değişken fazladan bir özelliğe sahip olduğu için bellek kullanımı daha fazla olur. <p>
 Eğer daha detaylı incelersek kotlin'de oluşturulan nullable bir primitive type'ın byte Code'da karşılığı Java'nın integer class'ı olurken, kotlin'de primitive type'ın byte Code'da karşılığı doğrudan primitive type oluyor. <p> Bu durum bizi primitive type ve reference type farkını incelemeye itiyor: primitive type'lar doğrudan değeri saklarken, reference type'lar bellekte bir değere işaret eden bir referansı saklar. Bu nedenle, bellek kullanımı, erişim hızı ve davranış açısından iki tür arasında farklılıklar vardır. İlkel türler genelde daha hızlıdır çünkü doğrudan bellek adresinde depolanır ve işlenirler.
+
+## 1.11- Nullable bir değişkenin bir değere sahip olması ile null olması arasında bellek yönetimi açısından nasıl bir fark vardır? Null değer almış bir değişken bellekte yer kaplamaz diyebilir miyiz?
+Referans tipli değişkenler null ile atandığı zaman heap kısmında gösterdikleri bir şey olmadığı anlamına gelir fakat her iki durumda da stack kısmında bu referans için yer tutulur.
