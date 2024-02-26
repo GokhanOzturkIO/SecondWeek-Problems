@@ -1,9 +1,9 @@
 
- ** "İşaretsiz" değişkenlerin kullanım amaçları nelerdir?
- Cevap : Bit düzeyi manipülasyonlar: İşaretsiz değişkenler, bit düzeyinde operasyonlar için kullanışlıdır. Özellikle, işaretsiz tamsayılar, her bitin pozisyonunu belirtmek için kullanılır.
-Veri sıkıştırma ve şifreleme: İşaretsiz değişkenler, veriyi sıkıştırmak veya şifrelemek gibi durumlar için kullanışlıdır.
-Veri temsilini genişletme: İşaretsiz değişkenler, belirli bir üst sınıra kadar olan pozitif sayıları temsil ettiği için, sıfırdan büyük sayılarla çalışan uygulamalarda kullanılır.
-Bellek tasarrufu: İşaretsiz değişkenler, işaret bitine ihtiyaç duymadıkları için işaretsiz tamsayılar işaretli tamsayılara göre bir bit daha fazla veriyi temsil edebilirler.
+ ** "İşaretsiz" değişkenlerle yapılan matematiksel işlemlerde, özellikle büyük sayılarla çalışırken karşılaşılabilecek taşma (overflow) ve taşma olmaması (underflow) durumları için Kotlin nasıl bir yönetim sağlar?
+ Cevap : İşaretsiz değişkenlerle matematiksel işlemlerde overflow ve underflow durumları için :
+	Dönüş Metot Kontrolu : toUByte , toUShort , toUInt , toLong gibi metotlar, işaretsiz tamsayısının başka bir işaretsiz tamsayı tipine dönüştürülmesi durumu taşma 	kontrolü yapar.
+	Matematiksel İşlem Kontrolü : Sonuç işaretsiz tamsayının sınırları içinde olup olmadığı kontrolü yapar.
+	Taşma İşlemlerini İgnore Etme : toUByteExact, toUShortExact, toUIntExact, toULongExact metotlar, taşma durumlarını kontrol eder ve taşma olması durumunda bir istisna 	fırlatır.
 
 
 
