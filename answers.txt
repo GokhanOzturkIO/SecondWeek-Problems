@@ -1,3 +1,3 @@
 
- ** Tek duyarlıklı (Single precision) ve Çift duyarlıklı (Double precision) kavramlarını açıklayın.
- Cevap : Tek duyarlıklı (Single Precision) sayılar genellikle 32 bit kullanır ve daha sınırlı bir sayı aralığına ve düşük hassasiyete sahiptir. Çift duyarlıklı (Double Precision) sayılar ise genellikle 64 bit kullanır ve daha geniş bir sayı aralığı ile yüksek hassasiyet sunar. 
+ ** Double ve Float değişkenlerle çalışırken ondalık ayıracı olarak hangi işaretler kullanılır? Bu ayıraçların kullanımında nelere dikkat etmek gerekir?
+ Cevap :Double ve float değişkenlşeri için ayıracı genellikle nokta ( . ) kullanılır. Float için sayı belirtilerken  f veya F harif eklemek gereklidir ( Örnek 2.5f) .Virgül ondalık ayıracı olarak kullanılmaz. 
