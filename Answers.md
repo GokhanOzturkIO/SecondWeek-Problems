@@ -65,3 +65,6 @@ Bu değişkenlerin değer aralıları saklayacağımız veriler açısından ve 
 ## 2.2- Eğer bir değişkene tip belirtimi yapılmaz ve bir değer atanırsa, Kotlin tip çıkarımını nasıl yapar?
 Type inference: Kotlin derleyicisinin atamanın sağ tarafındaki değerlere bakarak değişkenin tipini belirlemesi işlemidir. <p>
 Sayılar için bu durum şu şekide işler: Eğer sayı int aralığından küçük ise değişken Int olarak belirlenir. Eğer büyük ise Long olarak belirlenir. Virgüllü bir sayı ise Double olarak belirlenir.
+
+## 2.3- Float değişken oluştururken `F` ve `f` harfleri varken, Long değişken oluştururken neden küçük `l` harfi yoktur?
+Küçük "l" bazı fontlarda "1" ile benzediği için böyle bir kullanım yoktur.
