@@ -61,3 +61,7 @@ Not-null assertion operatörü ise gelecek ifadenin null olmadığını garanti 
 ## 2.1- Kaç farklı tipte "number" sınıfı miras alan "alt sınıf" (child class) vardır? Bunların değer aralıkları neden önemlidir?
 Number parent class'ını miras alan 6 tane child class vardır, bunlar: "Byte", "Short", "Int", "Long", "Float", "Double" olarak adlandırılır. <p>
 Bu değişkenlerin değer aralıları saklayacağımız veriler açısından ve bellek yönetimi açısından önemlidir. Değeri çok fazla olamayacak bir değişken için default olarak type inference ile atanan "Int" class'ını kullanmak bellek yönetimi açısından doğru değildir. Bunun yanında yine aynı şekilde atanacak "Int" tipinin değer aralığından daha büyük sayılar ile çalışacaksak "Int" ile çalışmaya devam edersek beklediğimiz sonuçları alamayız.
+
+## 2.2- Eğer bir değişkene tip belirtimi yapılmaz ve bir değer atanırsa, Kotlin tip çıkarımını nasıl yapar?
+Type inference: Kotlin derleyicisinin atamanın sağ tarafındaki değerlere bakarak değişkenin tipini belirlemesi işlemidir. <p>
+Sayılar için bu durum şu şekide işler: Eğer sayı int aralığından küçük ise değişken Int olarak belirlenir. Eğer büyük ise Long olarak belirlenir. Virgüllü bir sayı ise Double olarak belirlenir.
