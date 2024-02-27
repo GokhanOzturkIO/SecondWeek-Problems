@@ -234,4 +234,19 @@ fun main(){
             Bölme operatörü (/) : Bölme işlemi yapar.</br>
             Mod alma operatörü (%) : Birinci sayının ikinci sayıya bölümünden kalanı hesaplar.
         </details>
+        <details>
+            <summary>
+            Sayısal değişkenlerde hangi karşılaştırma operatörleri kullanılabilir?
+            </summary>
+            Büyüktür (>): Sol tarafındaki değerin sağ tarafındakinden büyük olup olmadığını kontrol eder.</br>
+            Büyük Eşittir (>=): Sol tarafındaki değerin sağ tarafındakine eşit veya büyük olup olmadığını kontrol eder.</br>
+            Küçüktür (<): Sol tarafındaki değerin sağ tarafındakinden küçük olup olmadığını kontrol eder.</br>
+            Küçük Eşittir (<=): Sol tarafındaki değerin sağ tarafındakine eşit veya küçük olup olmadığını kontrol eder.</br>
+            Eşittir (==): İki değerin birbirine eşit olup olmadığını kontrol eder.</br>
+            Eşit Değildir (!=): İki değerin birbirine eşit olmadığını kontrol eder.</br>
+            Referans Eşittir (===) : İki değişkenin referans ettiği adresin aynı olup olmadığını kontrol eder.</br>
+            Referans Eşit Değildir (!==) : İki değişkenin referans ettiği adresin aynı olmadığını kontrol eder.</br>
+            is: Bir nesnenin belirli bir tipe ait olup olmadığını kontrol eder.</br>
+            !is: Bir nesnenin belirli bir tipe ait olmadığını kontrol eder.
+        </details>
 </details>
