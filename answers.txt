@@ -131,3 +131,33 @@ ULong: 0 ile 2^64-1 arasıdır.
 
 9."İşaretsiz" değişken türleri (UInt, ULong vs.) kullanırken, Java API'leri ile uyumluluk konusunda ne gibi sorunlar olabilir? Bunları çözmek için neler yapabilirsiniz?
 -Unsigned bir değişken türünü (UInt, ULong vs.) Java API'leri ile uyumluluk konusunda bazı sorunlarla karşılaşabilir bunun neden Java dilinde doğrudan unsigned tam sayı türleri bulunmamasında kaynaklanıyor. Bu sorunu tam anlamıyla çözemeyiz ama çözüm için unsigned bir değişkeni java tarafında işaretli bir sayıya dönüştürmek için uygun fonksiyonlar kullanılabilir.
+
+Tür Dönüşümü
+
+1.is ve !is operatörlerinin kullanımını açıklayın.
+-is operatörü bir değişkenin typenı kontrol etmek için kullanılır. Genellikle when ve if bloklarının içinde kullanılır. Örnek verecek olursak;
+if(value is String){
+	println("Value bir string değişkenidir.")
+}
+
+2. "Akıllı Dönüşüm" (Smart Cast) ne demektir? Farklı kod örnekleri ile açıklayın. Bu özelliğin sınırlamaları nelerdir?
+-Smart Cast, is operatörü ile bir türün kontrol edilmesinden sonra, Kotlin'in otomatik olarak bu nesnenin türünü değişken türüne dönüştürür. Örnek olarak
+
+fun printLength(obj: Any){
+	if( obj is String){
+	println("Length of the string: ${obj.length}")
+}
+İkinci bir örnek olarak burada obj değişkeni önce Int türüne ardından bir String türüne kontrol edilir.
+fun process(obj: Any) {
+    if (obj is Int) {
+        println("Value of the integer: $obj") // Smart Cast uygulanır
+    } else if (obj is String) {
+        println("Length of the string: ${obj.length}") // Smart Cast uygulanır
+    }
+}
+
+Smart Cast sınırlamaları;
+1. Smart Cast sadece is operatörüyle yapılan tür kontrolü sonrasında geçerlidir. Diğer tür kontrolü yöntemleri için Smart Cast yapılmaz.
+2. Akıllı dönüşüm sadece ilgili if bloğunun kapsamı içinde geçerlidir. Başka bir kapsamda aynı değişken için tekrar kontrol yapılırsa, Smart Cast uygulanmaz.
+3. Akıllı dönüşüm, null olmayan türler için geçerlidir, null olabilen türler için akıllı dönüşüm yapılmaz.
+ 
