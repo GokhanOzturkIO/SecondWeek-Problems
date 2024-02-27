@@ -1,8 +1,27 @@
 
- **  "val x = 5 / 2.toDouble() println(x == 2.5)" gibi bir işlemin sonucu ve tipi nedir? Neden böyle olduğunu açıklayın.
- Cevap :  val x = 5 / 2.toDouble()
-	  println(x == 2.5) // Çıktı: false
-	
-Bu kodda, 5 / 2 ifadesi 2 değerini verir ve bu değer toDouble() fonksiyonu ile Double türüne dönüştürülerek 2.0 olur. x değişkeni Double türünde ve değeri 2.0'dır. Ancak, println(x == 2.5) ifadesi x'in değerinin 2.0'ya eşit olup olmadığını kontrol eder ve bu durum false olarak sonuclanırç.
+ **  Kotlin'de tür dönüşümü yapılırken, dönüşümün başarısız olması durumunda TypeCastException nasıl ele alınır ve bu tür hataların önüne geçmek için hangi önlemler alınabilir?
+ Cevap : Kotlin'de tür dönüşüm hatalarını önlemek için yöntemler : 
+
+	try-catch Blokları:try {
+    				val result: Int = stringValue.toInt()
+			   } catch (e: TypeCastException) {
+    				// Hata durumunda yapılacak işlemler
+				}
+
+	is ve as Operatörleri:
+			val value: Any = "123"
+			if (value is String) {
+   			val result: Int? = value.toIntOrNull()
+    			// ...
+			}
+	toXXXOrNull() Fonksiyonları:
+			val stringValue: String = "123"
+			val result: Int? = stringValue.toIntOrNull()
+	Elle Kontrol Etme:
+			val stringValue: String = "123"
+			val result: Int? = try { stringValue.toInt() } catch (e: NumberFormatException) { null }
+	Güvenli Dönüşüm Operatörü (as?):
+			val value: Any = "123"
+			val result: Int? = (value as? String)?.toInt()
 
 
