@@ -83,3 +83,13 @@ Programlama dillerinde genelde Double ve Float'da ondalık ayıracı olarak "." 
 Float ondalık kısımda yaklaşık olarak 6 basamağa kadar işlem yaparken Double yaklaşık 15 basamağa kadar işlem yapabilir. <p>
 Bu değişkenlerin hesaplamaları IEEE 754 standartlarına göre yapıldığı için sınırları üstünde gelen işlemler için davranışları değişiklik gösterir bunun için bu [yazıyı](https://arshadsuraj.medium.com/java-floating-point-numbers-rounding-problem-solution-a07e019b9dd5) inceleyebilirsiniz. <p>
 İşlem hassasiyetinin fazla olduğu işlemlerde Double, az olduğu işlemlerde ise Float kullanabiliriz.
+
+## 2.7- Ondalık(Decimal), Onaltılık (Hexadecimal) ve İkilik (Binary) değişkenleri Kotlin'de nasıl tanımlayabilirsiniz?
+```kotlin
+val decimalNumber = 187 // Sayı farklı bir işlem yapılmadan yazılırsa dil tarafından Decimal olarak algılanır.
+val hexadecimalNumber = 0xBB // "0x" ile başlanarak yazılan ifadeler Hexadecimal olarak algılanır.
+val hexaDecimalNumber2 = 0Xbb //  Harf ifadeler küçük ya da olarak yazılabilir.
+val bitNumber = 0b10111011 // "0x" ile başlanarak yazılan ifadeler binary olarak algılanır.
+val bitNumber2 = 0B10111011 // "b" büyük ya da küçük yazılabilir.
+```
+Yukarıdaki değişkenlerin hepsi Decimal'de 187'ye karşılık gelmektedir.
