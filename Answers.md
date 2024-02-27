@@ -68,3 +68,10 @@ Sayılar için bu durum şu şekide işler: Eğer sayı int aralığından küç
 
 ## 2.3- Float değişken oluştururken `F` ve `f` harfleri varken, Long değişken oluştururken neden küçük `l` harfi yoktur?
 Küçük "l" bazı fontlarda "1" ile benzediği için böyle bir kullanım yoktur.
+
+## 2.4- Tek duyarlıklı (Single precision) ve Çift duyarlıklı (Double precision) kavramlarını açıklayın.
+Sign bit: İşaret biti yani sayının pozitif ya da negatif olduğunu belirtir. <p>
+Exponent bit: Üs biti olarak geçer sayının tam sayı kısmını temsil eder. <p>
+Fraction bit: Kesir biti olarak geçer sayının virgüllü kısmını temsil eder. <p>
+Single precision: 1 sign bit + 8 bit exponent + 23 bit fraction = 32 bitle ifade edilen virgüllü sayılardır. <p>
+Double precision: 1 sign bit + 11 bit exponent + 52 bit fraction = 64 bitle ifade edilen virgüllü sayılardır.
