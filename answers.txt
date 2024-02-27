@@ -186,4 +186,10 @@ As? Operatoru ile cast işlemini yapmaya çalış eğer olmazsa null gönder diy
 
 10."val x = 5 / 2 println(x == 2)" gibi bir işlemin sonucu ve tipi nedir? Neden böyle olduğunu açıklayın.
 -Bu işlemin sonucu true dönderir. Çünkü değişken default olarak Int tipindedir ve int sayıları böldüğümüzde . Sonrasındaki kısım dikkate alınmaz. Yani x değeri 2'ye eşittir.
+
+11."val x = 5L / 2 println(x == 2L)" gibi bir işlemin sonucu ve tipi nedir? Neden böyle olduğunu açıklayın.
+-Bu işlemin sonucuda true dönderecektir. Çünkü değişkenin tipi long ve int değişkenlerde olduğu gibi long değişkenlerde de . Sonrasındaki kısım dikkate alınmaz. 
+
+12."val x = 5 / 2.toDouble() println(x == 2.5)" gibi bir işlemin sonucu ve tipi nedir? Neden böyle olduğunu açıklayın.
+-Bu işlemin sonucu true gönderecektir. Çünkü değişkenin tipi Double'dır ve bu yüzden . Sonraki kısım dikkate alınacaktır.
  
