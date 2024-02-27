@@ -1,14 +1,6 @@
 
- ** Sayısal değişkenlerde açık dönüşüm (Explicit Type Conversion) yaparken hangi fonksiyonları kullanabilirsiniz?
- Cevap : Sayısal değişkenlerde açık dönüşüm yaparken kullanılan fonksiyonlar : 
-	toByte() : Değeri "Byte" türüne dönüştürmek için kullanılır 
-	toShort() : Değeri "Short" türüne dönüştürmek için kullanılır 
-	toInt()  : Değeri "Int" türüne dönüştürmek için kullanılır 
-	toLong() : Değeri "Long" türüne dönüştürmek için kullanılır 
-	toFloat() : Değeri "Float" türüne dönüştürmek için kullanılır  
-	toDouble() : Değeri "Double" türüne dönüştürmek için kullanılır  
-Büyük bir türden küçük türe dönüşüm yaparken dikkatli olunmalıdır değer kaybetme ve bozulmalar yaşanabilir.
-
+ ** "val result = 1L + 3" // "Long + Int" gibi bir işlemin sonucunda "result" değişkeninin tipi ve değeri ne olur? Neden böyle olduğunu açıklayın.
+ Cevap : val result = 1L + 3 ifadesinde, 1L ifadesi Long türünde bir değeri temsil ederken, 3 ifadesi varsayılan olarak Int türündedir. Kotlin otomatik olarak geniş bir veri tipini seçer. Bu durumda, result değişkeninin tipi Long olacaktır. Sonuç olarak, result değeri 4L olacaktır.
 
 
 	
