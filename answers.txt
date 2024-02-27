@@ -1,10 +1,8 @@
 
- **  "val x = 5L / 2 println(x == 2L)" gibi bir işlemin sonucu ve tipi nedir? Neden böyle olduğunu açıklayın.
- Cevap : val x = 5L / 2
-	 println(x == 2L) // Çıktı: true
-
-Bu kodda, 5L / 2 ifadesinin sonucu Long türünde 2L değeridir. x değişkeni de Long türünde ve değeri 2L'dir. Dolayısıyla, println(x == 2L) ifadesi true olarak değerlendirilir.
+ **  "val x = 5 / 2.toDouble() println(x == 2.5)" gibi bir işlemin sonucu ve tipi nedir? Neden böyle olduğunu açıklayın.
+ Cevap :  val x = 5 / 2.toDouble()
+	  println(x == 2.5) // Çıktı: false
 	
-	
+Bu kodda, 5 / 2 ifadesi 2 değerini verir ve bu değer toDouble() fonksiyonu ile Double türüne dönüştürülerek 2.0 olur. x değişkeni Double türünde ve değeri 2.0'dır. Ancak, println(x == 2.5) ifadesi x'in değerinin 2.0'ya eşit olup olmadığını kontrol eder ve bu durum false olarak sonuclanırç.
 
 
