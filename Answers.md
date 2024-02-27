@@ -75,3 +75,6 @@ Exponent bit: Üs biti olarak geçer sayının tam sayı kısmını temsil eder.
 Fraction bit: Kesir biti olarak geçer sayının virgüllü kısmını temsil eder. <p>
 Single precision: 1 sign bit + 8 bit exponent + 23 bit fraction = 32 bitle ifade edilen virgüllü sayılardır. <p>
 Double precision: 1 sign bit + 11 bit exponent + 52 bit fraction = 64 bitle ifade edilen virgüllü sayılardır.
+
+## 2.5- Double ve Float değişkenlerle çalışırken ondalık ayıracı olarak hangi işaretler kullanılır? Bu ayıraçların kullanımında nelere dikkat etmek gerekir?
+Programlama dillerinde genelde Double ve Float'da ondalık ayıracı olarak "." kullanır. Fakat yerelleştirme yaparken, kullanıcıdan veri alıp işlerken ya da veritabanından veri alırken farklı ayıraç kullanımlarına da dikkat etmek gerekiyor.
