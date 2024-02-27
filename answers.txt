@@ -103,3 +103,6 @@ Inv operatoru -> Herhangi bir binary sayısındaki bitlerin tersini alır 0 ise 
 
 1."İşaretsiz" (Unsigned) değişkenler ne demektir? İşaretli olanlarla aralarındaki fark nedir?
 -Unsigned sayılar 0 ile değişkenin değer aralığında değerler alabilen sayılardır.Byte değer aralığı -128 ve 127 arasındadır ama UByte yani UnsignedByte değer aralığı 0 ile 255 arasındadır.
+
+2."İşaretsiz" değişkenler nasıl bir sınıf yapısında tutulurlar? Bu neden önemlidir?
+-Unsigned değişkenler özel bir sınıf yapısında tutulurlar. Bu sayede bu tür verilerle çalışırken, daha doğru, güvenilir ve esnek bir şekilde işlem yapmayı sağlar. Belirli matematiksel işlemler veya veri manipülasyonları için daha uygun olabilir.
