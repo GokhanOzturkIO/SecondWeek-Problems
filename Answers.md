@@ -218,4 +218,10 @@ fun main(){
             </summary>
             "==" operatörü ile iki değişkenin içerisinde barındığı değerin aynı olup olmadığını, "===" operatörü ile de iki değişkenin memory'de aynı adresi referans edip etmediğini kontrol ederiz.
         </details>
+        <details>
+            <summary>
+            "===" operatörü ile karşılaştırma yaparken Byte değer aralığı neden önemlidir? Kotlin bu aralığa göre neden özel bir davranış sergiler?
+            </summary>
+            Kotlin Byte aralığı içerisindeki bir değeri tutan değişkenlerin adreslerini tek bir yer işaret edecek şekilde optimize eder. Bunun nedeni sık kullanılan sayıları tek bir yerde tutarak memory kullanımını azaltmayı amaçlar.
+        </details>
 </details>
