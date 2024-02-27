@@ -183,4 +183,7 @@ As? Operatoru ile cast işlemini yapmaya çalış eğer olmazsa null gönder diy
 
 9."val result = Int.MAX_VALUE + Int.MAX_VALUE" gibi bir işlemin sonucunda "result" değişkeninin tipi ve değeri ne olur? Neden böyle olduğunu açıklayın.
 -Burada sonuç -2 olacaktır. Çünkü burada bir Overflow durumu vardır. Overflow durumu var ise bu sayı en küçük değerinden başlayarak bize sonuç üretir.
+
+10."val x = 5 / 2 println(x == 2)" gibi bir işlemin sonucu ve tipi nedir? Neden böyle olduğunu açıklayın.
+-Bu işlemin sonucu true dönderir. Çünkü değişken default olarak Int tipindedir ve int sayıları böldüğümüzde . Sonrasındaki kısım dikkate alınmaz. Yani x değeri 2'ye eşittir.
  
