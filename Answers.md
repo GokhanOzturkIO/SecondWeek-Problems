@@ -194,4 +194,14 @@ fun main(){
             Java'da sekizlik (octal) sayıları tanımlamak için sayının başına 0 ön eki eklemeniz gerekir. Ancak Kotlin'de bu doğrudan desteklenmez. Örneğin, Java'da sekizlik bir sayıyı tanımlamak için:</br>
             int octalNumber = 052; // Bu 42 ondalık sayısına karşılık gelir
         </details>
+        <details>
+            <summary>
+            "Geleneksel Notasyon" (Conventional Notation) gösterimi nasıl yapılır?
+            </summary>
+            Geleneksel notasyonu aşağıdaki gibi basitçe oluştururken;
+            val num1 = 0.42 // 0.42
+            Bilimsel notasyonlu tanımlamayı aşağıdaki gibi tanımlarız;
+            val num2 = 4.2*10e-2 // 0.42
+            İkisininde çıktısı aynı. Bilimsel hesaplamaları projemizde kullanmayacaksak gelenksel tanımlamayı yapmak daha efektif olacaktır.
+        </details>
 </details>
