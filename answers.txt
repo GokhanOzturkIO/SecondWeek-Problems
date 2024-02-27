@@ -115,3 +115,6 @@ Inv operatoru -> Herhangi bir binary sayısındaki bitlerin tersini alır 0 ise 
 
 5."İşaretsiz" "Long" harf gösterimi nasıl yapılır?
 -Değerin sonunda uL veya UL ifadesi getirerek yapabiliriz.
+
+6."İşaretsiz" değişkenlerin kullanım amaçları nelerdir?
+-İşaretsiz değişken verinin negatif olamayacağı durumlarda kullanılır. Bit operasyonları yapmak için kullanılırlar. İşaretli tam sayılara göre daha büyük değer aralığına sahiptirler. Bu sayede büyük değerlerin temsil edilmesinde kullanılırlar. İşaretsiz değişkenler işaretli değişkenlere göre daha iyi performans optimizasyonu sağlar.
