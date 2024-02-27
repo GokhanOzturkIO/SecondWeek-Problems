@@ -78,3 +78,8 @@ Double precision: 1 sign bit + 11 bit exponent + 52 bit fraction = 64 bitle ifad
 
 ## 2.5- Double ve Float değişkenlerle çalışırken ondalık ayıracı olarak hangi işaretler kullanılır? Bu ayıraçların kullanımında nelere dikkat etmek gerekir?
 Programlama dillerinde genelde Double ve Float'da ondalık ayıracı olarak "." kullanır. Bu değişkenlerde yerelleştirme yaparken, kullanıcıdan veri alıp işlerken ya da veritabanından veri alırken farklı ayıraç kullanımlarına da dikkat etmek gerekiyor.
+
+## 2.6- Double ve Float değişkenler ondalık kısımda kaç basamağa kadar işlem yaparlar? Bu sınırın üzerinde gelen ondalık bilgileri için nasıl davranırlar? Hangi durumlar için Float ve hangi durumlar için Double kullanılmalıdır?
+Float ondalık kısımda yaklaşık olarak 6 basamağa kadar işlem yaparken Double yaklaşık 15 basamağa kadar işlem yapabilir. <p>
+Bu değişkenlerin hesaplamaları IEEE 754 standartlarına göre yapıldığı için sınırları üstünde gelen işlemler için davranışları değişiklik gösterir bunun için bu [yazıyı](https://arshadsuraj.medium.com/java-floating-point-numbers-rounding-problem-solution-a07e019b9dd5) inceleyebilirsiniz. <p>
+İşlem hassasiyetinin fazla olduğu işlemlerde Double, az olduğu işlemlerde ise Float kullanabiliriz.
