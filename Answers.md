@@ -55,3 +55,9 @@ Referans tipli değişkenler null ile atandığı zaman heap kısmında gösterd
 
 Safe call operatörü null gelmediği durumlarda kodumuzun olağan akışında çalışması için kullanılabilir. Elvis operatörü ile beraber kullanmak uygun olacaktır çünkü null geldiği durumda da farklı işlemler yaptırmak isteyebiliriz. <p>
 Not-null assertion operatörü ise gelecek ifadenin null olmadığını garanti etmemiz gereken durumlarda kullanılabilir fakat kullanırken dikkat etmek gerekir çünkü bu şekilde garanti ettiğimiz değer eğer null gelirse NullPointerException ile karşılaşmamız mümkündür.
+
+# 2- Sayılar
+
+## 2.1- Kaç farklı tipte "number" sınıfı miras alan "alt sınıf" (child class) vardır? Bunların değer aralıkları neden önemlidir?
+Number parent class'ını miras alan 6 tane child class vardır, bunlar: "Byte", "Short", "Int", "Long", "Float", "Double" olarak adlandırılır. <p>
+Bu değişkenlerin değer aralıları saklayacağımız veriler açısından ve bellek yönetimi açısından önemlidir. Değeri çok fazla olamayacak bir değişken için default olarak type inference ile atanan "Int" class'ını kullanmak bellek yönetimi açısından doğru değildir. Bunun yanında yine aynı şekilde atanacak "Int" tipinin değer aralığından daha büyük sayılar ile çalışacaksak "Int" ile çalışmaya devam edersek beklediğimiz sonuçları alamayız.
