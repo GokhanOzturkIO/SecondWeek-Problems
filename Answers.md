@@ -93,3 +93,10 @@ val bitNumber = 0b10111011 // "0x" ile başlanarak yazılan ifadeler binary olar
 val bitNumber2 = 0B10111011 // "b" büyük ya da küçük yazılabilir.
 ```
 Yukarıdaki değişkenlerin hepsi Decimal'de 187'ye karşılık gelmektedir.
+
+## 2.8- Sekizlik (Octal) değişkenler Java'da nasıl tanımlanır? Kotlin'de Sekizlik değişken tanımlanabilir mi?
+```java
+Integer y = 0273; // Atanan değerin başına "0" eklenirse sayı Octal olarak algılanır.
+```
+Yukarıdaki değişkenin Decimal karşılığı 187'dir. <p>
+Kotlin dilinde Octal değişken tanımlanamaz.
