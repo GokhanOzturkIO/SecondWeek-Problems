@@ -1,10 +1,9 @@
 
- **  "val x = 5 / 2 println(x == 2)" gibi bir işlemin sonucu ve tipi nedir? Neden böyle olduğunu açıklayın.
- Cevap : val x = 5 / 2
-	 println(x == 2) // true
-Bu kodda 5/2 ifadesinin sonucu 2 dir . x değişkeni Int türündedir ve değeri 2 dir . Dolayısıyla println(x == 2 ) ifadesi true dönderir. Kotlinde iki tam sayı arasındaki bölme işlemi sonucu küsürat kısmı atılır ve sadece tam sayı kısmı alınır. Bu nedenle 5/2 ifadesi 2 olur , 2.5 değil.
+ **  "val x = 5L / 2 println(x == 2L)" gibi bir işlemin sonucu ve tipi nedir? Neden böyle olduğunu açıklayın.
+ Cevap : val x = 5L / 2
+	 println(x == 2L) // Çıktı: true
 
-
+Bu kodda, 5L / 2 ifadesinin sonucu Long türünde 2L değeridir. x değişkeni de Long türünde ve değeri 2L'dir. Dolayısıyla, println(x == 2L) ifadesi true olarak değerlendirilir.
 	
 	
 
