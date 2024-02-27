@@ -171,4 +171,7 @@ As? Operatoru ile cast işlemini yapmaya çalış eğer olmazsa null gönder diy
 
 5."val b: Byte = 1 ile val i: Int = b ve son olarak print(b == i) gibi bir kod yazıldığında çıktı ne olur? Neden böyle bir çıktı aldığınızı açıklayın.
 -Buradaki kodu ide run etmemize izin vermez. Type mismatch hatası alırız. toInt() veya toByte() kullanarak iki değişkeninde ayni tipte olmasını sağlamalıyız.
+
+6."val b: Byte = 1 ile val i: Int = b.toInt() ve son olarak print(b == i) gibi bir kod yazıldığında çıktı ne olur? Neden böyle bir çıktı aldığınızı açıklayın.
+-5. Sorudaki gibi yine hata alırız print kısmında çünkü bir değişken byte bir değişken Int hata almak istemiyorsak aynı türde olmalı değişkenler.
  
