@@ -106,3 +106,6 @@ Inv operatoru -> Herhangi bir binary sayısındaki bitlerin tersini alır 0 ise 
 
 2."İşaretsiz" değişkenler nasıl bir sınıf yapısında tutulurlar? Bu neden önemlidir?
 -Unsigned değişkenler özel bir sınıf yapısında tutulurlar. Bu sayede bu tür verilerle çalışırken, daha doğru, güvenilir ve esnek bir şekilde işlem yapmayı sağlar. Belirli matematiksel işlemler veya veri manipülasyonları için daha uygun olabilir.
+
+3."İşaretsiz" değişkenlerin harf gösterimi nasıldır?
+-Unsigned değişkenlerin harf gösterimi unsigned olmayan değişkenin başına U harfi getirilerek oluşturulur.UByte, UInt, UShort, ULong gibi.
