@@ -177,4 +177,7 @@ As? Operatoru ile cast işlemini yapmaya çalış eğer olmazsa null gönder diy
 
 7.Sayısal değişkenlerde açık dönüşüm (Explicit Type Conversion) yaparken hangi fonksiyonları kullanabilirsiniz?
 -Sayısal değişkenlerde Explicit bir dönüşüm yapmak istiyorsak toByte(), toShort(), toInt(), toLong() gibi fonksiyonları kullanabiliriz.
+
+8."val result = 1L + 3" // "Long + Int" gibi bir işlemin sonucunda "result" değişkeninin tipi ve değeri ne olur? Neden böyle olduğunu açıklayın.
+-result değişkeninin değeri Long olur çünkü bu tarz işlemlerde kullanılan değişkenlerden sayı aralığı büyük olan tip ne ise sonuç o olur, ama eğer byte+short tipli değişkenleri topladığımızda result değişkenin tipi int olur çünkü int aralığından büyük olmayan değişkenler default olarak int olur.
  
