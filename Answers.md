@@ -280,4 +280,14 @@ fun main(){
             BigDecimal değerleri, sayısal ifadelerin sonuna "BD" veya "bd" ekleyerek oluşturulabilir.</br>
             Örnek: val bigDecimal = BigDecimal("1234567890.12345678901234567890BD")
         </details>
+        <details>
+            <summary>
+            Double ve Float değişkenler kullanılırken "yuvarlama" davranışı nasıldır? Bu nasıl değiştirilebilir?
+            </summary>
+            Kotlin'de Double ve Float veri türlerindeki varsayılan yuvarlama davranışı IEEE 754 standartlarına uygundur. Ancak, farklı yuvarlama stratejileri gerektiren durumlarda, özel işlevler veya matematiksel kütüphaneler kullanılabilir. Örneğin, round(), ceil(), floor() gibi işlevler, sayıları belirli yuvarlama stratejilerine göre yuvarlar:</br>
+            round(): En yakın tam sayıya yuvarlar.</br>
+            ceil(): En yakın üst tam sayıya yuvarlar.</br>
+            floor(): En yakın alt tam sayıya yuvarlar.</br>
+            Bu işlevler, belirli yuvarlama stratejilerini uygulamak için kullanılabilir.
+        </details>
 </details>
