@@ -212,4 +212,10 @@ fun main(){
             val population = 7_874_965_825</br>
             val pi = 3.141_592_653
         </details>
+        <details>
+            <summary>
+            "==" ile neyi karşılaştırırız? "===" ile neyi karşılaştırırız?
+            </summary>
+            "==" operatörü ile iki değişkenin içerisinde barındığı değerin aynı olup olmadığını, "===" operatörü ile de iki değişkenin memory'de aynı adresi referans edip etmediğini kontrol ederiz.
+        </details>
 </details>
