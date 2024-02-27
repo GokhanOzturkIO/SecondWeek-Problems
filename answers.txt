@@ -1,0 +1,27 @@
+
+ **  Kotlin'de tür dönüşümü yapılırken, dönüşümün başarısız olması durumunda TypeCastException nasıl ele alınır ve bu tür hataların önüne geçmek için hangi önlemler alınabilir?
+ Cevap : Kotlin'de tür dönüşüm hatalarını önlemek için yöntemler : 
+
+	try-catch Blokları:try {
+    				val result: Int = stringValue.toInt()
+			   } catch (e: TypeCastException) {
+    				// Hata durumunda yapılacak işlemler
+				}
+
+	is ve as Operatörleri:
+			val value: Any = "123"
+			if (value is String) {
+   			val result: Int? = value.toIntOrNull()
+    			// ...
+			}
+	toXXXOrNull() Fonksiyonları:
+			val stringValue: String = "123"
+			val result: Int? = stringValue.toIntOrNull()
+	Elle Kontrol Etme:
+			val stringValue: String = "123"
+			val result: Int? = try { stringValue.toInt() } catch (e: NumberFormatException) { null }
+	Güvenli Dönüşüm Operatörü (as?):
+			val value: Any = "123"
+			val result: Int? = (value as? String)?.toInt()
+
+
