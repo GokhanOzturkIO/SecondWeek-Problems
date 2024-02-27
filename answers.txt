@@ -128,3 +128,6 @@ UByte: 0 ile 255
 UShort: 0 ile 65535
 UInt:  0 ile 2^32-1
 ULong: 0 ile 2^64-1 arasıdır.
+
+9."İşaretsiz" değişken türleri (UInt, ULong vs.) kullanırken, Java API'leri ile uyumluluk konusunda ne gibi sorunlar olabilir? Bunları çözmek için neler yapabilirsiniz?
+-Unsigned bir değişken türünü (UInt, ULong vs.) Java API'leri ile uyumluluk konusunda bazı sorunlarla karşılaşabilir bunun neden Java dilinde doğrudan unsigned tam sayı türleri bulunmamasında kaynaklanıyor. Bu sorunu tam anlamıyla çözemeyiz ama çözüm için unsigned bir değişkeni java tarafında işaretli bir sayıya dönüştürmek için uygun fonksiyonlar kullanılabilir.
