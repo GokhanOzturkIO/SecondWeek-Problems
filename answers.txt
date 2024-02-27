@@ -121,3 +121,10 @@ Inv operatoru -> Herhangi bir binary sayısındaki bitlerin tersini alır 0 ise 
 
 7."İşaretsiz" değişkenlerle yapılan matematiksel işlemlerde, özellikle büyük sayılarla çalışırken karşılaşılabilecek taşma (overflow) ve taşma olmaması (underflow) durumları için Kotlin nasıl bir yönetim sağlar?
 -Sınırlar dışında bir ifade oluşursa Kotlin yazılan kodu run etmez bize bir hata fırlatır. Unsigned bir tamsayı türündeki bir değerin bir diğerine eklenemsi veya çıkarılması durumunda taşma olup olmadığını  kontrol etmek için addExact() ve subtractExact() gibi işlevler kullanılabilir.
+
+8."İşaretsiz" değişkenlerin sınırlamaları nelerdir?
+-İşaretsiz değişkenlerin sınırlamaları
+UByte: 0 ile 255 
+UShort: 0 ile 65535
+UInt:  0 ile 2^32-1
+ULong: 0 ile 2^64-1 arasıdır.
