@@ -1,6 +1,10 @@
 
- ** Sayısal değişkenlerde örtük tip genişletme (implicit widening conversions) ne demektir? Kotlin'de bu neden yapılamaz?
- Cevap : Sayısal tipler arasında otomatik örtük genişletme yapılamaz. Dönüşümler açık bir şekilde belirtilmelidir.Bu programcının daha fazla kontrol sağlamasına ve potansiyel hatları önlemeye yardımcı olarak program güvenliğini arttırır.
+ ** "val b: Byte = 1 ile val i: Int = b ve son olarak print(b == i) gibi bir kod yazıldığında çıktı ne olur? Neden böyle bir çıktı aldığınızı açıklayın.
+ Cevap :  Kod tip dönüşümü ve veri türü uyumsuzluğundan hata verir. 
+	  val b : Byte = 1
+	  val i : Int = b
+	  print(b == i)
+	Küçük bir veri tipinden büyük bir veri tipine otomatik dönüşüm yapamaz. val i : Int = b ifadesindeki atama işleme ve derleme aşaması hatalıdır. 
 
 
 
