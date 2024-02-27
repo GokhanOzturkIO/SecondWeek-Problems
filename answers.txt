@@ -118,3 +118,6 @@ Inv operatoru -> Herhangi bir binary sayısındaki bitlerin tersini alır 0 ise 
 
 6."İşaretsiz" değişkenlerin kullanım amaçları nelerdir?
 -İşaretsiz değişken verinin negatif olamayacağı durumlarda kullanılır. Bit operasyonları yapmak için kullanılırlar. İşaretli tam sayılara göre daha büyük değer aralığına sahiptirler. Bu sayede büyük değerlerin temsil edilmesinde kullanılırlar. İşaretsiz değişkenler işaretli değişkenlere göre daha iyi performans optimizasyonu sağlar.
+
+7."İşaretsiz" değişkenlerle yapılan matematiksel işlemlerde, özellikle büyük sayılarla çalışırken karşılaşılabilecek taşma (overflow) ve taşma olmaması (underflow) durumları için Kotlin nasıl bir yönetim sağlar?
+-Sınırlar dışında bir ifade oluşursa Kotlin yazılan kodu run etmez bize bir hata fırlatır. Unsigned bir tamsayı türündeki bir değerin bir diğerine eklenemsi veya çıkarılması durumunda taşma olup olmadığını  kontrol etmek için addExact() ve subtractExact() gibi işlevler kullanılabilir.
