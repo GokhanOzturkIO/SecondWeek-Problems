@@ -97,4 +97,9 @@ Inv operatoru -> Herhangi bir binary sayısındaki bitlerin tersini alır 0 ise 
 -Büyük sayılarla çalışırken Big Decimal ve Big Integer türlerinden yararlanılır. BigDecimal büyük ondalıklı sayılar için kullanılır. BigInteger büyük tamsayıları temsil etmek için kullanılır.
 
 17.Double ve Float değişkenler kullanılırken "yuvarlama" davranışı nasıldır? Bu nasıl değiştirilebilir?
--Double ve Float değişkenler kullanılırken yuvarlama davranışı genel olarak matematiksel kurala göre yuvarlama yapılır. Yani 0.5'ten büyük olan ondalık kısımlar yukarı yuvarlanır. Küçük olan ondalık kısımlar aşağı yuvarlanır. Özel yuvarlama kullanma istiyorsanız bunu BigDecimal ile yapabilirsiniz.
+-Double ve Float değişkenler kullanılırken yuvarlama davranışı genel olarak matematiksel kurala göre yuvarlama yapılır. Yani 0.5'ten büyük olan ondalık kısımlar yukarı yuvarlanır. Küçük olan ondalık kısımlar aşağı yuvarlanır.
+
+İşaretsiz Sayılar
+
+1."İşaretsiz" (Unsigned) değişkenler ne demektir? İşaretli olanlarla aralarındaki fark nedir?
+-Unsigned sayılar 0 ile değişkenin değer aralığında değerler alabilen sayılardır.Byte değer aralığı -128 ve 127 arasındadır ama UByte yani UnsignedByte değer aralığı 0 ile 255 arasındadır.
