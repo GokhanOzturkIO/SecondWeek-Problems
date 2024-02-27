@@ -109,3 +109,6 @@ Inv operatoru -> Herhangi bir binary sayısındaki bitlerin tersini alır 0 ise 
 
 3."İşaretsiz" değişkenlerin harf gösterimi nasıldır?
 -Unsigned değişkenlerin harf gösterimi unsigned olmayan değişkenin başına U harfi getirilerek oluşturulur.UByte, UInt, UShort, ULong gibi.
+
+4."val a1 = 42u ve val a2 = 0xFFFF_FFFF_FFFFu" değişkenlerin tipleri ne olur? Neden?
+-İki değişkenin tipi de UInt olur, çünkü değerlerin sonundaki u eki Kotlin dilinde unsigned tam sayı literlallerini ifade etmek için kullanılır.
