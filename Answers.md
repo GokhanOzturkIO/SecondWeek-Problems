@@ -249,4 +249,23 @@ fun main(){
             is: Bir nesnenin belirli bir tipe ait olup olmadığını kontrol eder.</br>
             !is: Bir nesnenin belirli bir tipe ait olmadığını kontrol eder.
         </details>
+        <details>
+            <summary>
+            Bit düzeyinde operatörler (Bitwise operators) nelerdir? Ne amaçla kullanılır? Kotlin'de bunları nasıl kullanabilirsiniz?
+            </summary>
+                AND (&): İki biti AND işlemine tabi tutar. İki bit de 1 ise sonuç 1 olur, aksi halde sonuç 0 olur.</br>
+                OR (|): İki biti OR işlemine tabi tutar. En az bir bit 1 ise sonuç 1 olur, aksi halde sonuç 0 olur.</br>
+                XOR (^): İki biti XOR işlemine tabi tutar. İki bit farklı ise sonuç 1 olur, aynı ise sonuç 0 olur.</br>
+                NOT (~): Bir bitin tersini alır. Yani, 0 ise 1 yapar, 1 ise 0 yapar.</br>
+                Left Shift (<<): Bir sayıyı belirtilen sayıda bit sola kaydırır.</br>
+                Right Shift (>>): Bir sayıyı belirtilen sayıda bit sağa kaydırır.</br></br>
+                val a = 0b1010 // 10</br>
+                val b = 0b1100 // 12</br>
+                val resultAnd = a and b // 8</br>
+                val resultOr = a or b // 14</br>
+                val resultXor = a xor b // 6</br>
+                val resultNot = a.inv() // -11 (içerideki bit sayısına bağlı olarak tüm bitleri ters çevirir)</br>
+                val leftShiftResult = a shl 2 // 40 (101000)</br>
+                val rightShiftResult = b shr 1 // 6 (110)</br>
+        </details>
 </details>
