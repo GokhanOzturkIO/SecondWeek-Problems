@@ -224,4 +224,14 @@ fun main(){
             </summary>
             Kotlin Byte aralığı içerisindeki bir değeri tutan değişkenlerin adreslerini tek bir yer işaret edecek şekilde optimize eder. Bunun nedeni sık kullanılan sayıları tek bir yerde tutarak memory kullanımını azaltmayı amaçlar.
         </details>
+        <details>
+            <summary>
+            Sayısal değişkenlerde hangi matematiksel operatörler kullanılabilir?
+            </summary>
+            Toplama operatörü (+) : Toplama işlemi yapar.</br>
+            Çıkarma operatörü (-) : Çıkarma işlemi yapar.</br>
+            Çarpma operatörü (*) : Çarpma işlemi yapar.</br>
+            Bölme operatörü (/) : Bölme işlemi yapar.</br>
+            Mod alma operatörü (%) : Birinci sayının ikinci sayıya bölümünden kalanı hesaplar.
+        </details>
 </details>
