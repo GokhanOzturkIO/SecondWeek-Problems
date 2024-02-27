@@ -166,4 +166,6 @@ Smart Cast sınırlamaları;
 As operatoru ile kesinlikle cast işlemini yapmasını istiyoruz cast yapılamazsa exception fırlatır.
 As? Operatoru ile cast işlemini yapmaya çalış eğer olmazsa null gönder diyoruz bu yönden daha güvenlidir hata alma olasılığını azaltır.
 
+4.Sayısal değişkenlerde örtük tip genişletme (implicit widening conversions) ne demektir? Kotlin'de bu neden yapılamaz?
+-İmplicit Widening conversion, bir veri tipinin daha geniş bir veri tipine otomatik olarak dönüştürülmesidir. Kotlin'de bu tür otomatik dönüşümler yapılmaz. Bunun nedeni Kotlin'in güvenlik ve açıklık açısından taviz vermediği ilkelerdir.
  
