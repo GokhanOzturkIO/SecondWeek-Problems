@@ -268,4 +268,16 @@ fun main(){
                 val leftShiftResult = a shl 2 // 40 (101000)</br>
                 val rightShiftResult = b shr 1 // 6 (110)</br>
         </details>
+        <details>
+            <summary>
+            Kotlin'de büyük sayılarla çalışırken hangi ek türlerden yararlanılır ve bu türlerin sınırları nelerdir?
+            </summary>
+            Kotlin'de büyük sayılarla çalışırken genellikle `BigInteger` ve `BigDecimal` gibi ek türlerden yararlanılır. Bu türler, standart veri türlerinin sınırlarını aşan büyük sayılarla çalışmak için kullanılır.</br>
+            BigInteger, tam sayılar için kullanılır ve sınırsız büyüklükte tamsayı değerlerini temsil eder.</br>
+            Örnek: val bigInt = BigInteger("1234567890123456789012345678901234567890")
+            </br>---</br>
+            BigDecimal, ondalık sayılar için kullanılır ve yüksek hassasiyete sahip hesaplamalar yapmak için kullanılır.</br>
+            BigDecimal değerleri, sayısal ifadelerin sonuna "BD" veya "bd" ekleyerek oluşturulabilir.</br>
+            Örnek: val bigDecimal = BigDecimal("1234567890.12345678901234567890BD")
+        </details>
 </details>
