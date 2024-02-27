@@ -204,4 +204,12 @@ fun main(){
             val num2 = 4.2*10e-2 // 0.42
             İkisininde çıktısı aynı. Bilimsel hesaplamaları projemizde kullanmayacaksak gelenksel tanımlamayı yapmak daha efektif olacaktır.
         </details>
+        <details>
+            <summary>
+            Sayısal değişkenlerde alt çizgi (underscore) nasıl kullanılır? Kotlin bunu nasıl yorumlar?
+            </summary>
+            Kotlin'de sayısal değerlerde alt çizgi (underscore) kullanımı, sayıları daha okunabilir hale getirmek için kullanılan bir biçimlendirme tekniğidir. Bu, özellikle büyük sayılarla çalışırken veya sayıları gruplara bölerken faydalı olabilir. Sayıları daha kolay anlaşılabilir hale getirmek için alt çizgilerle binlik gruplara ayırabilirsiniz. Örneğin:</br>
+            val population = 7_874_965_825</br>
+            val pi = 3.141_592_653
+        </details>
 </details>
