@@ -160,4 +160,10 @@ Smart Cast sınırlamaları;
 1. Smart Cast sadece is operatörüyle yapılan tür kontrolü sonrasında geçerlidir. Diğer tür kontrolü yöntemleri için Smart Cast yapılmaz.
 2. Akıllı dönüşüm sadece ilgili if bloğunun kapsamı içinde geçerlidir. Başka bir kapsamda aynı değişken için tekrar kontrol yapılırsa, Smart Cast uygulanmaz.
 3. Akıllı dönüşüm, null olmayan türler için geçerlidir, null olabilen türler için akıllı dönüşüm yapılmaz.
+
+3."Güvenli & Güvensiz" operatörler nelerdir?
+-Güvenli & Güvensiz operatörler, Casting işlemi için as ve as? ile kullanabiliriz. as güvensiz, as? Güvenlidir.
+As operatoru ile kesinlikle cast işlemini yapmasını istiyoruz cast yapılamazsa exception fırlatır.
+As? Operatoru ile cast işlemini yapmaya çalış eğer olmazsa null gönder diyoruz bu yönden daha güvenlidir hata alma olasılığını azaltır.
+
  
