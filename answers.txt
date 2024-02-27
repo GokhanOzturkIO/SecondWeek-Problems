@@ -1,9 +1,6 @@
 
- ** Güvenli & Güvensiz" operatörler nelerdir?
- Cevap : Güvenli çağırma operatörü : ?.
-	 Güvensiz çağırma operatörü : !!.
-	Null kontrolü yapmadan bir nesnenin özelliğine veya metoduna güvenli bir şekilde erişim sağlar. Örnek (val length: Int? = text?.length)
-	Null kontrolü yapmadan bir nesnenin özelliğine veya metoduna güvensiz bir şekilde erişim sağlar . Örnek (val length: Int = text!!.length)
+ ** Sayısal değişkenlerde örtük tip genişletme (implicit widening conversions) ne demektir? Kotlin'de bu neden yapılamaz?
+ Cevap : Sayısal tipler arasında otomatik örtük genişletme yapılamaz. Dönüşümler açık bir şekilde belirtilmelidir.Bu programcının daha fazla kontrol sağlamasına ve potansiyel hatları önlemeye yardımcı olarak program güvenliğini arttırır.
 
 
 
