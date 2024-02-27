@@ -192,4 +192,7 @@ As? Operatoru ile cast işlemini yapmaya çalış eğer olmazsa null gönder diy
 
 12."val x = 5 / 2.toDouble() println(x == 2.5)" gibi bir işlemin sonucu ve tipi nedir? Neden böyle olduğunu açıklayın.
 -Bu işlemin sonucu true gönderecektir. Çünkü değişkenin tipi Double'dır ve bu yüzden . Sonraki kısım dikkate alınacaktır.
+
+13.Kotlin'de tür dönüşümü yapılırken, dönüşümün başarısız olması durumunda TypeCastException nasıl ele alınır ve bu tür hataların önüne geçmek için hangi önlemler alınabilir?
+-Kotlin'de tür dönüşümü sırasında, eğer dönüşüm başarısız olursa TypeCastException hatası fırlatılır. Bu istisna, dönüşümün yapılamadığını belirtir ve programın çalışmasını durdurur. Bu tür hataları önüne geçmek için toTypeOrNull fonksiyonunu veya as? Operatörünü kullanabilirsiniz.
  
