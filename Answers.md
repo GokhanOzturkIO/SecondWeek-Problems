@@ -336,4 +336,10 @@ fun main(){
             Bellek Tasarrufu: İşaretsiz değişkenler, yalnızca pozitif değerleri temsil eder ve işaretli değişkenlere göre daha geniş bir pozitif aralığı kapsar. Bu durum, bellek kullanımını azaltır.</br>
             Veri Doğruluğu: Belirli durumlarda, bir değişkenin negatif olamayacağı veya belirli bir sınıra kadar olabileceği bilinir. İşaretsiz değişkenler, bu tür kısıtlamaları belirlemek ve veri doğruluğunu artırmak için kullanılabilir.
         </details>
+        <details>
+            <summary>
+            "İşaretsiz" değişkenlerle yapılan matematiksel işlemlerde, özellikle büyük sayılarla çalışırken karşılaşılabilecek taşma (overflow) ve taşma olmaması (underflow) durumları için Kotlin nasıl bir yönetim sağlar?
+            </summary>
+            Kotlin, işaretsiz değişkenlerle yapılan matematiksel işlemlerde taşma (overflow) ve taşma olmaması (underflow) durumları için otomatik bir yönetim sağlamaz. Bu durum, programcıların bu tür durumları kontrol etmesi ve gerektiğinde uygun önlemleri alması gerektiğini gösterir. İşaretsiz değişkenlerin sınırlarını aşma riski bulunduğundan, büyük sayılarla çalışırken dikkatli olunmalı ve sonuçlar kontrol edilmelidir. Bu önlemler, beklenmedik sonuçları ve hatalı hesaplamaları önlemeye yardımcı olabilir.
+        </details>
 </details>
