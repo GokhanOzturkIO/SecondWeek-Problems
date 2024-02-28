@@ -100,3 +100,7 @@ Integer y = 0273; // Atanan değerin başına "0" eklenirse sayı Octal olarak a
 ```
 Yukarıdaki değişkenin Decimal karşılığı 187'dir. <p>
 Kotlin dilinde Octal değişken tanımlanamaz.
+
+## 2.9- "Geleneksel Notasyon" (Conventional Notation) gösterimi nasıl yapılır?
+Matematiksel ifadelerin geleneksel kurallara uygun gösterilmesidir.
+Scientific notation'ın aksine anlaşılması daha kolaydır çünkü ilk ve ortaöğretimde aldığımız eğitimlerin tamamını Conventional Notation'a uygun alırız.
