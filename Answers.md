@@ -351,4 +351,10 @@ fun main(){
             UInt Min Value : 0 - UInt Max Value : 4294967295</br>
             ULong Min Value : 0 - ULong Max Value : 18446744073709551615</br>
         </details>
+        <details>
+            <summary>
+            "İşaretsiz" değişken türleri (UInt, ULong vs.) kullanırken, Java API'leri ile uyumluluk konusunda ne gibi sorunlar olabilir? Bunları çözmek için neler yapabilirsiniz?
+            </summary>
+            İşaretsiz (unsigned) değişken türleriyle (UInt, ULong vb.) Java API'leri arasında uyumluluk sorunları ortaya çıkabilir. Bu sorunların başlıca nedeni, Kotlin'deki işaretsiz değişkenlerin kullanımıyla Java'nın işaretli tamsayılarının kullanımı arasındaki farklılıklardır. Kotlin'deki işaretsiz değişkenler taşma (overflow) durumlarını otomatik olarak ele almadığından, büyük sayılarla yapılan işlemlerde Java API'leriyle uyumsuzluklar meydana gelebilir. Bu tür uyumluluk sorunlarını çözmek için uygun veri türlerinin seçilmesi, veri dönüşümlerinin yapılması ve dikkatli kodlama ve test süreci izlenmesi önemlidir. Bu yaklaşımlar, işaretsiz değişkenlerin Java API'leriyle uyumlu bir şekilde kullanılmasını sağlayabilir.
+        </details>
 </details>
