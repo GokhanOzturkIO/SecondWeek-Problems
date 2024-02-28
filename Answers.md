@@ -291,7 +291,7 @@ fun main(){
             Bu işlevler, belirli yuvarlama stratejilerini uygulamak için kullanılabilir.
         </details>
 </details>
-<details>
+<details open>
     <summary>
     İşaretsiz Sayılar
     </summary>
@@ -306,5 +306,13 @@ fun main(){
             "İşaretsiz" değişkenler nasıl bir sınıf yapısında tutulurlar? Bu neden önemlidir?
             </summary>
             İşaretsiz (unsigned) değişkenler, Kotlin'de "value class" olarak tanımlanır. Bu, değerlerinin bellekte primitive tipler gibi saklandığı anlamına gelir. Bu yapı, işaretsiz sayıların doğrudan bellek tarafından tutulmasını sağlar, bu da daha performanslı ve daha az bellek tüketen işlemler gerçekleştirmelerini sağlar. Bu, işaretsiz sayıların daha verimli bir şekilde kullanılmasını sağlar.
+        </details>
+        <details>
+            <summary>
+            "İşaretsiz" değişkenlerin harf gösterimi nasıldır?
+            </summary>
+            Bir "işaretsiz" değişken tanımlaması yapmak istiyorsak atadığımız değerin sonuna 'u' veya 'U' harfini koymalıyız. Örneğin;</br>
+            val unsignedInt = 42u</br>
+            val signedInt = 4
         </details>
 </details>
