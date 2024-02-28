@@ -328,4 +328,12 @@ fun main(){
             </summary>
             "İşaretsiz" "Long" harf gösterimini `uL` veya `UL` harflerini kullanarak yaparız.
         </details>
+        <details>
+            <summary>
+            "İşaretsiz" değişkenlerin kullanım amaçları nelerdir?
+            </summary>
+            İşaretsiz (unsigned) değişkenlerin kullanım amaçları:</br>
+            Bellek Tasarrufu: İşaretsiz değişkenler, yalnızca pozitif değerleri temsil eder ve işaretli değişkenlere göre daha geniş bir pozitif aralığı kapsar. Bu durum, bellek kullanımını azaltır.</br>
+            Veri Doğruluğu: Belirli durumlarda, bir değişkenin negatif olamayacağı veya belirli bir sınıra kadar olabileceği bilinir. İşaretsiz değişkenler, bu tür kısıtlamaları belirlemek ve veri doğruluğunu artırmak için kullanılabilir.
+        </details>
 </details>
