@@ -301,4 +301,10 @@ fun main(){
             </summary>
             İşaretsiz değişkenler, 0 veya pozitif sayıları barındırabilen değişken türleridir.
         </details>
+        <details>
+            <summary>
+            "İşaretsiz" değişkenler nasıl bir sınıf yapısında tutulurlar? Bu neden önemlidir?
+            </summary>
+            İşaretsiz (unsigned) değişkenler, Kotlin'de "value class" olarak tanımlanır. Bu, değerlerinin bellekte primitive tipler gibi saklandığı anlamına gelir. Bu yapı, işaretsiz sayıların doğrudan bellek tarafından tutulmasını sağlar, bu da daha performanslı ve daha az bellek tüketen işlemler gerçekleştirmelerini sağlar. Bu, işaretsiz sayıların daha verimli bir şekilde kullanılmasını sağlar.
+        </details>
 </details>
