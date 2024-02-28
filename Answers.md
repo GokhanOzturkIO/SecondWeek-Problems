@@ -291,3 +291,14 @@ fun main(){
             Bu işlevler, belirli yuvarlama stratejilerini uygulamak için kullanılabilir.
         </details>
 </details>
+<details>
+    <summary>
+    İşaretsiz Sayılar
+    </summary>
+        <details>
+            <summary>
+            "İşaretsiz" (Unsigned) değişkenler ne demektir? İşaretli olanlarla aralarındaki fark nedir?
+            </summary>
+            İşaretsiz değişkenler, 0 veya pozitif sayıları barındırabilen değişken türleridir.
+        </details>
+</details>
