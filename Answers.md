@@ -115,3 +115,18 @@ val numberWithUnderscore = 123_456_789
 ## 2.11- `==` ile neyi karşılaştırırız? `===` ile neyi karşılaştırırız?
 "==" operatörü ile iki değişkenin değerleri karşılaştırılır. Eğer aynı ise "true" değil ise "false" döndürür. <p>
 "===" operatörü ile iki değişkenin referans eşitliği kontrol edilir. İşaret ettikleri nesneler aynı mı diye kontrol edilir. Eğer aynı ise "true" değil ise "false" döndürür.
+
+## 2.12- `===` operatörü ile karşılaştırma yaparken Byte değer aralığı neden önemlidir? Kotlin bu aralığa göre neden özel bir davranış sergiler?
+"===" operatörü ile karşılaştırma yaparken Byte değer aralığına özel bir optimizasyon olduğu için bu aralıkta belirlenen wrapper class ile temsil edilen sayılar atanmaları aynı değer ile yapılmışken referans eşitlemesi olmasa da "===" ile kontrol edildiklerinde "true" değeri verirler.
+```kotlin
+val firstNumber: Int? = 100
+val secondNumber: Int? = 100
+println(firstNumber === secondNumber)
+```
+Bu ifadeden gelecek sonuç "true" olur.
+```kotlin
+val firstNumber: Int? = 400
+val secondNumber: Int? = 400
+println(firstNumber === secondNumber)
+```
+Bu ifadeden ise "false" sonucunu alırız.
