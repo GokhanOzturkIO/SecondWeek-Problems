@@ -342,4 +342,13 @@ fun main(){
             </summary>
             Kotlin, işaretsiz değişkenlerle yapılan matematiksel işlemlerde taşma (overflow) ve taşma olmaması (underflow) durumları için otomatik bir yönetim sağlamaz. Bu durum, programcıların bu tür durumları kontrol etmesi ve gerektiğinde uygun önlemleri alması gerektiğini gösterir. İşaretsiz değişkenlerin sınırlarını aşma riski bulunduğundan, büyük sayılarla çalışırken dikkatli olunmalı ve sonuçlar kontrol edilmelidir. Bu önlemler, beklenmedik sonuçları ve hatalı hesaplamaları önlemeye yardımcı olabilir.
         </details>
+        <details>
+            <summary>
+            "İşaretsiz" değişkenlerin sınırlamaları nelerdir?
+            </summary>
+            UByte Min Value : 0 - UByte Max Value : 255</br>
+            UShort Min Value : 0 - UShort Max Value : 65535</br>
+            UInt Min Value : 0 - UInt Max Value : 4294967295</br>
+            ULong Min Value : 0 - ULong Max Value : 18446744073709551615</br>
+        </details>
 </details>
