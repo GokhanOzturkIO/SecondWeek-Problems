@@ -139,3 +139,13 @@ Bu ifadeden ise "false" sonucunu alırız.
 "%" = Mod alma işlemi için kullanılır. <p>
 "++" = Bu operatör sayının başına ya da sonuna koyulabilir. Eğer başında olursa kodun bulunduğu satırda sayı arttırılıp işlem öyle yapılır fakat sonunda olursa sayı kodun bulunduğu satırdan sonra arttırılır. <p>
 "++" = Bu operatör de sayının başına ya da sonuna koyulabilir. Eğer başında olursa aynı kodun bulunduğu satırda sayı azaltılıp işlem öyle yapılır fakat sonunda olursa sayı kodun bulunduğu satırdan sonra azaltılır. <p>
+
+## 2.14- Sayısal değişkenlerde hangi karşılaştırma operatörleri kullanılabilir?
+"==" = Eşitlik operatörü iki değerin eşit olup olmadığını karşılaştırır. Eşit olduğu durumda "true" verir. <p>
+"!=" = Eşitsizlik operatörü iki değerin eşit olup olmadığını karşılaştırır. Eşit olmadığı durumda "true" verir. <p>
+">" = Büyüklük operatörü sayının verilen değerden büyük olduğu durumlarda "true" verir. <p>
+"<" = Küçüklük operatörü sayının verilen değerden küçük olduğu durumlarda "true" verir. <p>
+">=" = Büyük eşitlik operatörü sayının verilen değerden büyük veya eşit olduğu durumlarda "true" verir. <p>
+"<=" = Küçük eşitlik operatörü sayının verilen değerden küçük veya eşit olduğu durumlarda "true" verir. <p>
+"in" = Bu operatör sayı verilen değer aralığında ya da verilen koleksiyonun içerisinde ise "true" verir. <p>
+"!in" = Bu operatör sayı verilen değer aralığında ya da verilen koleksiyonun içerisinde değil ise "true" verir. <p>
