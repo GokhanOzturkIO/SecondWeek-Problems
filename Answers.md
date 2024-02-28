@@ -321,5 +321,11 @@ fun main(){
             </summary>
             Tip çıkarımı(Type Inference)'na göre 42 Integer veri tipi aralığında olduğu ve sonunda `u` harfi olduğu için a1 değişkenin tipi UInt'dir.</br>
             Aynı şekilde tip çıkarımı(type inference)'na göre 0xFFFF_FFFF_FFFF sayısı Integer değer aralığını aşıp Long değer aralığına girdiği için ve sonunda `u` harfi olduğu için a2 değişkenin tipi ULong'dur.
-        </detailsl>
+        </details>
+        <details>
+            <summary>
+            "İşaretsiz" "Long" harf gösterimi nasıl yapılır?
+            </summary>
+            "İşaretsiz" "Long" harf gösterimini `uL` veya `UL` harflerini kullanarak yaparız.
+        </details>
 </details>
