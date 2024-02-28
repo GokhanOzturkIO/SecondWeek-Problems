@@ -104,3 +104,10 @@ Kotlin dilinde Octal değişken tanımlanamaz.
 ## 2.9- "Geleneksel Notasyon" (Conventional Notation) gösterimi nasıl yapılır?
 Matematiksel ifadelerin geleneksel kurallara uygun gösterilmesidir.
 Scientific notation'ın aksine anlaşılması daha kolaydır çünkü ilk ve ortaöğretimde aldığımız eğitimlerin tamamını Conventional Notation'a uygun alırız.
+
+## 2.10- Sayısal değişkenlerde alt çizgi (underscore) nasıl kullanılır? Kotlin bunu nasıl yorumlar?
+Sayısal değişkenlerin okunabilirliğini arttırmak için kullanılır. <p>
+Derlendikten sonra altçizgiler yok sayılır. Bu çizgiler kod yazarken karışıklık yaşanmaması için rahatlıkla kullanılabilir.
+```kotlin
+val numberWithUnderscore = 123_456_789
+```
