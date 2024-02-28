@@ -132,10 +132,10 @@ println(firstNumber === secondNumber)
 Bu ifadeden ise "false" sonucunu alırız.
 
 ## 2.13- Sayısal değişkenlerde hangi matematiksel operatörler kullanılabilir?
-"+" = Toplama işlemi için kullanılır.
-"-" = Çıkartma işlemi için kullanılır.
-"*" = Çarpma işlemi için kullanılır.
-"/" = Bölme işlemi için kullanılır.
-"%" = Mod alma işlemi için kullanılır.
-"++" = Bu operatör sayının başına ya da sonuna koyulabilir. Eğer başında olursa kodun bulunduğu satırda sayı arttırılıp işlem öyle yapılır fakat sonunda olursa sayı kodun bulunduğu satırdan sonra arttırılır.
-"++" = Bu operatör de sayının başına ya da sonuna koyulabilir. Eğer başında olursa aynı kodun bulunduğu satırda sayı azaltılıp işlem öyle yapılır fakat sonunda olursa sayı kodun bulunduğu satırdan sonra azaltılır.
+"+" = Toplama işlemi için kullanılır. <p>
+"-" = Çıkartma işlemi için kullanılır. <p>
+"*" = Çarpma işlemi için kullanılır. <p>
+"/" = Bölme işlemi için kullanılır. <p>
+"%" = Mod alma işlemi için kullanılır. <p>
+"++" = Bu operatör sayının başına ya da sonuna koyulabilir. Eğer başında olursa kodun bulunduğu satırda sayı arttırılıp işlem öyle yapılır fakat sonunda olursa sayı kodun bulunduğu satırdan sonra arttırılır. <p>
+"++" = Bu operatör de sayının başına ya da sonuna koyulabilir. Eğer başında olursa aynı kodun bulunduğu satırda sayı azaltılıp işlem öyle yapılır fakat sonunda olursa sayı kodun bulunduğu satırdan sonra azaltılır. <p>
