@@ -111,3 +111,7 @@ Derlendikten sonra altçizgiler yok sayılır. Bu çizgiler kod yazarken karış
 ```kotlin
 val numberWithUnderscore = 123_456_789
 ```
+
+## 2.11- `==` ile neyi karşılaştırırız? `===` ile neyi karşılaştırırız?
+"==" operatörü ile iki değişkenin değerleri karşılaştırılır. Eğer aynı ise "true" değil ise "false" döndürür. <p>
+"===" operatörü ile iki değişkenin referans eşitliği kontrol edilir. İşaret ettikleri nesneler aynı mı diye kontrol edilir. Eğer aynı ise "true" değil ise "false" döndürür.
