@@ -315,4 +315,11 @@ fun main(){
             val unsignedInt = 42u</br>
             val signedInt = 4
         </details>
+        <details>
+            <summary>
+            "val a1 = 42u ve val a2 = 0xFFFF_FFFF_FFFFu" değişkenlerin tipleri ne olur? Neden?
+            </summary>
+            Tip çıkarımı(Type Inference)'na göre 42 Integer veri tipi aralığında olduğu ve sonunda `u` harfi olduğu için a1 değişkenin tipi UInt'dir.</br>
+            Aynı şekilde tip çıkarımı(type inference)'na göre 0xFFFF_FFFF_FFFF sayısı Integer değer aralığını aşıp Long değer aralığına girdiği için ve sonunda `u` harfi olduğu için a2 değişkenin tipi ULong'dur.
+        </detailsl>
 </details>
