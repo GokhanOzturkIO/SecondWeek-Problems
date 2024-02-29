@@ -358,7 +358,7 @@ fun main(){
             İşaretsiz (unsigned) değişken türleriyle (UInt, ULong vb.) Java API'leri arasında uyumluluk sorunları ortaya çıkabilir. Bu sorunların başlıca nedeni, Kotlin'deki işaretsiz değişkenlerin kullanımıyla Java'nın işaretli tamsayılarının kullanımı arasındaki farklılıklardır. Kotlin'deki işaretsiz değişkenler taşma (overflow) durumlarını otomatik olarak ele almadığından, büyük sayılarla yapılan işlemlerde Java API'leriyle uyumsuzluklar meydana gelebilir. Bu tür uyumluluk sorunlarını çözmek için uygun veri türlerinin seçilmesi, veri dönüşümlerinin yapılması ve dikkatli kodlama ve test süreci izlenmesi önemlidir. Bu yaklaşımlar, işaretsiz değişkenlerin Java API'leriyle uyumlu bir şekilde kullanılmasını sağlayabilir.
         </details>
 </details>
-<details>
+<details open>
     <summary>
     Tür Dönüşümü
     </summary>
@@ -366,6 +366,21 @@ fun main(){
             <summary>
             `is` ve `!is` operatörlerinin kullanımını açıklayın.
             </summary>
-            `is` operatörü, bir nesnenin belirli bir türde olup olmadığını kontrol eder.</br>`!is` operatörü ise bir nesnenin belirli bir türde olmadığını kontrol eder.
+            `is` operatörü, bir nesnenin belirli bir türde olup olmadığını kontrol eder.  
+            `!is` operatörü ise bir nesnenin belirli bir türde olmadığını kontrol eder.  
+        </details>
+        <details>
+            <summary>
+            "Akıllı Dönüşüm" (Smart Cast) ne demektir? Farklı kod örnekleri ile açıklayın. Bu özelliğin sınırlamaları nelerdir?
+            </summary>
+            Smart cast, bir değişkenin tipinin otomatik olarak dönüştürülmesidir. Örneğin aşağıdaki kodda if şartı sağlanırsa `any` değişkeninin bir String olduğu o if scope'u boyunca bilinecek ve String metotları kullanılabilir hale gelecektir.</br>
+<code>
+fun main() {
+    val any: Any = "Hello"
+    if (any is String){
+        println(any.length)
+    }
+}
+</code>
         </details>
 </details>
