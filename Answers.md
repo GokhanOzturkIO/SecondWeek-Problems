@@ -415,4 +415,19 @@ val x: String? = y as? String // Bu güvenli bir dönüşümdür, dönüşüm ba
             </summary>
             Bir üstteki soruda cevabı vermiştik aslında. Ancak burada da belirtelim; if içerisinde karşılaştırılan sayı değerleri tutan değişken tiplerinin aynı olması gerekir.
         </details>
+        <details>
+            <summary>
+            Sayısal değişkenlerde açık dönüşüm (Explicit Type Conversion) yaparken hangi fonksiyonları kullanabilirsiniz?
+            </summary>
+            Açık dönüşüm (explicit type conversion) için Kotlin'de kullanılan fonksiyonlar şunlardır:</br>
+            
+1. `toByte()`: Bir sayısal değeri `Byte` türüne dönüştürür.
+2. `toShort()`: Bir sayısal değeri `Short` türüne dönüştürür.
+3. `toInt()`: Bir sayısal değeri `Int` türüne dönüştürür.
+4. `toLong()`: Bir sayısal değeri `Long` türüne dönüştürür.
+5. `toFloat()`: Bir sayısal değeri `Float` türüne dönüştürür.
+6. `toDouble()`: Bir sayısal değeri `Double` türüne dönüştürür.
+
+Bu fonksiyonlar, belirtilen sayısal türler arasında açık bir dönüşüm yapmak için kullanılır ve Kotlin'in güvenli tür dönüşümü politikasını takip eder.
+        </details>
 </details>
