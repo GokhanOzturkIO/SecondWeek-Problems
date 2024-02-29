@@ -440,4 +440,10 @@ Bu fonksiyonlar, belirtilen sayısal türler arasında açık bir dönüşüm ya
             </summary>
             Bu işlemde, Int.MAX_VALUE + Int.MAX_VALUE ifadesi iki Int türündeki değerin toplanmasıyla oluşur. Ancak, bu işlem sonucu bir Int türünde tutulamayacak kadar büyük olacaktır ve sonuç olarak, taşma (overflow) olacaktır ve `result`ın değeri doğru olmayacaktır.
         </details>
+        <details>
+            <summary>
+            "val x = 5 / 2 println(x == 2)" gibi bir işlemin sonucu ve tipi nedir? Neden böyle olduğunu açıklayın.
+            </summary>
+            Bir Integer değişkenin değerini Integer değere böldüğümüzde, çarptığımızda, topladığımızda veya çıkarttığımızda sonuç yine bir Integer sayı yani tam sayı olur. 5/2 işleminin sonucu 2.5 olsa da bir Integer veri tipine dönüştürülerek 2 sonucu elde edilir ve `x`in değeri 2 olur. if içerisindeki karşılaştırma işlemi `true` sonucunu döndürür.
+        </details>
 </details>
