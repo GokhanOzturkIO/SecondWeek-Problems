@@ -149,3 +149,25 @@ Bu ifadeden ise "false" sonucunu alırız.
 "<=" = Küçük eşitlik operatörü sayının verilen değerden küçük veya eşit olduğu durumlarda "true" verir. <p>
 "in" = Bu operatör sayı verilen değer aralığında ya da verilen koleksiyonun içerisinde ise "true" verir. <p>
 "!in" = Bu operatör sayı verilen değer aralığında ya da verilen koleksiyonun içerisinde değil ise "true" verir. <p>
+
+## 2.15- Bit düzeyinde operatörler (Bitwise operators) nelerdir? Ne amaçla kullanılır? Kotlin'de bunları nasıl kullanabilirsiniz?
+"and" (ve): a and b - Her iki operandın karşılık gelen bitleri 1 ise sonuç 1 olur. <p>
+"or" (veya): a or b - Her iki operandın karşılık gelen bitlerinden herhangi biri 1 ise sonuç 1 olur. <p>
+"xor" Exclusive or (özel veya): a xor b - Her iki operandın karşılık gelen bitleri farklıysa sonuç 1 olur. <p>
+"inv" Inversion (ters): inv a - Operandın her bitini ters çevirir. <p>
+"shl" Shift left (sol kaydırma): a shl b - Operandı belirtilen sayıda bit sola kaydırır. <p>
+"shr" Shift right (sağ kaydırma): a shr b - Operandı belirtilen sayıda bit sağa kaydırır. <p>
+"ushr" Unsigned Shift Right (işaretsiz sağ kaydırma): a ushr b - İşaretsiz olarak operandı belirtilen sayıda bit sağa kaydırır. <p>
+```kotlin
+val a = 0b1010 // 10
+val b = 0b1100 // 12
+
+val resultAnd = a and b // 8
+val resultOr = a or b // 14
+val resultXor = a xor b // 6
+val resultInv = a.inv() // -11
+val resultShl = a shl 2 // 40
+val resultShr = b shr 1 // 6
+val resultUshr = b ushr 1 // 6
+```
+Sayıları Decimal sistemde vermiş olsaydık da yine aynı sonuçları alacaktık.
