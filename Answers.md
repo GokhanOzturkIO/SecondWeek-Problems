@@ -399,6 +399,7 @@ val x: String? = y as? String // Bu güvenli bir dönüşümdür, dönüşüm ba
         </details>
         <details>
             <summary>
+            Sayısal değişkenlerde örtük tip genişletme (implicit widening conversions) ne demektir? Kotlin'de bu neden yapılamaz?
             </summary>
             Implicit widening conversions, değer aralığı daha küçük olan değişken tipinin, değer aralığı daha büyük olan değişken tipine dönüştürülmesine denir. Örneğin Byte tipinde olan bir değişkenin değerinin Short tipinde bir değişkene atanmasıdır. Bu Kotlin'de ancak explicit şekilde yani açık bir şekilde .toShort() gibi dönüştürme metotlarıyla gerçekleştirilebilir.
         </details>
