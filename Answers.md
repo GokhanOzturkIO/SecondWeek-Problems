@@ -458,4 +458,13 @@ Bu fonksiyonlar, belirtilen sayısal türler arasında açık bir dönüşüm ya
             </summary>
             Değer aralığı daha geniş olduğu için sonuç Double türünde olacaktır yani bu örneğimizde sonucumuz küsuratlı olabilecektir. 5 / 2.toDouble() yani 5 / 2.0 işleminin sonucu 2.5 olacaktır. Bu sebeple `println` fonksiyonu ile `true` değerini konsolda göreceğiz.
         </details>
+        <details>
+            <summary>
+            Kotlin'de tür dönüşümü yapılırken, dönüşümün başarısız olması durumunda TypeCastException nasıl ele alınır ve bu tür hataların önüne geçmek için hangi önlemler alınabilir?
+            </summary>
+            1. Try-Catch bloğu içerisinde dönüşüm işlemi yapılmaya çalışılabilir.</br>
+            2. `is` operatörü ile önceden kontrol edilebilir.</br>
+            3. `as?` operatörü ile programın çökmesine sebep olmadan dönüştürülmeye çalışılabilir.</br>
+            4. to...OrNull() metodu ile dönüştürülmeye çalışılabilir.
+        </details>
 </details>
