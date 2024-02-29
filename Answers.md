@@ -171,3 +171,7 @@ val resultShr = b shr 1 // 6
 val resultUshr = b ushr 1 // 6
 ```
 Sayıları Decimal sistemde vermiş olsaydık da yine aynı sonuçları alacaktık.
+
+## 2.16- Kotlin'de büyük sayılarla çalışırken hangi ek türlerden yararlanılır ve bu türlerin sınırları nelerdir?
+Tam sayılar için BigInteger'dan yararlanılabilir. Bu türün değer aralığı oracle [dökümantasyonunda](https://docs.oracle.com/javase/8/docs/api/java/math/BigInteger.html) belirtildiği gibi -2^Integer.MAX_VALUE ile +2Integer.MAX_VALUE arasındadır. <p>
+Virgüllü sayılar için BigDecimal kullanılabilir. Bu türün değer aralığı ise dökümantasyonda belirtilmiyor teorik olarak sınırsız fakat pratikte sistemin sınırları ile sınırlı diyebiliriz.
