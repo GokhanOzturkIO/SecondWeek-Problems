@@ -193,3 +193,9 @@ df.roundingMode = RoundingMode.CEILING
 val formattedDecimalNumber = df.format(decimalNumber).toDouble() // 3.15
 ```
 Bu şekilde rounding mode'u istediğimiz gibi ayarlayıp sayının virgülden sonra istediğimiz kısmına kadar yuvarlama yapabiliriz.
+
+# 3- İşaretsiz Sayılar
+
+## 3.1- "İşaretsiz" (Unsigned) değişkenler ne demektir? İşaretli olanlarla aralarındaki fark nedir?
+İşaretsiz değişkenler sadece pozitif sayıları saklayan değişkenlerdir. İşaretli olan değişkenler sahip oldukları bitler ile hem negatif hem pozitif sayıları ifade ederken işaretsiz olanlar sadece pozitifi ifade eder bu yüzden de pozitif'de daha fazla değer aralığına sahip olurlar. <p>
+Örnek vermek gerekirse Byte 8 bit ile değerlerini saklıyor işaretli olduğu için değer aralığı -128'den 127'ye kadar fakat UByte sadece pozitif değerleri saklıyor bu yüzden de değer aralığı 0 ile 255 arasında oluyor.
