@@ -358,3 +358,14 @@ fun main(){
             İşaretsiz (unsigned) değişken türleriyle (UInt, ULong vb.) Java API'leri arasında uyumluluk sorunları ortaya çıkabilir. Bu sorunların başlıca nedeni, Kotlin'deki işaretsiz değişkenlerin kullanımıyla Java'nın işaretli tamsayılarının kullanımı arasındaki farklılıklardır. Kotlin'deki işaretsiz değişkenler taşma (overflow) durumlarını otomatik olarak ele almadığından, büyük sayılarla yapılan işlemlerde Java API'leriyle uyumsuzluklar meydana gelebilir. Bu tür uyumluluk sorunlarını çözmek için uygun veri türlerinin seçilmesi, veri dönüşümlerinin yapılması ve dikkatli kodlama ve test süreci izlenmesi önemlidir. Bu yaklaşımlar, işaretsiz değişkenlerin Java API'leriyle uyumlu bir şekilde kullanılmasını sağlayabilir.
         </details>
 </details>
+<details>
+    <summary>
+    Tür Dönüşümü
+    </summary>
+        <details>
+            <summary>
+            `is` ve `!is` operatörlerinin kullanımını açıklayın.
+            </summary>
+            `is` operatörü, bir nesnenin belirli bir türde olup olmadığını kontrol eder.</br>`!is` operatörü ise bir nesnenin belirli bir türde olmadığını kontrol eder.
+        </details>
+</details>
