@@ -409,4 +409,10 @@ val x: String? = y as? String // Bu güvenli bir dönüşümdür, dönüşüm ba
             </summary>
             Compile error alırız. Çünkü Kotlin programlama dilinde bir değişkenin tipine uygun şekilde değer ataması yapılmalıdır. Atanan değişken değeri açıkça `cast` edilmelidir. `b` değişkeninin değeri `i` değişkenine atanırken açık bir şekilde Int tipine dönüştürülseydi atanırken bir sorun yaşanmayacaktı. if içerisindeki değişken tiplerinin karşılaştırılabilmesi için aynı tipte olması gerektiğini düşünecek olursak aynı `cast` işlemi burada da yapılmalıydı.
         </details>
+        <details>
+            <summary>
+            "val b: Byte = 1 ile val i: Int = b.toInt() ve son olarak print(b == i) gibi bir kod yazıldığında çıktı ne olur? Neden böyle bir çıktı aldığınızı açıklayın.
+            </summary>
+            Bir üstteki soruda cevabı vermiştik aslında. Ancak burada da belirtelim; if içerisinde karşılaştırılan sayı değerleri tutan değişken tiplerinin aynı olması gerekir.
+        </details>
 </details>
