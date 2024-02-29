@@ -383,4 +383,18 @@ fun main() {
 }
 </code>
         </details>
+        <details>
+            <summary>
+            "Güvenli & Güvensiz" operatörler nelerdir?
+            </summary>
+            Güvensiz Dönüşüm (`as` Operatörü): Bir nesneyi belirli bir tipe dönüştürmek için kullanılır. Ancak, dönüşüm başarısız olursa `ClassCastException` hatası alınır ve program çökebilir. Örnek:</br>
+<code>
+val x: String = y as String // Bu dönüşüm güvensizdir ve hata meydana gelirse program çökebilir.
+</code>
+</br>
+            Güvenli Dönüşüm (`as?` Operatörü): Bir nesneyi belirli bir tipe güvenli bir şekilde dönüştürmek için kullanılır. Dönüşüm başarısız olursa, `null` değeri dönüşür ve programın çökmesi önlenir. Örnek:</br>
+<code>
+val x: String? = y as? String // Bu güvenli bir dönüşümdür, dönüşüm başarısız olursa x'e null atanır ve program çökmez.
+</code>
+        </details>
 </details>
