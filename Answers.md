@@ -420,14 +420,18 @@ val x: String? = y as? String // Bu güvenli bir dönüşümdür, dönüşüm ba
             Sayısal değişkenlerde açık dönüşüm (Explicit Type Conversion) yaparken hangi fonksiyonları kullanabilirsiniz?
             </summary>
             Açık dönüşüm (explicit type conversion) için Kotlin'de kullanılan fonksiyonlar şunlardır:</br>
-            
-1. `toByte()`: Bir sayısal değeri `Byte` türüne dönüştürür.
-2. `toShort()`: Bir sayısal değeri `Short` türüne dönüştürür.
-3. `toInt()`: Bir sayısal değeri `Int` türüne dönüştürür.
-4. `toLong()`: Bir sayısal değeri `Long` türüne dönüştürür.
-5. `toFloat()`: Bir sayısal değeri `Float` türüne dönüştürür.
-6. `toDouble()`: Bir sayısal değeri `Double` türüne dönüştürür.
-
+1. `toByte()`: Bir sayısal değeri `Byte` türüne dönüştürür.</br>
+2. `toShort()`: Bir sayısal değeri `Short` türüne dönüştürür.</br>
+3. `toInt()`: Bir sayısal değeri `Int` türüne dönüştürür.</br>
+4. `toLong()`: Bir sayısal değeri `Long` türüne dönüştürür.</br>
+5. `toFloat()`: Bir sayısal değeri `Float` türüne dönüştürür.</br>
+6. `toDouble()`: Bir sayısal değeri `Double` türüne dönüştürür.</br>
 Bu fonksiyonlar, belirtilen sayısal türler arasında açık bir dönüşüm yapmak için kullanılır ve Kotlin'in güvenli tür dönüşümü politikasını takip eder.
+        </details>
+        <details>
+            <summary>
+            "val result = 1L + 3" // "Long + Int" gibi bir işlemin sonucunda "result" değişkeninin tipi ve değeri ne olur? Neden böyle olduğunu açıklayın.
+            </summary>
+            Kotlin'de, işlem yaptığınız veri tipleri arasında uyumlu bir tür dönüşümü varsa, işlemin sonucu daha büyük bir türe dönüştürülür. Bu durumda, Long ve Int veri tipleri arasında uyumlu bir dönüşüm vardır ve işlem sonucu Long türüne dönüştürülür.
         </details>
 </details>
