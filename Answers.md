@@ -403,4 +403,10 @@ val x: String? = y as? String // Bu güvenli bir dönüşümdür, dönüşüm ba
             </summary>
             Implicit widening conversions, değer aralığı daha küçük olan değişken tipinin, değer aralığı daha büyük olan değişken tipine dönüştürülmesine denir. Örneğin Byte tipinde olan bir değişkenin değerinin Short tipinde bir değişkene atanmasıdır. Bu Kotlin'de ancak explicit şekilde yani açık bir şekilde .toShort() gibi dönüştürme metotlarıyla gerçekleştirilebilir.
         </details>
+        <details>
+            <summary>
+            `val b: Byte = 1` ile `val i: Int = b` ve son olarak `print(b == i)` gibi bir kod yazıldığında çıktı ne olur? Neden böyle bir çıktı aldığınızı açıklayın.
+            </summary>
+            Compile error alırız. Çünkü Kotlin programlama dilinde bir değişkenin tipine uygun şekilde değer ataması yapılmalıdır. Atanan değişken değeri açıkça `cast` edilmelidir. `b` değişkeninin değeri `i` değişkenine atanırken açık bir şekilde Int tipine dönüştürülseydi atanırken bir sorun yaşanmayacaktı. if içerisindeki değişken tiplerinin karşılaştırılabilmesi için aynı tipte olması gerektiğini düşünecek olursak aynı `cast` işlemi burada da yapılmalıydı.
+        </details>
 </details>
