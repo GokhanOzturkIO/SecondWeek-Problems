@@ -175,3 +175,21 @@ Sayıları Decimal sistemde vermiş olsaydık da yine aynı sonuçları alacakt�
 ## 2.16- Kotlin'de büyük sayılarla çalışırken hangi ek türlerden yararlanılır ve bu türlerin sınırları nelerdir?
 Tam sayılar için BigInteger'dan yararlanılabilir. Bu türün değer aralığı oracle [dökümantasyonunda](https://docs.oracle.com/javase/8/docs/api/java/math/BigInteger.html) belirtildiği gibi -2^Integer.MAX_VALUE ile +2Integer.MAX_VALUE arasındadır. <p>
 Virgüllü sayılar için BigDecimal kullanılabilir. Bu türün değer aralığı ise dökümantasyonda belirtilmiyor teorik olarak sınırsız fakat pratikte sistemin sınırları ile sınırlı diyebiliriz.
+
+## 2.17- Double ve Float değişkenler kullanılırken "yuvarlama" davranışı nasıldır? Bu nasıl değiştirilebilir?
+Kotlin'de Double ve Float değişkenlerde varsayılan yuvarlama davranışı, genellikle IEEE 754 standartlarına dayanır. Bu standartlar, kayan noktalı sayıların işlenmesi ve yuvarlanması için belirli kurallar belirler. Varsayılan olarak, Kotlin'de bu standartlar doğrultusunda yuvarlama yapılır. <p>
+Kotlin'de round(), ceil(), floor() gibi yuvarlama fonksiyonları bulunur. Bu fonksiyonlar, sayıları yukarı, aşağı veya en yakın tam sayıya yuvarlamak için kullanılabilir. <p>
+```kotlin
+val decimalNumber = 3.14
+val ceilIntNumber = ceil(decimalNumber).toInt() // 4
+val roundIntNumber = round(decimalNumber).toInt() // 3
+val floorIntNumber = floor(decimalNumber).toInt() // 3
+```
+Java'nın DecimalFormat sınıfı, belirli bir desene göre sayıları biçimlendirmek ve yuvarlamak için kullanılabilir. Bu sınıfı Kotlin'de de kullanabilirsiniz. <p>
+```kotlin
+val decimalNumber = 3.14159
+val df = DecimalFormat("#.##", DecimalFormatSymbols(Locale.ROOT))
+df.roundingMode = RoundingMode.CEILING
+val formattedDecimalNumber = df.format(decimalNumber).toDouble() // 3.15
+```
+Bu şekilde rounding mode'u istediğimiz gibi ayarlayıp sayının virgülden sonra istediğimiz kısmına kadar yuvarlama yapabiliriz.
