@@ -446,4 +446,10 @@ Bu fonksiyonlar, belirtilen sayısal türler arasında açık bir dönüşüm ya
             </summary>
             Bir Integer değişkenin değerini Integer değere böldüğümüzde, çarptığımızda, topladığımızda veya çıkarttığımızda sonuç yine bir Integer sayı yani tam sayı olur. 5/2 işleminin sonucu 2.5 olsa da bir Integer veri tipine dönüştürülerek 2 sonucu elde edilir ve `x`in değeri 2 olur. if içerisindeki karşılaştırma işlemi `true` sonucunu döndürür.
         </details>
+        <details>
+            <summary>
+            "val x = 5L / 2 println(x == 2L)" gibi bir işlemin sonucu ve tipi nedir? Neden böyle olduğunu açıklayın.
+            </summary>
+            İşleme giren en büyük değer aralığında sahip olan Long veri tipi sebebiyle `x` değikeninin tipi Long'dur. Bu sebeple bölme işleminin sonucu bir tam sayı olacaktır. 5L / 2 işleminin sonucu 2L'dir ve if içerisindeki karşılaştırılan değerle eşit olduğu için sonuç `true` olur.
+        </details>
 </details>
