@@ -452,4 +452,10 @@ Bu fonksiyonlar, belirtilen sayısal türler arasında açık bir dönüşüm ya
             </summary>
             İşleme giren en büyük değer aralığında sahip olan Long veri tipi sebebiyle `x` değikeninin tipi Long'dur. Bu sebeple bölme işleminin sonucu bir tam sayı olacaktır. 5L / 2 işleminin sonucu 2L'dir ve if içerisindeki karşılaştırılan değerle eşit olduğu için sonuç `true` olur.
         </details>
+        <details>
+            <summary>
+            "val x = 5 / 2.toDouble() println(x == 2.5)" gibi bir işlemin sonucu ve tipi nedir? Neden böyle olduğunu açıklayın.
+            </summary>
+            Değer aralığı daha geniş olduğu için sonuç Double türünde olacaktır yani bu örneğimizde sonucumuz küsuratlı olabilecektir. 5 / 2.toDouble() yani 5 / 2.0 işleminin sonucu 2.5 olacaktır. Bu sebeple `println` fonksiyonu ile `true` değerini konsolda göreceğiz.
+        </details>
 </details>
