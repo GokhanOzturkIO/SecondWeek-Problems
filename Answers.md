@@ -434,4 +434,10 @@ Bu fonksiyonlar, belirtilen sayısal türler arasında açık bir dönüşüm ya
             </summary>
             Kotlin'de, işlem yaptığınız veri tipleri arasında uyumlu bir tür dönüşümü varsa, işlemin sonucu daha büyük bir türe dönüştürülür. Bu durumda, Long ve Int veri tipleri arasında uyumlu bir dönüşüm vardır ve işlem sonucu Long türüne dönüştürülür.
         </details>
+        <details>
+            <summary>
+            `val result = Int.MAX_VALUE + Int.MAX_VALUE` gibi bir işlemin sonucunda `result` değişkeninin tipi ve değeri ne olur? Neden böyle olduğunu açıklayın.
+            </summary>
+            Bu işlemde, Int.MAX_VALUE + Int.MAX_VALUE ifadesi iki Int türündeki değerin toplanmasıyla oluşur. Ancak, bu işlem sonucu bir Int türünde tutulamayacak kadar büyük olacaktır ve sonuç olarak, taşma (overflow) olacaktır ve `result`ın değeri doğru olmayacaktır.
+        </details>
 </details>
