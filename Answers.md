@@ -397,4 +397,9 @@ val x: String = y as String // Bu dönüşüm güvensizdir ve hata meydana gelir
 val x: String? = y as? String // Bu güvenli bir dönüşümdür, dönüşüm başarısız olursa x'e null atanır ve program çökmez.
 </code>
         </details>
+        <details>
+            <summary>
+            </summary>
+            Implicit widening conversions, değer aralığı daha küçük olan değişken tipinin, değer aralığı daha büyük olan değişken tipine dönüştürülmesine denir. Örneğin Byte tipinde olan bir değişkenin değerinin Short tipinde bir değişkene atanmasıdır. Bu Kotlin'de ancak explicit şekilde yani açık bir şekilde .toShort() gibi dönüştürme metotlarıyla gerçekleştirilebilir.
+        </details>
 </details>
