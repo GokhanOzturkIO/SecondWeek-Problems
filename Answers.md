@@ -213,3 +213,6 @@ Sayının sonuna "u" ya da "U" ekleyerek sayıyı işaretsiz bir değişken olar
 
 ## 3.5- "İşaretsiz" "Long" harf gösterimi nasıl yapılır?
 Sayının sonuna "uL" veya "UL" eklemek şeklinde harf gösterimi yapabiliriz.
+
+## 3.6- "İşaretsiz" değişkenlerin kullanım amaçları nelerdir?
+Sadece pozitif sayılarda işlem yapılacağı durumlarda veya kullanacağımız tipin değer aralığının sadece pozitif olmasını istediğimiz durumlarda kullanabiliriz.
