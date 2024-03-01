@@ -220,3 +220,9 @@ Sadece pozitif sayılarda işlem yapılacağı durumlarda veya kullanacağımız
 ## 3.7- "İşaretsiz" değişkenlerle yapılan matematiksel işlemlerde, özellikle büyük sayılarla çalışırken karşılaşılabilecek taşma (overflow) ve taşma olmaması (underflow) durumları için Kotlin nasıl bir yönetim sağlar?
 Taşma olmaması durumda zaten herhangi bir problem olmamakla beraber eğer sayıyı unsigden'dan signed tipe çevirmeye çalışıyorsak farklı sonuçlarla karşılaşabiliriz. <p>
 Taşma olan durumlarda ise bit düzeyinde işlemler yapılır ve taşma olan kısımlar dışarıda kalacak şekilde sonuçlar hesaplanır. Bunun durumları daha iyi anlayabilmek için medium [makalemi](https://medium.com/@enes.okurterzi98/kotlin-number-değişkenler-ve-sınır-durumlar-e25450be100f) inceleyebilirsiniz.
+
+## 3.8- "İşaretsiz" değişkenlerin sınırlamaları nelerdir?
+UByte: 8 bit ile ifade edilir değer aralığı 0 ile 255 arasındadır. <p>
+UShort: 16 bit ile ifade edilir değer aralığı 0 ile 65,535 arasındadır. <p>
+UInt: 32 bit ile ifade edilir değer aralığı 0 ile 4,294,967,295 arasındadır. <p>
+ULong: 64 bit ile ifade edilir değer aralığı 0 ile 18,446,744,073,709,551,615 arasındadır. <p>
