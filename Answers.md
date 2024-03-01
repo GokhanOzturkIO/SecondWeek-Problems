@@ -216,3 +216,7 @@ Sayının sonuna "uL" veya "UL" eklemek şeklinde harf gösterimi yapabiliriz.
 
 ## 3.6- "İşaretsiz" değişkenlerin kullanım amaçları nelerdir?
 Sadece pozitif sayılarda işlem yapılacağı durumlarda veya kullanacağımız tipin değer aralığının sadece pozitif olmasını istediğimiz durumlarda kullanabiliriz.
+
+## 3.7- "İşaretsiz" değişkenlerle yapılan matematiksel işlemlerde, özellikle büyük sayılarla çalışırken karşılaşılabilecek taşma (overflow) ve taşma olmaması (underflow) durumları için Kotlin nasıl bir yönetim sağlar?
+Taşma olmaması durumda zaten herhangi bir problem olmamakla beraber eğer sayıyı unsigden'dan signed tipe çevirmeye çalışıyorsak farklı sonuçlarla karşılaşabiliriz. <p>
+Taşma olan durumlarda ise bit düzeyinde işlemler yapılır ve taşma olan kısımlar dışarıda kalacak şekilde sonuçlar hesaplanır. Bunun durumları daha iyi anlayabilmek için medium [makalemi](https://medium.com/@enes.okurterzi98/kotlin-number-değişkenler-ve-sınır-durumlar-e25450be100f) inceleyebilirsiniz.
