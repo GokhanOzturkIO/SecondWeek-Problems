@@ -226,3 +226,7 @@ UByte: 8 bit ile ifade edilir değer aralığı 0 ile 255 arasındadır. <p>
 UShort: 16 bit ile ifade edilir değer aralığı 0 ile 65,535 arasındadır. <p>
 UInt: 32 bit ile ifade edilir değer aralığı 0 ile 4,294,967,295 arasındadır. <p>
 ULong: 64 bit ile ifade edilir değer aralığı 0 ile 18,446,744,073,709,551,615 arasındadır. <p>
+
+## 3.9- "İşaretsiz" değişken türleri (UInt, ULong vs.) kullanırken, Java API'leri ile uyumluluk konusunda ne gibi sorunlar olabilir? Bunları çözmek için neler yapabilirsiniz?
+Java API'lerinin birçoğu işaretsiz tamsayı türlerini kullanmaz ve genellikle işaretli tamsayıları kullanır. Bu durum, işaretsiz tamsayılarla çalışırken Java API'lerini kullanırken uyumsuzluklar yaratabilir. <p>
+Bu uyumsuzlukları çözmek için dönüşüm işlemleri yaparak işaretsiz belirlediğimiz tipin değer aralıklarını kapsayacak işaretli bir değişken tipine dönüşüm yapabiliriz.
