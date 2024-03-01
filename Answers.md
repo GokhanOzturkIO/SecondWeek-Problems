@@ -206,3 +206,7 @@ Bu önemlidir çünkü bu tipler arasında geçiş yaparken dikkatli olmak gerek
 
 ## 3.3- "İşaretsiz" değişkenlerin harf gösterimi nasıldır?
 Sayının sonuna "u" ya da "U" ekleyerek sayıyı işaretsiz bir değişken olarak belirtebiliriz.
+
+## 3.4- "`val a1 = 42u` ve `val a2 = 0xFFFF_FFFF_FFFFu`" değişkenlerin tipleri ne olur? Neden?
+"a1" değişkeninin tipi UInt olur çünkü verilen değer Int aralığındadır ve sayının sonunda "u" harfi vardır.
+"a2" değişkeninin tip ULong olur çünkü verilen hexadecimal değer Int aralığından büyüktür aynı zamanda Long aralığındadır ve sayının sonunda "u" harfi vardır.
