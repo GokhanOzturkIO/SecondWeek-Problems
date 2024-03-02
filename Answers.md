@@ -272,3 +272,7 @@ Smart Cast sadece şu durumlarda kullanılabilir:
 ## 4.3- "Güvenli & Güvensiz" operatörler nelerdir?
 Kotlin'de Unsafe cast operatör "as" olarak geçer. Güvensiz olmasının sebebi eğer dönüştürme işlemi yapılamazsa hata vermesidir. <p>
 Kotlin'de Safe cast operatörü ise "as?" olarak geçer. Güvenli olmasının sebebi ise eğer dönüştürme işlemi gerçekleşmezse null olarak atama yapması ve hata vermemesidir. <p>
+
+## 4.4- Sayısal değişkenlerde örtük tip genişletme (implicit widening conversions) ne demektir? Kotlin'de bu neden yapılamaz?
+implicit widening conversions, bir veri türünden daha küçük bir veri türüne sahip bir değerin, daha büyük bir veri türüne dönüştürülmesidir. Örneğin, bir Byte değerini bir Int değerine otomatik olarak dönüştürmek gibi. <p>
+Kotlin tür güvenliğini arttırmak için böyle bir dönüşüme izin vermez bunun yerine dönüşüm özellikleri("toDouble()", "toInt()" vb.) kullanılabilir.
