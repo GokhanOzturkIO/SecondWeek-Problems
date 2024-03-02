@@ -580,4 +580,20 @@ Bu yöntemlerden herhangi biri, Double ve Float türündeki sayıların varsayı
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+3."İşaretsiz" değişkenlerin harf gösterimi nasıldır? Sorusunun Cevabı:
 
+-->İşaretsiz (unsigned) değişkenlerin harf gösterimi, genellikle büyük "U" harfi ile başlar. Örneğin, Kotlin'de işaretsiz bir tamsayıyı temsil etmek için UInt (Unsigned Int) ve ULong (Unsigned Long) gibi veri türleri kullanılır.
+
+Örnek olarak:
+
+--> İşaretsiz bir Int türü için:
+
+	val unsignedInt: UInt = 10U
+
+--> İşaretsiz bir Long türü için:
+
+	val unsignedLong: ULong = 1000UL
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+4.
