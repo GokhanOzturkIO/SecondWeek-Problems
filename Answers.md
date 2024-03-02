@@ -295,3 +295,6 @@ Bu tarz bir dönüşüm Kotlin dilinde desteklenmediği için böyle hatalar al�
 
 ## 4.8- `val result = 1L + 3` // "Long + Int" gibi bir işlemin sonucunda "result" değişkeninin tipi ve değeri ne olur? Neden böyle olduğunu açıklayın.
 Matematiksel operatör sonuçları eğer işlem yapılan değişkenler Int veya Int'den küçük değer aralıklarına sahipse sonucun tipi Int olarak belirlenir. Int ve Long ile işlem yapıldığında ya da Long ve Long ile işlem yapıldığında sonucun tipi Long olarak belirlenir. Bu bilgi ile işleme baktığımızda result'un tipi Long değeri ise 4 olacaktır.
+
+## 4.9- `val result = Int.MAX_VALUE + Int.MAX_VALUE` gibi bir işlemin sonucunda "result" değişkeninin tipi ve değeri ne olur? Neden böyle olduğunu açıklayın.
+"result" değişkeninin tipi Int ve değeri -2 olur. Sebebi ise burada overflow olması ve sign bit'in değerinin 0'dan 1'e dönmesidir. Daha detaylı anlamak için bu konuda yazdığım [makeleye](https://medium.com/@enes.okurterzi98/kotlin-number-değişkenler-ve-sınır-durumlar-e25450be100f) bakabilirsiniz.
