@@ -292,3 +292,6 @@ Bu tarz bir dönüşüm Kotlin dilinde desteklenmediği için böyle hatalar al�
 - toLong(): Bir sayıyı long türüne dönüştürür.
 - toFloat(): Bir sayıyı float türüne dönüştürür.
 - toDouble(): Bir sayıyı double türüne dönüştürür.
+
+## 4.8- `val result = 1L + 3` // "Long + Int" gibi bir işlemin sonucunda "result" değişkeninin tipi ve değeri ne olur? Neden böyle olduğunu açıklayın.
+Matematiksel operatör sonuçları eğer işlem yapılan değişkenler Int veya Int'den küçük değer aralıklarına sahipse sonucun tipi Int olarak belirlenir. Int ve Long ile işlem yapıldığında ya da Long ve Long ile işlem yapıldığında sonucun tipi Long olarak belirlenir. Bu bilgi ile işleme baktığımızda result'un tipi Long değeri ise 4 olacaktır.
