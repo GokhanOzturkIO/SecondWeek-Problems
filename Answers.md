@@ -301,3 +301,6 @@ Matematiksel operatör sonuçları eğer işlem yapılan değişkenler Int veya 
 
 ## 4.10- `val x = 5 / 2` `println(x == 2)` gibi bir işlemin sonucu ve tipi nedir? Neden böyle olduğunu açıklayın.
 Sonuç true olacaktır çünkü Int değerler ile yaptığımız matematiksel işlemin sonucu yine Int olur ve virgüllü kısmı dikkate alınmaz.
+
+## 4.11- `val x = 5L / 2` `println(x == 2L)` gibi bir işlemin sonucu ve tipi nedir? Neden böyle olduğunu açıklayın.
+Sonuç true olacaktır çünkü Int bir değer ile Long bir değerin matematiksel işleminin sonucu Long olur ve virgüllü kısmı dikkate alınmaz.
