@@ -727,5 +727,43 @@ Bu operatörler, tür güvenliğini sağlamak ve tür dönüşümü işlemlerini
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+2."Akıllı Dönüşüm" (Smart Cast) ne demektir? Farklı kod örnekleri ile açıklayın. Bu özelliğin sınırlamaları nelerdir? Sorusunun Cevabı:
+
+-->"Akıllı Dönüşüm" (Smart Cast), Kotlin'in tür güvenliği ve kod okunabilirliğini artıran bir özelliğidir. Bu özellik, bir değişkenin belirli bir türe ait olduğunu kontrol ettikten sonra, o değişkeni otomatik olarak o türe dönüştürür. Bu, ifadelerin daha sade ve anlaşılır olmasını sağlar.
+
+-->Örneğin, aşağıdaki kod parçasında is operatörü ile bir değişkenin String türüne ait olup olmadığı kontrol edildikten sonra, o değişkenin String türüne otomatik olarak dönüştürüldüğünü görebiliriz:
+
+	fun printLength(obj: Any) {
+    if (obj is String) {
+        println(obj.length) // obj, String türüne otomatik olarak dönüştürüldü ve uzunluğunu yazdırır.
+    }
+}
+
+	printLength("Hello") // Çıktı: 5
+
+-->Başka bir örnek olarak, when ifadesinde de "Akıllı Dönüşüm" özelliğinden faydalanabiliriz:
+
+	fun printType(obj: Any) {
+    when (obj) {
+        is String -> println("String")
+        is Int -> println("Int")
+        is Double -> println("Double")
+    }
+}
+
+	printType(10) // Çıktı: Int
+
+Akıllı Dönüşüm" özelliğinin bazı sınırlamaları şunlardır:
+
+-->is operatörü ile yapılan kontrolün aynı blok içinde gerçekleşmesi gerekliliği.
+-->Bazı durumlarda, derleyicinin doğru şekilde akıllı dönüşüm yapamadığı durumlar olabilir. Bu durumlar genellikle karmaşık türlerle ve null değerlerle çalışırken ortaya çıkar.
+
+Bu sınırlamalara rağmen, "Akıllı Dönüşüm" özelliği Kotlin'de kodun daha okunabilir ve güvenli olmasını sağlayan önemli bir özelliktir.
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+3.
+
+
 
 
