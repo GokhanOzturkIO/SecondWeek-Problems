@@ -255,8 +255,26 @@ Bu ayıraçları kullanırken dikkat edilmesi gereken bazı noktalar şunlardır
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-6-
+6-Double ve Float değişkenler ondalık kısımda kaç basamağa kadar işlem yaparlar? Bu sınırın üzerinde gelen ondalık bilgileri için nasıl davranırlar? Hangi durumlar için Float ve hangi durumlar için Double kullanılmalıdır? Sorusunun Cevabı:
 
+
+Double ve Float değişkenler, ondalık kısımda farklı hassasiyetlere sahiptirler.
+
+  -->Float: Float tipi, genellikle 7 haneli kesinliğe sahiptir. Bu, ondalık kısmın en fazla 7 basamağa kadar doğru olabileceği anlamına gelir. Bu sınıra ulaşıldığında, daha fazla ondalık bilgi kaybolabilir.
+
+  -->Double: Double tipi, genellikle 15-16 haneli kesinliğe sahiptir. Bu, ondalık kısmın en fazla 15-16 basamağa kadar doğru olabileceği anlamına gelir. Float'a göre daha yüksek bir kesinlik sunar.
+
+Float ve Double arasındaki seçim, genellikle hesaplamanın ne kadar hassas olması gerektiğine bağlıdır:
+
+  -->Float: Bellek tasarrufu yapmak veya daha hızlı işlem yapmak istendiğinde tercih edilir. Örneğin, grafik işleme gibi alanlarda kullanılabilir.
+
+  -->Double: Daha yüksek bir hassasiyet gerektiren hesaplamalarda tercih edilir. Finansal hesaplamalar gibi alanlarda kullanılabilir.
+
+Genel olarak, eğer bellek veya hız konusunda endişeleriniz yoksa, Double tipini tercih etmek genellikle daha güvenlidir çünkü daha yüksek bir kesinlik sunar.
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+7-
 
 
 
