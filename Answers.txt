@@ -557,4 +557,17 @@ Bu yöntemlerden herhangi biri, Double ve Float türündeki sayıların varsayı
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+İşaretsiz Sayılar
 
+1."İşaretsiz" (Unsigned) değişkenler ne demektir? İşaretli olanlarla aralarındaki fark nedir?
+
+
+--> "İşaretsiz" (unsigned) değişkenler, yalnızca pozitif değerlerin tutulabileceği bir veri türüdür. Bu türdeki değişkenler, işaret biti (en soldaki bit) kullanılmadan değerlerin temsil edildiği için, işaretli değişkenlere kıyasla daha geniş bir aralıkta değerleri tutabilirler. Örneğin, 8 bitlik bir işaretli değişkenle (-128 ila 127 arasında) aynı miktarda belleği kullanarak 0 ila 255 arasında değerler tutabilirler.
+
+--> İşaretli değişkenler ise pozitif ve negatif değerleri tutabilirler. Bu durumda, bir bit işaretin temsil edilmesi için kullanılır. Örneğin, 8 bitlik bir işaretli değişken -128 ila 127 arasında değerleri tutabilir.
+
+--> Kotlin'de, işaretli ve işaretsiz değişkenler arasında bir fark yoktur. Kotlin, işaretli ve işaretsiz değişkenler için farklı veri türlerini desteklemez. Bunun yerine, tüm tamsayılar için aynı veri türünü (örneğin, Int veya Long) kullanır ve bu türler işaretli veya işaretsiz olabilir. Örneğin, UInt ve ULong gibi özel işaretsiz tamsayı türleri yoktur; bunun yerine, uygun bir aralıkta değerler gerekiyorsa, UInt veya ULong kullanmaktan ziyade Int veya Long kullanılır.
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+2.
