@@ -237,3 +237,28 @@ Bu uyumsuzlukları çözmek için dönüşüm işlemleri yaparak işaretsiz beli
 İkisi de tip kontrolü için kullanılan operatörlerdir. <p>
 "is" ile nesnenin belirttiğimiz tipe ait olup olmadığını kontrol ederiz. Eğer ait ise true değil ise false döndürür. <p>
 "!is" ile yukarıdaki işlemin tam tersini yaparız. Nesnenin belirttiğimiz tipe ait olmadığını kontrol ederiz yani Eğer ait değil ise false ait ise true döndürür. <p>
+
+## 4.2- "Akıllı Dönüşüm" (Smart Cast) ne demektir? Farklı kod örnekleri ile açıklayın. Bu özelliğin sınırlamaları nelerdir?
+Smart Cast: Kotlin'in belirli durumlarda değişkenlerin tipini otomatik olarak dönüştürme yeteneğini ifade eder. Bu özellik, tip kontrol operatörü "is" kullanıldıktan sonra, koşul bloğunun içinde ilgili değişkenin tipini otomatik olarak dönüştürür. Bu şekilde, değişkenin belirli bir tip olduğunu doğruladıktan sonra, o tipe özgü metotları ve özellikleri doğrudan kullanabiliriz. <p>
+```kotlin
+fun printLength(obj: Any) {
+    if (obj is String) {
+        // obj String tipine otomatik olarak dönüştürüldü
+        println("String length: ${obj.length}")
+    }
+}
+
+printLength("Hello") // Çıktı: String length: 5
+```
+Yukarıdaki kodda if içerisinde obj'nin string olduğu doğrulandığı için String'e özgü özelliklere erişim sağlayabildik.
+```kotlin
+fun printSquare(obj: Any) {
+    if (obj is Int) {
+        // obj Int tipine otomatik olarak dönüştürüldü
+        println("Int Square: ${obj.times(obj)}")
+    }
+}
+
+printSquare(5) // Çıktı: Int Square: 25
+```
+Yukarıdaki kodda if içerisinde obj'nin Int olduğu doğrulandığı için Int'e özgü özelliklere erişim sağlayabildik.
