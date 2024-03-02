@@ -230,3 +230,10 @@ ULong: 64 bit ile ifade edilir değer aralığı 0 ile 18,446,744,073,709,551,61
 ## 3.9- "İşaretsiz" değişken türleri (UInt, ULong vs.) kullanırken, Java API'leri ile uyumluluk konusunda ne gibi sorunlar olabilir? Bunları çözmek için neler yapabilirsiniz?
 Java API'lerinin birçoğu işaretsiz tamsayı türlerini kullanmaz ve genellikle işaretli tamsayıları kullanır. Bu durum, işaretsiz tamsayılarla çalışırken Java API'lerini kullanırken uyumsuzluklar yaratabilir. <p>
 Bu uyumsuzlukları çözmek için dönüşüm işlemleri yaparak işaretsiz belirlediğimiz tipin değer aralıklarını kapsayacak işaretli bir değişken tipine dönüşüm yapabiliriz.
+
+# 4- Tür Dönüşümü
+
+## 4.1- `is` ve `!is` operatörlerinin kullanımını açıklayın.
+İkisi de tip kontrolü için kullanılan operatörlerdir. <p>
+"is" ile nesnenin belirttiğimiz tipe ait olup olmadığını kontrol ederiz. Eğer ait ise true değil ise false döndürür. <p>
+"!is" ile yukarıdaki işlemin tam tersini yaparız. Nesnenin belirttiğimiz tipe ait olmadığını kontrol ederiz yani Eğer ait değil ise false ait ise true döndürür. <p>
