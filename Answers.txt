@@ -803,6 +803,21 @@ Kotlin'de örtük tip genişletme bulunmamaktadır. Yani, bir veri tipini daha g
 	val longVal: Long = intVal.toLong() // Açık dönüşüm
 
 Bu yaklaşım, programcının dönüşümün bilinçli bir şekilde yapıldığından emin olmasını sağlar, böylece beklenmedik hataların önüne geçer.
+
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-5.
+5.val b: Byte = 1 ile val i: Int = b ve son olarak print(b == i) gibi bir kod yazıldığında çıktı ne olur? Neden böyle bir çıktı aldığınızı açıklayın. Sorusunun Cevabı:
+
+-->Bu kod bloğu çalıştırıldığında bir hata alırsınız. Bu hata, b değişkeninin Byte türünde olmasına rağmen i değişkenine atandığında Int türüne dönüşmesinden kaynaklanır. Daha sonra b == i ifadesiyle Byte türündeki b değişkeni ile Int türündeki i değişkeni karşılaştırılmaya çalışıldığında hata oluşur.
+
+-->Bu durumda, derleyici b değişkenini Int türüne otomatik olarak dönüştürmeye çalışır, ancak Byte türünden Int türüne otomatik dönüşüm yaparken bazı bilgilerin kaybolabileceğini fark eder. Bu nedenle, derleyici tür uyumsuzluğu hatası verir ve programın çalışması durdurulur.
+
+-->Bu tür hataları önlemek için, tür dönüşümlerini açıkça belirtmek veya uygun şekilde ele almak önemlidir. Örneğin, b.toInt() == i şeklinde belirgin bir dönüşüm yaparak karşılaştırma işlemi gerçekleştirilebilir.
+
+-->Son olarak, print(b == i) ifadesiyle b ve i değişkenleri karşılaştırılır. b değişkeni 1 değerine sahip Byte türünde olduğundan, i değişkeni 1 değerine sahip Int türünde olacaktır. Bu nedenle, b ve i değişkenleri eşit değerlere sahiptir ve karşılaştırma işlemi true olarak değerlendirilir.
+
+-->Bu durumda, çıktı olarak true alırsınız. Özetle, b ve i değişkenleri farklı türlerde olsalar da, değerleri eşit olduğundan karşılaştırma işlemi doğru sonuç verir.
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+6.
