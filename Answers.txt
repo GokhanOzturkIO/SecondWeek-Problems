@@ -791,5 +791,18 @@ Kotlin'de "güvenli" ve "güvensiz" operatörler diye bir kavram yoktur. Ancak, 
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-4.
+4.Sayısal değişkenlerde örtük tip genişletme (implicit widening conversions) ne demektir? Kotlin'de bu neden yapılamaz? Sorusunun Cevabı:
 
+Örtük tip genişletme (implicit widening conversions), bir programlama dilinde bir veri tipinin daha küçük bir veri tipine otomatik olarak dönüştürülmesini ifade eder. Bu dönüşüm genellikle türler arasındaki hiyerarşik ilişkiyi yansıtır; yani, daha küçük bir veri tipi daha büyük bir veri tipine dönüştürülebilir, ancak tersi durumda (daraltma dönüşümü) açık bir dönüşüm işlemi gereklidir.
+
+Kotlin'de örtük tip genişletme bulunmamaktadır. Yani, bir veri tipini daha geniş bir veri tipine otomatik olarak dönüştürmek mümkün değildir. Bu karar, Kotlin'in tür güvenliği ve beklenmedik hataların önlenmesi amacıyla alınmıştır. Örneğin, bir Int değerini doğrudan bir Long değerine dönüştürmek, veri kaybına veya beklenmeyen sonuçlara neden olabilir. Bu nedenle, Kotlin'de tür dönüşümleri açık bir şekilde belirtilmelidir.
+
+--> Örneğin, bir Int değerini Long türüne dönüştürmek için açık bir dönüşüm yapmak gerekmektedir:
+
+	val intVal: Int = 42
+	val longVal: Long = intVal.toLong() // Açık dönüşüm
+
+Bu yaklaşım, programcının dönüşümün bilinçli bir şekilde yapıldığından emin olmasını sağlar, böylece beklenmedik hataların önüne geçer.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+5.
