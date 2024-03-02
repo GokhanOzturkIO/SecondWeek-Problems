@@ -374,7 +374,19 @@ val octalNumber = "123".toInt(8) // 83 ondalık olarak
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-12-
+12. === operatörü ile karşılaştırma yaparken Byte değer aralığı neden önemlidir? Kotlin bu aralığa göre neden özel bir davranış sergiler? Sorusunun Cevabı:
+
+--> === operatörü Kotlin'de referansları karşılaştırmak için kullanılır. Bu operatör, referans karşılaştırması yaptığı için veri türüne bağlı olarak özel bir davranış sergilemez. Yani, referansların aynı olup olmadığını kontrol eder ve bu kontrole bağlı olarak true veya false döndürür.
+
+--> Byte veri türüyle ilgili olarak, Byte sınıfı, -128 ile 127 arasındaki değerler için önbelleğe alınmış bir dizi nesne tutar. Yani, bu aralıktaki her değer için ayrı bir nesne oluşturulmaz, aynı nesne kullanılır. Bu önbellekleme, hafızayı verimli bir şekilde kullanmak için yapılmış bir optimizasyondur.
+
+--> Bu nedenle, -128 ile 127 arasındaki Byte değerlerini === operatörüyle karşılaştırdığınızda, aynı değere sahip Byte nesneleri için true döndürülür, çünkü aynı nesneyi referans ederler. Ancak, bu aralık dışındaki Byte değerlerini karşılaştırdığınızda, her bir değer için ayrı bir nesne oluşturulduğundan false döndürülür.
+
+--> Bu özellik, hafıza kullanımını ve performansı iyileştirmek için yapılan bir optimizasyondur ve Byte değerlerinin karşılaştırılmasında özel bir davranış sergilemez.
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+13.
 
 
 
