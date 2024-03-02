@@ -346,9 +346,35 @@ val octalNumber = "123".toInt(8) // 83 ondalık olarak
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-11-
+11-== ile neyi karşılaştırırız? === ile neyi karşılaştırırız? Sorusunun Cevabı:
+
+-->Kotlin'de == ve === operatörleri farklı amaçlar için kullanılır:
+
+== operatörü: İki nesnenin değerlerini karşılaştırmak için kullanılır. Eğer iki nesnenin değerleri eşitse, true değeri döndürür. 
+
+Örneğin:
+
+  val a = 5
+  val b = 5
+  println(a == b) // true
 
 
+=== operatörü: İki nesnenin referanslarını karşılaştırmak için kullanılır. Eğer iki nesne aynı bellek adresine sahipse (yani aynı nesneyi gösteriyorsa), true değeri döndürür. 
+
+Örneğin:
+
+  val x = arrayOf(1, 2, 3)
+  val y = arrayOf(1, 2, 3)
+  val z = x
+  println(x === y) // false
+  println(x === z) // true
+
+
+== operatörü genellikle nesnelerin değerlerini karşılaştırmak için kullanılırken, === operatörü nesnelerin referanslarını karşılaştırmak için kullanılır.
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+12-
 
 
 
