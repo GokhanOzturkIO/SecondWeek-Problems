@@ -667,5 +667,14 @@ Kotlin, işaretsiz tamsayılarla yapılan matematiksel işlemlerde güvenliği �
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-8.
+8."İşaretsiz" değişkenlerin sınırlamaları nelerdir? Sorusunun Cevabı:
 
+-->İşaretsiz değişkenlerin sınırlamaları, kullanılan veri türüne göre değişir. İşaretsiz değişkenler, genellikle işaretli karşılıklarından daha geniş bir değer aralığına sahip olsalar da, yine de sınırlı bir değer aralığını temsil ederler. İşaretsiz değişkenlerin sınırlamaları şunlardır:
+
+	-->UInt: UInt (Unsigned Int) veri türü, 0 ile 2^32 - 1 arasındaki değerleri tutabilir. Yani, en küçük değer 0, en büyük değer ise 4294967295'tir.
+
+	-->ULong: ULong (Unsigned Long) veri türü, 0 ile 2^64 - 1 arasındaki değerleri tutabilir. Yani, en küçük değer 0, en büyük değer ise 18446744073709551615'tir.
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+9.
