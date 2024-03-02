@@ -300,7 +300,26 @@ Onaltılık sayıları 0x ön ekini kullanarak tanımlayabilirsiniz. Sayının a
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-8-
+8-Sekizlik (Octal) değişkenler Java'da nasıl tanımlanır? Kotlin'de Sekizlik değişken tanımlanabilir mi? Sorusunun Cevabı:
+
+-->Java'da sekizlik (octal) sayıları tanımlamak için 0 ön ekini kullanabilirsiniz. Sekizlik sayı sisteminde sadece 0 ile 7 arasındaki rakamlar kullanılır. 
+
+Örneğin:
+ 
+int octalNumber = 0123; // 83 ondalık olarak
+
+-->Kotlin'de ise doğrudan sekizlik sayı tanımlama desteği bulunmamaktadır. Ancak, bir sekizlik sayıyı ondalık sayıya çevirip kullanabilirsiniz. 
+
+Örneğin:
+
+val octalNumber = "123".toInt(8) // 83 ondalık olarak
+
+Çıktıları aynıdır.
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+9-
+
 
 
 
