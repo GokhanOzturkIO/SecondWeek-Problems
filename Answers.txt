@@ -239,10 +239,23 @@ Bu durumda:
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-5-
+5-Double ve Float değişkenlerle çalışırken ondalık ayıracı olarak hangi işaretler kullanılır? Bu ayıraçların kullanımında nelere dikkat etmek gerekir? Sorusunun Cevabı:
+
+-->Double ve Float değişkenlerle çalışırken ondalık ayıracı olarak nokta (.) işareti kullanılır. 
+Örneğin, 3.14 gibi bir ondalık sayıyı temsil ederken, virgül (,) kullanılmaz.
 
  
+Bu ayıraçları kullanırken dikkat edilmesi gereken bazı noktalar şunlardır:
 
+-->Tür Uyuşmazlığı: Türkçe gibi bazı dillerde ondalık ayıracı olarak virgül kullanılırken, programlama dillerinde genellikle nokta kullanılır. Bu nedenle, programlama yaparken ondalık sayıları nokta ile ifade etmek önemlidir. Örneğin, 3.14 yerine 3,14 kullanırsanız, hata alabilirsiniz.
+
+-->Dil Ayarları: Bazı programlama dillerinde, programın çalıştığı dilin ayarlarına bağlı olarak ondalık ayıraçları değişebilir. Bu durumda, dil ayarlarına dikkat etmek önemlidir.
+
+-->String Dönüşümü: Kullanıcıdan alınan ondalık sayıları işlerken, ondalık ayıracını doğru bir şekilde ele almak önemlidir. Kullanıcı virgülle ayırma yapmış olabilir, bu durumda uygun dönüşümler yapılmalıdır.
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+6-
 
 
 
