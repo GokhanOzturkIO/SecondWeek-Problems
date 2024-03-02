@@ -276,3 +276,8 @@ Kotlin'de Safe cast operatörü ise "as?" olarak geçer. Güvenli olmasının se
 ## 4.4- Sayısal değişkenlerde örtük tip genişletme (implicit widening conversions) ne demektir? Kotlin'de bu neden yapılamaz?
 implicit widening conversions, bir veri türünden daha küçük bir veri türüne sahip bir değerin, daha büyük bir veri türüne dönüştürülmesidir. Örneğin, bir Byte değerini bir Int değerine otomatik olarak dönüştürmek gibi. <p>
 Kotlin tür güvenliğini arttırmak için böyle bir dönüşüme izin vermez bunun yerine dönüşüm özellikleri("toDouble()", "toInt()" vb.) kullanılabilir.
+
+## 4.5- `val b: Byte = 1` ile `val i: Int = b` ve son olarak `print(b == i)` gibi bir kod yazıldığında çıktı ne olur? Neden böyle bir çıktı aldığınızı açıklayın.
+İlk başta "i" değişkenine yaptığımız atama için şöyle bir hata alırız: "Type mismatch: inferred type is Byte but Int was expected". Burada type inference ile Byte bulunduğunu fakat bizim değişkenimizin Int beklediğini söylüyor. <p>
+"==" ile yaptığımız karşılaştırmada ise şöyle bir hata alırız: "Operator '==' cannot be applied to 'Byte' and 'Int'". İki değişkenin tipi farklı olduğu için böyle bir karşılaştırma yapılamayacağını söylüyor. <p>
+Bu tarz bir dönüşüm Kotlin dilinde desteklenmediği için böyle hatalar alırız. Buna benzer dönüşüm primitive olarak belirtilmiş olan değişkenler ile Java dilinde yapılabilir fakat wrapper class'lar ile Java'da da mümkün değildir.
