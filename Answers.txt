@@ -679,7 +679,7 @@ Kotlin, işaretsiz tamsayılarla yapılan matematiksel işlemlerde güvenliği �
 
 9."İşaretsiz" değişken türleri (UInt, ULong vs.) kullanırken, Java API'leri ile uyumluluk konusunda ne gibi sorunlar olabilir? Bunları çözmek için neler yapabilirsiniz? Sorusunun Cevabı:
 
--->Kotlin'in işaretsiz tamsayı türleri (UInt, ULong vb.) Java ile uyumluluk konusunda bazı sorunlara neden olabilir. 
+Kotlin'in işaretsiz tamsayı türleri (UInt, ULong vb.) Java ile uyumluluk konusunda bazı sorunlara neden olabilir. 
 
 Bu sorunlar genellikle şunları içerir:
 
@@ -729,7 +729,7 @@ Bu operatörler, tür güvenliğini sağlamak ve tür dönüşümü işlemlerini
 
 2."Akıllı Dönüşüm" (Smart Cast) ne demektir? Farklı kod örnekleri ile açıklayın. Bu özelliğin sınırlamaları nelerdir? Sorusunun Cevabı:
 
--->"Akıllı Dönüşüm" (Smart Cast), Kotlin'in tür güvenliği ve kod okunabilirliğini artıran bir özelliğidir. Bu özellik, bir değişkenin belirli bir türe ait olduğunu kontrol ettikten sonra, o değişkeni otomatik olarak o türe dönüştürür. Bu, ifadelerin daha sade ve anlaşılır olmasını sağlar.
+"Akıllı Dönüşüm" (Smart Cast), Kotlin'in tür güvenliği ve kod okunabilirliğini artıran bir özelliğidir. Bu özellik, bir değişkenin belirli bir türe ait olduğunu kontrol ettikten sonra, o değişkeni otomatik olarak o türe dönüştürür. Bu, ifadelerin daha sade ve anlaşılır olmasını sağlar.
 
 -->Örneğin, aşağıdaki kod parçasında is operatörü ile bir değişkenin String türüne ait olup olmadığı kontrol edildikten sonra, o değişkenin String türüne otomatik olarak dönüştürüldüğünü görebiliriz:
 
@@ -762,8 +762,34 @@ Bu sınırlamalara rağmen, "Akıllı Dönüşüm" özelliği Kotlin'de kodun da
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-3.
+3.Güvenli & Güvensiz" operatörler nelerdir?.Sorusunun Cevabı:
 
 
+Kotlin'de "güvenli" ve "güvensiz" operatörler diye bir kavram yoktur. Ancak, muhtemelen "güvenli çağırım" (safe call operator) ve "güvensiz dönüşüm" (unsafe cast operator) kavramlarından bahsediyorsunuz.
 
+  -->Güvenli Çağırım Operatörü (?.): Güvenli çağırım operatörü, bir nesnenin null olup olmadığını kontrol ederek, null değilse işlem yapmaya devam etmenizi sağlar. Eğer nesne null ise, operatör null döndürür ve işlem yapılmaz. 
+
+Örneğin:
+
+	val str: String? = null
+	val length: Int? = str?.length // length null olacaktır, çünkü str null
+
+
+  -->Güvensiz Dönüşüm Operatörü (as): Güvensiz dönüşüm operatörü, bir nesneyi belirli bir türe dönüştürmek için kullanılır. Eğer dönüşüm başarısız olursa, ClassCastException hatası alırsınız.
+
+ Örneğin:
+
+	val obj: Any = "Hello"
+	val str: String = obj as String // Güvensiz dönüşüm, çünkü obj aslında bir String değilse ClassCastException alınır
+
+  -->Güvensiz dönüşüm operatörünü daha güvenli hale getirmek için as? operatörünü kullanabilirsiniz. Bu operatör, null olmayan bir nesneyi belirli bir türe dönüştürürken, nesne null ise null döndürür. 
+
+Örneğin:
+
+	val obj: Any? = "Hello"
+	val str: String? = obj as? String // Güvenli dönüşüm, obj null değilse ve String ise dönüşüm yapılır, null ise null döner
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+4.
 
