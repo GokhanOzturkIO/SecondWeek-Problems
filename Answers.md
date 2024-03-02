@@ -304,3 +304,6 @@ Sonuç true olacaktır çünkü Int değerler ile yaptığımız matematiksel i�
 
 ## 4.11- `val x = 5L / 2` `println(x == 2L)` gibi bir işlemin sonucu ve tipi nedir? Neden böyle olduğunu açıklayın.
 Sonuç true olacaktır çünkü Int bir değer ile Long bir değerin matematiksel işleminin sonucu Long olur ve virgüllü kısmı dikkate alınmaz.
+
+## 4.12- `val x = 5 / 2.toDouble()` `println(x == 2.5)` gibi bir işlemin sonucu ve tipi nedir? Neden böyle olduğunu açıklayın.
+Sonuç true olacaktır çünkü Int bir değer ile Double bir değerin matematiksel işleminin sonucu Double olur ve virgüllü kısım dikkate alınarak x değişkeninin değeri 2.5 olarak belirlenir.
