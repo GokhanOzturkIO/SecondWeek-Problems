@@ -172,7 +172,18 @@ Hangi operatörü kullanmanın daha anlamlı olduğu, duruma ve kullanım senary
 
 Sayılar 
 
-1-
+1-Kaç farklı tipte "number" sınıfı miras alan "alt sınıf" (child class) vardır? Bunların değer aralıkları neden önemlidir? Sorusunun Cevabı:
+
+-->"Number" sınıfını miras alan alt sınıfların sayısı programlama diline bağlı olarak değişebilir. Örneğin, Java programlama dilinde "Number" sınıfını miras alan alt sınıflar arasında "Byte", "Short", "Integer", "Long", "Float" ve "Double" gibi altı tane temel sayı sınıfı bulunmaktadır.
+
+-->Bu alt sınıfların değer aralıkları önemlidir çünkü her bir alt sınıf farklı veri tiplerini temsil eder ve bu veri tiplerinin tutabileceği değer aralıkları farklıdır. Örneğin, "Byte" sınıfı 8 bitlik bir tamsayı değerini temsil ederken, "Integer" sınıfı 32 bitlik bir tamsayı değerini temsil eder. Dolayısıyla, bir değerin hangi alt sınıf tarafından temsil edileceğine karar verirken değerin beklenen değer aralığı önemli bir faktördür.
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+2-
+
+
+
 
 
 
