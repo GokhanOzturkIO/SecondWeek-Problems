@@ -559,7 +559,7 @@ Bu yöntemlerden herhangi biri, Double ve Float türündeki sayıların varsayı
 
 İşaretsiz Sayılar
 
-1."İşaretsiz" (Unsigned) değişkenler ne demektir? İşaretli olanlarla aralarındaki fark nedir?
+1."İşaretsiz" (Unsigned) değişkenler ne demektir? İşaretli olanlarla aralarındaki fark nedir? Sorusunun Cevabı:
 
 
 --> "İşaretsiz" (unsigned) değişkenler, yalnızca pozitif değerlerin tutulabileceği bir veri türüdür. Bu türdeki değişkenler, işaret biti (en soldaki bit) kullanılmadan değerlerin temsil edildiği için, işaretli değişkenlere kıyasla daha geniş bir aralıkta değerleri tutabilirler. Örneğin, 8 bitlik bir işaretli değişkenle (-128 ila 127 arasında) aynı miktarda belleği kullanarak 0 ila 255 arasında değerler tutabilirler.
@@ -570,4 +570,14 @@ Bu yöntemlerden herhangi biri, Double ve Float türündeki sayıların varsayı
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-2.
+2."İşaretsiz" değişkenler nasıl bir sınıf yapısında tutulurlar? Bu neden önemlidir? Sorusunun Cevabı:
+
+--> "İşaretsiz" (unsigned) değişkenler, bilgisayarda hafızada genellikle aynı şekilde tutulurlar. Yani, işaretli ve işaretsiz değişkenlerin bellekteki temsilinde genellikle bir fark yoktur. Bellekte bir değişkenin işaretli veya işaretsiz olarak tutulması, onun değerini temsil etmek için kullanılan bitlerin düzenlenmesinde bir farklılık yaratmaz.
+
+--> Örneğin, bir 8 bitlik işaretli ve işaretsiz değişkeni ele alalım. Bu değişkenlerin her ikisi de 0 ila 255 arasındaki değerleri temsil edebilir. Bu durumda, bellekteki temsilinde herhangi bir fark olmayacaktır.
+
+--> Sonuç olarak, işaretli ve işaretsiz değişkenlerin bellekteki temsilinde belirgin bir fark olmadığı için, önemli olan genellikle bu değişkenlerin değer aralıkları ve kullanım senaryolarıdır.
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
