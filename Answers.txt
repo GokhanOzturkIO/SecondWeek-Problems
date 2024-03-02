@@ -632,6 +632,40 @@ Bu yöntemlerden herhangi biri, Double ve Float türündeki sayıların varsayı
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-7.
+7."İşaretsiz" değişkenlerle yapılan matematiksel işlemlerde, özellikle büyük sayılarla çalışırken karşılaşılabilecek taşma (overflow) ve taşma olmaması (underflow) durumları için Kotlin nasıl bir yönetim sağlar? Sorusunun Cevabı:
 
+Kotlin, işaretsiz değişkenlerle yapılan matematiksel işlemlerde taşma (overflow) ve taşma olmaması (underflow) durumları için bazı güvenlik önlemleri sağlar. Bu önlemler, değişkenlerin tanımlandığı veri türüne göre değişebilir.
+
+  -->Taşma (Overflow) Kontrolü: Kotlin, işaretsiz tamsayılarla yapılan işlemlerde taşma durumunu kontrol eder. Eğer bir işlem sonucu, ilgili veri türünün sınırlarını aşarsa, derleme zamanında hata verir. 
+
+Örneğin:
+
+	val a: UInt = UInt.MAX_VALUE
+	val b: UInt = 1u
+	val result: UInt = a + b // Derleme hatası: "The integer literal does not conform to the expected type UInt"
+
+Bu örnekte, UInt.MAX_VALUE en büyük UInt değeridir ve bu değere bir daha eklenemeyeceği için derleme hatası alınır.
+
+  -->Taşma Kontrolünün Devre Dışı Bırakılması: Eğer taşma kontrolünü devre dışı bırakmak isterseniz, kotlin.experimental paketindeki allowUnsignedOperations özelliğini kullanabilirsiniz. Ancak, bu özellik dikkatlice kullanılmalıdır çünkü taşma durumunda beklenmeyen sonuçlar alabilirsiniz.
+
+Örneğin:
+
+	import kotlin.experimental.*
+
+fun main() {
+    UInt.MAX_VALUE.toInt() // 4294967295
+    var a: UInt = UInt.MAX_VALUE
+    val b: UInt = 1u
+    println(a + b) // 0
+    println(a - b) // 4294967294
+}
+
+
+  -->Underflow Kontrolü: İşaretsiz tamsayılarda underflow (taşma olmaması) durumlarına özel bir kontrol sağlanmaz. Bu nedenle, işaretsiz tamsayılarla yapılan işlemlerde underflow durumlarına karşı dikkatli olunmalıdır.
+
+Kotlin, işaretsiz tamsayılarla yapılan matematiksel işlemlerde güvenliği ön planda tutar ve taşma durumlarını genellikle derleme zamanında algılar ve hata verir. Bu, programın beklenmedik sonuçlar üretmesini engelleyerek daha güvenli bir kod yazımı sağlar.
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+8.
 
