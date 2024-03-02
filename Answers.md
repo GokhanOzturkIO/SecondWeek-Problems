@@ -268,3 +268,7 @@ Smart Cast sadece şu durumlarda kullanılabilir:
 - val properties: Eğer özellik private veya internal ise, veya kontrol aynı modülde yapılmışsa kullanılabilir. Smart Cast, açık (open) özellikler veya özel getiricilere sahip özellikler üzerinde kullanılamaz.
 - var local variables: Eğer değişken, kontrol ve kullanım arasında değiştirilmiyorsa, üzerinde değişiklik yapacak bir lambda tarafından yakalanmamışsa ve delegated property değilse.
 - var properties: Hiçbir zaman çünkü farklı kodlar tarafından herhangi bir anda değiştirilebilir.
+
+## 4.3- "Güvenli & Güvensiz" operatörler nelerdir?
+Kotlin'de Unsafe cast operatör "as" olarak geçer. Güvensiz olmasının sebebi eğer dönüştürme işlemi yapılamazsa hata vermesidir. <p>
+Kotlin'de Safe cast operatörü ise "as?" olarak geçer. Güvenli olmasının sebebi ise eğer dönüştürme işlemi gerçekleşmezse null olarak atama yapması ve hata vermemesidir. <p>
