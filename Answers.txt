@@ -330,7 +330,27 @@ val octalNumber = "123".toInt(8) // 83 ondalık olarak
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-10-
+10-Sayısal değişkenlerde alt çizgi (underscore) nasıl kullanılır? Kotlin bunu nasıl yorumlar? Sorusunun Cevabı:
+
+-->Kotlin'de sayısal değerlerde alt çizgi (underscore) kullanarak sayıları daha okunabilir hale getirebilirsiniz. Alt çizgi, sayıları gruplamak veya sayısal değerlerin basamaklarını belirlemek için kullanılır. Kotlin bu alt çizgileri sayıyı değiştirmeden sadece okunabilirliği artırmak için kullanır.
+
+  Örneğin, bir milyonu temsil eden bir sayıyı düşünelim:
+
+  val number = 1000000
+
+  Bu sayıyı daha okunabilir hale getirmek için alt çizgi kullanabiliriz:
+
+  val number = 1_000_000
+
+-->Bu şekilde, sayı daha okunabilir hale gelirken, sayısal değeri etkilemez. Alt çizgiler, sayıları gruplara ayırırken veya basamakları belirlerken yardımcı olabilir, ancak bu alt çizgiler sayı değerinin bir parçası değildir ve sayısal operasyonlar sırasında göz ardı edilir.
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+11-
+
+
+
+
 
 
 
