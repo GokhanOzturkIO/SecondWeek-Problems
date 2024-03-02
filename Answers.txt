@@ -386,23 +386,42 @@ val octalNumber = "123".toInt(8) // 83 ondalık olarak
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-13.
+13.Sayısal değişkenlerde hangi matematiksel operatörler kullanılabilir? Sorusunun Cevabı:
+
+-->Toplama (+): İki sayıyı toplar.
+
+	val sum = a + b
 
 
+-->Çıkarma (-): İki sayıyı çıkarır.
+
+	val difference = a - b
 
 
+-->Çarpma (*): İki sayıyı çarpar.
+
+	val product = a * b
 
 
+-->Bölme (/): Bir sayıyı diğerine böler.
+
+	val quotient = a / b
 
 
+-->Mod (%): Bir sayının diğerine bölümünden kalanı verir.
+
+	val remainder = a % b
 
 
+-->Artırma (++): Bir sayıyı bir birim artırır.
+
+	var a = 5
+	a++
 
 
+-->Azaltma (--): Bir sayıyı bir birim azaltır.
 
+	var a = 5
+	a--
 
-
-
-
-
-
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
