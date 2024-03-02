@@ -281,3 +281,6 @@ Kotlin tür güvenliğini arttırmak için böyle bir dönüşüme izin vermez b
 İlk başta "i" değişkenine yaptığımız atama için şöyle bir hata alırız: "Type mismatch: inferred type is Byte but Int was expected". Burada type inference ile Byte bulunduğunu fakat bizim değişkenimizin Int beklediğini söylüyor. <p>
 "==" ile yaptığımız karşılaştırmada ise şöyle bir hata alırız: "Operator '==' cannot be applied to 'Byte' and 'Int'". İki değişkenin tipi farklı olduğu için böyle bir karşılaştırma yapılamayacağını söylüyor. <p>
 Bu tarz bir dönüşüm Kotlin dilinde desteklenmediği için böyle hatalar alırız. Buna benzer dönüşüm primitive olarak belirtilmiş olan değişkenler ile Java dilinde yapılabilir fakat wrapper class'lar ile Java'da da mümkün değildir.
+
+## 4.6- `val b: Byte = 1` ile `val i: Int = b.toInt()` ve son olarak `print(b == i)` gibi bir kod yazıldığında çıktı ne olur? Neden böyle bir çıktı aldığınızı açıklayın.
+"==" ile yaptığımız karşılaştırmada şöyle bir hata alırız: "Operator '==' cannot be applied to 'Byte' and 'Int'". İki değişkenin tipi farklı olduğu için böyle bir karşılaştırma yapılamayacağını söylüyor. Her ne kadar dönüşüm özelliklerinden yararlanılmış olsa da değişken tipleri aynı olmadığı için böyle bir karşılaştırma yapılamaz.
