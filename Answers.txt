@@ -450,6 +450,43 @@ val octalNumber = "123".toInt(8) // 83 ondalık olarak
 	val isLessOrEqual = a <= b
 
 Bu operatörler, sayıların birbiriyle karşılaştırılmasını sağlar ve sonuç olarak true veya false döndürürler.
+
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-15.
+15.Bit düzeyinde operatörler (Bitwise operators) nelerdir? Ne amaçla kullanılır? Kotlin'de bunları nasıl kullanabilirsiniz? Sorusunun Cevabı:
+
+-->Bit düzeyinde operatörler, sayıların binary (ikili) olarak işlenmesini sağlar. Bu operatörler, bit seviyesinde ve tek tek bitleri işleyerek sayılar üzerinde çeşitli operasyonlar yapılmasını sağlar.
+
+Kullanılan bit düzeyinde operatörler şunlardır:
+
+-->AND (&): İki sayının her iki biti de 1 ise sonuç 1 olur, diğer durumlarda sonuç 0 olur.
+
+-->OR (|): İki sayının en az bir biti 1 ise sonuç 1 olur, diğer durumlarda sonuç 0 olur.
+
+-->XOR (^): İki sayının bitleri farklı ise sonuç 1 olur, aynı ise sonuç 0 olur.
+
+-->NOT (~): Bir sayının tüm bitlerini tersine çevirir.
+
+-->Left Shift (<<): Bir sayının bitlerini belirli bir sayıda sola kaydırır. Boşalan sağ taraf için 0 eklenir.
+
+-->Right Shift (>>): Bir sayının bitlerini belirli bir sayıda sağa kaydırır. Boşalan sol taraf için en sol bitin değeri (0 veya 1) eklenir.
+
+Bu operatörler, genellikle verimli bellek kullanımı ve performans için kullanılır. Özellikle, bit seviyesinde manipülasyon gerektiren durumlarda kullanılırlar. Örneğin, donanım sürücüleri, veri sıkıştırma algoritmaları ve kriptografi gibi alanlarda kullanılabilirler.
+
+Kotlin'de bu operatörler aynı Java'da olduğu gibi kullanılabilir. 
+
+Örneğin:
+
+val a = 0b1100 // 12
+val b = 0b1010 // 10
+
+val andResult = a and b // 8 (0b1000)
+val orResult = a or b // 14 (0b1110)
+val xorResult = a xor b // 6 (0b0110)
+val notResult = a.inv() // -13 (0b11111111111111111111111111110011)
+val leftShiftResult = a shl 2 // 48 (0b110000)
+val rightShiftResult = a shr 2 // 3 (0b11)
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+16.
