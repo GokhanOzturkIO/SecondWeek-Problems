@@ -180,7 +180,22 @@ Sayılar
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-2-
+2-Eğer bir değişkene tip belirtimi yapılmaz ve bir değer atanırsa, Kotlin tip çıkarımını nasıl yapar? Sorusunun Cevabı:
+
+-->Kotlin'de bir değişkene tip belirtimi yapılmazsa ve bir değer atanırsa, Kotlin derleyicisi değişkenin tipini otomatik olarak çıkarır. Bu işlem tip çıkarımı (type inference) olarak adlandırılır.
+
+Örneğin,aşağıdaki örnekte number değişkenine 5 değeri atanmış ve tip belirtilmemiştir. Kotlin derleyicisi bu durumda number değişkeninin tipini otomatik olarak Int olarak çıkarır:
+
+--> val number = 5
+
+Benzer şekilde, aşağıdaki örnekte pi değişkenine 3.14 değeri atanmış ve tip belirtilmemiştir. Kotlin derleyicisi pi değişkeninin tipini otomatik olarak Double olarak çıkarır:
+
+--> val pi = 3.14
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+3-
+
 
 
 
