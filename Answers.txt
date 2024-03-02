@@ -213,7 +213,40 @@ val myLong: Long = 10000000000
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-4-
+4-Tek duyarlıklı (Single precision) ve Çift duyarlıklı (Double precision) kavramlarını açıklayın. Sorusunun Cevabı:
+
+-->Tek Duyarlıklı (Single Precision): Tek duyarlıklı bir kayan nokta sayısı, genellikle 32 bitlik bir bellek alanında saklanır. Bu 32 bitlik alan, bir işaret biti (±), 8 bitlik bir üs (exponent) ve 23 bitlik bir kesir (fractional) kısmından oluşur. Örneğin, Java'da float türü bu formatta sayıları temsil eder.
+
+Örnek olarak, 3.14 sayısını tek duyarlıklı olarak temsil edelim. 
+
+Bu durumda:
+
+ float singlePrecision = 3.14159265358979323846f;
+ System.out.println(singlePrecision);
+
+-->Bu örnekte, singlePrecision adında bir değişken tanımlıyoruz ve değer olarak Pi sayısının yaklaşık değerini atıyoruz. f harfi ile bu sayının tek duyarlıklı bir kayan nokta sayısı olduğunu belirtiyoruz. Tek duyarlıklı kayan nokta sayıları, yaklaşık 7 haneli kesinliğe sahiptir. Bu nedenle, yukarıdaki örnekteki sayı 3.1415927 olarak yazdırılacaktır.
+
+-->Çift Duyarlıklı (Double Precision): Çift duyarlıklı bir kayan nokta sayısı genellikle 64 bitlik bir bellek alanında saklanır. Bu alan, bir işaret biti, 11 bitlik bir üs ve 52 bitlik bir kesir kısmına sahiptir. Örneğin, Java'da double türü bu formatta sayıları temsil eder.
+
+Örnek olarak, yine 3.14 sayısını çift duyarlıklı olarak temsil edelim. 
+
+Bu durumda:
+
+ double doublePrecision = 3.14159265358979323846;
+ System.out.println(doublePrecision);
+
+-->Bu örnekte, doublePrecision adında bir değişken tanımlıyoruz ve değer olarak yine Pi sayısının yaklaşık değerini atıyoruz. double türü, çift duyarlıklı bir kayan nokta sayısı olduğunu belirtir. Çift duyarlıklı sayılar, tek duyarlıklılara göre daha fazla hane tutabilirler. Bu nedenle, yukarıdaki örnekteki sayı 3.141592653589793 olarak yazdırılacaktır.
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+5-
+
+ 
+
+
+
+
+
 
 
 
