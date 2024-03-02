@@ -284,3 +284,11 @@ Bu tarz bir dönüşüm Kotlin dilinde desteklenmediği için böyle hatalar al�
 
 ## 4.6- `val b: Byte = 1` ile `val i: Int = b.toInt()` ve son olarak `print(b == i)` gibi bir kod yazıldığında çıktı ne olur? Neden böyle bir çıktı aldığınızı açıklayın.
 "==" ile yaptığımız karşılaştırmada şöyle bir hata alırız: "Operator '==' cannot be applied to 'Byte' and 'Int'". İki değişkenin tipi farklı olduğu için böyle bir karşılaştırma yapılamayacağını söylüyor. Her ne kadar dönüşüm özelliklerinden yararlanılmış olsa da değişken tipleri aynı olmadığı için böyle bir karşılaştırma yapılamaz.
+
+## 4.7- Sayısal değişkenlerde açık dönüşüm (Explicit Type Conversion) yaparken hangi fonksiyonları kullanabilirsiniz?
+- toByte(): Bir sayıyı byte türüne dönüştürür.
+- toShort(): Bir sayıyı short türüne dönüştürür.
+- toInt(): Bir sayıyı int türüne dönüştürür.
+- toLong(): Bir sayıyı long türüne dönüştürür.
+- toFloat(): Bir sayıyı float türüne dönüştürür.
+- toDouble(): Bir sayıyı double türüne dönüştürür.
