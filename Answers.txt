@@ -698,3 +698,34 @@ Bu sorunları çözmek için şu adımları izleyebilirsiniz:
 	-->Alternatif Yaklaşımlar Kullanma: İşaretsiz tamsayıların Java API'leriyle uyumluluğunu sağlamak için alternatif yaklaşımlar kullanabilirsiniz. Örneğin, işaretli tamsayılarla çalışmak veya işaretsiz tamsayıların kullanıldığı özel bir API oluşturmak gibi.
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Tür Dönüşümü
+
+1.is ve !is operatörlerinin kullanımını açıklayın. Sorusunun Cevabı:
+
+is ve !is operatörleri Kotlin'de tür kontrolü yapmak için kullanılır. Bunlar genellikle "instanceof" operatörünün karşılığıdır.
+
+	-->is operatörü bir nesnenin belirli bir türe ait olup olmadığını kontrol eder. Eğer nesne belirtilen türe aitse, true döner; aksi halde false döner.
+
+Örneğin;
+
+	val str: Any = "Hello"
+if (str is String) {
+    println(str.length) // str, String türüne aittir ve uzunluğunu yazdırır.
+}
+
+	-->!is operatörü ise bir nesnenin belirli bir türe ait olmadığını kontrol eder. Eğer nesne belirtilen türe ait değilse, true döner; aksi halde false döner.
+
+Örneğin;
+
+	val num: Any = 123
+if (num !is String) {
+    println("Not a string") // num, String türüne ait değildir ve bu metni yazdırır.
+}
+
+Bu operatörler, tür güvenliğini sağlamak ve tür dönüşümü işlemlerini daha güvenli hale getirmek için kullanılır. Özellikle "smart cast" özelliğiyle birlikte kullanıldıklarında, kodun okunabilirliğini artırır ve hatalı dönüşümleri önlerler.
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
