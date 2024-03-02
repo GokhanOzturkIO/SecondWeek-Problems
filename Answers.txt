@@ -596,4 +596,14 @@ Bu yöntemlerden herhangi biri, Double ve Float türündeki sayıların varsayı
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-4.
+4."val a1 = 42u ve val a2 = 0xFFFF_FFFF_FFFFu" değişkenlerin tipleri ne olur? Neden? Sorusunun Cevabı:
+
+--> Kotlin'de, sayıların türünü belirtmek için sonuna eklenen harfler kullanılır. Bu harfler sayının hangi türde olduğunu belirtir. Örneğin, "u" harfi bir işaretsiz tamsayıyı (UInt) temsil ederken, "L" harfi bir uzun tamsayıyı (Long) temsil eder. Verilen ifadelerde kullanılan harflere göre değişken tipleri şu şekilde olur:
+
+--> val a1 = 42u: Bu ifadede, "u" harfi bir işaretsiz tamsayı (UInt) olduğunu belirtir. Dolayısıyla, a1 değişkeninin türü UInt olacaktır.
+
+--> val a2 = 0xFFFF_FFFF_FFFFu: Bu ifadede, "u" harfi yine bir işaretsiz tamsayıyı (UInt) temsil eder. Ancak, 0xFFFF_FFFF_FFFF değeri UInt'nin kapasitesini aşar. Bu durumda, derleyici hata verecektir. Çünkü UInt'nin maksimum değeri 4294967295'tir (2^32 - 1) ve 0xFFFF_FFFF_FFFF değeri bu sınırı aşmaktadır. Dolayısıyla, bu ifade hatalıdır ve kullanılamaz.
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+5.
