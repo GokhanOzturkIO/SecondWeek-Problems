@@ -274,7 +274,36 @@ Genel olarak, eğer bellek veya hız konusunda endişeleriniz yoksa, Double tipi
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-7-
+7-Ondalık(Decimal), Onaltılık (Hexadecimal) ve İkilik (Binary) değişkenleri Kotlin'de nasıl tanımlayabilirsiniz? Sorusunun Cevabı:
+
+Kotlin'de ondalık (decimal), onaltılık (hexadecimal) ve ikilik (binary) sayıları farklı şekillerde tanımlayabilirsiniz.
+
+-->Ondalık (Decimal):
+Ondalık sayıları doğrudan tanımlamak için herhangi bir özel işaret kullanmanıza gerek yoktur. 
+
+Örneğin:
+
+val decimalNumber = 123
+
+-->Onaltılık (Hexadecimal):
+Onaltılık sayıları 0x ön ekini kullanarak tanımlayabilirsiniz. Sayının ardından A ile F arasında harfler kullanılabilir. 
+
+ Örneğin:
+
+ val hexadecimalNumber = 0x1F
+
+-->İkilik sayıları 0b ön ekini kullanarak tanımlayabilirsiniz. Sadece 0 ve 1 rakamlarını kullanabilirsiniz. 
+
+ Örneğin:
+
+ val binaryNumber = 0b1010
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+8-
+
+
+
 
 
 
