@@ -194,7 +194,29 @@ Benzer şekilde, aşağıdaki örnekte pi değişkenine 3.14 değeri atanmış v
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-3-
+3-Float değişken oluştururken F ve f harfleri varken, Long değişken oluştururken neden küçük l harfi yoktur? Sorusunun Cevabı:
+
+-->Kotlin'de Float ve Double gibi ondalık sayı tipleri oluştururken sayıların sonuna F veya f harfi ekleyerek bu değerlerin ondalık sayı olarak kabul edilmesini sağlarız. Bu, sayının ondalık tipini belirtmek için kullanılır.
+
+Örneğin:
+
+ val floatValue = 3.14f
+ val doubleValue = 3.14
+
+-->Burada floatValue değişkenine 3.14 sayısını F harfi ile birlikte atadık ve bu sayıyı ondalık tip olarak tanımladık. doubleValue değişkenine ise sadece 3.14 atadık ve bu değer otomatik olarak Double tipinde kabul edilir.
+
+-->Ancak, Long türü için böyle bir belirteç gerekli değildir. Bunun nedeni, sayının varsayılan olarak tam sayı olarak kabul edilmesidir. Kotlin'de uzun bir tam sayıyı belirtmek için "L" veya "l" harfine ihtiyaç yoktur.
+
+ Örneğin:
+	
+val myLong: Long = 10000000000
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+4-
+
+
+
 
 
 
