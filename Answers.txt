@@ -318,7 +318,19 @@ val octalNumber = "123".toInt(8) // 83 ondalık olarak
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-9-
+9-"Geleneksel Notasyon" (Conventional Notation) gösterimi nasıl yapılır? Sorusunun Cevabı:
+
+
+-->Kotlin'de geleneksel notasyonu kullanarak basit bir matematiksel ifadeyi nasıl yazabileceğinizi göstermek için basit bir örnek verebilirim:
+
+  val result = (3 + 4) * (5 - 2)
+  println(result)
+
+-->Bu kod, (3 + 4) * (5 - 2) ifadesini hesaplar ve sonucu ekrana yazdırır. İfade, geleneksel matematik notasyonunu kullanarak toplama, çıkarma ve çarpma operatörlerini içerir. Sonuç olarak, result değişkeni 21 değerini alır ve bu değer ekrana yazdırılır.
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+10-
 
 
 
