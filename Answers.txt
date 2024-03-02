@@ -606,4 +606,14 @@ Bu yöntemlerden herhangi biri, Double ve Float türündeki sayıların varsayı
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-5.
+5."İşaretsiz" "Long" harf gösterimi nasıl yapılır? Sorusunun Cevabı:
+
+--> İşaretsiz bir Long tamsayıyı temsil etmek için ULong kullanılır ve harf gösterimi olarak büyük "U" harfi kullanılır. Örneğin:
+
+	val unsignedLong: ULong = 1000UL
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+6.
+
+
