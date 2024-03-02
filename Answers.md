@@ -261,4 +261,10 @@ fun printSquare(obj: Any) {
 
 printSquare(5) // Çıktı: Int Square: 25
 ```
-Yukarıdaki kodda if içerisinde obj'nin Int olduğu doğrulandığı için Int'e özgü özelliklere erişim sağlayabildik.
+Yukarıdaki kodda if içerisinde obj'nin Int olduğu doğrulandığı için Int'e özgü özelliklere erişim sağlayabildik. <p>
+Smart Cast'in yalnızca derleyicinin, değişkenin kontrol ile kullanımı arasında değişmeyeceğini garanti edebildiği durumlarda çalıştığını unutmayın. <p>
+Smart Cast sadece şu durumlarda kullanılabilir: 
+- val local variables: Local delegated property'ler hariç her zaman kullanılabilir.
+- val properties: Eğer özellik private veya internal ise, veya kontrol aynı modülde yapılmışsa kullanılabilir. Smart Cast, açık (open) özellikler veya özel getiricilere sahip özellikler üzerinde kullanılamaz.
+- var local variables: Eğer değişken, kontrol ve kullanım arasında değiştirilmiyorsa, üzerinde değişiklik yapacak bir lambda tarafından yakalanmamışsa ve delegated property değilse.
+- var properties: Hiçbir zaman çünkü farklı kodlar tarafından herhangi bir anda değiştirilebilir.
