@@ -614,6 +614,24 @@ Bu yöntemlerden herhangi biri, Double ve Float türündeki sayıların varsayı
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-6.
+6.İşaretsiz" değişkenlerin kullanım amaçları nelerdir? Sorusunun Cevabı:
+
+"Işaretsiz" (unsigned) değişkenler, genellikle pozitif değerleri temsil etmek için kullanılır. İşaretsiz değişkenlerin kullanım amaçları şunlardır:
+
+  -->Veri aralığını artırmak: İşaretsiz değişkenler, işaretli değişkenlere göre daha geniş bir değer aralığına sahiptir. Örneğin, UInt işaretsiz bir Int'den daha geniş bir aralığı temsil edebilir.
+
+  -->Düzenli artışları temsil etmek: Negatif olmayan tamsayı değerlerini temsil etmek için işaretsiz değişkenler daha uygun olabilir. Örneğin, bir indeksi veya bir sayaç değerini temsil etmek için kullanılabilirler.
+
+  -->Bellek verimliliği: Bellekte işaretli değişkenlere göre daha az yer kaplarlar. Bu nedenle, büyük veri yapılarında bellek verimliliği sağlamak için işaretsiz değişkenler kullanılabilir.
+
+  -->Bit düzeyinde işlemler: İşaretsiz değişkenler, bit düzeyinde operasyonlar yapmak için kullanılabilir. Örneğin, bir veri yapısının belirli bitlerini işlemek veya belirli bit desenlerini kontrol etmek için kullanılabilirler.
+
+  -->Veri uyumluluğu: Bazı durumlarda, işaretsiz veri tipleriyle çalışmak daha uygun olabilir. Örneğin, donanım düzeyinde işlemler yaparken veya belirli veri formatlarıyla çalışırken işaretsiz değişkenler daha uygun olabilir.
+
+  -->Bu nedenlerden dolayı, işaretsiz değişkenler belirli durumlarda daha uygun veya daha etkili olabilir. Ancak, kullanımı gerektiğinde dikkatli olunmalıdır çünkü işaretsiz değişkenlerin bazı dezavantajları da olabilir (örneğin, negatif değerlerle çalışamazlar).
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+7.
 
 
