@@ -425,3 +425,31 @@ val octalNumber = "123".toInt(8) // 83 ondalık olarak
 	a--
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+14.Sayısal değişkenlerde hangi karşılaştırma operatörleri kullanılabilir? Sorusunun Cevabı:
+
+-->Eşitlik (==): İki değerin birbirine eşit olup olmadığını kontrol eder.
+
+	val isEqual = a == b
+
+
+-->Eşit Değil (!=): İki değerin birbirine eşit olup olmadığını kontrol eder.
+
+	val isNotEqual = a != b
+
+
+-->Büyüklük (> ve <): Bir değerin diğerinden büyük veya küçük olup olmadığını kontrol eder.
+
+	val isGreater = a > b
+	val isLess = a < b
+
+
+-->Büyük Eşit ve Küçük Eşit (>= ve <=): Bir değerin diğerinden büyük eşit veya küçük eşit olup olmadığını kontrol eder.
+
+	val isGreaterOrEqual = a >= b
+	val isLessOrEqual = a <= b
+
+Bu operatörler, sayıların birbiriyle karşılaştırılmasını sağlar ve sonuç olarak true veya false döndürürler.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+15.
