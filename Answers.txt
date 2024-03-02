@@ -503,3 +503,58 @@ val rightShiftResult = a shr 2 // 3 (0b11)
 	val bigDecimal = BigDecimal("1234567890.12345678901234567890")
 
 -->BigInteger ve BigDecimal sınıfları, verilerinizi daha geniş bir aralıkta ve hassasiyetle temsil etmenize olanak tanır. Ancak, bu geniş aralık ve hassasiyet, performansı etkileyebilir, bu nedenle büyük sayılarla çalışırken dikkatli olmak önemlidir.
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+17.Double ve Float değişkenler kullanılırken "yuvarlama" davranışı nasıldır? Bu nasıl değiştirilebilir? Sorusunun Cevabı:
+
+--> Double ve Float türündeki sayılarla yapılan işlemlerde, varsayılan olarak IEEE 754 standartlarına göre "yakınsama" işlemi gerçekleştirilir. Bu, sayının tam olarak temsil edilemeyeceği durumlarda, en yakın değere yuvarlama yapılır. Örneğin, 0.1 sayısı tam olarak ikili (binary) sayı sistemine dönüştürülemez ve yaklaşık olarak 0.1000000000000000055511151231257827021181583404541015625 olarak temsil edilir. Bu gibi durumlarda, işlem sonucu en yakın değere yuvarlanır.
+
+--> Yuvarlama davranışını değiştirmek için, Math.round(), Math.floor() ve Math.ceil() gibi fonksiyonları kullanabilirsiniz. 
+
+  Örneğin:
+
+-->Math.round(): Sayıyı en yakın tam sayıya yuvarlar.
+
+	val rounded = Math.round(3.7) // 4
+
+-->Math.floor(): Sayıyı aşağıya yuvarlar (aşağıya tam sayıya).
+
+	val floored = Math.floor(3.7) // 3.0
+
+-->Math.ceil(): Sayıyı yukarıya yuvarlar (yukarıya tam sayıya).
+
+	val ceiled = Math.ceil(3.7) // 4.0
+
+Varsayılan yuvarlama davranışını değiştirmek için farklı yaklaşımlar kullanabiliriz. İşte bazı yöntemler:
+
+-->Özel Yuvarlama Fonksiyonları: Kotlin'de özel bir yuvarlama fonksiyonu tanımlayabilirsiniz. Örneğin, aşağıdaki gibi bir yuvarlama fonksiyonu oluşturabilirsiniz:
+
+	fun customRound(value: Double): Double { 	
+    return if (value >= 0) {
+        value + 0.5
+    } else {
+        value - 0.5
+    }.toInt().toDouble()
+}
+	// Bu fonksiyon, pozitif sayıları yukarıya, negatif sayıları aşağıya yuvarlar.
+
+-->DecimalFormat Sınıfı: Java'nın DecimalFormat sınıfını kullanarak belirli bir yuvarlama davranışı elde edebilirsiniz. Örneğin:
+
+	val decimalFormat = DecimalFormat("#.##")	
+	decimalFormat.roundingMode = RoundingMode.CEILING
+	val rounded = decimalFormat.format(3.7) // 4
+
+	// Bu örnek, RoundingMode.CEILING modunu kullanarak sayıları yukarıya doğru yuvarlar.
+
+-->BigDecimal Sınıfı: Büyük sayılarla çalışırken daha hassas bir yuvarlama yapmak için BigDecimal sınıfını kullanabilirsiniz. Örneğin:
+
+	val value = BigDecimal("3.7")			
+	val rounded = value.setScale(0, RoundingMode.CEILING)
+	// Bu örnek, setScale yöntemini kullanarak sayıyı yukarıya doğru yuvarlar.
+
+Bu yöntemlerden herhangi biri, Double ve Float türündeki sayıların varsayılan yuvarlama davranışını değiştirmenize olanak tanır. Ancak, yuvarlama işlemi her zaman tam olarak istediğiniz sonucu vermez, bu nedenle dikkatli olmanız önemlidir.
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
