@@ -298,3 +298,6 @@ Matematiksel operatör sonuçları eğer işlem yapılan değişkenler Int veya 
 
 ## 4.9- `val result = Int.MAX_VALUE + Int.MAX_VALUE` gibi bir işlemin sonucunda "result" değişkeninin tipi ve değeri ne olur? Neden böyle olduğunu açıklayın.
 "result" değişkeninin tipi Int ve değeri -2 olur. Sebebi ise burada overflow olması ve sign bit'in değerinin 0'dan 1'e dönmesidir. Daha detaylı anlamak için bu konuda yazdığım [makeleye](https://medium.com/@enes.okurterzi98/kotlin-number-değişkenler-ve-sınır-durumlar-e25450be100f) bakabilirsiniz.
+
+## 4.10- `val x = 5 / 2` `println(x == 2)` gibi bir işlemin sonucu ve tipi nedir? Neden böyle olduğunu açıklayın.
+Sonuç true olacaktır çünkü Int değerler ile yaptığımız matematiksel işlemin sonucu yine Int olur ve virgüllü kısmı dikkate alınmaz.
