@@ -44,6 +44,29 @@ Burayı toparlayacak olursak, şunu yazabiliriz:
 
 Val değişkenler, değerleri doğrudan değiştirilemeyen, ancak get fonksiyonu ile değişebilen değişkenlerdir. Bu değişkenler, değişmez değil, salt okunur olarak adlandırılır.
 
+*Kotlin’de val değişkenler, sadece okunabilir (read only) olarak tanımlanır. Bu, bir val değişkene atanan değerin değiştirilemeyeceği anlamına gelir. Ancak, bu val değişkenlerin
+mutlaka değişmez (immutable) olduğu anlamına gelmez. Bir val değişken, değiştirilebilir (mutable) bir nesneyi tutabilir. Örneğin:
+
+val list = mutableListOf(1, 2, 3) // val değişken
+list.add(4) // listeyi değiştirmek mümkün
+println(list) // [1, 2, 3, 4]
+
+Bu kodda, list değişkeni val olarak tanımlanmıştır, ancak listeyi değiştirmek mümkündür. Çünkü list değişkeni, değiştirilebilir bir liste nesnesini tutmaktadır. Bu nesnenin
+kendisi değişmez değildir.
+
+Buna karşılık, const değişkenler hem okunabilir hem de değişmezdir. Const değişkenler, derleme zamanında sabit olarak tanımlanır. Bu, const değişkenlere sadece String veya
+ilkel türlerde bir değer atanabileceği anlamına gelir. Fonksiyon veya sınıf yapıcı çağrısının sonucu const bir değişkene atanamaz. Örneğin:
+
+const val foo = complexFunctionCall() // Hata! const değişkenlere fonksiyon sonucu atanamaz
+val fooVal = complexFunctionCall() // Tamam, val değişkenlere atanabilir
+
+const val bar = "Merhaba dünya" // Tamam, const değişkenlere String atanabilir
+Const değişkenler, derleme sırasında tamamen yerleştirilir. Bu, const değişkenlerin daha verimli olduğu anlamına gelir.
+
+Özetle, val değişkenler okunabilir ama değişmez değildir. Const değişkenler hem okunabilir hem de değişmezdir. Const değişkenler, sadece String veya ilkel türlerde bir değer
+alabilir ve derleme zamanında sabit olarak tanımlanır.
+
+
 Soru 4 :"Tip Çıkarımı" (Type inference) kavramını açıklayın. Hangi durumlarda tip belirtmek kesin olarak gereklidir?
 
 Cevap: Tip çıkarımı (Type inference), Kotlin’de bir değişkenin tipinin, değerine göre otomatik olarak belirlenmesi anlamına gelir. Bu, değişken tanımlarken tip belirtmenin
@@ -203,7 +226,7 @@ Overflow, bir değişkenin değerinin, o değişkenin saklayabileceğinden daha 
 val b: Byte = 128 // overflow hatası
 println(b) // -128
 
-Rounding, bir değişkenin değerinin o değişkenin hassasiyetinden daha fazla ondalık basamağa sahip olması durumunda ortaya çıkarç
+Rounding, bir değişkenin değerinin o değişkenin hassasiyetinden daha fazla ondalık basamağa sahip olması durumunda ortaya çıkar.
 
 val f: Float = 0.34444f // rounding hatası
 println(f) // 0.34444001
@@ -229,7 +252,7 @@ için F tanımlamasını kullanmak durumundayız.
 val x = 3.14 // Double tipinde
 val y = 3.14f // Float tipinde
 
-Long bir değişken oluştururken L harfi kullanmak zorunlu değildir çünkü Kotlin tip çıkarımı zaten yaparç Eğer değişken Int aralığının dışında ise Long tipinde tanımlanmaktadır.
+Long bir değişken oluştururken L harfi kullanmak zorunlu değildir çünkü Kotlin tip çıkarımı zaten yapar. Eğer değişken Int aralığının dışında ise Long tipinde tanımlanmaktadır.
 
 val x = 1000000000 // Int tipinde
 val y = 1000000000000 // Long tipinde
@@ -261,8 +284,7 @@ hangi durumlar için Double kullanılmalıdır?
 
 Cevap: Double değişkenler 15 basamak, Float değişkenler ise 6-7 basamak işlem yaparlar. Kullanım için yapacağımız tercih bizim hassasiyet ve işlem aralığımıza bağlı olarak değişir. Örneğin
 
-
-   var number1 = 0.1F
+    var number1 = 0.1F
     var number2 = 0.2F
     
     println(number1 + number2)
@@ -353,6 +375,7 @@ Cevap:
 Soru 26: Sayısal değişkenlerde hangi karşılaştırma operatörleri kullanılabilir?
 
 Cevap: 
+
 Eşitlik (==): İki sayının eşit olup olmadığını kontrol eder. Örneğin, 5 == 3 sonucu false olur.
 
 Eşitsizlik (!=): İki sayının eşit olmadığını kontrol eder. Örneğin, 5 != 3 sonucu true olur.
@@ -376,8 +399,9 @@ val t = x <= y // Boolean, t = false
 Soru 27: Bit düzeyinde operatörler (Bitwise operators) nelerdir? Ne amaçla kullanılır? Kotlin'de bunları nasıl kullanabilirsiniz?
 
 Cevap: 
+
 Bit düzeyinde operatörler (Bitwise operators), sayısal değişkenlerin bitlerini manipüle etmek için kullanılan düşük seviyeli operatörlerdir. Bu operatörler, bit düzeyinde mantıksal işlemler,
-kaydırmalar ve maskeler gibi işlemleri gerçekleştirir1. Bit düzeyinde operatörler, performansı artırmak, bellek tasarrufu sağlamak, şifreleme, sıkıştırma, grafik işleme gibi alanlarda
+kaydırmalar ve maskeler gibi işlemleri gerçekleştirir. Bit düzeyinde operatörler, performansı artırmak, bellek tasarrufu sağlamak, şifreleme, sıkıştırma, grafik işleme gibi alanlarda
 kullanılabilir.
 Kotlin’de bit düzeyinde operatörler, yalnızca Int ve Long veri tiplerine uygulanabilir. Bu operatörleri kullanmak için, Kotlin’in sağladığı 7 fonksiyonu infix notasyonu ile çağırabiliriz.
 Bu fonksiyonlar şunlardır:
@@ -454,7 +478,7 @@ Bu yöntemler dışında kendi extension fonksiyonlarımızı da kullanabiliriz.
 
 Soru 30: "İşaretsiz" (Unsigned) değişkenler ne demektir? İşaretli olanlarla aralarındaki fark nedir?
 
-Cevap: İşaretsiz değişkenler sadece pozitif sayı alabbilen değişkenlerdir. İşaretli değişkenler ise hem pozitif hem negatif sayı alabilirler. Örneğin, unsigned int
+Cevap: İşaretsiz değişkenler sadece pozitif sayı alabilen değişkenlerdir. İşaretli değişkenler ise hem pozitif hem negatif sayı alabilirler. Örneğin, unsigned int
 değişkeni 0 ile 4294967295 arasında değerler alabilirken, signed int değişkeni -2147483647 ile +2147483647 arasında değerler alabilir. (negatif taraftaki değer de eklenir).
 Kotlin dilinde, unsigned değişkenler için ayrı veri tipleri vardır. Bunlar UInt, ULong, UByte, UShort ve UByteArray’dır. Bu veri tiplerini kullanmak için kotlin-stdlib-common
 modülünü projenize eklemeniz gerekir. Ayrıca, unsigned değişkenleri tanımlarken sayıların sonuna U veya u harfi eklemeniz gerekiyor.
@@ -508,7 +532,8 @@ için UB harfi, UShort veri tipi için US harfi kullanılır. Bu harfler, deği�
 
 Soru 33: "val a1 = 42u ve val a2 = 0xFFFF_FFFF_FFFFu" değişkenlerin tipleri ne olur? Neden?
 
-Cevap: val a1 = 42u değişkeninin tipi UInt olur. Çünkü 42 sayısı UInt veri tipinin değer aralığına girer. UInt veri tipi, 0 ile 4294967295 arasında değerler alabilir3. Eğer sayı sonunda U harfi olmasaydı, değişkenin tipi Int olurdu.
+Cevap: val a1 = 42u değişkeninin tipi UInt olur. Çünkü 42 sayısı UInt veri tipinin değer aralığına girer. UInt veri tipi, 0 ile 4294967295 arasında değerler alabilir. Eğer sayı sonunda U harfi
+olmasaydı, değişkenin tipi Int olurdu.
 
 val a2 = 0xFFFF_FFFF_FFFFu değişkeninin tipi ise ULong olur. Çünkü 0xFFFF_FFFF_FFFFu sayısı, UInt veri tipinin değer aralığından büyüktür.
 ULong veri tipi, 0 ile 18446744073709551615 arasında değerler alabilir. Eğer sayı sonunda U harfi olmasaydı, değişkenin tipi Long olurdu.
@@ -572,16 +597,18 @@ Cevap:  İşaretsiz değişken türleri ile Java API’leri arasındaki uyumlulu
 
 İşaretsiz değişkenleri kullanmadan önce, Java ile etkileşime girecek kodunuzun olup olmadığını kontrol edin. Eğer varsa, işaretsiz değişkenleri işaretli değişkenlere dönüştürmek
 için .to<Type>() fonksiyonunu kullanın.
- Örneğin, val x: UInt = 10u; val y: Int = x.toInt() şeklinde bir dönüşüm yapabilirsiniz. Ancak, dönüştürülen değer işaretli değişkenin sınır aralığına uygun olmalıdır, aksi takdirde
+
+Örneğin, val x: UInt = 10u; val y: Int = x.toInt() şeklinde bir dönüşüm yapabilirsiniz. Ancak, dönüştürülen değer işaretli değişkenin sınır aralığına uygun olmalıdır, aksi takdirde
 hata alırsınız.
+
 İşaretsiz değişkenleri Java’nın standart kütüphaneleriyle kullanırken, uygun veri türlerine dikkat edin. Örneğin, işaretsiz bir UInt değişkenini bir ArrayList’e eklemek isterseniz,
 ArrayList<Int> yerine ArrayList<UInt> kullanın. Böylece, değişkenin değeri korunur ve hata vermez.
 İşaretsiz değişkenleri performans açısından kritik olan kodlarda kullanmaktan kaçının. Eğer mümkünse, işaretsiz değişkenleri işaretli değişkenlere dönüştürün veya işaretli
 değişkenleri kullanın. Böylece, bellek ve işlem kaybını önleyebilirsiniz.
 
-- - - - - - - - -
+- - - - - - - - - -
 Tür Dönüşümü
-- - - - - - - - - 
+- - - - - - - - - -
 
 Soru 39: is ve !is operatörlerinin kullanımını açıklayın.
 
@@ -681,9 +708,9 @@ var y: String = "Merhaba" // y null olamaz
 
 Güvenli operatörler, null olabilen değişkenlerin null olmadığından emin olmak için kullanılır. Güvenli operatörler şunlardır:
 
-?. operatörü: Bu operatör, değişkenin null olup olmadığını kontrol eder. Eğer null ise, işlemi yapmaz ve null döndürür. Eğer null değilse, işlemi yapar ve sonucu döndürür.
- Örneğin:
+ ?. operatörü: Bu operatör, değişkenin null olup olmadığını kontrol eder. Eğer null ise, işlemi yapmaz ve null döndürür. Eğer null değilse, işlemi yapar ve sonucu döndürür.
 
+  Örneğin:
 
     var x: String? = null
     var y: String = "Merhaba"
@@ -691,7 +718,7 @@ Güvenli operatörler, null olabilen değişkenlerin null olmadığından emin o
     println(x?.length) // null
     println(y?.length) // 6
 
-?: operatörü: Bu operatör, değişkenin null olup olmadığını kontrol eder. Eğer null ise, belirtilen varsayılan değeri döndürür. Eğer null değilse, değişkenin kendisini döndürür.
+ ?: operatörü: Bu operatör, değişkenin null olup olmadığını kontrol eder. Eğer null ise, belirtilen varsayılan değeri döndürür. Eğer null değilse, değişkenin kendisini döndürür.
  Örneğin:
 
     var x: String? = null
@@ -700,7 +727,7 @@ Güvenli operatörler, null olabilen değişkenlerin null olmadığından emin o
     println(x ?: "Boş") // Boş
     println(y ?: "Boş") // Merhaba
 
-?.let operatörü: Bu operatör, değişkenin null olup olmadığını kontrol eder. Eğer null ise, hiçbir şey yapmaz. Eğer null değilse, değişkeni bir lambda fonksiyonuna gönderir.
+ ?.let operatörü: Bu operatör, değişkenin null olup olmadığını kontrol eder. Eğer null ise, hiçbir şey yapmaz. Eğer null değilse, değişkeni bir lambda fonksiyonuna gönderir.
  Örneğin:
 
     var x: String? = null
@@ -712,16 +739,16 @@ Güvenli operatörler, null olabilen değişkenlerin null olmadığından emin o
 Güvensiz operatörler, null olabilen değişkenlerin null olmadığını varsayar ve işlemi yapar. Eğer değişken null ise, bir NullPointerException hatası fırlatır.
  Güvensiz operatörler şunlardır:
 
-!! operatörü: Bu operatör, değişkenin null olmadığını belirtir. Eğer değişken null ise, bir NullPointerException hatası fırlatır. Örneğin:
+ !! operatörü: Bu operatör, değişkenin null olmadığını belirtir. Eğer değişken null ise, bir NullPointerException hatası fırlatır. Örneğin:
 
-   var x: String? = null
+    var x: String? = null
     var y: String = "Merhaba"
 
     println(x!!.length) // Hata: NullPointerException
     println(y!!.length) // 6
 
 
-as operatörü: Bu operatör, değişkenin belirtilen türe dönüştürülmesini sağlar. Eğer değişken null ise veya dönüştürülemez ise, bir ClassCastException hatası fırlatır.
+ as operatörü: Bu operatör, değişkenin belirtilen türe dönüştürülmesini sağlar. Eğer değişken null ise veya dönüştürülemez ise, bir ClassCastException hatası fırlatır.
  Örneğin:
 
     var x: Any? = null
@@ -749,13 +776,12 @@ Cevap:
 -Type mismatch: inferred type is Byte but Int was expected
 -Operator '==' cannot be applied to 'Byte' and 'Int'
 
-Bu şekilde iki tane hata alırız bu kodu çalıştırdığımızda çünkü implict widening conversion yani örtük tip dönüşümü Kotlin dilinde yoktur.Yani byte'ı Int' e doğrudan çeviremeyiz.
+Bu şekilde iki tane hata alırız bu kodu çalıştırdığımızda çünkü implict widening conversion yani örtük tip dönüşümü Kotlin dilinde yoktur. Yani byte'ı Int' e doğrudan çeviremeyiz.
 b.toInt() kullanabiliriz bunun için ancak bu sefer de ikinci hata kodunu alacağız sorun ise Byte bir değer ile Int bir değerin karşılaştırılamaz olduğudur.
 
 Soru 45: "val b: Byte = 1 ile val i: Int = b.toInt() ve son olarak print(b == i) gibi bir kod yazıldığında çıktı ne olur? Neden böyle bir çıktı aldığınızı açıklayın.
 
 Cevap : Bu kodda yer alan problem Byte bir değer ile Int bir değerin karşılaştırılamıyor olduğudur eğer çalıştırmayı denersek:
-
 
 Operator '==' cannot be applied to 'Byte' and 'Int'  şeklinde bir hata alırız. 
 
@@ -844,7 +870,7 @@ val i: Int = s as Int // TypeCastException
 Bu tür hataların önüne geçmek için, şu önlemler alınabilir:
 
 Tür dönüşümü yapmadan önce, değişkenin türünü is operatörü ile kontrol edebilirsiniz. Bu operatör, bir değişkenin belirli bir türe ait olup olmadığını döndürür. Örneğin,
- bir String değişkeninin Int tipine ait olup olmadığını kontrol etmek için şöyle yazabilirsiniz:
+bir String değişkeninin Int tipine ait olup olmadığını kontrol etmek için şöyle yazabilirsiniz:
 
 
 val s: Any = "Hello"
