@@ -489,4 +489,17 @@ val rightShiftResult = a shr 2 // 3 (0b11)
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-16.
+16.Kotlin'de büyük sayılarla çalışırken hangi ek türlerden yararlanılır ve bu türlerin sınırları nelerdir? Sorusunun Cevabı:
+
+-->Kotlin'de büyük sayılarla çalışırken BigInteger ve BigDecimal sınıflarından yararlanabilirsiniz.
+
+-->BigInteger: Bu sınıf, tamsayıları temsil etmek için kullanılır ve sınırsız büyüklükte tamsayıları destekler. Bellek sınırlarını aşan veya Long türünden daha büyük tamsayıları işlemek için idealdir.
+
+-->BigDecimal: Bu sınıf, ondalık sayıları temsil etmek için kullanılır ve kesirli sayıları sınırsız hassasiyetle destekler. Bu, finansal hesaplamalar gibi hassas hesaplamalar için idealdir.
+
+-->Bu sınıfların kullanımı şu şekildedir:
+
+	val bigInt = BigInteger("1234567890123456789012345678901234567890")
+	val bigDecimal = BigDecimal("1234567890.12345678901234567890")
+
+-->BigInteger ve BigDecimal sınıfları, verilerinizi daha geniş bir aralıkta ve hassasiyetle temsil etmenize olanak tanır. Ancak, bu geniş aralık ve hassasiyet, performansı etkileyebilir, bu nedenle büyük sayılarla çalışırken dikkatli olmak önemlidir.
