@@ -882,5 +882,19 @@ Sayısal değişkenlerde açık dönüşüm yaparken, çeşitli fonksiyonları k
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-8.
+8.val result = 1L + 3" // "Long + Int" gibi bir işlemin sonucunda "result" değişkeninin tipi ve değeri ne olur? Neden böyle olduğunu açıklayın. Sorusunun Cevabı:
 
+
+-->Bu durumda, 1L ifadesi bir Long değerini temsil ederken, 3 ifadesi bir Int değerini temsil eder.
+-->Toplama işlemi sırasında Kotlin, farklı veri tipleri arasında otomatik olarak genişletme (widening conversion) yapar ve sonuç olarak daha geniş veri tipini (Long) kullanır. 
+-->Sonuç olarak, result değişkeninin tipi Long olacaktır.
+
+	val result = 1L + 3
+	println(result) // Çıktı: 4
+
+-->Burada 3 ifadesi Int türünden olduğundan, Kotlin otomatik olarak 3 ifadesini Long türüne dönüştürür ve ardından toplama işlemi gerçekleştirir.
+-->Sonuç olarak, result değişkeni Long türünde olacaktır ve değeri 4 olacaktır.
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+9.
