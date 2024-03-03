@@ -820,4 +820,20 @@ Bu yaklaşım, programcının dönüşümün bilinçli bir şekilde yapıldığ�
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-6.
+6."val b: Byte = 1 ile val i: Int = b.toInt() ve son olarak print(b == i) gibi bir kod yazıldığında çıktı ne olur? Neden böyle bir çıktı aldığınızı açıklayın. Sorusunun Cevabı:
+
+-->val b: Byte = 1 ile bir Byte tipinde değişken oluşturulur ve değeri 1 olarak atanır.
+-->val i: Int = b.toInt() ile b değişkeni toInt() fonksiyonu kullanılarak Int türüne dönüştürülür ve i değişkenine atanır.
+-->print(b == i) ile b ve i değişkenlerinin değerleri karşılaştırılır ve sonuç yazdırılır.
+
+Bu durumda, b ve i değişkenleri farklı türlerde olduklarından, derleme hatası alırsınız çünkü doğrudan karşılaştırılamazlar.
+ Kotlin, tür uyumsuzluğunu dönüşüm yaparak çözmenizi ister. Bu nedenle, b ve i değişkenlerini aynı türe dönüştürdükten sonra karşılaştırma yapmalısınız. 
+
+Örneğin:
+
+	val b: Byte = 1
+	val i: Int = b.toInt()
+	print(b.toInt() == i) // true
+
+Bu durumda, b değişkeni Int türüne dönüştürülerek i ile karşılaştırıldığında sonuç true olacaktır, çünkü değerler aynı olacaktır.
+
