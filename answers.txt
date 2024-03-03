@@ -10,3 +10,6 @@ Var değişkenin get fonksiyonunu private yapmamızdır.Readonlye dönüşmesini
 3) "Değişmez" (Immutable) ve "Salt Okunur" (ReadOnly) kavramlarını açıklayın. val değişkenler neden aslında "değişmez" değil de "salt okunur" olarak açıklanmalıdır?
 Immutable oluşturuyan nesneyi değiştiremezsiniz.ReadOnly ise oluşturan nesneli değiştiremez ama içerikleri sadece okunablir.
 ***************************************************************
+4) "Tip Çıkarımı" (Type inference) kavramını açıklayın. Hangi durumlarda tip belirtmek kesin olarak gereklidir?
+Bir değişken tipinde değer atamasını belirtmek yerine sistem tarafından otomatik algılamasına type inference denir.Örnek ise val name = "Güneş" burada Güneşin String oldugunu otomatik algılıyor.
+***************************************************************
