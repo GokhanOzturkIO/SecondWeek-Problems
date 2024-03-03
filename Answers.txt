@@ -14,3 +14,20 @@ var name="Gamze"
 private set 
 
 
+"Değişmez" (Immutable) ve "Salt Okunur" (ReadOnly) kavramlarını açıklayın. `val` değişkenler neden aslında "değişmez" değil de "salt okunur" olarak açıklanmalıdır?
+val değişkenler genelde Immutable olarak duyarız ama bu yanlış bir ifadedir Çünkü;
+immutable demek şu oluyor değeri değiştirelemez anlamına gelmektedir.
+readOnly ise ilk değer atamasından sonra tekrar değer atanamaz demektir. Ama farklı zamanlarda farklı sonuçlar üretebilir.Yani değeri okunabilet ama set edilemeyen değişkendir.
+Bunu bir örnek açıklayalım;
+
+class Box {
+   var width: Int = 20
+   var height: Int = 40
+   var length: Int = 50
+   var usedSpace: Int = 0
+
+   val avaliableSpace: Int
+       get() = (width * height * length) - usedSpace
+}
+
+Bir box sınıfım var bu sınıfta değişkenlerim bulunuyor(width,height,length,usedSpace). avaliableSpace değişkenine baktığımızda get fonksiyonu güncellenmiş. (width * height * length) - usedSpace diye değişkenlerle bir işlem yapılıyor ve bu değişkenlerin anlık verilen değerleriyle bir hesaplama yapıyor. avaliableSpace değişkenimiz val olmasına rağmen farklı sonuçlar elde edebilir, Bu yüzden val değikene immutable demek yerine readOnly dememiz daha doğru olur.
