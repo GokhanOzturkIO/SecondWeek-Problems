@@ -19,3 +19,6 @@ Primiti sınıflar normal sınıf gibi gözüksede primitimitive hallerine optim
 6) "Tip Güvenliği" (Type Safety) kavramını açıklayın.
 Type Safety türleri doğrulamak için kullanılır.Yanlış bir tür ataması yaptığımızda bize hata verir.
 ****************************************************************
+7) Bir değişkeni nullable yapmak için ne yapmalıyız?
+Bir değişkeni nullable yapmak için değişkenin türüne ? eklememiz gerekiyor örnegin String? gb.
+*****************************************************************
