@@ -837,3 +837,50 @@ Bu durumda, b ve i değişkenleri farklı türlerde olduklarından, derleme hata
 
 Bu durumda, b değişkeni Int türüne dönüştürülerek i ile karşılaştırıldığında sonuç true olacaktır, çünkü değerler aynı olacaktır.
 
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+7.Sayısal değişkenlerde açık dönüşüm (Explicit Type Conversion) yaparken hangi fonksiyonları kullanabilirsiniz? Sorusunun Cevabı:
+
+Sayısal değişkenlerde açık dönüşüm yaparken, çeşitli fonksiyonları kullanabilirsiniz. Bu fonksiyonlar genellikle hedef türe göre isimlendirilmiştir. 
+
+Örneğin, Kotlin'de aşağıdaki fonksiyonlar sıkça kullanılır:
+
+-->toByte(): Bir değeri Byte türüne dönüştürmek için kullanılır.
+
+	val intValue: Int = 10
+	val byteValue: Byte = intValue.toByte()
+
+
+-->toShort(): Bir değeri Short türüne dönüştürmek için kullanılır.
+
+	val intValue: Int = 100
+	val shortValue: Short = intValue.toShort()
+
+
+-->toInt(): Bir değeri Int türüne dönüştürmek için kullanılır.
+
+	val longValue: Long = 1000L
+	val intValue: Int = longValue.toInt()
+
+
+-->toLong(): Bir değeri Long türüne dönüştürmek için kullanılır.
+
+	val intValue: Int = 1000
+	val longValue: Long = intValue.toLong()
+
+
+-->toFloat(): Bir değeri Float türüne dönüştürmek için kullanılır.
+
+	val doubleValue: Double = 3.14
+	val floatValue: Float = doubleValue.toFloat()
+
+
+-->toDouble(): Bir değeri Double türüne dönüştürmek için kullanılır.
+
+	val floatValue: Float = 3.14f
+	val doubleValue: Double = floatValue.toDouble()
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+8.
+
