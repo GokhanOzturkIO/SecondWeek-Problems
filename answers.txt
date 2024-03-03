@@ -22,3 +22,6 @@ Type Safety türleri doğrulamak için kullanılır.Yanlış bir tür ataması y
 7) Bir değişkeni nullable yapmak için ne yapmalıyız?
 Bir değişkeni nullable yapmak için değişkenin türüne ? eklememiz gerekiyor örnegin String? gb.
 *****************************************************************
+8) "Null Güvenliği" (Null Safety) kavramını açıklayın.
+Null olan bir ifadeleri sonradan kullanmak istediğimizde bunu bildirmesi ve kabul etmemesidir.
+*****************************************************************
