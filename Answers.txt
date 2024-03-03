@@ -1,0 +1,5 @@
+### Temel Türler & Null Güvenliği 
+`val` ile `var` arasındaki fark nedir?
+VAL(Value),değer anlamındadır. Ek olarak get edilebilir fakat set edilemez.
+VAR(Variable),değişken anlamındadır. Get ve set işlemi yapılabilmektedir.
+VAL'da bir değer ataması yapıldıktan sonra kaydedilir ve değiştirilemez. VAR'da ise bir değer atamasından sonra değiştirilebilir.
