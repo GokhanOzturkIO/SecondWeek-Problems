@@ -16,3 +16,6 @@ Bir değişken tipinde değer atamasını belirtmek yerine sistem tarafından ot
 5) Kotlin'de tüm değişkenlerin sınıf olarak bulunması, "ilkel tip" (primitive type) olmadıkları anlamına gelir mi? Arka planda neler oluyor?
 Primiti sınıflar normal sınıf gibi gözüksede primitimitive hallerine optimize edilirler.
 ***************************************************************
+6) "Tip Güvenliği" (Type Safety) kavramını açıklayın.
+Type Safety türleri doğrulamak için kullanılır.Yanlış bir tür ataması yaptığımızda bize hata verir.
+****************************************************************
