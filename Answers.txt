@@ -3,3 +3,14 @@
 VAL(Value),değer anlamındadır. Ek olarak get edilebilir fakat set edilemez.
 VAR(Variable),değişken anlamındadır. Get ve set işlemi yapılabilmektedir.
 VAL'da bir değer ataması yapıldıktan sonra kaydedilir ve değiştirilemez. VAR'da ise bir değer atamasından sonra değiştirilebilir.
+
+Bir `var` değişkeni `val` gibi davranmasını nasıl sağlayabiliriz `val` kelimesini kullanmadan? Bunu neden yapmak isteriz? Örnek bir senaryo verin.
+ Yukarıda bellirtiğim gibi bir var değişkeni set işleme yapabildiği için setini private yaparım böylece dışarıdan değer ataması alamaz değişkenin değeri ilk neyse onu kaydeder ve değiştirelemez.
+
+Örnek Senaryo;
+Gamze adında bir değerimiz olsun ve bunu val haline getirelim val keywordü olmadan 
+
+var name="Gamze"
+private set 
+
+
