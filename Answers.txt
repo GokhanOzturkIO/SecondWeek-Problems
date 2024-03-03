@@ -39,3 +39,12 @@ Kotlin'de tüm değişkenlerin sınıf olarak bulunması, "ilkel tip" (primitive
 Kotlin'de primitive tipler bir class gibi gözükürler ama çalışma zamanında primitive hallerini optimize ederler. Show Kotlin Byte Code çevirirken yine pimitive olacak şekilde değiştiriyor
 
 
+"Tip Güvenliği" (Type Safety) kavramını açıklayın.
+Type safety ,değişkenlerimizin tipleri ile atanan değerlerin tiplerin arasında farklılık olması durumunda hata vermesi ve kodu derlememesidir
+ val age:Int="Gamze"
+
+
+
+
+
+
