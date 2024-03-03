@@ -951,5 +951,37 @@ Bu nedenle, println(x == 2.5) ifadesi true değerini verecektir.
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-13.
+13.Kotlin'de tür dönüşümü yapılırken, dönüşümün başarısız olması durumunda TypeCastException nasıl ele alınır ve bu tür hataların önüne geçmek için hangi önlemler alınabilir? Sorusunun Cevabı:
+
+Kotlin'de tür dönüşümü yapılırken, dönüşümün başarısız olması durumunda TypeCastException adında bir hata alırsınız. Bu hata, bir nesnenin beklenen türde olmadığında veya beklenen türde bir nesne oluşturulamadığında ortaya çıkar. 
+
+Örneğin:
+
+	val x: Any = "hello"
+	val y: Int = x as Int // TypeCastException: java.lang.String cannot be cast to java.lang.Integer
+
+Bu tür hataların önüne geçmek için şu önlemleri alabilirsiniz:
+
+-->Güvenli Dönüşüm Operatörü (as?): Güvenli dönüşüm operatörü olan as? kullanarak dönüşümü yapabilirsiniz. Bu operatör, dönüşüm başarısız olursa null döndürür.
+
+	val x: Any = "hello"
+	val y: Int? = x as? Int // y null olacaktır, çünkü x bir String
+
+-->Instanceof Kontrolü: is anahtar kelimesiyle bir nesnenin belirli bir türe ait olup olmadığını kontrol edebilirsiniz.
+
+	val x: Any = "hello"
+	val y: Int? = if (x is Int) x else null // y null olacaktır, çünkü x bir String
+
+-->Try-Catch Bloğu: Dönüşüm yaparken bir try-catch bloğu kullanarak TypeCastException hatasını ele alabilirsiniz.
+
+	val x: Any = "hello"
+	val y: Int? = try {
+   	    x as Int
+	} catch (e: TypeCastException) {
+    	    null
+	}
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+14.
 
