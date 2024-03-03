@@ -7,3 +7,6 @@ Val immutabiliti değişemez olarak bilinsede aslında val readonly olarak geçe
 Var değişkenin get fonksiyonunu private yapmamızdır.Readonlye dönüşmesini sağlar. varda get ve set yapılırken read only'e dönüştüğünde sadece okuma izni verir
 örnek olarak var user.name="güneş" verdiğimiz değere private set yaparsak ve user.name="Gülşen" yaptıgımızda hata alırız çünkü var değişkenimiz readonly olmuş olur.
 ***************************************************************
+3) "Değişmez" (Immutable) ve "Salt Okunur" (ReadOnly) kavramlarını açıklayın. val değişkenler neden aslında "değişmez" değil de "salt okunur" olarak açıklanmalıdır?
+Immutable oluşturuyan nesneyi değiştiremezsiniz.ReadOnly ise oluşturan nesneli değiştiremez ama içerikleri sadece okunablir.
+***************************************************************
