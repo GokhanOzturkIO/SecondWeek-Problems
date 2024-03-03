@@ -13,3 +13,6 @@ Immutable oluşturuyan nesneyi değiştiremezsiniz.ReadOnly ise oluşturan nesne
 4) "Tip Çıkarımı" (Type inference) kavramını açıklayın. Hangi durumlarda tip belirtmek kesin olarak gereklidir?
 Bir değişken tipinde değer atamasını belirtmek yerine sistem tarafından otomatik algılamasına type inference denir.Örnek ise val name = "Güneş" burada Güneşin String oldugunu otomatik algılıyor.
 ***************************************************************
+5) Kotlin'de tüm değişkenlerin sınıf olarak bulunması, "ilkel tip" (primitive type) olmadıkları anlamına gelir mi? Arka planda neler oluyor?
+Primiti sınıflar normal sınıf gibi gözüksede primitimitive hallerine optimize edilirler.
+***************************************************************
