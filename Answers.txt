@@ -52,4 +52,5 @@ Bir değişkeni nullable yapmak için ne yapmalıyız?
 Bir değişkeni null yapmak için ? kullanmamız yeterli olucaktır.
 var name:String?=gamze //null olarak ayarlanabilir.
 
-
+"Null Güvenliği" (Null Safety) kavramını açıklayın.
+Nullable bir değişkeni hemen kullanamıyoruz bu durumda ideye ya bu degiskenin null olmayacagının garantisini !! operatoru ya da null degilse calissin ?. operatoru kullanmak gerekiyor. Debug modda calışırken kodlamıza !! seklinde yazmamız Kotlin Null Pointer Exception alammızı saglıyor. Gozden kacan nnullable degerleri bulabilirz. Projemizin crash olmamasi için ?. kullanmalıyız.
