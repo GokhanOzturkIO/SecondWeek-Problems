@@ -3,3 +3,7 @@ TEMEL TÜRLER VE NULL GÜVENLİĞİ
 1) val ile var arasındaki fark nedir?
 Val immutabiliti değişemez olarak bilinsede aslında val readonly olarak geçer var ise mutability değişken olarak bilinir verilen değerleri değişebilir.
 ***************************************************************
+2) Bir var değişkeni val gibi davranmasını nasıl sağlayabiliriz val kelimesini kullanmadan? Bunu neden yapmak isteriz? Örnek bir senaryo verin.
+Var değişkenin get fonksiyonunu private yapmamızdır.Readonlye dönüşmesini sağlar. varda get ve set yapılırken read only'e dönüştüğünde sadece okuma izni verir
+örnek olarak var user.name="güneş" verdiğimiz değere private set yaparsak ve user.name="Gülşen" yaptıgımızda hata alırız çünkü var değişkenimiz readonly olmuş olur.
+***************************************************************
