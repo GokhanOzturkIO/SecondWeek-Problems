@@ -31,3 +31,6 @@ class Box {
 }
 
 Bir box sınıfım var bu sınıfta değişkenlerim bulunuyor(width,height,length,usedSpace). avaliableSpace değişkenine baktığımızda get fonksiyonu güncellenmiş. (width * height * length) - usedSpace diye değişkenlerle bir işlem yapılıyor ve bu değişkenlerin anlık verilen değerleriyle bir hesaplama yapıyor. avaliableSpace değişkenimiz val olmasına rağmen farklı sonuçlar elde edebilir, Bu yüzden val değikene immutable demek yerine readOnly dememiz daha doğru olur.
+
+"Tip Çıkarımı" (Type inference) kavramını açıklayın. Hangi durumlarda tip belirtmek kesin olarak gereklidir?
+ Type İnference bir değişkenin tipinin eşittir ile atama yapılıyorsa ide tarafından bilinmesi durumudur.Eğer değişkenin değerini hemen atamıyorsak sonradan değer ataması verilecekse değişkenin tipi ideye belirtilmelidir.Çünko ona göre ide ona göre memory de bir alan ayıracak.
