@@ -936,5 +936,20 @@ println(result) // Çıktı: -2
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-12.
+12.val x = 5 / 2.toDouble() println(x == 2.5)" gibi bir işlemin sonucu ve tipi nedir? Neden böyle olduğunu açıklayın. Sorusunun Cevabı:
+
+-->Bu kod parçasında, 5 ve 2 ifadeleri Int türünden değerlerdir. 
+-->Ancak, 2.toDouble() ifadesi 2 değerini Double türüne dönüştürür.
+-->Dolayısıyla, 5 / 2.toDouble() ifadesinde Int türündeki 5 değeri Double türüne otomatik olarak dönüştürülür ve ardından bölme işlemi gerçekleştirilir. 
+-->Sonuç olarak, x değişkeni Double türünde olacaktır.
+
+	val x = 5 / 2.toDouble()
+	println(x == 2.5) // Çıktı: true
+
+x değişkeninin değeri 2.5 olacaktır çünkü 5 değeri Double türüne dönüştürüldükten sonra 2.5 değeri ile bölme işlemi yapılmıştır.
+Bu nedenle, println(x == 2.5) ifadesi true değerini verecektir.
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+13.
 
