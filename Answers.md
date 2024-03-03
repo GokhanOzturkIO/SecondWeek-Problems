@@ -307,3 +307,9 @@ Sonuç true olacaktır çünkü Int bir değer ile Long bir değerin matematikse
 
 ## 4.12- `val x = 5 / 2.toDouble()` `println(x == 2.5)` gibi bir işlemin sonucu ve tipi nedir? Neden böyle olduğunu açıklayın.
 Sonuç true olacaktır çünkü Int bir değer ile Double bir değerin matematiksel işleminin sonucu Double olur ve virgüllü kısım dikkate alınarak x değişkeninin değeri 2.5 olarak belirlenir.
+
+## 4.13- Kotlin'de tür dönüşümü yapılırken, dönüşümün başarısız olması durumunda TypeCastException nasıl ele alınır ve bu tür hataların önüne geçmek için hangi önlemler alınabilir?
+- Try-Catch Blokları: Bu şekilde hata yakalanabilir ve buna uygun şekilde işlem yapılabilir.
+- Dönüşüm Fonksiyonları: ".toIntOrNull()" gibi dönüşüm fonksiyonları ile istediğim dönüşüm yapılmadığı durumlarda değişkenimizi null yapabiliriz.
+- Smart Cast: İstediğimiz durumları "is" ya da "!is" ile if içerisinde kontrol ederek if scope'u içerisinde smart cast'ten yararlanarak işlemlerimizi yapabiliriz.
+- Safe cast operatörü: "as?" kullanarak bu durumlarda ya tip dönüşümü yaparız ya da değişkenimiz null olarak belirlenir. Tüm tipler için kullanılabilir. Değişkenimiz istediğimiz tipe dönüşemediği durumlarda null olarak belirlenir.
