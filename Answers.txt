@@ -897,4 +897,16 @@ Sayısal değişkenlerde açık dönüşüm yaparken, çeşitli fonksiyonları k
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-9.
+9.val result = Int.MAX_VALUE + Int.MAX_VALUE" gibi bir işlemin sonucunda "result" değişkeninin tipi ve değeri ne olur? Neden böyle olduğunu açıklayın. Sorusunun Cevabı:
+
+Bu durumda, Int.MAX_VALUE ifadesi Int türünden en büyük değeri temsil eder. Int.MAX_VALUE + Int.MAX_VALUE işlemi sonucunda ise toplamın beklenenden büyük olacağı bir durum ortaya çıkar. Bu durum, tam sayıların taşması (overflow) olarak adlandırılır.
+
+Kotlin'de, bu tür bir taşma durumunda derleyici hata vermez ve işlem sonucunu beklenen değerle karşılaştırma yapmaz. Bunun yerine, işlem sonucu beklenenden büyük olduğu için taşma oluştuğunu anlamanız gerekir. Bu durumda, result değişkeninin değeri -2 olacaktır. Bu değer, taşma sonucu elde edilen değerin beklenen değerden Int.MIN_VALUE + 1 fazla olmasından kaynaklanır.
+
+val result = Int.MAX_VALUE + Int.MAX_VALUE
+println(result) // Çıktı: -2
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+10.
+
