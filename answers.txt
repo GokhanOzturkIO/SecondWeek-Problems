@@ -1,0 +1,5 @@
+TEMEL TÜRLER VE NULL GÜVENLİĞİ
+
+1) val ile var arasındaki fark nedir?
+Val immutabiliti değişemez olarak bilinsede aslında val readonly olarak geçer var ise mutability değişken olarak bilinir verilen değerleri değişebilir.
+***************************************************************
