@@ -48,6 +48,8 @@ val name=null
 IDE tip cikarimi yaparken bu degiskenin degerini Nothin? olarak isaretler. Cunku hangi tipe karsilik geldini bilemiyor.
 val name:Nothing?=null
 
-
+Bir değişkeni nullable yapmak için ne yapmalıyız?
+Bir değişkeni null yapmak için ? kullanmamız yeterli olucaktır.
+var name:String?=gamze //null olarak ayarlanabilir.
 
 
