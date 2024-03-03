@@ -43,7 +43,10 @@ Kotlin'de primitive tipler bir class gibi gözükürler ama çalışma zamanınd
 Type safety ,değişkenlerimizin tipleri ile atanan değerlerin tiplerin arasında farklılık olması durumunda hata vermesi ve kodu derlememesidir
  val age:Int="Gamze"
 
-
+Bir değişkene null değer atanır ve tip belirtilmezse Kotlin bu değişkeni nasıl yorumlar?
+val name=null 
+IDE tip cikarimi yaparken bu degiskenin degerini Nothin? olarak isaretler. Cunku hangi tipe karsilik geldini bilemiyor.
+val name:Nothing?=null
 
 
 
