@@ -908,5 +908,19 @@ println(result) // Çıktı: -2
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-10.
+10.val x = 5 / 2 println(x == 2)" gibi bir işlemin sonucu ve tipi nedir? Neden böyle olduğunu açıklayın. Sorusunun Cevabı:
 
+
+Bu kod parçasında, 5 ve 2 ifadeleri Int türünden değerlerdir. 
+Dolayısıyla, 5 / 2 ifadesi bölme işlemi yapılırken tamsayılar arası bölme yapılacaktır. 
+Bu durumda, bölme işleminin sonucu 2 olacaktır.
+
+	val x = 5 / 2
+	println(x == 2) // Çıktı: true
+
+x değişkeni de Int türünde olacaktır çünkü bölme işlemi sonucunda elde edilen değer Int türünde bir tam sayıdır. 
+Sonuç olarak, println(x == 2) ifadesi true değerini verecektir.
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+11.
