@@ -138,3 +138,6 @@ burada Byte türündeki değilken toInt ile tür dönüşümü yapmıştır ve b
 7)Sayısal değişkenlerde açık dönüşüm (Explicit Type Conversion) yaparken hangi fonksiyonları kullanabilirsiniz?
 toByte(),toShort,toInt,toLong,toDouble,toFloat kullanılabilir..
 ******************************************************************
+8)"val result = 1L + 3" // "Long + Int" gibi bir işlemin sonucunda "result" değişkeninin tipi ve değeri ne olur? Neden böyle olduğunu açıklayın.
+Long olarak gelir.Shor byte dışında büyük olan hangisi ise onun tipini alıyor 
+******************************************************************
