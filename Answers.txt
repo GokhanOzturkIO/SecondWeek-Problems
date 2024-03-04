@@ -107,7 +107,11 @@ Sayının ifadesini değiştirmiyor daha okunaklı hale getiriyor.
 val tenThosund=10_000
 println(tenThosund) //10000
 
+`==` ile neyi karşılaştırırız? `===` ile neyi karşılaştırırız?
+== ile içerindeki değerleri karşılaştırırız.
+=== ile Memoryde ki referanslarını karşılaştırırız.
 
-
+`===` operatörü ile karşılaştırma yaparken Byte değer aralığı neden önemlidir? Kotlin bu aralığa göre neden özel bir davranış sergiler?
+Byte aralığı içerisindeyse aynı memory aralığına işaret ediyor. +127 ve -128 olan byte aralığının dışında ise false döner
 
 
