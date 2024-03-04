@@ -79,3 +79,11 @@ Tek duyarlı gösterimde sayı 32 bitle ifade edilir. Bu bitlerden biri işaret,
 Çift duyarlı gösterimde sayı 64 bitle ifade edilir. Bu bitlerden biri işaret, 11'i üst ve 52 tanesi de anlamlı kısmı ifade etmek için kullanılır.
 Bu gösterimde üst için sapma değeri 211-1-1 = 1023 olarak hesaplanır.
 
+Double ve Float değişkenlerle çalışırken ondalık ayıracı olarak hangi işaretler kullanılır? Bu ayıraçların kullanımında nelere dikkat etmek gerekir?
+Double ve float ondalık ayracı olarak "." kullanır.Ama dikkat edilmesi gereken bir durum var. Backen'te donen double ve float her zaman "." ile ayirmiyır olabilir. Dtabase dilinin farklı olmasına göre "." yerine "," ayrışıyor olabilir.
+val float=19.90F
+val float1=19f
+val double=2.14
+val double=2.13e10 
+
+
