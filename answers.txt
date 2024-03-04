@@ -34,3 +34,6 @@ Primitive tipler stack alanında saklanırken referans tiplerin değişken adıs
 11) Nullable bir değişkenin bir değere sahip olması ile null olması arasında bellek yönetimi açısından nasıl bir fark vardır? Null değer almış bir değişken bellekte yer kaplamaz diyebilir miyiz?
 Hayır diyemeyiz çünkü Null ataması yaztığımız verinin bir değişken adı vardır buda stack'te yer kaplamasına sebep olur.
 ******************************************************************
+12) Nullable bir değişkenle çalışırken hangi operatörleri kullanırız? Bu operatörlerin kullanım farkları nelerdir? Hangisini ne zaman kullanmak daha anlamlıdır?
+Nullable değişkenini kullanmak için ? ve !! ifadesni kullanabiliriz. ? ifadesini değeri null değil ise işlemi yap anlamına gelir.!! ifadesinde ise değerin hiç bir şekilde null gelmicek devam edebilirsiniz ve emin olduğunuzda kullanılır.Eğer null gelirse Exception hatası alır.
+******************************************************************
