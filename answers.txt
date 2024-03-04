@@ -67,3 +67,6 @@ Kotlinde Octal sistemi tanımlanmaz.Bunu desteklemiyor.
 9) "Geleneksel Notasyon" (Conventional Notation) gösterimi nasıl yapılır?
 + toplama - çıkarma / bölme * çarpma 
 ******************************************************************
+10)Sayısal değişkenlerde alt çizgi (underscore) nasıl kullanılır? Kotlin bunu nasıl yorumlar?
+Büyük sayıların daha okunur olması için kotlin underscore destekler ve _ görmezden gelir.
+******************************************************************
