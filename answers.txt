@@ -96,3 +96,6 @@ Unsigned negatif sayıları almazken signed numbersler hem pozitif hemde negatif
 ******************************************************************
 2)"İşaretsiz" değişkenler nasıl bir sınıf yapısında tutulurlar? Bu neden önemlidir?
 ******************************************************************
+3)"İşaretsiz" değişkenlerin harf gösterimi nasıldır?
+tanımladığımız sayının sonuna u yada U eklememiz gerek
+******************************************************************
