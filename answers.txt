@@ -46,3 +46,6 @@ Byte,Short,Int,Long,Float,Double sayısal veri tipleridir.Bellek kullanımı ve 
 2)Eğer bir değişkene tip belirtimi yapılmaz ve bir değer atanırsa, Kotlin tip çıkarımını nasıl yapar?
 Bunu type inferenc sayesinde yapar type inferec ide tarafından bilinmesidir.Byte,Short gb küçük sayılarda min hata için Int algılar Int değerinin aralıgından yüksekse Long alır.
 ******************************************************************
+3) Float değişken oluştururken F ve f harfleri varken, Long değişken oluştururken neden küçük l harfi yoktur?
+Çünkü 1 sayısı ile karışıklık olmaması için
+******************************************************************
