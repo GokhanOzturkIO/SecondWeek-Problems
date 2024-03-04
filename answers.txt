@@ -105,3 +105,6 @@ Kotlinde özel bir işaretsiz tam sayı tipi olmadıgı için UInt alır
 5)"İşaretsiz" "Long" harf gösterimi nasıl yapılır?
 uL ve UL ile yapılır
 ******************************************************************
+6)"İşaretsiz" değişkenlerin kullanım amaçları nelerdir?
+Eğerki negatif sayıları değilde pozitif sayıların değer aralıgını yükseltmek istersek kullanabiliriz.
+******************************************************************
