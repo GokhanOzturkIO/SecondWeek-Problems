@@ -43,3 +43,6 @@ SAYILAR
 1) Kaç farklı tipte "number" sınıfı miras alan "alt sınıf" (child class) vardır? Bunların değer aralıkları neden önemlidir?
 Byte,Short,Int,Long,Float,Double sayısal veri tipleridir.Bellek kullanımı ve performas acısından önemlidir.küçük bir değer yerine büyük bir veri tipi atarsak büyük bellek tüketimi ve performans kaybına neden olur.
 ******************************************************************
+2)Eğer bir değişkene tip belirtimi yapılmaz ve bir değer atanırsa, Kotlin tip çıkarımını nasıl yapar?
+Bunu type inferenc sayesinde yapar type inferec ide tarafından bilinmesidir.Byte,Short gb küçük sayılarda min hata için Int algılar Int değerinin aralıgından yüksekse Long alır.
+******************************************************************
