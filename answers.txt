@@ -25,3 +25,6 @@ Bir değişkeni nullable yapmak için değişkenin türüne ? eklememiz gerekiyo
 8) "Null Güvenliği" (Null Safety) kavramını açıklayın.
 Null olan bir ifadeleri sonradan kullanmak istediğimizde bunu bildirmesi ve kabul etmemesidir.
 *****************************************************************
+9) Bir değişkene null değer atanır ve tip belirtilmezse Kotlin bu değişkeni nasıl yorumlar?
+Nothink olarak yorumlar
+******************************************************************
