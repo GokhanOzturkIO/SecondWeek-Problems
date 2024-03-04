@@ -94,4 +94,10 @@ val decimal=197
 val hexadecimal=0x908
 val binary =0b101
 
+Sekizlik (Octal) değişkenler Java'da nasıl tanımlanır? Kotlin'de Sekizlik değişken tanımlanabilir mi?
+int octalNumber = 0755;
+Kotlin desteklemiyor octal sayıları 
+val octalNumbER=0755//yaptığımızda çalışmıyor.
+
+
 
