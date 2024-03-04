@@ -147,3 +147,6 @@ result türü int olur çünkü Int.MAX_VALUE nun ifadesi intdir ve int  değeri
 10)"val x = 5 / 2 println(x == 2)" gibi bir işlemin sonucu ve tipi nedir? Neden böyle olduğunu açıklayın.
 noktadan sonraki sayılar dikkate alınmaz 2.5 değeri gelsede 2 olarak algılanır.
 ******************************************************************
+11)"val x = 5L / 2 println(x == 2L)" gibi bir işlemin sonucu ve tipi nedir? Neden böyle olduğunu açıklayın.
+Long gelir.büyük olan tipi önemsiyor Integer gibi long ifadede noktadan sonrakiler önemsenmez.2L
+******************************************************************
