@@ -114,3 +114,9 @@ sınırların dışında olunca Ide uyarı verir ve hata atar.
 9)"İşaretsiz" değişken türleri (UInt, ULong vs.) kullanırken, Java API'leri ile uyumluluk konusunda ne gibi sorunlar olabilir? Bunları çözmek için neler yapabilirsiniz?
 Java işaretsiz sayılar desteklemediği için problem olabilir.Değer aralıkları değişiktir bu yüzden değeri minumum yapıp kalanı yeni bir değişkene verebilirizç
 ******************************************************************
+
+TÜR DÖNÜŞÜMÜ
+
+1)is ve !is operatörlerinin kullanımını açıklayın.
+is ile değişkenlerin tipini sonradan kontrol etmek için kullnırız !is ise tam tersidir tipi şu değildir diye kontrol eder.
+******************************************************************
