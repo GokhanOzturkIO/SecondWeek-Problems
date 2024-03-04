@@ -60,3 +60,6 @@ Primitive tiplerin adi ve değeri stackte saklanır. Referans tipler ise değiş
 
  Nullable bir değişkenin bir değere sahip olması ile null olması arasında bellek yönetimi açısından nasıl bir fark vardır? Null değer almış bir değişken bellekte yer kaplamaz diyebilir miyiz?
 Memory de yer kaplar null olduğu için head de olmaz fakat stackte yer kaplar.
+
+Nullable bir değişkenle çalışırken hangi operatörleri kullanırız? Bu operatörlerin kullanım farkları nelerdir? Hangisini ne zaman kullanmak daha anlamlıdır?
+"Null Güvenliği" (Null Safety) kavramını açıklayın. sorusunda cevabı bulunmaktadır.
