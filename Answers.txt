@@ -114,4 +114,8 @@ println(tenThosund) //10000
 `===` operatörü ile karşılaştırma yaparken Byte değer aralığı neden önemlidir? Kotlin bu aralığa göre neden özel bir davranış sergiler?
 Byte aralığı içerisindeyse aynı memory aralığına işaret ediyor. +127 ve -128 olan byte aralığının dışında ise false döner
 
+Sayısal değişkenlerde hangi matematiksel operatörler kullanılabilir?
++,-,/,*,%, math.pow(),math.sqrt(),math.abs()
+
+
 
