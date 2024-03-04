@@ -99,5 +99,6 @@ int octalNumber = 0755;
 Kotlin desteklemiyor octal sayıları 
 val octalNumbER=0755//yaptığımızda çalışmıyor.
 
-
+"Geleneksel Notasyon" (Conventional Notation) gösterimi nasıl yapılır?
+Matematikte kullanılan "conventional notation" içerisinde aritmetik operatörler(+,-,*,/), üs ifadeleri ^ mod alma % gibi örnekler.
 
