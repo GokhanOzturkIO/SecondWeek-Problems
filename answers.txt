@@ -75,3 +75,6 @@ Büyük sayıların daha okunur olması için kotlin underscore destekler ve _ g
 ******************************************************************
 12)=== operatörü ile karşılaştırma yaparken Byte değer aralığı neden önemlidir? Kotlin bu aralığa göre neden özel bir davranış sergiler?
 ******************************************************************
+13)Sayısal değişkenlerde hangi matematiksel operatörler kullanılabilir?
+++ ve -- operatörlerini değişkeni bir arttırıp azaltmak için kullanyız ve +,-,/,*,% yi kullanıyız
+******************************************************************
