@@ -55,3 +55,9 @@ Kayan noktanın ne kadar uzunlukta olucagını belirler.Single 32 bit uzunluğun
 5) Double ve Float değişkenlerle çalışırken ondalık ayıracı olarak hangi işaretler kullanılır? Bu ayıraçların kullanımında nelere dikkat etmek gerekir?
 ayıracta "." işareti kullanmamız gerekli , kullanımları hatayıdır.Float türünü kullanmak için f kullanılır kullanmazsak double olarak algılanır.
 ******************************************************************
+6) Double ve Float değişkenler ondalık kısımda kaç basamağa kadar işlem yaparlar? Bu sınırın üzerinde gelen ondalık bilgileri için nasıl davranırlar? Hangi durumlar için Float ve hangi durumlar için Double kullanılmalıdır?
+Float 7 iken Double 116 basamaga kadar hassasiyet saglar.
+******************************************************************
+7) Ondalık(Decimal), Onaltılık (Hexadecimal) ve İkilik (Binary) değişkenleri Kotlin'de nasıl tanımlayabilirsiniz?
+Ondalık-> val number=42, Onaltılık-> valHexdecimal=0x45, İkilik -> binaryNumber=0b101010 şeklindedir.
+******************************************************************
