@@ -64,3 +64,6 @@ Ondalık-> val number=42, Onaltılık-> valHexdecimal=0x45, İkilik -> binaryNum
 8) Sekizlik (Octal) değişkenler Java'da nasıl tanımlanır? Kotlin'de Sekizlik değişken tanımlanabilir mi?
 Kotlinde Octal sistemi tanımlanmaz.Bunu desteklemiyor.
 ******************************************************************
+9) "Geleneksel Notasyon" (Conventional Notation) gösterimi nasıl yapılır?
++ toplama - çıkarma / bölme * çarpma 
+******************************************************************
