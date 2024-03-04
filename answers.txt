@@ -123,3 +123,6 @@ is ile değişkenlerin tipini sonradan kontrol etmek için kullnırız !is ise t
 2)"Akıllı Dönüşüm" (Smart Cast) ne demektir? Farklı kod örnekleri ile açıklayın. Bu özelliğin sınırlamaları nelerdir?
 bir değişkenin tür kontrolü yapıldıktan sonra o kapsam içinde otomatik olarak türünün değişmesidir.
 ******************************************************************
+3)"Güvenli & Güvensiz" operatörler nelerdir?
+as? güvenli as güvensiz.as? türü güvenli bir deşilde dönüştürmeyi sağlar eger başarısız olursa null değeri döner.
+******************************************************************
