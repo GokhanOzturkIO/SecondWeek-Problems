@@ -63,3 +63,7 @@ Memory de yer kaplar null olduğu için head de olmaz fakat stackte yer kaplar.
 
 Nullable bir değişkenle çalışırken hangi operatörleri kullanırız? Bu operatörlerin kullanım farkları nelerdir? Hangisini ne zaman kullanmak daha anlamlıdır?
 "Null Güvenliği" (Null Safety) kavramını açıklayın. sorusunda cevabı bulunmaktadır.
+
+### Sayılar
+Kaç farklı tipte "number" sınıfı miras alan "alt sınıf" (child class) vardır? Bunların değer aralıkları neden önemlidir?
+Number sınıfını miras alan 6 sınıf vardır. Byte, Short,Int,Long, Float,Double.Hepsinin memory de kapladıkları alan farklı.Daha büyük veri tipleriyle kullanacaksak önemlidir.
