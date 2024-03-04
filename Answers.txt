@@ -147,4 +147,5 @@ println(unsignedInt)
 val signedInt:Int=-120
 println(signedInt)
 
-
+"İşaretsiz" değişkenler nasıl bir sınıf yapısında tutulurlar? Bu neden önemlidir?
+İşaretsiz sayılar, aynı genişlikteki signed karşılık türünü içeren tek bir depolama özelliğine sahip satır içi(inline classes) sınıflar olarak uygulanır. İnline class yapısında tutulması performas avantajları sağlamak için bellek kullanımını azaltma, kod okunabilirliği açısından önemlidir.
