@@ -73,3 +73,9 @@ Type Inference sırasında eger sayı Int'tipinden büyük değilse defult olara
 
 Float değişken oluştururken `F` ve `f` harfleri varken, Long değişken oluştururken neden küçük `l` harfi yoktur?
 1 ve l nin benzerliği karışıklık yaratmasın diye yoktur.
+
+Tek duyarlıklı (Single precision) ve Çift duyarlıklı (Double precision) kavramlarını açıklayın.
+Tek duyarlı gösterimde sayı 32 bitle ifade edilir. Bu bitlerden biri işaret, 8'i üst 23 tanesi ise anlamlı kısmın gösterimi için kullanılır. Tek duyarlı gösterimde üst için kaydırma değeri 28-1-1 = 127 olarak hesaplanır.
+Çift duyarlı gösterimde sayı 64 bitle ifade edilir. Bu bitlerden biri işaret, 11'i üst ve 52 tanesi de anlamlı kısmı ifade etmek için kullanılır.
+Bu gösterimde üst için sapma değeri 211-1-1 = 1023 olarak hesaplanır.
+
