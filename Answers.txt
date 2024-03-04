@@ -67,3 +67,6 @@ Nullable bir değişkenle çalışırken hangi operatörleri kullanırız? Bu op
 ### Sayılar
 Kaç farklı tipte "number" sınıfı miras alan "alt sınıf" (child class) vardır? Bunların değer aralıkları neden önemlidir?
 Number sınıfını miras alan 6 sınıf vardır. Byte, Short,Int,Long, Float,Double.Hepsinin memory de kapladıkları alan farklı.Daha büyük veri tipleriyle kullanacaksak önemlidir.
+
+Eğer bir değişkene tip belirtimi yapılmaz ve bir değer atanırsa, Kotlin tip çıkarımını nasıl yapar?
+Type Inference sırasında eger sayı Int'tipinden büyük değilse defult olarak int set edilir. Int ifadeden büyükse Long set edilir.
