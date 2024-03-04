@@ -61,3 +61,6 @@ Float 7 iken Double 116 basamaga kadar hassasiyet saglar.
 7) Ondalık(Decimal), Onaltılık (Hexadecimal) ve İkilik (Binary) değişkenleri Kotlin'de nasıl tanımlayabilirsiniz?
 Ondalık-> val number=42, Onaltılık-> valHexdecimal=0x45, İkilik -> binaryNumber=0b101010 şeklindedir.
 ******************************************************************
+8) Sekizlik (Octal) değişkenler Java'da nasıl tanımlanır? Kotlin'de Sekizlik değişken tanımlanabilir mi?
+Kotlinde Octal sistemi tanımlanmaz.Bunu desteklemiyor.
+******************************************************************
