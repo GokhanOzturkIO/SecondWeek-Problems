@@ -129,3 +129,6 @@ as? güvenli as güvensiz.as? türü güvenli bir deşilde dönüştürmeyi sağ
 4)Sayısal değişkenlerde örtük tip genişletme (implicit widening conversions) ne demektir? Kotlin'de bu neden yapılamaz?
 küçük veri türünün daha büyük bir veri türüne otomatik olarak genişletilmesini ifade eder.Kotlin bunu desteklemez daha güvenli kılmak için açıkca belirtilmiş dönüşümler ister.
 ******************************************************************
+5)"val b: Byte = 1 ile val i: Int = b ve son olarak print(b == i) gibi bir kod yazıldığında çıktı ne olur? Neden böyle bir çıktı aldığınızı açıklayın.
+b değişkeni Byte,i değişkeni Int .b ve i nin türleri farklı ve atama yapılamaz fakat == işleminde b Int e dönüştüren bir tür dönüşümü olur ve true döner.
+******************************************************************
