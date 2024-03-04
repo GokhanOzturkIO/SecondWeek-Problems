@@ -171,6 +171,13 @@ Pozitif değerleri temsil etmek için bir tamsayının tüm bit aralığını ku
 "İşaretsiz" değişkenlerle yapılan matematiksel işlemlerde, özellikle büyük sayılarla çalışırken karşılaşılabilecek taşma (overflow) ve taşma olmaması (underflow) durumları için Kotlin nasıl bir yönetim sağlar?
 Overflow durumlarda ek kontroller eklenmelidir. Eğer taşma durumu varsa, bu durumda bir exception fırlatılır ve exception yakalanarak taşma durumu ile başa çıkır.
 
+"İşaretsiz" değişkenlerin sınırlamaları nelerdir?
+val byte:UByte=255u
+val short:UShort= 65_535u
+val int:UInt=4_294_967_295U
+val long:ULong=18_446_744_073_709_551_615UL
+
+
 
 
 
