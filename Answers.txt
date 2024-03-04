@@ -177,6 +177,11 @@ val short:UShort= 65_535u
 val int:UInt=4_294_967_295U
 val long:ULong=18_446_744_073_709_551_615UL
 
+"İşaretsiz" değişken türleri (UInt, ULong vs.) kullanırken, Java API'leri ile uyumluluk konusunda ne gibi sorunlar olabilir? Bunları çözmek için neler yapabilirsiniz?
+Java ApI'leri genellikle işaretli tamsayı türleriyle çalışıyor. Kotlin'de işaretsiz sayılar kullanılıyorsa,bu API'lere entegrasyon sırasında uyumsuzluk olur.
+Tür Dönüşümleri yapılabilir.
+Taşma kontrolleri yapılmalı
+Uygun kütüphaneler incelenmeli ve dökümaston incelemesi yapılmalı
 
 
 
