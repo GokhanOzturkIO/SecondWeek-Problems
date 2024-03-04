@@ -57,3 +57,6 @@ Nullable bir değişkeni hemen kullanamıyoruz bu durumda ideye ya bu degiskenin
 
 İlkel bir değişkenin nullable olması ile null değer alamaması arasında bellek yönetimi açısından nasıl farklar vardır?
 Primitive tiplerin adi ve değeri stackte saklanır. Referans tipler ise değişken adı stackte değeri ise heapte saklanır.Hepsi stackte olduğu için daha hızldıır.Pritive tipler daha performanslıdır.
+
+ Nullable bir değişkenin bir değere sahip olması ile null olması arasında bellek yönetimi açısından nasıl bir fark vardır? Null değer almış bir değişken bellekte yer kaplamaz diyebilir miyiz?
+Memory de yer kaplar null olduğu için head de olmaz fakat stackte yer kaplar.
