@@ -135,3 +135,6 @@ b değişkeni Byte,i değişkeni Int .b ve i nin türleri farklı ve atama yapı
 6)"val b: Byte = 1 ile val i: Int = b.toInt() ve son olarak print(b == i) gibi bir kod yazıldığında çıktı ne olur? Neden böyle bir çıktı aldığınızı açıklayın.
 burada Byte türündeki değilken toInt ile tür dönüşümü yapmıştır ve b değişkeni Int olmuştur iki değişkenin tipi eşleştiği için true döner.
 ******************************************************************
+7)Sayısal değişkenlerde açık dönüşüm (Explicit Type Conversion) yaparken hangi fonksiyonları kullanabilirsiniz?
+toByte(),toShort,toInt,toLong,toDouble,toFloat kullanılabilir..
+******************************************************************
