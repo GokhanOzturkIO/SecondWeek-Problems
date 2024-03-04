@@ -73,3 +73,5 @@ Büyük sayıların daha okunur olması için kotlin underscore destekler ve _ g
 11)== ile neyi karşılaştırırız? === ile neyi karşılaştırırız?
 ==eşitlik operatorü değer eşitliğine bakar  === ise referans eşitligi operatörüdür .
 ******************************************************************
+12)=== operatörü ile karşılaştırma yaparken Byte değer aralığı neden önemlidir? Kotlin bu aralığa göre neden özel bir davranış sergiler?
+******************************************************************
