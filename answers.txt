@@ -86,3 +86,6 @@ Büyük sayıların daha okunur olması için kotlin underscore destekler ve _ g
 16)Kotlin'de büyük sayılarla çalışırken hangi ek türlerden yararlanılır ve bu türlerin sınırları nelerdir?
 BigInteger tam sayılar için BigDecimal ondalık sayılar için.
 ******************************************************************
+17)Double ve Float değişkenler kullanılırken "yuvarlama" davranışı nasıldır? Bu nasıl değiştirilebilir? 
+IEEE 754 standartlarına uyar.Eğer kendi fonksiyonunuzu yazarsanız bunu değiştirebilirsiniz.
+******************************************************************
