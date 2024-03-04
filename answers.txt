@@ -70,3 +70,6 @@ Kotlinde Octal sistemi tanımlanmaz.Bunu desteklemiyor.
 10)Sayısal değişkenlerde alt çizgi (underscore) nasıl kullanılır? Kotlin bunu nasıl yorumlar?
 Büyük sayıların daha okunur olması için kotlin underscore destekler ve _ görmezden gelir.
 ******************************************************************
+11)== ile neyi karşılaştırırız? === ile neyi karşılaştırırız?
+==eşitlik operatorü değer eşitliğine bakar  === ise referans eşitligi operatörüdür .
+******************************************************************
