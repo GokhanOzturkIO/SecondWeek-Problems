@@ -150,3 +150,6 @@ noktadan sonraki sayılar dikkate alınmaz 2.5 değeri gelsede 2 olarak algılan
 11)"val x = 5L / 2 println(x == 2L)" gibi bir işlemin sonucu ve tipi nedir? Neden böyle olduğunu açıklayın.
 Long gelir.büyük olan tipi önemsiyor Integer gibi long ifadede noktadan sonrakiler önemsenmez.2L
 ******************************************************************
+12)"val x = 5 / 2.toDouble() println(x == 2.5)" gibi bir işlemin sonucu ve tipi nedir? Neden böyle olduğunu açıklayın.
+Double olarak gelir.Ondalık sayı gösterimi daha baskındır.2.5 çıkacaktır.
+******************************************************************
