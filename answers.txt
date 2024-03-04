@@ -31,3 +31,6 @@ Nothink olarak yorumlar
 10) İlkel bir değişkenin nullable olması ile null değer alamaması arasında bellek yönetimi açısından nasıl farklar vardır?
 Primitive tipler stack alanında saklanırken referans tiplerin değişken adıstack değeri ise heapde saklanır.Bu yüzden Primitive tipler daha hızlıdırç
 ******************************************************************
+11) Nullable bir değişkenin bir değere sahip olması ile null olması arasında bellek yönetimi açısından nasıl bir fark vardır? Null değer almış bir değişken bellekte yer kaplamaz diyebilir miyiz?
+Hayır diyemeyiz çünkü Null ataması yaztığımız verinin bir değişken adı vardır buda stack'te yer kaplamasına sebep olur.
+******************************************************************
