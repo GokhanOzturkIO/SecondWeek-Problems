@@ -126,3 +126,6 @@ bir değişkenin tür kontrolü yapıldıktan sonra o kapsam içinde otomatik ol
 3)"Güvenli & Güvensiz" operatörler nelerdir?
 as? güvenli as güvensiz.as? türü güvenli bir deşilde dönüştürmeyi sağlar eger başarısız olursa null değeri döner.
 ******************************************************************
+4)Sayısal değişkenlerde örtük tip genişletme (implicit widening conversions) ne demektir? Kotlin'de bu neden yapılamaz?
+küçük veri türünün daha büyük bir veri türüne otomatik olarak genişletilmesini ifade eder.Kotlin bunu desteklemez daha güvenli kılmak için açıkca belirtilmiş dönüşümler ister.
+******************************************************************
