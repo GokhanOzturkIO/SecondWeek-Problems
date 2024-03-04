@@ -108,3 +108,6 @@ uL ve UL ile yapılır
 6)"İşaretsiz" değişkenlerin kullanım amaçları nelerdir?
 Eğerki negatif sayıları değilde pozitif sayıların değer aralıgını yükseltmek istersek kullanabiliriz.
 ******************************************************************
+7)"İşaretsiz" değişkenlerle yapılan matematiksel işlemlerde, özellikle büyük sayılarla çalışırken karşılaşılabilecek taşma (overflow) ve taşma olmaması (underflow) durumları için Kotlin nasıl bir yönetim sağlar?
+sınırların dışında olunca Ide uyarı verir ve hata atar.
+******************************************************************
