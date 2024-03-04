@@ -49,3 +49,6 @@ Bunu type inferenc sayesinde yapar type inferec ide tarafından bilinmesidir.Byt
 3) Float değişken oluştururken F ve f harfleri varken, Long değişken oluştururken neden küçük l harfi yoktur?
 Çünkü 1 sayısı ile karışıklık olmaması için
 ******************************************************************
+4) Tek duyarlıklı (Single precision) ve Çift duyarlıklı (Double precision) kavramlarını açıklayın.
+Kayan noktanın ne kadar uzunlukta olucagını belirler.Single 32 bit uzunluğunda daha az bellek kullanılırken Double Precision 64 bit ve daha fazla bellek kullanır yüksek hassasiyetlidir.
+******************************************************************
