@@ -89,3 +89,8 @@ BigInteger tam sayılar için BigDecimal ondalık sayılar için.
 17)Double ve Float değişkenler kullanılırken "yuvarlama" davranışı nasıldır? Bu nasıl değiştirilebilir? 
 IEEE 754 standartlarına uyar.Eğer kendi fonksiyonunuzu yazarsanız bunu değiştirebilirsiniz.
 ******************************************************************
+İŞARETSİZ SAYILAR
+
+1)"İşaretsiz" (Unsigned) değişkenler ne demektir? İşaretli olanlarla aralarındaki fark nedir?
+Unsigned negatif sayıları almazken signed numbersler hem pozitif hemde negatif sayıları alır.
+******************************************************************
