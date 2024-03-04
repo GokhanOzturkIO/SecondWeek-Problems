@@ -81,3 +81,5 @@ Büyük sayıların daha okunur olması için kotlin underscore destekler ve _ g
 14)Sayısal değişkenlerde hangi karşılaştırma operatörleri kullanılabilir?
 == Eşitlik,!=Eşit değil,>Büyük,> Küçük,>= Büyük veya eşit,<= Küçük veya eşit
 ******************************************************************
+15)Bit düzeyinde operatörler (Bitwise operators) nelerdir? Ne amaçla kullanılır? Kotlin'de bunları nasıl kullanabilirsiniz?
+******************************************************************
