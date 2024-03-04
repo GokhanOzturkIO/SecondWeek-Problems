@@ -120,5 +120,18 @@ Sayısal değişkenlerde hangi matematiksel operatörler kullanılabilir?
 Sayısal değişkenlerde hangi karşılaştırma operatörleri kullanılabilir?
 Eşittir(==) , eşit değildir(!=),büyüktür(>),(<),(>=),(<=)
 
+Bit düzeyinde operatörler (Bitwise operators) nelerdir? Ne amaçla kullanılır? Kotlin'de bunları nasıl kullanabilirsiniz?
+and (&) :İki biti karşılaştır. Her iki bitde 1 ise, sonuç 1 olur
+val a=1
+val b=1 
+println(a and b) //1
+
+veya(|):İki biti karşılaştırır. Herhangi biri 1 ise sonuç 1 olur
+val c=1
+val d=0
+println(a or b) //1
+
+
+
 
 
