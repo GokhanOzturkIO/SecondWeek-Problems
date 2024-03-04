@@ -70,3 +70,6 @@ Number sınıfını miras alan 6 sınıf vardır. Byte, Short,Int,Long, Float,Do
 
 Eğer bir değişkene tip belirtimi yapılmaz ve bir değer atanırsa, Kotlin tip çıkarımını nasıl yapar?
 Type Inference sırasında eger sayı Int'tipinden büyük değilse defult olarak int set edilir. Int ifadeden büyükse Long set edilir.
+
+Float değişken oluştururken `F` ve `f` harfleri varken, Long değişken oluştururken neden küçük `l` harfi yoktur?
+1 ve l nin benzerliği karışıklık yaratmasın diye yoktur.
