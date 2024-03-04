@@ -99,3 +99,6 @@ Unsigned negatif sayıları almazken signed numbersler hem pozitif hemde negatif
 3)"İşaretsiz" değişkenlerin harf gösterimi nasıldır?
 tanımladığımız sayının sonuna u yada U eklememiz gerek
 ******************************************************************
+4)"val a1 = 42u ve val a2 = 0xFFFF_FFFF_FFFFu" değişkenlerin tipleri ne olur? Neden?
+Kotlinde özel bir işaretsiz tam sayı tipi olmadıgı için UInt alır
+******************************************************************
