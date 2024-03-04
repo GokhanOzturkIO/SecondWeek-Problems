@@ -138,3 +138,13 @@ Double ve Float değişkenler kullanılırken "yuvarlama" davranışı nasıldı
 6.soruda cevabı verilmiştir.
 
 
+### İşaretsiz Sayılar
+"İşaretsiz" (Unsigned) değişkenler ne demektir? İşaretli olanlarla aralarındaki fark nedir?
+Unsigned değişkenler negatif olmayan tam sayıları değişkenlerdir. Signed değişkenler hem pozitif hem negatif sayılardı değişkenlerdir.
+val unsignedInt: UInt=30u
+println(unsignedInt)
+
+val signedInt:Int=-120
+println(signedInt)
+
+
