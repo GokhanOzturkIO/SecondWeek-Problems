@@ -94,3 +94,5 @@ IEEE 754 standartlarına uyar.Eğer kendi fonksiyonunuzu yazarsanız bunu deği�
 1)"İşaretsiz" (Unsigned) değişkenler ne demektir? İşaretli olanlarla aralarındaki fark nedir?
 Unsigned negatif sayıları almazken signed numbersler hem pozitif hemde negatif sayıları alır.
 ******************************************************************
+2)"İşaretsiz" değişkenler nasıl bir sınıf yapısında tutulurlar? Bu neden önemlidir?
+******************************************************************
