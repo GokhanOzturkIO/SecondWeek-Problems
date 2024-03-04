@@ -168,3 +168,9 @@ val b=1uL
 "İşaretsiz" değişkenlerin kullanım amaçları nelerdir?
 Pozitif değerleri temsil etmek için bir tamsayının tüm bit aralığını kullanmaktır.
 
+"İşaretsiz" değişkenlerle yapılan matematiksel işlemlerde, özellikle büyük sayılarla çalışırken karşılaşılabilecek taşma (overflow) ve taşma olmaması (underflow) durumları için Kotlin nasıl bir yönetim sağlar?
+Overflow durumlarda ek kontroller eklenmelidir. Eğer taşma durumu varsa, bu durumda bir exception fırlatılır ve exception yakalanarak taşma durumu ile başa çıkır.
+
+
+
+
