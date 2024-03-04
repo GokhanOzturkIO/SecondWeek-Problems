@@ -165,6 +165,6 @@ uL ve UL şeklinde gösterim yapılır.
 val a=1UL
 val b=1uL
 
-
-
+"İşaretsiz" değişkenlerin kullanım amaçları nelerdir?
+Pozitif değerleri temsil etmek için bir tamsayının tüm bit aralığını kullanmaktır.
 
