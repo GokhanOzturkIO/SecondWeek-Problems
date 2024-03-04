@@ -120,3 +120,6 @@ TÜR DÖNÜŞÜMÜ
 1)is ve !is operatörlerinin kullanımını açıklayın.
 is ile değişkenlerin tipini sonradan kontrol etmek için kullnırız !is ise tam tersidir tipi şu değildir diye kontrol eder.
 ******************************************************************
+2)"Akıllı Dönüşüm" (Smart Cast) ne demektir? Farklı kod örnekleri ile açıklayın. Bu özelliğin sınırlamaları nelerdir?
+bir değişkenin tür kontrolü yapıldıktan sonra o kapsam içinde otomatik olarak türünün değişmesidir.
+******************************************************************
