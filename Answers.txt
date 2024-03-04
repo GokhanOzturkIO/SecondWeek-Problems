@@ -117,5 +117,8 @@ Byte aralığı içerisindeyse aynı memory aralığına işaret ediyor. +127 ve
 Sayısal değişkenlerde hangi matematiksel operatörler kullanılabilir?
 +,-,/,*,%, math.pow(),math.sqrt(),math.abs()
 
+Sayısal değişkenlerde hangi karşılaştırma operatörleri kullanılabilir?
+Eşittir(==) , eşit değildir(!=),büyüktür(>),(<),(>=),(<=)
+
 
 
