@@ -54,3 +54,6 @@ var name:String?=gamze //null olarak ayarlanabilir.
 
 "Null Güvenliği" (Null Safety) kavramını açıklayın.
 Nullable bir değişkeni hemen kullanamıyoruz bu durumda ideye ya bu degiskenin null olmayacagının garantisini !! operatoru ya da null degilse calissin ?. operatoru kullanmak gerekiyor. Debug modda calışırken kodlamıza !! seklinde yazmamız Kotlin Null Pointer Exception alammızı saglıyor. Gozden kacan nnullable degerleri bulabilirz. Projemizin crash olmamasi için ?. kullanmalıyız.
+
+İlkel bir değişkenin nullable olması ile null değer alamaması arasında bellek yönetimi açısından nasıl farklar vardır?
+Primitive tiplerin adi ve değeri stackte saklanır. Referans tipler ise değişken adı stackte değeri ise heapte saklanır.Hepsi stackte olduğu için daha hızldıır.Pritive tipler daha performanslıdır.
