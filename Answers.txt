@@ -156,5 +156,10 @@ val byte:UByte=10u
 val short:UShort=1u
 val long:ULong=100U
 
+"val a1 = 42u ve val a2 = 0xFFFF_FFFF_FFFFu" değişkenlerin tipleri ne olur? Neden?
+val a1=42u aslında ide bunu bilemez explict belirtilmediği için 42u değerinden dolayı UInt türündendir.
+val a2=0xFFFF_FFFF_FFFFu ide yine explict olmadığı için değerin 0xFFFF_FFFF_FFFFu dolayı UInt türününü aştığından dolayı ULongtur.
+
+
 
 
