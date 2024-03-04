@@ -134,5 +134,7 @@ println(a or b) //1
 Kotlin'de büyük sayılarla çalışırken hangi ek türlerden yararlanılır ve bu türlerin sınırları nelerdir?
 BigInteger ve BigDecimal sınırları belirli bir bit sayısına göre ifade edilmez. Bellek kullanıma ve uygulamanın gereksinimlerine bağlı olarak büyüyebilir.
 
+Double ve Float değişkenler kullanılırken "yuvarlama" davranışı nasıldır? Bu nasıl değiştirilebilir?
+6.soruda cevabı verilmiştir.
 
 
