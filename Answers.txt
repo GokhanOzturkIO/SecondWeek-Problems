@@ -86,4 +86,7 @@ val float1=19f
 val double=2.14
 val double=2.13e10 
 
+Double ve Float değişkenler ondalık kısımda kaç basamağa kadar işlem yaparlar? Bu sınırın üzerinde gelen ondalık bilgileri için nasıl davranırlar? Hangi durumlar için Float ve hangi durumlar için Double kullanılmalıdır?
+Float tiplerde "." dan 6-7 basamağa kadar Double tiplerde "."'dan 15-16 basamağa kadar işlem yapar. 7 basamağın üzerindeyse double olur. 15-16 basamağın üzerindeyse bigdecimal kullanılır. 
+
 
