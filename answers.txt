@@ -52,3 +52,6 @@ Bunu type inferenc sayesinde yapar type inferec ide tarafından bilinmesidir.Byt
 4) Tek duyarlıklı (Single precision) ve Çift duyarlıklı (Double precision) kavramlarını açıklayın.
 Kayan noktanın ne kadar uzunlukta olucagını belirler.Single 32 bit uzunluğunda daha az bellek kullanılırken Double Precision 64 bit ve daha fazla bellek kullanır yüksek hassasiyetlidir.
 ******************************************************************
+5) Double ve Float değişkenlerle çalışırken ondalık ayıracı olarak hangi işaretler kullanılır? Bu ayıraçların kullanımında nelere dikkat etmek gerekir?
+ayıracta "." işareti kullanmamız gerekli , kullanımları hatayıdır.Float türünü kullanmak için f kullanılır kullanmazsak double olarak algılanır.
+******************************************************************
