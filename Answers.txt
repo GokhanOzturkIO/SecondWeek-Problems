@@ -102,3 +102,12 @@ val octalNumbER=0755//yaptığımızda çalışmıyor.
 "Geleneksel Notasyon" (Conventional Notation) gösterimi nasıl yapılır?
 Matematikte kullanılan "conventional notation" içerisinde aritmetik operatörler(+,-,*,/), üs ifadeleri ^ mod alma % gibi örnekler.
 
+Sayısal değişkenlerde alt çizgi (underscore) nasıl kullanılır? Kotlin bunu nasıl yorumlar?
+Sayının ifadesini değiştirmiyor daha okunaklı hale getiriyor.
+val tenThosund=10_000
+println(tenThosund) //10000
+
+
+
+
+
