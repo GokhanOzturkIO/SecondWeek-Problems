@@ -199,5 +199,39 @@ if(obj is String){
     }
 
 
+"Akıllı Dönüşüm" (Smart Cast) ne demektir? Farklı kod örnekleri ile açıklayın. Bu özelliğin sınırlamaları nelerdir?
+Kotlin programlama dilinde,belirli koşullar altında tür dönüşümü yapmayı otomatik gerçekleştiren bir özelliktir.Compiler(derleyici),değişken türünü kontrol ettiğinizde kontrol pozitifse, değişkenin o türe dönüştürmeye(cast) izin verir.
+
+var string:Any="Gamze"
+var int:Any=60
+
+fun demo(x:Any){
+        if (x is String){
+            println(x.length) //x otomatik olarak stringe dönüştürür
+        }
+    }
+    
+    demo(string)
+    demo(int)
+
+var x:Any=123
+
+    if (x !is String ) return // Eğer x String değilse ,return ifadesi nededniye fonksiyonu terk et.
+    println(x.length) // Smat Cast özelliği x otomatik olarak stringe dönüşür
+
+
+when(x){
+        is Int -> println(x+1) //Smart Case özelliği sayesinde otomatik inte dönüşür gider ve 124 olur.
+        is String-> println(x.length+1)
+        is IntArray-> println(x.sum())
+    }
+Sınırlamaları;
+val local variables(Değişkenler)= Her zaman kullanılabilir, ancak yerel (local) devredilen özelliklere (delegated properties) uygulanamaz.
+val Properties (Özellikler):Özellik (property) private ya da internal ise veya kontrol aynı modülde (module) yapılıyorsa kullanılabilir.Open özelliklere ya da özel getter'a sahip özelliklere uygulanamaz.
+
+
+
+
+
 
 
