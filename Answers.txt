@@ -156,6 +156,16 @@ Answer8: Kotlinde bulunan null safety,uygulama geliştirirken null referans hata
 
 
 
+Q9)Bir değişkene null değer atanır ve tip belirtilmezse Kotlin bu değişkeni nasıl yorumlar?
+
+Answer9: Bir değişkene null değeri atayıp o değişkenin tipini belirtmezsek kotlin bu değişkenin tipini Nothing? olarak belirler.Nothing aslında bomboş bir classtır.Nothing? sadece null değer alabilir ve başka hiçbir değeri temsil etmez.
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
 
 
 
