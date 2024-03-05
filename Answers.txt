@@ -33,3 +33,33 @@ class SumCalculations {
 Yukarıdaki örneğimize baktığımızda classın içerisine 3 adet var değişken tanımladım.Val olarak da result değişkeni tanımlayıp get fonksiyonuna return diyip,3 adet number'ın toplamını döndürdüm.Bu durumda classın dışında,ben bu classtan bir nesne oluşturduğumda ve number değişkenlerinin değerlerini değiştiriğimde otomatik olarak da val olarak tanımladığım result değerinin döndürdüğü değer değişecektir.Bundan dolayı result değişkeni immutable değil,readonlydir.
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Q2) Bir var değişkeni val gibi davranmasını nasıl sağlayabiliriz val kelimesini kullanmadan? Bunu neden yapmak isteriz? Örnek bir senaryo verin.
+
+Answer2:Bir var değişkeni val keywordunu kullanmadan val gibi davranmasını sağlamak için o değişkenin class içerisinde set fonksiyonunu private yapmamız gerekir.İlerleyen konularda göreceğiz fakat bizim aslında değişken diye tanımladığımız şeyler birer propertydir.Bu propertylerde de basitçe o değişkenin get ve set fonksiyonlarıdır.Yani biz bir değişken tanımladığımızda ve imleçi üzerine getirdiğimizde zaten genelde property ile ilgili bir yazı görürüz.Biz  var keywordu ile bir değişken tanımladığımızda örneğin,var name : String = "Arda",bu değişkenin arka planda get ve set fonksiyonları oluşur.Bu değişkeni val ile tanımlarsam arka planda sadece get fonksiyonu oluşur,set fonksiyonu  oluşmaz.Bu konuyu property vs field kısmında daha net anlayacağız fakat ben burda kısaca bahsetmek istedim.Sorumuza dönecek olursak değişkenin set fonksiyonunu private yaparsak bu durumda değişkene dışarıdan sadece erişebiliriz fakat değerini değiştiremeyiz.Bu kullanımı class içerisinde değerini değiştirmek istediğim bir değişken varsa ve ben bu değişkenin değerinin dışarıdan değiştirilmemesini istiyorsam kullanabilirim.
+
+fun main() {
+    val user = MyUser()
+    user.surname = ""(Cannot assign to 'surname': the setter is private in 'MyUser' hatası alırız.)
+
+}
+
+
+class MyUser() {
+    var name: String = "Arda"
+
+    var surname: String = "Işıtan"
+        private set
+
+
+    fun changeSurname() {
+        surname = "kaya" Class içerisinde değeri değiştirilebilir fakat class dışında değeri değiştirilemez.
+    }
+}
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
