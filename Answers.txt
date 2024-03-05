@@ -258,7 +258,9 @@ val x = 5 / 2 println(x == 2)" gibi bir işlemin sonucu ve tipi nedir? Neden bö
 val x=5/2 //iki int bölününce tam sayı elde edilir 2
 println(x==2) //true olur nedenide == operatörü içindeki değeri kontrol ettirir. tipleride de int tir.
 
-
+"val x = 5L / 2 println(x == 2L)" gibi bir işlemin sonucu ve tipi nedir? Neden böyle olduğunu açıklayın.
+ val x=5L /2 // Long inte bölümü de long olur cevap 2L 
+println(x == 2L) 2L==2L true olur tipi de Longtur
 
 
 
