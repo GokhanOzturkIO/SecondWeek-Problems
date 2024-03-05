@@ -232,6 +232,8 @@ val Properties (Özellikler):Özellik (property) private ya da internal ise veya
 "Güvenli & Güvensiz" operatörler nelerdir?
 "Unsafe" (güvensiz) (as) ve "Safe" (güvenli/nullable) (as?) cast operatörleri.
 
+Sayısal değişkenlerde örtük tip genişletme (implicit widening conversions) ne demektir? Kotlin'de bu neden yapılamaz?
+Bir veri türünü daha büyük bir veri türüne otomatik olarak büyümesi anlamına gelir. Örnek ; byte,short,char daha büyük bir tamsayı tipine(int) dönüştürmek otomatik gerçekleşir. Fakat bu kotlin'de yapılamaz çünkü kotlin tip güvenliği ve açık prensiplerini destekleyen bir dildir. 
 
 
 
