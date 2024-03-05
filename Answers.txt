@@ -1,0 +1,35 @@
+Q1) val ile var arasındaki fark nedir ?
+
+Answer1:En basit tanımıyla,val ile tanımladığımız bir değişkenin değerini sonradan değiştiremeyiz fakat var ile tanımladığımız bir değişkenin değerini sonradan değiştirebiliriz.Aslında var(variable),val(value) şeklinde düşünebiliriz.Ek olarak val değişkenlere immutable denildiğini duyarız fakat bu yanlış bir tabirdir.Aslında val değişkenler readOnly değişkenlerdir.İkisinin de tanımına bakalım.ReadOnly demek değeri okunabilen,ilk değer atamasından sonra tekrar değer atanamayan(set edilemeyen) değişkenlerdir.Fakat immutable demek ise bir değişkenin/nesnenin durumu asla ilk değerden farklı olamaz demektir.Bunu aslında bir örnek vererek açıklamak istiyorum.
+
+fun main() {
+    val o1 = SumCalculations()
+    println("Result1:${o1.result}")
+
+    o1.number1 = 30
+    o1.number2 = 40
+    o1.number3 = 50
+
+    println("Result2:${o1.result}")
+
+    o1.number1 = 50
+    o1.number2 = 60
+    o1.number3 = 70
+
+    println("Result3:${o1.result}")
+}
+
+class SumCalculations {
+    var number1 = 10
+    var number2 = 20
+    var number3 = 30
+
+    val result: Int
+        get() {
+            return number1 + number2 + number3
+        }
+
+}
+Yukarıdaki örneğimize baktığımızda classın içerisine 3 adet var değişken tanımladım.Val olarak da result değişkeni tanımlayıp get fonksiyonuna return diyip,3 adet number'ın toplamını döndürdüm.Bu durumda classın dışında,ben bu classtan bir nesne oluşturduğumda ve number değişkenlerinin değerlerini değiştiriğimde otomatik olarak da val olarak tanımladığım result değerinin döndürdüğü değer değişecektir.Bundan dolayı result değişkeni immutable değil,readonlydir.
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
