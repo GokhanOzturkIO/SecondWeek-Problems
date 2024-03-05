@@ -245,6 +245,8 @@ println(b==i) // türleri farklı olduğu için hata verir.
  val i: Int = b.toInt() // i ifadesinde b.toInt yaparak int türüne dönüştürtük
  print(b == i) //Kotlin: Operator '==' cannot be applied to 'Byte' and 'Int' hatasını verir b=byte ve i=int bu yüzden hata verir.
 
+Sayısal değişkenlerde açık dönüşüm (Explicit Type Conversion) yaparken hangi fonksiyonları kullanabilirsiniz?
+toByte,toShort,toInt,toLOng,toDouble
 
 
 
