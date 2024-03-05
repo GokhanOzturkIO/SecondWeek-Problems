@@ -61,5 +61,38 @@ class MyUser() {
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
+Q3) Değişmez" (Immutable) ve "Salt Okunur" (ReadOnly) kavramlarını açıklayın. val değişkenler neden aslında "değişmez" değil de "salt okunur" olarak açıklanmalıdır?
+
+Answer3: İlk soruda da bahsettiğim gibi,ben de bu zamana kadar val değişkenlerin immutable olduğunu biliyordum.Fakat aslında bu tanım yanlış bir tanımdır.val değişkenler readonlydir.İmmutable demek bir değişkenin veya nesnenin durumunun asla ilk değerden farklı olamamasıdır.Readonly ise,bir değişkenin değerinin okunabilmesi ve ilk değer atamasından sonra tekrar değer atanamaması(set edilememesi) anlamına gelir.
+
+fun main() {
+    val country = Country()
+    country.print()
+
+}
+
+class Country {
+    private var varMyCountry: String = "Turkey"
+    private val valMyCountry: String
+        get() {
+            return varMyCountry
+        }
+
+    fun print() {
+        println(valMyCountry)
+        varMyCountry = "Spain"
+        println(valMyCountry)
+        varMyCountry = "Italy"
+        println(valMyCountry)
+    }
+    
+}
+
+Yukarıdaki örnekte çıktılar sırasıyla,"Turkey","Spain","Italy" şeklinde olur.Bu şekilde class içerisinde val ile tanımladığımız bir val property'nin değerini değiştirebiliyoruz.İmmutable olması için getter fonksiyonunu değiştiremememiz gerekiyor.Bunu yapmak için de val değişkenleri bir fonksiyon scoopu içerisinde tanımlarsak,arka planda getter ve setter fonksiyonları oluşmayacaktır bu durumda da immutable olacaktır.
+
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 
 
