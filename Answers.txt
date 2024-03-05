@@ -114,3 +114,17 @@ class Deneme(){
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
+Q5)Kotlin'de tüm değişkenlerin sınıf olarak bulunması, "ilkel tip" (primitive type) olmadıkları anlamına gelir mi? Arka planda neler oluyor?
+
+Answer5:Kotlinde tüm değişkenler sınıf olarak tutulur, ilgili veri tipinin üzerine ctrl ile tıklayarak bakabiliriz.Fakat bu sınıflar,bytecode'a çevrilirken yapılan özel optimizasyonlarla primitive hallerine dönüştürülürler.Yani aslında kotlinde Int class olarak tutulan veriler,arka planda int olarak tutulur.Bu String hariç bütün değişkenlerde böyledir.String,java tarafında da class halinde tutulur.
+
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
