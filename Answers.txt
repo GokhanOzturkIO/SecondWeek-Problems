@@ -173,11 +173,12 @@ Answer10 : Bizim stack ve heap denen 2 adet memory alanımız vardır.Biz bir pr
 
 
 
+Q11)Nullable bir değişkenin bir değere sahip olması ile null olması arasında bellek yönetimi açısından nasıl bir fark vardır? Null değer almış bir değişken bellekte yer kaplamaz diyebilir miyiz?
 
 
+Answer11:Nullable bir değişkenin bir değere sahip olması demek,değişkenin kendisinin stack alanında,değerinin ise heap alanında tutulduğu anlamına gelir.Null olması demek ise o değişkenin kendisinin stack alanında tutulması fakat heap'de kullandığı alanın boşalması demektir.Bu bakımdan null değer almış bir değişken bellekte yer kaplamaz diyemeyiz.Çünkü o değişkenin null değer alması heapdeki alanının boşalmasına sebep olur fakat değişkenin ismi  stack alanında tutulmaya devam edilir.Sonrasında null yerine bir değer atarsak,heap'de değişkenin değeri stack'de ise değişkenin kendisi tutulmaya devam edilir.
 
-
-
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 
