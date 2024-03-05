@@ -130,6 +130,24 @@ Answer6:Kotlin'de "type safety" veya "tür güvenliği", bir programın türlerl
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
+Q7)Bir değişkeni nullable yapmak için ne yapmalıyız?
+
+
+Answer7:Kotlinde bir değişkeni nullable yapmak için,değişkenin tipinin sonuna ? koymamız gerekir.Bu,değişkenin null değerini de alabileceği anlamına gelir.Hemen bir örnekle açıklayalım.
+
+fun main() {
+
+    var nullableString : String? = null
+
+}
+
+Yukarıdaki örnekte,nullableString değişkeni string türünde olmasına rağmen null değerini de alabilir çünkü nullable(?) tanımlanmıştır.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
 
 
 
