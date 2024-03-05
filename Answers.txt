@@ -262,7 +262,9 @@ println(x==2) //true olur nedenide == operatörü içindeki değeri kontrol etti
  val x=5L /2 // Long inte bölümü de long olur cevap 2L 
 println(x == 2L) 2L==2L true olur tipi de Longtur
 
-
+"val x = 5 / 2.toDouble() println(x == 2.5)" gibi bir işlemin sonucu ve tipi nedir? Neden böyle olduğunu açıklayın.
+val x=5/2.toDouble() // 5 DEĞERİ inttir 2.toDouble ile 2 sayısını double a çevirir 2.0 'a double intten büyük olduğu için x double olur değeri 2.5
+ println(x == 2.5) //2.5==2.5 cevap true olur tipi de doubledır.
 
 
 
