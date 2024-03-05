@@ -183,6 +183,21 @@ Tür Dönüşümleri yapılabilir.
 Taşma kontrolleri yapılmalı
 Uygun kütüphaneler incelenmeli ve dökümaston incelemesi yapılmalı
 
+Tür Dönüşümü
+is ve !is operatörlerinin kullanımını açıklayın.
+is:Bir nesnenin belli bir türe uygun olup olmadığını kontrol eder. True döndürür
+is!=is operatörünün tersidir. Bir nesnenin belli bir türe uygun olmadığını kontrol eder.True döndürür
+val obj="Gamze"
+if(obj is String){
+        println(obj.length) //5
+    }
+
+   if (obj !is String){
+        println("Not a String")
+   }else{
+       println(obj.length)//5
+    }
+
 
 
 
