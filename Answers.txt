@@ -92,7 +92,25 @@ Yukarıdaki örnekte çıktılar sırasıyla,"Turkey","Spain","Italy" şeklinde 
 
 
 
----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+
+Q4) Tip Çıkarımı" (Type inference) kavramını açıklayın. Hangi durumlarda tip belirtmek kesin olarak gereklidir?
+
+Answer4:Tip çıkarımı,değişkenlerin tipinin aldığı değere göre otomatik olarak belirlenmesidir.Örneğin biz var name = "Arda" dediğimizde,IDE otomatik olarak name değişkeninin tipini string set eder,çünkü aldığı değer stringdir.Eğer değişkenimizi bir class içerisinde tanımlıyorsak bir değer ataması yapmamız gerekir.Fakat eğer local olarak bir fonksiyonun içerisinde bir değişken tanımlıyorsak o zaman değişkeninin tipini kesin olarak belirtmemiz gerekir.
+
+fun main() {
+
+var name : String (Bu şekilde başlangıç değer olmadan local bir değişken tanımlayabiliyoruz)
+
+}
+class Deneme(){
+
+    val age : Int (Bu şekilde tanımlayamayız,bir değer atamamız gerekir.)
+
+}
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
