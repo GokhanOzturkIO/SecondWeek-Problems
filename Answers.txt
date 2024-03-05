@@ -229,6 +229,9 @@ Sınırlamaları;
 val local variables(Değişkenler)= Her zaman kullanılabilir, ancak yerel (local) devredilen özelliklere (delegated properties) uygulanamaz.
 val Properties (Özellikler):Özellik (property) private ya da internal ise veya kontrol aynı modülde (module) yapılıyorsa kullanılabilir.Open özelliklere ya da özel getter'a sahip özelliklere uygulanamaz.
 
+"Güvenli & Güvensiz" operatörler nelerdir?
+"Unsafe" (güvensiz) (as) ve "Safe" (güvenli/nullable) (as?) cast operatörleri.
+
 
 
 
