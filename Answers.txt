@@ -164,6 +164,15 @@ Answer9: Bir değişkene null değeri atayıp o değişkenin tipini belirtmezsek
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
+Q10)İlkel bir değişkenin nullable olması ile null değer alamaması arasında bellek yönetimi açısından nasıl farklar vardır?
+
+Answer10 : Bizim stack ve heap denen 2 adet memory alanımız vardır.Biz bir primitive(ilkel)  değişken tanımladığımız zaman hem değişkenin kendisi hem de değişkenin değeri stack alanında tutulur.Stack alanı heap alanından daha hızlı çalışır.Fakat biz referans tipli bir değişkenle çalışıyorsak,değişkenin kendisi stack alanında,değeri ise heap alanında tutulur.Primitive bir değişkeni nullable yaparsak,bu değişken artık primitive tip gibi değil,büyük class tiplerine dönüşür.Örneğin val age : Int? yazıp herhangi bir değer atarsak,age değişkeninin kendisi stackde,değeri ise heapde tutulur.
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
 
 
 
