@@ -146,6 +146,13 @@ Yukarıdaki örnekte,nullableString değişkeni string türünde olmasına rağm
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
+Q8)"Null Güvenliği" (Null Safety) kavramını açıklayın.
+
+Answer8: Kotlinde bulunan null safety,uygulama geliştirirken null referans hatalarını önlemeyi amaçlayan bir özelliktir.Null referans hataları genellikle bir nesne veya değişken  null olduğunda ya da o nesne veya değişken üzerinden bir işlem yapmaya çalıştığımızda meydana gelir.Bu tür hataları aldığımızda genellikle hata ayıklama süreçlerimiz karmaşıklaşır ve uygulamada beklenmeyen davranışlara yol açabilir.Kotlinde null güvenliğini çeşitli yollardan sağlayabiliriz.Bunlara ?. veya !!. kullanımı,elvis operatörünün kullanımı,let fonksiyonunu kullanımı gibi çeşitli örnekler verilebilir.
+
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 
