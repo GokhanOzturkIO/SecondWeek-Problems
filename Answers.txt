@@ -254,6 +254,12 @@ Değişkenin tipi long olur çünkü hangisi büyükse onun tipini verir.Değeri
 "val result = Int.MAX_VALUE + Int.MAX_VALUE" gibi bir işlemin sonucunda "result" değişkeninin tipi ve değeri ne olur? Neden böyle olduğunu açıklayın.
 Result değişkenin tipi int olur değişkeninin değeride -2 olur. Nedine de 2 tane int değer max değerleri toplayınca overflow yani bir taşma durumu meydana gelir.Kotlin'de taşma durumunda minimum değerleri(wrap around) toplar.
 
+val x = 5 / 2 println(x == 2)" gibi bir işlemin sonucu ve tipi nedir? Neden böyle olduğunu açıklayın.
+val x=5/2 //iki int bölününce tam sayı elde edilir 2
+println(x==2) //true olur nedenide == operatörü içindeki değeri kontrol ettirir. tipleride de int tir.
+
+
+
 
 
 
