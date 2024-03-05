@@ -240,6 +240,11 @@ val b:Byte =1
 val i: Int =b // burada hata vericektir b ifadesi byte türündedir ve ben i ye int olduğunu belirttim burada tür uyumsuzluğu vericektir. Byte türündeki bir değişkeni inte atamak doğru olmaz. 
 println(b==i) // türleri farklı olduğu için hata verir.
 
+"val b: Byte = 1 ile val i: Int = b.toInt() ve son olarak print(b == i) gibi bir kod yazıldığında çıktı ne olur? Neden böyle bir çıktı aldığınızı açıklayın.
+ val b: Byte = 1 // b ifadesi byte türündendir
+ val i: Int = b.toInt() // i ifadesinde b.toInt yaparak int türüne dönüştürtük
+ print(b == i) //Kotlin: Operator '==' cannot be applied to 'Byte' and 'Int' hatasını verir b=byte ve i=int bu yüzden hata verir.
+
 
 
 
