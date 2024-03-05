@@ -123,6 +123,15 @@ Answer5:Kotlinde tüm değişkenler sınıf olarak tutulur, ilgili veri tipinin 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
+Q6)"Tip Güvenliği" (Type Safety) kavramını açıklayın.
+
+Answer6:Kotlin'de "type safety" veya "tür güvenliği", bir programın türlerle ilişkili hataları minimuma indirmesini sağlayan bir özelliktir. Bu, kotlinin  tür sistemi tarafından sağlanır ve bizim  veri türlerini doğru ve güvenli bir şekilde kullanılmasını sağlar.Bu aslında bizim kod yazarken daha güvenli ve sağlam kod yazmamızı sağlar.Kotlin,tür güvenliğini çeşitli yollardan sağlar.Null güvenliği,tür çıkarımı,type checks,smart cast gibi özelliklerle kodumuzu minimum hatada yazarız.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
 
 
 
