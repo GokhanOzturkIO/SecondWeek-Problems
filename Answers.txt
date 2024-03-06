@@ -236,3 +236,17 @@ Kotlinde ise double ve float denen 2 adet kayan noktaları temsil eden veri tipl
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
+Q5)Double ve Float değişkenlerle çalışırken ondalık ayıracı olarak hangi işaretler kullanılır? Bu ayıraçların kullanımında nelere dikkat etmek gerekir?
+
+
+Answer5: Double ve float değişkenlerle çalışırken,ondalık ayrıracı olarak (.) kullanılır.Örnek olarak aşağıdaki değişkenlere bakabiliriz.
+
+val doubleNumber: Double = 3.14
+val floatNumber: Float = 3.14f
+
+Bu ayıracı kullanırken ondalık kısımları ayırırken sadece .(nokta) koymalıyız.Virgül veya başka bir işaret kullanmamalıyız.Bazı dillerde ondalıklı sayıların ondalıklı kısmını ayrırken .(nokta) yerine ,(virgül) kullanılmaktadır.Bu gibi durumlarda dil değişikliği yaparken dikkat etmeliyiz.
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
