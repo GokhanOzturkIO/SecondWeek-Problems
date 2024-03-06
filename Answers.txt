@@ -224,5 +224,15 @@ Answer3: Kotlinde long bir değişken oluştururken L harfini kullanırız.Küç
 
 
 
+Q4)Tek duyarlıklı (Single precision) ve Çift duyarlıklı (Double precision) kavramlarını açıklayın.
+
+Answer4 : Tek duyarlıklı sayılar genellikle 32 bitlik kayan nokta formatını temsil ederler.Bu format,bir kayan nokta sayısının yaklaşık olarak 6-7 digit kesinliğe sahip bir şekilde saklar.Daha az bellek kullanır ve daha hızlı işlem yapar,ancak daha düşük hassasiyete sahiptirler.
+
+Çift duyarlıklı sayılar genellikle 64 bitlik kayan nokta formatını temsil ederler.Bu format,bir kayan nokta sayısının yaklaşık olarak 15-16 digit kesinliğe sahip bir şekilde saklar.Daha fazla bellek kullanır ve daha yavaş işlem yapar,ancak daha yüksek hassasiyete sahiptir.
+
+Kotlinde ise double ve float denen 2 adet kayan noktaları temsil eden veri tipleri bulunmaktadır.Kotlin'de varsayılan olarak ondalıklı sayılar double tanımlanır ve çift duyarlıklı sayılardır.Double genellikle daha yüksek hassasiyet gerektiren işlemlerde kullanılır,fakat daha fazla bellek kullanırlar.Değişkenin değerinin sonunda 'f' veya 'F' koyar isek float bir ondalıklı sayı tanımlamış oluruz.Bunlar ise tek duyarlıklı sayılardır.Float veri tipini,belli durumlarda bellek kullanımını azaltmak veya daha hızlı işlem yapabilmek için tercih edebiliriz.
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
