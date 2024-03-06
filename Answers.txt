@@ -250,3 +250,13 @@ Bu ayıracı kullanırken ondalık kısımları ayırırken sadece .(nokta) koym
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
+
+Q6)Double ve Float değişkenler ondalık kısımda kaç basamağa kadar işlem yaparlar? Bu sınırın üzerinde gelen ondalık bilgileri için nasıl davranırlar? Hangi durumlar için Float ve hangi durumlar için Double kullanılmalıdır?
+
+
+Answer6:Float sayılar ondalıklı kısımda 6-7 basamağa kadar olan işlemleri yaparlar.Double sayılar ise ondalıklı kısımda 15-16 basamağa kadar olan işlemleri yaparlar.Eğer bu sınırın üzerinde gelen ondalık bilgileri var ise,bu sayılar yuvarlanır veya fazlalık olan kısım kesilir.Daha fazla hassasiyet gereken işlemlerimiz var ise double veri tipini kullanmamız bizim için daha uygun olacaktır.Örnek verecek olursak finansal hesaplamalar gibi hassas verilerin işlendiği uygulamalarda kullanılabilir.Float veri tipini ise,daha düşük bellek kullanımı ve daha hızlı hesaplama gereken uygulamalarda kullanabiliriz.Örneğin grafik işleme veya sinyal işleme gibi uygulamalarda kullanabiliriz.
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
