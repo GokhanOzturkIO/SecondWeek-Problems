@@ -182,3 +182,16 @@ Answer11:Nullable bir değişkenin bir değere sahip olması demek,değişkenin 
 
 
 
+Q12)Nullable bir değişkenle çalışırken hangi operatörleri kullanırız? Bu operatörlerin kullanım farkları nelerdir? Hangisini ne zaman kullanmak daha anlamlıdır?
+
+Answer12: Nullable değişkenlerle çalışırken ?.(Safe call operatörü) veya !!.(Non-null Assert Operatörü) operatörlerini kullanırız. 
+
+?. operatörü,nullable değişkenler üzerinde işlem yaparken,null değerlerini güvenli bir şekilde işlemek için kullanılır.Örneğin val name:String? = "Arda" bu ifade nullable bir ifadedir.println(name?.length()) dediğimizde name değişkeni null ise bu işlemi gerçekleştirmeyecek ve null yazısını ekranda bastıracaktır.Fakat eğer name ifadesi buradaki gibi null değilse işlemi gerçekleştirecek ve ekrana 4 yazısını bastıracaktır.Yani sonuç olarak değişken null ise null değerini döndür,eğer null değil ise verilen işlemi gerçekleştir diyoruz.
+
+!!. operatöründe ise nullable bir değişkenin null olmayacağının garantisini vermiş oluruz.Bu durumda eğer değişken null ise NullPointerException hatası fırlatılır.Bu örnekten gidecek olursak println(name!!.length()) dediğimiz zaman name değişkeni kesinlikle null değil demiş oluruz ve bu işlemden hata almayız.Fakat name değişkeninin değerini null yaparsak,bahsettiğim üzere NullPointerException hatası alırız.
+
+Best Practice olarak kodlarımızı !!. şeklinde yazmamız NullPointerException hatası almamızı sağlar,bu sayede gözden kaçan nullable değerleri bulabilmemizi sağlar.
+Ancak,canlıya çıkan projemiz var ise,çok gerekli olmayan kısımlar yani daha az önemli olan kısımlar için ?. kullanımını,daha önemli olan,daha kritik olan yani uygulamanın crash olması kullanıcıya hatalı bilgi göstermekten daha önemliyse !!. kullanımını yapmamız daha uygun olacaktır.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
