@@ -195,3 +195,15 @@ Ancak,canlıya çıkan projemiz var ise,çok gerekli olmayan kısımlar yani dah
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+                                                                            NUMBERS 
+
+
+Q1)Kaç farklı tipte "number" sınıfı miras alan "alt sınıf" (child class) vardır? Bunların değer aralıkları neden önemlidir?
+
+Answer1:Number classını miras alan child  classlar:Byte,Short,Int,Long,Double ve Float classlarıdır.Bu veri tiplerinin değerleri bizim için önemlidir çünkü bu veri tiplerinin alabileceği belli değer aralıkları vardır.Belli değer aralıklarını almalarının dışında hepsi bellekte farklı boyutlarda yer kaplarlar.Örneğin Byte veri tipi bellekte 8 bitlik yer kaplar ve (-128)-(127) değer aralığına sahip değerleri alabilir.Projelerimizde maksimum performansı alabilmek için,veri tiplerinin değer aralıklarına uygun bir şekilde çalışmalıyız.Örneğin daha büyük sayıları temsil etmek için Long veri tipini veya daha küçük sayıları temsil etmek için Byte veya Short veri tipini kullanmalıyız.Ayrıca bu veri tiplerini kullanırken de değer aralıklarını aşmamaya dikkat etmeliyiz.
+
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
