@@ -208,11 +208,20 @@ Answer1:Number classını miras alan child  classlar:Byte,Short,Int,Long,Double 
 
 Q2)Eğer bir değişkene tip belirtimi yapılmaz ve bir değer atanırsa, Kotlin tip çıkarımını nasıl yapar?
 
-Answer2:3 adet değişken tanımladığımızı düşünelim.Bunlardan birisi "Arda",diğeri true diğeri ise 'a' değerini alsın.Kotlinde default olarak veri tipleri sırasıyla String,Boolean ve Char olacaktır.Fakat sayılarda bu durum biraz farklıdır.Sayılarda eğer atanılan değer Int'ın değer aralığından büyük değil ise değişkenin tipi otomatik olarak Int set edilir.Öbür taraftan eğer atanılan değer Int'ın değer aralığından büyük ise değişkenin tipi otomatik olarak Long set edilir.
+Answer2: 3 adet değişken tanımladığımızı düşünelim.Bunlardan birisi "Arda",diğeri true diğeri ise 'a' değerini alsın.Kotlinde default olarak veri tipleri sırasıyla String,Boolean ve Char olacaktır.Fakat sayılarda bu durum biraz farklıdır.Sayılarda eğer atanılan değer Int'ın değer aralığından büyük değil ise değişkenin tipi otomatik olarak Int set edilir.Öbür taraftan eğer atanılan değer Int'ın değer aralığından büyük ise değişkenin tipi otomatik olarak Long set edilir.
 
 
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Q3)Float değişken oluştururken F ve f harfleri varken, Long değişken oluştururken neden küçük l harfi yoktur?
+
+
+Answer3: Kotlinde long bir değişken oluştururken L harfini kullanırız.Küçük l harfinin olmama nedeni ise,küçük l harfi,bazı fontlar ve editörlerde küçük 1(bir) karakteriyle karışabilir.Bu karışıklık,kodun anlaşılabilirliğini azaltabilir ve bazı hatalara yol açabilir.Bu nedenle L harfinin kullanımı tercih edilmiştir.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 
 
 
