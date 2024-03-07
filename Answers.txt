@@ -403,6 +403,18 @@ Answer16: Kotlinde büyük sayılarla çalışırken,BigInteger ve BigDecimal s�
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
+Q17)Double ve Float değişkenler kullanılırken "yuvarlama" davranışı nasıldır? Bu nasıl değiştirilebilir?
+
+
+Answer17: Kotlinde varsayılan olarak sayılar,normal matematik kuralına göre yuvarlanır.Yani sayının tam olarak ortadaki değeri(örneğin 0.5) yukarı veya aşağı yuvarlanır,en yakın tam sayıya dönüştürülür.Bu IEEE 754 standartına uygun olarak gerçekleşir.
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
 
 
 
