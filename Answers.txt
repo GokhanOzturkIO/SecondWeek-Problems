@@ -278,3 +278,24 @@ var binaryNumber : Int = 0b1010
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
+
+Q8)Sekizlik (Octal) değişkenler Java'da nasıl tanımlanır? Kotlin'de Sekizlik değişken tanımlanabilir mi?
+
+Answer8:Javada sekizlik(octal) değişkenler şöyle tanımlanır:
+
+ int octalNumber = 012 
+
+ Yani sayıların başına 0 ön eki getirilerek yapılır.Ancak bu durum Kotlin için geçerli değildir.Kotlin bize sekizlik sayılar için doğrudan bir ön ek sağlamaz,bu nedenle doğrudan bir sayısal ifadeyi sekizlik olarak tanımlayamayız.
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
