@@ -423,6 +423,18 @@ Answer1:Kotlinde işaretli ve işaretsiz değişkenler vardır.İşaretli deği�
 
 
 
+Q2)"İşaretsiz" değişkenler nasıl bir sınıf yapısında tutulurlar? Bu neden önemlidir?
+
+
+Answer2:Normal veri tipleri(Int,Long,Float..) arka planda düz class şeklinde tutulurlar fakat işaretsiz değişkenler arka planda value class şeklinde tutulurlar.Value class şeklinde tutulması,bellek kullanımını optimize eder ve işaretsiz tamsayılarla işlem yapmayı daha tutarlı hale getirir.
+
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
 
 
 
