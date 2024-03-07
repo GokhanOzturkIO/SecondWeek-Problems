@@ -493,6 +493,26 @@ Answer7: İşaretsiz değişkenlerle yapılan matematiksel işlemlerde,taşma ol
 
 
 
+Q8)"İşaretsiz" değişkenlerin sınırlamaları nelerdir?
+
+
+Answer8: 
+
+UByte -> 8 bitlik yer kaplar.MinValue=0,MaxValue=255 
+
+UShort -> 16 bitlik yer kaplar.MinValue=0,MaxValue=65,535 
+
+UInt -> 32 bitlik yer kaplar.MinValue=0,MaxValue=4,294,967,295 (232 - 1) 
+
+ULong -> 64 bitlik yer kaplar.MinValue=0,MaxValue=18,446,744,073,709,551,615 (264 - 1) 
+
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
 
 
 
