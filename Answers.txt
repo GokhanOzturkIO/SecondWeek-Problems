@@ -482,6 +482,20 @@ Answer6 : Öncelikle her durumlarda uygun veri tipini seçmemiz gerektiğini unu
 
 
 
+Q7)"İşaretsiz" değişkenlerle yapılan matematiksel işlemlerde, özellikle büyük sayılarla çalışırken karşılaşılabilecek taşma (overflow) ve taşma olmaması (underflow) durumları için Kotlin nasıl bir yönetim sağlar?
+
+
+Answer7: İşaretsiz değişkenlerle yapılan matematiksel işlemlerde,taşma olmaması durumunda zaten herhangi bir sorun olmaz.Fakat taşma olması durumunda ise bit düzeyinde işlemler yapılır ve taşma olan kısımlar ise dışarıda kalıcak şekilde sonuçlar hesaplanır.
+
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
 
 
 
