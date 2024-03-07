@@ -433,6 +433,19 @@ Answer2:Normal veri tipleri(Int,Long,Float..) arka planda düz class şeklinde t
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
+Q3)"İşaretsiz" değişkenlerin harf gösterimi nasıldır?
+
+
+Answer3:İşaretsiz değişkenleri tanımlamak için,değişkenin değerinin sonuna 'u' veya 'U' ifadesi eklenmelidir.Örnek vermem gerekirse:
+
+    val number = 34u
+    println(number)
+
+    val number2 = 34U
+    println(number2) şeklinde tanımlayabiliriz.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 
 
 
