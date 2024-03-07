@@ -349,6 +349,28 @@ Answer12:Byte aralığında yani -128 ile 127 aralığında ve nullable ise o ik
 
 
 
+Q13)Sayısal değişkenlerde hangi matematiksel operatörler kullanılabilir?
+
+Answer13: Kotlinde sayısal değişkenlerde toplama,çıkarma,çarpma,bölme,mod alma gibi operatörler kullanılır.Aynı zamanda bu operatörlerin fonksiyonlarını da kullanabiliriz.
+
+var a = 10       
+var b = 20
+
+var toplama = a + b
+var çıkarma = a - b
+var çarpma = a * b
+var bolme = a / b
+var modAlma = a % b
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
 
 
 
