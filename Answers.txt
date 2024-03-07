@@ -448,6 +448,23 @@ Answer3:İşaretsiz değişkenleri tanımlamak için,değişkenin değerinin son
 
 
 
+Q4)val a1 = 42u ve val a2 = 0xFFFF_FFFF_FFFFu" değişkenlerin tipleri ne olur? Neden?
+
+Answer4: Bu 2 sayı da  otomatik olarak UInt ve ULong'a atanır.Aslında mantığı işaretli değişkenlerdeki gibi düşünebiliriz.Burda da eğer verilen değer UInt değer aralığından büyük değilse otomatik olarak UInt,eğer verilen değer UInt değer aralığından büyük ise otomatik olarak ULong tipi atanır.Burda a1 değişkenin değeri 42u olduğu için biz aslında a1 değişkeninin veri tipini açık bir şekilde UByte,UShort veya ULong olarak ayarlayabiliriz.Fakat a2 değişkenini yapmak istediğimizde ise,değer aralığı UByte,UShort veya UInt veri tiplerinin değer aralıklarına uymamaktadır.
+
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
 
 
 
