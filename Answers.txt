@@ -377,6 +377,29 @@ Answer14= Kotlin'de =(eşittir), !=(eşit değildir), >(büyüktür), <(küçük
 
 
 
+Q15)Bit düzeyinde operatörler (Bitwise operators) nelerdir? Ne amaçla kullanılır? Kotlin'de bunları nasıl kullanabilirsiniz?
+
+Answer15:Bit düzeyinde operatörler,sayıları bit seviyesinde manipüle etmek için kullanılır.Bu operatörler,sayıları binary(ikili) olarak işleyerek,her bir biti okuma,yazma,kaydırma veya dönüştürme gibi işlemleri gerçekleştirmek için kullanılır.
+
+Bit düzeyinde operatörlere örnek olarak,and,or,xor,not gibi operatörler verilebilir.Örnek olarak:
+
+var bitValue1 = 0b0010010
+var bitValue2 = 0b1011011
+
+bu işlemde, bitValue1.and(bitValue2) yazarsak tek tek bütün digitleri karşılaştırır.Gelecek olan sonuç 0b0010010 oalcaktır.Eğer bu değeri bastırırsak da ekranda 18 sayısını görürüz.Aynı şekilde or,xor,not gibi operatörleri de bu şekilde kullanabiliriz.
+
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
 
 
 
