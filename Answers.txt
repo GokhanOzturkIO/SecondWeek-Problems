@@ -338,6 +338,17 @@ Answer11: == ile, iki değişkenin değerlerinin birbirine eşit olup olmadığ�
 
 
 
+Q12)=== operatörü ile karşılaştırma yaparken Byte değer aralığı neden önemlidir? Kotlin bu aralığa göre neden özel bir davranış sergiler?
+
+
+Answer12:Byte aralığında yani -128 ile 127 aralığında ve nullable ise o iki değişkeni === ile kontrol edersek true değerini dönecektir.Bu da demek oluyor ki aynı memory alanına işaret ederler.Fakat byte aralığının dışına çıkar isek ve === ile kontrol edersek,false değerini görürürüz.Çünkü bu iki değişken farklı memory alanlarına işaret ederler.Bu işlemde veri tipi önemli değildir.Sayıların aldıkları değer aralığı önemlidir.Bu,bellek kullanımını optimize etmek ve performansı arttırmak için yapılan bir iyileştirme yöntemidir.
+
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
 
 
 
