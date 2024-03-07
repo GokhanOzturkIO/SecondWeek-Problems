@@ -291,6 +291,23 @@ Answer8:Javada sekizlik(octal) değişkenler şöyle tanımlanır:
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
+Q9)"Geleneksel Notasyon" (Conventional Notation) gösterimi nasıl yapılır?
+
+
+Answer9:Geleneksel notasyon terimi,genellikle matematiksel ifadelerin geleneksel ve yaygın olarak kullanılan sembollerle ifade edilmesini sağlar.Örneğin geleneksel matematik notasyonunun toplama işlemi için "+",çıkarma işlemi için "-" ,çarpma işlemi için "x",bölme işlemi için "÷" işareti kullanılır.Kotlin'de, geleneksel matematik notasyonunu kullanırken, matematiksel semboller ve işaretler doğrudan metin olarak kullanılabilir.Örnek olarak:
+
+val sum = 3 + 5
+
+val substract = 3 - 5
+
+val multiply = 3 * 5
+
+val divide = 10 / 2
+
+örneklerini verebiliriz.
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 
