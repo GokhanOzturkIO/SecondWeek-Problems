@@ -394,6 +394,18 @@ bu işlemde, bitValue1.and(bitValue2) yazarsak tek tek bütün digitleri karşı
 
 
 
+Q16)Kotlin'de büyük sayılarla çalışırken hangi ek türlerden yararlanılır ve bu türlerin sınırları nelerdir?
+
+
+Answer16: Kotlinde büyük sayılarla çalışırken,BigInteger ve BigDecimal sınıflarından yararlanılır.BigInteger,büyük tam sayıları temsil etmek için kullanılır.Bu sınıf sınırsız büyüklükteki tam sayıları saklayabilir ve işleyebilir.Bellekte çok fazla yer kaplarlar,bu nedenle büyük sayılarla çalışırken tercih edilebilir.Fakat işlemler genellikle daha yavaştır.BigDecimal ise ondalıklı sayılarla çalışırken yüksek hassasiyet gereken işlemlerde kullanılabilir.Bu da aynı şekilde bellekte çok fazla yer kaplar ve işlemler BigInteger'da olduğu gibi daha yavaştır.BigInteger ve BigDecimal'in sınırı aslında JVM tarafından sağlanan bellek miktarıyla sınırlıdır.Yani bellek ve işlemci gücümüz ne kadar büyük ise,alabileceğimiz sayılar da o kadar büyük olabilir.Bu durumda bellek ve işlemci gücümüzün belli bir sınırı olduğundan,çok büyük sayılarla çalışırken bellek tükenmesi riski vardır.Bundan dolayı BigInteger ve BigDecimal ile çalışırken dikkatli olmamızda fayda vardır.
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
 
 
 
