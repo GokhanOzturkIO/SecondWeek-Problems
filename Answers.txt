@@ -367,6 +367,22 @@ var modAlma = a % b
 
 
 
+Q14)Sayısal değişkenlerde hangi karşılaştırma operatörleri kullanılabilir?
+
+
+Answer14= Kotlin'de =(eşittir), !=(eşit değildir), >(büyüktür), <(küçüktür), >=(büyük eşit), <=(küçük eşit) gibi iki değer arasında bu operatörleri kullanarak karşılaştırma yapabiliriz.
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
 
 
 
