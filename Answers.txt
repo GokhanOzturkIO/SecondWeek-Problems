@@ -260,3 +260,21 @@ Answer6:Float sayılar ondalıklı kısımda 6-7 basamağa kadar olan işlemleri
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
+
+Q7)Ondalık(Decimal), Onaltılık (Hexadecimal) ve İkilik (Binary) değişkenleri Kotlin'de nasıl tanımlayabilirsiniz?
+
+Answer7: Örnek verecek olursam,
+
+var decimalNumber :Int = 55
+
+var hexaDecimalNumber : Int = 0xFF
+
+var binaryNumber : Int = 0b1010
+
+şeklinde tanımlanabilir.Sırasıyla print edersek 55,255 ve 10 çıktılarını alırız.Veri tiplerini Int olarak tanımladım fakat istersek değerimize göre diğer veri tiplerinde de tanımlayabiliriz.
+
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
