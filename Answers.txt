@@ -471,6 +471,18 @@ Answer5:İşaretsiz long gösterimi değişkenin değerinin sonuna uL veya UL ya
 
 
 
+Q6)"İşaretsiz" değişkenlerin kullanım amaçları nelerdir?
+
+
+Answer6 : Öncelikle her durumlarda uygun veri tipini seçmemiz gerektiğini unutmamalıyız.Kullanım amaçlarına gelecek olursak,örneğin bir işaretli byte türü,-128 ile 127 arasındaki sayıları temsil ederken,bir işaretsiz byte türü 0 ile 255 arasındaki sayıları temsil eder.Bu durumda işaretsiz byte türü işaretliye göre aynı bellek boyutunda daha fazla pozitif sayı aralığını sağlayabilir.Bazı durumlarda özellikle büyük veri setleriyle veya yoğun hesaplama gerektiren durumlarda,işaretsiz değişkenlerin kullanımı performansı arttırabilir.Ek olarak da bazı veri yapıları veya dış kaynaklar,sadece pozitif tamsayı değerlerini kabul eder.Örneğin dosya uzunluklarında dosya boyutunu temsil ederken işaretli tam sayılar yerine işaretsiz tam sayılar kullanmak daha uygun olabilir.
+
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
 
 
 
