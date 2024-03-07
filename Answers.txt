@@ -410,8 +410,16 @@ Answer17: Kotlinde varsayılan olarak sayılar,normal matematik kuralına göre 
 
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                                                                                    
+                                                                             Unsigned Numbers
+                    
+Q1)"İşaretsiz" (Unsigned) değişkenler ne demektir? İşaretli olanlarla aralarındaki fark nedir?
+
+Answer1:Kotlinde işaretli ve işaretsiz değişkenler vardır.İşaretli değişkenler,hem pozitif hem negatif sayıları temsil edebilir.İşaretli bir değişkenin,en sol biti işaret bitidir ve bu bit sayının pozitif veya negatif olacağını belirler.Örneğin,8 bitlik bir işaretli değişkenin (Byte) -128'den 127'ye kadar olan sayıları temsil edebilir. İşaretli değişkenler varsayılan olarak kullanılan türlerdir.İşaretsiz değişkenler ise sadece pozitif sayıları temsil ederler.İşaretlilerin aksine,işaretsiz değişkenlerin en sol biti değer taşır.Bundan dolayı bu bit,pozitif sayıları temsil eder.Örneğin 8 bitlik bi işaretsiz değişken(UByte) 0-255 arası olan sayıları temsil edebilir.
 
 
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 
