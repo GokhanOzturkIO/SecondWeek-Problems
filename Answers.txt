@@ -325,6 +325,20 @@ val doubleNumber = 3.14_15_92
 
 
 
+Q11)== ile neyi karşılaştırırız? === ile neyi karşılaştırırız?
+
+
+Answer11: == ile, iki değişkenin değerlerinin birbirine eşit olup olmadığını karşılaştırırız.
+
+=== ile de, iki değişkenin aynı bellek adresine sahip olup olmadığını kontrol ederiz. 
+
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
 
 
 
