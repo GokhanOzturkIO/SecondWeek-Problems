@@ -458,6 +458,20 @@ Answer4: Bu 2 sayı da  otomatik olarak UInt ve ULong'a atanır.Aslında mantı�
 
 
 
+Q5)"İşaretsiz" "Long" harf gösterimi nasıl yapılır?
+
+
+Answer5:İşaretsiz long gösterimi değişkenin değerinin sonuna uL veya UL yaparak kullanılır.Örnek olarak:
+
+    val unsignedLong = 34uL
+    val unsignedLong2 = 34UL  bu iki değişkeni verebiliriz.
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
 
 
 
