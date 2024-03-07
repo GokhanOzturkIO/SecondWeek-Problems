@@ -311,6 +311,25 @@ val divide = 10 / 2
 
 
 
+Q10)Sayısal değişkenlerde alt çizgi (underscore) nasıl kullanılır? Kotlin bunu nasıl yorumlar?
+
+Answer10: Sayısal değişkenlerde underscore (_) ifadesini ekleyerek kullanılır.Eğer büyük sayılarla çalışıyorsak,bizim tarafımızdan sayıların daha rahat okunabilmesi için rakamların arasına _ ifadesi konulabilir.Alt çizgi(_) kullanmak sayıyı gruplara ayırmak için kullanılabilir fakat sayısal değeri etkilemez.Sadece okunabilirliğini arttırmış oluruz.
+
+val bigNumber = 1_000_000
+val longNumber = 123_456_789_012_345L
+val doubleNumber = 3.14_15_92
+
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
 
 
 
