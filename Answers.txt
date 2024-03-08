@@ -684,6 +684,23 @@ Answer8: Result değişkeninin tipi LONG,değeri ise 4L olur.Bunun sebebi kotlin
 
 
 
+Q9)val result = Int.MAX_VALUE + Int.MAX_VALUE" gibi bir işlemin sonucunda "result" değişkeninin tipi ve değeri ne olur? Neden böyle olduğunu açıklayın.
+
+
+Answer9: Burda Int bir sayının maksimumum değerini 2 kere topladığımızda bu değer Int veri tipinin değer aralığını aşacağı için overflow durumu gerçekleşecektir.Bu durumda biz result değişkenini print ettiğimizde IDE bize herhangi bir hata vermeyecektir.Fakat overflow durumu olduğu için ve Kotlin,default olarak overflow kontrolü yapmadığı için sonuç beklenmeyen bir değer olacaktır.Değişkenin tipi ise Int olacaktır.Aslında bu durumda IDE şöyle düşünür,2 adet Int sayıyı topladığımızda sonucun da Int bir sayı olacağını düşünür ve tipini Int veri tipine set eder.Ayrıca yukarıda da bahsettiğim üzere overflow olayından kaynaklı olarak print ettirdiğimizde ekranda anlamsız bir sayı görürüz.
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
 
 
 
