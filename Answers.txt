@@ -511,6 +511,19 @@ ULong -> 64 bitlik yer kaplar.MinValue=0,MaxValue=18,446,744,073,709,551,615 (26
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
+Q9)İşaretsiz" değişken türleri (UInt, ULong vs.) kullanırken, Java API'leri ile uyumluluk konusunda ne gibi sorunlar olabilir? Bunları çözmek için neler yapabilirsiniz?
+
+
+
+Answer9:İşaretsiz değişken türleri Kotlin'de özel veri türleri olarak tanımlandığı için,java API'leri ile uyumluluk konusunda problemler yaşanabilir.
+Bunlara örnek olarak,java API'larının işaretsiz tamsayıları desteklememesi,veri türü dönüşümü gerekliliği ve taşma sorunları örnek olarak verilebilir.
+İlk olarak Java API'leri ile uyumlu olmak için,işaretsiz tamsayılar yerine işaretli tamsayıları kullanmak gerekebilir.İkinci olarak ise veri türü dönüşümü yaparken değer aralıklarına dikkat edilmelidir.Son olarak ise işaretsiz sayılarla işlem yaparken taşma durumlarının kontrol edilmesi önemlidir.Taşma durumunda,işlemin sonucu beklenen sınırların dışına çıkabilir ve bu durumda uygun bir şekilde işlem yapılması gerekir.
+
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
 
 
 
