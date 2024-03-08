@@ -626,6 +626,22 @@ Güvensiz Dönüşüm Operatörü : as şeklinde kullanılır.Bu operatörün ku
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
+Q4)Sayısal değişkenlerde örtük tip genişletme (implicit widening conversions) ne demektir? Kotlin'de bu neden yapılamaz?
+
+
+Answer4: Örtük tip genişletme,bir türün diğer bir türe otomatik olarak genişletilmesini ifade eder.Bu,genellikle küçük bir türün daha büyük bir türe otomatik olarak dönüştürülmesini ifade eder.Kotlinde örtük tip genişletme yapılmaz.Bunun sebebi kotlinin tür güvenliği ve açıklığı ilkesidir.Kotlin,bu türlerin açık bir şekilde dönüştürülmesini sağlamak için bu tür genişletmeleri isteyerek yapmaz.
+
+Bunun yerine kotlinde tür dönüşümlerini açıkça belirtmemiz gerekir.Örneğimize bakacak olursak,
+
+    val byteNumber : Byte = 10
+    val intNumber : Int = byteNumber.toInt() // Burda verilen byte tipindeki sayıyı,açık bir şekilde Int'a dönüştürdük.
+
+Özetle açık bir şekilde dönüşümü yapmamız,kodun daha anlaşılır olmasını sağlar ve türler arası dönüşümlerde oluşabilecek istenmeyen durumları önlememizi sağlar.
+
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 
 
 
