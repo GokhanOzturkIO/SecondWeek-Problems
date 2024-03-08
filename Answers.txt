@@ -674,6 +674,15 @@ Answer7:toByte(),toShort(),toInt(),toLong(),toFloat(),toDouble(),toUByte(),toUSh
 
 
 
+Q8)val result = 1L + 3" // "Long + Int" gibi bir işlemin sonucunda "result" değişkeninin tipi ve değeri ne olur? Neden böyle olduğunu açıklayın.
+
+
+Answer8: Result değişkeninin tipi LONG,değeri ise 4L olur.Bunun sebebi kotlinde iki farklı değişken arasında işlem yapılıyorsa,işlem sonucundaki değişkenin tipinin ne olacağını iki değişkenden tipi büyük olan hangisiyse o belirler.Burda da Long Int'den daha büyük olduğu için result değişkeninin tipi Long,değeri ise 4L olacaktır.
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
 
 
 
