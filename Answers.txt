@@ -694,6 +694,21 @@ Answer9: Burda Int bir sayının maksimumum değerini 2 kere topladığımızda 
 
 
 
+Q10)val x = 5 / 2 println(x == 2)" gibi bir işlemin sonucu ve tipi nedir? Neden böyle olduğunu açıklayın.
+
+
+Answer10 : İki adet Int sayıyı böldüğümüzde sonuç da bir Int sayı olacaktır.Bu durumda x değişkeninin değeri 2,tipi ise Int olacaktır.Print işleminde ise bize true değerini dönecektir.
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
 
 
 
