@@ -663,6 +663,21 @@ Answer6: Aslında farketmeden 5. soruda bu sorunun cevabını vermiştim.Hemen t
 
 
 
+Q7)Sayısal değişkenlerde açık dönüşüm (Explicit Type Conversion) yaparken hangi fonksiyonları kullanabilirsiniz?
+
+
+Answer7:toByte(),toShort(),toInt(),toLong(),toFloat(),toDouble(),toUByte(),toUShort(),toUInt(),toDuration(),toBigDecimal(),toBigInteger() gibi fonksiyonları kullanabiliriz.
+
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
 
 
 
