@@ -711,6 +711,15 @@ Answer11: Bu durumda Long bir sayıyı Int bir sayıya böldüğümüzde sonuç 
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+Q12)val x = 5 / 2.toDouble() println(x == 2.5)" gibi bir işlemin sonucu ve tipi nedir? Neden böyle olduğunu açıklayın.
+
+
+Answer12: Bu işlemde,öncelikle Int bir sayıyı Double bir sayıya bölüyoruz.Bu durumda x değişkenin tipi Double türünde olacaktır.Bölme işleminin sonucunda ise x değişkeninin değeri 2.5 olacaktır.Print işleminin sonucunda ise,x değişkeni double türünde olduğundan dolayı doğru bir şekilde 2.5 ondalıklı sayısı ile karşılaştırılır.Bu karşılaştırılma sonucunda true değeri dönecektir.
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
 
 
 
