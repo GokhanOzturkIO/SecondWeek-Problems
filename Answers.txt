@@ -653,6 +653,20 @@ Answer5:Öncelikle kotlinde implicit type conversion olmadığı için buradaki 
 
 
 
+Q6)val b: Byte = 1 ile val i: Int = b.toInt() ve son olarak print(b == i) gibi bir kod yazıldığında çıktı ne olur? Neden böyle bir çıktı aldığınızı açıklayın.
+
+Answer6: Aslında farketmeden 5. soruda bu sorunun cevabını vermiştim.Hemen tekrardan açıklamak istiyorum.b ve i değişkenlerini tanımladığımızda herhangi bir sorun yoktur.b bir byte değişken,i ise bir Int değişkendir.Fakat print(b == i) ifadesini yazdığımızda bir hata alırız.Operator '==' cannot be applied to 'Byte' and 'Int' şeklinde bir hata alırız.Aslında hatanın neden olduğu gayet açıktır.Kotlinde farklı türler arasında otomatik olarak dönüşüm yapılmaz.Yapılacak olan dönüşümü açık bir şekilde belirtmemiz gerekir.Bu sebeple iki değişkeni de karşılaştırırken öncelikle değişkenlerin tipleri karşılaştırılır.Bu hatayı önlemek için b değişkenini toInt() diyerek Int veri tipine veya i değişkeni toByte() diyerek byte veri tipine dönüştürebiliriz.
+
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
 
 
 
