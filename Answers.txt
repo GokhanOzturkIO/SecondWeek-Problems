@@ -523,6 +523,40 @@ Bunlara örnek olarak,java API'larının işaretsiz tamsayıları desteklememesi
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+                                                                                TYPE CONVERSİON
+
+Q1)is ve !is operatörlerinin kullanımını açıklayın.
+
+Answer1: is operatörü  bir nesnenin belirli bir türe ait olup olmadığını kontrol etmek için kullanılır.!is ise olumsuz halidir.Bu operatörler,Kotlin'de tür güvenliği ve tür dönüşümü işlemlerini daha güvenli ve açık bir şekilde gerçekleştirmek için kullanılır.Örnek vermem gerekirse;
+
+fun main() {
+    stringOrNot("Arda") 
+    stringOrNot(55)
+
+}
+
+fun stringOrNot(input: Any) {
+    if (input is String) { // "Arda" ifadesi bir string olduğu için bu bloğa girecektir.
+
+        println("Input is a string and length ${input.length}") 
+
+    } else {
+
+        println("Input is not a string.") // 55 ifadesi bir string olmadığı için bu bloğa girecektir.
+
+    }
+
+}
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
 
 
 
