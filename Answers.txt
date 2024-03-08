@@ -602,6 +602,34 @@ var properties: Değişkenin değeri herhangi bir zamanda başka bir kod tarafı
 
 
 
+Q3)"Güvenli & Güvensiz" operatörler nelerdir?
+
+Answer3: Kotlinde güvenli dönüşüm operatörü(safe cast) ve güvensiz dönüşüm  (unsafe cast) operatörü bulunmaktadır.Bu operatörler,bir nesneyi belirli bir türe dönüştürmek için kullanılır.
+
+Güvenli Dönüşüm Operatörü: as? şeklinde kullanılır.Bu operatörün kullanımında eğer dönüşüm başarısız olursa null değeri atanır.Örnek vermem gerekirse;
+
+    val obj = 5
+    val str: String? = obj as? String
+
+    println(str)  -> Bu örnekte obj ifadesi bir Int olduğudan str değişkeninin değeri null olur.
+
+Güvensiz Dönüşüm Operatörü : as şeklinde kullanılır.Bu operatörün kullanımında da eğer başarısız olunursa ClassCastException hatası fırlatılır.
+
+
+        val obj = 5
+        val str : String = obj as String
+
+    println(str)   -> Bu örnekte obj ifadesi bir Int ifadedir.Bu durumda dönüşüm işlemi gerçekleşemez ve ClassCastException hatası fırlatılır.
+
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
 
 
 
