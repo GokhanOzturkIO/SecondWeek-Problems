@@ -553,6 +553,53 @@ fun stringOrNot(input: Any) {
 
 
 
+Q2)"Akıllı Dönüşüm" (Smart Cast) ne demektir? Farklı kod örnekleri ile açıklayın. Bu özelliğin sınırlamaları nelerdir?
+
+
+Answer2: Akıllı Dönüşüm (Smart Cast),bir nesnenin bir türe dönüşümünü gerçekleştirdikten sonra,o nesneyi direkt olarak o tür şeklinde kullanabilmemizi sağlar.Bu sayede yazacağımız kod daha güvenli ve daha az tekrarlı hale gelir.Örnek verelim:
+
+fun main() {
+
+    stringOrNot("Arda")
+    stringOrNot(55)
+
+}
+
+fun stringOrInt(input: Any) {
+    if (input is String) {
+        println("Input is a string and length ${input.length}")
+    } else if (input is Int) {
+        println("Input is a int,$input - 10 = ${input.minus(10)}")
+    }
+
+}  --> Bu kod örneğinde input eğer bir string ise,stringlere özgü bir özellik olan length özelliğini kullanabiliriz.Aynı şekilde input bir Int ise,Int'in bir özelliği olan minus fonksiyonunu da kullanabiliriz.
+
+
+
+fun main() {
+    stringOrNot("Ahmet")
+    stringOrNot(55)
+
+}
+
+fun stringOrNot(input: Any) {
+    if (input !is String) return
+
+    println("Input length:${input.length}")
+
+} ---> Bu örneğimizde ise,input değişkeninin string olup olmamasını kontrol ederiz.Eğer input bir String değil ise fonksiyonu sonlandıracaktır.Fakat input bir String ise akıllı dönüşüm sayesinde,input değişkenini doğrudan bir String olarak kullanabiliyoruz.
+
+val local variables: Bu durumda, akıllı dönüşüm her zaman kullanılabilir. local değişkenler, sadece belirli bir kapsamda tanımlanmış ve genellikle başka bir yerden etkilenmezler.
+
+val properties: Eğer özellik (val) private veya internal ise, ya da kontrol aynı modülde tanımlanmışsa, akıllı dönüşüm kullanılabilir. Ancak özellik açık (open) ise veya özel bir getter'a sahipse, akıllı dönüşüm kullanılamaz.
+
+var local variables: Eğer değişken kontrol edildiği andan kullanıldığı ana kadar değiştirilmezse, bir lambda tarafından değiştirilmezse ve yerel olarak yönetilen bir özellik değilse, akıllı dönüşüm kullanılabilir.
+
+var properties: Değişkenin değeri herhangi bir zamanda başka bir kod tarafından değiştirilebileceğinden, akıllı dönüşüm kullanılamaz. Bu durumda, değişkenin değerinin dönüşümünü her zaman kontrol etmek gerekir.
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 
 
 
