@@ -644,6 +644,17 @@ Bunun yerine kotlinde tür dönüşümlerini açıkça belirtmemiz gerekir.Örne
 
 
 
+Q5)"val b: Byte = 1 ile val i: Int = b ve son olarak print(b == i) gibi bir kod yazıldığında çıktı ne olur? Neden böyle bir çıktı aldığınızı açıklayın.
+
+Answer5:Öncelikle kotlinde implicit type conversion olmadığı için buradaki byte bir değişken olan b değişkenini Int'a dönüştüremeyecektir.Bu durumda type mismatch hatası alırız.Bu hatayı önlemek için val i : Int = b.toInt() yazabiliriz.Bu durumda da print(b == i ) ifadesi hata verecektir.Bu hatanın sebebi de iki değişken karşılaştırılırken önce değişkenlerin tipleri karşılaştırılır.Burada da b değişkeni byte,i değişkeni de Int veri tipinde olacağı için tekrardan hata alacağız.Bu hatayı önlemek için de byte ifadeyi Int'a veya Int ifadeyi byte'a çevirebiliriz.
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
 
 
 
