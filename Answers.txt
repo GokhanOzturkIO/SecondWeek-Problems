@@ -720,6 +720,15 @@ Answer12: Bu işlemde,öncelikle Int bir sayıyı Double bir sayıya bölüyoruz
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
+Q13)Kotlin'de tür dönüşümü yapılırken, dönüşümün başarısız olması durumunda TypeCastException nasıl ele alınır ve bu tür hataların önüne geçmek için hangi önlemler alınabilir?
+
+
+Answer13: Bu tip hataları önlemek için,güvenli dönüşümleri kullanabiliriz.Örneğin yukarıda da gösterdiğim as? operatörünü kullanabiliriz.İkinci olarak,dönüşüm yapmadan önce dönüştürülecek nesnenin beklenen tipe uygun olup olmadığının kontrolünü is veya !is ile yapabiliriz.Üçüncü olarak try-catch bloklarını kullanıp hata durumunda exception fırlatabiliriz veya hata durumunda farklı birşey yaptırabiliriz.Son olarak ise değişkenleri nullable hale getirebiliriz.Bu durumda ?. veya ?: operatörlerini kullanarak null kontrolünü yapıp kodumuzu daha güvenli hale getirebiliriz.
+
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 
 
 
