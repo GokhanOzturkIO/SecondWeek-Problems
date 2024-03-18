@@ -76,7 +76,7 @@
     ```
 
 5. Kotlin'de tüm değişkenlerin sınıf olarak bulunması, "ilkel tip" (primitive type) olmadıkları anlamına gelir mi? Arka planda neler oluyor?
-
+    Kotlin'de tüm değişkenler sınıf olarak tutulur. Fakat bu sınıflar, bytecode'a çevrilirken yapılan özel optimizasyonlar sayesinde ilkel hallerine dönüştürülürler. Kotlinde Int sınıfıyla tutulan veriler, Java tarafında ilkel int tipi olarak tutulur. String hariç bütün değişkenlerde bu şekilde tutulur. String, Java tarafında da sınıf halinde tutulur.
 
 6. "Tip Güvenliği" (Type Safety) kavramını açıklayın.
 7. Bir değişkeni nullable yapmak için ne yapmalıyız?

@@ -76,7 +76,7 @@
     ```
 
 5. Does Kotlin's requirement for all variables to be classes mean that they are not "primitive types"? What happens behind the scenes?
-
+    In Kotlin, all variables are held as classes. However, these classes are converted to their primitive forms through special optimizations during bytecode conversion. Data held as Int class in Kotlin is represented as the primitive int type in Java. This applies to all variables except String, which is held as a class both in Kotlin and Java.
 
 6. Explain the concept of "Type Safety".
 7. What should we do to make a variable nullable?
