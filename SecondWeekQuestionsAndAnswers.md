@@ -94,7 +94,11 @@
 
 9. If a null value is assigned to a variable and the type is not specified, how does Kotlin interpret this variable?
     If we assign a null value to a variable without specifying its type in Kotlin, Kotlin infers the type of that variable as Nothing?. Nothing indicates that a function will never return normally. Nothing? signifies that it can only hold a null value and doesn't represent any other value.
-    
+
 10. What are the differences in memory management between an nullable primitive variable and one that cannot hold null values?
+    Primitive types are stored in a memory structure called the stack, whereas object types are stored in the heap for their values and in the stack for their addresses. Compared to the stack, the heap operates relatively slower. Making a value nullable converts it to an object type, resulting in relatively slower performance and more memory consumption compared to a primitive type.
+
 11. What is the difference in memory management between a nullable variable having a value and being null? Can we say that a variable with a null value does not occupy memory?
+
+
 12. Which operators do we use when working with nullable variables? What are the differences in usage of these operators? When is it more meaningful to use which one?
