@@ -102,3 +102,8 @@
     If a nullable variable has a value, it means that the value is stored in the heap and its address is stored in the stack. If it holds a null value, its address is still kept in the stack, but the value in the heap is cleared. In this case, it still occupies memory in the stack.
 
 12. Which operators do we use when working with nullable variables? What are the differences in usage of these operators? When is it more meaningful to use which one?
+    When working with nullable values in Kotlin, we primarily have three operators: `?.` (safe call operator), `?:` (Elvis operator), and `!!` (non-null assert operator).
+
+    * We use the `?.` operator to check if the value is null. If the value is not null, the operation is performed. This allows us to safely handle null values and prevent potential errors.
+    * We use the `?:` operator to provide a default value or execute an alternative operation if the value is null. It's a concise form of an if/else statement.
+    * The `!!` operator asserts that a nullable variable is not null. However, if the variable is null, it will throw a NullPointerException. Therefore, it should be used with caution.

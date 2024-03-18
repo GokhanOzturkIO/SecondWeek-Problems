@@ -102,6 +102,10 @@
     Nullable bir değişkenin bir değere sahip olması, değişkenin değerinin Heap'te, adresinin de Stack'te tutulması demektir. Eğer null değer almışsa, adres hâla Stack'te tutulur ancak Heap'teki değer silinir. Bu durumda bellekte (Stack'te) hâla yer kaplamaktadır.
 
 12. Nullable bir değişkenle çalışırken hangi operatörleri kullanırız? Bu operatörlerin kullanım farkları nelerdir? Hangisini ne zaman kullanmak daha anlamlıdır?
+    Nullable değerlerle çalışırken temel olarak 3 operatörümüz vardır. Bunlar `?.` (safe call operator), `?:` (Elvis operator) ve `!!` (non-null assert operator)'dür. 
+    * `?.` operatörünü değerin null olup olmadığını kontrol etmek için kullanırız. Eğer değer null değilse işlemi gerçekleştirir. Bu şekilde null değerleri güvenli bir şekilde işleyebiliriz ve olası hataların önüne geçebiliriz.
+    * `?:` operatörünü, eğer değer null ise varsayılan bir işlemi çalıştırmak veya değeri vermek için kullanırız. Bu if/else yapısının kısa bir hâlidir.
+    * `!!` operatörünü, nullable değişkenin null olmadığına dair bir garanti verir. Ancak değişken eğer null ise NullPointerException alırız. Bu yüzden dikkatli kullanmak gereklidir.
 
 ### Sayılar
 - Kaç farklı tipte "number" sınıfı miras alan "alt sınıf" (child class) vardır? Bunların değer aralıkları neden önemlidir?
