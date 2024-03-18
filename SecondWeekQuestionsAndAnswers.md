@@ -107,3 +107,27 @@
     * We use the `?.` operator to check if the value is null. If the value is not null, the operation is performed. This allows us to safely handle null values and prevent potential errors.
     * We use the `?:` operator to provide a default value or execute an alternative operation if the value is null. It's a concise form of an if/else statement.
     * The `!!` operator asserts that a nullable variable is not null. However, if the variable is null, it will throw a NullPointerException. Therefore, it should be used with caution.
+
+### Numbers
+
+1. How many different types of "number" subclasses are there inheriting from the "Number" class? Why are their value ranges important?
+    There are 6 subclasses inheriting from the Number class: `Byte`, `Short`, `Int`, `Long`, `Double`, and `Float`. These data types are important to us because they have specific value ranges they can hold. They occupy different amounts of memory in accordance with their value ranges. To achieve maximum performance in our projects, we should work with data types that match the value ranges. For example, we should use the Long data type to represent larger numbers or the Byte or Short data types to represent smaller numbers. Additionally, we should be careful not to exceed the value ranges of the data types we use in our calculations to avoid unexpected behavior.
+
+2. If a variable is declared without a type and a value is assigned to it, how does Kotlin perform type inference?
+
+
+3. When creating a Float variable, why are both `F` and `f` allowed, while there's no lowercase l when creating a Long variable?
+4. Explain the concepts of Single precision and Double precision.
+5. What symbols are used as decimal separators when working with Double and Float variables? What should be considered when using these separators?
+6. How many digits can Double and Float variables process in the fractional part? How do they behave for decimal information exceeding this limit? In which scenarios should Float and which scenarios should Double be used?
+7. How can you define Decimal, Hexadecimal, and Binary variables in Kotlin?
+8. How are Octal variables defined in Java? Can Octal variables be defined in Kotlin?
+9. How is Conventional Notation represented?
+10. How is the underscore (_) used in numerical variables? How does Kotlin interpret this?
+11. What do we compare with `==`? What do we compare with `===`?
+12. Why is the Byte value range important when comparing with the `===` operator? Why does Kotlin exhibit special behavior according to this range?
+13. What mathematical operators can be used in numerical variables?
+14. What comparison operators can be used in numerical variables?
+15. What are Bitwise operators? What are they used for? How can you use them in Kotlin?
+16. What additional types are used when working with large numbers in Kotlin, and what are their limits?
+17. What is the rounding behavior when using Double and Float variables? How can this behavior be modified?

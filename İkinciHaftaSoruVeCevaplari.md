@@ -108,23 +108,28 @@
     * `!!` operatörünü, nullable değişkenin null olmadığına dair bir garanti verir. Ancak değişken eğer null ise NullPointerException alırız. Bu yüzden dikkatli kullanmak gereklidir.
 
 ### Sayılar
-- Kaç farklı tipte "number" sınıfı miras alan "alt sınıf" (child class) vardır? Bunların değer aralıkları neden önemlidir?
-- Eğer bir değişkene tip belirtimi yapılmaz ve bir değer atanırsa, Kotlin tip çıkarımını nasıl yapar?
-- Float değişken oluştururken `F` ve `f` harfleri varken, Long değişken oluştururken neden küçük `l` harfi yoktur?
-- Tek duyarlıklı (Single precision) ve Çift duyarlıklı (Double precision) kavramlarını açıklayın.
-- Double ve Float değişkenlerle çalışırken ondalık ayıracı olarak hangi işaretler kullanılır? Bu ayıraçların kullanımında nelere dikkat etmek gerekir?
-- Double ve Float değişkenler ondalık kısımda kaç basamağa kadar işlem yaparlar? Bu sınırın üzerinde gelen ondalık bilgileri için nasıl davranırlar? Hangi durumlar için Float ve hangi durumlar için Double kullanılmalıdır?
-- Ondalık(Decimal), Onaltılık (Hexadecimal) ve İkilik (Binary) değişkenleri Kotlin'de nasıl tanımlayabilirsiniz?
-- Sekizlik (Octal) değişkenler Java'da nasıl tanımlanır? Kotlin'de Sekizlik değişken tanımlanabilir mi?
-- "Geleneksel Notasyon" (Conventional Notation) gösterimi nasıl yapılır?
-- Sayısal değişkenlerde alt çizgi (underscore) nasıl kullanılır? Kotlin bunu nasıl yorumlar?
-- `==` ile neyi karşılaştırırız? `===` ile neyi karşılaştırırız?
-- `===` operatörü ile karşılaştırma yaparken Byte değer aralığı neden önemlidir? Kotlin bu aralığa göre neden özel bir davranış sergiler?
-- Sayısal değişkenlerde hangi matematiksel operatörler kullanılabilir?
-- Sayısal değişkenlerde hangi karşılaştırma operatörleri kullanılabilir?
-- Bit düzeyinde operatörler (Bitwise operators) nelerdir? Ne amaçla kullanılır? Kotlin'de bunları nasıl kullanabilirsiniz?
-- Kotlin'de büyük sayılarla çalışırken hangi ek türlerden yararlanılır ve bu türlerin sınırları nelerdir?
-- Double ve Float değişkenler kullanılırken "yuvarlama" davranışı nasıldır? Bu nasıl değiştirilebilir?
+
+1. Kaç farklı tipte "number" sınıfı miras alan "alt sınıf" (child class) vardır? Bunların değer aralıkları neden önemlidir?
+    Number classını miras alan 6 adet alt sınıf vardır. Bunlar: `Byte`, `Short`, `Int`, `Long`, `Double` ve `Float` sınıflarıdır. Bu veri tiplerinin değerleri bizim için önemlidir çünkü bu veri tiplerinin alabileceği belirli değer aralıkları vardır. Aldıkları değer aralıklarına oranla bellekte farklı boyutlarda yer kaplarlar. Projelerimizde maksimum performansı alabilmek için, veri tiplerinin değer aralıklarına uygun bir şekilde çalışmalıyız. Örneğin daha büyük sayıları temsil etmek için Long veri tipini veya daha küçük sayıları temsil etmek için Byte veya Short veri tipini kullanmalıyız. Ayrıca kullandığımız veri tiplerinde değer aralıklarını aşmamaya dikkat etmeliyiz.
+
+2. Eğer bir değişkene tip belirtimi yapılmaz ve bir değer atanırsa, Kotlin tip çıkarımını nasıl yapar?
+
+
+3. Float değişken oluştururken `F` ve `f` harfleri varken, Long değişken oluştururken neden küçük `l` harfi yoktur?
+4. Tek duyarlıklı (Single precision) ve Çift duyarlıklı (Double precision) kavramlarını açıklayın.
+5. Double ve Float değişkenlerle çalışırken ondalık ayıracı olarak hangi işaretler kullanılır? Bu ayıraçların kullanımında nelere dikkat etmek gerekir?
+6. Double ve Float değişkenler ondalık kısımda kaç basamağa kadar işlem yaparlar? Bu sınırın üzerinde gelen ondalık bilgileri için nasıl davranırlar? Hangi durumlar için Float ve hangi durumlar için Double kullanılmalıdır?
+7. Ondalık(Decimal), Onaltılık (Hexadecimal) ve İkilik (Binary) değişkenleri Kotlin'de nasıl tanımlayabilirsiniz?
+8. Sekizlik (Octal) değişkenler Java'da nasıl tanımlanır? Kotlin'de Sekizlik değişken tanımlanabilir mi?
+9. "Geleneksel Notasyon" (Conventional Notation) gösterimi nasıl yapılır?
+10. Sayısal değişkenlerde alt çizgi (underscore) nasıl kullanılır? Kotlin bunu nasıl yorumlar?
+11. `==` ile neyi karşılaştırırız? `===` ile neyi karşılaştırırız?
+12. `===` operatörü ile karşılaştırma yaparken Byte değer aralığı neden önemlidir? Kotlin bu aralığa göre neden özel bir davranış sergiler?
+13. Sayısal değişkenlerde hangi matematiksel operatörler kullanılabilir?
+14. Sayısal değişkenlerde hangi karşılaştırma operatörleri kullanılabilir?
+15. Bit düzeyinde operatörler (Bitwise operators) nelerdir? Ne amaçla kullanılır? Kotlin'de bunları nasıl kullanabilirsiniz?
+16. Kotlin'de büyük sayılarla çalışırken hangi ek türlerden yararlanılır ve bu türlerin sınırları nelerdir?
+17. Double ve Float değişkenler kullanılırken "yuvarlama" davranışı nasıldır? Bu nasıl değiştirilebilir?
 
 ### İşaretsiz Sayılar
 - "İşaretsiz" (Unsigned) değişkenler ne demektir? İşaretli olanlarla aralarındaki fark nedir?
