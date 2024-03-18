@@ -93,6 +93,8 @@
     The concept of null safety in Kotlin aims to prevent NullPointerException errors while writing code. This way, we avoid subjecting values that should not be null to operations that could potentially throw errors if the value is null, thus simplifying our debugging processes. In Kotlin, we can achieve null safety using the let scope function and the elvis operator alongside the if/else structure in Java. We use the ? and !! operators to determine whether a value is null. However, when using the !! operator, we must be extremely cautious because it indicates to the IDE that the value is not null.
 
 9. If a null value is assigned to a variable and the type is not specified, how does Kotlin interpret this variable?
+    If we assign a null value to a variable without specifying its type in Kotlin, Kotlin infers the type of that variable as Nothing?. Nothing indicates that a function will never return normally. Nothing? signifies that it can only hold a null value and doesn't represent any other value.
+    
 10. What are the differences in memory management between an nullable primitive variable and one that cannot hold null values?
 11. What is the difference in memory management between a nullable variable having a value and being null? Can we say that a variable with a null value does not occupy memory?
 12. Which operators do we use when working with nullable variables? What are the differences in usage of these operators? When is it more meaningful to use which one?

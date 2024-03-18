@@ -93,6 +93,8 @@
     Kotlin'de bulunan null güvenliği konsepti, kod yazarken NullPointerException hatalarını almamızın önüne geçmeyi amaçlar. Bu sayede null gelmemesi gereken değerleri eğer değer null ise hata verebilecek işleme sokmayız ve hata ayıklama işlemlerimizi daha da karmaşıklaştırmamış oluruz. Kotlin'de null güvenliğini Java'da olan if/else yapısı yanında let scope fonksiyonu, elvis fonksiyonu ile sağlayabiliriz. Null olup olmadığını belirlemede ? ve !! operatörlerini kullanırız. Tabii burada !! operatörünü kullanırken son derece dikkatli olmalıyız çünkü bu IDE'ye o değerin null olmadığını belirtir.
 
 9. Bir değişkene null değer atanır ve tip belirtilmezse Kotlin bu değişkeni nasıl yorumlar?
+    Bir değişkene null değeri atayıp, o değişkenin tipini belirtmezsek Kotlin bu değişkenin tipini Nothing? olarak belirler. Nothing o işlevin hiçbir zaman bir değer döndürmeyeceğini ifade eder. Nothing? sadece null değer alabilir ve başka hiçbir değeri temsil etmez.
+    
 10. İlkel bir değişkenin nullable olması ile null değer alamaması arasında bellek yönetimi açısından nasıl farklar vardır?
 11. Nullable bir değişkenin bir değere sahip olması ile null olması arasında bellek yönetimi açısından nasıl bir fark vardır? Null değer almış bir değişken bellekte yer kaplamaz diyebilir miyiz?
 12. Nullable bir değişkenle çalışırken hangi operatörleri kullanırız? Bu operatörlerin kullanım farkları nelerdir? Hangisini ne zaman kullanmak daha anlamlıdır?
