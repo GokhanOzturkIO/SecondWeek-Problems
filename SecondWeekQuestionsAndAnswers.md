@@ -99,6 +99,6 @@
     Primitive types are stored in a memory structure called the stack, whereas object types are stored in the heap for their values and in the stack for their addresses. Compared to the stack, the heap operates relatively slower. Making a value nullable converts it to an object type, resulting in relatively slower performance and more memory consumption compared to a primitive type.
 
 11. What is the difference in memory management between a nullable variable having a value and being null? Can we say that a variable with a null value does not occupy memory?
-
+    If a nullable variable has a value, it means that the value is stored in the heap and its address is stored in the stack. If it holds a null value, its address is still kept in the stack, but the value in the heap is cleared. In this case, it still occupies memory in the stack.
 
 12. Which operators do we use when working with nullable variables? What are the differences in usage of these operators? When is it more meaningful to use which one?

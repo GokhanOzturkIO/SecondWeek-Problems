@@ -90,7 +90,7 @@
     Yukardaki kodda `age` değişkeni null değer alabilir (nullable).
 
 8. "Null Güvenliği" (Null Safety) kavramını açıklayın.
-    Kotlin'de bulunan null güvenliği konsepti, kod yazarken NullPointerException hatalarını almamızın önüne geçmeyi amaçlar. Bu sayede null gelmemesi gereken değerleri eğer değer null ise hata verebilecek işleme sokmayız ve hata ayıklama işlemlerimizi daha da karmaşıklaştırmamış oluruz. Kotlin'de null güvenliğini Java'da olan if/else yapısı yanında let scope fonksiyonu, elvis fonksiyonu ile sağlayabiliriz. Null olup olmadığını belirlemede ? ve !! operatörlerini kullanırız. Tabii burada !! operatörünü kullanırken son derece dikkatli olmalıyız çünkü bu IDE'ye o değerin null olmadığını belirtir.
+    Kotlin'de bulunan null güvenliği konsepti, kod yazarken NullPointerException hatalarını almamızın önüne geçmeyi amaçlar. Bu sayede null gelmemesi gereken değerleri eğer değer null ise hata verebilecek işleme sokmayız ve hata ayıklama işlemlerimizi daha da karmaşıklaştırmamış oluruz. Kotlin'de null güvenliğini Java'da olan if/else yapısı yanında let scope fonksiyonu, elvis fonksiyonu ile sağlayabiliriz. Null olup olmadığını belirlemede `?.` ve `!!` operatörlerini kullanırız. Tabii burada `!!` operatörünü kullanırken son derece dikkatli olmalıyız çünkü bu IDE'ye o değerin null olmadığını belirtir.
 
 9. Bir değişkene null değer atanır ve tip belirtilmezse Kotlin bu değişkeni nasıl yorumlar?
     Bir değişkene null değeri atayıp, o değişkenin tipini belirtmezsek Kotlin bu değişkenin tipini Nothing? olarak belirler. Nothing o işlevin hiçbir zaman bir değer döndürmeyeceğini ifade eder. Nothing? sadece null değer alabilir ve başka hiçbir değeri temsil etmez.
@@ -99,7 +99,7 @@
     İlkel tipler Stack denilen hafıza yapısında tutulur. Obje tipleri ise değerleri Heap'te, adresleri ise Stack'te tutulur. Heap, Stack'e göre nispeted daha yavaş çalışır. Bir değerin nullable yapılması, onun bir obje tipine çevirdiği için ilkel bir tipe göre daha nispeten daha yavaş çalışmasını ve daha fazla bellek harcamasını sağlar. 
 
 11. Nullable bir değişkenin bir değere sahip olması ile null olması arasında bellek yönetimi açısından nasıl bir fark vardır? Null değer almış bir değişken bellekte yer kaplamaz diyebilir miyiz?
-
+    Nullable bir değişkenin bir değere sahip olması, değişkenin değerinin Heap'te, adresinin de Stack'te tutulması demektir. Eğer null değer almışsa, adres hâla Stack'te tutulur ancak Heap'teki değer silinir. Bu durumda bellekte (Stack'te) hâla yer kaplamaktadır.
 
 12. Nullable bir değişkenle çalışırken hangi operatörleri kullanırız? Bu operatörlerin kullanım farkları nelerdir? Hangisini ne zaman kullanmak daha anlamlıdır?
 
