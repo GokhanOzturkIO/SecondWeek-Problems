@@ -63,7 +63,21 @@
     ```
 
 4. Explain the concept of "Type Inference". In which situations is specifying the type absolutely necessary?
+    Type inference is the automatic determination of the data type of variables. For example, when we write `var name = "Ferec"`, the IDE automatically assigns the type of the `name` variable as String. If we define our variable within a class, it is mandatory to assign a value to it. However, if we define a variable locally within a function, we must explicitly specify its type.
+
+    ```
+    fun runForward() {
+        var velocity: Int // Burada başlangıç değeri vermemiz gerekmiyor.
+    }
+
+    class Runner() {
+        val name: String? = null // Burada başlangıç değeri vermemiz şarttır.
+    }
+    ```
+
 5. Does Kotlin's requirement for all variables to be classes mean that they are not "primitive types"? What happens behind the scenes?
+
+
 6. Explain the concept of "Type Safety".
 7. What should we do to make a variable nullable?
 8. Explain the concept of "Null Safety".

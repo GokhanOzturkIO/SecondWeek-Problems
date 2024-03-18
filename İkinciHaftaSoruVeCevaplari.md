@@ -63,7 +63,21 @@
     ```
 
 4. "Tip Çıkarımı" (Type inference) kavramını açıklayın. Hangi durumlarda tip belirtmek kesin olarak gereklidir?
+    Tip çıkarımı, değişkenlerin veri tipine göre otomatik olarak belirlenmesidir. Örneğin biz `var name = "Ferec"` yazdığımızda, IDE otomatik olarak `name` değişkeninin tipini String olarak atar. Eğer değişkenimizi bir class içerisinde tanımlıyorsak, bir değer ataması yapmamız şarttır.Fakat eğer lokal olarak bir fonksiyonun içerisinde bir değişken tanımlıyorsak, değişkeninin tipini kesin olarak belirtmemiz gerekir.
+
+    ```
+        fun runForward() {
+            var velocity: Int // Burada başlangıç değeri vermemiz gerekmiyor.
+        }
+
+        class Runner() {
+            val name: String? = null // Burada başlangıç değeri vermemiz şarttır.
+        }
+    ```
+
 5. Kotlin'de tüm değişkenlerin sınıf olarak bulunması, "ilkel tip" (primitive type) olmadıkları anlamına gelir mi? Arka planda neler oluyor?
+
+
 6. "Tip Güvenliği" (Type Safety) kavramını açıklayın.
 7. Bir değişkeni nullable yapmak için ne yapmalıyız?
 8. "Null Güvenliği" (Null Safety) kavramını açıklayın.
