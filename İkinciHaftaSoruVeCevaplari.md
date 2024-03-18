@@ -79,6 +79,9 @@
     Kotlin'de tüm değişkenler sınıf olarak tutulur. Fakat bu sınıflar, bytecode'a çevrilirken yapılan özel optimizasyonlar sayesinde ilkel hallerine dönüştürülürler. Kotlinde Int sınıfıyla tutulan veriler, Java tarafında ilkel int tipi olarak tutulur. String hariç bütün değişkenlerde bu şekilde tutulur. String, Java tarafında da sınıf halinde tutulur.
 
 6. "Tip Güvenliği" (Type Safety) kavramını açıklayın.
+    Kotlin'de "tip güvenliği" (type safety), kod üzerinde türlerle ilişkili hataları minimuma indirmesini sağlayan bir özelliktir. Bu, Kotlin'in tür sistemi tarafından sağlanır ve bizim veri türlerini doğru ve güvenli bir şekilde kullanmamızı sağlar. Kotlin, tür güvenliğini çeşitli yollarla sağlar. Null güvenliği, tip çıkarımı, tip kontrolleri, smart cast gibi özelliklerle kodumuzu minimum hata ile yazarız.
+
+
 7. Bir değişkeni nullable yapmak için ne yapmalıyız?
 8. "Null Güvenliği" (Null Safety) kavramını açıklayın.
 9. Bir değişkene null değer atanır ve tip belirtilmezse Kotlin bu değişkeni nasıl yorumlar?

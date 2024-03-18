@@ -79,6 +79,8 @@
     In Kotlin, all variables are held as classes. However, these classes are converted to their primitive forms through special optimizations during bytecode conversion. Data held as Int class in Kotlin is represented as the primitive int type in Java. This applies to all variables except String, which is held as a class both in Kotlin and Java.
 
 6. Explain the concept of "Type Safety".
+    "Type safety" in Kotlin is a feature that minimizes errors associated with types in code. This is provided by Kotlin's type system, ensuring that we use data types correctly and safely. Kotlin ensures type safety in various ways, including null safety, type inference, type checks, and smart casts, allowing us to write code with minimal errors.
+
 7. What should we do to make a variable nullable?
 8. Explain the concept of "Null Safety".
 9. If a null value is assigned to a variable and the type is not specified, how does Kotlin interpret this variable?
