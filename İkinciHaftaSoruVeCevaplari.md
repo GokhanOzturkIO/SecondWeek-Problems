@@ -4,6 +4,35 @@
     val (value) değerler salt okunur değerlerdir ve ilk atamadan sonra başka bir değer ataması yapılamaz. Ancak değeri başka değişkenlere bağlı ise bağlı olduğu değişkenler değiştiğinde val'ın da değeri değişir. var (variable) ise değerleri değiştirilebilen değişkenlerdir.
 
 2. Bir `var` değişkeni `val` gibi davranmasını nasıl sağlayabiliriz `val` kelimesini kullanmadan? Bunu neden yapmak isteriz? Örnek bir senaryo verin.
+    Bir `var` değişkeninin `val` gibi davranmasını yani yeniden atama yapılmamasını sağlamak için setter fonksiyonunu private yaparız. Kotlin'de bir sınıf içinde tanımladığımız değişkenler aslında Java tarafında property'lere denk geldiği için ve varsayılan olarak private ile enkapsüle edilmiş olduğu için setter fonksiyonuna müdahale ederek onun hiç değiştirememesini sağlayabiliriz. Örneğin:
+
+    ```kotlin
+    class Cat() {
+        var name: String = "Stray cat"
+
+        var pawAmount: Int = 4
+            private set
+
+        fun setPawAmount(amount: Int) { // değişkeni bir fonksiyon yardımıyla daha güvenli bir şekilde değiştirmesini sağlayabiliriz.
+            if(amount <4) {
+                // hata ver
+                println("Not enought paws, sorry!")
+            } else {
+                // kabul et
+                pawAmount = amount
+            }
+        }
+    }
+
+    fun main() {
+        val cat = Cat()
+
+        cat.pawAmount = 3 // Değiştirmeye izin vermeyecek, hata verecektir.
+        
+        cat.setPawAmount(5) // Bu yöntemde değiştirmesine izin verebiliriz.
+    }
+    ```
+ 
 3. "Değişmez" (Immutable) ve "Salt Okunur" (ReadOnly) kavramlarını açıklayın. `val` değişkenler neden aslında "değişmez" değil de "salt okunur" olarak açıklanmalıdır?
 4. "Tip Çıkarımı" (Type inference) kavramını açıklayın. Hangi durumlarda tip belirtmek kesin olarak gereklidir?
 5. Kotlin'de tüm değişkenlerin sınıf olarak bulunması, "ilkel tip" (primitive type) olmadıkları anlamına gelir mi? Arka planda neler oluyor?
