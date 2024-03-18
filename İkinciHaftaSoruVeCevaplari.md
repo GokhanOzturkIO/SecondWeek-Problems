@@ -81,9 +81,17 @@
 6. "Tip Güvenliği" (Type Safety) kavramını açıklayın.
     Kotlin'de "tip güvenliği" (type safety), kod üzerinde türlerle ilişkili hataları minimuma indirmesini sağlayan bir özelliktir. Bu, Kotlin'in tür sistemi tarafından sağlanır ve bizim veri türlerini doğru ve güvenli bir şekilde kullanmamızı sağlar. Kotlin, tür güvenliğini çeşitli yollarla sağlar. Null güvenliği, tip çıkarımı, tip kontrolleri, smart cast gibi özelliklerle kodumuzu minimum hata ile yazarız.
 
-
 7. Bir değişkeni nullable yapmak için ne yapmalıyız?
+    Kotlin'de bir değişkeni nullable yapabilmek için türün sonuna `?` koymamız gerekir. Örneğin:
+
+    ```kotlin
+        var age: Int? = calculateAge(1990)
+    ```
+    Yukardaki kodda `age` değişkeni null değer alabilir (nullable).
+
 8. "Null Güvenliği" (Null Safety) kavramını açıklayın.
+    
+
 9. Bir değişkene null değer atanır ve tip belirtilmezse Kotlin bu değişkeni nasıl yorumlar?
 10. İlkel bir değişkenin nullable olması ile null değer alamaması arasında bellek yönetimi açısından nasıl farklar vardır?
 11. Nullable bir değişkenin bir değere sahip olması ile null olması arasında bellek yönetimi açısından nasıl bir fark vardır? Null değer almış bir değişken bellekte yer kaplamaz diyebilir miyiz?

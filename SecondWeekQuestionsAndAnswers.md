@@ -82,7 +82,16 @@
     "Type safety" in Kotlin is a feature that minimizes errors associated with types in code. This is provided by Kotlin's type system, ensuring that we use data types correctly and safely. Kotlin ensures type safety in various ways, including null safety, type inference, type checks, and smart casts, allowing us to write code with minimal errors.
 
 7. What should we do to make a variable nullable?
+    In Kotlin we have to append `?` to the type in declaration in or order to make it a nullable type. For example:
+
+    ```kotlin
+        var age: Int? = calculateAge(1990)
+    ```
+    In the above code, `age` variable can take null values (nullable).
+
 8. Explain the concept of "Null Safety".
+    
+
 9. If a null value is assigned to a variable and the type is not specified, how does Kotlin interpret this variable?
 10. What are the differences in memory management between an nullable primitive variable and one that cannot hold null values?
 11. What is the difference in memory management between a nullable variable having a value and being null? Can we say that a variable with a null value does not occupy memory?
