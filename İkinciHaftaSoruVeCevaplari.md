@@ -34,6 +34,34 @@
     ```
  
 3. "Değişmez" (Immutable) ve "Salt Okunur" (ReadOnly) kavramlarını açıklayın. `val` değişkenler neden aslında "değişmez" değil de "salt okunur" olarak açıklanmalıdır?
+    Değişmez (immutable) değerler oluşturulduktan sonra hiçbir şekilde değeri değişmeyen değerlerdir. Salt okunur (read-only) değerler ise bir kere atanabilen (set edilen) değerlerdir ve değerleri başka bir değere bağlı olması halinde değişebilecek değerlerdir. `val` değerler salt okunur değerlerdir çünkü sadece bir kere değer ataması yapılıyor ancak değerleri başka bir değere bağlı ise değişebilir. Örneğin:
+
+    ```kotlin
+    fun main() {
+        val police = Police()
+        police.dispatchPolice()
+    }
+
+    class Police() {
+        var officerName: String = "Officer Jack"
+        var officerRank: Int = 4
+        val officerBadge: String
+            get() {
+                return "Badge: $officerName, Rank: $officerRank"
+            }
+
+        fun dispatchPolice() {
+            println(officerBadge)
+            officerName = "Officer Malfoy"
+            officerRank = 5
+            println(officerBadge)
+            officerName = "Officer Harry"
+            officerRank = 3
+            println(officerBadge)
+        }
+    }
+    ```
+
 4. "Tip Çıkarımı" (Type inference) kavramını açıklayın. Hangi durumlarda tip belirtmek kesin olarak gereklidir?
 5. Kotlin'de tüm değişkenlerin sınıf olarak bulunması, "ilkel tip" (primitive type) olmadıkları anlamına gelir mi? Arka planda neler oluyor?
 6. "Tip Güvenliği" (Type Safety) kavramını açıklayın.

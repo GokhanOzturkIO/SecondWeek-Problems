@@ -34,6 +34,34 @@
     ```
  
 3. Explain the concepts of "Immutable" and "Read-Only". Why should `val` variables actually be described as "Read-Only" rather than "Immutable"?
+    Immutable values are values that remain unchanged in any way after they are created. Read-only values, on the other hand, are values that can be assigned (set) only once and can change if their values are dependent on another value. val values are read-only values because they are assigned only once, but they can change if their values are dependent on another value. For example:
+
+    ```kotlin
+    fun main() {
+        val police = Police()
+        police.dispatchPolice()
+    }
+
+    class Police() {
+        var officerName: String = "Officer Jack"
+        var officerRank: Int = 4
+        val officerBadge: String
+            get() {
+                return "Badge: $officerName, Rank: $officerRank"
+            }
+
+        fun dispatchPolice() {
+            println(officerBadge)
+            officerName = "Officer Malfoy"
+            officerRank = 5
+            println(officerBadge)
+            officerName = "Officer Harry"
+            officerRank = 3
+            println(officerBadge)
+        }
+    }
+    ```
+
 4. Explain the concept of "Type Inference". In which situations is specifying the type absolutely necessary?
 5. Does Kotlin's requirement for all variables to be classes mean that they are not "primitive types"? What happens behind the scenes?
 6. Explain the concept of "Type Safety".
