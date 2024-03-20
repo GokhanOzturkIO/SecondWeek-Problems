@@ -133,6 +133,7 @@
     Float sayılar ondalıklı kısımda 6-7 basamağa kadar olan işlemleri yaparlar. Double sayılar ise ondalıklı kısımda 15-16 basamağa kadar olan işlemleri yaparlar. Bu sınırın üzerinde gelen ondalıklı kısımları var ise, bu sayılar yuvarlanır veya fazlalık olan kısım kesilir. Daha fazla hassasiyet gereken işlemlerimiz var ise double veri tipini kullanmamız bizim için daha uygun olacaktır. Örneğin, finansal veya bilimsel hesaplamalar gibi hassas verilerin işlendiği uygulamalarda kullanılabilir. Float veri tipini ise,daha düşük bellek kullanımı ve daha hızlı hesaplama gereken uygulamalarda kullanabiliriz. Örneğin oyunlar veya sinyal işleme gibi uygulamalarda kullanabiliriz.
 
 7. Ondalık (Decimal), Onaltılık (Hexadecimal) ve İkilik (Binary) değişkenleri Kotlin'de nasıl tanımlayabilirsiniz?
+
     ```kotlin 
         val decimalNumber = 1990
         val hexadecimalNumber = 0x7F // ondalık sayı olarak 127'ye denk gelir.
@@ -140,7 +141,30 @@
     ```
 
 8. Sekizlik (Octal) değişkenler Java'da nasıl tanımlanır? Kotlin'de Sekizlik değişken tanımlanabilir mi?
+    Java'da sayıların başına 0 ön eki getirilerek sekizlik sayılar ifade edilir. Ancak Kotlin'de bu geçerli değildir.Kotlin'de doğrudan bir sayısal ifadeyi sekizlik olarak tanımlayamayız. Bunun için Integer sınıfından parseInt veya toInt fonksiyonlarını kullanabiliriz. Örneğin:
+
+    ```kotlin 
+        fun main() {
+            val numberToParse = 120
+
+            octalToDecimalUsingParseInt(numberToParse.toString()) // çıktı 80'dir.
+
+            octalToDecimalUsingToInt(numberToParse.toString()) // çıktı 80'dir.
+        }
+
+        fun octalToDecimalUsingParseInt(octal: String): Int {
+            return Integer.parseInt(octal, 8)
+        }
+
+        fun octalToDecimalUsingToInt(octal: String): Int {
+            return octal.toInt(8)
+        }
+    ```
+
+
 9. "Geleneksel Notasyon" (Conventional Notation) gösterimi nasıl yapılır?
+
+
 10. Sayısal değişkenlerde alt çizgi (underscore) nasıl kullanılır? Kotlin bunu nasıl yorumlar?
 11. `==` ile neyi karşılaştırırız? `===` ile neyi karşılaştırırız?
 12. `===` operatörü ile karşılaştırma yaparken Byte değer aralığı neden önemlidir? Kotlin bu aralığa göre neden özel bir davranış sergiler?

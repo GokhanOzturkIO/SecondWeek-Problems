@@ -134,6 +134,7 @@
     Float numbers perform operations with 6-7 digits of precision in the decimal part, whereas Double numbers perform operations with 15-16 digits of precision in the decimal part. If there are decimal digits beyond this limit, they are either rounded or truncated. When we require higher precision, using the Double data type would be more appropriate. For instance, it can be used in applications involving financial or scientific calculations where precision is crucial. On the other hand, the Float data type can be used in applications where lower memory usage and faster calculations are required, such as games or signal processing.
 
 7. How can you define Decimal, Hexadecimal, and Binary variables in Kotlin?
+
     ```kotlin 
         val decimalNumber = 1990
         val hexadecimalNumber = 0x7F // it corresponds to 127 as decimal counterpart.
@@ -141,7 +142,29 @@
     ```
 
 8. How are Octal variables defined in Java? Can Octal variables be defined in Kotlin?
+    In Java, octal numbers are represented by prefixing the numbers with 0. However, this is not valid in Kotlin. We cannot directly define a numerical expression as octal in Kotlin. Instead, we can use the parseInt or toInt functions from the Integer class. For example:
+    
+    ```kotlin 
+        fun main() {
+            val numberToParse = 120
+
+            octalToDecimalUsingParseInt(numberToParse.toString()) // output is 80
+
+            octalToDecimalUsingToInt(numberToParse.toString()) // output is 80
+        }
+
+        fun octalToDecimalUsingParseInt(octal: String): Int {
+            return Integer.parseInt(octal, 8)
+        }
+
+        fun octalToDecimalUsingToInt(octal: String): Int {
+            return octal.toInt(8)
+        }
+    ```
+
 9. How is Conventional Notation represented?
+
+
 10. How is the underscore (_) used in numerical variables? How does Kotlin interpret this?
 11. What do we compare with `==`? What do we compare with `===`?
 12. Why is the Byte value range important when comparing with the `===` operator? Why does Kotlin exhibit special behavior according to this range?
