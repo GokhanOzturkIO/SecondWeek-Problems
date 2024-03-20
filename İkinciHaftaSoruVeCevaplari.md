@@ -122,6 +122,13 @@
     Tek duyarlıklı sayılar, 32 bitlik bir kayan nokta formatını kullanırken, çift duyarlıklı sayılar 64 bitlik formatı kullanır. Tek duyarlıklı sayılar daha az bellek kullanırlar ancak daha düşük hassasiyete sahiptirler. Çift duyarlıklı sayılar ise daha fazla bellek kullanırlar ve daha yüksek hassasiyete sahiptirler.
 
 5. Double ve Float değişkenlerle çalışırken ondalık ayıracı olarak hangi işaretler kullanılır? Bu ayıraçların kullanımında nelere dikkat etmek gerekir?
+    Double ve Float değişkenlerle çalışırken, ondalık ayrıracı olarak nokta(.) kullanılır. Örneğin:
+    
+    ```kotlin
+        val floatNumber: Float = 5.13f
+        val doubleNumber: Double = 5.13
+    ```
+
 6. Double ve Float değişkenler ondalık kısımda kaç basamağa kadar işlem yaparlar? Bu sınırın üzerinde gelen ondalık bilgileri için nasıl davranırlar? Hangi durumlar için Float ve hangi durumlar için Double kullanılmalıdır?
 7. Ondalık(Decimal), Onaltılık (Hexadecimal) ve İkilik (Binary) değişkenleri Kotlin'de nasıl tanımlayabilirsiniz?
 8. Sekizlik (Octal) değişkenler Java'da nasıl tanımlanır? Kotlin'de Sekizlik değişken tanımlanabilir mi?

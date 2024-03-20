@@ -123,6 +123,13 @@
     Single precision numbers use a 32-bit floating-point format, while double precision numbers use a 64-bit format. Single precision numbers consume less memory but have lower precision. Double precision numbers, on the other hand, consume more memory and have higher precision.
 
 5. What symbols are used as decimal separators when working with Double and Float variables? What should be considered when using these separators?
+    When working with Double and Float variables, a dot (.) is used as the decimal separator. For example:
+    
+    ```kotlin
+        val floatNumber: Float = 5.13f
+        val doubleNumber: Double = 5.13
+    ```
+
 6. How many digits can Double and Float variables process in the fractional part? How do they behave for decimal information exceeding this limit? In which scenarios should Float and which scenarios should Double be used?
 7. How can you define Decimal, Hexadecimal, and Binary variables in Kotlin?
 8. How are Octal variables defined in Java? Can Octal variables be defined in Kotlin?
