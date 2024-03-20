@@ -117,6 +117,8 @@
     The Kotlin compiler infers the appropriate data type based on the assigned value. For example, if the assigned value is a number, the compiler determines the variable's type by looking at its value range. Specifically for numbers, if we don't specify explicitly, Kotlin assumes them to be of type Int for smaller numbers. When a number exceeds the Int range, Kotlin will infer the type as Long.
 
 3. When creating a Float variable, why are both `F` and `f` allowed, while there's no lowercase l when creating a Long variable?
+    In some fonts, the numeral "1" and the lowercase letter "l" (ell) look very similar, causing confusion. Therefore, the lowercase "l" is often avoided in situations where clarity is crucial to prevent confusion with the numeral "1".
+
 4. Explain the concepts of Single precision and Double precision.
 5. What symbols are used as decimal separators when working with Double and Float variables? What should be considered when using these separators?
 6. How many digits can Double and Float variables process in the fractional part? How do they behave for decimal information exceeding this limit? In which scenarios should Float and which scenarios should Double be used?

@@ -116,6 +116,8 @@
     Kotlin derleyicisi, atanan değere göre uygun veri tipini çıkarır. Örneğin atanan değer bir sayı ise bunun değer aralığına bakarak, değişkenin tipini belirler. Sayılar özelinde, küçük sayıları biz özellikle belirtmediğimiz taktirde Int olarak kabul edecektir. Sayı Int aralığından çıktığında Long tipini çıkaracaktır.
 
 3. Float değişken oluştururken `F` ve `f` harfleri varken, Long değişken oluştururken neden küçük `l` harfi yoktur?
+    Bazı fontlarda 1(bir)'in yazımı ile küçük L harfinin yazımı birbirine çok benzediği için küçük l harfi karışıklık çıkartmaması için kullanılmaz.
+
 4. Tek duyarlıklı (Single precision) ve Çift duyarlıklı (Double precision) kavramlarını açıklayın.
 5. Double ve Float değişkenlerle çalışırken ondalık ayıracı olarak hangi işaretler kullanılır? Bu ayıraçların kullanımında nelere dikkat etmek gerekir?
 6. Double ve Float değişkenler ondalık kısımda kaç basamağa kadar işlem yaparlar? Bu sınırın üzerinde gelen ondalık bilgileri için nasıl davranırlar? Hangi durumlar için Float ve hangi durumlar için Double kullanılmalıdır?
