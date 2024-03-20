@@ -114,7 +114,7 @@
     There are 6 subclasses inheriting from the Number class: `Byte`, `Short`, `Int`, `Long`, `Double`, and `Float`. These data types are important to us because they have specific value ranges they can hold. They occupy different amounts of memory in accordance with their value ranges. To achieve maximum performance in our projects, we should work with data types that match the value ranges. For example, we should use the Long data type to represent larger numbers or the Byte or Short data types to represent smaller numbers. Additionally, we should be careful not to exceed the value ranges of the data types we use in our calculations to avoid unexpected behavior.
 
 2. If a variable is declared without a type and a value is assigned to it, how does Kotlin perform type inference?
-
+    The Kotlin compiler infers the appropriate data type based on the assigned value. For example, if the assigned value is a number, the compiler determines the variable's type by looking at its value range. Specifically for numbers, if we don't specify explicitly, Kotlin assumes them to be of type Int for smaller numbers. When a number exceeds the Int range, Kotlin will infer the type as Long.
 
 3. When creating a Float variable, why are both `F` and `f` allowed, while there's no lowercase l when creating a Long variable?
 4. Explain the concepts of Single precision and Double precision.

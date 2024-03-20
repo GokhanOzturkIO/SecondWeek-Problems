@@ -113,7 +113,7 @@
     Number classını miras alan 6 adet alt sınıf vardır. Bunlar: `Byte`, `Short`, `Int`, `Long`, `Double` ve `Float` sınıflarıdır. Bu veri tiplerinin değerleri bizim için önemlidir çünkü bu veri tiplerinin alabileceği belirli değer aralıkları vardır. Aldıkları değer aralıklarına oranla bellekte farklı boyutlarda yer kaplarlar. Projelerimizde maksimum performansı alabilmek için, veri tiplerinin değer aralıklarına uygun bir şekilde çalışmalıyız. Örneğin daha büyük sayıları temsil etmek için Long veri tipini veya daha küçük sayıları temsil etmek için Byte veya Short veri tipini kullanmalıyız. Ayrıca kullandığımız veri tiplerinde değer aralıklarını aşmamaya dikkat etmeliyiz.
 
 2. Eğer bir değişkene tip belirtimi yapılmaz ve bir değer atanırsa, Kotlin tip çıkarımını nasıl yapar?
-
+    Kotlin derleyicisi, atanan değere göre uygun veri tipini çıkarır. Örneğin atanan değer bir sayı ise bunun değer aralığına bakarak, değişkenin tipini belirler. Sayılar özelinde, küçük sayıları biz özellikle belirtmediğimiz taktirde Int olarak kabul edecektir. Sayı Int aralığından çıktığında Long tipini çıkaracaktır.
 
 3. Float değişken oluştururken `F` ve `f` harfleri varken, Long değişken oluştururken neden küçük `l` harfi yoktur?
 4. Tek duyarlıklı (Single precision) ve Çift duyarlıklı (Double precision) kavramlarını açıklayın.
