@@ -119,6 +119,8 @@
     Bazı fontlarda 1(bir)'in yazımı ile küçük L harfinin yazımı birbirine çok benzediği için küçük l harfi karışıklık çıkartmaması için kullanılmaz.
 
 4. Tek duyarlıklı (Single precision) ve Çift duyarlıklı (Double precision) kavramlarını açıklayın.
+    Tek duyarlıklı sayılar, 32 bitlik bir kayan nokta formatını kullanırken, çift duyarlıklı sayılar 64 bitlik formatı kullanır. Tek duyarlıklı sayılar daha az bellek kullanırlar ancak daha düşük hassasiyete sahiptirler. Çift duyarlıklı sayılar ise daha fazla bellek kullanırlar ve daha yüksek hassasiyete sahiptirler.
+
 5. Double ve Float değişkenlerle çalışırken ondalık ayıracı olarak hangi işaretler kullanılır? Bu ayıraçların kullanımında nelere dikkat etmek gerekir?
 6. Double ve Float değişkenler ondalık kısımda kaç basamağa kadar işlem yaparlar? Bu sınırın üzerinde gelen ondalık bilgileri için nasıl davranırlar? Hangi durumlar için Float ve hangi durumlar için Double kullanılmalıdır?
 7. Ondalık(Decimal), Onaltılık (Hexadecimal) ve İkilik (Binary) değişkenleri Kotlin'de nasıl tanımlayabilirsiniz?
