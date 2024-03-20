@@ -132,7 +132,13 @@
 6. Double ve Float değişkenler ondalık kısımda kaç basamağa kadar işlem yaparlar? Bu sınırın üzerinde gelen ondalık bilgileri için nasıl davranırlar? Hangi durumlar için Float ve hangi durumlar için Double kullanılmalıdır?
     Float sayılar ondalıklı kısımda 6-7 basamağa kadar olan işlemleri yaparlar. Double sayılar ise ondalıklı kısımda 15-16 basamağa kadar olan işlemleri yaparlar. Bu sınırın üzerinde gelen ondalıklı kısımları var ise, bu sayılar yuvarlanır veya fazlalık olan kısım kesilir. Daha fazla hassasiyet gereken işlemlerimiz var ise double veri tipini kullanmamız bizim için daha uygun olacaktır. Örneğin, finansal veya bilimsel hesaplamalar gibi hassas verilerin işlendiği uygulamalarda kullanılabilir. Float veri tipini ise,daha düşük bellek kullanımı ve daha hızlı hesaplama gereken uygulamalarda kullanabiliriz. Örneğin oyunlar veya sinyal işleme gibi uygulamalarda kullanabiliriz.
 
-7. Ondalık(Decimal), Onaltılık (Hexadecimal) ve İkilik (Binary) değişkenleri Kotlin'de nasıl tanımlayabilirsiniz?
+7. Ondalık (Decimal), Onaltılık (Hexadecimal) ve İkilik (Binary) değişkenleri Kotlin'de nasıl tanımlayabilirsiniz?
+    ```kotlin 
+        val decimalNumber = 1990
+        val hexadecimalNumber = 0x7F // ondalık sayı olarak 127'ye denk gelir.
+        val binaryNumber = 0b10010 // ondalık sayı olarak 18'e denk gelir.
+    ```
+
 8. Sekizlik (Octal) değişkenler Java'da nasıl tanımlanır? Kotlin'de Sekizlik değişken tanımlanabilir mi?
 9. "Geleneksel Notasyon" (Conventional Notation) gösterimi nasıl yapılır?
 10. Sayısal değişkenlerde alt çizgi (underscore) nasıl kullanılır? Kotlin bunu nasıl yorumlar?

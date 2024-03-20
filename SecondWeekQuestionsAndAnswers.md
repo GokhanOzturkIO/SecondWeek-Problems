@@ -134,6 +134,12 @@
     Float numbers perform operations with 6-7 digits of precision in the decimal part, whereas Double numbers perform operations with 15-16 digits of precision in the decimal part. If there are decimal digits beyond this limit, they are either rounded or truncated. When we require higher precision, using the Double data type would be more appropriate. For instance, it can be used in applications involving financial or scientific calculations where precision is crucial. On the other hand, the Float data type can be used in applications where lower memory usage and faster calculations are required, such as games or signal processing.
 
 7. How can you define Decimal, Hexadecimal, and Binary variables in Kotlin?
+    ```kotlin 
+        val decimalNumber = 1990
+        val hexadecimalNumber = 0x7F // it corresponds to 127 as decimal counterpart.
+        val binaryNumber = 0b10010 // it corresponds to 18 as decimal counterpart.
+    ```
+
 8. How are Octal variables defined in Java? Can Octal variables be defined in Kotlin?
 9. How is Conventional Notation represented?
 10. How is the underscore (_) used in numerical variables? How does Kotlin interpret this?
