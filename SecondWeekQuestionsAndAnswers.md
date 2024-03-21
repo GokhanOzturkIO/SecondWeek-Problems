@@ -166,9 +166,11 @@
     In Kotlin, conventional notation for Double numbers can be expressed as "172.3" or "172.3e10", while for Float numbers it can be represented as "172.3f" or "172.3F".
 
 10. How is the underscore (_) used in numerical variables? How does Kotlin interpret this?
-    The underscore is used to enhance the readability of large numbers. It is ignored by the IDE. A number defined as 1_000_000 is interpreted as 1000000 by the IDE.
+    The underscore is used to enhance the readability of large numbers. It is ignored by the IDE. A number defined as `1_000_000` is interpreted as `1000000` by the IDE.
 
 11. What do we compare with `==`? What do we compare with `===`?
+    `==` operator compares two values and returns true if the values are equal. `===` operator compares two references and returns true if both objects point to the same memory location in the heap.
+
 12. Why is the Byte value range important when comparing with the `===` operator? Why does Kotlin exhibit special behavior according to this range?
 13. What mathematical operators can be used in numerical variables?
 14. What comparison operators can be used in numerical variables?

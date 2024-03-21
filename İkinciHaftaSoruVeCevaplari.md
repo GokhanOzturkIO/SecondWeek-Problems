@@ -169,6 +169,8 @@
     Alt çizgi büyük sayıların okunabilirliğini arttırmak için kullanılır. IDE tarafından okunmazlar. `1_000_000` şekilde tanımlanan sayı, `1000000` şeklinde yorumlanır.
 
 11. `==` ile neyi karşılaştırırız? `===` ile neyi karşılaştırırız?
+    `==` operatörü iki değeri karşılaştırır ve değerler eşit ise `true` döndürür. `===` operatörü iki referansı karşılaştırır ve iki nesne de bellekte aynı yeri işaret ediyorsa `true` döndürür.
+
 12. `===` operatörü ile karşılaştırma yaparken Byte değer aralığı neden önemlidir? Kotlin bu aralığa göre neden özel bir davranış sergiler?
 13. Sayısal değişkenlerde hangi matematiksel operatörler kullanılabilir?
 14. Sayısal değişkenlerde hangi karşılaştırma operatörleri kullanılabilir?
