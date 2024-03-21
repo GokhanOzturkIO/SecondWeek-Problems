@@ -311,6 +311,13 @@
     ```
 
 6. "İşaretsiz" değişkenlerin kullanım amaçları nelerdir?
+
+    İşaretsiz değişkenlerin tercih sebepleri aşağıdakiler olabilir:
+    
+    * İşaretli değişkenlere göre daha geniş veri aralıklarını daha az bellek kullanarak saklamaları. Örneğin, `UInt`: 0 ile 2^32 - 1 arasındaki tam sayıları temsil eder. Yani, 0 ile 4,294,967,295 arasındaki değerleri alabilir. Int: -2^31 ile 2^31 - 1 arasındaki tam sayıları temsil eder. Yani, -2,147,483,648 ile 2,147,483,647 arasındaki değerleri alabilir.
+    * Sadece sıfır veya pozitif değer alabilecek değerlerin saklanması. Örneğin yaş bilgisi, TC kimlik numarası, ayakkabı numarası vb.
+    * Bazı durumlarda, işaretsiz değişkenler işlemleri daha hızlı gerçekleştirebilir çünkü işaret bitiyle ilgilenmek gerekmez, bu da işlemci tarafından daha etkin bir şekilde gerçekleştirilebilir.
+
 7. "İşaretsiz" değişkenlerle yapılan matematiksel işlemlerde, özellikle büyük sayılarla çalışırken karşılaşılabilecek taşma (overflow) ve taşma olmaması (underflow) durumları için Kotlin nasıl bir yönetim sağlar?
 8. "İşaretsiz" değişkenlerin sınırlamaları nelerdir?
 9. "İşaretsiz" değişken türleri (UInt, ULong vs.) kullanırken, Java API'leri ile uyumluluk konusunda ne gibi sorunlar olabilir? Bunları çözmek için neler yapabilirsiniz?

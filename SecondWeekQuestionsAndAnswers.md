@@ -303,7 +303,7 @@
 5. How is the letter representation of an "unsigned" Long done?
 
     To create an unsigned Long variable, we have to append `uL` or `UL` to its value. For example:
-    
+
 
     ```kotlin
         val unsignedLong1 = 3288182375uL
@@ -311,6 +311,13 @@
     ```
 
 6. What are the purposes of "unsigned" variables?
+
+    Reasons for preferring unsigned variables may include:
+
+    * Storing wider data ranges using less memory compared to signed variables. For example, UInt represents integers between 0 and 2^32 - 1, meaning it can hold values between 0 and 4,294,967,295. Int, on the other hand, represents integers between -2^31 and 2^31 - 1, covering values from -2,147,483,648 to 2,147,483,647.
+    * Storing values that can only be zero or positive. For instance, age, national identification number, shoe size, etc.
+    * In some cases, unsigned variables might perform operations faster because there is no need to deal with a sign bit, which can be processed more efficiently by the processor.
+
 7. How does Kotlin manage overflow and underflow situations that may occur when performing mathematical operations with "unsigned" variables, especially when working with large numbers?
 8. What are the limitations of "unsigned" variables?
 9. When using "unsigned" variable types (UInt, ULong, etc.), what compatibility issues may arise with Java APIs? What can be done to address these issues?
