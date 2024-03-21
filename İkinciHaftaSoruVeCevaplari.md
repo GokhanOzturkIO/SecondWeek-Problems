@@ -341,6 +341,27 @@
 ### Tür Dönüşümü
 
 1. `is` ve `!is` operatörlerinin kullanımını açıklayın.
+
+    * `is` operatörü, bir nesnenin belirli bir türe ait olup olmadığını kontrol eder. Eğer nesne o türe aitse, ifade `true` döner, aksi halde `false` döner.
+
+    * `!is` operatörü ise bir nesnenin belirli bir türe ait olmadığını kontrol eder. Eğer nesne o türe ait değilse, ifade `true` döner, aksi halde `false` döner.
+
+    ```kotlin
+        fun getAgeOrAddress(input: Any) {
+            if (input is String) {
+                println("$input is the address")
+            } else {
+                println("$input is not an address")
+            }
+
+            if (input !is Int) {
+                println("$input is not an age value")
+            } else {
+                println("$input is the age")
+            }
+        }
+    ```
+
 2. "Akıllı Dönüşüm" (Smart Cast) ne demektir? Farklı kod örnekleri ile açıklayın. Bu özelliğin sınırlamaları nelerdir?
 3. "Güvenli & Güvensiz" operatörler nelerdir?
 4. Sayısal değişkenlerde örtük tip genişletme (implicit widening conversions) ne demektir? Kotlin'de bu neden yapılamaz?

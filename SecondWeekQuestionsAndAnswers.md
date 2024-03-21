@@ -341,6 +341,27 @@
 ### Type Conversion
 
 1. Explain the usage of the `is` and `!is` operators.
+
+    * `is` operator checks if an object belongs to a specific type. If the object is of that type, it returns `true`; otherwise, it returns `false`.
+
+    * `!is` operator checks if an object does not belong to a specific type. If the object is not of that type, it returns `true`; otherwise, it returns `false`.
+
+    ```kotlin
+        fun getAgeOrAddress(input: Any) {
+            if (input is String) {
+                println("$input is the address")
+            } else {
+                println("$input is not an address")
+            }
+
+            if (input !is Int) {
+                println("$input is not an age value")
+            } else {
+                println("$input is the age")
+            }
+        }
+    ```
+
 2. What does "Smart Cast" mean? Explain with different code examples. What are the limitations of this feature?
 3. What are the "Safe & Unsafe" operators?
 4. What does implicit widening conversions mean in numerical variables? Why can't this be done in Kotlin?
