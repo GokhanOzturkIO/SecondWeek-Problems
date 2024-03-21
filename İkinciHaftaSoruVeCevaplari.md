@@ -272,7 +272,7 @@
         val doubleNumber = 1.5323512
 
         val roundedBigDecimal = doubleNumber.toBigDecimal().round(MathContext.DECIMAL64).setScale(3, RoundingMode.HALF_UP) // Burada ondalıklı sayının üçüncü ondalık basamağına bakarak yuvarlama yapar ve 5 veya daha büyükse yukarı yuvarlar, aksi takdirde aşağı yuvarlar.
-    ``
+    ```
 
     Bunun dışında Kotlin'in sağladığı `roundToInt()` veya `roundToLong()` fonksiyonlarını da kullanabiliriz. Kişiselleştirilmiş yuvarlama fonksiyonları da yazabiliriz.
 
@@ -288,7 +288,13 @@
     İşaretsiz değişkenler kendilerine özel sınıflarda tutulurlar (Örneğin; "UInt", "ULong"). İşaretsiz değişkenlerin bu şekilde tutulması önemlidir çünkü bu yapı, programcılara özellikle bellek kullanımı ve veri manipülasyonu gibi konularda daha fazla esneklik sağlar. Ayrıca, işaretsiz değişkenler, belirli durumlarda işaretli değişkenlere göre daha hızlı hesaplamalar yapmayı sağlayabilir, çünkü işaret bitiyle ilgilenmek gerekmez.
 
 3. "İşaretsiz" değişkenlerin harf gösterimi nasıldır?
-    
+
+    İşaretsiz değişkenler, sayının sonuna `u` veya `U` eklenerek gösterilir. Örneğin:
+
+    ```kotlin
+        val unsignedNumber1 = 53u
+        val unsignedNumber2 = 67U
+    ```
 
 4. "`val a1 = 42u` ve `val a2 = 0xFFFF_FFFF_FFFFu`" değişkenlerin tipleri ne olur? Neden?
 5. "İşaretsiz" "Long" harf gösterimi nasıl yapılır?
