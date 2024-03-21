@@ -195,7 +195,21 @@
     ```
 
 14. Sayısal değişkenlerde hangi karşılaştırma operatörleri kullanılabilir?
+    
+    ```kotlin
+        == (eşittir) -> İki değer birbirine eşitse true döndürür.
+        != (eşit değildir) -> İki değer birbirine eşit değilse true döndürür.
+        < (küçüktür) -> Sol taraftaki değer sağ taraftakinden küçükse true döndürür.
+        > (büyüktür) -> Sol taraftaki değer sağ taraftakinden büyükse true döndürür.
+        >= (büyük veya eşittir) -> Sol taraftaki değer sağ taraftakinden büyük veya eşitse true döndürür.
+        <= (küçük veya eşittir) -> Sol taraftaki değer sağ taraftakinden küçük veya eşitse true döndürür. 
+        in (aralığındadır) -> Sol taraftaki değer sağ taraftaki aralıkta (örneğin: a..b) ise true döner.
+        !in (aralığında değildir) -> Sol taraftaki değer sağ taraftaki aralıkta (örneğin: a..b) ise false döner.
+    ```
+
 15. Bit düzeyinde operatörler (Bitwise operators) nelerdir? Ne amaçla kullanılır? Kotlin'de bunları nasıl kullanabilirsiniz?
+    
+
 16. Kotlin'de büyük sayılarla çalışırken hangi ek türlerden yararlanılır ve bu türlerin sınırları nelerdir?
 17. Double ve Float değişkenler kullanılırken "yuvarlama" davranışı nasıldır? Bu nasıl değiştirilebilir?
 

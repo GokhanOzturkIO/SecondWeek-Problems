@@ -195,6 +195,20 @@
     ```
 
 14. What comparison operators can be used in numerical variables?
+
+    ```kotlin
+        == (equals) -> Returns true if two values are equal.
+        != (not equal) -> Returns true if two values are not equal.
+        < (less than) -> Returns true if the left-hand side value is less than the right-hand side value.
+        > (greater than) -> Returns true if the left-hand side value is greater than the right-hand side value.
+        >= (greater than or equal to) -> Returns true if the left-hand side value is greater than or equal to the right-hand side value.
+        <= (less than or equal to) -> Returns true if the left-hand side value is less than or equal to the right-hand side value. 
+        in (in range) -> Returns true if the left-hand side value is in the range specified on the right-hand side (e.g., a..b).
+        !in (not in range) -> Returns false if the left-hand side value is in the range specified on the right-hand side (e.g., a..b).
+    ```
+
 15. What are Bitwise operators? What are they used for? How can you use them in Kotlin?
+    
+
 16. What additional types are used when working with large numbers in Kotlin, and what are their limits?
 17. What is the rounding behavior when using Double and Float variables? How can this behavior be modified?
