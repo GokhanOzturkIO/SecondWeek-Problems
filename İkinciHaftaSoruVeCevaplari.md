@@ -175,7 +175,24 @@
     `===` operatörü ile -128 ile 127 arasındaki byte değerler için bellekte tek bir bölüm oluşturulur. Bu performans optimizasyonu için yapılmıştır. Bu aralık dışındaki değerler için her seferinde yeni bir yer ayırımı yapılır. Bu durumda `===` operatörü ile -128 ile 127 değer aralığındaki değerleri karşılaştırırken bellekteki yer aynı olduğu için değer farklı bile olsa `true` döner. Bu aralık dışındaki değerler için hem değer hem de bellekteki adresin karşılaştırmasını yapar.
 
 13. Sayısal değişkenlerde hangi matematiksel operatörler kullanılabilir?
-    
+    Kotlin'de sayılar arasında toplama, çıkarma, çarpma, bölme ve mod alma işlemlerini yapabileceğimiz operatörler kullanılabilir. Ayrıca Kotlin Primitives veya FloorDivMod sınıfında tanımlı olan çeşitli extension fonksiyonlarını da kullanabiliriz. Örneğin:
+
+    ```kotlin
+        val sumWithOperator = 5 + 2
+        val sumWithFunction = 5.plus(2)
+
+        val subtractWithOperator = 5 - 2
+        val subtractWithFunction = 5.minus(2)
+
+        val multiplyWithOperator = 5 * 2
+        val multiplyWithFunction = 5.times(2)
+
+        val divisionWithOperator = 5 / 2
+        val divisionWithFunction = 5.div(2)
+
+        val modWithOperator = 5 % 2
+        val modWithFunction = 5.mod(2) // mod fonksiyonu Kotlin'in FloorDivMod sınıfında tanımlı
+    ```
 
 14. Sayısal değişkenlerde hangi karşılaştırma operatörleri kullanılabilir?
 15. Bit düzeyinde operatörler (Bitwise operators) nelerdir? Ne amaçla kullanılır? Kotlin'de bunları nasıl kullanabilirsiniz?
