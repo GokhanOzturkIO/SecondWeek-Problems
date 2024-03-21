@@ -256,5 +256,12 @@
 
 16. What additional types are used when working with large numbers in Kotlin, and what are their limits?
 
+    When working with large numbers in Kotlin, we use the `BigInteger` and `BigDecimal` classes. Additionally, Kotlin provides `MAX_VALUE` constants assigned to primitive types. Regarding `BigInteger` and `BigDecimal`, their limits can vary depending on the memory allocated by the JVM. Due to their potentially large values, they can impose a significant overhead in terms of both memory usage and processing speed. On the other hand, the `MAX_VALUE` constants assigned to primitive types can be directly accessed. For `Int`, `Double`, and `Long`, the `MAX_VALUE` constants are as follows:
+
+    ```java
+        public const val MAX_VALUE: Int = 2147483647
+        public const val MAX_VALUE: Double = 1.7976931348623157E308
+        public const val MAX_VALUE: Long = 9223372036854775807L
+    ```
 
 17. What is the rounding behavior when using Double and Float variables? How can this behavior be modified?

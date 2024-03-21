@@ -255,7 +255,14 @@
         ```
 
 16. Kotlin'de büyük sayılarla çalışırken hangi ek türlerden yararlanılır ve bu türlerin sınırları nelerdir?
-    
+
+    Kotlin'de büyük sayılarla çalışırken,BigInteger ve BigDecimal sınıflarından yararlanılır. Bunun yanında ilkel tiplere atanmış MAX_VALUE değerleri de mevcuttur. BigInteger ve BigDecimal özelinde, sınırlar JVM'in atadığı belleğe göre değişebilir. Bu değer çok büyük olduğu için hem hafıza hem de çalışma hızı bakımından ağırlık oluşturabilirler. İlkel tiplere atanmış MAX_VALUE değerleri, direkt bu değerlerin içine girip görülebilir. Int, Double ve Long için MAX_VALUE değerleri aşağıdaki gibidir.
+
+    ```java
+        public const val MAX_VALUE: Int = 2147483647
+        public const val MAX_VALUE: Double = 1.7976931348623157E308
+        public const val MAX_VALUE: Long = 9223372036854775807L
+    ```
 
 17. Double ve Float değişkenler kullanılırken "yuvarlama" davranışı nasıldır? Bu nasıl değiştirilebilir?
 
