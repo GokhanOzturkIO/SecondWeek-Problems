@@ -319,6 +319,9 @@
     * Bazı durumlarda, işaretsiz değişkenler işlemleri daha hızlı gerçekleştirebilir çünkü işaret bitiyle ilgilenmek gerekmez, bu da işlemci tarafından daha etkin bir şekilde gerçekleştirilebilir.
 
 7. "İşaretsiz" değişkenlerle yapılan matematiksel işlemlerde, özellikle büyük sayılarla çalışırken karşılaşılabilecek taşma (overflow) ve taşma olmaması (underflow) durumları için Kotlin nasıl bir yönetim sağlar?
+
+    Eğer bir işlem sonucu, o değişkenin alabileceği maksimum değeri aşarsa, taşma durumu oluşur. Benzer şekilde, bir işlem sonucu, değişkenin alabileceği minimum değerden küçükse, underflow durumu gerçekleşir. Bu durumlarla karşılaşıldığında, Kotlin derleyicisi genellikle bir hata fırlatır ve programın beklenmeyen davranışlar sergilemesini engeller. Bu özellik, işaretsiz değişkenlerle yapılan matematiksel işlemlerde veri bütünlüğünü korumak ve beklenmeyen sonuçları önlemek için önemlidir. Böylece, programların daha güvenli ve tutarlı olmasını sağlar.
+
 8. "İşaretsiz" değişkenlerin sınırlamaları nelerdir?
 9. "İşaretsiz" değişken türleri (UInt, ULong vs.) kullanırken, Java API'leri ile uyumluluk konusunda ne gibi sorunlar olabilir? Bunları çözmek için neler yapabilirsiniz?
 

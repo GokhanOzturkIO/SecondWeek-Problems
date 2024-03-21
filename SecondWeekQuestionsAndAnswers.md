@@ -319,6 +319,9 @@
     * In some cases, unsigned variables might perform operations faster because there is no need to deal with a sign bit, which can be processed more efficiently by the processor.
 
 7. How does Kotlin manage overflow and underflow situations that may occur when performing mathematical operations with "unsigned" variables, especially when working with large numbers?
+
+    If the result of an operation exceeds the maximum value that the variable can hold, an overflow condition occurs. Similarly, if the result of an operation is smaller than the minimum value that the variable can hold, an underflow condition occurs. When encountered with these situations, the Kotlin compiler typically throws an error, preventing the program from exhibiting unexpected behavior. This feature is important for maintaining data integrity and preventing unexpected outcomes in mathematical operations performed with unsigned variables. Thus, it ensures that programs are more secure and consistent.
+    
 8. What are the limitations of "unsigned" variables?
 9. When using "unsigned" variable types (UInt, ULong, etc.), what compatibility issues may arise with Java APIs? What can be done to address these issues?
 
