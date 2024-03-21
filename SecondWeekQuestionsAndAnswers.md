@@ -336,6 +336,8 @@
 
 9. When using "unsigned" variable types (UInt, ULong, etc.), what compatibility issues may arise with Java APIs? What can be done to address these issues?
 
+    Many Java APIs work with signed variables and do not directly accept unsigned variables. In such cases, we may need to convert unsigned variables to signed variables before using them.
+
 ### Type Conversion
 
 1. Explain the usage of the `is` and `!is` operators.

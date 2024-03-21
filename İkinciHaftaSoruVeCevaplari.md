@@ -334,8 +334,9 @@
     ULong -> 64 bitlik yer kaplar. 0 - 18,446,744,073,709,551,615 (2^64 - 1) 
     ```
 
-
 9. "İşaretsiz" değişken türleri (UInt, ULong vs.) kullanırken, Java API'leri ile uyumluluk konusunda ne gibi sorunlar olabilir? Bunları çözmek için neler yapabilirsiniz?
+
+    Birçok Java API'ı, işaretli değişkenlerle çalışır ve işaretsiz değişkenleri doğrudan kabul etmez. Bu durumda işaretsiz değişkenleri, işaretli değişkenlere çevirerek kullanmamız gerekecektir.
 
 ### Tür Dönüşümü
 
