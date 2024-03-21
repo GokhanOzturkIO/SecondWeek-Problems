@@ -275,3 +275,33 @@
     ```
 
     Additionally, Kotlin provides `roundToInt()` or `roundToLong()` functions, which we can use. We can also write custom rounding functions according to our needs.
+
+    ### Unsigned Numbers
+
+1. What are "unsigned" variables? What is the difference between signed and unsigned ones?
+    Signed variables represent both positive and negative numbers, including zero, whereas unsigned numbers can only represent zero and positive numbers.
+
+2. How are "unsigned" variables stored in a class structure? Why is this important?
+3. What is the representation of "unsigned" variables?
+4. What will be the types of the variables `val a1 = 42u` and `val a2 = 0xFFFF_FFFF_FFFFu`? Why?
+5. How is the letter representation of an "unsigned" Long done?
+6. What are the purposes of "unsigned" variables?
+7. How does Kotlin manage overflow and underflow situations that may occur when performing mathematical operations with "unsigned" variables, especially when working with large numbers?
+8. What are the limitations of "unsigned" variables?
+9. When using "unsigned" variable types (UInt, ULong, etc.), what compatibility issues may arise with Java APIs? What can be done to address these issues?
+
+### Type Conversion
+
+1. Explain the usage of the `is` and `!is` operators.
+2. What does "Smart Cast" mean? Explain with different code examples. What are the limitations of this feature?
+3. What are the "Safe & Unsafe" operators?
+4. What does implicit widening conversions mean in numerical variables? Why can't this be done in Kotlin?
+5. What will be the output when the code `val b: Byte = 1`, `val i: Int = b`, and `print(b == i)` is executed? Explain why you get such an output.
+6. What will be the output when the code `val b: Byte = 1`, `val i: Int = b.toInt()`, and `print(b == i)` is executed? Explain why you get such an output.
+7. Which functions can you use for explicit type conversion in numerical variables?
+8. What will be the type and value of the variable "result" after an operation like `val result = 1L + 3` (a "Long + Int" operation)? Explain why.
+9. What will be the type and value of the variable "result" after an operation like `val result = Int.MAX_VALUE + Int.MAX_VALUE`? Explain why.
+10. What is the result and type of an operation like `val x = 5 / 2` and `println(x == 2)`? Explain why.
+11. What is the result and type of an operation like `val x = 5L / 2` and `println(x == 2L)`? Explain why.
+12. What is the result and type of an operation like `val x = 5 / 2.toDouble()` and `println(x == 2.5)`? Explain why.
+13. How are TypeCastException handled when performing type conversion in Kotlin, and what measures can be taken to prevent such errors?
