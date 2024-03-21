@@ -166,6 +166,8 @@
     Kotlin'de geleneksel notasyon, Double sayılar için "172.3, 172.3e10" şeklinde ve Float sayılar için "F veya f: 172.3f, 172.3F" şeklinde yapılabilir.
 
 10. Sayısal değişkenlerde alt çizgi (underscore) nasıl kullanılır? Kotlin bunu nasıl yorumlar?
+    Alt çizgi büyük sayıların okunabilirliğini arttırmak için kullanılır. IDE tarafından okunmazlar. `1_000_000` şekilde tanımlanan sayı, `1000000` şeklinde yorumlanır.
+
 11. `==` ile neyi karşılaştırırız? `===` ile neyi karşılaştırırız?
 12. `===` operatörü ile karşılaştırma yaparken Byte değer aralığı neden önemlidir? Kotlin bu aralığa göre neden özel bir davranış sergiler?
 13. Sayısal değişkenlerde hangi matematiksel operatörler kullanılabilir?
