@@ -323,6 +323,18 @@
     Eğer bir işlem sonucu, o değişkenin alabileceği maksimum değeri aşarsa, taşma durumu oluşur. Benzer şekilde, bir işlem sonucu, değişkenin alabileceği minimum değerden küçükse, underflow durumu gerçekleşir. Bu durumlarla karşılaşıldığında, Kotlin derleyicisi genellikle bir hata fırlatır ve programın beklenmeyen davranışlar sergilemesini engeller. Bu özellik, işaretsiz değişkenlerle yapılan matematiksel işlemlerde veri bütünlüğünü korumak ve beklenmeyen sonuçları önlemek için önemlidir. Böylece, programların daha güvenli ve tutarlı olmasını sağlar.
 
 8. "İşaretsiz" değişkenlerin sınırlamaları nelerdir?
+
+    ``` 
+    UByte -> 8 bitlik yer kaplar. 0 - 255
+
+    UShort -> 16 bitlik yer kaplar. 0 - 65,535 
+
+    UInt -> 32 bitlik yer kaplar. 0 - 4,294,967,295 (2^32 - 1) 
+
+    ULong -> 64 bitlik yer kaplar. 0 - 18,446,744,073,709,551,615 (2^64 - 1) 
+    ```
+
+
 9. "İşaretsiz" değişken türleri (UInt, ULong vs.) kullanırken, Java API'leri ile uyumluluk konusunda ne gibi sorunlar olabilir? Bunları çözmek için neler yapabilirsiniz?
 
 ### Tür Dönüşümü

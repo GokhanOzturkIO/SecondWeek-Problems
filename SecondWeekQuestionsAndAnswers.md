@@ -321,8 +321,19 @@
 7. How does Kotlin manage overflow and underflow situations that may occur when performing mathematical operations with "unsigned" variables, especially when working with large numbers?
 
     If the result of an operation exceeds the maximum value that the variable can hold, an overflow condition occurs. Similarly, if the result of an operation is smaller than the minimum value that the variable can hold, an underflow condition occurs. When encountered with these situations, the Kotlin compiler typically throws an error, preventing the program from exhibiting unexpected behavior. This feature is important for maintaining data integrity and preventing unexpected outcomes in mathematical operations performed with unsigned variables. Thus, it ensures that programs are more secure and consistent.
-    
+
 8. What are the limitations of "unsigned" variables?
+
+    ``` 
+    UByte -> Occupies 8 bits. 0 - 255
+
+    UShort -> Occupies 16 bits. 0 - 65,535 
+
+    UInt -> Occupies 32 bits. 0 - 4,294,967,295 (2^32 - 1) 
+
+    ULong -> Occupies 64 bits. 0 - 18,446,744,073,709,551,615 (2^64 - 1) 
+    ```
+
 9. When using "unsigned" variable types (UInt, ULong, etc.), what compatibility issues may arise with Java APIs? What can be done to address these issues?
 
 ### Type Conversion
