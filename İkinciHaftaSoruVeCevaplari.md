@@ -172,7 +172,11 @@
     `==` operatörü iki değeri karşılaştırır ve değerler eşit ise `true` döndürür. `===` operatörü iki referansı karşılaştırır ve iki nesne de bellekte aynı yeri işaret ediyorsa `true` döndürür.
 
 12. `===` operatörü ile karşılaştırma yaparken Byte değer aralığı neden önemlidir? Kotlin bu aralığa göre neden özel bir davranış sergiler?
+    `===` operatörü ile -128 ile 127 arasındaki byte değerler için bellekte tek bir bölüm oluşturulur. Bu performans optimizasyonu için yapılmıştır. Bu aralık dışındaki değerler için her seferinde yeni bir yer ayırımı yapılır. Bu durumda `===` operatörü ile -128 ile 127 değer aralığındaki değerleri karşılaştırırken bellekteki yer aynı olduğu için değer farklı bile olsa `true` döner. Bu aralık dışındaki değerler için hem değer hem de bellekteki adresin karşılaştırmasını yapar.
+
 13. Sayısal değişkenlerde hangi matematiksel operatörler kullanılabilir?
+    
+
 14. Sayısal değişkenlerde hangi karşılaştırma operatörleri kullanılabilir?
 15. Bit düzeyinde operatörler (Bitwise operators) nelerdir? Ne amaçla kullanılır? Kotlin'de bunları nasıl kullanabilirsiniz?
 16. Kotlin'de büyük sayılarla çalışırken hangi ek türlerden yararlanılır ve bu türlerin sınırları nelerdir?

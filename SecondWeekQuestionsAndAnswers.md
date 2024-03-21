@@ -172,7 +172,11 @@
     `==` operator compares two values and returns true if the values are equal. `===` operator compares two references and returns true if both objects point to the same memory location in the heap.
 
 12. Why is the Byte value range important when comparing with the `===` operator? Why does Kotlin exhibit special behavior according to this range?
+    The `===` operator creates a single allocation in memory for byte values between -128 and 127 for performance optimization purposes. For values outside this range, a new memory allocation is made each time. Consequently, when comparing values within the range of -128 to 127 using the `===` operator, even if the values are different, it returns `true` because they share the same memory location. For values outside this range, it compares both the value and the memory address.
+
 13. What mathematical operators can be used in numerical variables?
+
+
 14. What comparison operators can be used in numerical variables?
 15. What are Bitwise operators? What are they used for? How can you use them in Kotlin?
 16. What additional types are used when working with large numbers in Kotlin, and what are their limits?
