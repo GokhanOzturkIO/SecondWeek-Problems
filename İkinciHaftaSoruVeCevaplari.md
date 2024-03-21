@@ -384,8 +384,30 @@
 
 3. "Güvenli & Güvensiz" operatörler nelerdir?
 
+    Kotlin'de güvenli dönüşüm operatörü (safe cast) ve güvensiz dönüşüm (unsafe cast) operatörü bulunmaktadır. Bu operatörler, bir nesneyi belirli bir türe dönüştürmek için kullanılır.
+
+    Güvenli Dönüşüm Operatörü: `as?` şeklinde kullanılır. Bu operatörün kullanımında eğer dönüşüm başarısız olursa `null` değeri atanır. Örneğin;
+
+    ```kotlin
+        val randomNumberString = "6"
+        val randomNumber: Int? = randomNumberString as? Int
+
+        println(randomNumber) // Bu örnekte randomNumberString bir String olduğu için randomNumber değişkeninin değeri `null` olur.
+    ```
+
+    Güvensiz Dönüşüm Operatörü : `as` şeklinde kullanılır.Bu operatörün kullanımında da eğer başarısız olunursa `ClassCastException` hatası fırlatılır.
+
+
+    ```kotlin
+        val randomNumberString = "6"
+        val randomNumber: Int = randomNumberString as Int
+
+        println(randomNumber) // Bu örnekte randomNumber nullable olmadığı için `ClassCastException` hatası fırlatılır.
+    ```       
 
 4. Sayısal değişkenlerde örtük tip genişletme (implicit widening conversions) ne demektir? Kotlin'de bu neden yapılamaz?
+
+
 5. "`val b: Byte = 1` ile `val i: Int = b` ve son olarak `print(b == i)` gibi bir kod yazıldığında çıktı ne olur? Neden böyle bir çıktı aldığınızı açıklayın.
 6. "`val b: Byte = 1` ile `val i: Int = b.toInt()` ve son olarak `print(b == i)` gibi bir kod yazıldığında çıktı ne olur? Neden böyle bir çıktı aldığınızı açıklayın.
 7. Sayısal değişkenlerde açık dönüşüm (Explicit Type Conversion) yaparken hangi fonksiyonları kullanabilirsiniz?

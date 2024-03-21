@@ -384,8 +384,29 @@
 
 3. What are the "Safe & Unsafe" operators?
 
+    In Kotlin, there are safe cast operator (`as?`) and unsafe cast operator (`as`) for type conversion. These operators are used to convert an object to a specific type.
+
+    Safe Cast Operator: It is used in the form of `as?`. In the usage of this operator, if the conversion fails, null value is assigned. For example;
+
+     ```kotlin
+        val randomNumberString = "6"
+        val randomNumber: Int? = randomNumberString as? Int
+
+        println(randomNumber) // In this example, since randomNumberString is a String, the value of the randomNumber variable becomes null.
+    ```
+
+    Unsafe Cast Operator: It is used in the form of `as`. In the usage of this operator, if the conversion fails, a `ClassCastException` error is thrown.
+
+     ```kotlin
+        val randomNumberString = "6"
+        val randomNumber: Int = randomNumberString as Int
+
+        println(randomNumber) // In this example, since randomNumber is not nullable, a ClassCastException error is thrown.
+    ```    
 
 4. What does implicit widening conversions mean in numerical variables? Why can't this be done in Kotlin?
+
+
 5. What will be the output when the code `val b: Byte = 1`, `val i: Int = b`, and `print(b == i)` is executed? Explain why you get such an output.
 6. What will be the output when the code `val b: Byte = 1`, `val i: Int = b.toInt()`, and `print(b == i)` is executed? Explain why you get such an output.
 7. Which functions can you use for explicit type conversion in numerical variables?
