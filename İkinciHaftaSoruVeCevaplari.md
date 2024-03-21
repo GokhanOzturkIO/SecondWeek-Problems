@@ -279,13 +279,17 @@
 ### İşaretsiz Sayılar
 
 1. "İşaretsiz" (Unsigned) değişkenler ne demektir? İşaretli olanlarla aralarındaki fark nedir?
+
     İşaretli (signed) değişkenler sıfırın yanında hem pozitif hem de negatif sayıları temsil eder ancak işaretsiz (unsigned) sayılar yalnızca sıfır ve pozitif
     sayıları temsil edebilir.
 
 2. "İşaretsiz" değişkenler nasıl bir sınıf yapısında tutulurlar? Bu neden önemlidir?
 
+    İşaretsiz değişkenler kendilerine özel sınıflarda tutulurlar (Örneğin; "UInt", "ULong"). İşaretsiz değişkenlerin bu şekilde tutulması önemlidir çünkü bu yapı, programcılara özellikle bellek kullanımı ve veri manipülasyonu gibi konularda daha fazla esneklik sağlar. Ayrıca, işaretsiz değişkenler, belirli durumlarda işaretli değişkenlere göre daha hızlı hesaplamalar yapmayı sağlayabilir, çünkü işaret bitiyle ilgilenmek gerekmez.
 
 3. "İşaretsiz" değişkenlerin harf gösterimi nasıldır?
+    
+
 4. "`val a1 = 42u` ve `val a2 = 0xFFFF_FFFF_FFFFu`" değişkenlerin tipleri ne olur? Neden?
 5. "İşaretsiz" "Long" harf gösterimi nasıl yapılır?
 6. "İşaretsiz" değişkenlerin kullanım amaçları nelerdir?

@@ -279,9 +279,13 @@
     ### Unsigned Numbers
 
 1. What are "unsigned" variables? What is the difference between signed and unsigned ones?
+
     Signed variables represent both positive and negative numbers, including zero, whereas unsigned numbers can only represent zero and positive numbers.
 
 2. How are "unsigned" variables stored in a class structure? Why is this important?
+
+    Unsigned variables are kept in their own special classes (such as "UInt", "ULong"). It is important for unsigned variables to be stored in this way because this structure provides programmers with more flexibility, especially in terms of memory usage and data manipulation. Additionally, unsigned variables can perform calculations faster in certain situations compared to signed variables because they don't need to deal with a sign bit.
+
 3. What is the representation of "unsigned" variables?
 4. What will be the types of the variables `val a1 = 42u` and `val a2 = 0xFFFF_FFFF_FFFFu`? Why?
 5. How is the letter representation of an "unsigned" Long done?
