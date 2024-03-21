@@ -163,7 +163,7 @@
 
 
 9. "Geleneksel Notasyon" (Conventional Notation) gösterimi nasıl yapılır?
-
+    Kotlin'de geleneksel notasyon, Double sayılar için "172.3, 172.3e10" şeklinde ve Float sayılar için "F veya f: 172.3f, 172.3F" şeklinde yapılabilir.
 
 10. Sayısal değişkenlerde alt çizgi (underscore) nasıl kullanılır? Kotlin bunu nasıl yorumlar?
 11. `==` ile neyi karşılaştırırız? `===` ile neyi karşılaştırırız?

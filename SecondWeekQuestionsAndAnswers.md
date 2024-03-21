@@ -163,7 +163,7 @@
     ```
 
 9. How is Conventional Notation represented?
-
+    In Kotlin, conventional notation for Double numbers can be expressed as "172.3" or "172.3e10", while for Float numbers it can be represented as "172.3f" or "172.3F".
 
 10. How is the underscore (_) used in numerical variables? How does Kotlin interpret this?
 11. What do we compare with `==`? What do we compare with `===`?
