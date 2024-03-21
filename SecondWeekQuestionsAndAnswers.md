@@ -289,15 +289,17 @@
 3. What is the representation of "unsigned" variables?
 
     Unsigned variables are represented by adding u or U at the end of the number. For example:
-    
+
 
     ```kotlin
         val unsignedNumber1 = 53u
         val unsignedNumber2 = 67U
     ```
 
-
 4. What will be the types of the variables `val a1 = 42u` and `val a2 = 0xFFFF_FFFF_FFFFu`? Why?
+
+    The variable defined as `a1` is of type `UInt` and represents a 32-bit unsigned integer. The variable defined as `a2` is of type `ULong` and represents a 64-bit unsigned integer. This is because of Kotlin's type inference, where the compiler assigns appropriate types based on the range of values.
+
 5. How is the letter representation of an "unsigned" Long done?
 6. What are the purposes of "unsigned" variables?
 7. How does Kotlin manage overflow and underflow situations that may occur when performing mathematical operations with "unsigned" variables, especially when working with large numbers?

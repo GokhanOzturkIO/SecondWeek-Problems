@@ -297,6 +297,9 @@
     ```
 
 4. "`val a1 = 42u` ve `val a2 = 0xFFFF_FFFF_FFFFu`" değişkenlerin tipleri ne olur? Neden?
+
+    `a1` ismiyle tanımlanan değişken `UInt` tipindedir ve 32 bitlik bir işaretsiz tam sayıyı ifade eder. `a2` isminde tanımlanan değişken `ULong` tipindedir ve 64 bitlik bir işaretsiz tam sayıyı ifade eder. Bunu sebebi Kotlin dilindeki tip çıkarımı (type inference) sayesinde değerlerin aralığına göre derleyicinin uygun tipleri atamasıdır.
+
 5. "İşaretsiz" "Long" harf gösterimi nasıl yapılır?
 6. "İşaretsiz" değişkenlerin kullanım amaçları nelerdir?
 7. "İşaretsiz" değişkenlerle yapılan matematiksel işlemlerde, özellikle büyük sayılarla çalışırken karşılaşılabilecek taşma (overflow) ve taşma olmaması (underflow) durumları için Kotlin nasıl bir yönetim sağlar?
