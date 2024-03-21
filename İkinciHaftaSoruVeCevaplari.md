@@ -407,8 +407,18 @@
 
 4. Sayısal değişkenlerde örtük tip genişletme (implicit widening conversions) ne demektir? Kotlin'de bu neden yapılamaz?
 
+    Sayısal değişkenlerde örtük tip genişletme, bir veri türünün daha küçük bir türden daha büyük bir türe dönüştürülmesidir. Bu dönüşüm, genellikle otomatik olarak gerçekleşir ve programcının belirli bir dönüşüm işlemi gerçekleştirmesine gerek kalmaz. Örneğin, bir `byte` türünün bir `int` türüne otomatik olarak genişletilmesi gibi.
+
+    Kotlin'de örtük tip genişletme yapılamaz çünkü Kotlin, Java'dan farklı olarak daha sıkı bir tür sistemi sunar. Bu sıkı tür sistemi, tür uyumsuzluklarını belirlemekte daha hassas olduğundan, otomatik genişletme işlemleri mümkün değildir. Bu nedenle, Kotlin'de sayısal değerler arasında tür dönüşümleri açıkça belirtilmelidir, yani örtük genişletme desteklenmez. Bu, tür uyumluluğunun daha net ve daha güvenli bir şekilde kontrol edilmesini sağlar ve tür hatalarını önler. Örneğin:
+
+    ```kotlin
+        val randomByte: Byte = 7
+        val randomNumber: Int = randomByte.toInt() // Byte tipindeki veriyi açık bir şekilde Int'e çevirdik.
+    ```       
 
 5. "`val b: Byte = 1` ile `val i: Int = b` ve son olarak `print(b == i)` gibi bir kod yazıldığında çıktı ne olur? Neden böyle bir çıktı aldığınızı açıklayın.
+
+
 6. "`val b: Byte = 1` ile `val i: Int = b.toInt()` ve son olarak `print(b == i)` gibi bir kod yazıldığında çıktı ne olur? Neden böyle bir çıktı aldığınızı açıklayın.
 7. Sayısal değişkenlerde açık dönüşüm (Explicit Type Conversion) yaparken hangi fonksiyonları kullanabilirsiniz?
 8. "`val result = 1L + 3`" // "Long + Int" gibi bir işlemin sonucunda "result" değişkeninin tipi ve değeri ne olur? Neden böyle olduğunu açıklayın.

@@ -406,8 +406,18 @@
 
 4. What does implicit widening conversions mean in numerical variables? Why can't this be done in Kotlin?
 
+    Implicit widening conversion in numerical variables refers to the automatic conversion of a data type from a smaller type to a larger type. This conversion usually happens automatically without the need for the programmer to explicitly perform a conversion operation. For example, implicit widening conversion occurs when a `byte` type is automatically widened to an `int` type.
+
+    In Kotlin, implicit widening conversion is not allowed because Kotlin provides a stricter type system compared to Java. This stricter type system is more precise in determining type incompatibilities, making implicit widening operations impossible. Therefore, in Kotlin, type conversions between numerical values must be explicitly specified, and implicit widening is not supported. This ensures clearer and safer type compatibility checks and helps prevent type errors. For example:
+
+    ```kotlin
+        val randomByte: Byte = 7
+        val randomNumber: Int = randomByte.toInt() // We explicitly converted the data of type Byte to Int.
+    ```   
 
 5. What will be the output when the code `val b: Byte = 1`, `val i: Int = b`, and `print(b == i)` is executed? Explain why you get such an output.
+
+
 6. What will be the output when the code `val b: Byte = 1`, `val i: Int = b.toInt()`, and `print(b == i)` is executed? Explain why you get such an output.
 7. Which functions can you use for explicit type conversion in numerical variables?
 8. What will be the type and value of the variable "result" after an operation like `val result = 1L + 3` (a "Long + Int" operation)? Explain why.
