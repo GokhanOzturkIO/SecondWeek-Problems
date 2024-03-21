@@ -301,6 +301,15 @@
     `a1` ismiyle tanımlanan değişken `UInt` tipindedir ve 32 bitlik bir işaretsiz tam sayıyı ifade eder. `a2` isminde tanımlanan değişken `ULong` tipindedir ve 64 bitlik bir işaretsiz tam sayıyı ifade eder. Bunu sebebi Kotlin dilindeki tip çıkarımı (type inference) sayesinde değerlerin aralığına göre derleyicinin uygun tipleri atamasıdır.
 
 5. "İşaretsiz" "Long" harf gösterimi nasıl yapılır?
+
+    İşaretsiz Long tipinde değişken oluşturmak için değerin sonuna "uL" ya da "UL" eklenmelidir. Örneğin: 
+
+
+    ```kotlin
+        val unsignedLong1 = 3288182375uL
+        val unsignedLong2 = 3288182375UL
+    ```
+
 6. "İşaretsiz" değişkenlerin kullanım amaçları nelerdir?
 7. "İşaretsiz" değişkenlerle yapılan matematiksel işlemlerde, özellikle büyük sayılarla çalışırken karşılaşılabilecek taşma (overflow) ve taşma olmaması (underflow) durumları için Kotlin nasıl bir yönetim sağlar?
 8. "İşaretsiz" değişkenlerin sınırlamaları nelerdir?
