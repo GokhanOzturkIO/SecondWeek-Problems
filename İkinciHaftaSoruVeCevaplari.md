@@ -363,7 +363,28 @@
     ```
 
 2. "Akıllı Dönüşüm" (Smart Cast) ne demektir? Farklı kod örnekleri ile açıklayın. Bu özelliğin sınırlamaları nelerdir?
+
+    Akıllı Dönüşüm (Smart Cast), bir nesnenin türünün kontrol edildiği bir akış kontrolü ifadesinde, `is` operatörü kullanıldıktan sonra, Kotlin'in otomatik olarak bu nesneyi belirtilen türe dönüştürmesi ve bu türe özgü işlemleri gerçekleştirmenizi sağlamasıdır. Örneğin:
+
+    ```kotlin
+        fun findTheSuspect(clue: Any) {
+            if (clue is String) {
+                println("$clue is the murder letter. Its length is ${clue.length}")
+            } else {
+                if (clue is Date) {
+                    println("$clue is the murder date. The murder date is ${clue.time}")
+                } else {
+                    println("$clue is useless!")
+                }
+            }
+        }
+    ```
+
+    Üstteki örnekte `clue: Any` değerini `String` ve `Date` değerlerine akıllı dönüştürdük ve o sınıflara özel özellikleri kullandık.
+
 3. "Güvenli & Güvensiz" operatörler nelerdir?
+
+
 4. Sayısal değişkenlerde örtük tip genişletme (implicit widening conversions) ne demektir? Kotlin'de bu neden yapılamaz?
 5. "`val b: Byte = 1` ile `val i: Int = b` ve son olarak `print(b == i)` gibi bir kod yazıldığında çıktı ne olur? Neden böyle bir çıktı aldığınızı açıklayın.
 6. "`val b: Byte = 1` ile `val i: Int = b.toInt()` ve son olarak `print(b == i)` gibi bir kod yazıldığında çıktı ne olur? Neden böyle bir çıktı aldığınızı açıklayın.

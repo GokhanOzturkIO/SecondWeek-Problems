@@ -363,7 +363,28 @@
     ```
 
 2. What does "Smart Cast" mean? Explain with different code examples. What are the limitations of this feature?
+
+   Smart Cast, after using the `is` operator in a flow control statement where the type of an object is checked, allows Kotlin to automatically convert this object to the specified type and perform type-specific operations. For example:
+
+    ```kotlin
+        fun findTheSuspect(clue: Any) {
+            if (clue is String) {
+                println("$clue is the murder letter. Its length is ${clue.length}")
+            } else {
+                if (clue is Date) {
+                    println("$clue is the murder date. The murder date is ${clue.time}")
+                } else {
+                    println("$clue is useless!")
+                }
+            }
+        }
+    ```
+
+    In the above example, we smart cast `clue: Any` to `String` and `Date` values and use specific properties of those classes.
+
 3. What are the "Safe & Unsafe" operators?
+
+
 4. What does implicit widening conversions mean in numerical variables? Why can't this be done in Kotlin?
 5. What will be the output when the code `val b: Byte = 1`, `val i: Int = b`, and `print(b == i)` is executed? Explain why you get such an output.
 6. What will be the output when the code `val b: Byte = 1`, `val i: Int = b.toInt()`, and `print(b == i)` is executed? Explain why you get such an output.
