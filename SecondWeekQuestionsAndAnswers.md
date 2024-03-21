@@ -265,3 +265,13 @@
     ```
 
 17. What is the rounding behavior when using Double and Float variables? How can this behavior be modified?
+
+    In Kotlin, by default, floating-point numbers work with the rounding mechanism towards the nearest integer. This operation is performed in compliance with the IEEE 754 standard. For financial calculations or other scenarios requiring precise rounding, we can use the `setScale` method of `BigDecimal`. For example:
+
+     ```kotlin
+        val doubleNumber = 1.5323512
+
+        val roundedBigDecimal = doubleNumber.toBigDecimal().round(MathContext.DECIMAL64).setScale(3, RoundingMode.HALF_UP) // Here, rounding is performed by examining the third decimal place of the floating-point number, rounding up if it is 5 or greater, otherwise rounding down.
+    ```
+
+    Additionally, Kotlin provides `roundToInt()` or `roundToLong()` functions, which we can use. We can also write custom rounding functions according to our needs.

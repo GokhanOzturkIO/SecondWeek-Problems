@@ -266,6 +266,16 @@
 
 17. Double ve Float değişkenler kullanılırken "yuvarlama" davranışı nasıldır? Bu nasıl değiştirilebilir?
 
+    Kotlin'de varsayılan olarak ondalıklı sayılar, en yakın tam sayıya doğru yuvarla mekanizması ile çalışır. Bu işlem IEEE 754 standartına uygun gerçekleşir. Bu IEEE 754 standartına uygun olarak gerçekleşir. Finansal hesaplamalarda veya hassas yuvarlama gerektiren diğer senaryolarda BigDecimal'ın setScale metodunu kullanabiliriz. Örneğin:
+
+    ```kotlin
+        val doubleNumber = 1.5323512
+
+        val roundedBigDecimal = doubleNumber.toBigDecimal().round(MathContext.DECIMAL64).setScale(3, RoundingMode.HALF_UP) // Burada ondalıklı sayının üçüncü ondalık basamağına bakarak yuvarlama yapar ve 5 veya daha büyükse yukarı yuvarlar, aksi takdirde aşağı yuvarlar.
+    ``
+
+    Bunun dışında Kotlin'in sağladığı `roundToInt()` veya `roundToLong()` fonksiyonlarını da kullanabiliriz. Kişiselleştirilmiş yuvarlama fonksiyonları da yazabiliriz.
+
 ### İşaretsiz Sayılar
 - "İşaretsiz" (Unsigned) değişkenler ne demektir? İşaretli olanlarla aralarındaki fark nedir?
 - "İşaretsiz" değişkenler nasıl bir sınıf yapısında tutulurlar? Bu neden önemlidir?
