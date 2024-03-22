@@ -445,5 +445,6 @@
 
 12. What is the result and type of an operation like `val x = 5 / 2.toDouble()` and `println(x == 2.5)`? Explain why.
 
+    When we divide an `Int` number by a `Double`, the result will be of the type of the larger operand, which is `Double`. Therefore, the value of the variable will be 2.5. The print statement will output `true`.
 
 13. How are TypeCastException handled when performing type conversion in Kotlin, and what measures can be taken to prevent such errors?
