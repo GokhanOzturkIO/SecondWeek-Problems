@@ -417,8 +417,11 @@
 
 5. What will be the output when the code `val b: Byte = 1`, `val i: Int = b`, and `print(b == i)` is executed? Explain why you get such an output.
 
+    This code produces a compilation error because, as mentioned in the previous question, Kotlin does not support implicit widening conversions. Therefore, `val i: Int = b` will throw an error. Additionally, the expression `print(b == i)` will also cause an error because we cannot compare variables of different types using `==`.
 
 6. What will be the output when the code `val b: Byte = 1`, `val i: Int = b.toInt()`, and `print(b == i)` is executed? Explain why you get such an output.
+
+
 7. Which functions can you use for explicit type conversion in numerical variables?
 8. What will be the type and value of the variable "result" after an operation like `val result = 1L + 3` (a "Long + Int" operation)? Explain why.
 9. What will be the type and value of the variable "result" after an operation like `val result = Int.MAX_VALUE + Int.MAX_VALUE`? Explain why.
