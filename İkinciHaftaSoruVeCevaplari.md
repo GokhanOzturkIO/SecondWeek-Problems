@@ -433,6 +433,9 @@
     Bu sonucun değeri 4L ve tipi de Long olacaktır. Bunun sebebi, işlemin sonucunun daha büyük olan Long aralığına düşmesinden dolayıdır. 
 
 9. `val result = Int.MAX_VALUE + Int.MAX_VALUE` gibi bir işlemin sonucunda "result" değişkeninin tipi ve değeri ne olur? Neden böyle olduğunu açıklayın.
+
+    Sonuçtaki değer Int tipinden olur ancak bir Int'in alabileceği maksimum değeri 2 kere topladığımız için  taşma (overflow) olur. Kotlin'de varsayılan olarak taşma kontrolü yapılmadığı için `result` değerine anlamsız bir sayı atanır.
+
 10. `val x = 5 / 2` `println(x == 2)` gibi bir işlemin sonucu ve tipi nedir? Neden böyle olduğunu açıklayın.
 11. `val x = 5L / 2` `println(x == 2L)` gibi bir işlemin sonucu ve tipi nedir? Neden böyle olduğunu açıklayın.
 12. `val x = 5 / 2.toDouble()` `println(x == 2.5)` gibi bir işlemin sonucu ve tipi nedir? Neden böyle olduğunu açıklayın.

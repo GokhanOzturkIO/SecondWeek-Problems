@@ -433,7 +433,7 @@
 
 9. What will be the type and value of the variable "result" after an operation like `val result = Int.MAX_VALUE + Int.MAX_VALUE`? Explain why.
 
-    
+    The value in the result will be of type Int, but since we are adding twice the maximum value that an Int can hold, it will result in overflow. Since Kotlin does not perform overflow checking by default, the result will be an arbitrary number assigned to the `result` variable.
 
 10. What is the result and type of an operation like `val x = 5 / 2` and `println(x == 2)`? Explain why.
 11. What is the result and type of an operation like `val x = 5L / 2` and `println(x == 2L)`? Explain why.
