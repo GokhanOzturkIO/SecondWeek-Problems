@@ -421,8 +421,11 @@
 
 6. What will be the output when the code `val b: Byte = 1`, `val i: Int = b.toInt()`, and `print(b == i)` is executed? Explain why you get such an output.
 
+    This code produces a compilation error due to the expression `print(b == i)` because we cannot compare variables of different types (`Byte` and `Int`) using `==`.
 
 7. Which functions can you use for explicit type conversion in numerical variables?
+
+
 8. What will be the type and value of the variable "result" after an operation like `val result = 1L + 3` (a "Long + Int" operation)? Explain why.
 9. What will be the type and value of the variable "result" after an operation like `val result = Int.MAX_VALUE + Int.MAX_VALUE`? Explain why.
 10. What is the result and type of an operation like `val x = 5 / 2` and `println(x == 2)`? Explain why.

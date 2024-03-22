@@ -422,8 +422,11 @@
 
 6. `val b: Byte = 1` ile `val i: Int = b.toInt()` ve son olarak `print(b == i)` gibi bir kod yazıldığında çıktı ne olur? Neden böyle bir çıktı aldığınızı açıklayın.
 
+    Bu kod, `print(b == i)` ifadesinden dolayı derlenme hatası verir çünkü farklı iki tip (`Byte` ve `Int`) değişkeni `==` ile karşılaştıramayız.
 
 7. Sayısal değişkenlerde açık dönüşüm (Explicit Type Conversion) yaparken hangi fonksiyonları kullanabilirsiniz?
+
+
 8. `val result = 1L + 3`" // "Long + Int" gibi bir işlemin sonucunda "result" değişkeninin tipi ve değeri ne olur? Neden böyle olduğunu açıklayın.
 9. `val result = Int.MAX_VALUE + Int.MAX_VALUE` gibi bir işlemin sonucunda "result" değişkeninin tipi ve değeri ne olur? Neden böyle olduğunu açıklayın.
 10. `val x = 5 / 2` `println(x == 2)` gibi bir işlemin sonucu ve tipi nedir? Neden böyle olduğunu açıklayın.
