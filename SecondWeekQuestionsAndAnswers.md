@@ -436,6 +436,9 @@
     The value in the result will be of type Int, but since we are adding twice the maximum value that an Int can hold, it will result in overflow. Since Kotlin does not perform overflow checking by default, the result will be an arbitrary number assigned to the `result` variable.
 
 10. What is the result and type of an operation like `val x = 5 / 2` and `println(x == 2)`? Explain why.
+
+    When we divide two `Int` numbers, the result will also be an `Int`. In this case, the value of the `x` variable will be 2, and its type will be `Int`. Therefore, the print statement will output `true`.
+
 11. What is the result and type of an operation like `val x = 5L / 2` and `println(x == 2L)`? Explain why.
 12. What is the result and type of an operation like `val x = 5 / 2.toDouble()` and `println(x == 2.5)`? Explain why.
 13. How are TypeCastException handled when performing type conversion in Kotlin, and what measures can be taken to prevent such errors?
