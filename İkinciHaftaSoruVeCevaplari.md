@@ -426,7 +426,8 @@
 
 7. Sayısal değişkenlerde açık dönüşüm (Explicit Type Conversion) yaparken hangi fonksiyonları kullanabilirsiniz?
 
-
+    toByte(), toShort(), toInt(), toLong(), toFloat(), toDouble(), toUByte(), toUShort(), toUInt(), toULong(), toDuration(), toBigDecimal(), toBigInteger() gibi fonksiyonlar kullanılabilir.
+    
 8. `val result = 1L + 3`" // "Long + Int" gibi bir işlemin sonucunda "result" değişkeninin tipi ve değeri ne olur? Neden böyle olduğunu açıklayın.
 9. `val result = Int.MAX_VALUE + Int.MAX_VALUE` gibi bir işlemin sonucunda "result" değişkeninin tipi ve değeri ne olur? Neden böyle olduğunu açıklayın.
 10. `val x = 5 / 2` `println(x == 2)` gibi bir işlemin sonucu ve tipi nedir? Neden böyle olduğunu açıklayın.

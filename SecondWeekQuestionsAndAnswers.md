@@ -425,6 +425,7 @@
 
 7. Which functions can you use for explicit type conversion in numerical variables?
 
+    You can use functions like toByte(), toShort(), toInt(), toLong(), toFloat(), toDouble(), toUByte(), toUShort(), toUInt(), toULong(), toDuration(), toBigDecimal(), toBigInteger() for explicit type conversion.
 
 8. What will be the type and value of the variable "result" after an operation like `val result = 1L + 3` (a "Long + Int" operation)? Explain why.
 9. What will be the type and value of the variable "result" after an operation like `val result = Int.MAX_VALUE + Int.MAX_VALUE`? Explain why.
