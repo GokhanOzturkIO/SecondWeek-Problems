@@ -449,3 +449,5 @@
     `Int` bir sayıyı `Double` bir sayıya böldüğümüzde sonuç büyük olanın tipinde yani `Double` tipinde olur. Değişkenin değeri ise 2.5 olacaktır. Print de bize `true` değerini yazdıracaktır.
 
 13. Kotlin'de tür dönüşümü yapılırken, dönüşümün başarısız olması durumunda TypeCastException nasıl ele alınır ve bu tür hataların önüne geçmek için hangi önlemler alınabilir?
+
+    TypeCastException'a karşı try-catch blokları kullanabiliriz. Güvenli dönüşüm operatörü'nü (safe cast operator, `as?`) kullanabiliriz. `is` ile tip denetimi (type checking) yapabiliriz.

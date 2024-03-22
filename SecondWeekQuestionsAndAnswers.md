@@ -448,3 +448,5 @@
     When we divide an `Int` number by a `Double`, the result will be of the type of the larger operand, which is `Double`. Therefore, the value of the variable will be 2.5. The print statement will output `true`.
 
 13. How are TypeCastException handled when performing type conversion in Kotlin, and what measures can be taken to prevent such errors?
+
+    We can use try-catch blocks against TypeCastException. We can use the safe cast operator (`as?`). We can perform type checking using `is`.
