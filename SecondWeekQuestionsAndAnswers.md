@@ -428,7 +428,13 @@
     You can use functions like toByte(), toShort(), toInt(), toLong(), toFloat(), toDouble(), toUByte(), toUShort(), toUInt(), toULong(), toDuration(), toBigDecimal(), toBigInteger() for explicit type conversion.
 
 8. What will be the type and value of the variable "result" after an operation like `val result = 1L + 3` (a "Long + Int" operation)? Explain why.
+
+    The value of this result will be 4L and its type will be Long. The reason for this is that the result of the operation falls within the larger Long range.
+
 9. What will be the type and value of the variable "result" after an operation like `val result = Int.MAX_VALUE + Int.MAX_VALUE`? Explain why.
+
+    
+
 10. What is the result and type of an operation like `val x = 5 / 2` and `println(x == 2)`? Explain why.
 11. What is the result and type of an operation like `val x = 5L / 2` and `println(x == 2L)`? Explain why.
 12. What is the result and type of an operation like `val x = 5 / 2.toDouble()` and `println(x == 2.5)`? Explain why.
