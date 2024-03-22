@@ -440,5 +440,10 @@
     When we divide two `Int` numbers, the result will also be an `Int`. In this case, the value of the `x` variable will be 2, and its type will be `Int`. Therefore, the print statement will output `true`.
 
 11. What is the result and type of an operation like `val x = 5L / 2` and `println(x == 2L)`? Explain why.
+
+    When we divide a `Long` number by an `Int`, the result will be of the type of the larger operand, which is `Long`. Therefore, the value of the variable will be 2L. The print statement will output `true`.
+
 12. What is the result and type of an operation like `val x = 5 / 2.toDouble()` and `println(x == 2.5)`? Explain why.
+
+
 13. How are TypeCastException handled when performing type conversion in Kotlin, and what measures can be taken to prevent such errors?

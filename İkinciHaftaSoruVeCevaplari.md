@@ -441,5 +441,8 @@
     İki adet `Int` sayıyı böldüğümüzde sonuç da bir `Int` sayı olacaktır. Bu durumda `x` değişkeninin değeri 2,tipi ise `Int` olacaktır. Print de bize `true` değerini yazdıracaktır.
 
 11. `val x = 5L / 2` `println(x == 2L)` gibi bir işlemin sonucu ve tipi nedir? Neden böyle olduğunu açıklayın.
+
+    `Long` bir sayıyı `Int` bir sayıya böldüğümüzde sonuç büyük olanın tipinde yani `Long` tipinde olur. Değişkenin değeri ise 2L olacaktır. Print de bize `true` değerini yazdıracaktır.
+
 12. `val x = 5 / 2.toDouble()` `println(x == 2.5)` gibi bir işlemin sonucu ve tipi nedir? Neden böyle olduğunu açıklayın.
 13. Kotlin'de tür dönüşümü yapılırken, dönüşümün başarısız olması durumunda TypeCastException nasıl ele alınır ve bu tür hataların önüne geçmek için hangi önlemler alınabilir?
