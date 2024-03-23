@@ -98,7 +98,7 @@
 
 8. "Null Güvenliği" (Null Safety) kavramını açıklayın.
 
-    Kotlin'de bulunan null güvenliği konsepti, kod yazarken NullPointerException hatalarını almamızın önüne geçmeyi amaçlar. Bu sayede null gelmemesi gereken değerleri eğer değer null ise hata verebilecek işleme sokmayız ve hata ayıklama işlemlerimizi daha da karmaşıklaştırmamış oluruz. Kotlin'de null güvenliğini Java'da olan if/else yapısı yanında let scope fonksiyonu, elvis fonksiyonu ile sağlayabiliriz. Null olup olmadığını belirlemede `?.` ve `!!` operatörlerini kullanırız. Tabii burada `!!` operatörünü kullanırken son derece dikkatli olmalıyız çünkü bu IDE'ye o değerin null olmadığını belirtir.
+    Kotlin'de bulunan null güvenliği konsepti, kod yazarken NullPointerException hatalarını almamızın önüne geçmeyi amaçlar. Bu sayede null gelmemesi gereken değerleri eğer değer null ise hata verebilecek işleme sokmayız ve hata ayıklama işlemlerimizi daha da karmaşıklaştırmamış oluruz. Kotlin'de null güvenliğini Java'da olan if/else yapısı yanında let scope fonksiyonu, elvis fonksiyonu ile sağlayabiliriz. Null olup olmadığını belirlemede `?` ve `!!` operatörlerini kullanırız. Tabii burada `!!` operatörünü kullanırken son derece dikkatli olmalıyız çünkü bu IDE'ye o değerin null olmadığını belirtir. `?` ve `!!` kullanımı aslında işlemimizin kritikliğine göre değişir. Eğer kullanıcıya göstermemiz gereken hesaplama çok kritikse o zaman uygulamanın çökmesini de göze alarak `!!` kullanırız. Ancak işlem çok kritik değilse o hâlde `?` kullanabiliriz.
 
 9. Bir değişkene null değer atanır ve tip belirtilmezse Kotlin bu değişkeni nasıl yorumlar?
 

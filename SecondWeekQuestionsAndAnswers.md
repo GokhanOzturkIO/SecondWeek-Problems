@@ -98,7 +98,7 @@
 
 8. Explain the concept of "Null Safety".
 
-    The concept of null safety in Kotlin aims to prevent NullPointerException errors while writing code. This way, we avoid subjecting values that should not be null to operations that could potentially throw errors if the value is null, thus simplifying our debugging processes. In Kotlin, we can achieve null safety using the let scope function and the elvis operator alongside the if/else structure in Java. We use the ? and !! operators to determine whether a value is null. However, when using the !! operator, we must be extremely cautious because it indicates to the IDE that the value is not null.
+    The concept of null safety in Kotlin aims to prevent NullPointerException errors while writing code. This way, we avoid subjecting values that should not be null to operations that could potentially throw errors if the value is null, thus simplifying our debugging processes. In Kotlin, we can achieve null safety using the let scope function and the elvis operator alongside the if/else structure in Java. We use the `?` and `!!` operators to determine whether a value is null. However, when using the `!!` operator, we must be extremely cautious because it indicates to the IDE that the value is not null. The usage of `?` and `!!` actually depends on the criticality of our operation. If the calculation we need to show to the user is very critical, then we use `!!`, even at the risk of the application crashing. However, if the operation is not very critical, then we can use `?`.
 
 9. If a null value is assigned to a variable and the type is not specified, how does Kotlin interpret this variable?
 
